@@ -1,0 +1,33 @@
+<center>
+<h2>News & Updates Listing</h2>
+</center>
+<br/>
+
+<font size="3">						
+				
+					
+					
+					
+
+					<?php
+					$currentDate = date('Y-m-d');
+					foreach($news as $single_news)
+					{
+							  
+							  
+							   if($currentDate>=$single_news->getStartingDate())
+							   {?>
+							    
+								   <p>
+								  <b><?php echo $single_news->getStartingDate() ?></b><br/>
+								  <?php echo $single_news->getHeading();?> :  <?php echo $single_news->getMessage();?>	
+								  <br/><br/>
+								</p>
+					<?php        }
+					
+
+					} ?>
+				
+					
+					</font>
+

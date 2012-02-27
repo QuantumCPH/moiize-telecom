@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+* {margin:0px;padding:0px;}
+body {font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000}
+#wrap {width:780px;margin:0px auto;}
+#header {width:780px;height:119px;}
+#logo {width:168px; height:79px; float:left;}
+#logo h1 {width:168px; height:79px;float:left;padding-top:25px;}
+#logo h1 a{width:168px; height:79px;float:left;display:block; background-image:url(../images/logo.jpg); background-repeat:no-repeat; overflow:hidden; text-indent:9000em; white-space:nowrap;}
+#tagline{width:300px; height:40px; float:left;display:block;font-size:16px;font-weight:bold;padding-top:55px;padding-left:10px; color:#f9811d;}
+#nav {width:500px; float:right; padding-top:68px; padding-bottom:39px; position:relative;}
+#nav ul{ display:inline; list-style:none; float:right; width:100%; position:absolute; right:-60px;}
+#nav ul li{display:inline; list-style:none; margin-right:0px; background-image:url(../images/nav-divider.jpg); background-repeat:no-repeat; padding-right:19px; background-position:right bottom}
+#nav ul li.last{ padding-right:0px; background:none;}
+#nav ul li a{ color:#414141; text-decoration:none;}
+#nav ul li a:hover{ color:#005cac; text-decoration:underline;}
+#nav ul li a.selected{ color:#005cac; text-decoration:none;}
+#nav ul li a.selected:hover{ color:#005cac; text-decoration: underline;}
+.homepage{ width:780px; height:267px; float:left; background-color:#d86327; position: relative;}
+#price-calculator{ width:205px; height:172px; position: absolute; right:33px; top:28px; background-image: url(../images/price-cal-bg.png); background-repeat:no-repeat; padding:20px; z-index:2}
+#price-calculator ul{ list-style:none;}
+#price-calculator ul li{ list-style:none; width:205px;}
+#price-calculator ul li select{ font-size:24px; width:205px; margin-bottom:30px;}
+#price-calculator ul li.price{ font-size:18px; color:#fff; padding-bottom:10px;display:none;}
+#price-calculator ul li.price .fl{ color:#000000;
+float:left;
+font-size:13px;
+}
+#price-calculator ul li.price .fr{ 
+height:50px;
+text-align:center;
+width:100%;}
+.homepage-aux{ position: relative; width:780px; float:left; clear:both; background-image: url(../images/hp-aux.png); background-repeat:no-repeat; height:126px; margin-top:20px;}
+.bliv-kunde-white{ background-image:url(../images/bliv-kunde.png); width:132px; height:50px; background-repeat:no-repeat; position:absolute; right:13px; top:38px;overflow:hidden; text-indent:9000em; white-space:nowrap;}
+#homepage-box-row{ width:780px; float:left; clear:both; overflow:hidden; margin-top:20px; margin-bottom:20px;}
+#homepage-box-row .box{ width:232px; height:106px; padding:10px; float:left; margin-right:11px;}
+#homepage-box-row .box-a{background-image:url(../images/bg-box-a.png); background-repeat:no-repeat;}
+#homepage-box-row .box-b{background-image:url(../images/bg-box-b.png); background-repeat:no-repeat;}
+#homepage-box-row .box-c{background-image:url(../images/bg-box-c.png); background-repeat:no-repeat;}
+#homepage-box-row .box h3{ color:#f9811d; font-size:18px;}
+#homepage-box-row .box h3 span{ color:#000;}
+#homepage-box-row .box small{ font-size:11px;}
+#homepage-box-row .box p{ margin-top:20px; margin-bottom:20px; font-size:13px;}
+#homepage-box-row .box a{ background-image:url(../images/bg-greenbutton-.png); background-position:0px 0px; color:#fff; font-size:10px; background-repeat:no-repeat; display:block; text-decoration:none; padding-left:5px;width:75px;}
+#homepage-box-row .box a span{ background-image:url(../images/bg-greenbutton-.png); background-position:right top; background-repeat:no-repeat; display:block; padding:3px 5px 3px; width:75px;}
+#homepage-box-row .box-last{ margin:0px;}
+#footer{ width:100%; background-image: url(../images/bg-footer.png); padding-top:26px; padding-bottom:26px; float:left;}
+.fl{ float:left;}
+.fr{ float:right;}
+.cb{ clear:both;}
+.footer{ width:780px; margin:0px auto;}
+.footer ul{ margin:0px; list-style:none;}
+.footer ul li{ margin-bottom:7px;color:#000;}
+.footer a{ text-decoration:none; font-size:10px; color:#000;}
+.footer a:hover{ text-decoration:underline;}
+.cite{width:780px;margin:10px auto; top:10px; position:relative;}
+/*jcarousel skin don't modify or you'll be sorry*/
+.jcarousel-skin-tango .jcarousel-container {position:absolute;z-index:0;}
+.jcarousel-skin-tango .jcarousel-container-horizontal {width: 780px;padding: 0px;}
+.jcarousel-skin-tango .jcarousel-container-vertical {width: 75px;height: 245px;padding: 0px;}
+.jcarousel-skin-tango .jcarousel-clip-horizontal {width:  780px;height: 268px;}
+.jcarousel-skin-tango .jcarousel-clip-vertical {width:  75px;height: 245px;}
+.jcarousel-skin-tango .jcarousel-item {width: 780px;height: 268px;}
+.jcarousel-skin-tango .jcarousel-item-horizontal {margin-right: 10px;}
+.jcarousel-skin-tango .jcarousel-item-vertical {margin-bottom: 10px;}
+.jcarousel-skin-tango .jcarousel-item-placeholder {background: #fff;color: #000;}
+.jcarousel-control {position: absolute;z-index:100;bottom:2px;left:0px;border-right:1px solid #999999;padding-top:5px;padding-bottom:5px;}
+.jcarousel-control a {font-family:Georgia, "Times New Roman", Times, serif;color:#fff;font-size:18px;padding:5px;border-top:1px solid #999999;border-right:0px;border-bottom:1px solid #999999;	border-left:1px solid #999999;margin:0px;text-decoration:none;outline:none}

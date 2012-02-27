@@ -1,0 +1,27 @@
+fields:
+  agent_company{name}:
+    required:
+      msg:              The agent  company name cannot be left blank.
+  agent_company{cvr_number}:
+    required:
+      msg:              The vat number cannot be left blank.
+  agent_company{address}:
+    required:
+      msg:              The address  cannot be left blank.
+  agent_company{post_code}:
+    required:
+      msg:              The post code cannot be left blank.
+  agent_company{contact_name}:
+    required:
+      msg:              The contact name name cannot be left blank.
+  agent_company{email}:
+    required:
+      msg:              The  email cannot be left blank.
+  agent_company{head_phone_number}:
+    required:
+      msg:              The head phone number cannot be left blank.
+  agent_company{mobile_number}:
+    required:
+      msg:              The Mobile number cannot be left blank.
+
+

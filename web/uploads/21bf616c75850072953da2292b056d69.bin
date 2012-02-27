@@ -1,0 +1,931 @@
+company_name	subscription_fee	registration_fee	product_name	employee_id	first_name	last_name	email	mobile_number	created_at	is_app_registered	password	registration_type	product_price
+AKVA GROUP DENMARK A_S	0	249	Zapna out	1	Søren Elholm			29409394	2011-02-04 10:40:00	1	123456	Mobile	0
+AKVA GROUP DENMARK A_S	0	249	Zapna out	2	Lars Holm			26150785	2011-02-04 10:40:00	0	 	\N	\N
+ IBISTIC TECHNOLOGIES DENMARK A_S	0	249	Zapna out	3	Jesper Brunkel			20860825	2011-02-04 10:40:00	\N	\N	\N	\N
+WMetal Wilhelmson AB	0	249	Zapna out	4	 David Laine			709587535	2011-02-04 10:40:00	\N	\N	\N	\N
+7-Technologies A_S	0	249	Zapna out	5	Janus Chr			26378082	2011-02-04 10:40:00	\N	\N	\N	\N
+A. Loft Pedersen A_S	0	249	Zapna out	6	User 1			20122070	2011-02-04 10:40:00	\N	\N	\N	\N
+A. Møller Transport	0	249	Zapna out	7	User			24844804	2011-02-04 10:40:00	\N	\N	\N	\N
+A_S DYBVAD STÅLINDUSTRI	0	249	Zapna out	8	Bruger 1			40360788	2011-02-04 10:40:00	\N	\N	\N	\N
+A_S DYBVAD STÅLINDUSTRI	0	249	Zapna out	9	Bruger 2			20250222	2011-02-04 10:40:00	\N	\N	\N	\N
+A_S DYBVAD STÅLINDUSTRI	0	249	Zapna out	10	Bruger 3			20326216	2011-02-04 10:40:00	\N	\N	\N	\N
+A_S DYBVAD STÅLINDUSTRI	0	249	Zapna out	11	Bruger 4			20103766	2011-02-04 10:40:00	\N	\N	\N	\N
+A_S J. Lauritzen's Eftf.Esbjerg	0	249	Zapna out	12	Bruger 1			21706248	2011-02-04 10:40:00	\N	\N	\N	\N
+Løgstrup Steel A_S	0	249	Zapna out	13	Dejan kocoski			20144249	2011-02-04 10:40:00	\N	\N	\N	\N
+Løgstrup Steel A_S	0	249	Zapna out	14	Robert Jensen			20156947	2011-02-04 10:40:00	\N	\N	\N	\N
+Løgstrup Steel A_S	0	249	Zapna out	15	Per Kristensen			20207550	2011-02-04 10:40:00	\N	\N	\N	\N
+Løgstrup Steel A_S	0	249	Zapna out	16	Carsten Trolle			20469975	2011-02-04 10:40:00	\N	\N	\N	\N
+Løgstrup Steel A_S	0	249	Zapna out	17	Steffen Møller			21143120	2011-02-04 10:40:00	\N		Mobile	0
+Løgstrup Steel A_S	0	249	Zapna out	18	Dan Christiansen			21231134	2011-02-04 10:40:00	\N	\N	\N	\N
+Løgstrup Steel A_S	0	249	Zapna out	19	Bruger 7			21808326	2011-02-04 10:40:00	\N	\N	\N	\N
+Løgstrup Steel A_S	0	249	Zapna out	20	Michael Vejlegärd			23294191	2011-02-04 10:40:00	\N		Mobile	0
+Løgstrup Steel A_S	0	249	Zapna out	21	Carsten Christiansen			30666776	2011-02-04 10:40:00	\N	\N	\N	\N
+Løgstrup Steel A_S	0	249	Zapna out	22	Per Løgstrup			40142400	2011-02-04 10:40:00	\N		Mobile	0
+Løgstrup Steel A_S	0	249	Zapna out	23	Jesper steenstrup			40174917	2011-02-04 10:40:00	\N	\N	\N	\N
+Løgstrup Steel A_S	0	249	Zapna out	24	Flemming Poulsen			40349394	2011-02-04 10:40:00	\N	\N	\N	\N
+Løgstrup Steel A_S	0	249	Zapna out	25	Jacob Høj Lambæk			51225688	2011-02-04 10:40:00	\N		Mobile	0
+A_S Tobias Jensen	0	249	Zapna out	26	Hans Jørgen			43271670	2011-02-04 10:40:00	\N		Mobile	0
+A_S Tobias Jensen	0	249	Zapna out	27	bjørn Jensen			43271671	2011-02-04 10:40:00	\N		Mobile	0
+A_S Tobias Jensen	0	249	Zapna out	28	Morten			43271683	2011-02-04 10:40:00	\N	\N	\N	\N
+Aandahl A-S	0	249	Zapna out	29	Bruger 1			40600655	2011-02-04 10:40:00	\N	\N	\N	\N
+ABCON A_S	0	249	Zapna out	30	Jørgen Beyer			40440628	2011-02-04 10:40:00	\N		Mobile	0
+Acon A_S	0	249	Zapna out	31	User			20477786	2011-02-04 10:40:00	\N	\N	\N	\N
+Adeel Safdar	0	249	Zapna out	32	Adeel Safdar			22391266	2011-02-04 10:40:00	\N	\N	\N	\N
+Adeel Safdar	0	249	Zapna out	33	Adeel Safdar			69109947	2011-02-04 10:40:00	\N	\N	\N	\N
+ADR Transport ApS	0	249	Zapna out	34					2011-02-04 10:40:00	\N	\N	\N	\N
+Aktiv Containerservice	0	249	Zapna out	35	User			20225706	2011-02-04 10:40:00	\N	\N	\N	\N
+Allan F. Madsen	0	249	Zapna out	36	User			22404599	2011-02-04 10:40:00	\N	\N	\N	\N
+Andreas Andresen A_S	0	249	Zapna out	38	User 1			40900365	2011-02-04 10:40:00	\N	\N	\N	\N
+Andreas Andresen A_S	0	249	Zapna out	39	User 2			40801894	2011-02-04 10:40:00	\N	\N	\N	\N
+Andreas Andresen A_S	0	249	Zapna out	40	User 1			60391918	2011-02-04 10:40:00	\N	\N	\N	\N
+Aunty Fozia	0	249	Zapna out	41	Fozia			35854021	2011-02-04 10:40:00	\N	\N	\N	\N
+Bjarsø A_S	0	249	Zapna out	42				24820444	2011-02-04 10:40:00	\N	\N	\N	\N
+BJØRN THORSEN A_S	0	249	Zapna out	44	Peter Adser			20958611	2011-02-04 10:40:00	\N		Mobile	0
+BJØRN THORSEN A_S	0	249	Zapna out	45	Claus Adser			21221188	2011-02-04 10:40:00	\N		Mobile	0
+BJØRN THORSEN A_S	0	249	Zapna out	46	Claus Jespersen			22885268	2011-02-04 10:40:00	\N	\N	\N	\N
+BJØRN THORSEN A_S	0	249	Zapna out	47	Ida Jørgensen			23444079	2011-02-04 10:40:00	\N		Mobile	0
+BJØRN THORSEN A_S	0	249	Zapna out	48	Sofia Tsironi			29289877	2011-02-04 10:40:00	\N	\N	\N	\N
+BJØRN THORSEN A_S	0	249	Zapna out	49	Lars Rønsholt			40209924	2011-02-04 10:40:00	\N		Mobile	0
+BJØRN THORSEN A_S	0	249	Zapna out	50	Svend Rimested			40313601	2011-02-04 10:40:00	\N	\N	\N	\N
+BJØRN THORSEN A_S	0	249	Zapna out	51	Kath Hansen			40362635	2011-02-04 10:40:00	\N	\N	\N	\N
+BJØRN THORSEN A_S	0	249	Zapna out	52	Niels Mørkegaard			40461940	2011-02-04 10:40:00	\N		Mobile	0
+BJØRN THORSEN A_S	0	249	Zapna out	53	Bjørn Jensen			43271671	2011-02-04 10:40:00	\N		Mobile	0
+BJØRN THORSEN A_S	0	249	Zapna out	54	Susanne Albercht			60708218	2011-02-04 10:40:00	\N	\N	\N	\N
+BJØRN THORSEN A_S	0	249	Zapna out	55	Irina Nysten			61666809	2011-02-04 10:40:00	\N	\N	\N	\N
+BJØRN THORSEN A_S	0	249	Zapna out	56	BJØRN THORSEN A/S SE			708491508	2011-02-04 10:40:00	\N		Mobile	0
+BJØRN THORSEN A_S	0	249	Zapna out	57	BJØRN THORSEN A/S SE			701800660	2011-02-04 10:40:00	\N		Mobile	0
+BJØRN THORSEN A_S	0	249	Zapna out	58	BJØRN THORSEN A/S SE			701800661	2011-02-04 10:40:00	\N		Mobile	0
+BLØCHER	0	249	Zapna out	59	User 1			61556399	2011-02-04 10:40:00	\N	\N	\N	\N
+Blue Business ApS	0	249	Zapna out	60	Morten 	Konnerup	mk@bluebusiness.dk	20853377	2011-02-04 10:40:00	1	kaffe2strong	\N	\N
+Blue Dialog ApS	0	249	Zapna out	61	Charles Ashby			20649890	2011-02-04 10:40:00	\N	\N	\N	\N
+BO THESTRUP A_S	0	249	Zapna out	62	User 1			40458447	2011-02-04 10:40:00	\N	\N	\N	\N
+BO THESTRUP A_S	0	249	Zapna out	63	User 2			40188971	2011-02-04 10:40:00	\N	\N	\N	\N
+BPI A_S	0	249	Zapna out	64	User 1			53657061	2011-02-04 10:40:00	\N	\N	\N	\N
+BPI A_S	0	249	Zapna out	65	User 2			40294947	2011-02-04 10:40:00	\N	\N	\N	\N
+BPI A_S	0	249	Zapna out	66	AJU			31623036	2011-02-04 10:40:00	\N	\N	\N	\N
+BPI A_S	0	249	Zapna out	67	User 3			51168828	2011-02-04 10:40:00	\N	\N	\N	\N
+C.C. Jensen A_S	0	249	Zapna out	68	User 1			22222960	2011-02-04 10:40:00	\N	\N	\N	\N
+C.C. Jensen A_S	0	249	Zapna out	69	User 1			22222965	2011-02-04 10:40:00	\N	\N	\N	\N
+Casual Clothing - jonas christensen	0	249	Zapna out	70	User 1			20844399	2011-02-04 10:40:00	\N	\N	\N	\N
+CD Company A_S	0	249	Zapna out	71	User 1			40512747	2011-02-04 10:40:00	\N	\N	\N	\N
+CFS Slagelse A_S Convenience F	0	249	Zapna out	72	User 1			29605598	2011-02-04 10:40:00	\N	\N	\N	\N
+Zapna	0	249	Zapna out	73	Christian Lerche			20223110	2011-02-04 10:40:00	\N		Mobile	0
+Zapna	0	249	Zapna out	74	Christian Lerche			763535000	2011-02-04 10:40:00	\N		Mobile	0
+Ciklum ApS	0	0	Zapna iphone app	75	Claus 	Østergaard	clo@cirklum.net	40208495	2011-02-04 10:40:00	\N		Mobile	60
+Ciklum ApS	0	249	Zapna out	76	Arne Hansen			40822766	2011-02-04 10:40:00	\N	\N	\N	\N
+Ciklum ApS	0	249	Zapna out	77	Usman Meer			26715221	2011-02-04 10:40:00	\N	\N	\N	\N
+Ciklum ApS	0	249	Zapna out	78	haris Aftab			28403173	2011-02-04 10:40:00	\N	\N	\N	\N
+Claus Edo Madsen	0	249	Zapna out	79	Claus Ed Madsen			20144272	2011-02-04 10:40:00	\N	\N	\N	\N
+CMC Biologics A_S	0	249	Zapna out	80	Anders Pedersen 			22943010	2011-02-04 10:40:00	\N		Mobile	0
+Couloir ApS	0	249	Zapna out	81	User 1			23238323	2011-02-04 10:40:00	\N	\N	\N	\N
+Couloir ApS	0	249	Zapna out	82	User 2			23238323	2011-02-04 10:40:00	\N	\N	\N	\N
+Commplett	0	249	Zapna out	83	Telekäden säborg - Brianä 			41242009	2011-02-04 10:40:00	\N		Mobile	0
+Commplett	0	249	Zapna out	84	User 1			21870002	2011-02-04 10:40:00	\N	\N	\N	\N
+Commplett	0	249	Zapna out	85	Niklas			52198902	2011-02-04 10:40:00	\N	\N	\N	\N
+Commplett	0	249	Zapna out	86	Thomas			40885000	2011-02-04 10:40:00	\N	\N	\N	\N
+Commplett	0	249	Zapna out	87	User 2			21870003	2011-02-04 10:40:00	\N	\N	\N	\N
+Commplett	0	249	Zapna out	88	Andre			52390000	2011-02-04 10:40:00	\N	\N	\N	\N
+Company Cornelius  A_S	0	249	Zapna out	89	Torben			40512828	2011-02-04 10:40:00	\N	\N	\N	\N
+DAKO A_S	0	249	Zapna out	90	User 2			25460901	2011-02-04 10:40:00	\N	\N	\N	\N
+DAKO A_S	0	249	Zapna out	91	Per Larsen			23451635	2011-02-04 10:40:00	\N		Mobile	0
+Damixa ApS	0	249	Zapna out	92	Karen Schultz			30344722	2011-02-04 10:40:00	\N	\N	\N	\N
+DAMPA A_S	0	249	Zapna out	93	User 2			23703342	2011-02-04 10:40:00	\N	\N	\N	\N
+Danish Export Association	0	249	Zapna out	94	Halldor			21229560	2011-02-04 10:40:00	\N	\N	\N	\N
+Danish Export Association	0	249	Zapna out	95	Rikke			31198788	2011-02-04 10:40:00	\N	\N	\N	\N
+Danish Export Association	0	249	Zapna out	96	Sebastian			23667788	2011-02-04 10:40:00	\N	\N	\N	\N
+Danish Export Association	0	249	Zapna out	97	Ulrik			30318788	2011-02-04 10:40:00	\N	\N	\N	\N
+Deltek Danmark A_S	0	249	Zapna out	98	User 1			20114154	2011-02-04 10:40:00	\N	\N	\N	\N
+Denimex ApS	0	249	Zapna out	99	Kim klerens			22222224	2011-02-04 10:40:00	\N	\N	\N	\N
+Denimex ApS	0	249	Zapna out	100	Jesper Frederiksen			24942618	2011-02-04 10:40:00	\N	\N	\N	\N
+Denimex ApS	0	249	Zapna out	101	Bo Petersen			40944595	2011-02-04 10:40:00	\N	\N	\N	\N
+DSV Env.	0	249	Zapna out	102	Johan Rube			40646818	2011-02-04 10:40:00	\N	\N	\N	\N
+DSV Env.	0	249	Zapna out	103	Johan Rube			40646818	2011-02-04 10:40:00	\N	\N	\N	\N
+Duedahlplus ApS	0	249	Zapna out	104	Connie Duedahl			29900000	2011-02-04 10:40:00	1	19novcdu	\N	\N
+Duedahlplus ApS	0	249	Zapna out	105	Bruger 2			53566352	2011-02-04 10:40:00	\N	\N	\N	\N
+Duedahlplus ApS	0	249	Zapna out	106	User 1			31395080	2011-02-04 10:40:00	\N	\N	\N	\N
+E A Trend	0	249	Zapna out	107	User 1			20160616	2011-02-04 10:40:00	\N	\N	\N	\N
+ EBA Finans & Administration	0	249	Zapna out	108	User 1			28745628	2011-02-04 10:40:00	\N	\N	\N	\N
+Elka Rainwear A_S	0	249	Zapna out	109	User 1			29350080	2011-02-04 10:40:00	\N	\N	\N	\N
+Ergolet A_S	0	249	Zapna out	110	Peter Hellman			41981632	2011-02-04 10:40:00	\N	\N	\N	\N
+FDE Forenede Danske Vognmænd	0	0	Zapna iphone app	111	Lars	Nielsen	ln@itd.dk	23441665	2011-02-04 10:40:00	\N		Mobile	0
+FDE Forenede Danske Vognmænd	0	0	Zapna iphone app	112	Allan	Thomsen	at@fde.dk	21470116	2011-02-04 10:40:00	\N		Mobile	0
+Focon Electronic Systems A_S	0	249	Zapna out	114	User 1			21408771	2011-02-04 10:40:00	\N	\N	\N	\N
+Focon Electronic Systems A_S	0	249	Zapna out	115	User 2			30626326	2011-02-04 10:40:00	\N	\N	\N	\N
+Focon Electronic Systems A_S	0	249	Zapna out	116	User 3			40142530	2011-02-04 10:40:00	\N	\N	\N	\N
+Zapna	0	249	Zapna out	117	Freddi			86888855	2011-02-04 10:40:00	\N		Mobile	0
+Zapna	0	249	Zapna out	118	Sakib Bott			27125079	2011-02-04 10:40:00	\N		Mobile	0
+Commplett	0	249	Zapna out	119	User			31173305	2011-02-04 10:40:00	\N		Mobile	0
+F R Larsen aps	0	249	Zapna out	120	User 1			22130473	2011-02-04 10:40:00	\N	\N	\N	\N
+F R Larsen aps	0	249	Zapna out	121	User 2			20987265	2011-02-04 10:40:00	\N	\N	\N	\N
+Fractum A_S	0	249	Zapna out	122	Thorkild Stokholm			24478998	2011-02-04 10:40:00	\N	\N	\N	\N
+Frederiksholms Offset ApS 	0	249	Zapna out	123	User 2			40101696	2011-02-04 10:40:00	\N	\N	\N	\N
+Frederiksholms Offset ApS 	0	249	Zapna out	124	User 1			40851945	2011-02-04 10:40:00	\N	\N	\N	\N
+Gazcon A_S	0	249	Zapna out	125	Bjarne Fog			22802225	2011-02-04 10:40:00	\N	\N	\N	\N
+Gazcon A_S	0	249	Zapna out	126	Helle fog			22406225	2011-02-04 10:40:00	\N	\N	\N	\N
+Gazcon A_S	0	249	Zapna out	127	Jens ulrik Ellegård			22192225	2011-02-04 10:40:00	\N		Mobile	0
+Gazcon A_S	0	249	Zapna out	128	Henrik Stendevad			20785225	2011-02-04 10:40:00	\N	\N	\N	\N
+Gazcon A_S	0	249	Zapna out	129	Pernille Heimann			22285759	2011-02-04 10:40:00	\N	\N	\N	\N
+Gazcon A_S	0	249	Zapna out	130	Fastnet			44996900	2011-02-04 10:40:00	\N	\N	\N	\N
+Gazcon A_S	0	249	Zapna out	131	User 6			40632225	2011-02-04 10:40:00	\N	\N	\N	\N
+Global Industries A_S	0	249	Zapna out	132	Flemming Sørensen			20161966	2011-02-04 10:40:00	\N		Mobile	0
+Global Mobile Aps	0	249	Zapna out	133	Global Mobile			60639941	2011-02-04 10:40:00	\N	\N	\N	\N
+Go2sweden I_S	0	0	Zapna iphone app	134	Atif	Awan	atm@go2sweden.dk	30232024	2011-02-04 10:40:00	\N		Mobile	0
+Go2sweden I_S	0	0	Zapna iphone app	135	Atif	Awan	atm@go2sweden.dk	30273927	2011-02-04 10:40:00	\N		Mobile	0
+Go2sweden I_S	0	249	Zapna out	136	Atif 	Awan	atm@go2sweden.dk	27327428	2011-02-04 10:40:00	1	2363	\N	\N
+Go2sweden I_S	0	249	Zapna out	137	Amir Awan			26677741	2011-02-04 10:40:00	1	okhqwe	\N	\N
+Go2sweden I_S	0	249	Zapna out	138	Amir Awan			31212464	2011-02-04 10:40:00	\N	\N	\N	\N
+GOLAN PIPE SYSTEMS APS	0	249	Zapna out	139	Bruger 1			40171877	2011-02-04 10:40:00	\N	\N	\N	\N
+Granudan ApS	0	249	Zapna out	140	Morten Skanning			22768041	2011-02-04 10:40:00	\N	\N	\N	\N
+Granudan ApS	0	249	Zapna out	141	Preben Skanning			40757520	2011-02-04 10:40:00	\N	\N	\N	\N
+Hagens Fjedre A_S	0	249	Zapna out	142	User 1			41116145	2011-02-04 10:40:00	\N	\N	\N	\N
+Holmberg Art & Innovation aps	25	59	Zapna out +	143	Anette	Holmberg	anette@holmbertg.dk	26441930	2011-02-04 10:40:00	1	1854	Mobile	0
+HUNDESTED PROPELLER A_S	0	249	Zapna out	144	Mogens Christensen			22209900	2011-02-04 10:40:00	\N	\N	\N	\N
+HVIDE SANDE SKIBSSMEDIE A_S	0	249	Zapna out	145	Toke	 Pedersen 	toke@hvss.dk	40861822	2011-02-04 10:40:00	1	hss1399		\N
+JAI A_S	0	249	Zapna out	146	Tue Mørck			40882860	2011-02-04 10:40:00	\N		Mobile	0
+Jan Funder Transport A_S	0	249	Zapna out	147	User 2			22102647	2011-02-04 10:40:00	\N	\N	\N	\N
+Jan Funder Transport A_S	0	249	Zapna out	148	User 1			22102646	2011-02-04 10:40:00	\N	\N	\N	\N
+JH Transport	0	249	Zapna out	149	Bruger 1			29659133	2011-02-04 10:40:00	\N	\N	\N	\N
+K.H. Transport & Spedition	0	249	Zapna out	150	Ken Hornstrup			20122290	2011-02-04 10:40:00	\N	\N	\N	\N
+K.M. Fish Machinery A_S	0	249	Zapna out	151	Niels Kronlog			40894635	2011-02-04 10:40:00	\N	\N	\N	\N
+K.M. Fish Machinery A_S	0	249	Zapna out	152	Kaj Christensen				2011-02-04 10:40:00	\N	\N	\N	\N
+Keystone ApS	0	249	Zapna out	153	Jan Rosenbom			28717539	2011-02-04 10:40:00	\N	\N	\N	\N
+K.H. Transport & Spedition	0	249	Zapna out	154	Marianne			22121690	2011-02-04 10:40:00	\N	\N	\N	\N
+Kilroy - Jysk Rejsebureau	0	249	Zapna out	155	user 1			26323460	2011-02-04 10:40:00	\N	\N	\N	\N
+Knud Jørgensen	0	249	Zapna out	156	User 1			40501233	2011-02-04 10:40:00	\N	\N	\N	\N
+Kongskilde Industries A_S	0	249	Zapna out	157	User 1			20151752	2011-02-04 10:40:00	\N	\N	\N	\N
+KSR Kuebler Niveau - Messtechnik	0	249	Zapna out	158	User 1			21652765	2011-02-04 10:40:00	\N	\N	\N	\N
+LAC engineering ApS	0	249	Zapna out	159	Niels Brænnum			24247676	2011-02-04 10:40:00	\N		Mobile	0
+Lars Christensen	0	249	Zapna out	160	User 1			40164088	2011-02-04 10:40:00	\N	\N	\N	\N
+Lars Christensen	0	249	Zapna out	161	User 1			26183173	2011-02-04 10:40:00	\N		Mobile	0
+Lars Guld Salomonsen	0	249	Zapna out	162	Lars			20281656	2011-02-04 10:40:00	\N		Mobile	0
+Lars Guld Salomonsen	0	249	Zapna out	163	User 2			24666256	2011-02-04 10:40:00	\N	\N	\N	\N
+Lars Jørgen Skov	0	249	Zapna out	164	User 1			40524694	2011-02-04 10:40:00	\N	\N	\N	\N
+Lars Jørgen Skov	0	249	Zapna out	165	User 1			40854694	2011-02-04 10:40:00	\N	\N	\N	\N
+Zapna	0	249	Zapna out	166	Lasse Nørresgård			30702721	2011-02-04 10:40:00	\N		Mobile	0
+Lemvig Maskiner & Køleteknik	0	249	Zapna out	167	Finn Eriksen			21208033	2011-02-04 10:40:00	\N	\N	\N	\N
+Liftra ApS	0	249	Zapna out	168	Jens Mortensen			22446917	2011-02-04 10:40:00	\N	\N	\N	\N
+Liftra ApS	0	249	Zapna out	169	Per Fenger			22446916	2011-02-04 10:40:00	\N	\N	\N	\N
+Liftup ApS	0	249	Zapna out	170	Henrik Haugaard			50999400	2011-02-04 10:40:00	\N	\N	\N	\N
+Løgstør Rør	0	249	Zapna out	171	User 13			99661008	2011-02-04 10:40:00	\N	\N	\N	\N
+Deltek Danmark A_S	0	249	Zapna out	172				22768388	2011-02-04 10:40:00	\N	\N	\N	\N
+Meyland-Smith A_S	0	249	Zapna out	173	Torsten Langsted			40191985	2011-02-04 10:40:00	\N	\N	\N	\N
+MobileWeaver ApS	0	249	Zapna out	174	Umar Jamal			29680692	2011-02-04 10:40:00	\N	\N	\N	\N
+Nilpeter A_S	0	249	Zapna out	175	Jacob  Sørensen			20757104	2011-02-04 10:40:00	\N		Mobile	0
+Nilpeter A_S	0	249	Zapna out	176	Jakob Landberg			40585898	2011-02-04 10:40:00	\N	\N	\N	\N
+Nilpeter A_S	0	249	Zapna out	177	Karsten Saabye			40597965	2011-02-04 10:40:00	\N	\N	\N	\N
+Nilpeter A_S	0	249	Zapna out	178	Bertil Linke			40833193	2011-02-04 10:40:00	\N	\N	\N	\N
+Nilpeter A_S	0	249	Zapna out	179	Anders AmmitzbÃ¸ll			20757122	2011-02-04 10:40:00	\N	\N	\N	\N
+Zapna	0	249	Zapna out	182	User 1			25592902	2011-02-04 10:40:00	\N		Mobile	0
+Nordisk Flytteteam	0	249	Zapna out	183	Peter Licthenstein			40325404	2011-02-04 10:40:00	\N	\N	\N	\N
+North Star Invest ApS	0	249	Zapna out	184	Kim Graven Nielsen			27158000	2011-02-04 10:40:00	\N	\N	\N	\N
+Ny Havns Vod- og Trawlbinderi	0	249	Zapna out	185	Keld Fjord			28194077	2011-02-04 10:40:00	\N	\N	\N	\N
+Ny Havns Vod- og Trawlbinderi	0	249	Zapna out	186	User 2			28191279	2011-02-04 10:40:00	\N	\N	\N	\N
+Ocean Prawns A_S	0	249	Zapna out	187	Per Svennigsen			40410750	2011-02-04 10:40:00	\N	\N	\N	\N
+Oertli ApS	0	249	Zapna out	188	User 1			28102084	2011-02-04 10:40:00	\N	\N	\N	\N
+Oiltech Danmark	0	249	Zapna out	189	Bruger 1			40812038	2011-02-04 10:40:00	\N	\N	\N	\N
+Oiltech Danmark	0	249	Zapna out	190	Bruger 2			40212038	2011-02-04 10:40:00	\N	\N	\N	\N
+Oiltech Danmark	0	249	Zapna out	191	Bruger 3			30584138	2011-02-04 10:40:00	\N	\N	\N	\N
+Oiltech Danmark	0	249	Zapna out	192	Bruger 4			21422838	2011-02-04 10:40:00	\N	\N	\N	\N
+Oiltech Danmark	0	249	Zapna out	193	Bruger 5			22732195	2011-02-04 10:40:00	\N	\N	\N	\N
+Oiltech Danmark	0	249	Zapna out	194	Bruger 6			61701781	2011-02-04 10:40:00	\N	\N	\N	\N
+Oiltech Danmark	0	249	Zapna out	195	Bruger 7			40732038	2011-02-04 10:40:00	\N	\N	\N	\N
+OSK-Ship Tech A_S	0	249	Zapna out	196	Anders 	Ørgård	anh@osk.dk	40941391	2011-02-04 10:40:00	1	4rfvbgt5	\N	\N
+Preben Kristensen	0	249	Zapna out	197					2011-02-04 10:40:00	\N	\N	\N	\N
+Preben Kristensen	0	249	Zapna out	198	User 1			40766167	2011-02-04 10:40:00	\N	\N	\N	\N
+Commplett	0	249	Zapna out	199	 Hazim			23237878	2011-02-04 10:40:00	\N		Mobile	0
+Centas ApS	0	249	Zapna out	200	User 1			23965964	2011-02-04 10:40:00	\N	\N	\N	\N
+Zapna	0	249	Zapna out	201	Peter erlangsen			42137696	2011-02-04 10:40:00	\N		Mobile	0
+Zapna	0	249	Zapna out	202	Peter erlangsen			763459055	2011-02-04 10:40:00	\N		Mobile	0
+Commplett	0	249	Zapna out	203	Assad			25361884	2011-02-04 10:40:00	\N		Mobile	0
+PNN Medical A_S	0	249	Zapna out	204	IT			30384597	2011-02-04 10:40:00	\N	\N	\N	\N
+PNN Medical A_S	0	249	Zapna out	205	EOJ			20209113	2011-02-04 10:40:00	\N	\N	\N	\N
+PNN Medical A_S	0	249	Zapna out	206	CST			20301513	2011-02-04 10:40:00	\N	\N	\N	\N
+PNN Medical A_S	0	249	Zapna out	207	PG			21265730	2011-02-04 10:40:00	\N	\N	\N	\N
+PNN Medical A_S	0	249	Zapna out	208	KHW			21625307	2011-02-04 10:40:00	\N	\N	\N	\N
+PNN Medical A_S	0	249	Zapna out	209	LMJ			23438388	2011-02-04 10:40:00	\N	\N	\N	\N
+PNN Medical A_S	0	249	Zapna out	210	TS			30384578	2011-02-04 10:40:00	\N	\N	\N	\N
+PNN Medical A_S	0	249	Zapna out	211	CB			30630956	2011-02-04 10:40:00	\N	\N	\N	\N
+PNN Medical A_S	0	249	Zapna out	212	SF			40319113	2011-02-04 10:40:00	\N	\N	\N	\N
+PNN Medical A_S	0	249	Zapna out	213	URH			51990210	2011-02-04 10:40:00	\N	\N	\N	\N
+PNN Medical A_S	0	249	Zapna out	214	MB			51990243	2011-02-04 10:40:00	\N	\N	\N	\N
+PNN Medical A_S	0	249	Zapna out	215	LM			51996611	2011-02-04 10:40:00	\N	\N	\N	\N
+PNN Medical A_S	0	249	Zapna out	216	BJO			61610611	2011-02-04 10:40:00	\N	\N	\N	\N
+PNN Medical A_S	0	249	Zapna out	217	User 13			51996610	2011-02-04 10:40:00	\N	\N	\N	\N
+PNN Medical A_S	0	249	Zapna out	218	User 14			28447567	2011-02-04 10:40:00	\N	\N	\N	\N
+Power Stow A_S	0	249	Zapna out	220	Bruger 1			28702725	2011-02-04 10:40:00	\N	\N	\N	\N
+Power Stow A_S	0	249	Zapna out	221	Bruger 2			28721032	2011-02-04 10:40:00	\N	\N	\N	\N
+Pres-Vac Engineering ApS	0	249	Zapna out	222	User 1			25700375	2011-02-04 10:40:00	\N	\N	\N	\N
+Proficon	0	249	Zapna out	223	Bo Repmer			22698070	2011-02-04 10:40:00	\N	\N	\N	\N
+Prolog Development Center A_S	0	249	Zapna out	224	Finn Grønskov			20871070	2011-02-04 10:40:00	\N		Mobile	0
+PRO-MOVEC A_S	0	249	Zapna out	225	Jesper Lundquist			51298974	2011-02-04 10:40:00	\N	\N	\N	\N
+REFTECH A_S	0	249	Zapna out	226	Anton Hansen			40433855	2011-02-04 10:40:00	\N	\N	\N	\N
+REFTECH A_S	0	249	Zapna out	227	Thyge Rasmussen			30311765	2011-12-04 10:40:00	\N	\N	\N	\N
+REFTECH A_S	0	249	Zapna out	228	Thor Lemminger			40240186	2011-02-04 10:40:00	\N	\N	\N	\N
+REFTECH A_S	0	249	Zapna out	229	Søren Lange			21731198	2011-02-04 10:40:00	\N		Mobile	0
+REFTECH A_S	0	249	Zapna out	230	Steffen Brandt			23278767	2011-02-04 10:40:00	\N	\N	\N	\N
+REFTECH A_S	0	249	Zapna out	231	Poul 	Fisker	pof@reftech.dk	30860186	2011-02-04 10:40:00	1	pifpafpof	\N	\N
+REFTECH A_S	0	249	Zapna out	232	Henning Hansen			21761918	2011-02-04 10:40:00	\N	\N	\N	\N
+REFTECH A_S	0	249	Zapna out	233	Tommy Eis			24963374	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	234	Bruger 1			20707546	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	235	Tina			20774712	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	236	Bruger 3			20992079	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	237	Bruger 4			20992765	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	238	Bruger 5			20996496	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	239	Bruger 6			22121209	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	240	Bruger 7			22121231	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	241	Jørgen Mohr			22121277	2011-02-04 10:40:00	\N		Mobile	0
+Reson A_S	0	249	Zapna out	242	Bruger 9			22142834	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	243	Bruger 10			22291292	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	244	Jakob			22291296	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	245	Bruger 12			22291298	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	246	Bruger 13			22460835	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	247	Bruger 14			22723941	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	248	Bruger 15			22843333	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	249	Bruger 16			25357834	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	250	Bruger 17			25357842	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	251	Bruger 18			25357850	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	252	Bruger 19			25357858	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	253	Bruger 20			25357859	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	254	Kim Lehman			25444666	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	255	Bruger 22			25675757	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	256	Kim Christiansen			40297796	2011-02-04 10:40:00	0	 	\N	\N
+Reson A_S	0	249	Zapna out	257	Bruger 24			40554085	2011-02-04 10:40:00	0		\N	\N
+Reson A_S	0	249	Zapna out	258	Bruger 25			40569870	2011-02-04 10:40:00	0		\N	\N
+Reson A_S	0	249	Zapna out	259	Tim			40634033	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	260	Bruger 27			40748442	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	261	Bruger 28			40748694	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	262	Bruger 29			40845510	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	263	Bruger 30			40845551	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	264	Bruger 31			40845939	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	265	Bruger 32			41246662	2011-02-04 10:40:00	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	266	Bruger 32			41246662	2011-02-04 10:40:00	\N	\N	\N	\N
+Riaz Gruppen ApS	0	249	Zapna out	267	Sibghat Riaz			26237868	2011-02-04 10:40:00	\N	\N	\N	\N
+Roblon A_S	0	249	Zapna out	268	Lasse Nielsen			20348541	2011-02-04 10:40:00	\N	\N	\N	\N
+Scanel International A_S	0	249	Zapna out	269	Jesper Sørensen			25234500	2011-02-04 10:40:00	\N		Mobile	0
+SeaMech A_S	0	249	Zapna out	270	User 1			23216358	2011-02-04 10:40:00	\N	\N	\N	\N
+Seniorland A_S	0	249	Zapna out	271	User 1			23710641	2011-02-04 10:40:00	\N	\N	\N	\N
+Sikker Byg Enterprise ApS	0	249	Zapna out	272	Kjeld			27117994	2011-02-04 10:40:00	\N	\N	\N	\N
+Sjælund A_S	0	249	Zapna out	273	Finn Mortensen			23352438	2011-02-04 10:40:00	\N	\N	\N	\N
+Commplett	0	249	Zapna out	274	Munir			30300102	2011-02-04 10:40:00	\N		Mobile	0
+Smoke Solution	0	249	Zapna out	275	User 1			21800048	2011-02-04 10:40:00	\N	\N	\N	\N
+Smoke Solution	0	249	Zapna out	276	User 1			51331696	2011-02-04 10:40:00	\N	\N	\N	\N
+Smoke Solution	0	249	Zapna out	277	User 1			20900062	2011-02-04 10:40:00	\N	\N	\N	\N
+Stand By Publishing ApS	0	249	Zapna out	278	Christian Peschardt			40113397	2011-02-04 10:40:00	\N		Mobile	0
+Starco A_S	0	249	Zapna out	279	Peer Ejlersgaard			20144338	2011-02-04 10:40:00	\N	\N	\N	\N
+Starco A_S	0	249	Zapna out	280	Stefano Raimondi			22247504	2011-02-04 10:40:00	\N	\N	\N	\N
+Starco A_S	0	249	Zapna out	281	Vladimir Yeliseyev			51263031	2011-02-04 10:40:00	\N	\N	\N	\N
+Commplett	0	249	Zapna out	282	Assaad			31122334	2011-02-04 10:40:00	\N		Mobile	0
+Commplett	0	249	Zapna out	283	 Mohammed			22201977	2011-02-04 10:40:00	\N		Mobile	0
+Thyborøn Skibs & Motor A_S	0	249	Zapna out	284	Tage Hansen			20198500	2011-02-04 10:40:00	\N	\N	\N	\N
+Thyborøn Skibs & Motor A_S	0	249	Zapna out	285	Ole Lilleøre			20198501	2011-02-04 10:40:00	\N		Mobile	0
+Thyborøn Skibs & Motor A_S	0	249	Zapna out	286	Michael Rasmusen			20198502	2011-02-04 10:40:00	\N	\N	\N	\N
+Thyborøn Skibs & Motor A_S	0	249	Zapna out	287	Christian Olesen			20198503	2011-02-04 10:40:00	\N	\N	\N	\N
+Thyborøn Skibs & Motor A_S	0	249	Zapna out	288	Stinus Lilleøre			20198504	2011-02-04 10:40:00	\N		Mobile	0
+Thyborøn Skibs & Motor A_S	0	249	Zapna out	289	Allan Thomsen			20198505	2011-02-04 10:40:00	\N	\N	\N	\N
+Thyborøn Skibs & Motor A_S	0	249	Zapna out	290	Thomas Poulsen			20198506	2011-02-04 10:40:00	\N	\N	\N	\N
+Thyborøn Skibs & Motor A_S	0	249	Zapna out	291	Kim Lilleøre			20198507	2011-02-04 10:40:00	\N		Mobile	0
+Thyborøn Skibs & Motor A_S	0	249	Zapna out	292	Danny Vejlby			20198509	2011-02-04 10:40:00	\N	\N	\N	\N
+Thyborøn Skibs & Motor A_S	0	249	Zapna out	293	Jens Oluf Mortensen			20198510	2011-02-04 10:40:00	\N	\N	\N	\N
+Thyborøn Skibs & Motor A_S	0	249	Zapna out	294	Anders Iversen			31552244	2011-02-04 10:40:00	\N	\N	\N	\N
+THYBORØN SKIBSSMEDIE A_S	0	249	Zapna out	295	Allan Rønn Pedersen			20141222	2011-02-04 10:40:00	\N		Mobile	0
+Ticketnet Net ApS	0	249	Zapna out	296	User 1			25698791	2011-02-04 10:40:00	\N	\N	\N	\N
+U.B LET A_S	0	249	Zapna out	297	User 1			31313499	2011-02-04 10:40:00	\N	\N	\N	\N
+V. Guldmann A_S	0	249	Zapna out	298	User 1			25192360	2011-02-04 10:40:00	\N	\N	\N	\N
+V. Guldmann A_S	0	249	Zapna out	299	User 1			25192343	2011-02-04 10:40:00	\N	\N	\N	\N
+V. Guldmann A_S	0	249	Zapna out	300	User 1			22285725	2011-02-04 10:40:00	\N	\N	\N	\N
+V. Guldmann A_S	0	249	Zapna out	301	User 1			40578144	2011-02-04 10:40:00	\N	\N	\N	\N
+Vestergaard Group ApS	0	249	Zapna out	302	Flemming Bekker			20873875	2011-02-04 10:40:00	\N	\N	\N	\N
+VIKING LIFE-SAVING EQUIPMENT A_S	0	249	Zapna out	303	Lars Errebo			25428300	2011-02-04 10:40:00	\N	\N	\N	\N
+VIKING LIFE-SAVING EQUIPMENT A_S	0	249	Zapna out	304	Mikkel Christiansen			25428306	2011-02-04 10:40:00	\N	\N	\N	\N
+VIKING LIFE-SAVING EQUIPMENT A_S	0	249	Zapna out	305	User 1			25428305	2011-02-04 10:40:00	\N	\N	\N	\N
+VIKING LIFE-SAVING EQUIPMENT A_S	0	249	Zapna out	306	User 2			25428321	2011-02-04 10:40:00	\N	\N	\N	\N
+VIKING LIFE-SAVING EQUIPMENT A_S	0	249	Zapna out	307	User 3			25428262	2011-02-04 10:40:00	\N	\N	\N	\N
+VIKING LIFE-SAVING EQUIPMENT A_S	0	249	Zapna out	308	User 4			25428227	2011-02-04 10:40:00	\N	\N	\N	\N
+VIKING LIFE-SAVING EQUIPMENT A_S	0	249	Zapna out	309	User 5			25428192	2011-02-04 10:40:00	\N	\N	\N	\N
+VIKING LIFE-SAVING EQUIPMENT A_S	0	249	Zapna out	310	User 6			25428218	2011-02-04 10:40:00	\N	\N	\N	\N
+Weco Invest A_S	0	249	Zapna out	311	Ditlev Wedellsborg			20200617	2011-02-04 10:40:00	\N		Mobile	0
+Weco Invest A_S	0	249	Zapna out	312	John Tyrrestrup			29914407	2011-02-04 10:40:00	\N	\N	\N	\N
+Weco Invest A_S	0	249	Zapna out	313	Peter Grønlund			61617110	2011-02-04 10:40:00	\N		Mobile	0
+Westrup A-S	0	249	Zapna out	314	User 1			20222564	2011-02-04 10:40:00	\N	\N	\N	\N
+Wetter Transport	0	249	Zapna out	315	 Uffe Wette			20567512	2011-02-04 10:40:00	\N	\N	\N	\N
+Wilhelmsen Callenberg A-S	0	249	Zapna out	316	User 1			20723610	2011-02-04 10:40:00	\N	\N	\N	\N
+Zapna	0	249	Zapna out	317	Mariam			41599989	2011-02-04 10:40:00	1	123456	\N	\N
+Zapna	0	249	Zapna out	318	Omair Khan			20717786	2011-02-04 10:40:00	1	okhqwe	Mobile	0
+Zapna	0	249	Zapna out	319	Niels Ottesen		no@zapna.com	53617786	2011-02-04 10:40:00	1	 	Mobile	0
+Zapna	0	249	Zapna out	320	Hamad Raza			49112584	2011-02-04 10:40:00	1	okhqwe	\N	\N
+Zapna	0	249	Zapna out	323	Saba			29934904	2011-02-04 10:40:00	1	okhqwe	\N	\N
+Zapna	0	249	Zapna out	325	Torben Melchoirsen			20818616	2011-02-04 10:40:00	\N	\N	\N	\N
+Zero-Max A-S	0	249	Zapna out	327	Bruger 1			20423188	2011-02-04 10:40:00	\N	\N	\N	\N
+Zero-Max A-S	0	249	Zapna out	328	Bruger 2			40375000	2011-02-04 10:40:00	\N	\N	\N	\N
+Nilpeter A_S	0	249	Zapna out	329	Bruger 1	Bruger 1		20263079	2011-03-10 04:31:50	\N	\N	\N	\N
+Nilpeter A_S	0	249	Zapna out	330	Bruger 2	Bruger 2		20750188	2011-03-10 04:35:08	\N	\N	\N	\N
+Nilpeter A_S	0	249	Zapna out	331	Bruger 3	Bruger 3		20757116	2011-03-10 04:35:49	\N	\N	\N	\N
+Nilpeter A_S	0	249	Zapna out	332	Bruger 4	Bruger 4		20757124	2011-03-10 04:36:36	\N	\N	\N	\N
+Nilpeter A_S	0	249	Zapna out	333	Tina			20774712	2011-03-10 04:37:04	\N	\N	\N	\N
+Nilpeter A_S	0	249	Zapna out	334	Bruger 5	Bruger 5		22888824	2011-03-10 04:40:21	\N	\N	\N	\N
+Nilpeter A_S	0	249	Zapna out	335	Bruger 6	Bruger 6		40813158	2011-03-10 04:41:26	\N	\N	\N	\N
+Nilpeter A_S	0	249	Zapna out	336	Bruger 7	Bruger 7		40830072	2011-03-10 04:41:56	\N	\N	\N	\N
+Nilpeter A_S	0	249	Zapna out	337	Bruger 8	Bruger 8		40830477	2011-03-10 04:42:20	\N	\N	\N	\N
+Nilpeter A_S	0	249	Zapna out	338	Bruger 9	Bruger 9		40854323	2011-03-10 04:42:50	\N	\N	\N	\N
+Viking Skolen 	0	249	Zapna out	339	Sælger	Larsson		40157676	2011-03-10 17:51:36	\N		Mobile	0
+Oertli ApS	0	249	Zapna out	340	Peder	LambÃ¦k		20102084	2011-03-11 16:21:18	\N	\N	\N	\N
+Skadkaer Consult ApS	0	249	Zapna out	341	Finn	Pedersen		20101915	2011-03-11 16:29:11	\N	\N	\N	\N
+Faaborg flytteforetning	0	249	Zapna out	343	Bruger	1		20129266	2011-03-11 16:42:30	\N	\N	\N	\N
+Straumur Investment Bank	0	249	Zapna out	344	Jonina	Fjelsted		20153220	2011-03-11 16:43:09	\N	\N	\N	\N
+AMETEK DENMARK A_S	0	249	Zapna out	345	Joel	Frie		20200044	2011-03-11 16:44:17	\N	\N	\N	\N
+A. Loft Pedersen A_S	0	249	Zapna out	346	Bruger	2		20225070	2011-03-11 16:44:37	\N	\N	\N	\N
+Metalock Denmark A_S	0	249	Zapna out	347	Bruger	1		20226237	2011-03-11 16:45:05	\N	\N	\N	\N
+Inshare APS	0	249	Zapna out	348	Vagn	Nielsen		20274211	2011-03-11 16:45:36	\N	\N	\N	\N
+Nordtec Group	0	249	Zapna out	349	Peter			20293310	2011-03-11 16:52:30	\N	\N	\N	\N
+Truck assist	0	249	Zapna out	350	Bruger	1		20300975	2011-03-11 16:53:03	\N	\N	\N	\N
+Ropox A_S	0	249	Zapna out	351	Henirk	Olsen		20464892	2011-03-11 16:54:51	\N	\N	\N	\N
+Integra A_S	0	249	Zapna out	352	Henrik			20651413	2011-03-11 16:55:51	\N	\N	\N	\N
+DAKO A_S	0	249	Zapna out	353	Fredrik	Uggedahl		20705088	2011-03-11 16:56:41	\N	\N	\N	\N
+VINK A-S	0	249	Zapna out	354	Morten	jakobsen		20808805	2011-03-11 16:58:01	\N	\N	\N	\N
+VINK A-S	0	249	Zapna out	355	Astor	Martinsen		20808829	2011-03-11 16:58:19	\N	\N	\N	\N
+VINK A-S	0	249	Zapna out	356	Rasmus	Nielsen		20808830	2011-03-11 16:58:43	\N	\N	\N	\N
+Elcold ApS	0	249	Zapna out	357	Jan	H		20840054	2011-03-11 16:59:11	\N	\N	\N	\N
+Carite Sport A_S	0	249	Zapna out	358	Jeppe			20857285	2011-03-11 17:01:15	\N	\N	\N	\N
+Hagens Fjedre A_S	0	249	Zapna out	359	Mogens	skriver		20873313	2011-03-11 17:01:50	\N	\N	\N	\N
+Wetter Transport	0	249	Zapna out	360	Michael	Wetter		20887649	2011-03-11 17:02:35	\N	\N	\N	\N
+Agri Invest A_S	0	249	Zapna out	361	Bruger	1		20889910	2011-03-11 17:03:00	\N	\N	\N	\N
+Steen J. Andell	0	249	Zapna out	362	Anita	Andell		20923961	2011-03-11 17:04:23	\N	\N	\N	\N
+Hagens Fjedre A_S	0	249	Zapna out	363	Henrik	Hagens		20924792	2011-03-11 17:04:54	\N	\N	\N	\N
+DK Company A_S	0	249	Zapna out	364	Bruger	1		20945496	2011-03-11 17:06:48	\N	\N	\N	\N
+Desitek A_S	0	249	Zapna out	365	Bruger	1		21253298	2011-03-11 17:07:40	\N	\N	\N	\N
+BJARNE MEINCKE INT. TRANSPORTER	0	249	Zapna out	366	Bjarne			21263115	2011-03-11 17:08:33	\N	\N	\N	\N
+F R Larsen aps	0	249	Zapna out	367	Bruger	1		21475164	2011-03-11 17:09:07	\N	\N	\N	\N
+ALBA Turistfart	0	249	Zapna out	368	Afrem	Ali		21528809	2011-03-11 17:09:58	\N	\N	\N	\N
+Commplett	0	249	Zapna out	369	Test	kort		21614848	2011-03-11 17:10:32	\N	\N	\N	\N
+Summit Consulting A_S	0	249	Zapna out	370	Connie	Ebsen		21668660	2011-03-11 17:11:55	\N	\N	\N	\N
+Cargo 2000 A_S	0	249	Zapna out	371	Michael			21679199	2011-03-11 17:12:24	\N	\N	\N	\N
+Westrup A-S	0	249	Zapna out	372	Leif	GoldbÃ¦k		21779421	2011-03-11 17:12:54	\N	\N	\N	\N
+Commplett	0	249	Zapna out	373	Test	kort 2		21872187	2011-03-11 17:13:28	\N		Mobile	0
+De grønne busser	0	249	Zapna out	374	Lars			22104749	2011-03-11 17:13:50	\N	\N	\N	\N
+De grønne busser	0	249	Zapna out	375	De Gønne Busser	Kenneth		22104758	2011-03-11 17:14:26	\N		Mobile	0
+Hagens Fjedre A_S	0	249	Zapna out	376	Tom	Egemose		22117808	2011-03-11 17:14:58	\N	\N	\N	\N
+ADR Transport ApS	0	249	Zapna out	377	John			22118100	2011-03-11 17:15:19	\N	\N	\N	\N
+F R Larsen aps	0	249	Zapna out	378	Bruger	2		22153796	2011-03-11 17:15:35	\N	\N	\N	\N
+BPI A_S	0	249	Zapna out	379	TSO			22210300	2011-03-11 17:17:02	\N	\N	\N	\N
+C.C. Jensen A_S	0	249	Zapna out	380	Bruger	1		22222555	2011-03-11 17:17:24	\N	\N	\N	\N
+C.C. Jensen A_S	0	249	Zapna out	381	C.C Jensen A/S			22222958	2011-03-11 17:17:55	\N	\N	\N	\N
+C.C. Jensen A_S	0	249	Zapna out	382	C.C Jensen			22222997	2011-03-11 17:18:14	\N	\N	\N	\N
+Scanel International A_S	0	249	Zapna out	383	Jesper	sÃ¸rensen		22225255	2011-03-11 17:18:38	\N	\N	\N	\N
+UNIMEX Engineering Ltd. A_S	0	249	Zapna out	384	Kristoffer	Saunamaki		22411900	2011-03-11 17:19:21	\N	\N	\N	\N
+F R Larsen aps	0	249	Zapna out	385	Bruger	3		22428909	2011-03-11 17:20:04	\N	\N	\N	\N
+Kompagniet af 1991 A_S	0	249	Zapna out	386	Bruger	1		22464733	2011-03-11 17:20:28	\N	\N	\N	\N
+Atlas Incinerators A_S	0	249	Zapna out	387	Sælger	1		22554676	2011-03-11 17:21:28	\N		Mobile	0
+Integra A_S	0	249	Zapna out	388	Michael	Thorsen		22666121	2011-03-11 17:22:11	\N	\N	\N	\N
+Carl Ole Holt Petersen	0	249	Zapna out	389	Carl Ole	Petersen		22700055	2011-03-11 17:22:47	\N	\N	\N	\N
+ALBA Turistfart	0	249	Zapna out	390	Bekim	Ali		22894746	2011-03-11 17:23:36	\N	\N	\N	\N
+F R Larsen aps	0	249	Zapna out	391	Bruger	5		22904168	2011-03-11 17:24:35	\N	\N	\N	\N
+Couloir ApS	0	249	Zapna out	392	Anders			23238223	2011-03-11 17:25:09	\N	\N	\N	\N
+Focon Electronic Systems A_S	0	249	Zapna out	393	Bruger	1		23248240	2011-03-11 17:25:33	\N	\N	\N	\N
+Focon Electronic Systems A_S	0	249	Zapna out	394	Bruger	2		23248268	2011-03-11 17:25:51	\N	\N	\N	\N
+Focon Electronic Systems A_S	0	249	Zapna out	395	Bruger	3		23248279	2011-03-11 17:26:05	\N	\N	\N	\N
+Seagull Ab	0	249	Zapna out	396	Sanne	Christensen		23259002	2011-03-11 17:26:31	\N	\N	\N	\N
+Standesign A_S	0	249	Zapna out	397	 Krisian	Egillund		23287966	2011-03-11 17:27:32	\N	\N	\N	\N
+Flemming Rasmussen	0	249	Zapna out	398	Flemming	Rasmussen		23434550	2011-03-11 17:27:57	\N	\N	\N	\N
+Fyns Kran Udstyr A_S	0	249	Zapna out	399	Poul	Jensen		23608128	2011-03-11 17:29:04	\N	\N	\N	\N
+Skako Comessa A_S -Skako Beton A_S	0	249	Zapna out	400	Claus	Hansen		23639249	2011-03-11 17:30:04	\N	\N	\N	\N
+Muehlhan A_S	0	249	Zapna out	401	Vandad	Pachai		23749081	2011-03-11 17:30:33	\N	\N	\N	\N
+Integra A_S	0	249	Zapna out	402	Kim			24212148	2011-03-11 17:30:58	\N	\N	\N	\N
+Hagens Fjedre A_S	0	249	Zapna out	403	Lise lotte	Jensen		24417995	2011-03-11 17:31:29	\N	\N	\N	\N
+Elcold ApS	0	249	Zapna out	404	Bent	N		24621730	2011-03-11 17:33:25	\N	\N	\N	\N
+Velcome A_S	0	249	Zapna out	405	Bruger	1		24644923	2011-03-11 17:33:48	\N	\N	\N	\N
+Seagull Ab	0	249	Zapna out	406	Finn	Jacobsen		24666718	2011-03-11 17:34:11	\N	\N	\N	\N
+K.H. Transport & Spedition	0	249	Zapna out	407	Ken			25126290	2011-03-11 17:34:36	\N	\N	\N	\N
+Milestone Systems A_S	0	249	Zapna out	408	Karl			25142744	2011-03-11 17:34:56	\N	\N	\N	\N
+ALEX ANDERSEN ØLUND	0	249	Zapna out	409	Knud	Erik		25229003	2011-03-11 17:35:32	\N	\N	\N	\N
+ALEX ANDERSEN ØLUND	0	249	Zapna out	410	Bjørn			25229027	2011-03-11 17:35:59	\N		Mobile	0
+Blue Business ApS	0	249	Zapna out	411	Peter	Brunkel		25349031	2011-03-11 17:36:22	1	rasmus876	\N	\N
+VINK A-S	0	249	Zapna out	412	Bruger	9		25428276	2011-03-11 17:36:48	\N	\N	\N	\N
+VINK A-S	0	249	Zapna out	413	Bruger	10		25428284	2011-03-11 17:37:07	\N	\N	\N	\N
+VINK A-S	0	249	Zapna out	414	Bruger	8		25428297	2011-03-11 17:37:20	\N	\N	\N	\N
+VINK A-S	0	249	Zapna out	415	Bruger	7		25428299	2011-03-11 17:37:31	\N	\N	\N	\N
+VINK A-S	0	249	Zapna out	416	Bruger	5		25428302	2011-03-11 17:38:00	\N	\N	\N	\N
+VINK A-S	0	249	Zapna out	417	Bruger	6		25428316	2011-03-11 17:38:12	\N	\N	\N	\N
+Skadkaer Consult ApS	0	249	Zapna out	418	Erik	Bryld		25579797	2011-03-11 17:39:11	\N	\N	\N	\N
+Summit Consulting A_S	0	249	Zapna out	419	Ghita 	Damgaard-MÃ¸rch		26111190	2011-03-11 17:39:51	\N	\N	\N	\N
+AKVA GROUP DENMARK A_S	0	249	Zapna out	420	Søren	Elmholm		26160785	2011-03-11 17:40:20	\N		Mobile	0
+Desitek A_S	0	249	Zapna out	421	Bruger	5		26572030	2011-03-11 17:41:33	\N	\N	\N	\N
+Fyns Kran Udstyr A_S	0	249	Zapna out	422	Jackie	BÃ¸llingtoft		26712195	2011-03-11 17:41:59	\N	\N	\N	\N
+Vognmand Børge Møller	0	249	Zapna out	423	Mogens			27151400	2011-03-11 17:42:47	\N	\N	\N	\N
+AKVA GROUP DENMARK A_S	0	249	Zapna out	424	Lars	Holm		27791071	2011-03-11 17:43:33	\N	\N	\N	\N
+Commplett	0	249	Zapna out	425	Nik			28274447	2011-03-11 17:43:54	\N	\N	\N	\N
+2 Big Company A_S	0	249	Zapna out	427	Pernielle	SkovÃ¸		29132433	2011-03-11 17:44:47	\N	\N	\N	\N
+CONTINO TRANSPORT A_S	0	249	Zapna out	428	Marianne			29165589	2011-03-11 17:45:10	\N	\N	\N	\N
+Desitek A_S	0	249	Zapna out	430	Bruger	6			2011-03-11 17:45:46	\N	\N	\N	\N
+Desitek A_S	0	249	Zapna out	431	Bruger	6		29403328	2011-03-11 17:45:49	\N	\N	\N	\N
+Rützou A_S	0	249	Zapna out	432	Joanna			29889294	2011-03-11 17:46:40	\N	\N	\N	\N
+Seagull Ab	0	249	Zapna out	433	F/F	Klondyke		30221297	2011-03-11 17:47:02	\N	\N	\N	\N
+Branded Retail A_S red-green	0	249	Zapna out	434	Bruger	1		30352068	2011-03-11 17:48:35	\N	\N	\N	\N
+PNN Medical A_S	0	249	Zapna out	435	MHP			30384581	2011-03-11 17:48:58	\N	\N	\N	\N
+Oertli ApS	0	249	Zapna out	437	Bruger	3		30584128	2011-03-11 17:50:01	\N	\N	\N	\N
+Electricon A_S	0	249	Zapna out	438	Kim	Bertelsen		30636884	2011-03-11 17:51:18	\N	\N	\N	\N
+LKA Transport	0	249	Zapna out	439	Leon			31343778	2011-03-11 17:55:33	\N	\N	\N	\N
+Ciklum ApS	0	249	Zapna out	440	Oxana			31444620	2011-03-11 17:55:53	\N	\N	\N	\N
+LKA Transport	0	249	Zapna out	441	Daniel			31451618	2011-03-11 17:56:09	\N	\N	\N	\N
+Commplett	0	249	Zapna out	443	Bruger	4		40101599	2011-03-11 17:57:01	\N	\N	\N	\N
+Glova A_S	0	249	Zapna out	444	Horst 	Kirchner		40179807	2011-03-11 17:57:33	\N	\N	\N	\N
+Vognmand Børge Møller	0	249	Zapna out	445	Lars	Jensen		40190574	2011-03-11 17:57:56	\N	\N	\N	\N
+Richard Jensen & Sønner	0	249	Zapna out	446	Jørgen	Jensen		40190761	2011-03-11 17:58:19	\N		Mobile	0
+Richard Jensen & Sønner	0	249	Zapna out	447	Ole	Jensen		40190762	2011-03-11 17:58:43	\N	\N	\N	\N
+Vognmand Børge Møller	0	249	Zapna out	448	Bruger	1		40219727	2011-03-11 17:58:57	\N	\N	\N	\N
+Kongskilde Industries A_S	0	249	Zapna out	449	HGS			40255909	2011-03-11 17:59:15	\N	\N	\N	\N
+ct service a_s	0	249	Zapna out	450	Søren			40282777	2011-03-11 17:59:50	\N		Mobile	0
+BPI A_S	0	249	Zapna out	451	RDG			40294947	2011-03-11 18:00:13	\N	\N	\N	\N
+Velcome A_S	0	249	Zapna out	452	Bruger	2		40301255	2011-03-11 18:00:32	\N	\N	\N	\N
+DAKO A_S	0	249	Zapna out	454	Jeroen	Blk		40318226	2011-03-11 18:01:13	\N	\N	\N	\N
+AMETEK DENMARK A_S	0	249	Zapna out	456	Sussie	Lerche		40368674	2011-03-11 18:02:40	\N	\N	\N	\N
+Seagull Ab	0	249	Zapna out	457	Leonhard	Christensen		40411297	2011-03-11 18:03:01	\N	\N	\N	\N
+Martin Bencher (Scandinavia) A	0	249	Zapna out	458	Peter	Jensen		40424050	2011-03-11 18:03:27	\N	\N	\N	\N
+Steel Team A_S	0	249	Zapna out	459	Jane	Kaasgard		40447370	2011-03-11 18:03:47	\N	\N	\N	\N
+A. Loft Pedersen A_S	0	249	Zapna out	460	Bruger			40449775	2011-03-11 18:04:09	\N	\N	\N	\N
+Nordtec Group	0	249	Zapna out	461	Mette			40514019	2011-03-11 18:04:56	\N	\N	\N	\N
+Lars Jørgen Skov	0	249	Zapna out	462	Bruger			40524694	2011-03-11 18:05:17	\N	\N	\N	\N
+Brøel & Kjaer Vibro A_S	0	249	Zapna out	463	Bruger	1		40536985	2011-03-11 18:05:49	\N	\N	\N	\N
+Løgstør Rør	0	249	Zapna out	464	Mini	Overgaard		40551008	2011-03-11 18:06:22	\N	\N	\N	\N
+Ejendomsselskabet Lindorf sell	0	249	Zapna out	465	Bruger	1		40593683	2011-03-11 18:06:51	\N	\N	\N	\N
+Commplett	0	249	Zapna out	466	Bruger	3		40595000	2011-03-11 18:07:07	\N	\N	\N	\N
+Air Logistics ApS	0	249	Zapna out	467	Claus	Birkbak		40596177	2011-03-11 18:07:39	\N	\N	\N	\N
+CONTINO TRANSPORT A_S	0	249	Zapna out	468	 Ib	Rossen		40599002	2011-03-11 18:08:12	\N	\N	\N	\N
+PROTAC A_S	0	249	Zapna out	469	Martin			40607291	2011-03-11 18:08:52	\N	\N	\N	\N
+Reson A_S	0	249	Zapna out	470	Bruger			40786694	2011-03-11 18:09:28	\N	\N	\N	\N
+BPI A_S	0	249	Zapna out	471	Malthe Christiffer	Holst		40798533	2011-03-11 18:09:51	\N	\N	\N	\N
+DSE A_S	0	249	Zapna out	472	Anders	Midtgaard		40828811	2011-03-11 18:10:34	\N	\N	\N	\N
+AKVA GROUP DENMARK A_S	0	249	Zapna out	473	Bruger	1		40868080	2011-03-11 18:10:52	\N	\N	\N	\N
+FDE Forenede Danske Vognmænd	0	0	Zapna iphone app	475	Jørn Henrik	Carstens	jhc@itd.dk	41243225	2011-03-11 18:12:23	\N		Mobile	0
+ALEX ANDERSEN ØLUND	0	249	Zapna out	476	Bil	1010		41377010	2011-03-11 18:12:51	\N	\N	\N	\N
+Martin Bencher (Scandinavia) A	0	249	Zapna out	477	Diana	Munk		41414773	2011-03-11 18:13:12	\N	\N	\N	\N
+Desitek A_S	0	249	Zapna out	478	Bruger	7		41572556	2011-03-11 18:13:32	\N	\N	\N	\N
+EØ Transport ApS	0	249	Zapna out	479	Erik	Hansen		41663298	2011-03-11 18:13:56	\N	\N	\N	\N
+DSV Env.	0	249	Zapna out	480	Johan			46470415	2011-03-11 18:15:01	\N	\N	\N	\N
+DSV Env.	0	249	Zapna out	481	Thomas			47581528	2011-03-11 18:15:26	\N	\N	\N	\N
+Metalock Denmark A_S	0	249	Zapna out	482	Bruger	1		50910083	2011-03-11 18:15:48	\N	\N	\N	\N
+BPI A_S	0	249	Zapna out	483	SSG			51157061	2011-03-11 18:16:05	\N	\N	\N	\N
+BPI A_S	0	249	Zapna out	484	MNI			51157062	2011-03-11 18:16:15	\N	\N	\N	\N
+BPI A_S	0	249	Zapna out	485	TIK			51168858	2011-03-11 18:16:28	\N	\N	\N	\N
+Hydra-Grene A_S	0	249	Zapna out	486	Peter	Enevoldsen		51343468	2011-03-11 18:17:16	\N	\N	\N	\N
+Hagens Fjedre A_S	0	249	Zapna out	487	Johnny	hansen		51561200	2011-03-11 18:18:28	\N	\N	\N	\N
+Abc revision ApS	0	249	Zapna out	488	Kim	Richter		51606022	2011-03-11 18:18:55	\N	\N	\N	\N
+A2SEA A_S	0	249	Zapna out	490	Per			52139415	2011-03-11 18:20:57	\N	\N	\N	\N
+Commplett	0	249	Zapna out	491	Frederik			52198897	2011-03-11 18:21:18	\N	\N	\N	\N
+Find a Home ApS	0	249	Zapna out	492	Bruger	1		53735361	2011-03-11 18:22:00	\N	\N	\N	\N
+Find a Home ApS	0	249	Zapna out	493	Bruger	2		53735364	2011-03-11 18:22:15	\N	\N	\N	\N
+Find a Home ApS	0	249	Zapna out	494	Bruger	3		53735367	2011-03-11 18:22:28	\N	\N	\N	\N
+Atlas Maridan	0	249	Zapna out	495	Christen	M		61630404	2011-03-11 18:22:54	\N	\N	\N	\N
+Atlas Maridan	0	249	Zapna out	496	Lars	M		61630405	2011-03-11 18:23:09	\N	\N	\N	\N
+Atlas Maridan	0	249	Zapna out	497	Thoams	A		61630406	2011-03-11 18:23:23	\N	\N	\N	\N
+Atlas Maridan	0	249	Zapna out	498	Jesper	B		61630408	2011-03-11 18:23:33	\N	\N	\N	\N
+Atlas Maridan	0	249	Zapna out	499	 Helle	J		61630411	2011-03-11 18:23:45	\N	\N	\N	\N
+Atlas Maridan	0	249	Zapna out	500	Allan	B		61630412	2011-03-11 18:23:57	\N	\N	\N	\N
+Atlas Maridan	0	249	Zapna out	501	Morten	A		61630414	2011-03-11 18:24:11	\N	\N	\N	\N
+Atlas Maridan	0	249	Zapna out	502	Claus	E		61630416	2011-03-11 18:24:47	\N	\N	\N	\N
+U.B LET A_S	0	249	Zapna out	503	Peter	Geil		61778022	2011-03-11 18:25:07	\N	\N	\N	\N
+Løgstør Rør	0	249	Zapna out	504	Dan	Nielsen		76233162	2011-03-11 18:27:46	\N	\N	\N	\N
+Løgstør Rør	0	249	Zapna out	505	Akram			99661201	2011-03-11 18:28:05	\N	\N	\N	\N
+Løgstør Rør	0	249	Zapna out	506	Bo	Toft		99661252	2011-03-11 18:28:26	\N	\N	\N	\N
+7-Technologies A_S	0	249	Zapna out	507	Employee_Test	test	2	12	2011-03-15 16:39:03	\N	\N	\N	\N
+MK Træ	0	249	Zapna out	508	Morten	Hide		30700801	2011-03-23 20:53:59	\N	\N	\N	\N
+Vektor Finans	0	249	Zapna out	509	Carsten	Rise		40274140	2011-04-15 05:46:43	\N	\N	\N	\N
+Vektor Finans	0	249	Zapna out	510	Ejvind 	Henriksen		61306661	2011-04-15 05:47:16	\N	\N	\N	\N
+Vektor Finans	0	249	Zapna out	511	Eva	Pedersen		27833709	2011-04-15 05:47:41	1	apple	\N	\N
+Vektor Finans	0	249	Zapna out	512	Christina	Cederholm		27833707	2011-04-15 05:48:08	1	xhtml	\N	\N
+Regions Kontor	0	249	Zapna out	513	Bruger 2			73442241	2011-04-18 19:32:31	0		\N	\N
+Regions Kontor	0	249	Zapna out	514	bruger 3			73442242	2011-04-18 19:33:05	\N	\N	\N	\N
+Regions Kontor	0	249	Zapna out	515	Bruger 4			73442243	2011-04-18 19:33:25	\N	\N	\N	\N
+Regions Kontor	0	249	Zapna out	516	Bruger 5			73442244	2011-04-18 19:33:39	\N	\N	\N	\N
+Regions Kontor	0	249	Zapna out	517	bruger 6			73442245	2011-04-18 19:33:49	\N	\N	\N	\N
+Regions Kontor	0	249	Zapna out	518	Bruger 1	Bruger 1		73442240	2011-04-18 19:34:37	\N	\N	\N	\N
+Regions Kontor	0	249	Zapna out	519	Bruger 7	Bruger 7		73442246	2011-04-18 19:35:41	\N	\N	\N	\N
+Regions Kontor	0	249	Zapna out	520	Bruger 8	Bruger 8		73442247	2011-04-18 19:35:50	\N	\N	\N	\N
+Regions Kontor	0	249	Zapna out	521	Bruger 9	Bruger 9		73442248	2011-04-18 19:36:05	\N	\N	\N	\N
+Regions Kontor	0	249	Zapna out	522	bruger 10	bruger 10		73442249	2011-04-18 19:36:51	\N	\N	\N	\N
+Regions Kontor	0	249	Zapna out	523	bruger 11	Bruger 11		73442250	2011-04-18 19:37:14	\N	\N	\N	\N
+Regions Kontor	0	249	Zapna out	524	Bruger 12	Bruger 12		73442251	2011-04-18 19:37:55	\N	\N	\N	\N
+Regions Kontor	0	249	Zapna out	525	Bruger 13	Bruger 13		73442252	2011-04-18 19:38:23	\N	\N	\N	\N
+Regions Kontor	0	249	Zapna out	526	bruger 14	bruger 14		73442253	2011-04-18 19:38:53	\N	\N	\N	\N
+Regions Kontor	0	249	Zapna out	527	Bruger 15	Bruger 15		73442254	2011-04-18 19:39:05	\N	\N	\N	\N
+Regions Kontor	0	249	Zapna out	528	Bruger 16	Bruger 16		73442255	2011-04-18 19:39:24	\N	\N	\N	\N
+FDE Forenede Danske Vognmænd	0	249	Zapna out	529	PBX bruger 1	PBX bruger 1		74303360	2011-04-18 19:42:46	\N	\N	\N	\N
+FDE Forenede Danske Vognmænd	0	249	Zapna out	530	PBX bruger 2	PBX bruger 2		74303367	2011-04-18 19:43:04	\N	\N	\N	\N
+Regions Kontor	0	249	Zapna out	531	Bruger 17	Bruger 17		74670501	2011-04-18 19:45:17	\N	\N	\N	\N
+Zapna	0	0	Zapna iphone app	536	test us 2	test us 2	okhan@zapna.com	4082219548	2011-05-04 17:06:45	1	apple	Mobile	0
+Smoke Solution	0	249	Zapna out	539	Martin	Longi		21800048	2011-05-18 20:46:07	0		\N	\N
+Reson A_S	0	249	Zapna out	540	User	User		20992765	2011-05-18 20:46:50	0		\N	\N
+Gazcon A_S	0	249	Zapna out	541	Peter 			40632225	2011-05-18 20:49:31	0		\N	\N
+Centas ApS	0	249	Zapna out	542	Mette	Lise		23965964 	2011-05-18 20:50:09	0		\N	\N
+PNN Medical A_S	0	249	Zapna out	543	CST 			20301513	2011-05-18 20:51:37	0		\N	\N
+Hagens Fjedre A_S	0	249	Zapna out	544	Claus	Nissen		41116145	2011-05-18 20:52:12	0		\N	\N
+PNN Medical A_S	0	249	Zapna out	545	PG			21265730	2011-05-18 20:53:04	0		\N	\N
+Commplett	0	249	Zapna out	546	André			52390000	2011-05-18 20:53:54	0		\N	\N
+REFTECH A_S	0	249	Zapna out	547	Thor	Lemminger		40240186	2011-05-18 20:54:27	0		\N	\N
+BO THESTRUP A_S	0	249	Zapna out	548	User	User		40188971	2011-05-18 20:55:07	0		\N	\N
+Knud Jørgensen	0	249	Zapna out	549	Knud			40501233	2011-05-18 20:55:40	0		\N	\N
+Ciklum ApS	0	249	Zapna out	550	Usman	Meer		26715221	2011-05-18 20:56:06	0		\N	\N
+Zapna	0	249	Zapna out	551	Atifs	Mor		30232024	2011-05-18 20:56:33	1	qwer	\N	\N
+PNN Medical A_S	0	249	Zapna out	552	BJO			61610611	2011-05-18 20:56:53	0		\N	\N
+Commplett	0	249	Zapna out	553	3	3		40595000	2011-05-18 20:57:28	0		\N	\N
+Reson A_S	0	249	Zapna out	554	User	User		41246662	2011-05-18 20:57:54	0		\N	\N
+Jan Funder Transport A_S	0	249	Zapna out	555	User	User		22102646	2011-05-18 21:15:05	0		\N	\N
+Zapna	0	249	Zapna out	556	George	Poincot		17864318433	2011-05-19 05:46:04	1	123456	Mobile	0
+A. Loft Pedersen A_S	0	249	Zapna out	557	Niels Loft Pedersen	Iphone (tidligere OUTkunde Nokia  6610)		20122080	2011-05-19 17:28:25	1	3900	\N	\N
+A. Loft Pedersen A_S	0	249	Zapna out	558	Gitte Kvist Pedersen	Iphone4 (tidligere SE Aino101 Out kunde)		40354188	2011-05-19 17:40:19	1	gk140271	\N	\N
+test CDU	0	249	Zapna out	559	Tommy 	Krogh	tommy@sparkle.dk	51999999	2011-05-19 19:38:44	1	1175	\N	\N
+Installationsfirmaet L H Olesen	0	249	Zapna out	560	Claus 	Olesen	claus@lholesen.dk	20740077	2011-05-19 20:16:10	0		\N	\N
+Installationsfirmaet L H Olesen	0	249	Zapna out	561	Mor		claus@lholesen.dk	22246777	2011-05-19 20:16:52	0		\N	\N
+DEIF A_S	0	0	Zapna iphone app	562	Morten	Rude	mru@deif.com	40709680	2011-05-19 21:03:23	1	tix23	Mobile	0
+Go2sweden I_S	0	249	Zapna out	564	Amair	Awan	atm@go2sweden.dk	26677741	2011-05-19 22:15:05	0		\N	\N
+Regions Kontor	0	249	Zapna out	565	bruger 18	bruger 18		74303310 	2011-05-23 00:23:05	0		\N	\N
+FDE Forenede Danske Vognmænd	0	249	Zapna out	566	Henrik 	Kragh	hkr@fde.dk	74303525	2011-05-23 00:23:34	\N		Landline	0
+Standesign A_S	0	249	Zapna out	568	Andre	Miniier		23467768	2011-05-23 00:38:15	0		\N	\N
+Standesign A_S	0	249	Zapna out	569	Christian	Ekelund		23287966	2011-05-23 00:38:42	0		\N	\N
+Standesign A_S	0	249	Zapna out	570	Birger	Gaard		20407966	2011-05-23 00:39:02	0		\N	\N
+Standesign A_S	0	249	Zapna out	571	Svend A.	Larsen		20277866	2011-05-23 00:39:24	0		\N	\N
+Standesign A_S	0	249	Zapna out	572	Keld	Arentoft		21482787	2011-05-23 00:39:48	0		\N	\N
+Standesign A_S	0	249	Zapna out	573	Steen	Andresen		30516909	2011-05-23 00:40:12	0		\N	\N
+Byens Øl & Vand	0	249	Zapna out	574	Bruger 1	Bruger 1		22478005	2011-05-23 00:52:48	0		\N	\N
+Byens Øl & Vand	0	249	Zapna out	575	Bruger 2	Bruger 2		22619505	2011-05-23 00:53:07	0		\N	\N
+Zapna	0	249	Zapna out	576	Tom	Meredith		14043889247	2011-05-24 06:02:01	1	okhqwe	Mobile	0
+Ciklum ApS	0	0	Zapna iphone app	577	rebecca	Friis	rebecca.friis@cirklum.net	60677409	2011-05-25 20:31:20	1	ciklum	Mobile	0
+Ciklum ApS	0	249	Zapna out	578	Claus			40208495	2011-05-25 21:36:04	0		\N	\N
+Blue Business ApS	0	249	Zapna out	579	Søren	Sørensen	ss@bluebusiness.dk	23202087	2011-05-26 18:59:50	1	kaj2blue	\N	\N
+Danmarks medie- og journalisthøjskole	0	249	Zapna out	580	Thomas	Breinhilt	dmjx.dk	51275534	2011-05-26 19:37:54	1	gulerod	\N	\N
+CCD Group ApS	0	249	Zapna out	581	Bruger 1	Bruger 1		31105929	2011-05-26 22:22:40	0		\N	\N
+Scanel International A_S	0	249	Zapna out	582	Jesper		jesper@scanel.dk	20123263	2011-05-26 23:13:52	1	2433	\N	\N
+Active Sportswear Int. A_S	0	249	Zapna out	583	Lasse	Due	lld@h20-sportswear.dk	20608674	2011-05-26 23:38:35	1	12345	\N	\N
+DEIF A_S	0	249	Zapna out	584	TDA@deif.com	TDA	tda@deif.com	30103177	2011-05-31 18:36:59	1	Dallen	\N	\N
+DEIF A_S	0	0	Zapna android app	585	moa@deif.com	MOA	moa@deif.com	30103212	2011-05-31 18:37:55	1	0456	Mobile	0
+DEIF A_S	0	249	Zapna out	586	Maj		maj@deif.com	40709671	2011-05-31 18:38:57	\N		Mobile	0
+Skako Comessa A_S -Skako Beton A_S	0	249	Zapna out	587	Aage	xxx	abs@akako.dk	20333650	2011-05-31 20:41:24	1	4152	\N	\N
+NJK Int. Spedition og Transport APS	0	249	Zapna out	588	Søren	Krogh		22168737	2011-06-06 15:56:03	0		\N	\N
+NJK Int. Spedition og Transport APS	0	249	Zapna out	589	Merete Løye 			40275233	2011-06-06 15:56:26	0		\N	\N
+NJK Int. Spedition og Transport APS	0	249	Zapna out	590	Anders Henriksen 			40599777	2011-06-06 15:56:39	0		\N	\N
+NJK Int. Spedition og Transport APS	0	249	Zapna out	591	Lars Kruse		29679249	29679249 	2011-06-06 15:57:02	0		\N	\N
+NJK Int. Spedition og Transport APS	0	249	Zapna out	592	Niels J. Krog			40211134	2011-06-06 15:57:20	0		\N	\N
+Alfred Priess A_S	0	249	Zapna out	593	Michael			40192139	2011-06-08 17:27:31	0		\N	\N
+Alfred Priess A_S	0	249	Zapna out	594	Anders			29387073	2011-06-08 17:27:46	0		\N	\N
+A. Møller Transport	0	249	Zapna out	595	Aase	Møller	aasemoeller@youmail.dk	60175732	2011-06-15 14:54:26	0		\N	\N
+Zapna	0	249	Zapna out	596	George 			19544318433	2011-06-15 20:09:42	1	123456	Mobile	0
+Zapna	0	249	Zapna out	597	George 	2		17864318433	2011-06-16 18:43:18	1	123456	Mobile	0
+Zapna	0	0	Zerocall Out startpakke 50	598	khan	muhammad	khanmuhammadmalik@gmail.com	88111113	2011-06-16 20:52:22	1	123456	Landline	200
+DEIF A_S	0	0	Zapna iphone app	599	Jaa	jja@deif.com	jja@deif.com	40709623	2011-06-20 15:53:50	1	watt69	Mobile	0
+DEIF A_S	0	249	Zapna out	600	cpo	cpo	opo@deif.com	40709658	2011-06-20 15:54:33	1	theking	Mobile	0
+Svejstrup & Lyng ApS	0	249	Zapna out	604	Bjarne	Svejstrup	bjarne@svejstrup-lyng.dk	24820444	2011-06-21 17:18:57	1	L2Y2N2g5	Mobile	0
+Sport & Event International ved Bjarne Jensen	0	249	Zapna out	605	Bjarne	Jensen	hn@vektorfinans.dk	40389752	2011-06-21 17:25:34	\N		Mobile	199
+FDE Forenede Danske Vognmænd	0	0	Zapna iphone app	606	Poul 	Bruun	pb@fde.dk	22677140	2011-06-21 18:07:51	1	Christian14	Mobile	0
+Samsoe og Samsoe	0	0	Zapna iphone app	607	Tommy	Pedersen	tommy@samsoe.com	50723014	2011-06-21 18:40:48	\N		Mobile	0
+Zapna	0	0	Zapna android app	608	Niels 	Ottesen	no@zapna.com	26722222	2011-06-22 15:40:50	1	3527	Mobile	0
+Zapna	0	0	Zapna android app	609	Shlomo			12035227553	2011-06-29 06:42:34	\N		Mobile	0
+Zapna	0	0	Zapna android app	610	test us			12035227554	2011-06-29 06:45:44	1	qwerty	Mobile	0
+Buisness Partner Denmark	0	0	Zapna iphone app	611	Henrik 	Ottesen	henrikogmaj@yahoo.dk	61556997	2011-07-04 15:14:41	\N		Mobile	0
+FDE Forenede Danske Vognmænd	0	0	Zapna iphone app	612	Anna	Thygesen	amt@fde.dk	30256694	2011-07-04 15:47:07	1	110478	Mobile	0
+Kr Wind A_S	0	0	Zapna android app	613	Morten	Sørensen	ms@krwind.com	51569077	2011-07-04 15:53:19	1	ZaapNaa12	Mobile	0
+Partner Cykler	0	0	Zapna iphone app	614	Emrah	Kilic	emrah_kilic58@hotmail.com	50433987	2011-07-04 16:01:55	1	harun	Mobile	0
+NJK Int. Spedition og Transport APS	0	0	Zapna iphone app	615	Søren	Krogh	njk@njk.dk	22168737	2011-07-04 16:11:22	1	3697krog	Mobile	0
+FDE Forenede Danske Vognmænd	0	0	Zapna iphone app	616	Jacob Christian	Nielsen	jcn@fde.dk	20550621	2011-07-04 16:18:19	1	Panasonic	Mobile	0
+FDE Forenede Danske Vognmænd	0	0	Zapna iphone app	617	Malene	xx	mvo@itd.dk	22396638	2011-07-05 02:20:13	\N		Mobile	0
+Zapna	0	0	Zapna android app	619	okh			10707786	2011-07-05 06:10:52	1	qwerty	Mobile	0
+Chinatel	0	0	Zapna android app	620	Dean 	Llewelln	deanng@e.ntu.edu.sg	590286988	2011-07-05 06:17:43	\N		Mobile	0
+ATEA	0	0	Zapna iphone app	622	Mikkel 	Wangaa	mikkel.wangaa@atea.dk	30780000	2011-07-06 11:46:12	\N		Mobile	0
+Chinatel	0	0	Zapna android app	623	Karen	Ho		920962815	2011-07-08 05:35:31	1	qwerty	Mobile	0
+Acon A_S	0	0	Zapna iphone app	625	Allan	Kaosmarek	ak@acon.dk	50502518	2011-07-12 16:39:26	\N		Mobile	0
+Chinatel	0	0	Zapna android app	626	Hank	Chinatel	okhan@zapna.com	9498362880	2011-07-16 21:31:37	1	qwerty	Mobile	0
+Zapna	0	0	Zapna iphone app	627	okh UK test			7051222222	2011-07-30 18:35:25	1	qwerty	Mobile	0
+Zapna	0	0	Zapna iphone app	628	Support			25998892	2011-08-02 19:56:09	1	qwerty	Mobile	0
+Bech-Hansen & Studsgaard	0	0	Zapna android app	630	Anja	Noltenmeier	ano@bhstrans.dk	29485298	2011-08-08 20:49:57	\N		Mobile	0
+Bech-Hansen & Studsgaard	0	0	Zapna android app	631	Michael	Olsen	mso@bhstrans.dk	29485174	2011-08-08 20:50:45	1	Sejer3535	Mobile	0
+Bech-Hansen & Studsgaard	0	0	Zapna iphone app	632	Kell	xx	kc@bhstrans.dk	29485295	2011-08-08 20:51:32	\N		Mobile	0
+WMetal Wilhelmson AB	0	249	Zapna out	633	User 1			709587535	2011-08-17 15:45:11	\N		Mobile	0
+BJØRN THORSEN A_S	0	249	Zapna out	634	Antje	Schachinger		701800660	2011-08-17 15:47:04	\N		Landline	0
+BJØRN THORSEN A_S	0	249	Zapna out	635	Lena	Apoy		701800661	2011-08-17 15:47:53	\N		Landline	0
+Zapna	0	249	Zapna out	637	khan	muhammad	khanmuhammadmalik@gmail.com	3006826451	2011-08-17 17:44:39	1	123456	Mobile	0
+Zapna	0	249	Zapna out	642	ok pk	ok pk	okhan@zapna.com	12345678	2011-08-17 18:02:39	\N	qwerty	Mobile	0
+Zapna	0	249	Zapna out	643	ok pk 2	ok pk 2	okhan@zapna.com	1122334455	2011-08-17 18:03:57	1	qwerty	Mobile	0
+Zapna	0	0	Zapna android app	644	ok pk 3		okhan@zapna.com	3344239280	2011-08-17 18:05:12	\N	qwerty	Mobile	0
+Zapna	0	249	Zapna out	645	rahell	test	khanmuhammadmalik@gmail.com	3334146227	2011-08-17 18:08:04	1	123456	Mobile	0
+Zapna	0	249	Zapna out	646	okpk4	ok	okhan@zapna.com	7867867867	2011-08-17 18:12:29	1	123456	Mobile	0
+Zapna	0	249	Zapna out	647	niels	ottesen	no@zapna.com	53617786	2011-08-17 18:13:55	1	123456	Mobile	0
+Samsoe og Samsoe	0	0	Zapna iphone app	648	Stine	Kjær	stinek@samsoe.com	40613684	2011-08-18 22:01:38	1	stine1982	Mobile	0
+Samsoe og Samsoe	0	0	Zapna iphone app	649	Helene	xxx	helene@samsoe.com	21630231	2011-08-18 22:02:34	\N		Mobile	0
+Telekæden Nørrebro	0	0	Zapna iphone app	650	Mohammad	Nasrallah	teleringen_noerrebro@yahoo.dk	22201977	2011-08-18 22:08:21	\N	12345	Mobile	0
+Zapna	0	249	Zapna out	651	Ebba	Larsen		51271520 	2011-08-20 18:47:20	\N		Mobile	0
+Zapna	0	249	Zapna out	652	Ebba	Larsen		25592902	2011-08-20 20:06:06	\N		Mobile	0
+BMS Heavy Crains	0	249	Zapna out	653	Erik	Andersen		41917102	2011-08-22 22:13:11	\N		Mobile	300
+BMS Heavy Crains	0	249	Zapna out	654	Peter	Dahl	pda@bms.dk	41724560	2011-08-22 22:15:07	\N		Mobile	300
+BMS Heavy Crains	0	249	Zapna out	655	Rene			41724561	2011-08-22 22:17:29	\N		Mobile	300
+BMS Heavy Crains	0	249	Zapna out	656	Angelica			52399089	2011-08-22 22:18:15	\N		Mobile	300
+BMS Heavy Crains	0	0	Zapna iphone app	657	Morten 	Kammer	mk@bms.dk	41917100	2011-08-22 22:19:23	1	7100	Mobile	0
+BMS Heavy Crains	0	0	Zapna iphone app	658	Jesper	Hansen	jha@bms.dk	41917101	2011-08-23 15:06:26	1	7101	Mobile	0
+BMS Heavy Crains	0	0	Zapna iphone app	659	Mogens 	Kirstein	mki@bms.dk	41917120	2011-08-23 15:07:42	1	7120	Mobile	0
+BMS Heavy Crains	0	0	Zapna iphone app	660	Natasha Lynda	Hansen	natasha.lynda.hansen@hotmail.com	60159089	2011-08-23 15:09:11	1	9089	Mobile	0
+Buisness Partner Denmark	0	0	Zapna android app	661	Maj	Ottesen	henrikogmaj.yahoo.dk	22904105	2011-08-23 17:11:11	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	662	27772201	27772201	cabr@pmchydropower.dk	27772201	2011-08-23 18:02:46	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	663	27772202	27772202	cabr@pmchydropower.dk	27772202	2011-08-23 18:03:41	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	664	27772203	27772203	cabr@pmchydropower.dk	27772203	2011-08-23 18:04:28	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	665	27772204	27772204	cabr@pmchydropower.dk	27772204	2011-08-23 18:05:07	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	666	27772205	27772205	cabr@pmchydropower.dk	27772205	2011-08-23 18:05:46	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	667	27772206	27772206	cabr@pmchydropower.dk	27772206	2011-08-23 18:06:24	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	668	27772207	27772207	cabr@pmchydropower.dk	27772207	2011-08-23 18:07:35	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	669	27772208	27772208	cabr@pmchydropower.dk	27772208	2011-08-23 18:08:15	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	670	27772209	27772209	cabr@pmchydropower.dk	27772209	2011-08-23 18:09:04	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	671	27772210	27772210	cabr@pmchydropower.dk	27772210	2011-08-23 18:09:46	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	672	27772211	27772211	cabr@pmchydropower.dk	27772211	2011-08-23 18:11:34	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	673	27772212	27772212	cabr@pmchydropower.dk	27772212	2011-08-23 18:12:44	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	674	27772213	27772213	cabr@pmchydropower.dk	27772213	2011-08-23 18:13:24	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	675	27772214	27772214	cabr@pmchydropower.dk	27772214	2011-08-23 18:13:59	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	676	27772215	27772215	cabr@pmchydropower.dk	27772215	2011-08-23 18:14:35	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	677	27772216	27772216	cabr@pmchydropower.dk	27772216	2011-08-23 18:15:12	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	678	27772217	27772217	cabr@pmchydropower.dk	27772217	2011-08-23 18:15:46	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	679	27772218	27772218	cabr@pmchydropower.dk	27772218	2011-08-23 18:16:34	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	680	27772219	27772219	cabr@pmchydropower.dk	27772219	2011-08-23 18:17:15	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	681	27772220	27772220	cabr@pmchydropower.dk	27772220	2011-08-23 18:18:02	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	682	27772221	27772221	cabr@pmchydropower.dk	27772221	2011-08-23 18:18:47	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	683	27772222	27772222	cabr@pmchydropower.dk	27772222	2011-08-23 18:19:24	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	684	27772223	27772223	cabr@pmchydropower.dk	27772223	2011-08-23 18:20:21	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	685	27772224	27772224	cabr@pmchydropower.dk	27772224	2011-08-23 18:21:00	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	686	27772225	27772225	cabr@pmchydropower.dk	27772225	2011-08-23 18:21:48	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	687	27772226	27772226	cabr@pmchydropower.dk	27772226	2011-08-23 18:22:25	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	688	27772227	27772227	cabr@pmchydropower.dk	27772227	2011-08-23 18:23:09	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	689	27772228	27772228	cabr@pmchydropower.dk	27772228	2011-08-23 18:23:47	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	690	27772229	27772229	cabr@pmchydropower.dk	27772229	2011-08-23 18:24:31	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	691	27772230	27772230	cabr@pmchydropower.dk	27772230	2011-08-23 18:25:10	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	692	27772231	27772231	cabr@pmchydropower.dk	27772231	2011-08-23 18:25:49	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	693	27772232	27772232	cabr@pmchydropower.dk	27772232	2011-08-23 18:26:23	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	694	51569000	51569000	cabr@pmchydropower.dk	51569000	2011-08-23 18:27:35	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	695	51569003	51569003	cabr@pmchydropower.dk	51569003	2011-08-23 19:15:01	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	696	51569010	51569010	cabr@pmchydropower.dk	51569010	2011-08-23 19:16:24	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	697	51569030	51569030	cabr@pmchydropower.dk	51569030	2011-08-23 19:18:16	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	698	51569035	51569035	cabr@pmchydropower.dk	51569035	2011-08-23 19:19:01	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	699	51569040	51569040	cabr@pmchydropower.dk	51569040	2011-08-23 19:20:09	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	700	51569041	51569041	cabr@pmchydropower.dk	51569041	2011-08-23 19:20:56	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	701	51569042	51569042	cabr@pmchydropower.dk	51569042	2011-08-23 19:22:08	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	702	51569047	51569047	cabr@pmchydropower.dk	51569047	2011-08-23 19:22:54	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	703	51569049	51569049	cabr@pmchydropower.dk	51569049	2011-08-23 19:23:34	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	704	51569051	51569051	cabr@pmchydropower.dk	51569051	2011-08-23 19:24:42	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	705	51569052	51569052	cabr@pmchydropower.dk	51569052	2011-08-23 19:25:30	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	706	51569054	51569054	cabr@pmchydropower.dk	51569054	2011-08-23 19:26:14	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	707	51569055	51569055	cabr@pmchydropower.dk	51569055	2011-08-23 19:26:50	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	708	51569056	51569056	cabr@pmchydropower.dk	51569056	2011-08-23 19:27:27	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	709	51569057	51569057	cabr@pmchydropower.dk	51569057	2011-08-23 19:28:10	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	710	51569062	51569062	cabr@pmchydropower.dk	51569062	2011-08-23 19:28:49	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	711	51569063	51569063	cabr@pmchydropower.dk	51569063	2011-08-23 19:29:22	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	712	51569064	51569064	cabr@pmchydropower.dk	51569064	2011-08-23 19:29:55	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	713	51569065	51569065	cabr@pmchydropower.dk	51569065	2011-08-23 19:30:35	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	714	51569066	51569066	cabr@pmchydropower.dk	51569066	2011-08-23 19:31:35	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	715	51569067	51569067	cabr@pmchydropower.dk	51569067	2011-08-23 19:32:29	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	716	51569068	51569068	cabr@pmchydropower.dk	51569068	2011-08-23 19:33:05	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	717	51569069	51569069	cabr@pmchydropower.dk	51569069	2011-08-23 19:33:55	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	718	51569070	51569070	cabr@pmchydropower.dk	51569070	2011-08-23 19:34:33	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	719	51569071	51569071	cabr@pmchydropower.dk	51569071	2011-08-23 19:35:11	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	720	51569072	51569072	cabr@pmchydropower.dk	51569072	2011-08-23 19:36:00	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	721	51569073	51569073	cabr@pmchydropower.dk	51569073	2011-08-23 19:36:40	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	722	51569074	51569074	cabr@pmchydropower.dk	51569074	2011-08-23 19:37:17	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	723	51569075	51569075	cabr@pmchydropower.dk	51569075	2011-08-23 19:38:00	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	724	51569076	51569076	cabr@pmchydropower.dk	51569076	2011-08-23 19:38:35	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	725	51569077	51569077	cabr@pmchydropower.dk	51569077	2011-08-23 19:39:10	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	726	51569078	51569078	cabr@pmchydropower.dk	51569078	2011-08-23 19:39:45	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	727	51569079	51569079	cabr@pmchydropower.dk	51569079	2011-08-23 19:40:19	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	728	51569080	51569080	cabr@pmchydropower.dk	51569080	2011-08-23 19:40:53	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	729	51569081	51569081	cabr@pmchydropower.dk	51569081	2011-08-23 19:41:42	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	730	51569082	51569082	cabr@pmchydropower.dk	51569082	2011-08-23 19:42:22	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	731	51569083	51569083	cabr@pmchydropower.dk	51569083	2011-08-23 19:42:56	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	732	51569084	51569084	cabr@pmchydropower.dk	51569084	2011-08-23 19:43:43	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	733	51569085	51569085	cabr@pmchydropower.dk	51569085	2011-08-23 19:44:18	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	734	51569086	51569086	cabr@pmchydropower.dk	51569086	2011-08-23 19:45:06	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	735	51569087	51569087	cabr@pmchydropower.dk	51569087	2011-08-23 19:45:40	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	736	51569089	51569089	cabr@pmchydropower.dk	51569089	2011-08-23 19:46:19	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	737	51569090	51569090	cabr@pmchydropower.dk	51569090	2011-08-23 19:46:56	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	738	51569091	51569091	cabr@pmchydropower.dk	51569091	2011-08-23 19:47:34	\N		Mobile	0
+Kr Wind A_S	0	0	Zapna iphone app	739	51569093	51569093	cabr@pmchydropower.dk	51569093	2011-08-23 19:48:17	\N		Mobile	0
+Franske Vingårde A_S	25	59	Zapna out +	740	Kristoffer	Holmer Gellert	gellert@haux.com	51941977	2011-08-26 15:36:39	\N		Mobile	199
+Løgstrup Steel A_S	0	0	Zapna iphone app	741	Henrik 	Hansen	hmh@logstrup.dk	21808326	2011-08-26 15:52:55	1	1234	Mobile	60
+Rotometrics International	25	59	Zapna out +	742	Karen	Holm	kholm@gerhardt.net	60174039	2011-08-31 15:24:23	\N		Mobile	199
+Heinzmann	25	59	Zapna out +	743	HP	Chrisensten	heinzmann@heinzmann.dk	40122377	2011-09-05 20:03:34	\N		Mobile	199
+Danmarks medie- og journalisthøjskole	0	0	Zapna iphone app	745	Michael		msni@dmjx.dk	28894730	2011-09-08 15:58:14	1	28894730	Mobile	60
+Emendo A_S	0	0	Zapna iphone app	746	Helene Martine	Overø	hmo@emendo.com	24618386	2011-09-08 17:27:17	1	24618386	Mobile	60
+Emendo A_S	0	0	Zapna iphone app	747	Martin 	Harrs	mh@emendo.com	40489731	2011-09-08 17:32:13	1	40489731	Mobile	60
+Emendo A_S	0	249	Zapna out	748	Peter Bang	Vind		30303965	2011-09-08 17:34:59	\N		Mobile	199
+Zapna	0	0	Zapna iphone app	749	test	test	okhan@zapna.com	220717786	2011-09-15 12:02:26	1	qwerty	Mobile	0
+Zapna	0	0	Zapna iphone app	750	khan	muhammad		320717786	2011-09-15 12:16:54	1	qwerty	Mobile	0
+Zapna	0	0	Zapna android app	751	khan	muhammad		420717786	2011-09-15 12:20:54	1	qwerty	Mobile	0
+Tomatec	0	249	Zapna out	752	Torben	Jørgensen	tj@tomatec.dk	28704474	2011-09-17 16:11:26	\N		Mobile	199
+BMS Heavy Cranes A_S	25	59	Zapna out +	753	Rene	Marquardt	jha@bms.dk	41724563	2011-09-19 11:21:36	\N		Mobile	199
+FDE Forenede Danske Vognmænd	0	249	Zapna out	754	Jette Paaske	Jensen	jpf@fde.dk	74303320	2011-09-21 12:30:18	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	755	Sabine	Cordsen	sco@fde.dk	74303598	2011-09-21 12:33:47	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	757	Heidi	S. Bojsen	hb@fde.dk	74303404	2011-09-21 12:35:42	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	758	Sara	Sztuk	ssz@fde.dk	74303483	2011-09-21 12:36:34	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	759	Iulia	Christensen	ic@fde.dk	74303345	2011-09-21 12:38:17	\N		Landline	0
+Cinnober	0	249	Zapna out	760	John Due 1	John Due 1		98765434231	2011-09-26 12:44:25	\N		Mobile	0
+Cinnober	0	249	Zapna out	761	John	Due 2		12345677886	2011-09-26 12:44:49	\N		Mobile	0
+Cinnober	0	249	Zapna out	762	John	Due 3		889977332	2011-09-26 12:45:09	\N		Mobile	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	763	Natalia	Poleacova	np@fde.dk	74303514	2011-09-28 10:37:21	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	764	Elzbieta	Grau	egr@fde.dk	74303458	2011-09-28 10:38:20	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	765	Linda Lindhardt	Sönnichsen	llj@fde.dk	74303466	2011-09-28 10:39:27	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	766	Ingrid Fredensborg	Skøtt	if@fde.dk	74303450	2011-09-28 10:40:32	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	767	Maria	Jørgensen	mj@fde.dk	74303562	2011-09-28 10:41:28	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	768	Elvedina	Avdic	ea@fde.dk	74303439	2011-09-28 10:42:14	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	769	Iwona	D. Müller	idm@fde.dk	74303491	2011-09-28 10:43:59	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	770	Inger	Hansen	iha@fde.dk	74303321	2011-09-28 10:45:57	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	771	Maria	Skau	ms@fde.dk	74303381	2011-09-28 10:54:44	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	772	Amela	Grgic	agr@fde.dk	74303560	2011-09-28 10:55:43	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	773	Mette	T. Brinkvang	mtb@fde.dk	74303416	2011-09-28 10:56:35	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	774	Olga	Petry	olp@fde.dk	74303556	2011-09-28 10:57:27	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	775	Charlotte	N. Madsen	cnm@fde.dk	74303490	2011-09-28 10:58:38	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	249	Zapna out	776	Tina	Hermansen	trh@fde.dk	74303451	2011-09-28 10:59:43	\N		Landline	0
+Zapna	0	0	Zapna android app	777	Hilwyn	omair test	okhan@zapna.com	8683126535	2011-09-29 19:15:15	1	qwerty	Mobile	0
+Go2sweden I_S	0	0	Zapna iphone app	779	Mohammad	Awan	atm@go2sweden.dk	31462464	2011-09-30 09:54:54	\N		Mobile	99
+Go2sweden I_S	25	59	Zapna out +	780	Mohammad		atm@go2sweden.dk	31462464	2011-09-30 10:46:35	\N	12345	Mobile	0
+Go2sweden I_S	25	59	Zapna out +	781	Mohammad	Mohammad	atm@go2sweden.dk	31462464	2011-09-30 10:52:26	\N	12345	Mobile	0
+Tomatec	25	59	Zapna out +	788	Torben	Jørgensen	tj@tomatec.dk	28704474	2011-09-30 14:53:25	\N	12345	Mobile	0
+A. Møller Transport	0	249	Zapna out	792	Rene Marquardt		jha@b	41724563	2011-09-30 15:06:16	\N	12345	Mobile	0
+Zapna	0	0	Zapna iphone app	793	hamad	raza		41862397	2011-10-02 16:42:20	1	qwerty	Mobile	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	794	Jacob	Chr. Nielsen		73674555	2011-10-03 09:20:16	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	795	JCN	mødetelefon		73674558	2011-10-03 09:21:33	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	796	Nikolaj Stig	Nielsen		73674557	2011-10-03 09:22:48	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	797	Malene Vitus	Østergaard		73674559	2011-10-03 09:23:37	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	798	Poul	Bruun		73674545	2011-10-03 09:24:21	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	800	Birthe	F. Boisen		73674544	2011-10-03 09:25:20	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	801	Jane	Aa. Madsen		73674549	2011-10-03 09:25:51	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	802	Sandra	Nørgaard		73674510	2011-10-03 09:26:32	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	803	Mette	S. Jacobsen		73674548	2011-10-03 09:32:33	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	804	Anders	Jessen		73674553	2011-10-03 09:33:48	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	805	Camilla	Wiig		73674554	2011-10-03 09:35:03	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	806	Lars	Nielsen		73674550	2011-10-03 09:35:55	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	807	Ulla	M. Thietje		73674551	2011-10-03 09:36:31	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	808	Peter Ahlmann	Hansen		73674530	2011-10-03 09:37:18	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	809	Lone	Niebuhr		73674531	2011-10-03 09:42:42	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	810	Marianne	Frank		73674546	2011-10-03 09:43:32	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	811	Jørn-Henrik	Carstens		73674547	2011-10-03 09:44:51	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	812	Steffen	Johannsen		73674533	2011-10-03 09:46:43	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	813	KRØNIKEN			73674552	2011-10-03 09:47:04	\N		Landline	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	814	JOP			32590680	2011-10-03 09:52:12	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	815	Jo	Madsen		74303520	2011-10-03 09:53:01	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	816	Carl Jørgen	Baastrup		74303372	2011-10-03 09:53:50	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	817	Anna-Mette	Farcinsen		74303543	2011-10-03 09:55:04	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	818	Inge Ravn	Hansen		74303541	2011-10-03 09:58:00	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	819	Lisbeth	Jørgensen		74303542	2011-10-03 09:58:37	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	820	Joan	Pless		74303518	2011-10-03 10:02:52	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	821	Heidi	Jul		74303523	2011-10-03 10:04:24	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	823	Sanne	Hansen		74303524	2011-10-03 10:05:52	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	825	Kim	Høi		74303351	2011-10-03 10:07:11	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	826	Pia	C. Higgins		74303311	2011-10-03 10:07:39	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	827	Wencke	Haberlandt		74303313	2011-10-03 10:09:24	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	828	Kirsten Mathiesen	Jessen		74303363	2011-10-03 10:15:52	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	829	Marie	B. Olesen		74303414	2011-10-03 10:17:05	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	830	Birgit	L. Thomsen		74303316	2011-10-03 10:18:53	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	831	Tina	L. Hansen		74303318	2011-10-03 10:19:50	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	832	Birgitte	R. Kjær		74303485	2011-10-03 10:20:36	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	833	Birgitte	R. Kjær		74303342	2011-10-03 10:21:25	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	834	Karin	Lassen		74303379	2011-10-03 10:22:43	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	835	Lone	C. Nicolaisen		74303457	2011-10-03 10:31:33	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	838	Henning	Nørgaard		74303353	2011-10-03 10:32:43	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	839	Michael	Wøhlk		74303312	2011-10-03 10:34:50	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	840	Henrik	Kragh		74303525	2011-10-03 10:35:17	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	843	Anne	M. Thyssen		74303445	2011-10-03 10:36:52	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	844	Lotte	Sandgaard		74303383	2011-10-03 10:37:22	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	845	Torsten	Lundholm		74303357	2011-10-03 10:38:03	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	846	Torsten	Lundholm		74303347	2011-10-03 10:39:14	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	847	Dan	Z. Christensen		74303334	2011-10-03 10:40:23	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	848	Mødelok	2. sal		74303568	2011-10-03 10:41:01	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	849	Lene	D. Christensen		74303354	2011-10-03 10:42:00	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	851	Lenette	H. Hou		74303406	2011-10-03 10:42:37	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	852	Inga	Hansen		74303358	2011-10-03 10:43:14	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	853	Pia	Pedersen		74303359	2011-10-03 10:43:46	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	854	Marianne	S. Nielsen		74303408	2011-10-03 10:44:12	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	855	Rikke	Skellgaard-Nielsen		74303412	2011-10-03 10:44:45	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	856	Janni	Jonasson		74303402	2011-10-03 10:45:11	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	857	Rosica	Lazarova		74303398	2011-10-03 10:45:37	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	858	Agatha	Pedersen		74303397	2011-10-03 10:46:14	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	861	Natalia	Poleacova		74303514	2011-10-03 10:52:53	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	863	Maria 	Jørgensen		74303562	2011-10-03 10:53:57	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	864	Linda	L. Sönnichsen		74303466	2011-10-03 10:56:00	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	865	Olga	Petry		74303556	2011-10-03 10:56:33	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	866	Inger	Hansen		74303321	2011-10-03 10:57:01	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	867	Ingrid	F. Skøtt		74303450	2011-10-03 10:57:36	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	868	Elzbieta	Grau		74303458	2011-10-03 10:58:06	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	869	Iwona	D. Müller		74303491	2011-10-03 10:58:38	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	870	Charlotte	N. Madsen		74303490	2011-10-03 10:59:20	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	871	Elvedina	Avdic		74303439	2011-10-03 10:59:51	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	872	Maria	Skau		74303381	2011-10-03 11:00:22	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	873	Daniel Boss	Nielsen		74303492	2011-10-03 11:00:54	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	874	Amela	Grgic		74303560	2011-10-03 11:01:18	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	875	Mette	T. Brinkvang		74303416	2011-10-03 11:01:46	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	876	Tina	R. Hermansen		74303451	2011-10-03 11:02:10	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	877	Jette Paaske	Fröhlich		74303320	2011-10-03 11:03:56	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	878	Heidi	Bojsen		74303404	2011-10-03 11:04:33	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	879	Iulia	Christensen		74303345	2011-10-03 11:05:03	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	880	Sabine	Cordsen		74303598	2011-10-03 11:05:35	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	881	Sara	Sztuk		74303483	2011-10-03 11:06:19	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	882	Andreia	Hanigovszki		74303429	2011-10-03 11:06:48	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	883	Malene	D. Holm		74303526	2011-10-03 11:07:16	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	884	Printrum	1. sal		74303504	2011-10-03 11:08:13	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	885	Mødelok.	1. sal		74303660	2011-10-03 11:08:39	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	886	Mødelok	1. sal		74303521	2011-10-03 11:09:07	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	887	DHL-rum	1. sal		74303419	2011-10-03 11:10:06	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	888	Inger	Wulff		74303511	2011-10-03 11:10:29	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	889	Gitte	Jessen		74303513	2011-10-03 11:14:29	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	890	Henning	Jørgensen		74303343	2011-10-03 11:15:50	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	891	Henning	Jørgensen		74303517	2011-10-03 11:16:45	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	892	John	V. Thomsen		74303361	2011-10-03 11:17:20	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	893	Bjarne	Schmidt		74303364	2011-10-03 11:18:39	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	894	Anders	Kümmel-Pedersen		74303367	2011-10-03 11:19:13	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	895	Erik	Nolte		74303355	2011-10-03 11:20:01	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	896	Thomas	T. Smedegaard		74303368	2011-10-03 11:21:16	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	897	Thomas	S. Eriksen		74303360	2011-10-03 11:21:42	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	898	Susanne	Dohrmann		74303366	2011-10-03 11:24:09	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	899	Bettina	Petersen		74303460	2011-10-03 11:28:31	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	900	Solveig	Christensen		74303476	2011-10-03 11:29:05	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	901	Claudia	Sas		74303472	2011-10-03 11:31:13	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	902	Kirsten	Hansen		74303362	2011-10-03 11:33:11	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	903	Lena	Oden		74303478	2011-10-03 11:33:34	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	904	Lena	Panzenhagen		74303374	2011-10-03 11:34:33	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	905	Marlies	K. Langmaack		74303382	2011-10-03 11:35:00	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	906	Stella	Nielsen		74303365	2011-10-03 11:35:26	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	907	Susanne	S. Larsen		74303566	2011-10-03 11:36:00	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	908	Ulla Pia	Burgwald		74303532	2011-10-03 11:36:24	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	909	Ulla Blom	Villumsen		74303475	2011-10-03 11:36:48	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	910	Lis	Frederiksen		74303468	2011-10-03 11:37:28	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	911	Marianne	Dixen		74303469	2011-10-03 11:37:59	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	912	Marie	K. Schmidt		74303332	2011-10-03 11:38:43	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	913	Jytte	Schütt		74303456	2011-10-03 11:39:13	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	914	Hanne Slot	Petersen		74303377	2011-10-03 11:39:43	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	915	Rita	Fogt		74303378	2011-10-03 11:40:16	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	916	Hanne	D.Hammershøy		74303565	2011-10-03 11:40:41	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	917	Christian	König		74303376	2011-10-03 11:41:17	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	918	Allan	Thomsen		74303337	2011-10-03 11:41:51	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	919	Thorkild	Skøtt		74303339	2011-10-03 11:42:25	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	920	Yvonne	Warnke		74303336	2011-10-03 11:42:56	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	921	Lissi	J. Julius		74303340	2011-10-03 11:43:17	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	922	Postrum			74303324	2011-10-03 11:44:12	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	923	Vareindlevering			74303349	2011-10-03 11:45:22	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	924	Heike	D. Damkjær		74303516	2011-10-03 11:46:40	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	925	Pia	S. Jørgensen		74303407	2011-10-03 11:47:26	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	926	Lykke	Jessen		74303341	2011-10-03 11:47:51	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	927	Michael	Duus		74303464	2011-10-03 11:51:35	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	928	Kristina	Perczynski		74303479	2011-10-03 11:52:03	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	929	Heidi	F. Laursen		74303410	2011-10-03 11:54:26	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	930	Anita	Jensen		74303561	2011-10-03 11:54:55	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	931	Andrea	Hansen		74303422	2011-10-03 11:55:32	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	932	Maureen	Ernlund		74303411	2011-10-03 11:57:42	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	934	Leyla	Misir		74303401	2011-10-03 12:00:13	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	935	Tove	Matthiesen		74303405	2011-10-03 12:01:00	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	936	Anna Grete	S. Jessen		74303435	2011-10-03 12:02:10	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	937	Iris Dal	Z. Andersen		74303436	2011-10-03 12:02:39	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	938	Anne	M. Fabricius		74303409	2011-10-03 12:03:44	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	939	Ulla	Lauridsen		74303415	2011-10-03 12:04:36	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	940	Dana	Dukalska		74303413	2011-10-03 12:04:59	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	941	Andrea	J. Truelsen		74303563	2011-10-03 12:05:50	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	943	Margit	Jessen		74303380	2011-10-03 12:06:24	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	944	Anja	Sonnberg		74303427	2011-10-03 12:06:52	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	945	Dina	Machmüller		74303352	2011-10-03 12:07:13	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	946	Sabrina	Hinrichsen		74303388	2011-10-03 12:07:44	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	947	Sandra	Lunddahl		74303597	2011-10-03 12:08:12	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	948	Kirsten	Steen		74303425	2011-10-03 12:08:39	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	949	Tina	Petersen		74303344	2011-10-03 12:09:02	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	950	Birgitte	Fasel 		74303369	2011-10-03 12:09:32	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	951	Tove	Weinkauf		74303426	2011-10-03 12:11:30	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	952	Aase	Lund		74303424	2011-10-03 12:11:51	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	953	Vicky	Bække		74303428	2011-10-03 12:12:16	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	954	Daniela	Mingramm		74303522	2011-10-03 12:12:43	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	955	Sabine	K. Jørgensen		74303423	2011-10-03 12:13:12	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	956	Valentina	Ceavdar		74303326	2011-10-03 12:13:38	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	957	Henriette	Jensen		74303463	2011-10-03 12:14:05	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	958	Pia	Damm		74303473	2011-10-03 12:14:27	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	959	Vanessa	Hahn		74303461	2011-10-03 12:16:08	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	960	Sten	Fabricius		74303386	2011-10-03 12:16:30	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	961	Gæstetelefon			74303678	2011-10-03 12:16:52	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	962	Køkken			74303495	2011-10-03 12:17:10	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	963	Lounge			74303467	2011-10-03 12:17:39	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	965	Britta Toft	Pfeiffer		74303385	2011-10-03 13:19:06	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	966	Elizabeth	Kozlowska		74303350	2011-10-03 13:24:15	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	967	Rikke	Beck		74303384	2011-10-03 13:26:05	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	968	Sandra	Danielsen		74303417	2011-10-03 14:00:47	\N		Landline	0
+Zapna	0	249	Zapna out	969	Henrik	Gade	hga@zapna.com	52444427	2011-10-06 11:22:03	\N		Mobile	0
+Zapna	25	59	Zapna out +	971	Niels	Ottesen	no@zapna.com	52444428	2011-10-06 11:40:06	\N		Mobile	0
+DEIF A_S	0	0	Zapna android app	972	MS		ms@deif.com	40709664	2011-10-18 15:32:19	1	88118811	Mobile	99
+DEIF A_S	0	0	Zapna iphone app	973	cgr		cgr@deif.com	30103167	2011-10-18 15:34:53	\N		Mobile	99
+DEIF A_S	0	0	Zapna android app	974	ida		jda@deif.com	30103204	2011-10-18 15:36:20	1	jesper9ar	Mobile	99
+DEIF A_S	0	0	Zapna android app	975	tro		tro@deif.com	40709653	2011-10-18 15:37:32	\N		Mobile	99
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	976	Inga	Fohlmann		74303346	2011-10-20 11:52:55	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	977	Øst kopi print sal 1			74303333	2011-10-20 11:54:04	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	978	Vest kopi/printrum (2. sal)			74303317	2011-10-20 11:54:55	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	979	Vest kopi/print (1. sal)			74303371	2011-10-20 11:55:34	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	980	Økonomi/IT (stuen)			74303433	2011-10-20 11:56:07	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	982	TMF (stuen)			74303465	2011-10-20 11:59:22	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	983	Midt kopi/print (1.sal)			74303471	2011-10-20 12:00:11	\N		Landline	0
+\N	0	249	Zapna out	984					2011-10-20 12:01:29	\N	\N	\N	\N
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	985	Malene Vitus 	Østergaard		74303559	2011-10-20 12:01:58	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	986	Tele (2. sal)			74303534	2011-10-20 12:02:56	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	987	Sten	Fabricius		74303661	2011-10-20 12:04:30	\N		Landline	0
+FDE Forenede Danske Vognmænd	0	0	Zapna PBX	988	74303331			74303331	2011-10-21 06:48:23	\N		Landline	0
+Mobile Tracking	0	0	Zapna iphone app	989	Tony	Mikkelsen	tony@telekaeden-erhverv.dk	20750030	2011-10-26 16:15:15	\N		Mobile	99
+CP Hviddal_Dan-pres	\N	\N	\N	990	Pia	Dalsgaard	pia.dalsgaard@skat.dk	30866905	2011-11-14 12:14:46	\N		Mobile	199
+FDE Forenede Danske Vognmænd	0	249	Zapna out	991	Olga	Petry	amt@fde.dk	20932623	2011-11-16 14:09:50	\N		Mobile	0
+Zapna	0	0	Zapna android app	992	shai	lavin	okhan@zapna.com	5162338288	2011-12-09 18:59:12	1	qwerty	Mobile	0
+test CDU	0	249	Zapna out	993	test	r	rs@zapna.com	88787878	2011-12-16 07:27:13	\N	123456	Mobile	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	994	Sandra	Nørgaard		74303510	2011-12-19 10:50:01	\N		Landline	0
+Zapna	0	0	Zapna android app	995	Shlomo			2035227553	2011-12-20 22:32:11	\N		Mobile	0
+INTERNATIONAL TRANSPORT DANMARK (ITD)F.M.B.A.	0	0	Zapna PBX	996	ITD hovednummer	.		74671233	2011-12-22 09:42:55	\N		Landline	0
+Regions Kontor	0	0	Zapna PBX	997	Regions møde kontor	.		74303258	2011-12-22 09:43:31	\N		Landline	0

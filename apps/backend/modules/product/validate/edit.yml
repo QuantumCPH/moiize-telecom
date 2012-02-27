@@ -1,0 +1,16 @@
+fields:
+  product{name}:
+    required:
+      msg:              The product name cannot be left blank.
+  product{price}:
+    required:
+      msg:              The product price cannot be left blank.
+  product{description}:
+    required:
+      msg:              The product description cannot be left blank.
+  product{initial_balance}:
+    required:
+      msg:              The product initial balance cannot be left blank.
+  product{country_id}:
+    required:
+      msg:              The product country  cannot be left blank.

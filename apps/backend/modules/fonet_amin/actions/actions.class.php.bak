@@ -1,0 +1,190 @@
+<?php
+
+/**
+ * fonet_amin actions.
+ *
+ * @package    zapnacrm
+ * @subpackage fonet_amin
+ * @author     Your name here
+ * @version    SVN: $Id: actions.class.php 12479 2008-10-31 10:54:40Z fabien $
+ */
+class fonet_aminActions extends sfActions
+{
+ /**
+  * Executes index action
+  *
+  * @param sfRequest $request A request object
+  */
+    //20717786
+  protected  $ParentCustomID="1393238";
+  protected  $DdiNo="25998893";
+
+  public function executeIndex(sfWebRequest $request)
+  {
+    $this->forward('default', 'module');
+  }
+  /*
+   * Get information of the fonet customer
+   * This information is only shown to the omairs Khan account
+   * Algo:
+   * Check if it logged into with the account of omairs
+   * If yes then reterive data else forward it to its page.. .
+   * 
+   */
+  public function executeFonetInfo(sfWebRequest $request)
+  {
+
+      $customerId=$request->getParameter('CustomID');
+      $action='GetInfo';
+	  $queryString = "";
+	  
+    
+      //$c = new Criteria();
+    //  $c->add(FonetCustomerPeer::FONET_CUSTOMER_ID,$customerId);
+    //  $customer = FonetCustomerPeer::doSelectOne($c);
+      
+      if($customerId){
+      	  //echo "in if";
+          $data = array(
+		      'CustomID' => $customerId,
+                      'ParentCustomID' => $this->ParentCustomID,
+                      'Action'=>$action
+			  );
+
+
+		$queryString = http_build_query($data,'', '&');
+
+	
+		$this->response_text =  file_get_contents('http://fax.fonet.dk/cgi-bin/ZeroCallV2Control.pl?'.$queryString);
+
+		//echo 'http://fax.fonet.dk/cgi-bin/ZeroCallV2Control.pl?'.$queryString;
+        
+
+      }
+       else { $this->response_text = "";
+	   }
+       //echo 'http://fax.fonet.dk/cgi-bin/ZeroCallV2Control.pl?'.$queryString;
+        
+  }
+
+  public function executeRecharge(sfWebRequest $request)
+  {
+      //Action=Recharge&ParentCustomID=18015978&CustomID=xxxxxxx&ChargeValue=-02206
+      $action='Recharge';
+      $amount=$request->getParameter('ChargeValue');
+      $customerId=$request->getParameter('CustomID');
+	  $queryString = "";
+      
+	  if ($amount and $customerId){
+	  $data = array(
+		      'CustomID' => $customerId,
+                      'ParentCustomID' => $this->ParentCustomID,
+                      'Action'=>$action,
+                      'ChargeValue'=>$amount,                  
+
+			  );
+
+
+		$queryString = http_build_query($data,'', '&');
+
+		//echo $queryString;
+		$this->res =  file_get_contents('http://fax.fonet.dk/cgi-bin/ZeroCallV2Control.pl?'.$queryString);
+		}
+       else { $this->res = "";
+	   }
+                
+     //echo 'http://fax.fonet.dk/cgi-bin/ZeroCallV2Control.pl?'.$queryString;
+        
+  }
+  public function executeActivate(sfWebRequest $request)
+  {
+      $action='Activate';
+      $aniNo=$request->getParameter('AniNo');
+      $customerId=$request->getParameter('CustomID');
+      $queryString = "";
+
+	  if ($aniNo and $customerId){
+	  $data = array(
+		      'CustomID' => $customerId,
+                      'ParentCustomID' => $this->ParentCustomID,
+                      'Action'=>$action,
+                      'AniNo'=>$aniNo,
+                      'DdiNo'=> $this->DdiNo,
+                      'Trace'=>'1'
+			  );
+
+
+		$queryString = http_build_query($data,'', '&');
+
+		//echo $queryString;
+		$this->res=  file_get_contents('http://fax.fonet.dk/cgi-bin/ZeroCallV2Control.pl?'.$queryString);
+        }
+       else { $this->res= "";
+	   }        
+     
+	//echo 'http://fax.fonet.dk/cgi-bin/ZeroCallV2Control.pl?'.$queryString;
+        
+  }
+  public function executeDelete(sfWebRequest $request)
+  {
+      $queryString = "";
+	  $action='Delete';
+      $aniNo=$request->getParameter('AniNo');
+      $customerId=$request->getParameter('CustomID');
+      $res = "";
+
+	  if($aniNo and $customerId){
+	  
+		
+
+		$c = new Criteria();
+		$c->add(CustomerPeer::FONET_CUSTOMER_ID, (float) $customerId);
+		$c->add(CustomerPeer::MOBILE_NUMBER, $aniNo);
+		$customer = CustomerPeer::doSelectOne($c);
+
+		if($customer){
+			$data = array(
+				  'CustomID' => $customerId,
+						  'ParentCustomID' => $this->ParentCustomID,
+						  'Action'=>$action,
+						  'AniNo'=>$aniNo,
+						  'DdiNo'=> $this->DdiNo
+				  );
+			$queryString = http_build_query($data,'', '&');
+			$res .=  file_get_contents('http://fax.fonet.dk/cgi-bin/ZeroCallV2Control.pl?'.$queryString);
+			//delete Customer
+			//$customer->setFonetCustomerId(0);
+			$customer->setMobileNumber("");
+			$customer->save();
+
+			//release fonet Id
+			$f = new Criteria();
+			$f->add(FonetCustomerPeer::FONET_CUSTOMER_ID, $customerId );
+			$fonetId = FonetCustomerPeer::doSelectOne($f);
+			$fonetId->setActivatedOn("");
+			
+
+			if ($fonetId->save()){
+				$res .= "\r\n Customer Deleted Fonet ID {$customerId}, Mobile Number {$aniNo}";
+			}
+
+			
+
+		}else { 
+		   $res .= "Customer Not Found, Fonet ID {$customerId}, Mobile Number {$aniNo}";		   
+	   }        
+	  }else { 
+		   $res .= "Customer Not Found, Fonet ID {$customerId}, Mobile Number {$aniNo}";		   
+	   } 
+	$this->res = $res;
+	//echo 'http://fax.fonet.dk/cgi-bin/ZeroCallV2Control.pl?'.$queryString;
+        
+
+  }
+  public function executeFonet(sfWebRequest $request)
+  {
+      
+
+  }
+
+}

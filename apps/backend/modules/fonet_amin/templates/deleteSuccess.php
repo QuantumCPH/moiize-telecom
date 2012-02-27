@@ -1,0 +1,27 @@
+
+<?php use_helper('I18N');
+
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+?>
+
+<form action="delete" method="GET">
+    <table>
+	<tr>
+	<td>
+	Enter the Phone No. </td>
+	<td><input type="text" name="AniNo"/></td>
+	</tr>
+	<tr>
+	<td>
+  Enter the Fonet Customer Id </td>
+  <td><input type="text" name="CustomID"/></td>
+</tr></table>
+  
+  <br><input type="submit" value="Activate"/>
+</form>
+
+<?php echo $res;?>

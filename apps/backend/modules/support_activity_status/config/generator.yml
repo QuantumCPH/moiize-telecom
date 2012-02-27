@@ -1,0 +1,15 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      SupportActivityStatus
+    theme:            default
+
+    list:
+      title: 'Support Activty Statuses'
+      display: [name]
+      object_actions:
+        _edit: ~
+        _delete: ~
+    edit:
+      title: 'Create/Edit Support Activty Status'
+      display: [name]

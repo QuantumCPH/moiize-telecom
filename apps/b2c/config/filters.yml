@@ -1,0 +1,13 @@
+#sslFilter:
+#  class:  sslFilter
+sfCultureFilter:
+  class:  sfCultureFilter
+rendering: ~
+security:
+  class: sfGuardBasicSecurityFilter
+
+# insert your own filters here
+
+cache:     ~
+common:    ~
+execution: ~

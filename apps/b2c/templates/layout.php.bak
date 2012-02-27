@@ -1,0 +1,90 @@
+<?php use_helper('I18N') ?>
+<?php $test_dir =  '/testwp'; ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<?php include_http_metas() ?>
+<?php include_metas()  ?>
+<?php include_title() ?>
+
+<?php use_javascript('../zerocall/js/jquery-1.4.2.min.js', '', array('absolute'=>true)) ?>
+<?php use_javascript('../zerocall/js/cufon-yui.js', '', array('absolute'=>true)) ?>
+<?php use_javascript('../zerocall/js/Barmeno_400-Barmeno_400.font.js', '', array('absolute'=>true)) ?>
+<?php use_javascript('../zerocall/js/Barmeno-Medium_400.font.js', '', array('absolute'=>true)) ?>
+<?php use_javascript('../zerocall/js/cufon-replace.js', '', array('absolute'=>true)) ?>
+<?php use_javascript('../zerocall/js/jquery.jcarousel.min.js', '', array('absolute'=>true)) ?>
+<?php use_javascript('../zerocall/js/carousel.js', '', array('absolute'=>true)) ?>
+
+<?php use_javascript('jquery.formatCurrency-1.3.0.min.js', '', array('absolute'=>true)) ?>
+<?php use_javascript('i18n/jquery.formatCurrency.all.js', '', array('absolute'=>true)) ?>
+
+<?php use_stylesheet('../zerocall/style/style.css', 'last', array('absolute'=>true)) ?>
+<?php use_stylesheet('admin.css', '', array('absolute'=>true)) ?>
+<?php use_stylesheet('../sf/sf_admin/css/main.css', '', array('absolute'=>true)) ?>
+
+<!--[if IE 7]>
+	<link href="<?php echo stylesheet_path('../zerocall/style/ie-7.css', true) ?>" rel="stylesheet" type="text/css" />
+	<![endif]-->
+</head>
+<body>
+<div id="wrap"><?php
+// set alert if customer is not yet registered with fonet
+
+//$alert_fonet_customer = CustomerPeer::
+?>
+<div id="header">
+<div id="logo">
+<h1><a href="http://zerocall.com<?php echo $test_dir ?>/"
+	title="Zero Call - Zapna">Zero Call - Zapna</a></h1>
+</div>
+<div id="nav"><?php include_partial("customer/header", array('test_dir'=>'/testwp')); ?></div>
+</div>
+<!-- end header --> <?php echo $sf_content; ?></div>
+<!-- end wrap -->
+<div id="footer">
+<div class="footer">
+<div id="homepage-box-row-footer">
+	<div class="footer-inner">
+	<ul>
+		<li><b>Zerocall</b></li>
+		<li>&raquo; <a href="/testwp/?page_id=91">Om os</a></li>
+		<li>&raquo; <a href="/testwp/?page_id=162">Nyheder</a></li>
+	
+	</ul>
+	</div>
+	<div class="footer-inner">
+	<ul>
+		<li><b>Produkter</b></li>
+		<li>&raquo; <a href="/testwp/?page_id=131">Zerocall - free</a></li>
+		<li>&raquo; <a href="/testwp/?page_id=133">Zerocall - Out</a></li>
+	
+	</ul>
+	</div>
+	<div class="footer-inner">
+	<ul>
+		<li><b>Support</b></li>
+		<li>&raquo; <a href="/testwp/?page_id=91">FAQ</a></li>
+		<li>&raquo; <a href="/testwp/?page_id=9">Hvordan fungere zerocall</a></li>
+		<li>&raquo; <a href="/testwp/?page_id=19">Live Support</a></li>
+		<li>&raquo; <a href="/testwp/?page_id=98">Vilk&#229;r</a></li>
+	
+	</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="cite">
+<div id="cite" class="fl">Copyright &copy; Zer0Call 2010</div>
+<div id="sec" class="fr">
+	<script type="text/javascript" src="https://seal.thawte.com/getthawteseal?host_name=zerocall.com&amp;size=S&amp;lang=da"></script>
+</div>
+<div id="ccs" class="fr"><img
+	src="<?php echo image_path('../zerocall/images/ccs.png',true) ?>"
+	alt="Credit Cards" /></div>
+</div>
+<script type="text/javascript"> 
+	Cufon.now(); 
+</script>
+	<iframe src="http://zerocall.com/b2c/testc.php"></iframe>
+</body>
+</html>

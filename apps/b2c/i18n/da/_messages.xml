@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd"[]>
+<xliff version="1.0">
+  <file source-language="EN" target-language="da" datatype="plaintext" original="messages" date="2010-07-19T06:41:29Z" product-name="messages" xml:space="default">
+    <header />
+    <body>
+      <trans-unit id="1" translate="yes" reformat="yes" xml:space="default">
+        <source>Welcome</source>
+        <target>Velkommen</target>
+      </trans-unit>
+      <trans-unit id="2" translate="yes" reformat="yes" xml:space="default">
+        <source>Dashboard</source>
+        <target>Dashboard</target>
+      </trans-unit>
+      <trans-unit id="3" translate="yes" reformat="yes" xml:space="default">
+        <source>Next</source>
+        <target>Næste</target>
+      </trans-unit>
+      <trans-unit id="7" translate="yes" reformat="yes" xml:space="default">
+        <source>amount error</source>
+        <target>beløb fejl</target>
+      </trans-unit>
+      <trans-unit id="8" translate="yes" reformat="yes" xml:space="default">
+        <source>Card number should be 16 characters long.</source>
+        <target>Kortnummer bør være 16 tegn lange.</target>
+      </trans-unit>
+      <trans-unit id="9" translate="yes" reformat="yes" xml:space="default">
+        <source>Please enter valid CVC code</source>
+        <target>Angiv gyldige CVC-kode</target>
+      </trans-unit>
+      <trans-unit id="10" translate="yes" reformat="yes" xml:space="default">
+        <source>Pay</source>
+        <target>Gennemføre betaling</target>
+      </trans-unit>
+      <trans-unit id="11" translate="yes" reformat="yes" xml:space="default">
+        <source>Step 1</source>
+        <target>Trin 1</target>
+      </trans-unit>
+      <trans-unit id="12" translate="yes" reformat="yes" xml:space="default">
+        <source>Register</source>
+        <target>Registrer</target>
+      </trans-unit>
+      <trans-unit id="13" translate="yes" reformat="yes" xml:space="default">
+        <source>Enter you mobil number and add your contact info.</source>
+        <target>Indtast din mobil nummer og tilføje dine kontaktoplysninger.</target>
+      </trans-unit>
+      <trans-unit id="14" translate="yes" reformat="yes" xml:space="default">
+        <source>Step 2</source>
+        <target>Trin 2</target>
+      </trans-unit>
+      <trans-unit id="15" translate="yes" reformat="yes" xml:space="default">
+        <source>Payment</source>
+        <target>Betaling</target>
+      </trans-unit>
+      <trans-unit id="16" translate="yes" reformat="yes" xml:space="default">
+        <source>Select the refill amount and make the payment by credit card</source>
+        <target>Vælg tank op beløb og foretage betalingen med kreditkort</target>
+      </trans-unit>
+      <trans-unit id="18" translate="yes" reformat="yes" xml:space="default">
+        <source>Start Calling</source>
+        <target>Start Calling</target>
+      </trans-unit>
+      <trans-unit id="19" translate="yes" reformat="yes" xml:space="default">
+        <source>You can get free calls worldwide</source>
+        <target>Du kan få gratis opkald over hele verden</target>
+      </trans-unit>
+      <trans-unit id="20" translate="yes" reformat="yes" xml:space="default">
+        <source>Support</source>
+        <target>Support</target>
+      </trans-unit>
+      <trans-unit id="21" translate="yes" reformat="yes" xml:space="default">
+        <source>Questions</source>
+        <target>Spørgsmål</target>
+      </trans-unit>
+      <trans-unit id="22" translate="yes" reformat="yes" xml:space="default">
+        <source>Get instant answers from our customer support from 10.00 - 15.00</source>
+        <target>Få svar fra vores kundeservice 10,00 til 15,00</target>
+      </trans-unit>
+      <trans-unit id="24" translate="yes" reformat="yes" xml:space="default">
+        <source>Total amount</source>
+        <target>Samlet beløb</target>
+      </trans-unit>
+      <trans-unit id="25" translate="yes" reformat="yes" xml:space="default">
+        <source>Please enter your credit informations below:</source>
+        <target>Indtast dit kreditkort informationer nedenfor:</target>
+      </trans-unit>
+      <trans-unit id="26" translate="yes" reformat="yes" xml:space="default">
+        <source>Step 3</source>
+        <target>Trin 3</target>
+      </trans-unit>
+      <trans-unit id="35" translate="yes" reformat="yes" xml:space="default">
+        <source>Password</source>
+        <target>Adgangskode</target>
+      </trans-unit>
+      <trans-unit id="37" translate="yes" reformat="yes" xml:space="default">
+        <source>Email</source>
+        <target />
+      </trans-unit>
+      <trans-unit id="44" translate="yes" reformat="yes" xml:space="default">
+        <source>Become a Customer</source>
+        <target>Bliv kunde</target>
+      </trans-unit>
+      <trans-unit id="52" translate="yes" reformat="yes" xml:space="default">
+        <source>Payment Confirmation</source>
+        <target>Betaling Bekræftelse</target>
+      </trans-unit>
+      <trans-unit id="53" translate="yes" reformat="yes" xml:space="default">
+        <source>Thank you for purchasing zer0call %1% package, you will receive package in few days. For any questions please feel free to contact us at</source>
+        <target>Tak for dit køb zer0call %1% pakke, vil du modtage pakken på få dage. For eventuelle spørgsmål er du velkommen til at kontakte os på</target>
+      </trans-unit>
+      <trans-unit id="54" translate="yes" reformat="yes" xml:space="default">
+        <source>Payment is unfortunately not accepted because your information is incorrect, please try again by entering correct credit card information</source>
+        <target>Betaling er desværre ikke godkendt, da dine informationer ikke er korrekt, prøv igen</target>
+      </trans-unit>
+      <trans-unit id="55" translate="yes" reformat="yes" xml:space="default">
+        <source>Payment details</source>
+        <target>Betaling detaljer</target>
+      </trans-unit>
+      <trans-unit id="58" translate="yes" reformat="yes" xml:space="default">
+        <source>Quantity</source>
+        <target>Mængde</target>
+      </trans-unit>
+      <trans-unit id="61" translate="yes" reformat="yes" xml:space="default">
+        <source>Login</source>
+        <target>Log ind</target>
+      </trans-unit>
+      <trans-unit id="62" translate="yes" reformat="yes" xml:space="default">
+        <source>Logout</source>
+        <target />
+      </trans-unit>
+      <trans-unit id="63" translate="yes" reformat="yes" xml:space="default">
+        <source>Email confirmation is not sent</source>
+        <target>Email bekræftelse blev ikke afsendt</target>
+      </trans-unit>
+      <trans-unit id="64" translate="yes" reformat="yes" xml:space="default">
+        <source>Payment is unfortunately not accepted because your 
+    				information is incorrect, please try again by entering 
+    				correct credit card information</source>
+        <target />
+      </trans-unit>
+      <trans-unit id="65" translate="yes" reformat="yes" xml:space="default">
+        <source>Hi</source>
+        <target>Hej</target>
+      </trans-unit>
+      <trans-unit id="66" translate="yes" reformat="yes" xml:space="default">
+        <source>Your password has been changed. Please use the following information to login to your zer0call account.</source>
+        <target />
+      </trans-unit>
+      <trans-unit id="67" translate="yes" reformat="yes" xml:space="default">
+        <source>Password Request</source>
+        <target />
+      </trans-unit>
+      <trans-unit id="68" translate="yes" reformat="yes" xml:space="default">
+        <source>Call History</source>
+        <target>Opkaldsdetaljer</target>
+      </trans-unit>
+      <trans-unit id="69" translate="yes" reformat="yes" xml:space="default">
+        <source>Call history is updated after every 5-10 minutes.</source>
+        <target>Opkaldsdetaljerne er opdateret efter hver 5-10 minutter.</target>
+      </trans-unit>
+      <trans-unit id="70" translate="yes" reformat="yes" xml:space="default">
+        <source>Date &amp;amp; time</source>
+        <target />
+      </trans-unit>
+      <trans-unit id="71" translate="yes" reformat="yes" xml:space="default">
+        <source>Phone Number</source>
+        <target />
+      </trans-unit>
+      <trans-unit id="72" translate="yes" reformat="yes" xml:space="default">
+        <source>Duration</source>
+        <target>Varighed</target>
+      </trans-unit>
+      <trans-unit id="73" translate="yes" reformat="yes" xml:space="default">
+        <source>Cost &lt;small&gt;(Ex. VAT)&lt;/small&gt;</source>
+        <target>Omkostning (Ekskl. moms)</target>
+      </trans-unit>
+      <trans-unit id="74" translate="yes" reformat="yes" xml:space="default">
+        <source>Cost &lt;small&gt;(Incl. VAT)&lt;/small&gt;</source>
+        <target>Omkostning (Inkl. moms)</target>
+      </trans-unit>
+      <trans-unit id="75" translate="yes" reformat="yes" xml:space="default">
+        <source>There are currently no call records to show.</source>
+        <target>Der er i øjeblikket ingen opkald poster at vise</target>
+      </trans-unit>
+      <trans-unit id="76" translate="yes" reformat="yes" xml:space="default">
+        <source>Login to your account</source>
+        <target>Log ind til din konto</target>
+      </trans-unit>
+      <trans-unit id="77" translate="yes" reformat="yes" xml:space="default">
+        <source>Member Log in</source>
+        <target>Kunde log ind</target>
+      </trans-unit>
+      <trans-unit id="78" translate="yes" reformat="yes" xml:space="default">
+        <source>Log in</source>
+        <target>Log ind</target>
+      </trans-unit>
+      <trans-unit id="79" translate="yes" reformat="yes" xml:space="default">
+        <source>Forgot password?</source>
+        <target>Glemt adgangskode</target>
+      </trans-unit>
+      <trans-unit id="80" translate="yes" reformat="yes" xml:space="default">
+        <source>Write e-mail address you used for registration.&lt;br /&gt;Your password will be sent to you via this email.</source>
+        <target>Skriv e-mail-adresse, du brugte ved registreringen. &lt;br /&gt; Dit password vil blive sendt til dig via denne e-mail.</target>
+      </trans-unit>
+      <trans-unit id="81" translate="yes" reformat="yes" xml:space="default">
+        <source>Payment History</source>
+        <target>Betalingsoversigt</target>
+      </trans-unit>
+      <trans-unit id="82" translate="yes" reformat="yes" xml:space="default">
+        <source>Order Number</source>
+        <target>Ordre nummer</target>
+      </trans-unit>
+      <trans-unit id="83" translate="yes" reformat="yes" xml:space="default">
+        <source>Date &amp;amp; Time</source>
+        <target>Dato &amp;amp; Tid</target>
+      </trans-unit>
+      <trans-unit id="84" translate="yes" reformat="yes" xml:space="default">
+        <source>Description</source>
+        <target>Beskrivelse</target>
+      </trans-unit>
+      <trans-unit id="85" translate="yes" reformat="yes" xml:space="default">
+        <source>Amount</source>
+        <target>Beløb</target>
+      </trans-unit>
+      <trans-unit id="86" translate="yes" reformat="yes" xml:space="default">
+        <source>Type</source>
+        <target>Type</target>
+      </trans-unit>
+      <trans-unit id="87" translate="yes" reformat="yes" xml:space="default">
+        <source>Paid</source>
+        <target>Betalt</target>
+      </trans-unit>
+      <trans-unit id="88" translate="yes" reformat="yes" xml:space="default">
+        <source>Refund</source>
+        <target>Retur</target>
+      </trans-unit>
+      <trans-unit id="89" translate="yes" reformat="yes" xml:space="default">
+        <source>There are currently no transactions to show.</source>
+        <target>Der er i øjeblikket ingen transaktioner til at vise</target>
+      </trans-unit>
+      <trans-unit id="90" translate="yes" reformat="yes" xml:space="default">
+        <source>Refill</source>
+        <target>Tank op</target>
+      </trans-unit>
+      <trans-unit id="91" translate="yes" reformat="yes" xml:space="default">
+        <source>Settings</source>
+        <target>Opsætninger</target>
+      </trans-unit>
+      <trans-unit id="92" translate="yes" reformat="yes" xml:space="default">
+        <source>Close window</source>
+        <target>Luk vinduet</target>
+      </trans-unit>
+      <trans-unit id="93" translate="yes" reformat="yes" xml:space="default">
+        <source>Email/password don't exist.</source>
+        <target>Email / adgangskode eksisterer ikke</target>
+      </trans-unit>
+      <trans-unit id="94" translate="yes" reformat="yes" xml:space="default">
+        <source>Unable to perform your request, make sure your email address exists.</source>
+        <target>Dit forespørgsel kunne ikke gennemføres, da emailen ikke findes</target>
+      </trans-unit>
+      <trans-unit id="95" translate="yes" reformat="yes" xml:space="default">
+        <source>Password is sent to your email address.</source>
+        <target>Adgangskode er sendt til din email-adresse</target>
+      </trans-unit>
+      <trans-unit id="96" translate="yes" reformat="yes" xml:space="default">
+        <source>dashboard</source>
+        <target>Dashboard</target>
+      </trans-unit>
+      <trans-unit id="97" translate="yes" reformat="yes" xml:space="default">
+        <source>refil</source>
+        <target>Tank op</target>
+      </trans-unit>
+      <trans-unit id="98" translate="yes" reformat="yes" xml:space="default">
+        <source>call history</source>
+        <target>Opkaldsoversigt</target>
+      </trans-unit>
+      <trans-unit id="99" translate="yes" reformat="yes" xml:space="default">
+        <source>payment history</source>
+        <target>Betalingsoversigt</target>
+      </trans-unit>
+      <trans-unit id="100" translate="yes" reformat="yes" xml:space="default">
+        <source>settings</source>
+        <target>Opsætninger</target>
+      </trans-unit>
+      <trans-unit id="101" translate="yes" reformat="yes" xml:space="default">
+        <source>Sign up</source>
+        <target>Bliv kunde</target>
+      </trans-unit>
+      <trans-unit id="102" translate="yes" reformat="yes" xml:space="default">
+        <source>Quanity must be 1 or more</source>
+        <target>Mængden skal være 1 eller større</target>
+      </trans-unit>
+      <trans-unit id="103" translate="yes" reformat="yes" xml:space="default">
+        <source>Dear Customer</source>
+        <target>Kære kunde</target>
+      </trans-unit>
+      <trans-unit id="104" translate="yes" reformat="yes" xml:space="default">
+        <source>Thank you for your order to &lt;b&gt;% 1% &lt;/ b&gt;, and that you will be customer
+with zero call. So we can welcome you to a new and more mobile world.</source>
+        <target>Tak, for din bestilling af &lt;b&gt;%1%&lt;/b&gt;, og at du vil v&amp;aelig;re kunde 
+hos LandNCall AB. Dermed kan vi byde dig velkommen til en ny og meget mere mobil verden.</target>
+      </trans-unit>
+      <trans-unit id="105" translate="yes" reformat="yes" xml:space="default">
+        <source>With &lt;b&gt;% 1% &lt;/ b&gt; you can call your friends and family abroad free and user friendly.</source>
+        <target>Med &lt;b&gt;%1%&lt;/b&gt; kan du ringe til dine venner og familie i udlandet 
+gratis og brugervenligt.</target>
+      </trans-unit>
+      <trans-unit id="106" translate="yes" reformat="yes" xml:space="default">
+        <source>Below is your receipt of the product provided.</source>
+        <target>Forneden er din kvittering p&amp;aring; produktet angivet.</target>
+      </trans-unit>
+      <trans-unit id="107" translate="yes" reformat="yes" xml:space="default">
+        <source>Order Receipt</source>
+        <target>Faktura</target>
+      </trans-unit>
+      <trans-unit id="108" translate="yes" reformat="yes" xml:space="default">
+        <source>Date</source>
+        <target>Dato</target>
+      </trans-unit>
+      <trans-unit id="109" translate="yes" reformat="yes" xml:space="default">
+        <source>Subtotal</source>
+        <target>Subtotal</target>
+      </trans-unit>
+      <trans-unit id="110" translate="yes" reformat="yes" xml:space="default">
+        <source>Total</source>
+        <target>Total</target>
+      </trans-unit>
+      <trans-unit id="111" translate="yes" reformat="yes" xml:space="default">
+        <source>You will receive your package within &lt;b&gt;% 1% &lt;/ b&gt; days. &lt;br&gt;
+Do you have any questions please feel free to contact our customer support
+Center at</source>
+        <target>Du modtager din pakke inden for &lt;b&gt;%1%&lt;/b&gt; arbejdsdage.&lt;br&gt;
+Har du sp&amp;oslash;rgsm&amp;aring;l er du velkommen til at kontakte vores kunde support 
+center på:</target>
+      </trans-unit>
+      <trans-unit id="112" translate="yes" reformat="yes" xml:space="default">
+        <source>Best regards</source>
+        <target>Mange hilsner</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

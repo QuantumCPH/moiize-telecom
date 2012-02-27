@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body>
+<?php $list = parse_ini_file('lista.ini');?>
+<script type='text/javascript'>
+ function changePrice() {
+  index = document.getElementById('ratelist').selectedIndex;
+  val = document.getElementById('text_'+index).value;
+  val2 = document.getElementById('text2_'+index).value;
+  document.getElementById('lable').innerHTML=val;
+  document.getElementById('lable2').innerHTML=val2;
+ }
+</script>
+<div style='float:left'>
+<select class='selectstyle1' id='ratelist' name='ratelist' onchange=changePrice();>
+<?php  foreach($list as $first) {
+	$first = explode(":", $first);?>
+   <option><?php echo $first[0]?></option>
+<?php }?>
+</select>
+</div>
+<div id="test">
+<?php 
+	$count = 0;
+	foreach($list as $first) {
+		$first = explode(":", $first);
+     	$second= explode("@",$first[1]);
+     	$telco=null;
+     	$telco_mobile = null;
+    	for($i=0;$i < sizeof($second); $i++){
+     		if($i%2 == 0)
+     			$telco = $second[$i];
+     		else{
+     			$telco_mobile .= $second[$i];
+				
+}
+         }
+         ?>
+
+     <input type="hidden" id='text_<?php echo $count;?>' value='<?php echo $telco;?>'/> 
+     <input type="hidden" id='text2_<?php echo $count;?>' value='<?php echo $telco_mobile;?>'/>
+ <?php $count++; } ?>
+</div>
+<div id="rightside">
+<div style="clear:both;"></div>
+<p>
+<div id="lable" style="font-weight:bold;"></div>
+</p>
+
+<p>
+<div id="lable2" style="font-weight:bold;"></div>
+</p>
+</div>
+</body>
+</html>

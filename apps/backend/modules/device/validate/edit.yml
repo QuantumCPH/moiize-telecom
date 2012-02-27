@@ -1,0 +1,5 @@
+fields:
+  device{name}:
+    required:
+      msg:              The Device name cannot be left blank.
+      

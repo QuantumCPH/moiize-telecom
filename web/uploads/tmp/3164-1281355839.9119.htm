@@ -1,0 +1,582 @@
+<style type="text/css">
+
+	
+  .invoice *
+  {
+  font-family: calibri, verdana, "Courier New", Courier, mono;
+font-size:16px;
+  }
+  
+  .invoice .call_summary
+  {
+margin-top: 10px;
+  }
+  
+  .summary_header
+  {
+    /*background: #c0c0c0;*/
+    font-weight: bold;
+  }
+  
+  .group_header
+  {
+  /*background: #f0f0f0;*/
+  font-weight: bold;
+}
+
+.summary_header, .group_header, .group_subheader
+{
+ height: 30px;
+ border-bottom:1px solid #000;
+}
+
+.group_subheader td.first
+{
+	text-indent: 10px;
+	font-weight: bold;
+}
+
+
+
+.group_data td.first
+{
+	text-indent: 20px;
+}
+
+.footer
+{
+	height:25px;
+	font-style:italic;
+}
+
+.footer.grandtotal
+{
+	background: #f0f0f0;
+
+}
+</style>
+<table class='invoice' width="100%">
+	<tr>
+		<td align="right" colspan="2">
+			<img src="http://www.zapna.com/zapnacrm2/images/zapna_logo_small.jpg" alt="Zapna_logo_small" />		</td>
+	</tr>
+	<tr>
+		<td valign="top" width="50%">
+		PNN Medical A/S<br />
+		Oldenvej<br />
+		3490, 
+		Gentofte<br />
+	    Att: ulrik Hansen	    </td>
+		<td>Zapna Aps<br />
+		  Bryggervangen 19, 2<br />
+		  2100 K&oslash;benhavn &Oslash;<br />
+		  Tel: +45 7027 9966<br />
+		  Fax: +45 7027 9965<br />
+		  Cvr: 32068219<br />
+		  Bank: Danske Bank<br />
+		  Reg: 3001<br />
+	    Konto: 0010408563</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<table class="invoice_meta">
+				<tr>
+					<td colspan="2">Faktura</td>
+				</tr>
+				<tr>
+					<td>Faktura Nummer:</td>
+					<td>02051047</td>
+				</tr>
+				<tr>
+					<td>Faktura Periode:</td>
+					<td>15 Mar. - 14 Apr.</td>
+				</tr>
+				<tr>
+					<td>Faktura Dato:</td>
+					<td>02 May. 2010</td>
+				</tr>
+				<tr>
+					<td>Betalingsdato:</td>
+					<td>17 May. 2010</td>
+				</tr>
+				<tr>
+					<td>Kundenummer:</td>
+					<td>11888305</td>
+				</tr>
+			</table> <!-- end invoice meta -->
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<table class="call_summary" width="100%" cellspacing="0">
+				<tr class="summary_header" style="border: 1px solid #000;">
+					<td width="60%">Produkt beskrivelse</td>
+					<td align="center">Antal opkald enheder</td>
+					<td align="center">Produkt pris</td>
+					<td align="center">Total Forbrug (Kr.)</td>
+				</tr>
+				<tr>
+					<td colspan="4" style="height:1px; background: black">
+					</td>
+				</tr>
+						
+								<tr class="group_header">
+									<td>61610611</td>
+									<td align="right">111</td>
+									<td>&nbsp;</td>
+									<td align="right">160,00</td>
+								</tr>
+								<tr>
+									<td colspan="4" style="height:1px; background: #c0c0c0;"></td>
+								</tr>
+								<tr class="group_subheader">
+									<td class="first">BJO </td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+								</tr>
+								<!--loop group data-->
+																<tr class="group_data">
+									<td class="first">FRANCE - Paris</td>
+									<td align="right">15</td>
+									<td align="right">7,50</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">FRANCE MOBILE-SFR</td>
+									<td align="right">44</td>
+									<td align="right">70,40</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">GERMANY - Dortmund</td>
+									<td align="right">1</td>
+									<td align="right">0,50</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">GERMANY - Mobile D2 Vodafone</td>
+									<td align="right">36</td>
+									<td align="right">57,60</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">JAPAN - Mobile</td>
+									<td align="right">5</td>
+									<td align="right">8,00</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">UK - Mobile Vodafone</td>
+									<td align="right">10</td>
+									<td align="right">16,00</td>
+									<td>&nbsp;</td>
+								</tr>
+																<!-- end group data -->
+								
+								<tr class="group_header">
+									<td>30630956</td>
+									<td align="right">40</td>
+									<td>&nbsp;</td>
+									<td align="right">31,00</td>
+								</tr>
+								<tr>
+									<td colspan="4" style="height:1px; background: #c0c0c0;"></td>
+								</tr>
+								<tr class="group_subheader">
+									<td class="first">CB </td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+								</tr>
+								<!--loop group data-->
+																<tr class="group_data">
+									<td class="first">UK</td>
+									<td align="right">4</td>
+									<td align="right">2,00</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">UK - Mobile Vodafone</td>
+									<td align="right">10</td>
+									<td align="right">16,00</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">USA</td>
+									<td align="right">26</td>
+									<td align="right">13,00</td>
+									<td>&nbsp;</td>
+								</tr>
+																<!-- end group data -->
+								
+								<tr class="group_header">
+									<td>20301513</td>
+									<td align="right">460</td>
+									<td>&nbsp;</td>
+									<td align="right">743,90</td>
+								</tr>
+								<tr>
+									<td colspan="4" style="height:1px; background: #c0c0c0;"></td>
+								</tr>
+								<tr class="group_subheader">
+									<td class="first">CST </td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+								</tr>
+								<!--loop group data-->
+																<tr class="group_data">
+									<td class="first">AUSTRALIA - Mobile</td>
+									<td align="right">71</td>
+									<td align="right">113,60</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">BULGARIA - Mobile</td>
+									<td align="right">8</td>
+									<td align="right">12,80</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">CHINA - Mobile</td>
+									<td align="right">23</td>
+									<td align="right">36,80</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">INDIA - Mobile</td>
+									<td align="right">8</td>
+									<td align="right">24,00</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">JAPAN - Mobile</td>
+									<td align="right">347</td>
+									<td align="right">555,20</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">UK</td>
+									<td align="right">3</td>
+									<td align="right">1,50</td>
+									<td>&nbsp;</td>
+								</tr>
+																<!-- end group data -->
+								
+								<tr class="group_header">
+									<td>20209113</td>
+									<td align="right">3</td>
+									<td>&nbsp;</td>
+									<td align="right">4,80</td>
+								</tr>
+								<tr>
+									<td colspan="4" style="height:1px; background: #c0c0c0;"></td>
+								</tr>
+								<tr class="group_subheader">
+									<td class="first">EOJ </td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+								</tr>
+								<!--loop group data-->
+																<tr class="group_data">
+									<td class="first">GERMANY - Mobile D2 Vodafone</td>
+									<td align="right">3</td>
+									<td align="right">4,80</td>
+									<td>&nbsp;</td>
+								</tr>
+																<!-- end group data -->
+								
+								<tr class="group_header">
+									<td>21625307</td>
+									<td align="right">2</td>
+									<td>&nbsp;</td>
+									<td align="right">0,70</td>
+								</tr>
+								<tr>
+									<td colspan="4" style="height:1px; background: #c0c0c0;"></td>
+								</tr>
+								<tr class="group_subheader">
+									<td class="first">KHW </td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+								</tr>
+								<!--loop group data-->
+																<tr class="group_data">
+									<td class="first">SWEDEN</td>
+									<td align="right">2</td>
+									<td align="right">0,70</td>
+									<td>&nbsp;</td>
+								</tr>
+																<!-- end group data -->
+								
+								<tr class="group_header">
+									<td>23438388</td>
+									<td align="right">7</td>
+									<td>&nbsp;</td>
+									<td align="right">5,70</td>
+								</tr>
+								<tr>
+									<td colspan="4" style="height:1px; background: #c0c0c0;"></td>
+								</tr>
+								<tr class="group_subheader">
+									<td class="first">LMJ </td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+								</tr>
+								<!--loop group data-->
+																<tr class="group_data">
+									<td class="first">UK - London</td>
+									<td align="right">5</td>
+									<td align="right">2,50</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">UK - Mobile Orange</td>
+									<td align="right">2</td>
+									<td align="right">3,20</td>
+									<td>&nbsp;</td>
+								</tr>
+																<!-- end group data -->
+								
+								<tr class="group_header">
+									<td>51990243</td>
+									<td align="right">28</td>
+									<td>&nbsp;</td>
+									<td align="right">29,40</td>
+								</tr>
+								<tr>
+									<td colspan="4" style="height:1px; background: #c0c0c0;"></td>
+								</tr>
+								<tr class="group_subheader">
+									<td class="first">MB </td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+								</tr>
+								<!--loop group data-->
+																<tr class="group_data">
+									<td class="first">UK</td>
+									<td align="right">14</td>
+									<td align="right">7,00</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">UNITED KINGDOM MOBILE-ORANGE</td>
+									<td align="right">14</td>
+									<td align="right">22,40</td>
+									<td>&nbsp;</td>
+								</tr>
+																<!-- end group data -->
+								
+								<tr class="group_header">
+									<td>21265730</td>
+									<td align="right">45</td>
+									<td>&nbsp;</td>
+									<td align="right">62,00</td>
+								</tr>
+								<tr>
+									<td colspan="4" style="height:1px; background: #c0c0c0;"></td>
+								</tr>
+								<tr class="group_subheader">
+									<td class="first">PG </td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+								</tr>
+								<!--loop group data-->
+																<tr class="group_data">
+									<td class="first">INDIA - Mobile</td>
+									<td align="right">5</td>
+									<td align="right">15,00</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">MEXICO</td>
+									<td align="right">13</td>
+									<td align="right">26,00</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">SOUTH AFRICA MOBILE</td>
+									<td align="right">5</td>
+									<td align="right">10,00</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">UK - London</td>
+									<td align="right">22</td>
+									<td align="right">11,00</td>
+									<td>&nbsp;</td>
+								</tr>
+																<!-- end group data -->
+								
+								<tr class="group_header">
+									<td>40319113</td>
+									<td align="right">81</td>
+									<td>&nbsp;</td>
+									<td align="right">128,50</td>
+								</tr>
+								<tr>
+									<td colspan="4" style="height:1px; background: #c0c0c0;"></td>
+								</tr>
+								<tr class="group_subheader">
+									<td class="first">SF </td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+								</tr>
+								<!--loop group data-->
+																<tr class="group_data">
+									<td class="first">GERMANY - Mobile D1 T-Mobile</td>
+									<td align="right">1</td>
+									<td align="right">1,60</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">GERMANY - Mobile D2 Vodafone</td>
+									<td align="right">7</td>
+									<td align="right">11,20</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">IRELAND - Mobile Vodafone Eircel</td>
+									<td align="right">2</td>
+									<td align="right">3,20</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">SWITZERLAND - Mobile Swisscom</td>
+									<td align="right">70</td>
+									<td align="right">112,00</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">UK</td>
+									<td align="right">1</td>
+									<td align="right">0,50</td>
+									<td>&nbsp;</td>
+								</tr>
+																<!-- end group data -->
+								
+								<tr class="group_header">
+									<td>30384578</td>
+									<td align="right">4</td>
+									<td>&nbsp;</td>
+									<td align="right">2,00</td>
+								</tr>
+								<tr>
+									<td colspan="4" style="height:1px; background: #c0c0c0;"></td>
+								</tr>
+								<tr class="group_subheader">
+									<td class="first">TS </td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+								</tr>
+								<!--loop group data-->
+																<tr class="group_data">
+									<td class="first">UK</td>
+									<td align="right">4</td>
+									<td align="right">2,00</td>
+									<td>&nbsp;</td>
+								</tr>
+																<!-- end group data -->
+								
+								<tr class="group_header">
+									<td>51990210</td>
+									<td align="right">23</td>
+									<td>&nbsp;</td>
+									<td align="right">55,30</td>
+								</tr>
+								<tr>
+									<td colspan="4" style="height:1px; background: #c0c0c0;"></td>
+								</tr>
+								<tr class="group_subheader">
+									<td class="first">URH </td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+								</tr>
+								<!--loop group data-->
+																<tr class="group_data">
+									<td class="first">EGYPT - Mobile</td>
+									<td align="right">14</td>
+									<td align="right">42,00</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">IRELAND - Dublin</td>
+									<td align="right">1</td>
+									<td align="right">0,50</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">IRELAND - Mobile O2 ESAT</td>
+									<td align="right">7</td>
+									<td align="right">11,20</td>
+									<td>&nbsp;</td>
+								</tr>
+																<tr class="group_data">
+									<td class="first">SWITZERLAND - Mobile Orange</td>
+									<td align="right">1</td>
+									<td align="right">1,60</td>
+									<td>&nbsp;</td>
+								</tr>
+																<!-- end group data -->
+												<tr class="footer">
+						<td align="right">Forbrug i alt</td>
+						<td></td>
+						<td></td>
+						<td align="right">1 223,30</td>
+					</tr>
+					<tr class="footer">
+						<td align="right">Forbrugsrabat</td>
+						<td align="right">0%</td>
+						<td align="right">1 223,30</td>
+						<td align="right">-0,00</td>
+					</tr>
+				
+				<!--  products  listing -->
+								
+												<!-- end products listing -->
+				<!--  invoice fee -->
+					<tr class="footer">
+						<td align="right">Faktura gebyr (Letter)</td>
+						<td></td>
+						<td align="right"></td>
+						<td align="right">40,00</td>
+					</tr>				
+				<!--  end invoice fee  -->
+				<tr>
+					<td colspan="4" style="height:1px; background: black;"></td>
+				</tr>
+				<tr class="footer">
+					<td colspan="3">Forbrug i alt</td>
+					<td align="right">1 263,30</td>
+				</tr>
+				<tr>
+					<td colspan="4" style="height:1px; background: black;"></td>
+				</tr>
+				<tr class="footer">
+					<td colspan="3">Moms udg&oslash;re</td>
+					<td align="right">315,83</td>
+				</tr>
+				<tr>
+					<td colspan="4" style="height:2px; background: black;"></td>
+				</tr>
+				<tr class="footer grandtotal">
+					<td colspan="3">Pris inkl. Moms</td>
+					<td align="right">1 579,13</td>
+				</tr>
+				<tr>
+					<td colspan="4" style="height:3px; background: black;"></td>
+				</tr>
+							</table>
+		</td>
+	</tr>
+</table>

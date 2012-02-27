@@ -1,0 +1,8 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Customer
+    theme:            default
+
+    list:
+      display: [first_name, last_name, country, city, po_box_number, mobile_number, entity_status, email, balance]

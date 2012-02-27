@@ -1,0 +1,6 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      UsageAlertSender
+    theme:            default
+    css:             /sf/sf_admin/css/admin_main.css

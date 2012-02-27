@@ -1,0 +1,10 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Role
+    theme:            default
+    
+    edit:
+      fields:
+        role_permission: { type: admin_double_list, params: through_class=RolePermissionRef }
+      display: [name, role_permission]

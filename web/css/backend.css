@@ -1,0 +1,93 @@
+
+	
+.admin-navigation{
+	display:inline;
+	padding-right: 5px;
+}
+
+.notice
+{
+ border:1px solid green;
+ background: #d00;
+ width: 300px;
+ margin:10px;
+ padding: 2px;
+ color: #fff;
+}
+
+.a_button {
+	display: block;
+	float: left;
+	
+	border:1px solid black;
+	border-top:1px solid gray;
+	border-left:1px solid gray;
+	
+	background:#5970B2;
+	
+	font-family: calibri, 'trabuchet ms', arial;
+	font-size: .9em;
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+	
+	padding:5px;
+	
+	margin:2px;
+	
+	-moz-border-radius: 15px;
+}
+
+.a_button:hover
+{
+	/*text-decoration: underline;*/
+	background: #49A3FF;
+}
+
+	a.external_link
+	{
+		background-color: #838483;
+		padding: 5px;
+		color: #fff;
+		font-family: arial;
+		font-size: .9em;
+		font-weight: bold;		
+		margin-right: 5px;
+                background: url('../images/b.png') repeat-x left;
+                line-height: 27px;
+	}
+
+.errorbox
+{
+	background-color: #ff1100;
+	border-color: red;
+	color: white;
+	font-family: arial;
+	font-size: .7em;
+	padding: 5px;
+	
+	float: left;
+	margin-bottom: 4px;
+}
+
+.errorbox a
+{
+	color: white;
+	font-weight: bold;	
+}
+
+.errorbox ul {
+	margin: 10px auto auto 10px!important;	
+	list-style: square;
+}
+
+.errorbox ul li {
+	display: block;
+}
+
+#employees_loading_indicator
+{
+	position: relative;
+	left: 10px;
+	top: 5px;
+}

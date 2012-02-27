@@ -1,0 +1,15 @@
+fields:
+  agent_commission_package{name}:
+    required:
+      msg:              The name cannot be left blank.
+  agent_commission_package{reg_share_value}:
+    required:
+      msg:              The reg share value cannot be left blank.
+  agent_commission_package{extra_payments_share_value}:
+    required:
+      msg:              The extra payments share value cannot be left blank.
+
+
+
+
+

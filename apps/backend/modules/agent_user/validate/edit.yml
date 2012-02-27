@@ -1,0 +1,17 @@
+fields:
+  agent_user{agent_company_id}:
+    required:
+      msg:              The agent company name cannot be left blank.
+  agent_user{username}:
+    required:
+      msg:              The user name cannot be left blank.
+  agent_user{password}:
+    required:
+      msg:              The password cannot be left blank.
+  agent_user{status_id}:
+    required:
+      msg:              The status cannot be left blank.
+
+
+
+

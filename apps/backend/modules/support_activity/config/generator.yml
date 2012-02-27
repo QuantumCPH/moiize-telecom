@@ -1,0 +1,36 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      SupportActivity
+    theme:            default
+    list:
+      sort: [ticket_number, desc]
+      title: Support Activity List    
+      filters: [ticket_number, _company_name, _vat_no, employee_id]
+      display: [_list_company_name, ticket_number, employee, support_issue, created_at]
+      max_per_page: 1000
+      object_actions:
+        _edit: ~
+        view: {label: view details, action: view}
+      fields:
+        support_activity_status:
+          name: Status
+        list_company_name:
+          name: Company
+    edit:
+      title: Create/Edit Support Activity
+      display: [_edit_company_name, _employee_id, support_issue_id, comment, user_id, solution, support_activity_status_id, file_path]
+      fields:
+        file_path:
+          name:       Attachment
+          type:       admin_input_file_tag
+          params:     include_link=/ include_remove=true
+        user_id:
+          name:  Assign to
+
+        support_activity_status_id:
+          name: Status
+        edit_company_name:
+          name: Company
+        edit_employee_name:
+          name: Employee

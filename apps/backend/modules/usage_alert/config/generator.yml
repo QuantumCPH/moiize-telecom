@@ -1,0 +1,24 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      UsageAlert
+    theme:            default
+    css:             /sf/sf_admin/css/admin_main.css
+    
+    edit:
+      title: Create/Edit UsageAlert
+      display: [alert_amount, sms_alert_message, sms_active  , email_alert_message, email_active, country, sender_name, status]
+      fields:
+           #   enablecountry: {name: Country}
+             # status: {name: Status}
+             # usagealertsender: {name: name}
+    list:
+       title: 'Usage Alert'
+       display: [alert_amount, sms_alert_message, sms_active  , email_alert_message, email_active, enablecountry, sender_name, status]
+       fields:
+              enablecountry: {name: Country}
+             # status: {name: Status}
+              #usagealertsender: {name: name}
+       object_actions:
+         _delete: ~
+         _edit: ~

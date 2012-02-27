@@ -1,0 +1,15 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      InvoiceMethod
+    theme:            default
+    
+    list:
+      title: Invoice Method List
+      display: [name, cost, billingdays]
+      object_actions:
+        _edit: ~
+        _delete: ~
+    edit:
+      title: Create/Edit Invoice Method
+      display: [name, cost, billingdays]

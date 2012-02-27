@@ -1,0 +1,14 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      GlobalSetting
+    theme:            default
+    
+    list:
+     title: Global Settings
+     display: [name, value, description]
+     object_actions:
+      _edit: ~
+    edit:
+     title: Create/Edit a Global Setting
+     display: [name, value, description]

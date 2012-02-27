@@ -1,0 +1,16 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Employee
+    theme:            default
+    list:      
+      filters: [company_id, _vat_no]
+      display: [first_name, last_name, company, vat_no, mobile_number, email,app_code,is_app_registered,registration_type,password]
+      max_per_page: 1000
+      object_actions:
+        _edit: ~
+        _delete: ~
+        view: {label: view details, action:view}
+    edit:
+      title: Create/Edit Employee
+      display: [first_name, last_name, company_id, mobile_number, email,app_code,is_app_registered,registration_type,password]

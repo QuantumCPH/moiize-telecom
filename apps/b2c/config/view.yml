@@ -1,0 +1,17 @@
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:         WLS2
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  stylesheets:    [ ../sf/sf_admin/css/main.css, ../zerocall/style/style.css]
+
+  javascripts:    [../zerocall/js/jquery-1.4.2.min.js, ../zerocall/js/cufon-yui.js, ../zerocall/js/Barmeno_400-Barmeno_400.font.js, ../zerocall/js/Barmeno-Medium_400.font.js, ../zerocall/js/cufon-replace.js, ../zerocall/js/jquery.jcarousel.min.js, ../zerocall/js/carousel.js, jquery.formatCurrency-1.3.0.min.js, i18n/jquery.formatCurrency.all.js]
+
+  has_layout:     on
+  layout:         layout

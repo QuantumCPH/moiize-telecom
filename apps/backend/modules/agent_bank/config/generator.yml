@@ -1,0 +1,7 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      AgentBank
+    theme:            default
+    list:
+      display: [id, agent_company, reg_nr, account_number, created_at]

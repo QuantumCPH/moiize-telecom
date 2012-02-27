@@ -1,0 +1,17 @@
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    #title:        symfony project
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  stylesheets:    [admin.css,backend.css, /sf/calendar/skins/aqua/theme.css, /sf/sf_admin/css/admin_main.css]
+
+  #javascripts:    [/js/jquery-1.4.2.min.js,/sf/prototype/js/prototype.js,/js/ckeditor/ckeditor.js]
+  javascripts:    [/js/ckeditor/ckeditor.js]
+  has_layout:     on
+  layout:         layout

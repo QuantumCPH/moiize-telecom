@@ -1,0 +1,18 @@
+fields:
+  newupdate{message}:
+    required:
+      msg:              The message cannot be left blank.
+  newupdate{heading}:
+    required:
+      msg:              The heading cannot be left blank.
+  newupdate{starting_date}:
+    required:
+      msg:              The starting_date cannot be left blank.
+  newupdate{expire_date}:
+    required:
+      msg:              The expire date cannot be left blank.
+
+
+
+
+

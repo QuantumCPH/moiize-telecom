@@ -1,0 +1,21 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      City
+    theme:            default
+    css:             /sf/sf_admin/css/admin_main.css
+    list:
+            title: 'City'
+            display: [id, name, country]
+            fields:
+              enablecountry: {name: Country}
+              file_path:  { type: admin_input_file_tag }
+            object_actions:
+              _delete: ~
+              _edit: ~
+    edit:
+      title: 'Create/Edit City'
+      display: [id, name, country_id]
+    create:
+      title: 'Create/Edit City'
+      display: [id, name, country_id]

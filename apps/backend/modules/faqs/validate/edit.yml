@@ -1,0 +1,14 @@
+fields:
+  faqs{question}:
+    required:
+      msg:              The faqs question cannot be left blank.
+  faqs{answer}:
+    required:
+      msg:              The faqs answer cannot be left blank.
+  faqs{country_id}:
+    required:
+      msg:              The faqs country  cannot be left blank.
+  faqs{status_id}:
+    required:
+      msg:              The faqs status cannot be left blank.
+

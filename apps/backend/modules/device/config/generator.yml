@@ -1,0 +1,26 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Device
+    theme:            default
+    css:     /sf/sf_admin/css/admin_main.css
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          categories
+    with_propel_route:     1
+ 
+    list:
+      display: [id, name, manufacturer]
+      fields:
+              manufacturer: {name: Mobile brand}
+      max_per_page: 500
+      object_actions:
+              _delete: ~
+              _edit: ~
+    edit:
+      title: 'Create/Edit device'
+      display: [id, name, manufacturer_id]
+    
+      

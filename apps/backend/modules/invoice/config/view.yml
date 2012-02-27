@@ -1,0 +1,17 @@
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    #title:        symfony project
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  stylesheets:    [ui-lightness/jquery-ui-172, main.css, admin.css, /sf/calendar/skins/aqua/theme.css, /sf/sf_admin/css/main.css]
+
+  javascripts:    [jquery-1.3.2.min.js, jquery-ui-1.7.2.custom.min.js, timepicker.js, /sf/prototype/js/prototype.js]
+
+  has_layout:     on
+  layout:         layout

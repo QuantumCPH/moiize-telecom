@@ -1,0 +1,28 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      SaleActivity
+    theme:            default
+    list:
+      title: Sales Activity List  
+      filters: [company_id, ticket_number, _vat_no]
+      display: [company, vat_no, ticket_number, sale_action, comment, sale_activity_status, created_at]
+      max_per_page: 20
+      object_actions:
+        _edit: ~
+        view: {label: view details, action:view}
+      fields:
+        sale_activity_status:
+          name: Status
+    edit:
+      title: Create/Edit Sale Activity
+      display: [company_id, sale_action_id, comment, user_id, sale_activity_status_id]
+      fields:
+        file_path:
+          name:       Attachment
+          type:       admin_input_file_tag
+          params:     include_link=/ include_remove=true
+        user_id:
+          name:  Assign to
+        sale_activity_status_id:
+          name: Status

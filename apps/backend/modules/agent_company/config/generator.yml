@@ -1,0 +1,31 @@
+generator:
+  class:              sfPropelAdminGenerator
+  
+  param:
+    model_class:      AgentCompany
+    with_wildcard_routes: true
+    theme:            default
+    non_verbose_templates: true
+    with_propel_route:     1
+    css:  /sf/sf_admin/css/admin_main.css
+    edit:
+      title: Create/Edit AgentCompany
+      display: [name, cvr_number,ean_number,address,post_code,country_id,cityname,contact_name,email, mobile_number,head_phone_number,fax_number,website,status_id,company_type_id,account_manager_id,agent_commission_package_id,sms_code,is_prepaid,balance,invoice_method_id]
+      fields:
+         enablecountry: {name: Country}
+         cvr_number: {name: Vat Number}
+
+    list:
+         
+      title: Agent Company
+      display: [id, name, cvr_number, contact_name, head_phone_number, status ,enablecountry, registration_revenue_commissision ,refill_revenue_commissision,revenue_at_shop, registration_revenue,refill_revenue,revenue_at_shop,sms_code,invoice_method]
+      filters: [id, name, cvr_number]
+      fields:
+       cvr_number: {name: Vat Number}
+       enablecountry: {name: Country}
+       invoice_method_id: {name: Invoice Method}
+      max_per_page: 500
+      object_actions:
+        _edit: ~
+        _delete: ~
+      #  viewDetail : {label: view details, action: view}

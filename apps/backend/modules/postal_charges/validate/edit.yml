@@ -1,0 +1,7 @@
+fields:
+  postal_charges{charges}:
+    required:
+      msg:              The postal charges charges cannot be left blank.
+  postal_charges{country}:
+    required:
+      msg:              The postal charges country  cannot be left blank.

@@ -1,0 +1,9 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Customer
+    theme:            default
+
+    list:
+      max_per_page:   500
+      display: [id,first_name, last_name, city, po_box_number, mobile_number, email, created_at, address, fonet_customer_id, balance, referrer_id, telecom_operator, date_of_birth, auto_refill]

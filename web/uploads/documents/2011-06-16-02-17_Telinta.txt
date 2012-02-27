@@ -1,0 +1,58 @@
+https://mybilling.telinta.com/htdocs/zapna/zapna.pl$telintaRegisterCus = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?reseller=Test_Account&action=add&name='.$mobile.'&currency=UAH&opening_balance=-'.$OpeningBalance.'&credit_limit=10&email='.$emailId.'&type=customer');
+              $telintaAddAccountA = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?customer=a'.$mobile.'&action=add&name=0201602&opening_balance=-'.$OpeningBalance.'&credit_limit=20&type=account&billing_model=1');
+              $telintaAddAccountCb = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?customer=cb'.$mobile.'&action=add&name=0201602&opening_balance=-'.$OpeningBalance.'&credit_limit=20&type=account&billing_model=1');
+              $telintaAddAccountCb = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?reseller=Test_Account&action=update&name='.$mobile.'&credit_limit=15&type=customer');
+
+            https://mybilling.telinta.com/htdocs/zapna/zapna.pl?reseller=rrr&action=add&name=4520717787&currency=UAH&opening_balance=-5&credit_limit=10&email=denis@telinta.com&type=customer
+
+
+
+
+
+https://mybilling.telinta.com/htdocs/zapna/zapna.pl?type=account&action=activate&name=467007113028&customer=467007113028opening_balance=10&password=wegod5te
+
+
+
+$telintaRegisterCus = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?reseller=Test_Account&action=add&name='.$mobile.'&currency=SEK&opening_balance=-'.$OpeningBalance.'&credit_limit=10&email='.$emailId.'&type=customer');       
+
+         $telintaAddAccount = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?type=account&action=activate&name='.$mobile.'&customer='.$mobile.'&opening_balance=-10&password=wegod5te');
+         $telintaAddAccountA = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?type=account&action=activate&name=a'.$mobile.'&customer='.$mobile.'&opening_balance=-10&password=wegod5te');
+         $telintaAddAccountCB = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?type=account&action=activate&name=cb'.$mobile.'&customer='.$mobile.'&opening_balance=-10&password=wegod5te');
+         
+
+          //$telintaAddAccountCb = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?reseller=Test_Account&customer=cb'.$mobile.'&action=add&name=0201602&opening_balance=-'.$OpeningBalance.'&credit_limit=20&type=account&billing_model=1');
+         // $telintaAddAccountCb = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?reseller=Test_Account&action=update&name='.$mobile.'&credit_limit=15&type=customer');
+
+
+
+ $mobile = '463214745121';
+        $emailId = 'ahtshamzerocall@hotmail.com';
+        $OpeningBalance = '49';
+
+         $telintaRegisterCus = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?reseller=Test_Account&action=add&name='.$mobile.'&currency=SEK&opening_balance=-'.$OpeningBalance.'&credit_limit=10&email='.$emailId.'&type=customer');       
+         $telintaAddAccount = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?type=account&action=activate&name='.$mobile.'&customer='.$mobile.'&opening_balance=-10&password=wegod5te');
+         $telintaAddAccountA = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?type=account&action=activate&name=a'.$mobile.'&customer='.$mobile.'&opening_balance=-10&password=wegod5te');
+         $telintaAddAccountCB = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?type=account&action=activate&name=cb'.$mobile.'&customer='.$mobile.'&opening_balance=-10&password=wegod5te');
+         
+
+          //$telintaAddAccountCb = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?reseller=Test_Account&customer=cb'.$mobile.'&action=add&name=0201602&opening_balance=-'.$OpeningBalance.'&credit_limit=20&type=account&billing_model=1');
+         // $telintaAddAccountCb = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?reseller=Test_Account&action=update&name='.$mobile.'&credit_limit=15&type=customer');
+
+        echo $telintaRegisterCus.'ss';
+
+
+
+		$mobile = $country->getCallingCode().$this->customer->getMobileNumber();
+
+              $emailId = $this->customer->getEmail();
+              $OpeningBalance = $order->getExtraRefill();
+
+              //Section For Telinta Add Cusomter / Add Account 
+              $telintaRegisterCus = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?reseller=Test_Account&action=add&name='.$mobile.'&currency=SEK&opening_balance=-'.$OpeningBalance.'&credit_limit=10&email='.$emailId.'&type=customer');
+              $telintaAddAccount = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?type=account&action=activate&name='.$mobile.'&customer='.$mobile.'&opening_balance=-10&password=wegod5te');
+              $telintaAddAccountA = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?type=account&action=activate&name=a'.$mobile.'&customer='.$mobile.'&opening_balance=-10&password=wegod5te');
+              $telintaAddAccountCB = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?type=account&action=activate&name=cb'.$mobile.'&customer='.$mobile.'&opening_balance=-10&password=wegod5te');
+        
+
+
+echo $telintaGetBalance = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?action=update&name=463334279223&follow_me_number=0046850254915&type=account');

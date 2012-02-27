@@ -1,0 +1,8 @@
+fields:
+  usage_alert_sender{name}:
+    required:
+      msg:              The name cannot be left blank.
+  usage_alert_sender{status}:
+    required:
+      msg:              The status cannot be left blank.
+

@@ -1,0 +1,26 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Userguide
+    theme:            admin
+    css:             /sf/sf_admin/css/admin_main.css
+    list:
+      title: 'User Guide'
+      display: [id, title, description, enablecountry, status]
+
+      fields:
+        enablecountry: {name: Country}
+ 
+
+      object_actions:
+        _delete: ~
+        _edit: ~
+    edit:
+      title: 'Create/Edit User Guide'
+      display: [id, title, description, country_id, status_id,image]
+      fields:
+         description: {class: ckeditor}
+         image:
+          name:       User Guide image
+          type:       admin_input_file_tag
+          params:     include_link=/ include_remove=true

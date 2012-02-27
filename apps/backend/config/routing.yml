@@ -1,0 +1,49 @@
+global_setting:
+  class: sfPropelRouteCollection
+  options:
+    model:                GlobalSetting
+    module:               global_setting
+    prefix_path:          global_setting
+    column:               id
+    with_wildcard_routes: true
+
+#ADMIN PANAL FOR USER
+admin_info:
+  url: /fonetAmin/info
+  param: {module: fonet_amin , action: fonetInfo}
+
+admin_recharge:
+  url: /fonetAmin/recharge
+  param: {module: fonet_amin, action: recharge}
+
+admin_activate:
+  url: /fonetAmin/activate
+  param: {module: fonet_amin, action: activate}
+  
+admin_deactivate:
+  url: /fonetAmin/delete
+  param: {module: fonet_amin, action: delete}
+
+admin :
+  url: /fonet
+  param: {module: fonet_amin, action: fonet}
+
+register:
+  url: /zerocall/registercustomer
+  param: {module: customer, action: register}
+
+unregister:
+  url: /zerocall/unregistercustomer
+  param: {module: customer, action: unRegister}
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
+
+# default rules
+homepage:
+  url:   /
+  param: { module: user, action: index }

@@ -1,0 +1,13 @@
+fields:
+  usage_alert{alert_amount}:
+    required:
+      msg:              The alert amount cannot be left blank.
+  usage_alert{sms_alert_message}:
+    required:
+      msg:              The sms alert message cannot be left blank.
+  usage_alert{email_alert_message}:
+    required:
+      msg:              The email alert message cannot be left blank.
+  usage_alert{sender_name}:
+    required:
+      msg:              The sender name balance cannot be left blank.

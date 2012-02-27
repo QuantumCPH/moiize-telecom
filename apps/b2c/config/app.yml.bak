@@ -1,0 +1,32 @@
+# default values
+#all:
+
+all:
+ epay:
+   merchant_number: 8884184
+   currency: 208
+   instant_capture: 0
+   auth_email: geniussadi@hotmail.com
+   #relay_script_url: 'https://relay.ditonlinebetalingssystem.dk/relay/v2/relay.cgi/'
+   relay_script_url: ''
+ email:
+   smtp_host: asmtp.aspecthosting.net
+   smtp_port: 10025
+   smtp_username: csi10201
+   smtp_password: zap6723an
+   sender:
+     name: Zer0Call Support
+     email: no-reply@zerocall.com
+ status:
+   new: 1
+   verifying: 2
+   completed: 3
+   cancelled: 4
+   error: 5
+ ssl:
+  ignore_non_secure: false
+  secure_actions:
+   - { module: customer, action: signup}
+   - { module: payments,  action: signup}
+   - { module: payments,  action: accept}
+   - { module: payments,  action: reject}

@@ -1,0 +1,35 @@
+#   default rules
+reciepts:
+  url: /affiliate/receipts
+  param: { module: affiliate, action: receipts }
+
+homepage:
+  url:   /
+  param: { module: affiliate, action: report }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
+  
+customer_registration_step1:
+  url: /affiliate/registerCustomer/step1
+  param: { module: affiliate, action: registerCustomer }
+
+customer_registration_step2:
+  url: /affiliate/setProductDetails
+  param: { module: affiliate, action: setProductDetails }
+
+customer_registration_step3:
+  url: /affiliate/setProductDetailsc
+  param: { module: affiliate, action: setProductDetailsc }
+
+customer_registraion_complete:
+  url: /affiliate/completeCustomerRegistration
+  param: { module: affiliate, action: completeCustomerRegistration }
+
+customer_registraion_completeconversion:
+  url: /affiliate/completeCustomerRegistrationconversion
+  param: { module: affiliate, action: completeCustomerRegistrationconversion }

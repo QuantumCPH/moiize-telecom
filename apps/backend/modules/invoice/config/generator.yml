@@ -1,0 +1,19 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Invoice
+    theme:            default
+    list:
+      sort:  [invoice_status_id, [created_at, desc]]
+      display:  [created_at, Company, _list_total_payment, invoice_status, _list_billing_starting_date, _list_billing_ending_date, due_date, _get_pdf]
+      filters : [company_id, _vat_no, invoice_status_id, billing_starting_date, billing_ending_date]
+      max_per_page: 20
+      object_actions:
+        _delete: ~
+      fields:
+        list_total_payment:
+          name: Total Payment
+        list_billing_starting_date:
+          name: Billing Starting date
+        list_billing_ending_date:
+          name: Billing Ending date

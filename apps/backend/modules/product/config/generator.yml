@@ -1,0 +1,31 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Product
+    theme:            default
+    css:             /sf/sf_admin/css/admin_main.css
+    edit:
+      title: Create/Edit Product
+      display: [name, price,registration_fee, description, initial_balance , include_in_zerocall, is_in_store, country_id,sms_code, product_order]
+      fields:
+              enablecountry: {name: Country}
+              include_in_zerocall: {name: Customer Module}
+              is_in_store: {name: Agent Module}
+              is_reg_share_value_pc: {name: Is Reg. share value %}
+              is_extra_payments_share_value_pc: {name: Is extra refill share value %}
+    list:
+      display: [name,  price,registration_fee, total_amount, description, initial_balance  , include_in_zerocall, is_in_store, enablecountry, sms_code, product_order]
+      fields:
+              enablecountry: {name: Country}
+              include_in_zerocall: {name: Customer Module}
+              is_in_store: {name: Agent Module}
+      max_per_page: 100
+      object_actions:
+        _edit: ~
+        _delete: ~
+
+    fields:
+      name:     { name: Product Name }
+      refill_options:   { help: Refill Amount Must be Comma Separate }
+      is_reg_share_value_pc: {name: Is Reg. share value %}
+      is_extra_payments_share_value_pc: {name: Is extra refill share value %}

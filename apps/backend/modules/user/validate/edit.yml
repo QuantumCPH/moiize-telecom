@@ -1,0 +1,16 @@
+fields:
+  user{name}:
+    required:
+      msg:              The user name cannot be left blank.
+  user{email}:
+    required:
+      msg:              The user email cannot be left blank.
+    sfEmailValidator:
+      msg:              Please Enter a valid email.
+  user{password}:
+    required:
+      msg:              The user password cannot be left blank.
+  user{role_id}:
+    required:
+      msg:              The user role cannot be left blank.
+

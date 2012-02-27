@@ -1,0 +1,5 @@
+fields:
+  telecom_operator{name}:
+    required:
+      msg:              The telecom operator name cannot be left blank.
+      

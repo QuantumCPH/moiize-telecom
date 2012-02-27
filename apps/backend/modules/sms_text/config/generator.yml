@@ -1,0 +1,14 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      SmsText
+    theme:            default
+    css:             /sf/sf_admin/css/admin_main.css
+    list:
+      display: [text_heading,  for_text, message_text]
+      max_per_page: 1000
+      object_actions:
+        _edit: ~
+    edit:
+      display: [text_heading, for_text, message_text]
+     

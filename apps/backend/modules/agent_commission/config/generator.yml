@@ -1,0 +1,12 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      AgentCommission
+    theme:            default
+    list:
+      display: [id, agent_company, revenue_interval, commission_rate, created_at]
+      object_actions:
+        _edit: ~
+        _delete: ~
+
+   

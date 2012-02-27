@@ -1,0 +1,20 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      ProductOrder
+    theme:            default
+    edit:
+      title: Create/Edit Product Order
+      display: [product_id, company_id, quantity, discount]
+    list:
+      sort: [created_at, desc]
+      title: Product Order List
+      filters: [company_id]
+      display: [product, company, quantity, discount, created_at]
+      max_per_page: 20
+      object_actions:
+        _edit: ~
+        _delete: ~
+      fields:
+        created_at:
+          name: Ordered at

@@ -1,0 +1,10 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      CompanyTransaction
+    theme:            default
+    list:
+      filters: [company_id, transaction_status_id ]
+      display: [created_at, company, amount, description]
+    
+     

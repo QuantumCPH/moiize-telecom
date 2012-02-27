@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Untitled Document</title>
+<style type="text/css">
+  .invoice
+  {
+  	font-family: verdana, "Courier New", Courier, mono;
+	font-size:.8em;
+  }
+  
+  .invoice .call_summary
+  {
+	margin-top: 10px;
+  }
+  
+  .summary_header
+  {
+    background: #c0c0c0;
+  }
+  
+  .group_header
+  {
+  	background: #f0f0f0;
+	}
+	
+	.group_subheader td.first
+	{
+		text-indent: 10px;
+	}
+	
+	.group_data td.first
+	{
+		text-indent: 20px;
+	}
+</style>
+</head>
+<body>
+	<table class='invoice' width="100%">
+		<tr>
+			<td valign="top">Company name<br>
+			  Address house number floor<br>
+			  Po box City<br>
+		    Att: Contact name</td>
+			<td>Zapna Aps<br>
+			  Bryggervangen 19, 2<br>
+			  2100 K&oslash;benhavn &Oslash;<br>
+			  Tel: +45 7027 9966<br>
+			  Fax: +45 7027 9965<br>
+			  Cvr: 32068219<br>
+			  Bank: Danske Bank<br>
+			  Reg: 3001<br>
+		    Account: 0010408563</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+				<table class="invoice_meta">
+					<tr>
+						<td colspan="2">Invoice</td>
+					</tr>
+					<tr>
+						<td>Invoice #</td>
+						<td>val</td>
+					</tr>
+					<tr>
+						<td>Invoice Period</td>
+						<td>f2</td>
+					</tr>
+					<tr>
+						<td>Invoice Date </td>
+						<td>f2</td>
+					</tr>
+					<tr>
+						<td>Payment Date </td>
+						<td>f2</td>
+					</tr>
+					<tr>
+						<td>Customer # </td>
+						<td>f2</td>
+					</tr>
+				</table> <!-- end invoice meta -->
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table class="call_summary" width="100%" cellspacing="0">
+					<tr class="summary_header">
+						<td>Product Description</td>
+						<td>Total minutes</td>
+						<td>Usage (Kr.)</td>
+						<td>Total Usage (Kr.)</td>
+					</tr>
+					<tr>
+						<td colspan="4">&nbsp;
+						
+						</td>
+						<tr class="group_header">
+							<td>123456 - User phone number</td>
+							<td>x - total minutes called</td>
+							<td>&nbsp;</td>
+							<td>x - total usage called</td>
+						</tr>
+						<tr class="group_subheader">
+							<td class="first">shaheedulhaq sadi - username</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+						<!--loop group data-->
+						<tr class="group_data">
+							<td class="first">IRELAND</td>
+							<td>x</td>
+							<td>x</td>
+							<td>&nbsp;</td>
+						</tr>
+						<!-- end group data -->
+					</tr>
+					<tr>
+						<td colspan="3">Total</td>
+						<td>x</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

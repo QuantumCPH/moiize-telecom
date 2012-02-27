@@ -1,0 +1,7 @@
+<?php
+	if(fopen('http://zerocall.com/b2c/b2c_dev.php/pScripts/sendEmails', 'r'))
+		echo 'email batch is processed.';
+
+	if(fopen('http://test.zerocall.com/b2c/b2c_dev.php/pScripts/sendEmails', 'r'))
+		echo 'test email batch is processed.';
+?>

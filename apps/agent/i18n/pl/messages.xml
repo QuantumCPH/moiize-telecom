@@ -1,0 +1,956 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file source-language="EN" target-language="pl" datatype="plaintext" original="messages" date="2010-07-22T17:23:11Z" product-name="messages" xml:space="default">
+    <header/>
+    <body>
+      <trans-unit id="2" translate="yes" reformat="yes" xml:space="default">
+        <source>Dashboard</source>
+        <target>Dashboard</target>
+      </trans-unit>
+      <trans-unit id="3" translate="yes" reformat="yes" xml:space="default">
+        <source>Next</source>
+        <target>Następna</target>
+      </trans-unit>
+      <trans-unit id="7" translate="yes" reformat="yes" xml:space="default">
+        <source>amount error</source>
+        <target>błąd kwoty</target>
+      </trans-unit>
+      <trans-unit id="8" translate="yes" reformat="yes" xml:space="default">
+        <source>Card number should be 16 characters long.</source>
+        <target>Numer karty powinien być 16 znaków.</target>
+      </trans-unit>
+      <trans-unit id="9" translate="yes" reformat="yes" xml:space="default">
+        <source>Please enter valid CVC code</source>
+        <target>Podaj prawidłowy kod CVC</target>
+      </trans-unit>
+      <trans-unit id="10" translate="yes" reformat="yes" xml:space="default">
+        <source>Pay</source>
+        <target>Płatna</target>
+      </trans-unit>
+      <trans-unit id="11" translate="yes" reformat="yes" xml:space="default">
+        <source>Step 1</source>
+        <target>Krok 1</target>
+      </trans-unit>
+      <trans-unit id="12" translate="yes" reformat="yes" xml:space="default">
+        <source>Register</source>
+        <target>Zarejestruj się</target>
+      </trans-unit>
+      <trans-unit id="13" translate="yes" reformat="yes" xml:space="default">
+        <source>Enter you mobil number and add your contact info.</source>
+        <target>Wejdz mobil numeru i dodaj swoje informacje kontaktowe.</target>
+      </trans-unit>
+      <trans-unit id="14" translate="yes" reformat="yes" xml:space="default">
+        <source>Step 2</source>
+        <target>Krok 2</target>
+      </trans-unit>
+      <trans-unit id="15" translate="yes" reformat="yes" xml:space="default">
+        <source>Payment</source>
+        <target>Płatność</target>
+      </trans-unit>
+      <trans-unit id="16" translate="yes" reformat="yes" xml:space="default">
+        <source>Select the refill amount and make the payment by credit card</source>
+        <target>Wybierz ilość napełniania i dokonać płatności kartą kredytową</target>
+      </trans-unit>
+      <trans-unit id="18" translate="yes" reformat="yes" xml:space="default">
+        <source>Start Calling</source>
+        <target>Zadzwoń</target>
+      </trans-unit>
+      <trans-unit id="19" translate="yes" reformat="yes" xml:space="default">
+        <source>You can get free calls worldwide</source>
+        <target>Możesz pobrać darmowe rozmowy na całym świecie</target>
+      </trans-unit>
+      <trans-unit id="20" translate="yes" reformat="yes" xml:space="default">
+        <source>Support</source>
+        <target>Wsparcie</target>
+      </trans-unit>
+      <trans-unit id="21" translate="yes" reformat="yes" xml:space="default">
+        <source>Questions</source>
+        <target>Pytania</target>
+      </trans-unit>
+      <trans-unit id="22" translate="yes" reformat="yes" xml:space="default">
+        <source>Get instant answers from our customer support from 10.00 - 15.00</source>
+        <target>Błyskawiczny odpowiedzi od obsługi klienta od 10.00 - 15.00</target>
+      </trans-unit>
+      <trans-unit id="24" translate="yes" reformat="yes" xml:space="default">
+        <source>Total amount</source>
+        <target>Łączna kwota</target>
+      </trans-unit>
+      <trans-unit id="25" translate="yes" reformat="yes" xml:space="default">
+        <source>Please enter your credit informations below:</source>
+        <target>Proszę podać informacje na kredyt poniżej:</target>
+      </trans-unit>
+      <trans-unit id="26" translate="yes" reformat="yes" xml:space="default">
+        <source>Step 3</source>
+        <target>Krok 3</target>
+      </trans-unit>
+      <trans-unit id="35" translate="yes" reformat="yes" xml:space="default">
+        <source>Password</source>
+        <target>Hasło</target>
+      </trans-unit>
+      <trans-unit id="37" translate="yes" reformat="yes" xml:space="default">
+        <source>Email</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="44" translate="yes" reformat="yes" xml:space="default">
+        <source>Become a Customer</source>
+        <target>Zostań klientem</target>
+      </trans-unit>
+      <trans-unit id="52" translate="yes" reformat="yes" xml:space="default">
+        <source>Payment Confirmation</source>
+        <target>Betaling Bekræftelse</target>
+      </trans-unit>
+      <trans-unit id="53" translate="yes" reformat="yes" xml:space="default">
+        <source>Thank you for purchasing zer0call %1% package, you will receive package in few days. For any questions please feel free to contact us at</source>
+        <target>Tak for dit køb zer0call %1% pakke, vil du modtage pakken på få dage. For eventuelle spørgsmål er du velkommen til at kontakte os på</target>
+      </trans-unit>
+      <trans-unit id="54" translate="yes" reformat="yes" xml:space="default">
+        <source>Payment is unfortunately not accepted because your information is incorrect, please try again by entering correct credit card information</source>
+        <target>Betaling er desværre ikke godkendt, da dine informationer ikke er korrekt, prøv igen</target>
+      </trans-unit>
+      <trans-unit id="55" translate="yes" reformat="yes" xml:space="default">
+        <source>Payment details</source>
+        <target>Betaling detaljer</target>
+      </trans-unit>
+      <trans-unit id="58" translate="yes" reformat="yes" xml:space="default">
+        <source>Quantity</source>
+        <target>Ilość</target>
+      </trans-unit>
+      <trans-unit id="61" translate="yes" reformat="yes" xml:space="default">
+        <source>Login</source>
+        <target>Zaloguj się</target>
+      </trans-unit>
+      <trans-unit id="62" translate="yes" reformat="yes" xml:space="default">
+        <source>Login</source>
+        <target>Zaloguj się</target>
+      </trans-unit>
+      <trans-unit id="63" translate="yes" reformat="yes" xml:space="default">
+        <source>Email confirmation is not sent</source>
+        <target>Email bekræftelse blev ikke afsendt</target>
+      </trans-unit>
+      <trans-unit id="65" translate="yes" reformat="yes" xml:space="default">
+        <source>Hi</source>
+        <target>Hej</target>
+      </trans-unit>
+      <trans-unit id="66" translate="yes" reformat="yes" xml:space="default">
+        <source>Your password has been changed. Please use the following information to login to your zer0call account.</source>
+        <target>Twoje hasło zostało zmienione. Proszę skorzystać z poniższych informacji do logowania na konto zer0call.</target>
+      </trans-unit>
+      <trans-unit id="67" translate="yes" reformat="yes" xml:space="default">
+        <source>Password Request</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="68" translate="yes" reformat="yes" xml:space="default">
+        <source>Call History</source>
+        <target>Opkaldsdetaljer</target>
+      </trans-unit>
+      <trans-unit id="69" translate="yes" reformat="yes" xml:space="default">
+        <source>Call history is updated after every 5-10 minutes.</source>
+        <target>Historia połączeń jest aktualizowany po co 5-10 minut.</target>
+      </trans-unit>
+      <trans-unit id="70" translate="yes" reformat="yes" xml:space="default">
+        <source>Date &amp;amp; time</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="71" translate="yes" reformat="yes" xml:space="default">
+        <source>Phone Number</source>
+       <target>numer telefonu</target>
+      </trans-unit>
+      <trans-unit id="72" translate="yes" reformat="yes" xml:space="default">
+        <source>Duration</source>
+        <target>Varighed</target>
+      </trans-unit>
+      <trans-unit id="73" translate="yes" reformat="yes" xml:space="default">
+        <source>Cost &lt;small&gt;(Ex. VAT)&lt;/small&gt;</source>
+        <target>kosztów (Ekskl. moms)</target>
+      </trans-unit>
+      <trans-unit id="74" translate="yes" reformat="yes" xml:space="default">
+        <source>Cost &lt;small&gt;(Incl. VAT)&lt;/small&gt;</source>
+        <target>kosztów (Incl. VAT)</target>
+      </trans-unit>
+      <trans-unit id="75" translate="yes" reformat="yes" xml:space="default">
+        <source>There are currently no call records to show.</source>
+        <target>Obecnie nie ma zapisy połączeń, aby wyświetlić</target>
+      </trans-unit>
+      <trans-unit id="76" translate="yes" reformat="yes" xml:space="default">
+        <source>Login to your account</source>
+        <target>Log ind til din konto</target>
+      </trans-unit>
+      <trans-unit id="77" translate="yes" reformat="yes" xml:space="default">
+        <source>Member Log in</source>
+        <target>Zaloguj państwa w</target>
+      </trans-unit>
+      <trans-unit id="78" translate="yes" reformat="yes" xml:space="default">
+        <source>Log in</source>
+        <target>Zaloguj się</target>
+      </trans-unit>
+      <trans-unit id="79" translate="yes" reformat="yes" xml:space="default">
+        <source>Forgot password?</source>
+        <target>Zapomniałem hasła</target>
+      </trans-unit>
+      <trans-unit id="80" translate="yes" reformat="yes" xml:space="default">
+        <source>Write e-mail address you used for registration.&lt;br /&gt;Your password will be sent to you via this email.</source>
+        <target>Napisz adres e-mail podany przy rejestracji /&gt; Twoje hasło zostanie wysłane do Ciebie przez tę wiadomość.</target>
+      </trans-unit>
+      <trans-unit id="81" translate="yes" reformat="yes" xml:space="default">
+        <source>Payment History</source>
+        <target>Historia płatności</target>
+      </trans-unit>
+      <trans-unit id="83" translate="yes" reformat="yes" xml:space="default">
+        <source>Date &amp;amp; Time</source>
+        <target>Dato &amp;amp; Tid</target>
+      </trans-unit>
+      <trans-unit id="84" translate="yes" reformat="yes" xml:space="default">
+        <source>Description</source>
+        <target>Opis</target>
+      </trans-unit>
+      <trans-unit id="85" translate="yes" reformat="yes" xml:space="default">
+        <source>Amount</source>
+        <target>kwoty</target>
+      </trans-unit>
+      <trans-unit id="86" translate="yes" reformat="yes" xml:space="default">
+        <source>Type</source>
+        <target>Typ</target>
+      </trans-unit>
+      <trans-unit id="87" translate="yes" reformat="yes" xml:space="default">
+        <source>Paid</source>
+        <target>Płatny</target>
+      </trans-unit>
+      <trans-unit id="88" translate="yes" reformat="yes" xml:space="default">
+        <source>Refund</source>
+        <target>Zwrot</target>
+      </trans-unit>
+      <trans-unit id="89" translate="yes" reformat="yes" xml:space="default">
+        <source>There are currently no transactions to show.</source>
+        <target>Obecnie nie ma transakcji, aby pokazać</target>
+      </trans-unit>
+      <trans-unit id="90" translate="yes" reformat="yes" xml:space="default">
+        <source>Refill</source>
+        <target>Napełniać</target>
+      </trans-unit>
+      <trans-unit id="91" translate="yes" reformat="yes" xml:space="default">
+        <source>Settings</source>
+        <target>Ustawienia</target>
+      </trans-unit>
+      <trans-unit id="92" translate="yes" reformat="yes" xml:space="default">
+        <source>Close window</source>
+        <target>Zamknij okno</target>
+      </trans-unit>
+      <trans-unit id="93" translate="yes" reformat="yes" xml:space="default">
+        <source>Email/password don't exist.</source>
+        <target>E-mail i hasło nie istnieje</target>
+      </trans-unit>
+      <trans-unit id="94" translate="yes" reformat="yes" xml:space="default">
+        <source>Unable to perform your request, make sure your email address exists.</source>
+        <target>nable wykonać żądania, upewnij się, że adres e-mail istnieje</target>
+      </trans-unit>
+      <trans-unit id="95" translate="yes" reformat="yes" xml:space="default">
+        <source>Password is sent to your email address.</source>
+        <target>nablePassword zostanie wysłana na Twój adres e-mail</target>
+      </trans-unit>
+      <trans-unit id="96" translate="yes" reformat="yes" xml:space="default">
+        <source>dashboard</source>
+        <target>Dashboard</target>
+      </trans-unit>
+      <trans-unit id="97" translate="yes" reformat="yes" xml:space="default">
+        <source>refil</source>
+        <target>Napełniać</target>
+      </trans-unit>
+      <trans-unit id="98" translate="yes" reformat="yes" xml:space="default">
+        <source>call history</source>
+        <target>historii połączeń</target>
+      </trans-unit>
+      <trans-unit id="99" translate="yes" reformat="yes" xml:space="default">
+        <source>payment history</source>
+        <target>Historia płatności</target>
+      </trans-unit>
+      <trans-unit id="100" translate="yes" reformat="yes" xml:space="default">
+        <source>settings</source>
+        <target>Opsætninger</target>
+      </trans-unit>
+      <trans-unit id="102" translate="yes" reformat="yes" xml:space="default">
+        <source>Quanity must be 1 or more</source>
+        <target>Mængden skal være 1 eller større</target>
+      </trans-unit>
+      <trans-unit id="103" translate="yes" reformat="yes" xml:space="default">
+        <source>Dear Customer</source>
+        <target>Kære kunde</target>
+      </trans-unit>
+      <trans-unit id="107" translate="yes" reformat="yes" xml:space="default">
+        <source>Order Receipt</source>
+        <target>Potwierdzenie zamówienia</target>
+      </trans-unit>
+      <trans-unit id="108" translate="yes" reformat="yes" xml:space="default">
+        <source>Date</source>
+        <target>Dato</target>
+      </trans-unit>
+      <trans-unit id="109" translate="yes" reformat="yes" xml:space="default">
+        <source>Subtotal</source>
+        <target>Razem</target>
+      </trans-unit>
+      <trans-unit id="110" translate="yes" reformat="yes" xml:space="default">
+        <source>Total</source>
+        <target>Total</target>
+      </trans-unit>
+      <trans-unit id="113">
+        <source>Payment is unfortunately not accepted because your &#13;
+    				information is incorrect, please try again by entering &#13;
+    				correct credit card information</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="114">
+        <source>Order Numer</source>
+        <target>Numer zamówienia</target>
+      </trans-unit>
+      <trans-unit id="115">
+        <source>Gem</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="116">
+        <source>Velkommen</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="117">
+        <source>Bliv kunde</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="118">
+        <source>Thank you for ordering &lt;b&gt;%1%&lt;/b&gt; and becoming LandNCall AB Customer. We welcome you to a new and huge mobile world.</source>
+        <target>Dziękujemy za zamówienie ZerOcall Global i stanie się klientem ZerOcall. Wstępujesz do nowego, ogromnego świata telefonii komórkowej.</target>
+      </trans-unit>
+      <trans-unit id="119">
+        <source>With &lt;b&gt;%1%&lt;/b&gt;, you can easily call your friends and family for free.</source>
+        <target>w łatwy sposób możesz się skontaktować z rodziną i przyjaciółmi za darmo.</target>
+      </trans-unit>
+      <trans-unit id="120">
+        <source>Below is the receipt of the product indicated.</source>
+        <target>Poniżej znajduję się faktura zamówionego produktu.</target>
+      </trans-unit>
+      <trans-unit id="121">
+        <source>Mobile Number</source>
+        <target>Liczba Mobil</target>
+      </trans-unit>
+      <trans-unit id="122">
+        <source>You will receive your package within %1%.</source>
+        <target>Do %1% dni roboczych otrzymasz paczkę.</target>
+      </trans-unit>
+      <trans-unit id="123">
+        <source>If you have any questions please feel free to contact our customer support center at </source>
+        <target> W razie pytań prosimy o skontakowanie się z naszym działem obsługi klienta poprzez</target>
+      </trans-unit>
+      <trans-unit id="124">
+        <source>Cheers</source>
+        <target>Dziękujemy</target>
+      </trans-unit>
+      <trans-unit id="125">
+        <source>&#13;
+		  						You mobile number is already registered with ZerOCall.&#13;
+		  					</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="126">
+        <source>Product  purchase &amp; refill, via voucher</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="127">
+        <source>&#13;
+			  			You have been registered to ZerOcall.</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="128">
+        <source>Invalid pin code.</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="129">
+        <source>&#13;
+		  						Your mobile number is not registered with ZerOCall.&#13;
+		  					</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="130">
+        <source>Product  refill, via voucher</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="131">
+        <source>&#13;
+			  			You account has been topped up.</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="132">
+        <source>Product  purchase, via voucher</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="133">
+        <source>Mobile number</source>
+        <target>Numer telefonu komórkowego</target>
+      </trans-unit>
+	   <trans-unit id="134">
+        <source>About Jobeet</source>
+        <target>A propos de Jobeet</target>
+      </trans-unit>
+	  <trans-unit id="135" translate="yes" reformat="yes" xml:space="default">
+        <source>I accept all terms and conditions</source>
+        <target>Akceptuję wszystkie warunki</target>
+      </trans-unit>
+	  <trans-unit id="136" translate="yes" reformat="yes" xml:space="default">
+        <source>Yes, subscribe me to newsletter</source>
+        <target>Tak, zapisz mnie do newslettera</target>
+      </trans-unit>
+	  <trans-unit id="137">
+	 <source>Retype password</source>
+	 <target>Powtórz hasło</target>
+	</trans-unit>
+	<trans-unit id="138">
+	 <source>Please accept the terms and conditions</source>
+	 <target>Proszę przyjąć warunków</target>
+	</trans-unit>
+	 <trans-unit id="139" translate="yes" reformat="yes" xml:space="default">
+        <source>Your account balance is</source>
+        <target>Saldo konta jest</target>
+      </trans-unit>
+	  <trans-unit id="140" translate="yes" reformat="yes" xml:space="default">
+        <source>Welcome</source>
+        <target>mile widziane</target>
+      </trans-unit>
+	  <trans-unit id="141" translate="yes" reformat="yes" xml:space="default">
+        <source>There are currently no SMS records to show.</source>
+        <target>Obecnie nie ma zapisów SMS, aby pokazać.</target>
+      </trans-unit>
+	  <trans-unit id="142" translate="yes" reformat="yes" xml:space="default">
+        <source>Account</source>
+        <target>konto</target>
+      </trans-unit>
+	   <trans-unit id="143" translate="yes" reformat="yes" xml:space="default">
+        <source>First name</source>
+        <target>Imię</target>
+      </trans-unit>
+	   <trans-unit id="144" translate="yes" reformat="yes" xml:space="default">
+        <source>SMS history is updated after every 5-10 minutes.</source>
+        <target>Historia SMS jest aktualizowana po co 5-10 minut.</target>
+      </trans-unit>
+	   <trans-unit id="145" translate="yes" reformat="yes" xml:space="default">
+        <source>My Account</source>
+        <target>Moje konto</target>
+      </trans-unit>
+	  <trans-unit id="146" translate="yes" reformat="yes" xml:space="default">
+        <source>Logout</source>
+        <target>Wyloguj się</target>
+      </trans-unit>
+	  <trans-unit id="147" translate="yes" reformat="yes" xml:space="default">
+        <source>Invaild mobile number or password.</source>
+        <target>Invaild numer telefonu komórkowego lub hasło.</target>
+      </trans-unit>
+      <trans-unit id="148" translate="yes" reformat="yes" xml:space="default">
+        <source>Send SMS worldwide at the best prices per market.</source>
+        <target>Wyślij SMS na całym świecie w najlepszych cenach na rynku.</target>
+      </trans-unit>
+      <trans-unit id="149" translate="yes" reformat="yes" xml:space="default">
+        <source>International calls from 0 cents * With Zero Call Out, you can call the whole world.</source>
+        <target>Międzynarodowe rozmowy od 0 groszy * Z Zero Call Out, możesz zadzwonić do całego świata.</target>
+      </trans-unit>
+      <trans-unit id="150" translate="yes" reformat="yes" xml:space="default">
+        <source>About Us</source>
+        <target>O nas</target>
+      </trans-unit>
+      <trans-unit id="151" translate="yes" reformat="yes" xml:space="default">
+        <source>News</source>
+        <target>News</target>
+      </trans-unit>
+      <trans-unit id="152" translate="yes" reformat="yes" xml:space="default">
+        <source>Products</source>
+        <target>Produkty</target>
+      </trans-unit>
+      <trans-unit id="153" translate="yes" reformat="yes" xml:space="default">
+        <source>How does zero call</source>
+        <target>Jak zero połączenia</target>
+      </trans-unit>
+      <trans-unit id="154" translate="yes" reformat="yes" xml:space="default">
+        <source>Terms</source>
+        <target>Arbitralny</target>
+      </trans-unit>
+      <trans-unit id="155" translate="yes" reformat="yes" xml:space="default">
+        <source>Read and order</source>
+        <target>L&aelig;s og bestil &raquo;</target>
+      </trans-unit>
+      <trans-unit id="156" translate="yes" reformat="yes" xml:space="default">
+        <source>Read and order</source>
+        <target>Przeczytaj i porządku</target>
+      </trans-unit>
+      <trans-unit id="157" translate="yes" reformat="yes" xml:space="default">
+        <source>Send SMS</source>
+        <target>Wyślij SMS</target>
+      </trans-unit>
+      <trans-unit id="158" translate="yes" reformat="yes" xml:space="default">
+        <source>Tell a friend</source>
+        <target>Powiadom znajomego</target>
+      </trans-unit>
+      <trans-unit id="159" translate="yes" reformat="yes" xml:space="default">
+        <source>Free Countries</source>
+        <target>Wolnych krajach</target>
+      </trans-unit>
+      <trans-unit id="160" translate="yes" reformat="yes" xml:space="default">
+        <source>No customer is registered with this email.</source>
+        <target>Nr klient jest zarejestrowany w tym e-mail.</target>
+      </trans-unit>
+	  <trans-unit id="161" translate="yes" reformat="yes" xml:space="default">
+        <source>See Zero Call Out Call History</source>
+        <target>Zobacz Zero Call Out Historia połączeń</target>
+      </trans-unit>
+	   <trans-unit id="162" translate="yes" reformat="yes" xml:space="default">
+        <source>Invitation has been sent successfully</source>
+        <target>Zaproszenie zostało wysłane</target>
+      </trans-unit>
+	  <trans-unit id="163" translate="yes" reformat="yes" xml:space="default">
+        <source>1 SMS constitutes 142 characters</source>
+        <target>1 SMS stanowi 142 znaków</target>
+      </trans-unit>
+	  <trans-unit id="164" translate="yes" reformat="yes" xml:space="default">
+        <source>Tell a friend about zer0call!</source>
+        <target>Powiadom znajomego o zer0call!</target>
+      </trans-unit>
+	  <trans-unit id="165" translate="yes" reformat="yes" xml:space="default">
+        <source>Tell your friends about zer0call &amp; earn extra balance!</source>
+        <target>Powiedz znajomym o zer0call i zarobić dodatkowe równowagi!</target>
+      </trans-unit>
+	  <trans-unit id="166" translate="yes" reformat="yes" xml:space="default">
+        <source>Your Current Balance is:</source>
+        <target>Twoje obecne saldo jest</target>
+      </trans-unit>
+	  <trans-unit id="167" translate="yes" reformat="yes" xml:space="default">
+        <source>Use these credit card options for future auto Refill</source>
+        <target>Użyj tych opcji, karta kredytowa dla przyszłych auto Refill</target>
+      </trans-unit>
+	  <trans-unit id="168" translate="yes" reformat="yes" xml:space="default">
+        <source>Order No.</source>
+        <target>Zamówienie nr</target>
+      </trans-unit>
+	  <trans-unit id="169" translate="yes" reformat="yes" xml:space="default">
+        <source>Last name</source>
+        <target>Ostatnie nazwa</target>
+      </trans-unit>
+	  <trans-unit id="170" translate="yes" reformat="yes" xml:space="default">
+        <source>Country</source>
+        <target>Kraj</target>
+      </trans-unit>
+	  <trans-unit id="171" translate="yes" reformat="yes" xml:space="default">
+        <source>Customer status</source>
+        <target>Status Klienta</target>
+      </trans-unit>
+	  <trans-unit id="172" translate="yes" reformat="yes" xml:space="default">
+        <source>Buy credit</source>
+        <target>Zł kredytu</target>
+      </trans-unit>
+	  <trans-unit id="173" translate="yes" reformat="yes" xml:space="default">
+        <source>Please enter a valid mobile number.</source>
+        <target>Proszę podać numer telefonu komórkowego.</target>
+      </trans-unit>
+	  <trans-unit id="174" translate="yes" reformat="yes" xml:space="default">
+        <source>Please enter a password.</source>
+        <target>Proszę podać hasło.</target>
+      </trans-unit>
+	   <trans-unit id="175" translate="yes" reformat="yes" xml:space="default">
+        <source>Please enter a valid email address.</source>
+        <target>Proszę podać adres e-mail.</target>
+      </trans-unit>
+	  <trans-unit id="176" translate="yes" reformat="yes" xml:space="default">
+        <source>Customer Refill Account</source>
+        <target>Wkład konto klienta</target>
+      </trans-unit>
+	  <trans-unit id="177" translate="yes" reformat="yes" xml:space="default">
+        <source>Your settings have been saved.</source>
+        <target>Dine indstillinger er blevet gemt.</target>
+      </trans-unit>
+	  <trans-unit id="178" translate="yes" reformat="yes" xml:space="default">
+        <source>This invitation is sent to you with the refrence of </source>
+        <target>To zaproszenie jest wysłane z odniesienia do</target>
+      </trans-unit>
+	  <trans-unit id="179" translate="yes" reformat="yes" xml:space="default">
+        <source>Hi, I am using zer0call for very cheap international calls &amp; SMS (over 180 countries included). Please accept my invitation and join zer0call</source>
+        <target>Witam, używam zer0call do bardzo tanich połączeń międzynarodowych i SMS (w ponad 180 krajach w zestawie). Proszę przyjąć moje zaproszenie i dołącz zer0call</target>
+      </trans-unit>
+	  <trans-unit id="180" translate="yes" reformat="yes" xml:space="default">
+        <source>Send Email to join Zero call</source>
+        <target>Wyślij e-mail, aby dołączyć do rozmowy Zero</target>
+      </trans-unit>
+	  <trans-unit id="181" translate="yes" reformat="yes" xml:space="default">
+        <source>As soon as your friends have made their first payment with zer0call, youll automatically receive 10dkk in your zer0call balance - so if 10 of your friends register on zer0call, youll gain 100dkk in your account. Just share the news and enjoy this great new treat from zer0call.</source>
+        <target>Jak tylko przyjaciele mają swoje pierwsze płatności z zer0call, będziesz automatycznie otrzymywać 10dkk w saldo zer0call - więc jeśli 10 znajomych rejestru zer0call, będziesz 100dkk uzyskać na koncie. Dzielę się nowości i cieszyć się ten wielki nowy traktować z zer0call.</target>
+      </trans-unit>
+	  <trans-unit id="182" translate="yes" reformat="yes" xml:space="default">
+        <source>Fill out the fields below and click the Send Email button - your friend will receive an Email</source>
+        <target>Wypełnij poniższe pola i kliknij przycisk Wyślij e-mail - Twój znajomy otrzyma e-mail</target>
+      </trans-unit>
+	  <trans-unit id="183" translate="yes" reformat="yes" xml:space="default">
+        <source>You can tell your friends about zer0call in two simple ways:</source>
+        <target>Możesz powiedzieć swoim znajomym o zer0call w dwa proste sposoby:</target>
+      </trans-unit>
+	  <trans-unit id="184" translate="yes" reformat="yes" xml:space="default">
+        <source>How does it work?</source>
+        <target>Jak to działa?</target>
+      </trans-unit>
+	  <trans-unit id="185" translate="yes" reformat="yes" xml:space="default">
+        <source>Tell your friends about zer0call and earn 10dkk as soon as your friends have made their first payment with zer0call! Spread the word about zer0call and let your friends know about zerocall services.</source>
+        <target>Powiedz znajomym o zer0call i zarobić 10dkk tak szybko, jak Twoi znajomi się ich pierwsza płatność z zer0call! Rozpowszechniać informacje o zer0call i twoi przyjaciele wiedzieli o zerocall usług.</target>
+      </trans-unit>
+	   <trans-unit id="186" translate="yes" reformat="yes" xml:space="default">
+        <source>Tell your friends about zer0call &amp; earn extra balance!</source>
+        <target>Powiedz znajomym o zer0call i zarobić dodatkowe równowagi!</target>
+      </trans-unit>
+	  <trans-unit id="187" translate="yes" reformat="yes" xml:space="default">
+        <source>Back To Home</source>
+        <target>Powrót do strony głównej</target>
+      </trans-unit>
+	  <trans-unit id="188" translate="yes" reformat="yes" xml:space="default">
+        <source>Send</source>
+        <target>Wyślij</target>
+      </trans-unit>
+	  <trans-unit id="189" translate="yes" reformat="yes" xml:space="default">
+        <source>Card Type</source>
+        <target>Kort type</target>
+      </trans-unit>
+      <trans-unit id="190" translate="yes" reformat="yes" xml:space="default">
+        <source>Enter credit card no.</source>
+        <target>Wprowadź nie kartą kredytową.</target>
+      </trans-unit>
+      <trans-unit id="191" translate="yes" reformat="yes" xml:space="default">
+        <source>Enter expire month:</source>
+        <target>Wpisz upływie miesiąca:</target>
+      </trans-unit>
+      <trans-unit id="192" translate="yes" reformat="yes" xml:space="default">
+        <source>Enter expire year:</source>
+        <target>Wpisz rok wygaśnięcia:</target>
+      </trans-unit>
+      <trans-unit id="193" translate="yes" reformat="yes" xml:space="default">
+        <source>Payment is unfortunately not accepted because your 
+    				information is incorrect, please try again by entering 
+    				correct credit card information</source>
+        <target>Płatność niestety nie jest akceptowane, ponieważ
+     informacja jest błędna, spróbuj ponownie wpisując
+     prawidłowe informacje o karcie kredytowej</target>
+      </trans-unit>
+      <trans-unit id="194" translate="yes" reformat="yes" xml:space="default">
+        <source>Payment is unfortunately not accepted because your 
+    				information is incorrect, please try again by entering 
+    				correct credit card information</source>
+        <target>Płatność niestety nie jest akceptowane, ponieważ
+     informacja jest błędna, spróbuj ponownie wpisując
+     prawidłowe informacje o karcie kredytowej</target>
+      </trans-unit>	  
+	  <trans-unit id="194" translate="yes" reformat="yes" xml:space="default">
+        <source>Message upto 302 characters will be considered as 2 sms</source>
+        <target>Wiadomość upto 302 znaków będą traktowane jako 2 sms</target>
+      </trans-unit>
+	  <trans-unit id="195" translate="yes" reformat="yes" xml:space="default">
+        <source>Message upto 432 characters will be considered as 3 SMS</source>
+        <target>Wiadomość upto 432 znaków będą uważane za 3 SMS</target>
+      </trans-unit>
+	  <trans-unit id="196" translate="yes" reformat="yes" xml:space="default">
+        <source>Any Text written above character limit will be automatically truncated</source>
+        <target>Wszelkie Tekst napisany ponad limit znaków zostanie automatycznie obcięta</target>
+      </trans-unit>
+	   <trans-unit id="197" translate="yes" reformat="yes" xml:space="default">
+        <source>SMS charges may apply</source>
+        <target>Opłat za SMS mogą stosować</target>
+      </trans-unit>
+	   <trans-unit id="198" translate="yes" reformat="yes" xml:space="default">
+        <source>Destination Number</source>
+        <target>Liczba Destination</target>
+      </trans-unit>
+	  <trans-unit id="199" translate="yes" reformat="yes" xml:space="default">
+        <source>Destination Number<br />(without trailing 0)</source>
+        <target>Liczba Destination<br />(bez spływu 0)</target>
+      </trans-unit>
+	  <trans-unit id="200" translate="yes" reformat="yes" xml:space="default">
+        <source>Characters: 0/432</source>
+        <target>Postacie: 0/432</target>
+      </trans-unit>
+	  <trans-unit id="201" translate="yes" reformat="yes" xml:space="default">
+        <source>Message:</source>
+        <target>Wiadomość:</target>
+      </trans-unit>
+	  <trans-unit id="202" translate="yes" reformat="yes" xml:space="default">
+        <source>Is newsletter subscriber</source>
+        <target>Imię znajomego...</target>
+      </trans-unit>
+	  <trans-unit id="203" translate="yes" reformat="yes" xml:space="default">
+        <source>Edit Customer</source>
+        <target>Edytuj klienta</target>
+      </trans-unit>
+	   <trans-unit id="204" translate="yes" reformat="yes" xml:space="default">
+        <source>See  call history</source>
+        <target>Zobacz historię połączeń</target>
+      </trans-unit>
+	  <trans-unit id="205" translate="yes" reformat="yes" xml:space="default">
+        <source>Your password has been changed. Please use the following information to login to your Zerocall account.</source>
+        <target>Twoje hasło zostało zmienione. Proszę skorzystać z poniższych informacji do logowania na konto Zerocall.</target>
+      </trans-unit>
+        <trans-unit id="206" translate="yes" reformat="yes" xml:space="default">
+        <source>eur</source>
+        <target>plz</target>
+      </trans-unit>
+      <trans-unit id="207" translate="yes" reformat="yes" xml:space="default">
+        <source>login to account</source>
+        <target>logowanie do konta</target>
+      </trans-unit>
+	  <trans-unit id="208" translate="yes" reformat="yes" xml:space="default">
+        <source>provide your e-mail and password</source>
+        <target>podaj e-mail i hasło</target>
+      </trans-unit>	
+	  <trans-unit id="209" translate="yes" reformat="yes" xml:space="default">
+        <source>Username</source>
+        <target>Nazwa użytkownika</target>
+      </trans-unit> 
+	  <trans-unit id="210" translate="yes" reformat="yes" xml:space="default">
+        <source>login</source>
+        <target>Zaloguj się</target>
+      </trans-unit>
+	  <trans-unit id="211" translate="yes" reformat="yes" xml:space="default">
+        <source>Earning Summary</source>
+        <target>Zarabianie Podsumowanie</target>
+      </trans-unit>
+	  <trans-unit id="212" translate="yes" reformat="yes" xml:space="default">
+        <source>Provide this link to your customers while they signup with your reference.</source>
+        <target>Podaj ten link do klientów, którzy z rejestracji odniesienia.</target>
+      </trans-unit>
+	  <trans-unit id="213" translate="yes" reformat="yes" xml:space="default">
+        <source>Logged in as:</source>
+        <target>Zalogowany jako:</target>
+      </trans-unit>
+	  <trans-unit id="214" translate="yes" reformat="yes" xml:space="default">
+        <source>Your Balance is:</source>
+        <target>Saldo:</target>
+      </trans-unit>
+	  <trans-unit id="215" translate="yes" reformat="yes" xml:space="default">
+        <source>Overview</source>
+        <target>Przegląd</target>
+      </trans-unit>
+	  
+	  <trans-unit id="216" translate="yes" reformat="yes" xml:space="default">
+        <source>Register a Customer</source>
+        <target>Register a Customer</target>
+      </trans-unit>
+	  
+	  <trans-unit id="217" translate="yes" reformat="yes" xml:space="default">
+        <source>Refill</source>
+        <target>Napełniać</target>
+      </trans-unit>
+	  
+	  <trans-unit id="218" translate="yes" reformat="yes" xml:space="default">
+        <source>Receipts</source>
+        <target>Wpływy</target>
+      </trans-unit>
+	  
+	  <trans-unit id="219" translate="yes" reformat="yes" xml:space="default">
+        <source>My Company Info</source>
+        <target>My Informacje o firmie</target>
+      </trans-unit>
+	  <trans-unit id="220" translate="yes" reformat="yes" xml:space="default">
+        <source>My Earnings</source>
+        <target>Moje zarobki</target>
+      </trans-unit>
+	  <trans-unit id="221" translate="yes" reformat="yes" xml:space="default">
+        <source>Package Conversion</source>
+        <target>Zestaw konwersji</target>
+      </trans-unit>
+	  
+	  <trans-unit id="222" translate="yes" reformat="yes" xml:space="default">
+        <source>Supporting Handsets</source>
+        <target>Wspieranie Telefony</target>
+      </trans-unit>
+	  <trans-unit id="223" translate="yes" reformat="yes" xml:space="default">
+        <source>User Guide</source>
+        <target>Instrukcja obsługi</target>
+      </trans-unit>
+	  <trans-unit id="224" translate="yes" reformat="yes" xml:space="default">
+        <source>FAQ</source>
+        <target>FAQ</target>
+      </trans-unit>
+	  <trans-unit id="225" translate="yes" reformat="yes" xml:space="default">
+        <source>Logout</source>
+        <target>Wyloguj się</target>
+	  </trans-unit>	
+	  <trans-unit id="226" translate="yes" reformat="yes" xml:space="default">
+        <source>Customers</source>
+        <target>Klienci</target>
+	  </trans-unit>	
+		<trans-unit id="227" translate="yes" reformat="yes" xml:space="default">
+        <source>registered with you:</source>
+        <target>zarejestrowanych z wami:</target>
+	  </trans-unit>	
+	  <trans-unit id="228" translate="yes" reformat="yes" xml:space="default">
+        <source>Total</source>
+        <target>Razem</target>
+	  </trans-unit>	
+	  <trans-unit id="229" translate="yes" reformat="yes" xml:space="default">
+        <source>revenue on registration</source>
+        <target>przychodów w sprawie rejestracji</target>
+	  </trans-unit>
+		<trans-unit id="230" translate="yes" reformat="yes" xml:space="default">
+        <source>Total commission earned on registration:</source>
+        <target>Suma prowizji uzyskane z rejestracji:</target>
+	  </trans-unit>
+	  <trans-unit id="231" translate="yes" reformat="yes" xml:space="default">
+        <source>Total commission earned on refill:</source>
+        <target>Suma prowizji uzyskane na wkład:</target>
+	  </trans-unit>
+	  <trans-unit id="232" translate="yes" reformat="yes" xml:space="default">
+        <source>Total commission earned on refill:</source>
+        <target>Suma prowizji uzyskane na wkład:</target>
+	  </trans-unit>
+	  <trans-unit id="233" translate="yes" reformat="yes" xml:space="default">
+        <source>revenue on refill</source>
+        <target>przychodów z regeneracji</target>
+	  </trans-unit>
+	  <trans-unit id="234" translate="yes" reformat="yes" xml:space="default">
+        <source>on SMS Registeration:</source>
+        <target>på SMS registeration:</target>
+	  </trans-unit>
+	  <trans-unit id="235" translate="yes" reformat="yes" xml:space="default">
+        <source>Commission earned</source>
+        <target>Komisja zdobył</target>
+	  </trans-unit>
+	  <trans-unit id="236" translate="yes" reformat="yes" xml:space="default">
+        <source>on SMS Registeration:</source>
+        <target>na SMS Meldunkową:</target>
+	  </trans-unit>
+	  <trans-unit id="237" translate="yes" reformat="yes" xml:space="default">
+        <source>Receipts For Transactions</source>
+        <target>Wpływów z tytułu transakcji</target>
+	  </trans-unit>
+	  <trans-unit id="238" translate="yes" reformat="yes" xml:space="default">
+        <source>Customer name</source>
+        <target>Imię i nazwisko klienta</target>
+	  </trans-unit>
+	  <trans-unit id="239" translate="yes" reformat="yes" xml:space="default">
+        <source>Amount Refilled</source>
+        <target>Kwota Recyklowane</target>
+	  </trans-unit>
+	  <trans-unit id="240" translate="yes" reformat="yes" xml:space="default">
+        <source>Show Receipt</source>
+        <target>Pokaż odbioru</target>
+	  </trans-unit>
+	  <trans-unit id="241" translate="yes" reformat="yes" xml:space="default">
+        <source>Total Receipts for transactions:</source>
+        <target>Łącznych wpływów z transakcji:</target>
+	  </trans-unit>
+	  
+	  <trans-unit id="242" translate="yes" reformat="yes" xml:space="default">
+        <source>Company Name:</source>
+        <target>Nazwa firmy:</target>
+	  </trans-unit>
+	  <trans-unit id="243" translate="yes" reformat="yes" xml:space="default">
+        <source>CVR Number:</source>
+        <target>Liczba CVR:</target>
+	  </trans-unit>
+	  <trans-unit id="244" translate="yes" reformat="yes" xml:space="default">
+        <source>Address:</source>
+        <target>Adres:</target>
+	  </trans-unit>
+	  <trans-unit id="245" translate="yes" reformat="yes" xml:space="default">
+        <source>Post Code:</source>
+        <target>Kod pocztowy:</target>
+	  </trans-unit>
+	  <trans-unit id="246" translate="yes" reformat="yes" xml:space="default">
+        <source>Contact name:</source>
+        <target>Imię i nazwisko:</target>
+	  </trans-unit>
+	  <trans-unit id="247" translate="yes" reformat="yes" xml:space="default">
+        <source>Contact email:</source>
+        <target>Kontakt:</target>
+	  </trans-unit>
+	  <trans-unit id="248" translate="yes" reformat="yes" xml:space="default">
+        <source>Head Phone Nr:</source>
+        <target>Nr telefonu Kierownik:</target>
+	  </trans-unit>
+		<trans-unit id="249" translate="yes" reformat="yes" xml:space="default">
+        <source>Company info</source>
+        <target>Informacje o firmie</target>
+	  </trans-unit>
+	  <trans-unit id="250" translate="yes" reformat="yes" xml:space="default">
+        <source>Fax Number:</source>
+        <target>Numer faksu:</target>
+	  </trans-unit>
+	  <trans-unit id="252" translate="yes" reformat="yes" xml:space="default">
+        <source>Company form:</source>
+        <target>Postaci firmy:</target>
+	  </trans-unit>
+	  <trans-unit id="253" translate="yes" reformat="yes" xml:space="default">
+        <source>Product Details:</source>
+        <target>Szczegóły produktu:</target>
+	  </trans-unit>
+	  <trans-unit id="254" translate="yes" reformat="yes" xml:space="default">
+        <source>Commission period:</source>
+        <target>Okresie Komisja Europejska:</target>
+	  </trans-unit>
+	  <trans-unit id="255" translate="yes" reformat="yes" xml:space="default">
+        <source>Account Manager:</source>
+        <target>Account Manager</target>
+	  </trans-unit>
+	  <trans-unit id="256" translate="yes" reformat="yes" xml:space="default">
+        <source>Registered at:</source>
+        <target>Zarejestrowany od:</target>
+	  </trans-unit>
+	  <trans-unit id="257" translate="yes" reformat="yes" xml:space="default">
+        <source>Account Recharge</source>
+        <target>Doładowywanie konta</target>
+	  </trans-unit>
+	  <trans-unit id="258" translate="yes" reformat="yes" xml:space="default">
+        <source>Recharge Receipts</source>
+        <target>Wpływy Recharge</target>
+	  </trans-unit>
+	  <trans-unit id="259" translate="yes" reformat="yes" xml:space="default">
+        <source>Commission info</source>
+        <target>Komisja info</target>
+	  </trans-unit>
+	  <trans-unit id="260" translate="yes" reformat="yes" xml:space="default">
+        <source>Bank info</source>
+        <target>Bank informacji</target>
+	  </trans-unit>
+	  <trans-unit id="261" translate="yes" reformat="yes" xml:space="default">
+        <source>Registration Earnings</source>
+        <target>Zysk Rejestracja</target>
+	  </trans-unit>
+	  <trans-unit id="262" translate="yes" reformat="yes" xml:space="default">
+        <source>Refill Amount</source>
+        <target>Wkład Kwota</target>
+	  </trans-unit>
+	  <trans-unit id="263" translate="yes" reformat="yes" xml:space="default">
+        <source>Commission Earned</source>
+        <target>Komisja Earned</target>
+	  </trans-unit>
+	  <trans-unit id="264" translate="yes" reformat="yes" xml:space="default">
+        <source>Total Refills From The Shop:</source>
+        <target>Razem Wkłady do sklepu</target>
+	  </trans-unit>
+	  <trans-unit id="265" translate="yes" reformat="yes" xml:space="default">
+        <source>Total Earnings:</source>
+        <target>Razem zarobki</target>
+	  </trans-unit>
+	  <trans-unit id="266" translate="yes" reformat="yes" xml:space="default">
+        <source>Total Commission Earned:</source>
+        <target>Razem Komisji Earned</target>
+	  </trans-unit>
+	  
+	  <trans-unit id="267" translate="yes" reformat="yes" xml:space="default">
+        <source>Refill from Shop Earnings</source>
+        <target>Wkład ze sklepu zarobki</target>
+	  </trans-unit>
+	  <trans-unit id="268" translate="yes" reformat="yes" xml:space="default">
+        <source>Refills Earnings</source>
+        <target>Zysk Wkłady</target>
+	  </trans-unit>
+	  <trans-unit id="269" translate="yes" reformat="yes" xml:space="default">
+        <source>SMS Registration Earnings</source>
+        <target>Zysk SMS Rejestracja</target>
+	  </trans-unit>
+	  <trans-unit id="270" translate="yes" reformat="yes" xml:space="default">
+        <source>Convert Zerocall Free customer to Zerocall Out</source>
+        <target>Konwersja Zerocall klienta Free Zerocall Out</target>
+	  </trans-unit>
+	  <trans-unit id="271" translate="yes" reformat="yes" xml:space="default">
+        <source>Convert</source>
+        <target>Konwertować</target>
+	  </trans-unit>
+    </body>
+  </file>
+</xliff>

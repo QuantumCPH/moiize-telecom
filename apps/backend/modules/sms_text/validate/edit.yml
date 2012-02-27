@@ -1,0 +1,11 @@
+fields:
+  sms_text{text_heading}:
+    required:
+      msg:              The text heading cannot be left blank.
+  sms_text{for_text}:
+    required:
+      msg:              The for text cannot be left blank.
+  sms_text{message_text}:
+    required:
+      msg:              The message text cannot be left blank.
+ 

@@ -1,0 +1,7 @@
+fields:
+  city{name}:
+    required:
+      msg:              The city name cannot be left blank.
+  city{country_id}:
+    required:
+      msg:              The city country cannot be left blank.

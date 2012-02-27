@@ -1,0 +1,5 @@
+fields:
+  manufacturer{name}:
+    required:
+      msg:              The manufacturer name cannot be left blank.
+      

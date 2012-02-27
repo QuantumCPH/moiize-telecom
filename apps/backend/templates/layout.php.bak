@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <?php include_http_metas() ?>
+    <?php include_metas() ?>
+    <?php include_title() ?>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <script type="text/javascript">
+    <!--
+        // Copyright 2006-2007 javascript-array.com
+
+        var timeout	= 500;
+        var closetimer	= 0;
+        var ddmenuitem	= 0;
+
+        // open hidden layer
+        function mopen(id)
+        {
+                // cancel close timer
+                mcancelclosetime();
+
+                // close old layer
+                if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+                // get new layer and show it
+                ddmenuitem = document.getElementById(id);
+                ddmenuitem.style.visibility = 'visible';
+
+        }
+        // close showed layer
+        function mclose()
+        {
+                if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+        }
+
+        // go close timer
+        function mclosetime()
+        {
+                closetimer = window.setTimeout(mclose, timeout);
+        }
+
+        // cancel close timer
+        function mcancelclosetime()
+        {
+                if(closetimer)
+                {
+                        window.clearTimeout(closetimer);
+                        closetimer = null;
+                }
+        }
+
+        // close layer when click-out
+        document.onclick = mclose;
+    -->
+    </script>
+  </head>
+  <body>
+  	<div id="wrapper">
+  	<div id="header">
+  		<p style="float: right">
+  		<?php echo image_tag('/images/zapna_logo_small.jpg') ?>
+  		</p>
+  	</div>
+    <?php if($sf_user->isAuthenticated()): ?>
+      <ul class="admin-navigation">
+  		
+      </ul>
+      <ul id="sddm">
+            <li><a href="#"
+                onmouseover="mopen('m1')"
+                onmouseout="mclosetime()">Settings</a>
+                <div id="m1"
+                    onmouseover="mcancelclosetime()"
+                    onmouseout="mclosetime()">
+                    <?php echo link_to('status', 'status/index'); ?>
+                    <?php echo link_to('customer types', 'customer_type/index') ?>
+                    <?php echo link_to('invoice methods', 'invoice_method/index') ?>
+                    <?php echo link_to('sale activity status', 'sale_activity_status/index') ?>
+                    <?php echo link_to('support activity status', 'support_activity_status/index') ?>
+                    <?php echo link_to('sale actions', 'sale_action/index') ?>
+                    <?php echo link_to('support issues', 'support_issue/index') ?>
+                    <?php echo link_to('company size', 'company_size/index') ?>
+                    <?php echo link_to('company type', 'company_type/index') ?>
+                    <?php echo link_to('apartment form', 'apartment_form/index') ?>
+                    <?php echo link_to('commission period', 'commission_period/index') ?>
+                    <?php echo link_to('revenue interval', 'revenue_interval/index') ?>
+                    <?php echo link_to('destination rates', 'destination_rate/index') ?>
+                    <?php echo link_to('packages', 'package/index') ?>
+                    <?php echo link_to('products', 'product/index') ?>
+                    <?php echo link_to('global setting', 'global_setting/index') ?>
+                    <?php echo link_to('employee products', 'employee_product/index') ?>
+                </div>
+            </li>
+            <li><a href="#"
+                onmouseover="mopen('m2')"
+                onmouseout="mclosetime()">Company</a>
+                <div id="m2"
+                    onmouseover="mcancelclosetime()"
+                    onmouseout="mclosetime()">
+
+                    <?php echo link_to('companies list', 'company/index') ?>
+                    <?php echo link_to('employee lists', 'employee/index') ?>
+                    <?php echo link_to('sale activity', 'sale_activity/index'); ?>
+                    <?php echo link_to('support activity', 'support_activity/index'); ?>
+                    <?php echo link_to('usage', 'cdr/index'); ?>
+                    <?php echo link_to('invoices', 'invoice/index'); ?>
+                    <?php echo link_to('product orders', 'product_order/index') ?>
+                </div>
+            </li>
+            <li>
+                <a href="#"
+                onmouseover="mopen('m3')"
+                onmouseout="mclosetime()">Agents</a>
+                <div id="m3"
+                    onmouseover="mcancelclosetime()"
+                    onmouseout="mclosetime()">
+					
+                    <?php echo link_to('company list', 'agent_company/index') ?>
+                    <?php echo link_to('user lists', 'agent_user/index') ?>
+                    <?php echo link_to('commission', 'agent_commission/index') ?>
+                    <?php echo link_to('bank info', 'agent_bank/index') ?>
+                    <?php echo link_to('agent commission package', 'agent_commission_package/index') ?>
+                </div>
+            </li>
+            <li>
+                <a href="#"
+                onmouseover="mopen('m4')"
+                onmouseout="mclosetime()">Security</a>
+                <div id="m4"
+                    onmouseover="mcancelclosetime()"
+                    onmouseout="mclosetime()">
+                    <?php echo link_to('user', 'user/index'); ?>
+                    <?php echo link_to('role', 'role/index'); ?>
+                    <?php echo link_to('permission', 'permission/index'); ?>
+                    <?php echo link_to('role permission', 'role_permission/index'); ?>
+                </div>
+            </li>
+            <li>
+                <a href="#"
+                onmouseover="mopen('m5')"
+                onmouseout="mclosetime()">Zerocall</a>
+                <div id="m5"
+                    onmouseover="mcancelclosetime()"
+                    onmouseout="mclosetime()">
+
+					<?php echo link_to('Registered customer', 'zerocall/registercustomer'); ?>
+                    <?php echo link_to('Unregistered customer', 'zerocall/unregistercustomer'); ?>
+                    <?php echo link_to('device', 'device/index'); ?>
+                    <?php echo link_to('manufacturer', 'manufacturer/index'); ?>
+                </div>
+            </li>
+            
+			<li>
+				<a href="#"
+                onmouseover="mopen('m6')"
+                onmouseout="mclosetime()">Fonet</a>
+                <div id="m6"
+                    onmouseover="mcancelclosetime()"
+                    onmouseout="mclosetime()">
+                    <?php echo link_to('Get Info', 'fonetAmin/info'); ?>
+                    <?php echo link_to('Recharge', 'fonetAmin/recharge'); ?>
+                    <?php echo link_to('Activate', 'fonetAmin/activate'); ?>
+					<?php echo link_to('DeActivate', 'fonetAmin/delete'); ?>
+                </div>
+             
+                
+            </li>
+			<li>
+                <a href="#"
+                onmouseover="mopen('m7')"
+                onmouseout="mclosetime()">Updates</a>
+                <div id="m7"
+                    onmouseover="mcancelclosetime()"
+                    onmouseout="mclosetime()">
+					<?php echo link_to('List', 'agent_company/newsList') ?>
+                    <?php echo link_to('New ', 'agent_company/newsUpdate') ?>
+                    <?php echo link_to('Edit', 'agent_company/newsList') ?>
+                    <?php echo link_to('Delete', 'agent_company/newsList') ?>                    
+                </div>
+            </li>
+			<li>
+                <?php echo link_to('Logout', 'user/logout'); ?>
+            </li>
+        </ul>
+      <?php endif; ?>
+
+      <div style="clear:both"></div>
+    <?php echo $sf_content ?>
+    </div> <!--  end wrapper -->
+  </body>
+</html>

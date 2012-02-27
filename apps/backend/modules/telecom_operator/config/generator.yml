@@ -1,0 +1,22 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      TelecomOperator
+    theme:            default
+    css:             /sf/sf_admin/css/admin_main.css
+    list:
+            title: 'Telecom Operator'
+            display: [id, name, enablecountry, status]
+            fields:
+              enablecountry: {name: Country}
+              file_path:  { type: admin_input_file_tag }
+            object_actions:
+              _delete: ~
+              _edit: ~
+    edit:
+      title: 'Create/Edit Telecom Operator'
+      display: [id, name, country_id, status_id]
+    create:
+      title: 'Create/Edit Telecom Operator'
+      display: [id, name, country_id, status_id]
+      

@@ -1,0 +1,23 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      CdrLog
+    theme:            default
+    list:
+      sort:  [date, desc]
+      display:  [date, from_land, from_no, to_no, _company_name, employee, description, dur_secs, price, purchase_price, sale_price, _profit, employee]
+      object_actions:
+        _edit: ~
+      fields:
+        date: {name: Date/Time}
+        company_name:  {name: Company Name}
+        from_no: {name: From - Employee Mobile No.}
+        employee_name:  {name: Employee Name}
+        description:  {name: Destination}
+        price: {name: CDR Price}
+        filter_company_name: {name: Company Name}
+        filter_from_no: {name: From No.}
+      filters: [_filter_from_no, from_employee_id, _filter_company_name, _vat_no, date]
+      max_per_page: 50
+    edit:
+      display: [date, from_no, from_land, to_no, description, dur_secs, price]

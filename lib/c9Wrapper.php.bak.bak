@@ -1,0 +1,181 @@
+<?php
+
+
+
+    $test = new c9Wrapper();
+	$result = $test->getBalance('12345','+447924506169');
+        var_dump($result);
+
+
+
+class c9Wrapper
+{
+	
+/*	
+	URL 
+ http://api.wire9.com/api.cgi
+ 
+TRANSACTION_ID 
+ The transaction ID your system assigned to the CHECK USER BALANCE request. 
+ 
+REQUEST_TYPE 
+ This variable must be set to check_user_balance. 
+ 
+CARRIER_ID 
+ This variable must contain the carrier ID that has been assigned to you for use with our API. Please contact support@cloud9-mobile.co.uk if you do not have your API carrier ID. 
+ 
+PASSWORD 
+ This variable must contain the password that has been assigned to you for use with our API. Please contact support@cloud9-mobile.co.uk if you do not have your API password. 
+ 
+TIMESTAMP 
+ This variable is set by your system. It should contain a valid date and time in yyyy-mm-dd HH:mm:ss format. This time stamp is used for the API CDR records. 
+ 
+QUERY 
+ This variable must contain the MSISDN or IMSI of the subscriber of who's balance you wish to query. If passing a MSISDN may use the following formats: 07xxx, 447xxx or +447xxx.
+ 
+*/
+	public static function getBalance($trasactionId, $msisdn){
+		$carrierId='24';
+		$password='Denmark';
+		$timeStamp = date('Y-m-d H:m:s');
+
+		$data = array(
+		      'transaction_id' => $trasactionId,
+		      'request_type'=>'check_user_balance',
+                      'carrier_id'=>$carrierId,
+                      'password'=>$password,
+                      'timestamp' => $timeStamp,
+			  'query'=>$msisdn
+			  );
+
+		
+		$queryString = http_build_query($data,'', '&');
+
+		//echo $queryString;
+		$res =  file_get_contents('http://api.wire9.com/api.cgi?'.$queryString);	
+
+                
+                $xml = self::getXmlFromC9Response($res);
+                return self::getParameterFromC9Xml('balance', $xml);
+                
+                //return $res;
+	}
+	/*
+	URL  http://api.wire9.com/api.cgi
+
+	TRANSACTION_ID: The transaction ID your system assigned to the UPDATE USER BALANCE request.
+
+	REQUEST_TYPE: This variable must be set to update_user_balance.
+
+	CARRIER_ID:  This variable must contain the carrier ID that has been assigned to you for use with our API. Please contact support@cloud9-mobile.co.uk if you do not have your API carrier ID.
+
+	PASSWORD: This variable must contain the password that has been assigned to you for use with our API. Please contact support@cloud9-mobile.co.uk if you do not have your API password.
+
+	TIMESTAMP: This variable is set by your system. It should contain a valid date and time in yyyy-mm-dd HH:mm:ss format. This time stamp is used for the API CDR records.
+
+	QUERY: This variable must contain the MSISDN or IMSI of the subscriber of who's balance you wish to query. If passing a MSISDN may use the following formats: 07xxx, 447xxx or +447xxx.
+
+	TOPUP_AMOUNT: This variable must contain the amount to top the subscribers account up by. The amount must be supplied in 0.00 format. The amount can be a positive value or a negative value. If you supply a negative value then the account balance will be deducted from.
+	*/
+
+	
+	public static function updateBalance($trasactionId, $imsi, $topupAmount ){
+        
+	$recharge_data_file = sfConfig::get('sf_data_dir').'/recharge.txt';
+        $recharge = "\r\n inside c9Wrapper update balance\r\n";
+	$recharge .= "trasactionId = {$trasactionId} \r\n";
+	$recharge .= "imsi = {$imsi} \r\n";
+	$recharge .= "topupAmount = {$topupAmount} \r\n";
+	file_put_contents($recharge_data_file, $recharge, FILE_APPEND);
+
+		$newUrl = array();
+		$carrierId='24';
+		$password='Denmark';
+		$trasactionId='1010';
+		//$imsi = '+447924506169';
+		//$topupamount = '997.5';
+		$url = 'http://api.wire9.com/api.cgi?';
+		$requestType = 'update_user_balance';
+
+		$timeStamp = date('Y-m-d H:m:s');
+		echo date('Y-m-d H:m:s');
+		echo '\n';
+		echo $trasactionId;
+		echo '\n';
+
+		$data = array(
+		      'transaction_id' => $trasactionId,
+		      'request_type'=>'update_user_balance',
+              'carrier_id'=>$carrierId,
+              'password'=>$password,
+              'timestamp' => $timeStamp,
+			  'query'=>$imsi,
+			  'topup_amount'=>$topupAmount 
+			  );
+
+		
+		$queryString = http_build_query($data,'', '&');
+		
+	/*	$targetURL = http_build_url($url,
+    	array(
+        "scheme" => "http",
+        "host" => "api.wire9.com",
+        "path" => "api.cgi",
+        "query" => $queryString),
+		HTTP_URL_STRIP_AUTH | HTTP_URL_JOIN_PATH | HTTP_URL_JOIN_QUERY | HTTP_URL_STRIP_FRAGMEN, $newUrl );*/
+
+		echo $queryString;		
+		$res =  file_get_contents('http://api.wire9.com/api.cgi?'.$queryString);	
+		
+                $xml = self::getXmlFromC9Response($res);
+                return self::getParameterFromC9Xml('new_balance', $xml);
+                
+                //return $res;
+
+		
+	}
+	
+	public static function recieveCall(){
+		
+		
+	}
+
+	public static function getParameterFromC9Xml($parameter_name, $xml)
+	{
+		$q = '//'.$parameter_name;
+
+		$xpath = new DOMXPath($xml);
+
+		$parameter = $xpath->query($q)->item(0);
+
+		if ($parameter)
+			return $parameter->nodeValue;
+
+	}
+
+	public static function getXmlFromC9Response($response)
+	{
+		$xmlDoc = new DOMDocument();
+
+		if (@$xmlDoc->loadHTML($response)==true)
+		{
+			$xpath = new DOMXPath($xmlDoc);
+
+
+			$q = '//wire9_data';
+
+			$xml = (string)simplexml_import_dom($xpath->query($q)->item(0))
+					->asXML();
+
+			$xmlDoc->loadXML($xml);
+
+			return $xmlDoc;
+		}
+	}
+	
+	
+	
+	
+}
+
+?>

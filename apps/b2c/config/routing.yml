@@ -1,0 +1,84 @@
+# default rules
+homepage:
+  url:   /
+  param: { module: customer, action: login }
+signup_step1:
+  url: signup/step1
+  param: { module: customer, action: signup }
+
+signup_step2:
+  url: signup/step2
+  param: { module: payments, action: signup }
+
+signup_complete:
+  url: /customer/dashboard
+  param: {module: customer, action: dashboard}
+
+epay_accept_url:
+  url: /payments/thankyou
+  param: { module: payments, action: thankyou}
+  
+epay_reject_url:
+  url: /b2c/payments/reject
+  param: { module: payments, action: reject}
+  
+epay_refill_accept:
+  url: /customer/refill/accpeted
+  param: { module: customer, action: refillAccept }
+
+dibs_refill_accept:
+  url: /customer/calbackrefill
+  param: { module: customer, action: calbackrefill }
+  
+epay_refill_reject:
+  url: /customer/refill/rejeceted
+  param: { module: customer, action: refillReject }
+  
+customer_login:
+  url: /login
+  param: { module: customer, action: login }
+  
+customer_logout:
+  url: /logout
+  param: { module: customer, action: logout }
+  
+customer_dashboard:
+  url: /dasboard
+  param: { module: customer, action: dashboard }
+  
+epay_callback_url:
+  url: /pscripts/confirmpayment
+  param: { module: pScripts, action: confirmPayment }
+  
+b2c_homepage:
+  url: /zerocall
+  param: { module: customer, action: login}
+    
+default_index:
+  url:   /:module
+  param: { action: index }
+default:
+  url:   /:module/:action/*
+dibs_accept_url:
+  url: /payments/confirmpayment
+  param: { module: payments, action: confirmpayment}
+dibs_us_accept_url:
+  url: /payments/confirmpaymentus
+  param: { module: payments, action: confirmpaymentus}
+
+dibs_autoaccept_url:
+  url: /pScripts/autorefilconfirmation
+  param: { module: pScripts, action: autorefilconfirmation}
+
+
+#sf_guard_signin:
+#  url:   /login
+#  param: { module: sfGuardAuth, action: signin }
+ 
+#sf_guard_signout:
+#  url:   /logout
+#  param: { module: sfGuardAuth, action: signout }
+ 
+#sf_guard_password:
+#  url:   /request_password
+#  param: { module: sfGuardAuth, action: password }

@@ -1,0 +1,193 @@
+
+ Mobile No: 29900000 , Fonet Id: 1925178 , Balance: 0
+ Mobile No: 20202020 , Fonet Id: 1930394 , Balance: 0
+ Mobile No: 40796464 , Fonet Id: 1975248 , Balance: 200
+ Mobile No: 50535812 , Fonet Id:  , Balance: 
+ Mobile No: 20717786 , Fonet Id:  , Balance: 
+ Mobile No: 29934904 , Fonet Id: 1013458 , Balance: 200
+ Mobile No: 26578899 , Fonet Id:  , Balance: 
+ Mobile No: 53109003 , Fonet Id:  , Balance: 
+ Mobile No: 23272379 , Fonet Id:  , Balance: 
+ Mobile No: 29907786 , Fonet Id: 1053996 , Balance: 200
+ Mobile No: 45456655 , Fonet Id:  , Balance: 
+ Mobile No: 29926643 , Fonet Id:  , Balance: 
+ Mobile No: 31613786 , Fonet Id:  , Balance: 
+ Mobile No: 50425302 , Fonet Id:  , Balance: 
+ Mobile No: 60658899 , Fonet Id:  , Balance: 
+ Mobile No: 11111111 , Fonet Id:  , Balance: 
+ Mobile No: 12345678 , Fonet Id:  , Balance: 
+ Mobile No: 20717786 , Fonet Id: 1062116 , Balance: 1175.89
+ Mobile No: 60643723 , Fonet Id: 1068035 , Balance: 185.25
+ Mobile No: 50535812 , Fonet Id:  , Balance: 
+ Mobile No: 23257174 , Fonet Id:  , Balance: 
+ Mobile No: 23272370 , Fonet Id: 1070906 , Balance: 200
+ Mobile No: 31370029 , Fonet Id: 1077594 , Balance: 291.76
+ Mobile No: 23272379 , Fonet Id: 1087855 , Balance: 195.67
+ Mobile No: 29727729 , Fonet Id:  , Balance: 
+ Mobile No: 22739898 , Fonet Id:  , Balance: 
+ Mobile No: 50668423 , Fonet Id: 1088035 , Balance: 199.6
+ Mobile No: 53331775 , Fonet Id: 1101008 , Balance: 0.27
+ Mobile No: 61717680 , Fonet Id: 1116782 , Balance: 200
+ Mobile No: 31136870 , Fonet Id:  , Balance: 
+ Mobile No: 50468487 , Fonet Id: 1121418 , Balance: 200
+ Mobile No: 50238916 , Fonet Id:  , Balance: 
+ Mobile No: 50238916 , Fonet Id: 1128490 , Balance: 177.24
+ Mobile No: 29926643 , Fonet Id: 1136349 , Balance: 106.49
+ Mobile No: 27643670 , Fonet Id: 1183473 , Balance: 200
+ Mobile No: 45523202 , Fonet Id:  , Balance: 
+ Mobile No: 51904262 , Fonet Id:  , Balance: 
+ Mobile No: 28216619 , Fonet Id: 1209499 , Balance: 198.19
+ Mobile No: 23213353 , Fonet Id: 1211067 , Balance: 200
+ Mobile No: 53123652 , Fonet Id: 1223293 , Balance: 198.28
+ Mobile No: 25897708 , Fonet Id:  , Balance: 
+ Mobile No: 29988888 , Fonet Id:  , Balance: 
+ Mobile No: 50565818 , Fonet Id:  , Balance: 
+ Mobile No: 53500452 , Fonet Id: 1237054 , Balance: 70.71
+ Mobile No: 27117478 , Fonet Id:  , Balance: 
+ Mobile No: 25717323 , Fonet Id:  , Balance: 
+ Mobile No: 26835627 , Fonet Id:  , Balance: 
+ Mobile No: 28458176 , Fonet Id:  , Balance: 
+ Mobile No: 26622944 , Fonet Id:  , Balance: 
+ Mobile No: 31223403 , Fonet Id:  , Balance: 
+ Mobile No: 12121212 , Fonet Id:  , Balance: 
+ Mobile No: 88889999 , Fonet Id: 1250713 , Balance: 200
+ Mobile No: 26215763 , Fonet Id: 1258788 , Balance: 199.86
+ Mobile No: 22705259 , Fonet Id:  , Balance: 
+ Mobile No: 10293847 , Fonet Id:  , Balance: 
+ Mobile No: 10293847 , Fonet Id:  , Balance: 
+ Mobile No: 27494366 , Fonet Id: 1270812 , Balance: 160.62
+ Mobile No: 60643847 , Fonet Id: 1277551 , Balance: 0
+ Mobile No: 26144117 , Fonet Id:  , Balance: 
+ Mobile No: 31865261 , Fonet Id:  , Balance: 
+ Mobile No: 26144117 , Fonet Id:  , Balance: 
+ Mobile No: 21466075 , Fonet Id:  , Balance: 
+ Mobile No: 21463822 , Fonet Id: 1278539 , Balance: 199.34
+ Mobile No: 50566599 , Fonet Id:  , Balance: 
+ Mobile No: 52463995 , Fonet Id: 1304838 , Balance: 200
+ Mobile No: 28387824 , Fonet Id: 1310739 , Balance: 197.49
+ Mobile No: 26205567 , Fonet Id: 1320209 , Balance: 178.28
+ Mobile No: 34534534 , Fonet Id:  , Balance: 
+ Mobile No: 50378515 , Fonet Id: 1353621 , Balance: 196.07
+ Mobile No: 52667177 , Fonet Id: 1403934 , Balance: 237.26
+ Mobile No: 22565607 , Fonet Id:  , Balance: 
+ Mobile No: 22565607 , Fonet Id:  , Balance: 
+ Mobile No: 22565607 , Fonet Id:  , Balance: 
+ Mobile No: 22565607 , Fonet Id:  , Balance: 
+ Mobile No: 22565607 , Fonet Id:  , Balance: 
+ Mobile No: 21414832 , Fonet Id: 1409987 , Balance: 199.9
+ Mobile No: 39201839 , Fonet Id:  , Balance: 
+ Mobile No: 50668473 , Fonet Id: 1417046 , Balance: 131.03
+ Mobile No: 50146548 , Fonet Id:  , Balance: 
+ Mobile No: 24202397 , Fonet Id:  , Balance: 
+ Mobile No: 31135498 , Fonet Id:  , Balance: 
+ Mobile No: 23951071 , Fonet Id:  , Balance: 
+ Mobile No: 22324321 , Fonet Id:  , Balance: 
+ Mobile No: 31386768 , Fonet Id: 1417374 , Balance: 184
+ Mobile No: 22565607 , Fonet Id:  , Balance: 
+ Mobile No: 22565607 , Fonet Id:  , Balance: 
+ Mobile No: 50167373 , Fonet Id: 1513184 , Balance: 200
+ Mobile No: 27375520 , Fonet Id: 1532119 , Balance: 174.15
+ Mobile No: 97950976 , Fonet Id:  , Balance: 
+ Mobile No: 30272736 , Fonet Id: 1550119 , Balance: 200
+ Mobile No: 51718607 , Fonet Id: 1553652 , Balance: 200
+ Mobile No: 26540736 , Fonet Id:  , Balance: 
+ Mobile No: 51943848 , Fonet Id: 1564006 , Balance: 191.82
+ Mobile No: 60226114 , Fonet Id: 1601563 , Balance: 179.78
+ Mobile No: 26237868 , Fonet Id: 1643542 , Balance: 0
+ Mobile No: 22565607 , Fonet Id: 1672898 , Balance: 200
+ Mobile No: 31372578 , Fonet Id:  , Balance: 
+ Mobile No: 51163121 , Fonet Id:  , Balance: 
+ Mobile No: 31223403 , Fonet Id: 1680763 , Balance: 200
+ Mobile No: 20777957 , Fonet Id:  , Balance: 
+ Mobile No: 28798613 , Fonet Id: 1685090 , Balance: 171.12
+ Mobile No: 28458176 , Fonet Id:  , Balance: 
+ Mobile No: 28458176 , Fonet Id:  , Balance: 
+ Mobile No: 00099922 , Fonet Id:  , Balance: 
+ Mobile No: 25597599 , Fonet Id:  , Balance: 
+ Mobile No: 26200192 , Fonet Id: 1691343 , Balance: 59.24
+ Mobile No: 22178839 , Fonet Id: 1700415 , Balance: 386.94
+ Mobile No: 26208839 , Fonet Id: 1726643 , Balance: 495.01
+ Mobile No: 60450087 , Fonet Id:  , Balance: 
+ Mobile No: 41599989 , Fonet Id: 1741912 , Balance: 0
+ Mobile No: 89089008 , Fonet Id:  , Balance: 
+ Mobile No: 11223212 , Fonet Id:  , Balance: 
+ Mobile No: 11223212 , Fonet Id:  , Balance: 
+ Mobile No: 20717781 , Fonet Id:  , Balance: 
+ Mobile No: 31585189 , Fonet Id: 1042453 , Balance: 601
+ Mobile No: 50330020 , Fonet Id:  , Balance: 
+ Mobile No: 50330020 , Fonet Id:  , Balance: 
+ Mobile No: 40885000 , Fonet Id:  , Balance: 
+ Mobile No: 40885000 , Fonet Id:  , Balance: 
+ Mobile No: 40885000 , Fonet Id:  , Balance: 
+ Mobile No: 40885000 , Fonet Id:  , Balance: 
+ Mobile No: 40885000 , Fonet Id:  , Balance: 
+ Mobile No: 50330020 , Fonet Id:  , Balance: 
+ Mobile No: 50330020 , Fonet Id: 1052039 , Balance: 200
+ Mobile No: 29900001 , Fonet Id: 1101122 , Balance: 200
+ Mobile No: 22201977 , Fonet Id:  , Balance: 
+ Mobile No: 52909999 , Fonet Id: 1133848 , Balance: 187.32
+ Mobile No: 20921560 , Fonet Id: 1139204 , Balance: 200
+ Mobile No: 71329317 , Fonet Id:  , Balance: 
+ Mobile No: 40885000 , Fonet Id:  , Balance: 
+ Mobile No: 21903007 , Fonet Id: 1160074 , Balance: 188.58
+ Mobile No: 23256279 , Fonet Id: 1175847 , Balance: 199.56
+ Mobile No: 60155899 , Fonet Id: 1205766 , Balance: 645.87
+ Mobile No: 22971524 , Fonet Id: 1205836 , Balance: 99.76
+ Mobile No: 60716471 , Fonet Id: 1214407 , Balance: 200
+ Mobile No: 27445997 , Fonet Id:  , Balance: 
+ Mobile No: 25361884 , Fonet Id: 1217843 , Balance: 200
+ Mobile No: 22201977 , Fonet Id: 1219309 , Balance: 200
+ Mobile No: 40569121 , Fonet Id: 1219744 , Balance: 200
+ Mobile No: 28620083 , Fonet Id: 1227034 , Balance: 200
+ Mobile No: 40942347 , Fonet Id: 1264286 , Balance: 214.86
+ Mobile No: 42575715 , Fonet Id:  , Balance: 
+ Mobile No: 42575715 , Fonet Id:  , Balance: 
+ Mobile No: 42575715 , Fonet Id:  , Balance: 
+ Mobile No: 52464027 , Fonet Id: 1272998 , Balance: 200
+ Mobile No: 42424283 , Fonet Id: 1276299 , Balance: 198.22
+ Mobile No: 31920246 , Fonet Id: 1287675 , Balance: 198.12
+ Mobile No: 31708153 , Fonet Id: 1322968 , Balance: 84.11
+ Mobile No: 40684516 , Fonet Id: 1325791 , Balance: 128
+ Mobile No: 29900002 , Fonet Id:  , Balance: 
+ Mobile No: 29900002 , Fonet Id:  , Balance: 
+ Mobile No: 31140201 , Fonet Id: 1334990 , Balance: 69.79
+ Mobile No: 31173305 , Fonet Id: 1394596 , Balance: 200
+ Mobile No: 40784447 , Fonet Id: 1396295 , Balance: -50
+ Mobile No: 29106452 , Fonet Id: 1426139 , Balance: 100
+ Mobile No: 12345678 , Fonet Id:  , Balance: 
+ Mobile No: 42751445 , Fonet Id: 1499209 , Balance: 194.62
+ Mobile No: 22776233 , Fonet Id: 1523634 , Balance: 200
+ Mobile No: 27406090 , Fonet Id:  , Balance: 
+ Mobile No: 27406090 , Fonet Id:  , Balance: 
+ Mobile No: 27406090 , Fonet Id:  , Balance: 
+ Mobile No: 27406090 , Fonet Id:  , Balance: 
+ Mobile No: 27125079 , Fonet Id: 1549022 , Balance: 200
+ Mobile No: 50460897 , Fonet Id:  , Balance: 
+ Mobile No: 50460897 , Fonet Id:  , Balance: 
+ Mobile No: 50460897 , Fonet Id:  , Balance: 
+ Mobile No: 50460897 , Fonet Id:  , Balance: 
+ Mobile No: 50460897 , Fonet Id:  , Balance: 
+ Mobile No: 50460897 , Fonet Id:  , Balance: 
+ Mobile No: 53576161 , Fonet Id: 1551070 , Balance: 200
+ Mobile No: 53576181 , Fonet Id: 1553634 , Balance: 200
+ Mobile No: 20717790 , Fonet Id:  , Balance: 
+ Mobile No: 20718743 , Fonet Id:  , Balance: 
+ Mobile No: 41676528 , Fonet Id:  , Balance: 
+ Mobile No: 41676528 , Fonet Id:  , Balance: 
+ Mobile No: 41676528 , Fonet Id:  , Balance: 
+ Mobile No: 41676528 , Fonet Id: 1554524 , Balance: 200
+ Mobile No: 40504504 , Fonet Id:  , Balance: 
+ Mobile No: 31172324 , Fonet Id:  , Balance: 
+ Mobile No: 23614647 , Fonet Id: 1554568 , Balance: 111.65
+ Mobile No: 26637154 , Fonet Id:  , Balance: 
+ Mobile No: 26637154 , Fonet Id:  , Balance: 
+ Mobile No: 50212222 , Fonet Id: 1558799 , Balance: 197.05
+ Mobile No: 22828678 , Fonet Id: 1594502 , Balance: 400
+ Mobile No: 26259114 , Fonet Id: 1603424 , Balance: 400
+ Mobile No: 26764000 , Fonet Id: 1622792 , Balance: 700
+ Mobile No: 28207712 , Fonet Id: 1635387 , Balance: 396.1
+ Mobile No: 26254557 , Fonet Id:  , Balance: 
+ Mobile No: 53426928 , Fonet Id: 1650807 , Balance: 0
+ Mobile No: 60317701 , Fonet Id:  , Balance: 
+ Mobile No: 50440876 , Fonet Id: 1681334 , Balance: 194.06
+ Mobile No: 20771789 , Fonet Id:  , Balance: 

@@ -1,0 +1,13 @@
+<?php
+
+class EmailQueue extends BaseEmailQueue
+{
+	public function EmailQueue($subject, $message, $recepient_name, $recepient_email)
+	{	
+		$this->setSubject($subject);
+		$this->setMessage($message);
+		$this->setReceipientName($recepient_name);
+		$this->setReceipientEmail($recepient_email);
+
+	}
+}

@@ -1,0 +1,458 @@
+﻿
+ Customer : test test Mobile Number : 29900000, Fonet ID 1925178 
+ Date: 2010-08-13 04:40:56 Amount : 200 
+ Date: 2010-08-13 04:49:57 Amount : 200 
+ Date: 2010-08-13 04:58:58 Amount : 100 
+ 
+ Customer : test2 test3 Mobile Number : 20202020, Fonet ID 1930394 
+ Date: 2010-08-13 05:12:16 Amount : 200 
+ 
+ Customer : Gunes  Göksen Mobile Number : 40796464, Fonet ID 1975248 
+ Date: 2010-08-13 07:27:21 Amount : 200 
+ 
+ Customer : Arsalan Afzal Mobile Number : 50535812, Fonet ID  
+ 
+ Customer : Omair Khan Mobile Number : 20717786, Fonet ID  
+ 
+ Customer : Omair Khan Mobile Number : 29934904, Fonet ID 1013458 
+ Date: 2010-08-16 16:36:23 Amount : 200 
+ 
+ Customer : wigar Ahmad Mobile Number : 26578899, Fonet ID  
+ 
+ Customer : akhtari begum Mobile Number : 53109003, Fonet ID  
+ 
+ Customer : Umar Ahmad Mobile Number : 23272379, Fonet ID  
+ 
+ Customer : khalida ashraf Mobile Number : 29907786, Fonet ID 1053996 
+ Date: 2010-08-17 02:05:03 Amount : 200 
+ 
+ Customer : a b Mobile Number : 45456655, Fonet ID  
+ 
+ Customer : Sulay Djalo Mobile Number : 29926643, Fonet ID  
+ 
+ Customer : Umar Akram Mobile Number : 31613786, Fonet ID  
+ 
+ Customer : mehmet celik Mobile Number : 50425302, Fonet ID  
+ 
+ Customer : sadi test Mobile Number : 11111111, Fonet ID  
+ 
+ Customer : Sadi malik Mobile Number : 12345678, Fonet ID  
+ 
+ Customer : Omair Khan Mobile Number : 20717786, Fonet ID 1062116 
+ Date: 2010-08-20 03:09:04 Amount : 200 
+ 
+ Customer : jørgen nielsen Mobile Number : 60643723, Fonet ID 1068035 
+ Date: 2010-08-20 04:34:33 Amount : 200 
+ 
+ Customer : Arsalan Afzal Mobile Number : 50535812, Fonet ID  
+ 
+ Customer : Amorn Pantawapirom Mobile Number : 23257174, Fonet ID  
+ 
+ Customer : Umar Ahmad Mobile Number : 23272370, Fonet ID 1070906 
+ Date: 2010-08-20 10:04:53 Amount : 200 
+ 
+ Customer : mimis kaöa Mobile Number : 31370029, Fonet ID 1077594 
+ Date: 2010-08-20 10:11:29 Amount : 200 
+ Date: 2010-09-09 13:33:49 Amount : 200 
+ 
+ Customer : Umar Ahmad Mobile Number : 23272379, Fonet ID 1087855 
+ Date: 2010-08-20 11:13:01 Amount : 200 
+ 
+ Customer : Munir Hussain Mobile Number : 29727729, Fonet ID  
+ 
+ Customer : Khalil Akhund-Zadeh Mobile Number : 22739898, Fonet ID  
+ 
+ Customer : kart mustafa Mobile Number : 50668423, Fonet ID 1088035 
+ Date: 2010-08-21 07:36:41 Amount : 200 
+ 
+ Customer : Soufian  Benarab Mobile Number : 53331775, Fonet ID 1101008 
+ Date: 2010-08-22 01:08:41 Amount : 200 
+ 
+ Customer : Omer Ayub Mobile Number : 61717680, Fonet ID 1116782 
+ Date: 2010-08-22 08:14:39 Amount : 200 
+ 
+ Customer : Said Suweilem Mobile Number : 31136870, Fonet ID  
+ 
+ Customer : Azam Jat Mobile Number : 50468487, Fonet ID 1121418 
+ Date: 2010-08-23 12:59:23 Amount : 200 
+ 
+ Customer : Seyit Kilic Mobile Number : 50238916, Fonet ID  
+ 
+ Customer : Seyit Kilic Mobile Number : 50238916, Fonet ID 1128490 
+ Date: 2010-08-24 09:46:59 Amount : 200 
+ 
+ Customer : Sulay Djalo Mobile Number : 29926643, Fonet ID 1136349 
+ Date: 2010-08-24 13:14:39 Amount : 200 
+ Date: 2010-10-01 16:45:33 Amount : 100 
+ 
+ Customer : Amana Khan Mobile Number : 27643670, Fonet ID 1183473 
+ Date: 2010-08-25 15:37:58 Amount : 200 
+ 
+ Customer : Murad Ali Mobile Number : 45523202, Fonet ID  
+ 
+ Customer : Kim Schulz Mobile Number : 51904262, Fonet ID  
+ 
+ Customer : Ghulam Rasool Mobile Number : 28216619, Fonet ID 1209499 
+ Date: 2010-08-26 12:10:07 Amount : 200 
+ 
+ Customer : Cilene Maria Persson Henriksen Mobile Number : 23213353, Fonet ID 1211067 
+ Date: 2010-08-26 13:41:00 Amount : 200 
+ 
+ Customer : mikolaj Jakub Skowron Mobile Number : 53123652, Fonet ID 1223293 
+ Date: 2010-08-26 15:10:42 Amount : 200 
+ 
+ Customer : Shahazad asghar Mobile Number : 25897708, Fonet ID  
+ 
+ Customer : Allan Baadsgaard Mobile Number : 29988888, Fonet ID  
+ 
+ Customer : Ahmad Hassani Mobile Number : 50565818, Fonet ID  
+ 
+ Customer : Haroon Chaudry  Mobile Number : 53500452, Fonet ID 1237054 
+ Date: 2010-08-27 12:40:21 Amount : 200 
+ 
+ Customer : Shahid  Akhtar Mobile Number : 27117478, Fonet ID  
+ 
+ Customer : sania kubanova Mobile Number : 25717323, Fonet ID  
+ 
+ Customer : Robert Douglas Mobile Number : 26835627, Fonet ID  
+ 
+ Customer : Kanwal Naseer IUddin Mobile Number : 28458176, Fonet ID  
+ 
+ Customer : Sinthuraj Ponnuchamy Mobile Number : 26622944, Fonet ID  
+ 
+ Customer : Mohammad Shaikh Mobile Number : 31223403, Fonet ID  
+ 
+ Customer : aaa sss Mobile Number : 12121212, Fonet ID  
+ 
+ Customer : a b Mobile Number : 88889999, Fonet ID 1250713 
+ Date: 2010-08-31 12:37:45 Amount : 200 
+ 
+ Customer : inge  hansen Mobile Number : 26215763, Fonet ID 1258788 
+ Date: 2010-08-31 14:07:29 Amount : 200 
+ 
+ Customer : Aamir  Aziz Malik Mobile Number : 22705259, Fonet ID  
+ 
+ Customer : test71 test71 Mobile Number : 10293847, Fonet ID  
+ 
+ Customer : AYESHA ARIF Mobile Number : 27494366, Fonet ID 1270812 
+ Date: 2010-09-03 15:29:37 Amount : 200 
+ 
+ Customer : saddia nazir Mobile Number : 60643847, Fonet ID 1277551 
+ Date: 2010-09-03 15:35:27 Amount : 200 
+ 
+ Customer : Zee-Shan Sheikh Anwar Mobile Number : 26144117, Fonet ID  
+ 
+ Customer : UMAR SAJJAD Mobile Number : 31865261, Fonet ID  
+ 
+ Customer : Zee-Shan Sheikh Anwar Mobile Number : 26144117, Fonet ID  
+ 
+ Customer : Hans Hansen Mobile Number : 21466075, Fonet ID  
+ 
+ Customer : Milly Fries Mobile Number : 21463822, Fonet ID 1278539 
+ Date: 2010-09-06 14:14:48 Amount : 200 
+ 
+ Customer : bammut pedersen Mobile Number : 50566599, Fonet ID  
+ 
+ Customer : Oktawia Patrycja Wojcik Mobile Number : 52463995, Fonet ID 1304838 
+ Date: 2010-09-07 12:09:10 Amount : 200 
+ 
+ Customer : AnneLies Dullaert Mobile Number : 28387824, Fonet ID 1310739 
+ Date: 2010-09-07 13:02:10 Amount : 200 
+ 
+ Customer : Majed Afshar Mobile Number : 26205567, Fonet ID 1320209 
+ Date: 2010-09-07 16:29:08 Amount : 200 
+ 
+ Customer : aslkf lkj Mobile Number : 34534534, Fonet ID  
+ 
+ Customer : Mirza Muddasar Ahmad Mobile Number : 50378515, Fonet ID 1353621 
+ Date: 2010-09-09 10:38:19 Amount : 200 
+ 
+ Customer : Peter joshi Mobile Number : 52667177, Fonet ID 1403934 
+ Date: 2010-09-09 11:11:14 Amount : 200 
+ Date: 2010-09-22 11:30:48 Amount : 500 
+ 
+ Customer : Mohammad Zain Ayub Mobile Number : 22565607, Fonet ID  
+ 
+ Customer : Mohammad Zain Ayub Mobile Number : 22565607, Fonet ID  
+ 
+ Customer : Mohammad Zain Ayub Mobile Number : 22565607, Fonet ID  
+ 
+ Customer : Mohammad Zain Ayub Mobile Number : 22565607, Fonet ID  
+ 
+ Customer : KEVIN ROCKELL Mobile Number : 21414832, Fonet ID 1409987 
+ Date: 2010-09-10 19:47:08 Amount : 200 
+ 
+ Customer : moulis cintante Mobile Number : 39201839, Fonet ID  
+ 
+ Customer : Mahnaz Diznabi Mobile Number : 50668473, Fonet ID 1417046 
+ Date: 2010-09-11 15:18:10 Amount : 200 
+ 
+ Customer : johar riaz Mobile Number : 50146548, Fonet ID  
+ 
+ Customer : Mustapha El ayadi Mobile Number : 24202397, Fonet ID  
+ 
+ Customer : hamayoun ashraf Mobile Number : 31135498, Fonet ID  
+ 
+ Customer : akbar shahzad Mobile Number : 23951071, Fonet ID  
+ 
+ Customer : ksdKNK SKKASK Mobile Number : 22324321, Fonet ID  
+ 
+ Customer : Veronique Clemeny Mobile Number : 31386768, Fonet ID 1417374 
+ Date: 2010-09-14 17:15:05 Amount : 200 
+ 
+ Customer : Mohammad Zain Ayub Mobile Number : 22565607, Fonet ID  
+ 
+ Customer : Shahroz Shahzad Mobile Number : 50167373, Fonet ID 1513184 
+ Date: 2010-09-15 01:40:39 Amount : 200 
+ 
+ Customer : Christiano De Oliveira Mobile Number : 27375520, Fonet ID 1532119 
+ Date: 2010-09-15 16:49:17 Amount : 200 
+ 
+ Customer : SYED ASHRAF Mobile Number : 97950976, Fonet ID  
+ 
+ Customer : Farah Mulkana Mobile Number : 30272736, Fonet ID 1550119 
+ Date: 2010-09-16 11:59:23 Amount : 200 
+ Date: 2010-10-06 11:35:17 Amount : 200 
+ 
+ Customer : Hamad Raza Mobile Number : 51718607, Fonet ID 1553652 
+ Date: 2010-09-16 22:09:38 Amount : 200 
+ 
+ Customer : umar aslam Mobile Number : 26540736, Fonet ID  
+ 
+ Customer : Ahmed  Shakeel  Mobile Number : 51943848, Fonet ID 1564006 
+ Date: 2010-09-18 11:09:31 Amount : 200 
+ 
+ Customer : Judith Hjelm Mobile Number : 60226114, Fonet ID 1601563 
+ Date: 2010-09-18 14:18:57 Amount : 200 
+ 
+ Customer : Binderi & Nostalgi  Sibghat Riaz Mobile Number : 26237868, Fonet ID 1643542 
+ Date: 2010-09-18 14:23:51 Amount : 200 
+ 
+ Customer : Mohammad Zain Ayub Mobile Number : 22565607, Fonet ID 1672898 
+ Date: 2010-09-20 15:09:43 Amount : 200 
+ 
+ Customer : mohammad ashraf Mobile Number : 31372578, Fonet ID  
+ 
+ Customer : Pia Nielsen Mobile Number : 51163121, Fonet ID  
+ 
+ Customer : Mohammad Shaikh Mobile Number : 31223403, Fonet ID 1680763 
+ Date: 2010-09-23 01:19:04 Amount : 200 
+ 
+ Customer : Hamid  Sabtiy Mobile Number : 20777957, Fonet ID  
+ 
+ Customer : Antoniu Stefan Mobile Number : 28798613, Fonet ID 1685090 
+ Date: 2010-09-25 11:35:27 Amount : 200 
+ 
+ Customer : Kanwal Naseer Mobile Number : 28458176, Fonet ID  
+ 
+ Customer : Kanwal Naseer Mobile Number : 28458176, Fonet ID  
+ 
+ Customer : test83 test83 Mobile Number : 00099922, Fonet ID  
+ 
+ Customer : sebrina puggaard Mobile Number : 25597599, Fonet ID  
+ 
+ Customer : Yildiz Sivri Mobile Number : 26200192, Fonet ID 1691343 
+ Date: 2010-09-27 17:56:59 Amount : 200 
+ 
+ Customer : hajsam  elali Mobile Number : 22178839, Fonet ID 1700415 
+ Date: 2010-09-28 15:46:40 Amount : 200 
+ Date: 2010-10-12 15:13:04 Amount : 200 
+ Date: 2010-10-12 15:14:03 Amount : 200 
+ 
+ Customer : Mohamad omaiche Mobile Number : 26208839, Fonet ID 1726643 
+ Date: 2010-09-28 18:04:28 Amount : 200 
+ Date: 2010-09-30 20:30:38 Amount : 200 
+ Date: 2010-10-14 09:32:58 Amount : 500 
+ 
+ Customer : Mustapha Amziane Mobile Number : 60450087, Fonet ID  
+ 
+ Customer : Mariam Safdar Mobile Number : 41599989, Fonet ID 1741912 
+ Date: 2010-09-29 18:05:49 Amount : 200 
+ 
+ Customer : kamaal hassan Mobile Number : 89089008, Fonet ID  
+ 
+ Customer : test89 test89 Mobile Number : 11223212, Fonet ID  
+ 
+ Customer : Mohammad Ali Mobile Number : 20717781, Fonet ID  
+ 
+ Customer : Fan Yang Mobile Number : 31585189, Fonet ID 1042453 
+ Date: 2010-09-30 14:34:46 Amount : 200 
+ Date: 2010-10-01 12:12:25 Amount : 200 
+ 
+ Customer : Mikael Sander Mobile Number : 50330020, Fonet ID  
+ 
+ Customer : Mikael Sander Mobile Number : 50330020, Fonet ID  
+ 
+ Customer : test test Mobile Number : 40885000, Fonet ID  
+ 
+ Customer : test test Mobile Number : 40885000, Fonet ID  
+ 
+ Customer : test test Mobile Number : 40885000, Fonet ID  
+ 
+ Customer : test test Mobile Number : 40885000, Fonet ID  
+ 
+ Customer : Mikael Sander Mobile Number : 50330020, Fonet ID  
+ 
+ Customer : Mikael Sander Mobile Number : 50330020, Fonet ID 1052039 
+ Date: 2010-10-01 13:19:29 Amount : 200 
+ 
+ Customer : test teswt Mobile Number : 29900001, Fonet ID 1101122 
+ Date: 2010-10-01 13:22:37 Amount : 200 
+ 
+ Customer : test test Mobile Number : 22201977, Fonet ID  
+ 
+ Customer : naser ahmad Mobile Number : 52909999, Fonet ID 1133848 
+ Date: 2010-10-01 17:50:46 Amount : 200 
+ 
+ Customer : anders boære Mobile Number : 20921560, Fonet ID 1139204 
+ Date: 2010-10-01 19:06:04 Amount : 200 
+ 
+ Customer : aurang zeb Mobile Number : 71329317, Fonet ID  
+ 
+ Customer : test tews Mobile Number : 40885000, Fonet ID  
+ 
+ Customer : Gerardo S Palma Olmazabal Mobile Number : 21903007, Fonet ID 1160074 
+ Date: 2010-10-02 11:05:25 Amount : 200 
+ 
+ Customer : Amer  Hachach Mobile Number : 23256279, Fonet ID 1175847 
+ Date: 2010-10-02 11:05:27 Amount : 200 
+ 
+ Customer : jamal mounir abedel karim Mobile Number : 60155899, Fonet ID 1205766 
+ Date: 2010-10-02 11:10:50 Amount : 200 
+ Date: 2010-10-14 11:07:59 Amount : 500 
+ 
+ Customer : Youssef  Ebrahi Mobile Number : 22971524, Fonet ID 1205836 
+ Date: 2010-10-02 11:17:38 Amount : 200 
+ Date: 2010-10-14 12:20:13 Amount : 100 
+ 
+ Customer : Uncle Ajaz . Mobile Number : 60716471, Fonet ID 1214407 
+ Date: 2010-10-02 11:51:17 Amount : 200 
+ 
+ Customer : Kasper Hammeken Mobile Number : 27445997, Fonet ID  
+ 
+ Customer : Forhandler 2039 Phone4u APs Mobile Number : 25361884, Fonet ID 1217843 
+ Date: 2010-10-04 08:23:14 Amount : 200 
+ 
+ Customer : Forhandler 2033 Mohammed Assau Mobile Number : 22201977, Fonet ID 1219309 
+ Date: 2010-10-04 08:27:02 Amount : 200 
+ 
+ Customer : Benny Jørgensen Mobile Number : 40569121, Fonet ID 1219744 
+ Date: 2010-10-04 11:35:22 Amount : 200 
+ 
+ Customer : Fahrettin Gökcen Mobile Number : 28620083, Fonet ID 1227034 
+ Date: 2010-10-04 16:43:39 Amount : 200 
+ 
+ Customer : Naser Abou hamid Mobile Number : 40942347, Fonet ID 1264286 
+ Date: 2010-10-05 13:06:12 Amount : 200 
+ 
+ Customer : Shahid  Akhtar Mobile Number : 42575715, Fonet ID  
+ 
+ Customer : Shahid Akhtar Mobile Number : 42575715, Fonet ID  
+ 
+ Customer : Mohammad saeed Mobile Number : 52464027, Fonet ID 1272998 
+ Date: 2010-10-05 17:46:36 Amount : 200 
+ 
+ Customer : Sine fener Mobile Number : 42424283, Fonet ID 1276299 
+ Date: 2010-10-06 10:13:40 Amount : 200 
+ 
+ Customer : nils mærkedahl Mobile Number : 31920246, Fonet ID 1287675 
+ Date: 2010-10-06 10:25:51 Amount : 200 
+ 
+ Customer : narchlo cordova Mobile Number : 31708153, Fonet ID 1322968 
+ Date: 2010-10-06 12:22:16 Amount : 200 
+ 
+ Customer : Ahmad  Elheich Mobile Number : 40684516, Fonet ID 1325791 
+ Date: 2010-10-06 13:30:02 Amount : 200 
+ 
+ Customer : Polen Polen oversættelse Mobile Number : 29900002, Fonet ID  
+ 
+ Customer : Polen Polen oversættelse Mobile Number : 29900002, Fonet ID  
+ 
+ Customer : Mohammad Darafshi Mobile Number : 31140201, Fonet ID 1334990 
+ Date: 2010-10-06 15:47:09 Amount : 200 
+ 
+ Customer : demo Z out Forhandler 2042 demo Mobile Number : 31173305, Fonet ID 1394596 
+ Date: 2010-10-06 15:54:22 Amount : 200 
+ 
+ Customer : Michael Kamvig Jakobsen Mobile Number : 40784447, Fonet ID 1396295 
+ Date: 2010-10-06 16:52:40 Amount : 200 
+ 
+ Customer : huhittin Altin Mobile Number : 29106452, Fonet ID 1426139 
+ Date: 2010-10-07 15:08:25 Amount : 200 
+ 
+ Customer : test zz Mobile Number : 12345678, Fonet ID  
+ 
+ Customer : Haci Karakus Mobile Number : 42751445, Fonet ID 1499209 
+ Date: 2010-10-08 14:42:12 Amount : 200 
+ 
+ Customer : Sedat Sagiroglu Mobile Number : 22776233, Fonet ID 1523634 
+ Date: 2010-10-08 14:45:07 Amount : 200 
+ 
+ Customer : rubass rafiq Mobile Number : 27406090, Fonet ID  
+ 
+ Customer : rubass rafiq Mobile Number : 27406090, Fonet ID  
+ 
+ Customer : Demo forhandler 2038 Players & smokers Mobile Number : 27125079, Fonet ID 1549022 
+ Date: 2010-10-08 16:47:29 Amount : 200 
+ 
+ Customer : NAZIA FARAZ Mobile Number : 50460897, Fonet ID  
+ 
+ Customer : NAZIA FARAZ Mobile Number : 50460897, Fonet ID  
+ 
+ Customer : NAZIA FARAZ Mobile Number : 50460897, Fonet ID  
+ 
+ Customer : Irem Uluscry Mobile Number : 53576161, Fonet ID 1551070 
+ Date: 2010-10-10 12:33:27 Amount : 200 
+ 
+ Customer : Irem Ulluscry Mobile Number : 53576181, Fonet ID 1553634 
+ Date: 2010-10-10 12:44:10 Amount : 200 
+ 
+ Customer : Mohammad Ali Mobile Number : 20717790, Fonet ID  
+ 
+ Customer : Mohammad Ali Mobile Number : 20718743, Fonet ID  
+ 
+ Customer : Mirza Asad Baig Mobile Number : 41676528, Fonet ID  
+ 
+ Customer : Mirza Asad Baig Mobile Number : 41676528, Fonet ID  
+ 
+ Customer : Mirza Asad Baig Mobile Number : 41676528, Fonet ID 1554524 
+ Date: 2010-10-10 22:42:44 Amount : 200 
+ Date: 2010-10-10 22:44:30 Amount : 100 
+ Date: 2010-10-10 22:45:08 Amount : 100 
+ 
+ Customer : Sagib Hussain Mobile Number : 40504504, Fonet ID  
+ 
+ Customer : Sara  Simonsen Mobile Number : 31172324, Fonet ID  
+ 
+ Customer : Yusuf Azizullah Mobile Number : 23614647, Fonet ID 1554568 
+ Date: 2010-10-11 14:55:39 Amount : 200 
+ 
+ Customer : sana sargeel Mobile Number : 26637154, Fonet ID  
+ 
+ Customer : jahanshah Keyani Mobile Number : 50212222, Fonet ID 1558799 
+ Date: 2010-10-12 13:22:35 Amount : 200 
+ 
+ Customer : Hamid Khan Mobile Number : 22828678, Fonet ID 1594502 
+ Date: 2010-10-12 20:27:01 Amount : 200 
+ 
+ Customer : Demo forhandler 2046 City I Call Center Mobile Number : 26259114, Fonet ID 1603424 
+ Date: 2010-10-13 11:29:05 Amount : 200 
+ 
+ Customer : Forhandler 2046 demokort 2 CICC Mobile Number : 26764000, Fonet ID 1622792 
+ Date: 2010-10-13 11:30:37 Amount : 200 
+ 
+ Customer : Vinka Stojkovic Mobile Number : 28207712, Fonet ID 1635387 
+ Date: 2010-10-13 13:25:03 Amount : 200 
+ 
+ Customer : mohammad afzal Mobile Number : 26254557, Fonet ID  
+ 
+ Customer : Elin  Martinsen Mobile Number : 53426928, Fonet ID 1650807 
+ Date: 2010-10-13 15:31:51 Amount : 200 
+ 
+ Customer : khizar hayat Mobile Number : 60317701, Fonet ID  
+ 
+ Customer : ALI YOUNES Mobile Number : 50440876, Fonet ID 1681334 
+ Date: 2010-10-14 11:56:06 Amount : 200 
+ 
+ Customer : test test Mobile Number : 20771789, Fonet ID  
+ 

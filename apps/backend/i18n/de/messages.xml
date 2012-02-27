@@ -1,0 +1,2070 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd"[]>
+<xliff version="1.0">
+    <file source-language="EN" target-language="de" datatype="plaintext" original="messages" date="2010-07-22T17:23:11Z" product-name="messages" xml:space="default">
+        <header />
+        <body>
+            <trans-unit id="1" translate="yes" reformat="yes" xml:space="default">
+                <source>B2B</source>
+                <target>B2B</target>
+            </trans-unit>
+            <trans-unit id="2" translate="yes" reformat="yes" xml:space="default">
+                <source>Companies list</source>
+                <target>Unternehmen Liste</target>
+            </trans-unit>
+            <trans-unit id="3" translate="yes" reformat="yes" xml:space="default">
+                <source>Employee lists</source>
+                <target>Mitarbeiter-Listen</target>
+            </trans-unit>
+			
+            <trans-unit id="4" translate="yes" reformat="yes" xml:space="default">
+                <source>Payment History</source>
+                <target>Zahlung Geschichte</target>
+            </trans-unit>
+            <trans-unit id="5" translate="yes" reformat="yes" xml:space="default">
+                <source>Refill</source>
+                <target>Nachfüllung</target>
+            </trans-unit>
+			
+            <trans-unit id="6" translate="yes" reformat="yes" xml:space="default">
+                <source>Wls2</source>
+                <target>Wls2</target>
+            </trans-unit>
+            <trans-unit id="7" translate="yes" reformat="yes" xml:space="default">
+                <source>All Registered Customer</source>
+                <target>Alle registrierten Kunden</target>
+            </trans-unit>
+			
+            <trans-unit id="8" translate="yes" reformat="yes" xml:space="default">
+                <source>Agents</source>
+                <target>Agenten</target>
+            </trans-unit>
+			
+			
+            <trans-unit id="9" translate="yes" reformat="yes" xml:space="default">
+                <source>company list</source>
+                <target>Unternehmens liste</target>
+            </trans-unit>
+			
+            <trans-unit id="10" translate="yes" reformat="yes" xml:space="default">
+                <source>user lists</source>
+                <target>Benutzer Listen</target>
+            </trans-unit>
+			
+            <trans-unit id="11" translate="yes" reformat="yes" xml:space="default">
+                <source>Agent Per Product</source>
+                <target>Vertreter pro Produkt</target>
+            </trans-unit>
+		
+            <trans-unit id="12" translate="yes" reformat="yes" xml:space="default">
+                <source>agent commission package</source>
+                <target>Vertreter Provision Paket</target>
+            </trans-unit>
+			
+            <trans-unit id="13" translate="yes" reformat="yes" xml:space="default">
+                <source>Updates</source>
+                <target>Aktuelles</target>
+            </trans-unit>
+            <trans-unit id="14" translate="yes" reformat="yes" xml:space="default">
+                <source>New Updates</source>
+                <target>Neu Aktuelles</target>
+            </trans-unit>
+			
+            <trans-unit id="15" translate="yes" reformat="yes" xml:space="default">
+                <source>FAQ</source>
+                <target>FAQ</target>
+            </trans-unit>
+			
+            <trans-unit id="16" translate="yes" reformat="yes" xml:space="default">
+                <source>User Guide</source>
+                <target>Benutzer Leitfaden</target>
+            </trans-unit>
+			
+	
+			
+            <trans-unit id="18" translate="yes" reformat="yes" xml:space="default">
+                <source>Security</source>
+                <target>Sicherheit</target>
+            </trans-unit>
+			
+            <trans-unit id="19" translate="yes" reformat="yes" xml:space="default">
+                <source>user</source>
+                <target>Benutzer</target>
+            </trans-unit>
+			
+            <trans-unit id="20" translate="yes" reformat="yes" xml:space="default">
+                <source>Settings</source>
+                <target>Einstellungen</target>
+            </trans-unit>
+			
+            <trans-unit id="21" translate="yes" reformat="yes" xml:space="default">
+                <source>Mobile Models</source>
+                <target>Handy Modelle</target>
+            </trans-unit>
+			
+            <trans-unit id="22" translate="yes" reformat="yes" xml:space="default">
+                <source>Mobile Brands</source>
+                <target>Handy Marken</target>
+            </trans-unit>
+			
+            <trans-unit id="23" translate="yes" reformat="yes" xml:space="default">
+                <source>Mobile Operator</source>
+                <target>Handy Betreiber</target>
+            </trans-unit>
+			
+            <trans-unit id="24" translate="yes" reformat="yes" xml:space="default">
+                <source>Postal charges</source>
+                <target>Postgebühren</target>
+            </trans-unit>
+			
+            <trans-unit id="25" translate="yes" reformat="yes" xml:space="default">
+                <source>products</source>
+                <target>Produkte</target>
+            </trans-unit>
+			
+            <trans-unit id="26" translate="yes" reformat="yes" xml:space="default">
+                <source>Language Type</source>
+                <target>Sprache Typ</target>
+            </trans-unit>
+			
+            <trans-unit id="27" translate="yes" reformat="yes" xml:space="default">
+                <source>Cities</source>
+                <target>Städte</target>
+            </trans-unit>
+			
+            <trans-unit id="28" translate="yes" reformat="yes" xml:space="default">
+                <source>SMS TEXT</source>
+                <target>SMS Wortlaut</target>
+            </trans-unit>
+			
+            <trans-unit id="29" translate="yes" reformat="yes" xml:space="default">
+                <source>Usage Alert</source>
+                <target>Nutzung Alarm</target>
+            </trans-unit>
+			
+            <trans-unit id="30" translate="yes" reformat="yes" xml:space="default">
+                <source>Usage Alert Sender</source>
+                <target>Nutzung Alarm Sendet</target>
+            </trans-unit>
+			
+            <trans-unit id="31" translate="yes" reformat="yes" xml:space="default">
+                <source>Telecom Operator</source>
+                <target>Telekom Betreibert</target>
+            </trans-unit>
+			
+            <trans-unit id="32" translate="yes" reformat="yes" xml:space="default">
+                <source>Logout</source>
+                <target>Ausloggen</target>
+            </trans-unit>
+			
+            <trans-unit id="33" translate="yes" reformat="yes" xml:space="default">
+                <source>B2B Company List</source>
+                <target>B2B Unternehmen Liste</target>
+            </trans-unit>
+			
+            <trans-unit id="34" translate="yes" reformat="yes" xml:space="default">
+                <source>Company name:</source>
+                <target>Firmen namen:</target>
+            </trans-unit>
+			
+            <trans-unit id="35" translate="yes" reformat="yes" xml:space="default">
+                <source>Vat no:</source>
+                <target>Mehrwertsteuer No:</target>
+            </trans-unit>
+			
+            <trans-unit id="36" translate="yes" reformat="yes" xml:space="default">
+                <source>no result</source>
+                <target>Kein Ergebnis</target>
+            </trans-unit>
+			
+            <trans-unit id="37" translate="yes" reformat="yes" xml:space="default">
+                <source>reset</source>
+                <target>Zurücksetzen</target>
+            </trans-unit>
+			
+            <trans-unit id="38" translate="yes" reformat="yes" xml:space="default">
+                <source>filter</source>
+                <target>Filtern</target>
+            </trans-unit>
+			
+            <trans-unit id="39" translate="yes" reformat="yes" xml:space="default">
+                <source>create</source>
+                <target>Schaffen</target>
+            </trans-unit>
+			
+            <trans-unit id="40" translate="yes" reformat="yes" xml:space="default">
+                <source>Create/Edit Company</source>
+                <target>Schaffen/Bearbeiten Unternehmen</target>
+            </trans-unit>
+			
+            <trans-unit id="41" translate="yes" reformat="yes" xml:space="default">
+                <source>Address:</source>
+                <target>Anschrift:</target>
+            </trans-unit>
+			
+            <trans-unit id="42" translate="yes" reformat="yes" xml:space="default">
+                <source>Post code:</source>
+                <target>Postleitzahl:</target>
+            </trans-unit>
+			
+            <trans-unit id="43" translate="yes" reformat="yes" xml:space="default">
+                <source>Country:</source>
+                <target>land:</target>
+            </trans-unit>
+			
+            <trans-unit id="44" translate="yes" reformat="yes" xml:space="default">
+                <source>City:</source>
+                <target>Stadt:</target>
+            </trans-unit>
+			
+            <trans-unit id="45" translate="yes" reformat="yes" xml:space="default">
+                <source>Contact name:</source>
+                <target>Kontakt Namen:</target>
+            </trans-unit>
+			
+            <trans-unit id="46" translate="yes" reformat="yes" xml:space="default">
+                <source>Email:</source>
+                <target>E-Mail:</target>
+            </trans-unit>
+			
+            <trans-unit id="47" translate="yes" reformat="yes" xml:space="default">
+                <source>Head phone number:</source>
+                <target>Leiter Telefonnummer:</target>
+            </trans-unit>
+			
+            <trans-unit id="48" translate="yes" reformat="yes" xml:space="default">
+                <source>Fax number:</source>
+                <target>Fax-Nummer:</target>
+            </trans-unit>
+			
+            <trans-unit id="49" translate="yes" reformat="yes" xml:space="default">
+                <source>Website:</source>
+                <target>Webseite:</target>
+            </trans-unit>
+			
+            <trans-unit id="50" translate="yes" reformat="yes" xml:space="default">
+                <source>Status:</source>
+                <target>Status:</target>
+            </trans-unit>
+			
+            <trans-unit id="51" translate="yes" reformat="yes" xml:space="default">
+                <source>Company size:</source>
+                <target>Unternehmens Größe:</target>
+            </trans-unit>
+			
+            <trans-unit id="52" translate="yes" reformat="yes" xml:space="default">
+                <source>Company type:</source>
+                <target>Unternehmens Typ:</target>
+            </trans-unit>
+			
+            <trans-unit id="53" translate="yes" reformat="yes" xml:space="default">
+                <source>Customer type:</source>
+                <target>Kunde Typ:</target>
+            </trans-unit>
+			
+            <trans-unit id="54" translate="yes" reformat="yes" xml:space="default">
+                <source>Invoice method:</source>
+                <target>Rechnung Methode:</target>
+            </trans-unit>
+			
+            <trans-unit id="55" translate="yes" reformat="yes" xml:space="default">
+                <source>Agent company:</source>
+                <target>Vertreter Unternehmen:</target>
+            </trans-unit>
+			
+            <trans-unit id="56" translate="yes" reformat="yes" xml:space="default">
+                <source>Registration date:</source>
+                <target>Vertreter Unternehmen:</target>
+            </trans-unit>
+			
+            <trans-unit id="57" translate="yes" reformat="yes" xml:space="default">
+                <source>Created at:</source>
+                <target>Erstellt am:</target>
+            </trans-unit>
+			
+            <trans-unit id="58" translate="yes" reformat="yes" xml:space="default">
+                <source>Registration Doc:</source>
+                <target>Anmeldung Dok:</target>
+            </trans-unit>
+			
+            <trans-unit id="59" translate="yes" reformat="yes" xml:space="default">
+                <source>list</source>
+                <target>Liste</target>
+            </trans-unit>
+			
+            <trans-unit id="60" translate="yes" reformat="yes" xml:space="default">
+                <source>save</source>
+                <target>Sparen</target>
+            </trans-unit>
+			
+            <trans-unit id="61" translate="yes" reformat="yes" xml:space="default">
+                <source>save and add</source>
+                <target>Speichern und fügen</target>
+            </trans-unit>
+			
+            <trans-unit id="62" translate="yes" reformat="yes" xml:space="default">
+                <source>Select City</source>
+                <target>Wählen Stadt</target>
+            </trans-unit>
+			
+            <trans-unit id="63" translate="yes" reformat="yes" xml:space="default">
+                <source>Select Status</source>
+                <target>Wählen Status</target>
+            </trans-unit>
+			
+            <trans-unit id="64" translate="yes" reformat="yes" xml:space="default">
+                <source>Select Company Size</source>
+                <target>Wählen Sie Größe des Unternehmens</target>
+            </trans-unit>
+			
+            <trans-unit id="65" translate="yes" reformat="yes" xml:space="default">
+                <source>Select Company Type</source>
+                <target>Wählen Firma Typ</target>
+            </trans-unit>
+			
+            <trans-unit id="66" translate="yes" reformat="yes" xml:space="default">
+                <source>Select Customer Type</source>
+                <target>Wählen Sie Kunden-Typ</target>
+            </trans-unit>
+			
+            <trans-unit id="67" translate="yes" reformat="yes" xml:space="default">
+                <source>Letter</source>
+                <target>Brief</target>
+            </trans-unit>
+			
+            <trans-unit id="68" translate="yes" reformat="yes" xml:space="default">
+                <source>Email</source>
+                <target>E-Mail</target>
+            </trans-unit>
+			
+            <trans-unit id="70" translate="yes" reformat="yes" xml:space="default">
+                <source>My employee List</source>
+                <target>Meine Mitarbeiter Liste</target>
+            </trans-unit>
+			
+            <trans-unit id="71" translate="yes" reformat="yes" xml:space="default">
+                <source>Create New</source>
+                <target>Schaffen Neu</target>
+            </trans-unit>
+			
+            <trans-unit id="72" translate="yes" reformat="yes" xml:space="default">
+                <source>Company</source>
+                <target>Firma</target>
+            </trans-unit>
+			
+            <trans-unit id="73" translate="yes" reformat="yes" xml:space="default">
+                <source>First name</source>
+                <target>Vorname</target>
+            </trans-unit>
+			
+            <trans-unit id="74" translate="yes" reformat="yes" xml:space="default">
+                <source>product</source>
+                <target>Produkt</target>
+            </trans-unit>
+			
+            <trans-unit id="75" translate="yes" reformat="yes" xml:space="default">
+                <source>Mobile number</source>
+                <target>Handy Nummer</target>
+            </trans-unit>
+			
+            <trans-unit id="76" translate="yes" reformat="yes" xml:space="default">
+                <source>Created at</source>
+                <target>Erstellt am</target>
+            </trans-unit>
+			
+            <trans-unit id="77" translate="yes" reformat="yes" xml:space="default">
+                <source>Action</source>
+                <target>Aktion</target>
+            </trans-unit>
+			
+            <trans-unit id="78" translate="yes" reformat="yes" xml:space="default">
+                <source>First name:</source>
+                <target>Vorname</target>
+            </trans-unit>
+			
+            <trans-unit id="78" translate="yes" reformat="yes" xml:space="default">
+                <source>Last name:</source>
+                <target>Nachname:</target>
+            </trans-unit>
+			
+            <trans-unit id="78" translate="yes" reformat="yes" xml:space="default">
+                <source>Company:</source>
+                <target>Firma:</target>
+            </trans-unit>
+			
+            <trans-unit id="79" translate="yes" reformat="yes" xml:space="default">
+                <source>Mobile number:</source>
+                <target>Handy nummer:</target>
+            </trans-unit>
+			
+            <trans-unit id="80" translate="yes" reformat="yes" xml:space="default">
+                <source>E-Mail:</source>
+                <target>E-Mail:</target>
+            </trans-unit>
+			
+            <trans-unit id="81" translate="yes" reformat="yes" xml:space="default">
+                <source>Product:</source>
+                <target>Produkt:</target>
+            </trans-unit>
+			
+            <trans-unit id="82" translate="yes" reformat="yes" xml:space="default">
+                <source>Date &amp; Time</source>
+                <target>Datum &amp; Zeit</target>
+            </trans-unit>
+			
+            <trans-unit id="83" translate="yes" reformat="yes" xml:space="default">
+                <source>Company and Name</source>
+                <target>Firma &amp; Namen</target>
+            </trans-unit>
+			
+            <trans-unit id="84" translate="yes" reformat="yes" xml:space="default">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+			
+            <trans-unit id="85" translate="yes" reformat="yes" xml:space="default">
+                <source>Amount</source>
+                <target>Höhe</target>
+            </trans-unit>
+			
+            <trans-unit id="86" translate="yes" reformat="yes" xml:space="default">
+                <source>There are currently no transactions to show.</source>
+                <target>Es liegen noch keine Transaktionen zu zeigen.</target>
+            </trans-unit>
+			
+            <trans-unit id="87" translate="yes" reformat="yes" xml:space="default">
+                <source>Refill:</source>
+                <target>Nachfüllung:</target>
+            </trans-unit>
+			
+            <trans-unit id="88" translate="yes" reformat="yes" xml:space="default">
+                <source>Id</source>
+                <target>Identifikation</target>
+            </trans-unit>
+			
+            <trans-unit id="89" translate="yes" reformat="yes" xml:space="default">
+                <source>Customer Number</source>
+                <target>Kundennummer</target>
+            </trans-unit>
+			
+            <trans-unit id="90" translate="yes" reformat="yes" xml:space="default">
+                <source>Mobile Number</source>
+                <target>Handy Nummer</target>
+            </trans-unit>
+			
+            <trans-unit id="91" translate="yes" reformat="yes" xml:space="default">
+                <source>First Name</source>
+                <target>Vorname</target>
+            </trans-unit>
+			
+            <trans-unit id="92" translate="yes" reformat="yes" xml:space="default">
+                <source>Last Name</source>
+                <target>Nachname</target>
+            </trans-unit>
+			
+            <trans-unit id="93" translate="yes" reformat="yes" xml:space="default">
+                <source>Unique ID</source>
+                <target>Einzigartig ID</target>
+            </trans-unit>
+			
+            <trans-unit id="94" translate="yes" reformat="yes" xml:space="default">
+                <source>results</source>
+                <target>Ergebnisse</target>
+            </trans-unit>
+			
+            <trans-unit id="95" translate="yes" reformat="yes" xml:space="default">
+                <source>view Detail</source>
+                <target>Ansicht Einzelheit</target>
+            </trans-unit>
+			
+            <trans-unit id="96" translate="yes" reformat="yes" xml:space="default">
+                <source>agent_company list</source>
+                <target>Vertreter Firma Liste</target>
+            </trans-unit>
+			
+            <trans-unit id="97" translate="yes" reformat="yes" xml:space="default">
+                <source>Id:</source>
+                <target>Identifikation:</target>
+            </trans-unit>
+			
+            <trans-unit id="98" translate="yes" reformat="yes" xml:space="default">
+                <source>Name:</source>
+                <target>Namen:</target>
+            </trans-unit>
+			
+            <trans-unit id="99" translate="yes" reformat="yes" xml:space="default">
+                <source>Vat Number</source>
+                <target>Mehrwertsteuer Nummer</target>
+            </trans-unit>
+			
+            <trans-unit id="100" translate="yes" reformat="yes" xml:space="default">
+                <source>Contact name</source>
+                <target>Namen des Kontakts</target>
+            </trans-unit>
+			
+            <trans-unit id="101" translate="yes" reformat="yes" xml:space="default">
+                <source>Head phone number</source>
+                <target>Leiter Telefonnummer</target>
+            </trans-unit>
+			
+            <trans-unit id="102" translate="yes" reformat="yes" xml:space="default">
+                <source>Status</source>
+                <target>Status</target>
+            </trans-unit>
+			
+            <trans-unit id="103" translate="yes" reformat="yes" xml:space="default">
+                <source>Country</source>
+                <target>Land</target>
+            </trans-unit>
+			
+            <trans-unit id="104" translate="yes" reformat="yes" xml:space="default">
+                <source>Registration revenue commissision</source>
+                <target>Anmeldung Umsatz commissision</target>
+            </trans-unit>
+				
+            <trans-unit id="105" translate="yes" reformat="yes" xml:space="default">
+                <source>Refill revenue commissision</source>
+                <target>Nachfüllung Umsatz commissision</target>
+            </trans-unit>
+			
+            <trans-unit id="106" translate="yes" reformat="yes" xml:space="default">
+                <source>Revenue at shop</source>
+                <target>Der Umsatz im Geschäft</target>
+            </trans-unit>
+			
+            <trans-unit id="107" translate="yes" reformat="yes" xml:space="default">
+                <source>Registration revenue</source>
+                <target>Anmeldung Umsatz</target>
+            </trans-unit>
+			
+            <trans-unit id="108" translate="yes" reformat="yes" xml:space="default">
+                <source>Refill revenue</source>
+                <target>Nachfüllung Umsatz</target>
+            </trans-unit>
+			
+            <trans-unit id="109" translate="yes" reformat="yes" xml:space="default">
+                <source>Sms code</source>
+                <target>SMS Kode</target>
+            </trans-unit>
+			
+            <trans-unit id="110" translate="yes" reformat="yes" xml:space="default">
+                <source>Invoice method</source>
+                <target>Rechnung Methode</target>
+            </trans-unit>
+			
+            <trans-unit id="111" translate="yes" reformat="yes" xml:space="default">
+                <source>Actions</source>
+                <target>Aktionen</target>
+            </trans-unit>
+			
+            <trans-unit id="112" translate="yes" reformat="yes" xml:space="default">
+                <source>Cvr number:</source>
+                <target>CVR Nummer:</target>
+            </trans-unit>
+			
+			
+            <trans-unit id="114" translate="yes" reformat="yes" xml:space="default">
+                <source>Ean number:</source>
+                <target>Ean Nummer:</target>
+            </trans-unit>
+			
+            <trans-unit id="115" translate="yes" reformat="yes" xml:space="default">
+                <source>Cityname:</source>
+                <target>Ortsname:</target>
+            </trans-unit>
+			
+            <trans-unit id="116" translate="yes" reformat="yes" xml:space="default">
+                <source>Is prepaid:</source>
+                <target>Portofrei ist:</target>
+            </trans-unit>
+
+            <trans-unit id="118" translate="yes" reformat="yes" xml:space="default">
+                <source>delete</source>
+                <target>Löschen</target>
+            </trans-unit>
+          
+            <trans-unit id="120" translate="yes" reformat="yes" xml:space="default">
+                <source>Vat Number:</source>
+                <target>Mehrwertsteuer Nummer:</target>
+            </trans-unit>
+            <trans-unit id="121" translate="yes" reformat="yes" xml:space="default">
+                <source>Agent company</source>
+                <target>Vertreter Firma</target>
+            </trans-unit>
+            <trans-unit id="122" translate="yes" reformat="yes" xml:space="default">
+                <source>Username</source>
+                <target>Benutzername</target>
+            </trans-unit>
+            <trans-unit id="123" translate="yes" reformat="yes" xml:space="default">
+                <source>Password</source>
+                <target>Kennwort</target>
+            </trans-unit>
+            <trans-unit id="124" translate="yes" reformat="yes" xml:space="default">
+                <source>result</source>
+                <target>Ergebnis</target>
+            </trans-unit>
+            <trans-unit id="125" translate="yes" reformat="yes" xml:space="default">
+                <source>Username:</source>
+                <target>Benutzername:</target>
+            </trans-unit>
+            <trans-unit id="126" translate="yes" reformat="yes" xml:space="default">
+                <source>Password:</source>
+                <target>Kennwort:</target>
+            </trans-unit>
+            <trans-unit id="127" translate="yes" reformat="yes" xml:space="default">
+                <source>Agent company id</source>
+                <target>Vertreter Firma Identifikation</target>
+            </trans-unit>
+            <trans-unit id="128" translate="yes" reformat="yes" xml:space="default">
+                <source>Assign Product</source>
+                <target>AWeisen Produkt</target>
+            </trans-unit>
+            <trans-unit id="129" translate="yes" reformat="yes" xml:space="default">
+                <source>Product For Agent:</source>
+                <target>Produkt Für Vertreter:</target>
+            </trans-unit>
+            <trans-unit id="130" translate="yes" reformat="yes" xml:space="default">
+                <source>Product Name</source>
+                <target>Produkt Namen</target>
+            </trans-unit>
+            <trans-unit id="131" translate="yes" reformat="yes" xml:space="default">
+                <source>Reg share value</source>
+                <target>Reg Anteilswert</target>
+            </trans-unit>
+            <trans-unit id="132" translate="yes" reformat="yes" xml:space="default">
+                <source>Reg. share value %</source>
+                <target>Reg. Anteilswert %</target>
+            </trans-unit>
+            <trans-unit id="133" translate="yes" reformat="yes" xml:space="default">
+                <source>Reg share enable</source>
+                <target>Reg teilhaben können</target>
+            </trans-unit>
+            <trans-unit id="134" translate="yes" reformat="yes" xml:space="default">
+                <source>Extra payments share value</source>
+                <target>Extra-Zahlungen Anteilswert</target>
+            </trans-unit>
+            <trans-unit id="135" translate="yes" reformat="yes" xml:space="default">
+                <source>extra refill share value %</source>
+                <target>Extra-Nachfüllung Anteilswert %</target>
+            </trans-unit>
+            <trans-unit id="136" translate="yes" reformat="yes" xml:space="default">
+                <source>Extra payments share enable</source>
+                <target>Extra-Zahlungen teilhaben können</target>
+            </trans-unit>
+            <trans-unit id="137" translate="yes" reformat="yes" xml:space="default">
+                <source>Update</source>
+                <target>Aktualisierung</target>
+            </trans-unit>
+            <trans-unit id="138" translate="yes" reformat="yes" xml:space="default">
+                <source>Is Reg. share value %</source>
+                <target>Ist Reg. Anteilswert %</target>
+            </trans-unit>
+            <trans-unit id="139" translate="yes" reformat="yes" xml:space="default">
+                <source>Is extra refill share value %</source>
+                <target>Ist extra Nachfüllung Anteilswert</target>
+            </trans-unit>
+            <trans-unit id="140" translate="yes" reformat="yes" xml:space="default">
+                <source>Heading</source>
+                <target>Überschrift</target>
+            </trans-unit>
+            <trans-unit id="141" translate="yes" reformat="yes" xml:space="default">
+                <source>Message</source>
+                <target>Nachricht</target>
+            </trans-unit>
+            <trans-unit id="142" translate="yes" reformat="yes" xml:space="default">
+                <source>Starting date</source>
+                <target>Startdatum</target>
+            </trans-unit>
+            <trans-unit id="143" translate="yes" reformat="yes" xml:space="default">
+                <source>Expire date</source>
+                <target>Ablaufdatum</target>
+            </trans-unit>
+            <trans-unit id="144" translate="yes" reformat="yes" xml:space="default">
+                <source>Heading:</source>
+                <target>Überschrift:</target>
+            </trans-unit>
+            <trans-unit id="145" translate="yes" reformat="yes" xml:space="default">
+                <source>Message:</source>
+                <target>Nachricht:</target>
+            </trans-unit>
+            <trans-unit id="146" translate="yes" reformat="yes" xml:space="default">
+                <source>Starting date:</source>
+                <target>Startdatum:</target>
+            </trans-unit>
+            <trans-unit id="147" translate="yes" reformat="yes" xml:space="default">
+                <source>Expire date:</source>
+                <target>Ablaufdatum:</target>
+            </trans-unit>
+            <trans-unit id="148" translate="yes" reformat="yes" xml:space="default">
+                <source>create/edit New update</source>
+                <target>Erstellen / bearbeiten Neues Update</target>
+            </trans-unit>
+            <trans-unit id="149" translate="yes" reformat="yes" xml:space="default">
+                <source>New update List</source>
+                <target>Neues Aktualisieren Liste</target>
+            </trans-unit>
+            <trans-unit id="150" translate="yes" reformat="yes" xml:space="default">
+                <source>Edit Userguide</source>
+                <target>Bearbeiten Benutzer Leitfaden</target>
+            </trans-unit>
+            <trans-unit id="151" translate="yes" reformat="yes" xml:space="default">
+                <source>Userguide List</source>
+                <target>Benutzer Leitfaden Liste</target>
+            </trans-unit>
+            <trans-unit id="152" translate="yes" reformat="yes" xml:space="default">
+                <source>New Userguide</source>
+                <target>Neu Benutzer Leitfaden</target>
+            </trans-unit>
+            <trans-unit id="153" translate="yes" reformat="yes" xml:space="default">
+                <source>device</source>
+                <target>Gerät</target>
+            </trans-unit>
+            <trans-unit id="154" translate="yes" reformat="yes" xml:space="default">
+                <source>Mobile brand</source>
+                <target>Handy-Marke</target>
+            </trans-unit>
+            <trans-unit id="155" translate="yes" reformat="yes" xml:space="default">
+                <source>manufacturer list</source>
+                <target>Hersteller Liste</target>
+            </trans-unit>
+            <trans-unit id="156" translate="yes" reformat="yes" xml:space="default">
+                <source>device list</source>
+                <target>Geräteliste</target>
+            </trans-unit>
+            <trans-unit id="157" translate="yes" reformat="yes" xml:space="default">
+                <source>Company Name</source>
+                <target>Firmen namen</target>
+            </trans-unit>
+
+            <trans-unit id="158" translate="yes" reformat="yes" xml:space="default">
+                <source>Vat no</source>
+                <target>Mehrwertsteuer no</target>
+            </trans-unit>
+            <trans-unit id="159" translate="yes" reformat="yes" xml:space="default">
+                <source>WLS2 Setting</source>
+                <target>WLS2 einstellen</target>
+            </trans-unit>
+            <trans-unit id="160" translate="yes" reformat="yes" xml:space="default">
+                <source>Manufacturer:</source>
+                <target>Hersteller:</target>
+            </trans-unit>
+            <trans-unit id="161" translate="yes" reformat="yes" xml:space="default">
+                <source>Postal Charges</source>
+                <target>Postgebühren</target>
+            </trans-unit>
+            <trans-unit id="162" translate="yes" reformat="yes" xml:space="default">
+                <source>Charges</source>
+                <target>Gebühren</target>
+            </trans-unit>
+            <trans-unit id="163" translate="yes" reformat="yes" xml:space="default">
+                <source>Text heading</source>
+                <target>Wortlaut Überschrift</target>
+            </trans-unit>
+            <trans-unit id="164" translate="yes" reformat="yes" xml:space="default">
+                <source>For text</source>
+                <target>Für Wortlaut</target>
+            </trans-unit>
+            <trans-unit id="165" translate="yes" reformat="yes" xml:space="default">
+                <source>Message text</source>
+                <target>Wortlaut der Nachricht</target>
+            </trans-unit>
+            <trans-unit id="166" translate="yes" reformat="yes" xml:space="default">
+                <source>agent_user list</source>
+                <target>Vertreter Benutzer Liste</target>
+            </trans-unit>
+            <trans-unit id="167" translate="yes" reformat="yes" xml:space="default">
+                <source>edit agent_user</source>
+                <target>Bearbeiten Vertreter Benutzer</target>
+            </trans-unit>
+            <trans-unit id="168" translate="yes" reformat="yes" xml:space="default">
+                <source>Reg share value:</source>
+                <target>Reg Anteilswert:</target>
+            </trans-unit>
+            <trans-unit id="169" translate="yes" reformat="yes" xml:space="default">
+                <source>Is Reg. share value %:</source>
+                <target>Ist Reg. Aktienwert%:</target>
+            </trans-unit>
+            <trans-unit id="170" translate="yes" reformat="yes" xml:space="default">
+                <source>Extra payments share value:</source>
+                <target>Extra-Zahlungen Anteilswert:</target>
+            </trans-unit>
+            <trans-unit id="171" translate="yes" reformat="yes" xml:space="default">
+                <source>Is extra refill share value %:</source>
+                <target>Ist extra Nachfüllung Anteilswert%:</target>
+            </trans-unit>
+            <trans-unit id="172" translate="yes" reformat="yes" xml:space="default">
+                <source>create/edit agent commission package</source>
+                <target>Erstellen/bearbeiten Maklergebühren Paket</target>
+            </trans-unit>
+            <trans-unit id="173" translate="yes" reformat="yes" xml:space="default">
+                <source>Agent Commission Package List</source>
+                <target>Agent-Kommission Paketliste</target>
+            </trans-unit>
+            <trans-unit id="174" translate="yes" reformat="yes" xml:space="default">
+                <source>Question</source>
+                <target>Frage</target>
+            </trans-unit>
+            <trans-unit id="175" translate="yes" reformat="yes" xml:space="default">
+                <source>Answer</source>
+                <target>Antwort</target>
+            </trans-unit>
+            <trans-unit id="176" translate="yes" reformat="yes" xml:space="default">
+                <source>faqs list</source>
+                <target>Faq-Liste</target>
+            </trans-unit>
+            <trans-unit id="177" translate="yes" reformat="yes" xml:space="default">
+                <source>Edit Faqs</source>
+                <target>Bearbeiten Faqs</target>
+            </trans-unit>
+            <trans-unit id="178" translate="yes" reformat="yes" xml:space="default">
+                <source>Question:</source>
+                <target>Frage:</target>
+            </trans-unit>
+            <trans-unit id="179" translate="yes" reformat="yes" xml:space="default">
+                <source>Answer:</source>
+                <target>Antwort:</target>
+            </trans-unit>
+            <trans-unit id="180" translate="yes" reformat="yes" xml:space="default">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="181" translate="yes" reformat="yes" xml:space="default">
+                <source>Cancel</source>
+                <target>kündigen</target>
+            </trans-unit>
+            <trans-unit id="182" translate="yes" reformat="yes" xml:space="default">
+                <source>Create at</source>
+                <target>Create an</target>
+            </trans-unit>
+            <trans-unit id="183" translate="yes" reformat="yes" xml:space="default">
+                <source>Status id</source>
+                <target>Status-ID</target>
+            </trans-unit>
+            <trans-unit id="184" translate="yes" reformat="yes" xml:space="default">
+                <source>Country id</source>
+                <target>Land-ID</target>
+            </trans-unit>
+            <trans-unit id="185" translate="yes" reformat="yes" xml:space="default">
+                <source>Save</source>
+                <target>Sparen</target>
+            </trans-unit>
+            <trans-unit id="186" translate="yes" reformat="yes" xml:space="default">
+                <source>New</source>
+                <target>Neu</target>
+            </trans-unit>
+            <trans-unit id="187" translate="yes" reformat="yes" xml:space="default">
+                <source>user list</source>
+                <target>Benutzer-Liste</target>
+            </trans-unit>
+            <trans-unit id="188" translate="yes" reformat="yes" xml:space="default">
+                <source>Role</source>
+                <target>Rolle</target>
+            </trans-unit>
+            <trans-unit id="189" translate="yes" reformat="yes" xml:space="default">
+                <source>Is super user</source>
+                <target>Ist Super Benutzer</target>
+            </trans-unit>
+            <trans-unit id="190" translate="yes" reformat="yes" xml:space="default">
+                <source>Role:</source>
+                <target>Rolle:</target>
+            </trans-unit>
+            <trans-unit id="186" translate="yes" reformat="yes" xml:space="default">
+                <source>Is super user:</source>
+                <target>Ist Super Benutzer:</target>
+            </trans-unit>
+            <trans-unit id="191" translate="yes" reformat="yes" xml:space="default">
+                <source>edit manufacturer</source>
+                <target>Bearbeiten Hersteller</target>
+            </trans-unit>
+            <trans-unit id="192" translate="yes" reformat="yes" xml:space="default">
+                <source>Create/Edit Telecom Operator</source>
+                <target>Schaffen/bearbeiten Telekom-Betreiber</target>
+            </trans-unit>
+            <trans-unit id="193" translate="yes" reformat="yes" xml:space="default">
+                <source>edit postal_charges</source>
+                <target>Bearbeiten Post-Gebühren</target>
+            </trans-unit>
+            <trans-unit id="194" translate="yes" reformat="yes" xml:space="default">
+                <source>Charges:</source>
+                <target>Gebühren:</target>
+            </trans-unit>
+            <trans-unit id="195" translate="yes" reformat="yes" xml:space="default">
+                <source>General Setting</source>
+                <target>Allgemeine Einstellungen</target>
+            </trans-unit>
+            <trans-unit id="196" translate="yes" reformat="yes" xml:space="default">
+                <source>product list</source>
+                <target>Produkt-Liste</target>
+            </trans-unit>
+            <trans-unit id="197" translate="yes" reformat="yes" xml:space="default">
+                <source>Price</source>
+                <target>Preis</target>
+            </trans-unit>
+            <trans-unit id="198" translate="yes" reformat="yes" xml:space="default">
+                <source>Initial balance</source>
+                <target>Erste Bilanz</target>
+            </trans-unit>
+            <trans-unit id="199" translate="yes" reformat="yes" xml:space="default">
+                <source>Customer Module</source>
+                <target>Kunde-Modul</target>
+            </trans-unit>
+            <trans-unit id="200" translate="yes" reformat="yes" xml:space="default">
+                <source>Agent Module</source>
+                <target>Vertreter-Modul</target>
+            </trans-unit>
+            <trans-unit id="201" translate="yes" reformat="yes" xml:space="default">
+                <source>SMS Code</source>
+                <target>SMS-Kode</target>
+            </trans-unit>
+            <trans-unit id="202" translate="yes" reformat="yes" xml:space="default">
+                <source>Product order</source>
+                <target>Produkt bestellen</target>
+            </trans-unit>
+            <trans-unit id="203" translate="yes" reformat="yes" xml:space="default">
+                <source>Create/Edit Product</source>
+                <target>Schaffen/bearbeiten Produkt</target>
+            </trans-unit>
+            <trans-unit id="204" translate="yes" reformat="yes" xml:space="default">
+                <source>Product Name:</source>
+                <target>Produkt Namen:</target>
+            </trans-unit>
+            <trans-unit id="205" translate="yes" reformat="yes" xml:space="default">
+                <source>Price:</source>
+                <target>Preis:</target>
+            </trans-unit>
+            <trans-unit id="206" translate="yes" reformat="yes" xml:space="default">
+                <source>Description:</source>
+                <target>Beschreibung:</target>
+            </trans-unit>
+            <trans-unit id="207" translate="yes" reformat="yes" xml:space="default">
+                <source>Initial balance:</source>
+                <target>Erste Bilanz:</target>
+            </trans-unit>
+            <trans-unit id="208" translate="yes" reformat="yes" xml:space="default">
+                <source>Customer Module:</source>
+                <target>Kunden-Modul:</target>
+            </trans-unit>
+            <trans-unit id="209" translate="yes" reformat="yes" xml:space="default">
+                <source>Agent Module:</source>
+                <target>Vertreter-Modul:</target>
+            </trans-unit>
+            <trans-unit id="210" translate="yes" reformat="yes" xml:space="default">
+                <source>Sms code:</source>
+                <target>SMS-Kode:</target>
+            </trans-unit>
+            <trans-unit id="211" translate="yes" reformat="yes" xml:space="default">
+                <source>Create/Edit Country</source>
+                <target>Schaffen/bearbeiten Land</target>
+            </trans-unit>
+            <trans-unit id="212" translate="yes" reformat="yes" xml:space="default">
+                <source>Language:</source>
+                <target>Sprache:</target>
+            </trans-unit>
+            <trans-unit id="213" translate="yes" reformat="yes" xml:space="default">
+                <source>Language Symbol:</source>
+                <target>Sprache Zeichen:</target>
+            </trans-unit>
+            <trans-unit id="214" translate="yes" reformat="yes" xml:space="default">
+                <source>Currency:</source>
+                <target>Währung:</target>
+            </trans-unit>
+            <trans-unit id="215" translate="yes" reformat="yes" xml:space="default">
+                <source>Cbf rate</source>
+                <target>Cbf Satz</target>
+            </trans-unit>
+            <trans-unit id="216" translate="yes" reformat="yes" xml:space="default">
+                <source>Cbf rate:</source>
+                <target>Cbf Satz:</target>
+            </trans-unit>
+            <trans-unit id="217" translate="yes" reformat="yes" xml:space="default">
+                <source>Calling code</source>
+                <target>Telefonvorwahl</target>
+            </trans-unit>
+            <trans-unit id="218" translate="yes" reformat="yes" xml:space="default">
+                <source>Calling code:</source>
+                <target>Telefonvorwahl:</target>
+            </trans-unit>
+            <trans-unit id="219" translate="yes" reformat="yes" xml:space="default">
+                <source>Product order:</source>
+                <target>Artikel bestellen:</target>
+            </trans-unit>
+            <trans-unit id="220" translate="yes" reformat="yes" xml:space="default">
+                <source>Language</source>
+                <target>Sprache</target>
+            </trans-unit>
+            <trans-unit id="221" translate="yes" reformat="yes" xml:space="default">
+                <source>Language Symbol</source>
+                <target>Sprache Zeichen</target>
+            </trans-unit>
+            <trans-unit id="222" translate="yes" reformat="yes" xml:space="default">
+                <source>Currency</source>
+                <target>Währung</target>
+            </trans-unit>
+            <trans-unit id="223" translate="yes" reformat="yes" xml:space="default">
+                <source>Currency symbol</source>
+                <target>Währung Zeichen</target>
+            </trans-unit>
+            <trans-unit id="224" translate="yes" reformat="yes" xml:space="default">
+                <source>Base url</source>
+                <target>Basis-URL</target>
+            </trans-unit>
+            <trans-unit id="225" translate="yes" reformat="yes" xml:space="default">
+                <source>Refill Amount Must be Comma Separate</source>
+                <target>Nachfüllung Betrag muss Komma getrennt</target>
+            </trans-unit>
+            <trans-unit id="226" translate="yes" reformat="yes" xml:space="default">
+                <source>Base url:</source>
+                <target>Basis-URL:</target>
+            </trans-unit>
+            <trans-unit id="227" translate="yes" reformat="yes" xml:space="default">
+                <source>Currency symbol:</source>
+                <target>Währung Zeichen:</target>
+            </trans-unit>
+            <trans-unit id="228" translate="yes" reformat="yes" xml:space="default">
+                <source>Create/Edit City</source>
+                <target>Schaffen/bearbeiten Stadt</target>
+            </trans-unit>
+            <trans-unit id="229" translate="yes" reformat="yes" xml:space="default">
+                <source>edit sms_text</source>
+                <target>Bearbeiten SMS Wortlaut</target>
+            </trans-unit>
+            <trans-unit id="230" translate="yes" reformat="yes" xml:space="default">
+                <source>Text heading:</source>
+                <target>Wortlaut Überschrift:</target>
+            </trans-unit>
+            <trans-unit id="231" translate="yes" reformat="yes" xml:space="default">
+                <source>For text:</source>
+                <target>Für Wortlaut:</target>
+            </trans-unit>
+            <trans-unit id="232" translate="yes" reformat="yes" xml:space="default">
+                <source>Message text:</source>
+                <target>Nachricht Wortlaut:</target>
+            </trans-unit>
+         
+            <trans-unit id="234" translate="yes" reformat="yes" xml:space="default">
+                <source>Alert amount:</source>
+                <target>Alarmstufe Menge:</target>
+            </trans-unit>
+            <trans-unit id="235" translate="yes" reformat="yes" xml:space="default">
+                <source>Sms alert message:</source>
+                <target>Sms Warnmeldung:</target>
+            </trans-unit>
+            <trans-unit id="236" translate="yes" reformat="yes" xml:space="default">
+                <source>Sms active:</source>
+                <target>Sms aktiv:</target>
+            </trans-unit>
+            <trans-unit id="237" translate="yes" reformat="yes" xml:space="default">
+                <source>Email alert message:</source>
+                <target>Email Warnmeldung:</target>
+            </trans-unit>
+            <trans-unit id="238" translate="yes" reformat="yes" xml:space="default">
+                <source>Email active:</source>
+                <target>E-Mail aktiv:</target>
+            </trans-unit>
+            <trans-unit id="239" translate="yes" reformat="yes" xml:space="default">
+                <source>Sender name:</source>
+                <target>Absender namen:</target>
+            </trans-unit>
+            <trans-unit id="240" translate="yes" reformat="yes" xml:space="default">
+                <source>usage_alert_sender list</source>
+                <target>Verwendung Alarmieren Absender Liste</target>
+            </trans-unit>
+            <trans-unit id="241" translate="yes" reformat="yes" xml:space="default">
+                <source>edit usage_alert_sender</source>
+                <target>Bearbeiten Verwendung Alarmieren Absender</target>
+            </trans-unit>
+            <trans-unit id="242" translate="yes" reformat="yes" xml:space="default">
+                <source>Create/Edit device</source>
+                <target>Schaffen/bearbeitent Gerät</target>
+            </trans-unit>
+            <trans-unit id="243" translate="yes" reformat="yes" xml:space="default">
+                <source>Enable Country List</source>
+                <target>Aktivieren Länderliste</target>
+            </trans-unit>
+            <trans-unit id="244" translate="yes" reformat="yes" xml:space="default">
+                <source>City</source>
+                <target>Stadt</target>
+            </trans-unit>
+            <trans-unit id="245" translate="yes" reformat="yes" xml:space="default">
+                <source>sms_text list</source>
+                <target>SMS Wortlaut Liste</target>
+            </trans-unit>
+            <trans-unit id="246" translate="yes" reformat="yes" xml:space="default">
+                <source>edit user</source>
+                <target>Benutzer bearbeiten</target>
+            </trans-unit>
+            <trans-unit id="247" translate="yes" reformat="yes" xml:space="default">
+                <source>Customer Detail</source>
+                <target>Kunden Einzelheit</target>
+            </trans-unit>
+            <trans-unit id="248" translate="yes" reformat="yes" xml:space="default">
+                <source>Created At</source>
+                <target>erstellt An</target>
+            </trans-unit>
+            <trans-unit id="249" translate="yes" reformat="yes" xml:space="default">
+                <source>Active No</source>
+                <target>aktiv Nein</target>
+            </trans-unit>
+            <trans-unit id="250" translate="yes" reformat="yes" xml:space="default">
+                <source>Date Of Birth</source>
+                <target>Geburtsdatum</target>
+            </trans-unit>
+            <trans-unit id="251" translate="yes" reformat="yes" xml:space="default">
+                <source>PO-BOX Number</source>
+                <target>PO-BOX-Nummer</target>
+            </trans-unit>
+            <trans-unit id="252" translate="yes" reformat="yes" xml:space="default">
+                <source>Address</source>
+                <target>Adresse</target>
+            </trans-unit>
+            <trans-unit id="253" translate="yes" reformat="yes" xml:space="default">
+                <source>There are currently no call records to show.</source>
+                <target>Es liegen noch keine Anruflisten zu zeigen.</target>
+            </trans-unit>
+            <trans-unit id="253" translate="yes" reformat="yes" xml:space="default">
+                <source>Call history is updated after every 1 minutes.</source>
+                <target>Rufen Sie die Geschichte nach jeder 1 Minute aktualisiert.</target>
+            </trans-unit>
+            <trans-unit id="254" translate="yes" reformat="yes" xml:space="default">
+                <source>Date  time</source>
+                <target>Datum und Zeit</target>
+            </trans-unit>
+            <trans-unit id="255" translate="yes" reformat="yes" xml:space="default">
+                <source>Phone Number</source>
+                <target>Telefonnummer</target>
+            </trans-unit>
+            <trans-unit id="256" translate="yes" reformat="yes" xml:space="default">
+                <source>Duration</source>
+                <target>Dauer</target>
+            </trans-unit>
+            <trans-unit id="257" translate="yes" reformat="yes" xml:space="default">
+                <source>VAT</source>
+                <target>Mehrwertsteuer</target>
+            </trans-unit>
+            <trans-unit id="258" translate="yes" reformat="yes" xml:space="default">
+                <source>Cost   (Incl. VAT)</source>
+                <target>Kosten (inkl. MwSt.)</target>
+            </trans-unit>
+            <trans-unit id="259" translate="yes" reformat="yes" xml:space="default">
+                <source>Samtalstyp type detail</source>
+                <target>Art der Call Detail</target>
+            </trans-unit>
+            <trans-unit id="260" translate="yes" reformat="yes" xml:space="default">
+                <source>Int. = Internationella samtal</source>
+                <target>Int. = Internationale Anrufe</target>
+            </trans-unit>
+            <trans-unit id="261" translate="yes" reformat="yes" xml:space="default">
+                <source>Cb M = Callback mottaga</source>
+                <target>Cb M = Callback-Empfänger</target>
+            </trans-unit>
+            <trans-unit id="262" translate="yes" reformat="yes" xml:space="default">
+                <source>Cb S = Callback samtal</source>
+                <target>Cb S = Rückruf</target>
+            </trans-unit>
+            <trans-unit id="263" translate="yes" reformat="yes" xml:space="default">
+                <source>R = resenummer samtal</source>
+                <target>R = Nummer der Woche ruft</target>
+            </trans-unit>
+            <trans-unit id="264" translate="yes" reformat="yes" xml:space="default">
+                <source>View All Customer</source>
+                <target>Alle Kunden</target>
+            </trans-unit>
+            <trans-unit id="265" translate="yes" reformat="yes" xml:space="default">
+                <source>Samtalstyp</source>
+                <target>rufen</target>
+            </trans-unit>
+            <trans-unit id="266" translate="yes" reformat="yes" xml:space="default">
+                <source>Value</source>
+                <target>Wert</target>
+            </trans-unit>
+            <trans-unit id="267" translate="yes" reformat="yes" xml:space="default">
+                <source>New My employee</source>
+                <target>New Meine Mitarbeiter</target>
+            </trans-unit>
+            <trans-unit id="268" translate="yes" reformat="yes" xml:space="default">
+                <source>Login to WLS2 Admin</source>
+                <target>Melden Sie sich WLS2 Admin</target>
+            </trans-unit>
+            <trans-unit id="269" translate="yes" reformat="yes" xml:space="default">
+                <source>Login</source>
+                <target>Einloggen</target>
+            </trans-unit>
+            <trans-unit id="270" translate="yes" reformat="yes" xml:space="default">
+                <source>Invalid email</source>
+                <target>Ungültige E-Mail</target>
+            </trans-unit>
+            <trans-unit id="271" translate="yes" reformat="yes" xml:space="default">
+                <source>Invalid password</source>
+                <target>Ungültiges Passwort</target>
+            </trans-unit>
+            <trans-unit id="272" translate="yes" reformat="yes" xml:space="default">
+                <source>Are you Sure</source>
+                <target>Sind Sie sicher</target>
+            </trans-unit>
+            <trans-unit id="273" translate="yes" reformat="yes" xml:space="default">
+                <source>Yes</source>
+                <target>Ja</target>
+            </trans-unit>
+            <trans-unit id="274" translate="yes" reformat="yes" xml:space="default">
+                <source>No</source>
+                <target>Nein</target>
+            </trans-unit>
+            <trans-unit id="275" translate="yes" reformat="yes" xml:space="default">
+                <source>Your modifications have been saved</source>
+                <target>Ihre Änderungen wurden gespeichert</target>
+            </trans-unit>
+            <trans-unit id="276" translate="yes" reformat="yes" xml:space="default">
+                <source>add new employee products</source>
+                <target>Hinzufügen neuer Mitarbeiter Produkte</target>
+            </trans-unit>
+            <trans-unit id="277" translate="yes" reformat="yes" xml:space="default">
+                <source>Employee is added successfully</source>
+                <target>Mitarbeiter erfolgreich hinzugefügt</target>
+            </trans-unit>
+            <trans-unit id="278" translate="yes" reformat="yes" xml:space="default">
+                <source>Send SMS</source>
+                <target>senden Sie eine SMS</target>
+            </trans-unit>
+            <trans-unit id="279" translate="yes" reformat="yes" xml:space="default">
+                <source>Your SMS have been sent, There status is as follows:</source>
+                <target>Ihre SMS gesendet wurden, gibt Status ist wie folgt:</target>
+            </trans-unit>
+            <trans-unit id="280" translate="yes" reformat="yes" xml:space="default">
+                <source>List of Numbers: (comma separated list, no spaces)</source>
+                <target>Liste von Zahlen: (durch Komma getrennte Liste ohne Leerzeichen)</target>
+            </trans-unit>
+            <trans-unit id="281" translate="yes" reformat="yes" xml:space="default">
+                <source>- max limit 432 characters</source>
+                <target>- Max Limit 432 Zeichen</target>
+            </trans-unit>
+            <trans-unit id="282" translate="yes" reformat="yes" xml:space="default">
+                <source>- message above 432 characters will be discarded</source>
+                <target>- Meldung über 432 Zeichen werden verworfen</target>
+            </trans-unit>
+            <trans-unit id="283" translate="yes" reformat="yes" xml:space="default">
+                <source>Your Message Here</source>
+                <target>Ihre Nachricht hier</target>
+            </trans-unit>
+           
+            <trans-unit id="284" translate="yes" reformat="yes" xml:space="default">
+                <source>Provide your email and password</source>
+                <target>Geben Sie Ihre E-Mail und Passwort</target>
+            </trans-unit>
+            <trans-unit id="285" translate="yes" reformat="yes" xml:space="default">
+                <source>Administrator Login</source>
+                <target>Administrator einloggen</target>
+            </trans-unit>
+            <trans-unit id="286" translate="yes" reformat="yes" xml:space="default">
+                <source>Employee has been added successfully</source>
+                <target>Mitarbeiter wurde erfolgreich hinzugefügt</target>
+            </trans-unit>
+            <trans-unit id="287" translate="yes" reformat="yes" xml:space="default">
+                <source>Employee has been edited successfully</source>
+                <target>Mitarbeiter wurde erfolgreich bearbeitet</target>
+            </trans-unit>
+
+            <trans-unit id="83" translate="yes" reformat="yes" xml:space="default">
+                <source>The form is not valid because it contains some errors.</source>
+                <target>Die Form ist nicht gültig, weil es einige Fehler enthält.</target>
+            </trans-unit>
+            <trans-unit id="84" translate="yes" reformat="yes" xml:space="default">
+                <source>The Device name cannot be left blank.</source>
+                <target>Der Device-Name darf nicht leer sein.</target>
+            </trans-unit>
+			
+
+
+            <trans-unit id="288" translate="yes" reformat="yes" xml:space="default">
+                <source>Company Details</source>
+                <target>Firma Nähere</target>
+            </trans-unit>
+
+
+            <trans-unit id="289" translate="yes" reformat="yes" xml:space="default">
+                <source>Create Company</source>
+                <target>Neues Firma</target>
+            </trans-unit>
+
+            <trans-unit id="290" translate="yes" reformat="yes" xml:space="default">
+                <source>Edit Company</source>
+                <target>Bearbeiten Firma</target>
+            </trans-unit>
+            
+            <trans-unit id="291" translate="yes" reformat="yes" xml:space="default">
+                <source>company details</source>
+                <target>Firma Nähere</target>
+            </trans-unit>
+
+            <trans-unit id="292" translate="yes" reformat="yes" xml:space="default">
+                <source>Employees</source>
+                <target>Mitarbeiter</target>
+            </trans-unit>
+
+            <trans-unit id="293" translate="yes" reformat="yes" xml:space="default">
+                <source>Usage</source>
+                <target>Verwendung</target>
+            </trans-unit>
+
+
+            <trans-unit id="294" translate="yes" reformat="yes" xml:space="default">
+                <source>Balance view:</source>
+                <target>Balance zu lesen:</target>
+            </trans-unit>
+
+
+            <trans-unit id="295" translate="yes" reformat="yes" xml:space="default">
+                <source>Company Name:</source>
+                <target>Firma Namen:</target>
+            </trans-unit>
+            
+
+            <trans-unit id="296" translate="yes" reformat="yes" xml:space="default">
+                <source>Contact Name:</source>
+                <target>Kontakt Namen:</target>
+            </trans-unit>
+
+
+            <trans-unit id="297" translate="yes" reformat="yes" xml:space="default">
+                <source>Contact e-mail:</source>
+                <target>Kontakt E-Mail:</target>
+            </trans-unit>
+
+
+            <trans-unit id="298" translate="yes" reformat="yes" xml:space="default">
+                <source>Head Phone No:</source>
+                <target>Leiter Telefon Nr.:</target>
+            </trans-unit>
+
+
+            <trans-unit id="299" translate="yes" reformat="yes" xml:space="default">
+                <source>Fax Number:</source>
+                <target>Verwendung</target>
+            </trans-unit>
+
+
+            <trans-unit id="300" translate="yes" reformat="yes" xml:space="default">
+                <source>Webstie:</source>
+                <target>webstie:</target>
+            </trans-unit>
+
+
+            <trans-unit id="301" translate="yes" reformat="yes" xml:space="default">
+                <source>Company Size</source>
+                <target>Unternehmensgröße</target>
+            </trans-unit>
+
+            <trans-unit id="302" translate="yes" reformat="yes" xml:space="default">
+                <source>Company Type</source>
+                <target>Firma Art</target>
+            </trans-unit>
+
+            <trans-unit id="303" translate="yes" reformat="yes" xml:space="default">
+                <source>Invoice Method:</source>
+                <target>Rechnungsart:</target>
+            </trans-unit>
+
+            <trans-unit id="304" translate="yes" reformat="yes" xml:space="default">
+                <source>Customer Type:</source>
+                <target>Kunden-Typ:</target>
+            </trans-unit>
+
+            <trans-unit id="305" translate="yes" reformat="yes" xml:space="default">
+                <source>Agent Company:</source>
+                <target>Vertreter Firma:</target>
+            </trans-unit>
+
+            <trans-unit id="306" translate="yes" reformat="yes" xml:space="default">
+                <source>Status:</source>
+                <target>Status:</target>
+            </trans-unit>
+
+            <trans-unit id="307" translate="yes" reformat="yes" xml:space="default">
+                <source>Registered at:</source>
+                <target>Registriert bei:</target>
+            </trans-unit>
+
+            <trans-unit id="308" translate="yes" reformat="yes" xml:space="default">
+                <source>Company &amp; Name</source>
+                <target>Firma &amp; Namen</target>
+            </trans-unit>
+
+            <trans-unit id="309" translate="yes" reformat="yes" xml:space="default">
+                <source>Call History</source>
+                <target>Anrufliste</target>
+            </trans-unit>
+
+
+            <trans-unit id="310" translate="yes" reformat="yes" xml:space="default">
+                <source>Cost (Incl. VAT)</source>
+                <target>Kosten (inkl. MwSt.)</target>
+            </trans-unit>
+
+
+            <trans-unit id="311" translate="yes" reformat="yes" xml:space="default">
+                <source>Total:</source>
+                <target>Gesamt:</target>
+            </trans-unit>
+
+            <trans-unit id="312" translate="yes" reformat="yes" xml:space="default">
+                <source>Edit Employee</source>
+                <target>Mitarbeiter bearbeiten</target>
+            </trans-unit>
+            
+            <trans-unit id="313" translate="yes" reformat="yes" xml:space="default">
+                <source>Employee has not been deleted Sucessfully Error in Callthrough Account</source>
+                <target>Mitarbeiter wurde nicht richtig Fehler im Callthrough-Konto gelöscht</target>
+            </trans-unit>
+
+            <trans-unit id="314" translate="yes" reformat="yes" xml:space="default">
+                <source>Employee has been deleted Sucessfully</source>
+                <target>Mitarbeiter wurde erfolgreich gelöscht</target>
+            </trans-unit>
+            <trans-unit id="315" translate="yes" reformat="yes" xml:space="default">
+                <source>B2B Company Refill Successfully</source>
+                <target>B2B-Unternehmen erfolgreich Nachfüllung</target>
+            </trans-unit>
+
+            <trans-unit id="316" translate="yes" reformat="yes" xml:space="default">
+                <source>Error in B2B Company Refill</source>
+                <target>Fehler in der B2B-Unternehmen Nachfüllung</target>
+            </trans-unit>
+
+            <trans-unit id="317" translate="yes" reformat="yes" xml:space="default">
+                <source>Please Select B2B Company</source>
+                <target>Bitte wählen B2B-Unternehmen</target>
+            </trans-unit>
+
+            <trans-unit id="318" translate="yes" reformat="yes" xml:space="default">
+                <source>Customer Balance</source>
+                <target>Debitorensaldo</target>
+            </trans-unit>
+
+            <trans-unit id="319" translate="yes" reformat="yes" xml:space="default">
+                <source>Id</source>
+                <target>Identifikation</target>
+            </trans-unit>
+
+            <trans-unit id="320" translate="yes" reformat="yes" xml:space="default">
+                <source>Agent CVR</source>
+                <target>CVR-Vertreter</target>
+            </trans-unit>
+
+            <trans-unit id="321" translate="yes" reformat="yes" xml:space="default">
+                <source>Order Numer</source>
+                <target>Bestellen Numer</target>
+            </trans-unit>
+
+            <trans-unit id="322" translate="yes" reformat="yes" xml:space="default">
+                <source>Website:</source>
+                <target>Webseite:</target>
+            </trans-unit>
+
+            
+            <trans-unit id="323" translate="yes" reformat="yes" xml:space="default">
+                <source>name</source>
+                <target>namen</target>
+            </trans-unit>
+
+            <trans-unit id="324" translate="yes" reformat="yes" xml:space="default">
+                <source>Results</source>
+                <target>Ergebnisse</target>
+            </trans-unit>
+
+            <trans-unit id="325" translate="yes" reformat="yes" xml:space="default">
+                <source>Agent Company</source>
+                <target>Vertreter Firma:</target>
+            </trans-unit>
+
+            <trans-unit id="326" translate="yes" reformat="yes" xml:space="default">
+                <source>Name</source>
+                <target>Namen</target>
+            </trans-unit>
+            
+            <trans-unit id="327" translate="yes" reformat="yes" xml:space="default">
+                <source>Create/Edit AgentCompany</source>
+                <target>schaffen/bearbeiten Vertreter Firma</target>
+            </trans-unit>
+
+            <trans-unit id="328" translate="yes" reformat="yes" xml:space="default">
+                <source>Account manager:</source>
+                <target>Konto Manager:</target>
+            </trans-unit>
+
+            <trans-unit id="329" translate="yes" reformat="yes" xml:space="default">
+                <source>Agent commission package:</source>
+                <target>Maklergebühren Paket:</target>
+            </trans-unit>
+
+            <trans-unit id="330" translate="yes" reformat="yes" xml:space="default">
+                <source>Balance:</source>
+                <target>Gleichgewicht:</target>
+            </trans-unit>
+
+            <trans-unit id="331" translate="yes" reformat="yes" xml:space="default">
+                <source>Are you sure?</source>
+                <target>Sind Sie sicher?</target>
+            </trans-unit>
+
+            <trans-unit id="332" translate="yes" reformat="yes" xml:space="default">
+                <source>Select Company</source>
+                <target>Wählen Sie Firma</target>
+            </trans-unit>
+
+            <trans-unit id="333" translate="yes" reformat="yes" xml:space="default">
+                <source>Your modifications have been saved</source>
+                <target>Ihre Änderungen wurden gespeichert</target>
+            </trans-unit>
+
+            <trans-unit id="334" translate="yes" reformat="yes" xml:space="default">
+                <source>No Result Found</source>
+                <target>Kein Ergebnis</target>
+            </trans-unit>
+
+            <trans-unit id="335" translate="yes" reformat="yes" xml:space="default">
+                <source>Registration fee</source>
+                <target>Anmeldegebühr</target>
+            </trans-unit>
+
+            <trans-unit id="336" translate="yes" reformat="yes" xml:space="default">
+                <source>Total amount</source>
+                <target>Gesamtbetrag</target>
+            </trans-unit>
+
+            <trans-unit id="337" translate="yes" reformat="yes" xml:space="default">
+                <source>Create/Edit UsageAlert</source>
+                <target>schaffen/bearbeiten Aufruf-Alarm</target>
+            </trans-unit>
+            <trans-unit id="338" translate="yes" reformat="yes" xml:space="default">
+                <source>edit info</source>
+                <target>Info bearbeiten</target>
+            </trans-unit>
+
+            <trans-unit id="339" translate="yes" reformat="yes" xml:space="default">
+                <source>Employee Details</source>
+                <target>Ausführliche Mitarbeiterdaten</target>
+            </trans-unit>
+
+            <trans-unit id="340" translate="yes" reformat="yes" xml:space="default">
+                <source>Employee Name:</source>
+                <target>Name des Mitarbeiters:</target>
+            </trans-unit>
+            <trans-unit id="341" translate="yes" reformat="yes" xml:space="default">
+                <source>Mobile No is available</source>
+                <target>Kein Handy ist verfügbar</target>
+            </trans-unit>
+            <trans-unit id="342" translate="yes" reformat="yes" xml:space="default">
+                <source>This Mobile No Already exists</source>
+                <target>Dieses Handy Kein Bereits vorhanden</target>
+            </trans-unit>
+
+            <trans-unit id="343" translate="yes" reformat="yes" xml:space="default">
+                <source>Please enter a valid mobile number not starting with 0</source>
+                <target>Bitte geben Sie eine gültige Handy-Nummer nicht mit 0 beginnt</target>
+            </trans-unit>
+
+            <trans-unit id="344" translate="yes" reformat="yes" xml:space="default">
+                <source>Enter Mobile Number</source>
+                <target>Geben Sie Mobile Number</target>
+            </trans-unit>
+            <trans-unit id="345" translate="yes" reformat="yes" xml:space="default">
+                <source>Checking...</source>
+                <target>Überprüfen ...</target>
+            </trans-unit>
+            <trans-unit id="346" translate="yes" reformat="yes" xml:space="default">
+                <source>Vat No is available</source>
+                <target>Kein Vat ist verfügbar</target>
+            </trans-unit>
+
+            <trans-unit id="347" translate="yes" reformat="yes" xml:space="default">
+                <source>This Vat No Already exists</source>
+                <target>Diese Mehrwertsteuer Kein Bereits vorhanden</target>
+            </trans-unit>
+
+            <trans-unit id="348" translate="yes" reformat="yes" xml:space="default">
+                <source>Enter Vat Number</source>
+                <target>Geben Sie Mehrwertsteuer Nummer</target>
+            </trans-unit>
+
+            <trans-unit id="349" translate="yes" reformat="yes" xml:space="default">
+                <source>Employee Detail</source>
+                <target>Mitarbeiter-Detailansicht</target>
+            </trans-unit>
+            <trans-unit id="350" translate="yes" reformat="yes" xml:space="default">
+                <source>Auto Refill</source>
+                <target>Auto nachfüllen</target>
+            </trans-unit>
+
+            <trans-unit id="351" translate="yes" reformat="yes" xml:space="default">
+                <source>Company Registered</source>
+                <target>Firma registriert</target>
+            </trans-unit>
+
+            <trans-unit id="352" translate="yes" reformat="yes" xml:space="default">
+                <source>Company Refill</source>
+                <target>Firma nachfüllen</target>
+            </trans-unit>
+
+            <trans-unit id="353" translate="yes" reformat="yes" xml:space="default">
+                <source>Call type detail</source>
+                <target>Rufen Art Detail</target>
+            </trans-unit>
+
+            <trans-unit id="354" translate="yes" reformat="yes" xml:space="default">
+                <source>Int. = International calls</source>
+                <target>Int. = Internationale Anrufe</target>
+            </trans-unit>
+            <trans-unit id="355" translate="yes" reformat="yes" xml:space="default">
+                <source>The manufacturer name cannot be left blank.</source>
+                <target>Die Hersteller-Name darf nicht leer sein.</target>
+            </trans-unit>
+
+
+
+
+
+
+
+
+            <trans-unit id="356" translate="yes" reformat="yes" xml:space="default">
+                <source>The Device name cannot be left blank.</source>
+                <target>Der Device-Name darf nicht leer sein.</target>
+            </trans-unit>
+
+
+            <trans-unit id="357" translate="yes" reformat="yes" xml:space="default">
+                <source>The postal charges charges cannot be left blank.</source>
+                <target>Die Portokosten Gebühren darf nicht leer sein.</target>
+            </trans-unit>
+
+            <trans-unit id="358" translate="yes" reformat="yes" xml:space="default">
+                <source>The postal charges country  cannot be left blank.</source>
+                <target>Die Portokosten Land darf nicht leer sein.</target>
+            </trans-unit>
+            <trans-unit id="359" translate="yes" reformat="yes" xml:space="default">
+                <source>The product name cannot be left blank.</source>
+                <target>Der Name des Produkts darf nicht leer sein.</target>
+            </trans-unit>
+            <trans-unit id="360" translate="yes" reformat="yes" xml:space="default">
+                <source>The product price cannot be left blank.</source>
+                <target>Der Preis des Produkts darf nicht leer sein.</target>
+            </trans-unit>
+            <trans-unit id="361" translate="yes" reformat="yes" xml:space="default">
+                <source>The product description cannot be left blank.</source>
+                <target>Die Bezeichnung des Erzeugnisses darf nicht leer sein.</target>
+            </trans-unit>
+            <trans-unit id="362" translate="yes" reformat="yes" xml:space="default">
+                <source>The product initial balance cannot be left blank.</source>
+                <target>Das Produkt ursprüngliche Gleichgewicht darf nicht leer sein.</target>
+            </trans-unit>
+
+
+
+
+            <trans-unit id="363" translate="yes" reformat="yes" xml:space="default">
+                <source>The Country name cannot be left blank.</source>
+                <target>Der Name des Landes darf nicht leer sein.</target>
+            </trans-unit>
+
+
+            <trans-unit id="364" translate="yes" reformat="yes" xml:space="default">
+                <source>The Country  language cannot be left blank.</source>
+                <target>Das Land kann die Sprache nicht leer bleiben.</target>
+            </trans-unit>
+
+            <trans-unit id="365" translate="yes" reformat="yes" xml:space="default">
+                <source>The language symbol cannot be left blank.</source>
+                <target>Die Sprache Symbol darf nicht leer sein.</target>
+            </trans-unit>
+            <trans-unit id="366" translate="yes" reformat="yes" xml:space="default">
+                <source>The currency cannot be left blank.</source>
+                <target>Die Währung darf nicht leer sein.</target>
+            </trans-unit>
+            <trans-unit id="367" translate="yes" reformat="yes" xml:space="default">
+                <source>The currency symbol cannot be left blank.</source>
+                <target>Das Währungs Zeichen kann nicht leer bleiben.</target>
+            </trans-unit>
+            <trans-unit id="368" translate="yes" reformat="yes" xml:space="default">
+                <source>The refill cannot be left blank.</source>
+                <target>Das nachfüllen kann nicht leer bleiben.</target>
+            </trans-unit>
+            <trans-unit id="369" translate="yes" reformat="yes" xml:space="default">
+                <source>The calling_code cannot be left blank.</source>
+                <target>Die Aufruf_Kode darf nicht leer sein.</target>
+            </trans-unit>
+
+
+
+
+            <trans-unit id="370" translate="yes" reformat="yes" xml:space="default">
+                <source>The cbf_rate cannot be left blank.</source>
+                <target>Die cbf_Satz darf nicht leer sein.</target>
+            </trans-unit>
+
+
+            <trans-unit id="371" translate="yes" reformat="yes" xml:space="default">
+                <source>The city name cannot be left blank.</source>
+                <target>Der Name der Stadt darf nicht leer sein.</target>
+            </trans-unit>
+
+            <trans-unit id="372" translate="yes" reformat="yes" xml:space="default">
+                <source>The city country cannot be left blank.</source>
+                <target>Die Stadt Land darf nicht leer sein.</target>
+            </trans-unit>
+
+            <trans-unit id="373" translate="yes" reformat="yes" xml:space="default">
+                <source>The text heading cannot be left blank.</source>
+                <target>Der Wortlaut Überschrift darf nicht leer sein.</target>
+            </trans-unit>
+
+            <trans-unit id="374" translate="yes" reformat="yes" xml:space="default">
+                <source>The for text cannot be left blank.</source>
+                <target>Die für Wortlaut darf nicht leer sein.</target>
+            </trans-unit>
+
+            <trans-unit id="375" translate="yes" reformat="yes" xml:space="default">
+                <source>The message text cannot be left blank.</source>
+                <target>Der Wortlaut der Nachricht darf nicht leer sein.</target>
+            </trans-unit>
+            
+            <trans-unit id="376" translate="yes" reformat="yes" xml:space="default">
+                <source>The alert amount cannot be left blank.</source>
+                <target>Die Warnung Betrag darf nicht leer sein.</target>
+            </trans-unit>
+
+
+
+
+            <trans-unit id="377" translate="yes" reformat="yes" xml:space="default">
+                <source>The sms alert message cannot be left blank.</source>
+                <target>Der SMS-Alarm-Nachricht kann nicht leer bleiben.</target>
+            </trans-unit>
+
+
+            <trans-unit id="378" translate="yes" reformat="yes" xml:space="default">
+                <source>The email alert message cannot be left blank.</source>
+                <target>Die E-Mail-Warnmeldung kann nicht leer bleiben.</target>
+            </trans-unit>
+
+            <trans-unit id="379" translate="yes" reformat="yes" xml:space="default">
+                <source>The sender name balance cannot be left blank.</source>
+                <target>Der Absendername Gleichgewicht darf nicht leer sein.</target>
+            </trans-unit>
+
+            <trans-unit id="380" translate="yes" reformat="yes" xml:space="default">
+                <source>The name cannot be left blank.</source>
+                <target>Der Name darf nicht leer bleiben.</target>
+            </trans-unit>
+            <trans-unit id="381" translate="yes" reformat="yes" xml:space="default">
+                <source>The status cannot be left blank.</source>
+                <target>Der Status kann nicht leer bleiben.</target>
+            </trans-unit>
+            <trans-unit id="382" translate="yes" reformat="yes" xml:space="default">
+                <source>The telecom operator name cannot be left blank.</source>
+                <target>Der Telekom-Operator-Name darf nicht leer sein.</target>
+            </trans-unit>
+            <trans-unit id="383" translate="yes" reformat="yes" xml:space="default">
+                <source>The user name cannot be left blank.</source>
+                <target>Der Benutzername darf nicht leer sein.</target>
+            </trans-unit>
+
+
+
+
+            <trans-unit id="384" translate="yes" reformat="yes" xml:space="default">
+                <source>The user email cannot be left blank.</source>
+                <target>Der Benutzer per E-Mail darf nicht leer sein.</target>
+            </trans-unit>
+
+
+            <trans-unit id="385" translate="yes" reformat="yes" xml:space="default">
+                <source>The user password cannot be left blank.</source>
+                <target>Das Benutzer-Passwort darf nicht leer sein.</target>
+            </trans-unit>
+
+            <trans-unit id="386" translate="yes" reformat="yes" xml:space="default">
+                <source>The user role cannot be left blank.</source>
+                <target>Der Benutzer Rolle darf nicht leer sein.</target>
+            </trans-unit>
+            
+            <trans-unit id="387" translate="yes" reformat="yes" xml:space="default">
+                <source>The message cannot be left blank.</source>
+                <target>Die Nachricht kann nicht leer bleiben.</target>
+            </trans-unit>
+
+
+            <trans-unit id="388" translate="yes" reformat="yes" xml:space="default">
+                <source>The heading cannot be left blank.</source>
+                <target>Die Überschrift darf nicht leer sein.</target>
+            </trans-unit>
+
+            <trans-unit id="389" translate="yes" reformat="yes" xml:space="default">
+                <source>The starting_date cannot be left blank.</source>
+                <target>Die starting_date darf nicht leer sein.</target>
+            </trans-unit>
+
+            <trans-unit id="390" translate="yes" reformat="yes" xml:space="default">
+                <source>The expire date cannot be left blank.</source>
+                <target>Das Verfallsdatum darf nicht leer sein.</target>
+            </trans-unit>
+
+
+
+
+            <trans-unit id="391" translate="yes" reformat="yes" xml:space="default">
+                <source>The faqs question cannot be left blank.</source>
+                <target>Die FAQs Frage kann nicht leer bleiben.</target>
+            </trans-unit>
+
+
+            <trans-unit id="392" translate="yes" reformat="yes" xml:space="default">
+                <source>The faqs answer cannot be left blank.</source>
+                <target>Die faq Antwort kann nicht leer bleiben.</target>
+            </trans-unit>
+
+            <trans-unit id="393" translate="yes" reformat="yes" xml:space="default">
+                <source>The faqs country  cannot be left blank.</source>
+                <target>Die FAQs Land darf nicht leer sein.</target>
+            </trans-unit>
+
+            <trans-unit id="394" translate="yes" reformat="yes" xml:space="default">
+                <source> The faqs status cannot be left blank.</source>
+                <target>Die FAQs Status darf nicht leer sein.</target>
+            </trans-unit>
+
+
+            <trans-unit id="395" translate="yes" reformat="yes" xml:space="default">
+                <source>The agent  company name cannot be left blank.</source>
+                <target>Der Vertreter Firma namen darf nicht leer sein.</target>
+            </trans-unit>
+
+            <trans-unit id="396" translate="yes" reformat="yes" xml:space="default">
+                <source>The vat number cannot be left blank.</source>
+                <target>Die MwSt-Nummer darf nicht leer sein.</target>
+            </trans-unit>
+
+            <trans-unit id="397" translate="yes" reformat="yes" xml:space="default">
+                <source>The address  cannot be left blank.</source>
+                <target>Die Adresse darf nicht leer sein.</target>
+            </trans-unit>
+
+
+
+
+            <trans-unit id="398" translate="yes" reformat="yes" xml:space="default">
+                <source>The post code cannot be left blank.</source>
+                <target>Die Postleitzahl darf nicht leer sein.</target>
+            </trans-unit>
+
+
+            <trans-unit id="399" translate="yes" reformat="yes" xml:space="default">
+                <source>The contact name name cannot be left blank.</source>
+                <target>Der Name des Kontakts Name darf nicht leer sein.</target>
+            </trans-unit>
+
+            <trans-unit id="400" translate="yes" reformat="yes" xml:space="default">
+                <source>The  email cannot be left blank.</source>
+                <target>Die E-Mail darf nicht leer sein.</target>
+            </trans-unit>
+
+            <trans-unit id="401" translate="yes" reformat="yes" xml:space="default">
+                <source>The head phone number cannot be left blank.</source>
+                <target>Der Kopf Telefonnummer darf nicht leer sein.</target>
+            </trans-unit>
+            
+            <trans-unit id="402" translate="yes" reformat="yes" xml:space="default">
+                <source>The Mobile number cannot be left blank.</source>
+                <target>Die Handy-Nummer darf nicht leer sein.</target>
+            </trans-unit>
+            <trans-unit id="403" translate="yes" reformat="yes" xml:space="default">
+                <source>The agent company name cannot be left blank.</source>
+                <target>Der Vertreter Firmenname darf nicht leer sein.</target>
+            </trans-unit>
+
+            <trans-unit id="404" translate="yes" reformat="yes" xml:space="default">
+                <source>The user name cannot be left blank.</source>
+                <target>Der Benutzername darf nicht leer sein.</target>
+            </trans-unit>
+
+
+
+
+            <trans-unit id="405" translate="yes" reformat="yes" xml:space="default">
+                <source>The password cannot be left blank.</source>
+                <target>Das Passwort darf nicht leer sein.</target>
+            </trans-unit>
+
+
+            <trans-unit id="406" translate="yes" reformat="yes" xml:space="default">
+                <source>The status cannot be left blank.</source>
+                <target>Der Status kann nicht leer bleiben.</target>
+            </trans-unit>
+
+
+            <trans-unit id="407" translate="yes" reformat="yes" xml:space="default">
+                <source>The reg share value cannot be left blank.</source>
+                <target>Die Aktien reg Wert darf nicht leer sein.</target>
+            </trans-unit>
+            <trans-unit id="408" translate="yes" reformat="yes" xml:space="default">
+                <source>The extra payments share value cannot be left blank.</source>
+                <target>Die zusätzlichen Zahlungen Aktie Wert darf nicht leer sein.</target>
+            </trans-unit>
+
+            <trans-unit id="409" translate="yes" reformat="yes" xml:space="default">
+                <source>The manufacturer name cannot be left blank.</source>
+                <target>Die Hersteller-Name darf nicht leer sein.</target>
+            </trans-unit>
+
+            <trans-unit id="410" translate="yes" reformat="yes" xml:space="default">
+                <source>Website:</source>
+                <target>Webseite:</target>
+            </trans-unit>
+
+            <trans-unit id="411" translate="yes" reformat="yes" xml:space="default">
+                <source>None</source>
+                <target>keiner</target>
+            </trans-unit>
+
+            <trans-unit id="412" translate="yes" reformat="yes" xml:space="default">
+                <source>remove file</source>
+                <target>Datei entfernen</target>
+            </trans-unit>
+            <trans-unit id="413" translate="yes" reformat="yes" xml:space="default">
+                <source>[show file]</source>
+                <target>[zeigen Datei]</target>
+            </trans-unit>
+            <trans-unit id="414" translate="yes" reformat="yes" xml:space="default">
+                <source>Employee Balance:</source>
+                <target>Mitarbeiter-Balance:</target>
+            </trans-unit>
+
+            <trans-unit id="415" translate="yes" reformat="yes" xml:space="default">
+                <source>The faqs status cannot be left blank.</source>
+                <target>Die FAQs Status darf nicht leer sein.</target>
+            </trans-unit>
+            <trans-unit id="416" translate="yes" reformat="yes" xml:space="default">
+                <source>Products</source>
+                <target>Produkte</target>
+            </trans-unit>
+            <trans-unit id="417" translate="yes" reformat="yes" xml:space="default">
+                <source>No Result Found</source>
+                <target>Kein Ergebnis</target>
+            </trans-unit>
+
+            <trans-unit id="418" translate="yes" reformat="yes" xml:space="default">
+                <source>Registration fee:</source>
+                <target>Anmeldegebühr:</target>
+            </trans-unit>
+
+            <trans-unit id="419" translate="yes" reformat="yes" xml:space="default">
+                <source>Required.</source>
+                <target>Erforderlich.</target>
+            </trans-unit>
+            <trans-unit id="420" translate="yes" reformat="yes" xml:space="default">
+                <source>Registered successfully</source>
+                <target>Erfolgreich registriert</target>
+            </trans-unit>
+            <trans-unit id="421" translate="yes" reformat="yes" xml:space="default">
+                <source>Invalid mobile number</source>
+                <target>Ungültige Handynummer</target>
+            </trans-unit>
+            <trans-unit id="422" translate="yes" reformat="yes" xml:space="default">
+                <source>Agent not found</source>
+                <target>Vertreter nicht gefunden</target>
+            </trans-unit>
+            <trans-unit id="423" translate="yes" reformat="yes" xml:space="default">
+                <source>Product code that you provided is not valid</source>
+                <target>Produkt-Kode, den Sie ist ungültig</target>
+            </trans-unit>
+            <trans-unit id="424" translate="yes" reformat="yes" xml:space="default">
+                <source>customer not registered, please retry</source>
+                <target>Kunde nicht registriert, bitte wiederholen</target>
+            </trans-unit>
+            <trans-unit id="425" translate="yes" reformat="yes" xml:space="default">
+                <source>Sms Reg Uniuqe id issue</source>
+                <target>Sms Reg Einzigartig id Ausgabe</target>
+            </trans-unit>
+            <trans-unit id="426" translate="yes" reformat="yes" xml:space="default">
+                <source>Agent balance is low</source>
+                <target>Vertreter Gleichgewicht ist gering</target>
+            </trans-unit>
+            <trans-unit id="427" translate="yes" reformat="yes" xml:space="default">
+                <source>Registered successfully</source>
+                <target>Erfolgreich registriert</target>
+            </trans-unit>
+            <trans-unit id="428" translate="yes" reformat="yes" xml:space="default">
+                <source>Unique Ids are not available</source>
+                <target>Einzigartig ids nicht verfügbar</target>
+            </trans-unit>
+
+            <trans-unit id="429" translate="yes" reformat="yes" xml:space="default">
+                <source>Company List</source>
+                <target>Unternehmens liste</target>
+            </trans-unit>
+
+            <trans-unit id="430" translate="yes" reformat="yes" xml:space="default">
+                <source>User List</source>
+                <target>Benutzer Listen</target>
+            </trans-unit>
+
+            <trans-unit id="431" translate="yes" reformat="yes" xml:space="default">
+                <source>Agent Commission Package</source>
+                <target>Vertreter Provision Paket</target>
+            </trans-unit>
+            <trans-unit id="432" translate="yes" reformat="yes" xml:space="default">
+                <source>User</source>
+                <target>Benutzer</target>
+            </trans-unit>
+            <trans-unit id="433" translate="yes" reformat="yes" xml:space="default">
+                <source>Telecom Operator</source>
+                <target>Telekom Betreibert</target>
+            </trans-unit>
+            <trans-unit id="434" translate="yes" reformat="yes" xml:space="default">
+                <source>News Updates</source>
+                <target>Neus Aktuelles</target>
+            </trans-unit>
+            <trans-unit id="435" translate="yes" reformat="yes" xml:space="default">
+                <source>Invalid input</source>
+                <target>Ungültige Eingabe</target>
+            </trans-unit>
+
+<trans-unit id="436" translate="yes" reformat="yes" xml:space="default">
+                <source>SMS Text</source>
+                <target>SMS Wortlaut</target>
+            </trans-unit>
+            <trans-unit id="437" translate="yes" reformat="yes" xml:space="default">
+                <source>view Detail</source>
+                <target>Ansicht Einzelheit</target>
+            </trans-unit>
+            <trans-unit id="438" translate="yes" reformat="yes" xml:space="default">
+                <source>Delete</source>
+                <target>Löschen</target>
+            </trans-unit>
+            <trans-unit id="439" translate="yes" reformat="yes" xml:space="default">
+                <source>Image</source>
+                <target>Bild</target>
+            </trans-unit>
+            <trans-unit id="440" translate="yes" reformat="yes" xml:space="default">
+                <source>view</source>
+                <target>sehen</target>
+            </trans-unit>
+            <trans-unit id="441" translate="yes" reformat="yes" xml:space="default">
+                <source>edit</source>
+                <target>bearbeiten</target>
+            </trans-unit>
+
+           <trans-unit id="442" translate="yes" reformat="yes" xml:space="default">
+                <source>Could not delete the selected Agent company</source>
+                <target>Konnte nicht gelöscht werden den ausgewählten Agenten Unternehmen</target>
+            </trans-unit>
+            <trans-unit id="443" translate="yes" reformat="yes" xml:space="default">
+                <source>Could not delete the selected Agent company. Make sure it does not have any associated items.</source>
+                <target>Konnte nicht gelöscht werden den ausgewählten Agenten Unternehmens. Stellen Sie sicher, es hat keine zugehörigen Elemente.</target>
+            </trans-unit>
+  <trans-unit id="444" translate="yes" reformat="yes" xml:space="default">
+                <source>Country List</source>
+                <target>Länderliste</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

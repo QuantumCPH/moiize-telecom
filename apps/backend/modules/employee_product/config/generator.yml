@@ -1,0 +1,15 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      EmployeeProduct
+    theme:            default
+    list:
+      filters: [employee_id, product_id]
+      title: Products used by employees
+      display: [employee, product, quantity]
+      object_actions:
+        _edit: ~
+        _delete: ~
+    edit:
+      title: Create/Edit Employee Product Usage
+      display: [employee_id, product_id, quantity]

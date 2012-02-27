@@ -1,0 +1,25 @@
+fields:
+  enable_country{name}:
+    required:
+      msg:              The Country name cannot be left blank.
+  enable_country{language}:
+    required:
+      msg:              The Country  language cannot be left blank.
+  enable_country{language_symbol}:
+    required:
+      msg:              The language symbol cannot be left blank.
+#  enable_country{currency}:
+#    required:
+#      msg:              The currency cannot be left blank.
+#  enable_country{currency_symbol}:
+#    required:
+#      msg:              The currency symbol cannot be left blank.
+#  enable_country{refill}:
+#    required:
+#      msg:              The refill cannot be left blank.
+#  enable_country{calling_code}:
+#    required:
+#      msg:              The calling_code cannot be left blank.
+#  enable_country{cbf_rate}:
+#    required:
+#      msg:              The cbf_rate cannot be left blank.

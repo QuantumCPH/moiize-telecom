@@ -1,0 +1,12 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      DestinationRate
+    theme:            default
+    list:
+      title: Destination Rate List
+      display: [destination_name, purchase_price, sale_price]
+      filters: [destination_name]
+      object_actions:
+        _edit:  ~
+      max_per_page: 500

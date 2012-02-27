@@ -1,0 +1,10 @@
+<?php use_helper('I18N'); ?>
+
+<form action="/zapnacrm2/backend_dev.php/fonet_amin/fonetInfo" method="GET">
+    Enter the Fonet Customer ID<input type="text" name="CustomID"/>
+    
+    <input type="submit" value="Get Info"/>
+    
+</form>
+
+<?php echo $response_text ?>

@@ -1,0 +1,14 @@
+# default values
+all:
+ email:
+  sender_email: okhan@zapna.com
+  sender_name: ZapnaAps
+  subject: Email message from ZapnaAps
+  smtp_host: 'localhost'
+  test_recepient_email: okhan@zapna.com
+  #set it to 'off' in case you don't want to use it
+ email_invoice:
+  sender_email: okhan@zapna.com
+  sender_name: ZapnaAps
+  subject: Invoive for
+  body_header: Invoice is attached for your reference.<br /><br />
