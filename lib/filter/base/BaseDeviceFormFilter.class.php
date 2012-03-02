@@ -17,14 +17,12 @@ class BaseDeviceFormFilter extends BaseFormFilterPropel
       'name'            => new sfWidgetFormFilterInput(),
       'manufacturer_id' => new sfWidgetFormPropelChoice(array('model' => 'Manufacturer', 'add_empty' => true)),
       'image_file_name' => new sfWidgetFormFilterInput(),
-      'sort_order'      => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
       'name'            => new sfValidatorPass(array('required' => false)),
       'manufacturer_id' => new sfValidatorPropelChoice(array('required' => false, 'model' => 'Manufacturer', 'column' => 'id')),
       'image_file_name' => new sfValidatorPass(array('required' => false)),
-      'sort_order'      => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
     ));
 
     $this->widgetSchema->setNameFormat('device_filters[%s]');
@@ -46,7 +44,6 @@ class BaseDeviceFormFilter extends BaseFormFilterPropel
       'name'            => 'Text',
       'manufacturer_id' => 'ForeignKey',
       'image_file_name' => 'Text',
-      'sort_order'      => 'Number',
     );
   }
 }

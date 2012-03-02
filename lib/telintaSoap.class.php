@@ -1,7 +1,6 @@
 <?php
 
 
-
 class PortaBillingSoapClient extends SoapClient {
          /**
           * Server URL

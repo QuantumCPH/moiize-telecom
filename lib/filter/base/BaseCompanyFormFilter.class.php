@@ -16,6 +16,7 @@ class BaseCompanyFormFilter extends BaseFormFilterPropel
     $this->setWidgets(array(
       'name'                   => new sfWidgetFormFilterInput(),
       'vat_no'                 => new sfWidgetFormFilterInput(),
+      'password'               => new sfWidgetFormFilterInput(),
       'ean_number'             => new sfWidgetFormFilterInput(),
       'address'                => new sfWidgetFormFilterInput(),
       'post_code'              => new sfWidgetFormFilterInput(),
@@ -49,6 +50,7 @@ class BaseCompanyFormFilter extends BaseFormFilterPropel
     $this->setValidators(array(
       'name'                   => new sfValidatorPass(array('required' => false)),
       'vat_no'                 => new sfValidatorPass(array('required' => false)),
+      'password'               => new sfValidatorPass(array('required' => false)),
       'ean_number'             => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'address'                => new sfValidatorPass(array('required' => false)),
       'post_code'              => new sfValidatorPass(array('required' => false)),
@@ -97,6 +99,7 @@ class BaseCompanyFormFilter extends BaseFormFilterPropel
       'id'                     => 'Number',
       'name'                   => 'Text',
       'vat_no'                 => 'Text',
+      'password'               => 'Text',
       'ean_number'             => 'Number',
       'address'                => 'Text',
       'post_code'              => 'Text',

@@ -90,7 +90,7 @@
                 </div>
             </div>
             <div id="slogan">
-                <h1><?php echo __('CRM/Billing/Agent Portal'); ?></h1>
+                <h1><?php echo __('B2B Portal'); ?></h1>
 <?php if ($sf_user->getAttribute('username', '', 'agentsession')) { ?>
                 <div id="loggedInUser">
                     <?php echo __('Logged in as:') ?><b>&nbsp;<?php echo $sf_user->getAttribute('username', '', 'agentsession') ?></b><br />
