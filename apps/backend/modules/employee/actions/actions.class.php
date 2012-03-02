@@ -58,7 +58,7 @@ class employeeActions extends sfActions {
     public function executeView($request) {
         $this->employee = EmployeePeer::retrieveByPK($request->getParameter('id'));
         $ct = new Criteria();
-        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, 'a'. $this->employee->getCountryMobileNumber());
+        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, 'testesvoip'.$this->employee->getCompanyId(). $this->employee->getId());
         $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
         $account_info = CompanyEmployeActivation::getAccountInfo($telintaAccount->getIAccount());
@@ -120,44 +120,19 @@ class employeeActions extends sfActions {
         //$employeMobileNumber=$contrymobilenumber;
 
 
-        if (substr($request->getParameter('mobile_number'), 0, 1) == 0) {
-            $mobileNo = substr($request->getParameter('mobile_number'), 1);
-        } else {
-            $mobileNo = $request->getParameter('mobile_number');
-        }
-
         $c = new Criteria();
         $c->addAnd(CompanyPeer::ID, $request->getParameter('company_id'));
         $this->companys = CompanyPeer::doSelectOne($c);
-        $companyCVR = $this->companys->getVatNo();
-        $countryID = $this->companys->getCountryId();
-        $companyCVRNumber = $companyCVR;
+        
         $employee = new Employee();
-        $c1 = new Criteria();
-        $c1->addAnd(CountryPeer::ID, $countryID);
-        $this->country = CountryPeer::doSelectOne($c1);
-        $contrymobilenumber = $this->country->getCallingCode() . $mobileNo;
-        $employeMobileNumber = $contrymobilenumber;
-
-        if (!CompanyEmployeActivation::telintaRegisterEmployee($employeMobileNumber, $this->companys)) {
-            //$this->message = "employee added successfully";
-            $this->getUser()->setFlash('messageError', 'Employee is not added and  registered on Telinta please check email');
-            //$this->redirect('employee/add?message=error');
-            $this->redirect('employee/add');
-            die;
-        }
-
         $employee->setCompanyId($request->getParameter('company_id'));
         $employee->setFirstName($request->getParameter('first_name'));
-        $employee->setLastName($request->getParameter('last_name'));
-        $employee->setCountryCode($this->country->getCallingCode());
-        $employee->setCountryMobileNumber($contrymobilenumber);
-        $employee->setMobileNumber($request->getParameter('mobile_number'));
-        $employee->setEmail($request->getParameter('email'));
-
         $employee->setProductId($request->getParameter('productid'));
-        // $employee->setProductPrice($request->getParameter('price'));
         $employee->save();
+        $voipAccount ='esvoip'.$this->companys->getId().$employee->getId();
+
+        CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys);
+      
         $this->getUser()->setFlash('messageAdd', 'Employee has been added successfully' . (isset($msg) ? "and " . $msg : ''));
         $this->redirect('employee/index?message=add');
     }
@@ -212,7 +187,7 @@ class employeeActions extends sfActions {
         $contrymobilenumber = $employees->getCountryMobileNumber();
 
         $ct = new Criteria();
-        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, 'a' . $contrymobilenumber);
+        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, 'testesvoip'.$employees->getCompanyId(). $employees->getId());
         $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
         if (!CompanyEmployeActivation::terminateAccount($telintaAccount)) {

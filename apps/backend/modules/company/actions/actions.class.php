@@ -137,7 +137,7 @@ class companyActions extends sfActions {
         return sfView::SUCCESS;
     }
 
-    protected function saveCompany($company) {
+    protected function saveCompany(Company $company) {
         $companyData = $this->getRequestParameter('company');
         if ($company->isNew()) {
             $res = CompanyEmployeActivation::telintaRegisterCompany($company);
@@ -146,18 +146,8 @@ class companyActions extends sfActions {
 
         if ($company->isNew() && $res) {
 
-            //var_dump($companyData);
-            //var_dump($company);
+            $company->setInvoiceMethodId(2);
             $company->save();
-
-            $transaction = new CompanyTransaction();
-            $transaction->setAmount(5000);
-            $transaction->setCompanyId($company->getId());
-            $transaction->setExtraRefill(5000);
-            $transaction->setTransactionStatusId(3);
-            $transaction->setPaymenttype(1); //Registered
-            $transaction->setDescription('Company Registered');
-            $transaction->save();
         } elseif (!$company->isNew()) {
             $company->save();
         } elseif (!$res) {
@@ -405,11 +395,11 @@ class companyActions extends sfActions {
             $transaction->setExtraRefill($refill_amount);
             $transaction->setTransactionStatusId(1);
             $transaction->setPaymenttype(2); //Refill
-            $transaction->setDescription('Company Refill');
+            $transaction->setDescription('Refill');
             $transaction->save();
 
             if ($companyCVR != '') {
-                CompanyEmployeActivation::recharge($this->company, $refill_amount);
+                CompanyEmployeActivation::recharge($this->company, $refill_amount, $transaction);
                 $transaction->setTransactionStatusId(3);
                 $transaction->save();
                 $this->getUser()->setFlash('message', 'B2B Company Refill Successfully');
@@ -448,6 +438,21 @@ class companyActions extends sfActions {
         } else {
             echo "yes";
         }
+    }
+
+    public function executeShowReceipt (sfWebRequest $request) {
+        //call Culture Method For Get Current Set Culture - Against Feature# 6.1 --- 02/28/11
+        changeLanguageCulture::languageCulture($request, $this);
+        $transaction_id = $request->getParameter('tid');
+        $transaction = CompanyTransactionPeer::retrieveByPK($transaction_id);
+        
+        $this->renderPartial('company/refill_receipt', array(
+            'company' => CompanyPeer::retrieveByPK($transaction->getCompanyId()),
+            'transaction' => $transaction,
+            'vat' => 0,
+        ));
+
+        return sfView::NONE;
     }
 
 }

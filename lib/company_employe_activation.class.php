@@ -1,6 +1,7 @@
 <?php
 
 require_once(sfConfig::get('sf_lib_dir') . '/telintaSoap.class.php');
+require_once(sfConfig::get('sf_lib_dir') . '/emailLib.php');
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -16,9 +17,9 @@ class CompanyEmployeActivation {
     //put your code here
 
 
-    private static $iParent = 74137;                //Company Resller ID on Telinta
+    private static $iParent = 74169;                //Company Resller ID on Telinta
     private static $currency = 'EUR';
-    private static $a_iProduct = 10281;
+    private static $a_iProduct = 10468;
     private static $CBProduct = '';
     private static $VoipProduct = '';
     private static $telintaSOAPUrl = "https://mybilling.telinta.com";
@@ -35,7 +36,7 @@ class CompanyEmployeActivation {
                             'iso_4217' => self::$currency,
                             'i_parent' => self::$iParent,
                             'i_customer_type' => 1,
-                            'opening_balance' => -(5000),
+                            'opening_balance' => 0,
                             'credit_limit' => null,
                             'dialing_rules' => array('ip' => '00'),
                             'email' => 'okh@zapna.com'
@@ -52,7 +53,7 @@ class CompanyEmployeActivation {
     }
 
     public static function telintaRegisterEmployee($employeMobileNumber, Company $company) {
-        return self::createAccount($company, $employeMobileNumber, 'a', self::$a_iProduct);
+        return self::createAccount($company, $employeMobileNumber, 'test', self::$a_iProduct);
     }
 
     public static function terminateAccount(TelintaAccounts $telintaAccount) {
@@ -98,8 +99,13 @@ class CompanyEmployeActivation {
         return self::makeTransaction($company, "Manual charge", $amount);
     }
 
-    public static function recharge(Company $company, $amount) {
-        return self::makeTransaction($company, "Manual payment", $amount);
+    public static function recharge(Company $company, $amount,$transaction='') {
+        if (self::makeTransaction($company, "Manual payment", $amount)) {
+            emailLib::sendCompanyRefillEmail($company, $transaction);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public static function callHistory(Company $company, $fromDate, $toDate) {

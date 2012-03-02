@@ -45,6 +45,8 @@ class BaseCompanyFormFilter extends BaseFormFilterPropel
       'updated_at'             => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => true)),
       'file_path'              => new sfWidgetFormFilterInput(),
       'rate_table_id'          => new sfWidgetFormFilterInput(),
+      'i_customer'             => new sfWidgetFormFilterInput(),
+      'password'               => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
@@ -58,7 +60,7 @@ class BaseCompanyFormFilter extends BaseFormFilterPropel
       'city_id'                => new sfValidatorPropelChoice(array('required' => false, 'model' => 'City', 'column' => 'id')),
       'contact_name'           => new sfValidatorPass(array('required' => false)),
       'email'                  => new sfValidatorPass(array('required' => false)),
-      'head_phone_number'      => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'head_phone_number'      => new sfValidatorPass(array('required' => false)),
       'fax_number'             => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'website'                => new sfValidatorPass(array('required' => false)),
       'status_id'              => new sfValidatorPropelChoice(array('required' => false, 'model' => 'Status', 'column' => 'id')),
@@ -79,6 +81,8 @@ class BaseCompanyFormFilter extends BaseFormFilterPropel
       'updated_at'             => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDate(array('required' => false)))),
       'file_path'              => new sfValidatorPass(array('required' => false)),
       'rate_table_id'          => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'i_customer'             => new sfValidatorPass(array('required' => false)),
+      'password'               => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('company_filters[%s]');
@@ -107,7 +111,7 @@ class BaseCompanyFormFilter extends BaseFormFilterPropel
       'city_id'                => 'ForeignKey',
       'contact_name'           => 'Text',
       'email'                  => 'Text',
-      'head_phone_number'      => 'Number',
+      'head_phone_number'      => 'Text',
       'fax_number'             => 'Number',
       'website'                => 'Text',
       'status_id'              => 'ForeignKey',
@@ -128,6 +132,8 @@ class BaseCompanyFormFilter extends BaseFormFilterPropel
       'updated_at'             => 'Date',
       'file_path'              => 'Text',
       'rate_table_id'          => 'Number',
+      'i_customer'             => 'Text',
+      'password'               => 'Text',
     );
   }
 }

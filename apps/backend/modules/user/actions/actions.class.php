@@ -55,15 +55,15 @@ class userActions extends autouserActions
 if(isset($pathArray['HTTP_REFERER']) && $pathArray['HTTP_REFERER']!=''){
       if($pathArray['PATH_INFO']=='/user/changeCulture/new/de'){
 
-	$this->redirect('customer/allRegisteredCustomer');
+	$this->redirect('company/index');
 
         }elseif($pathArray['PATH_INFO']=='/user/login'){
-       $this->redirect('customer/allRegisteredCustomer');
+       $this->redirect('company/index');
         }else{
            $this->redirect($pathArray['HTTP_REFERER']);
         }
 }else{
-                    	$this->redirect('customer/allRegisteredCustomer');
+                    	$this->redirect('company/index');
 
 }
                 } else {

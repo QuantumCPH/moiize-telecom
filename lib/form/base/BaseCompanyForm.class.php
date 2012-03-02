@@ -32,7 +32,7 @@ class BaseCompanyForm extends BaseFormPropel
       'customer_type_id'       => new sfWidgetFormPropelChoice(array('model' => 'CustomerType', 'add_empty' => true)),
       'cpr_number'             => new sfWidgetFormInput(),
       'apartment_form_id'      => new sfWidgetFormPropelChoice(array('model' => 'ApartmentForm', 'add_empty' => true)),
-      'invoice_method_id'      => new sfWidgetFormPropelChoice(array('model' => 'InvoiceMethod', 'add_empty' => false)),
+      'invoice_method_id'      => new sfWidgetFormPropelChoice(array('model' => 'InvoiceMethod', 'add_empty' => true)),
       'account_manager_id'     => new sfWidgetFormPropelChoice(array('model' => 'User', 'add_empty' => true)),
       'agent_company_id'       => new sfWidgetFormPropelChoice(array('model' => 'AgentCompany', 'add_empty' => true)),
       'confirmed_at'           => new sfWidgetFormDate(),
@@ -44,6 +44,8 @@ class BaseCompanyForm extends BaseFormPropel
       'updated_at'             => new sfWidgetFormDateTime(),
       'file_path'              => new sfWidgetFormInput(),
       'rate_table_id'          => new sfWidgetFormInput(),
+      'i_customer'             => new sfWidgetFormInput(),
+      'password'               => new sfWidgetFormInput(),
     ));
 
     $this->setValidators(array(
@@ -58,7 +60,7 @@ class BaseCompanyForm extends BaseFormPropel
       'city_id'                => new sfValidatorPropelChoice(array('model' => 'City', 'column' => 'id', 'required' => false)),
       'contact_name'           => new sfValidatorString(array('max_length' => 150)),
       'email'                  => new sfValidatorString(array('max_length' => 255)),
-      'head_phone_number'      => new sfValidatorInteger(),
+      'head_phone_number'      => new sfValidatorString(array('max_length' => 255)),
       'fax_number'             => new sfValidatorInteger(array('required' => false)),
       'website'                => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'status_id'              => new sfValidatorPropelChoice(array('model' => 'Status', 'column' => 'id', 'required' => false)),
@@ -67,7 +69,7 @@ class BaseCompanyForm extends BaseFormPropel
       'customer_type_id'       => new sfValidatorPropelChoice(array('model' => 'CustomerType', 'column' => 'id', 'required' => false)),
       'cpr_number'             => new sfValidatorInteger(array('required' => false)),
       'apartment_form_id'      => new sfValidatorPropelChoice(array('model' => 'ApartmentForm', 'column' => 'id', 'required' => false)),
-      'invoice_method_id'      => new sfValidatorPropelChoice(array('model' => 'InvoiceMethod', 'column' => 'id')),
+      'invoice_method_id'      => new sfValidatorPropelChoice(array('model' => 'InvoiceMethod', 'column' => 'id', 'required' => false)),
       'account_manager_id'     => new sfValidatorPropelChoice(array('model' => 'User', 'column' => 'id', 'required' => false)),
       'agent_company_id'       => new sfValidatorPropelChoice(array('model' => 'AgentCompany', 'column' => 'id', 'required' => false)),
       'confirmed_at'           => new sfValidatorDate(array('required' => false)),
@@ -78,7 +80,9 @@ class BaseCompanyForm extends BaseFormPropel
       'created_at'             => new sfValidatorDateTime(),
       'updated_at'             => new sfValidatorDateTime(array('required' => false)),
       'file_path'              => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'rate_table_id'          => new sfValidatorInteger(),
+      'rate_table_id'          => new sfValidatorInteger(array('required' => false)),
+      'i_customer'             => new sfValidatorString(array('max_length' => 50, 'required' => false)),
+      'password'               => new sfValidatorString(array('max_length' => 255, 'required' => false)),
     ));
 
     $this->validatorSchema->setPostValidator(
