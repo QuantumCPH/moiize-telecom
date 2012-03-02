@@ -21,10 +21,7 @@
             <td style="padding: 5px;"><?php echo __('First name:') ?></td>
             <td style="padding: 5px;"><input type="text" name="first_name" id="employee_first_name"  value="<?php echo $employee->getFirstName(); ?>"   class="required"  size="25" /></td>
         </tr>
-        <tr>
-            <td style="padding: 5px;"><?php echo __('Last name:') ?></td>
-            <td style="padding: 5px;"> <input type="text" name="last_name" id="employee_last_name"   value="<?php echo $employee->getLastName(); ?>"   class="required"    size="25" /></td>
-        </tr>
+
 
           <tr>
             <td style="padding: 5px;"><?php echo __('Company:') ?></td>
@@ -41,14 +38,8 @@
             <td style="padding: 5px;">Country Code:</td>
             <td style="padding: 5px;"> <input type="text" name="country_code" id="employee_country_code"   class="required digits"   value="<?php echo $employee->getCountryCode(); ?>" size="25"  /> </td>
         </tr>-->
-        <tr>
-            <td style="padding: 5px;"><?php echo __('Mobile number:') ?></td>
-            <td style="padding: 5px;"> <input type="text" name="mobile_number" id="employee_mobile_number"   class="required digits"   value="<?php echo $employee->getMobileNumber(); ?>"   size="25"  minlength="8" readonly="" /> </td>
-        </tr>
-        <tr>
-            <td style="padding: 5px;"><?php echo __('Email:') ?></td>
-            <td style="padding: 5px;"> <input type="text" name="email" id="employee_email"   class="required email"   value="<?php echo $employee->getEmail(); ?>"  size="25" /> </td>
-        </tr>
+
+
        <?php  //$varval = $employee->getRegistrationType();
               //  if (isset($varval) && $varval == "1") { ?>
 <!--        <tr>

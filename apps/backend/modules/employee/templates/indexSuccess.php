@@ -38,8 +38,8 @@
      
       <th align="left"  id="sf_admin_list_th_name"><?php echo __('product') ?></th>
     
-      <th align="left" id="sf_admin_list_th_name"><?php echo __('Mobile number') ?></th>
-<!--       <th align="left"><?php echo __('Resenumber')  ?></th>-->
+ <!--     <th align="left" id="sf_admin_list_th_name"><?php echo __('Mobile number') ?></th>
+       <th align="left"><?php echo __('Resenumber')  ?></th>-->
        <?php  if(isset($companyval) && $companyval!=""){  ?>
         <th align="left"  id="sf_admin_list_th_name"><?php echo __('Employee balance') ?></th>
         <?php } ?>
@@ -94,8 +94,8 @@
 
 
       </td>
-      <td><?php echo $employee->getMobileNumber() ?></td>
-<!--      <td>
+ <!--      <td><?php echo $employee->getMobileNumber() ?></td>
+     <td>
            <?php
 
 
@@ -121,7 +121,7 @@
         $telintaGetBalance = 0;
 
         $ct = new Criteria();
-        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, 'a'.$mobileID);
+        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, 'testesvoip'.$companyval.$employee->getId());
         $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
 

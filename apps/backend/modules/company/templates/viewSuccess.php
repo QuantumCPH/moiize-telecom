@@ -44,12 +44,12 @@
 				  </div>
 				</div>
 
-<!--				<div class="form-row">
+				<div class="form-row">
 				  <label class="required">Post Code:</label>
 				  <div class="content">
 				  	<?php echo $company->getPostCode() ?>
 				  </div>
-				</div>-->
+				
 
 				<div class="form-row">
 				  <label class="required"><?php echo  __('Country:') ?></label>
@@ -101,48 +101,8 @@
 				  	<?php echo $company->getWebsite()?$company->getWebsite():'N/A' ?>
 				  </div>
 				</div>
+ 
 
-				<div class="form-row">
-				  <label class="required"><?php echo  __('Company Size') ?></label>
-				  <div class="content">
-				  	<?php echo $company->getCompanySize()?$company->getCompanySize():'N/A' ?>
-				  </div>
-				</div>
-
-				<div class="form-row">
-				  <label class="required"><?php echo  __('Company Type') ?></label>
-				  <div class="content">
-				  	<?php echo $company->getCompanyType()?$company->getCompanyType():'N/A' ?>
-				  </div>
-				</div>
-							
-				<div class="form-row">
-				  <label class="required"><?php echo  __('Invoice Method:') ?></label>
-				  <div class="content">
-				  	<?php echo $company->getInvoiceMethod()?$company->getInvoiceMethod():'N/A' ?>
-				  </div>
-				</div>
-
-				<div class="form-row">
-				  <label class="required"><?php echo  __('Customer Type:') ?></label>
-				  <div class="content">
-				  	<?php echo $company->getCustomerType()?$company->getCustomerType():'N/A' ?>
-				  </div>
-				</div>
-				
-<!--				<div class="form-row">
-				  <label class="required">Account Manager:</label>
-				  <div class="content">
-				  	<?php //echo $company->getAccountManager()?$company->getAccountManager():'N/A' ?>
-				  </div>
-				</div>-->
-				
-				<div class="form-row">
-				  <label class="required"><?php echo  __('Agent Company:') ?></label>
-				  <div class="content">
-				  	<?php echo $company->getAgentCompany()?$company->getAgentCompany():'N/A' ?>
-				  </div>
-				</div>
 				
 				<div class="form-row">
 				  <label class="required"><?php echo  __('Status:') ?></label>
@@ -151,12 +111,7 @@
 				  </div>
 				</div>
 
-				<div class="form-row">
-				  <label class="required"><?php echo  __('Registered at:') ?></label>
-				  <div class="content">
-				  	<?php echo $company->getRegistrationDate()?$company->getRegistrationDate():'N/A' ?>
-				  </div>
-				</div>
+
 
 			 		
 				
@@ -177,16 +132,7 @@
 				</div>		-->
 
                             
-				<div class="form-row">
-				  <label class="required"><?php echo  __('Registration Doc:') ?></label>
-				  <div class="content">
-					<?php if($company->getFilePath()): ?>
-						<a href="<?php echo public_path('/uploads/'.$company->getFilePath()) ?>" target="_blank"><?php echo  __('Download attachement') ?></a>
-					<?php else: ?>
-				<?php		echo __('None');   ?>
-					<?php endif; ?>
-				  </div>
-				</div>
+
 			</fieldset>
 		</div>
 	

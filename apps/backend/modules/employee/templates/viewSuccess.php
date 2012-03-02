@@ -33,19 +33,7 @@
                     </div>
                 </div>
 
-                <div class="form-row">
-                    <label class="required"><?php echo __('Email:') ?></label>
-                    <div class="content">
-                        <?php echo ($employee->getEmail() ? $employee->getEmail() : 'N/A') ?>
-                    </div>
-                </div>
 
-                <div class="form-row">
-                    <label class="required"><?php echo __('Mobile Number') ?></label>
-                    <div class="content">
-                        <?php echo $employee->getMobileNumber() ?>
-                    </div>
-                </div>
 
                 <div class="form-row">
                     <label class="required"><?php echo __('Product:') ?></label>

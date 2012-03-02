@@ -17,10 +17,7 @@
         <td style="padding: 5px;"><?php echo  __('First name:') ?></td>
         <td style="padding: 5px;"><input type="text" name="first_name" id="employee_first_name"  class="required"  size="25" /></td>
                 </tr>
-                 <tr>
-        <td style="padding: 5px;"><?php echo  __('Last name:') ?></td>
-        <td style="padding: 5px;"> <input type="text" name="last_name" id="employee_last_name"   class="required"   size="25" /></td>
-                </tr>
+
                  <tr>
         <td style="padding: 5px;"><?php echo  __('Company:') ?></td>
         <td style="padding: 5px;">
@@ -35,14 +32,8 @@
         <td style="padding: 5px;"><?php echo  __('Country Code:') ?></td>
         <td style="padding: 5px;"> <input type="text" name="country_code" id="employee_country_code"   size="25"   class="required digits" /> </td>
                 </tr>-->
-                 <tr>
-        <td style="padding: 5px;"><?php echo  __('Mobile number:') ?></td>
-        <td style="padding: 5px;"> <input type="text" name="mobile_number" id="employee_mobile_number"  size="25"   class="required digits"  minlength="8" /><span id="msgbox" style="display:none"></span> </td>
-                </tr>
-                 <tr>
-        <td style="padding: 5px;"><?php echo  __('Email:') ?></td>
-        <td style="padding: 5px;"> <input type="text" name="email" id="employee_email"   class="required email"  size="25" /> </td>
-                </tr>
+
+
 <!--                 <tr>
         <td style="padding: 5px;"><?php echo  __('Rese number:') ?></td>
         <td style="padding: 5px;">

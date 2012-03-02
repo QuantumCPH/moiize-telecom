@@ -21,7 +21,7 @@ class BaseCustomerForm extends BaseFormPropel
       'mobile_number'            => new sfWidgetFormInput(),
       'device_id'                => new sfWidgetFormPropelChoice(array('model' => 'Device', 'add_empty' => true)),
       'email'                    => new sfWidgetFormInput(),
-      'password'                 => new sfWidgetFormInputPassword(),
+      'password'                 => new sfWidgetFormInput(),
       'is_newsletter_subscriber' => new sfWidgetFormInputCheckbox(),
       'created_at'               => new sfWidgetFormDateTime(),
       'updated_at'               => new sfWidgetFormDateTime(),
