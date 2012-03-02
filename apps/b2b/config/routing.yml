@@ -1,0 +1,14 @@
+# default rules
+homepage:
+  url:   /
+  param: { module: company, action: index }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
+
+
+
