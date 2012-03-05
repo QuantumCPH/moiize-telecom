@@ -10,7 +10,7 @@ class CompanyLoginForm extends sfForm {
             //new sfValidatorAnd(
                 array('vat_no' => new sfValidatorPropelChoice(array('model' => 'Company', 'column' => 'vat_no', 'required' => true),
                           array('required' => 'Invalid vat_no','invalid' => 'Invalid vat_no')),
-                      'password' => new sfValidatorPropelChoice(array('model' => 'AgentUser', 'column' => 'password', 'required' => true),
+                      'password' => new sfValidatorPropelChoice(array('model' => 'Company', 'column' => 'password', 'required' => true),
                           array('required' => 'Invalid password','invalid' => 'Invalid password'))
                      )
               //  )
