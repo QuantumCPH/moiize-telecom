@@ -8,3 +8,5 @@ lib/model/om/
 lib/model/map/
 apps/agent/config/app.yml
 apps/b2c/config/app.yml
+config/app.yml
+

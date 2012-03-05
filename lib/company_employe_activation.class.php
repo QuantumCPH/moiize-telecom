@@ -99,7 +99,7 @@ class CompanyEmployeActivation {
         return self::makeTransaction($company, "Manual charge", $amount);
     }
 
-    public static function recharge(Company $company, $amount,$transaction='') {
+    public static function recharge(Company $company, $amount, $transaction='') {
         if (self::makeTransaction($company, "Manual payment", $amount)) {
             emailLib::sendCompanyRefillEmail($company, $transaction);
             return true;

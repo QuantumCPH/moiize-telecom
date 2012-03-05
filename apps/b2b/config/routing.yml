@@ -1,7 +1,7 @@
 # default rules
 homepage:
   url:   /
-  param: { module: company, action: index }
+  param: { module: company, action: dashboard }
 
 default_index:
   url:   /:module

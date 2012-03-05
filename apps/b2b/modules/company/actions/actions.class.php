@@ -15,39 +15,36 @@ class companyActions extends sfActions {
      *
      * @param sfRequest $request A request object
      */
-    public function executeIndex(sfWebRequest $request) {
-            $this->forward404Unless($this->getUser()->getAttribute('companyname', '', 'companysession'));
-        // $this->forward('default', 'module');
+    public function executeDashboard(sfWebRequest $request) {
+        $this->forward404Unless($this->getUser()->getAttribute('companyname', '', 'companysession'));
+        $this->company = CompanyPeer::retrieveByPK($this->getUser()->getAttribute('company_id', '', 'companysession'));
+        $this->balance = CompanyEmployeActivation::getBalance($this->company);
+        $nc = new Criteria();
+        $nc->addDescendingOrderByColumn(NewupdatePeer::STARTING_DATE);
+        $this->updateNews = NewupdatePeer::doSelect($nc);
     }
 
     public function executeLogin($request) {
-
-        //call Culture Method For Get Current Set Culture - Against Feature# 6.1 --- 01/24/11 - Ahtsham
-        changeLanguageCulture::languageCulture($request, $this);
         if ($request->getParameter('new'))
             $this->getUser()->setCulture($request->getParameter('new'));
         else
             $this->getUser()->setCulture($this->getUser()->getCulture());
-        $this->form = new CompanyLoginForm();
 
+        $this->form = new CompanyLoginForm();
         if ($request->isMethod('post')) {
             $this->form->bind($request->getParameter('login'), $request->getFiles('login'));
-
             if ($this->form->isValid()) {
-
                 $c = new Criteria();
-
                 $c->Add(CompanyPeer::VAT_NO, $this->form->getValue('vat_no'));
                 $c->addAnd(CompanyPeer::PASSWORD, $this->form->getValue('password'));
-                $company_user = CompanyPeer::doSelectOne($c);
+                $company = CompanyPeer::doSelectOne($c);
 
-                if ($company_user) {
+
+                if ($company) {
                     $this->getUser()->setAuthenticated(true);
-                    $this->getUser()->setAttribute('company_id', $company_user->getId(), 'companysession');
-                    $this->getUser()->setAttribute('companyname', $company_user->getName(), 'companysession');
-                  
-
-                    $this->redirect(sfConfig::get('app_main_url') . 'company/index');
+                    $this->getUser()->setAttribute('company_id', $company->getId(), 'companysession');
+                    $this->getUser()->setAttribute('companyname', $company->getName(), 'companysession');
+                    $this->redirect(sfConfig::get('app_main_url') . 'dashboard');
                 }
             }
         }
@@ -56,7 +53,79 @@ class companyActions extends sfActions {
     public function executeLogout() {
         $this->getUser()->getAttributeHolder()->removeNamespace('companysession');
         $this->getUser()->setAuthenticated(false);
-        $this->redirect(sfConfig::get('app_main_url') . 'company/index');
+        $this->redirect(sfConfig::get('app_main_url') .'login');
+    }
+
+    public function executeNewsListing(sfWebRequest $request) {
+        $this->forward404Unless($this->getUser()->isAuthenticated());
+
+
+        $c = new Criteria();
+        $c->addDescendingOrderByColumn(NewupdatePeer::STARTING_DATE);
+        $news = NewupdatePeer::doSelect($c);
+        $this->news = $news;
+    }
+
+    public function executeView($request) {
+
+        $this->forward404Unless($this->getUser()->getAttribute('companyname', '', 'companysession'));
+        $this->company = CompanyPeer::retrieveByPK($this->getUser()->getAttribute('company_id', '', 'companysession'));
+        $this->balance = CompanyEmployeActivation::getBalance($this->company);
+        $c = new Criteria();
+        $c->Add(EmployeePeer::COMPANY_ID, $this->company->getId());
+        $this->employeesCount = EmployeePeer::doCount($c);
+    }
+
+    public function executePaymentHistory(sfWebRequest $request) {
+        $this->forward404Unless($this->getUser()->getAttribute('companyname', '', 'companysession'));
+        $c = new Criteria();
+        $c->add(CompanyTransactionPeer::TRANSACTION_STATUS_ID, 3);
+        $c->addAnd(CompanyTransactionPeer::COMPANY_ID, $this->getUser()->getAttribute('company_id', '', 'companysession'));
+        $c->addDescendingOrderByColumn(CompanyTransactionPeer::CREATED_AT);
+        $this->transactions = CompanyTransactionPeer::doSelect($c);
+    }
+
+    public function executeShowReceipt(sfWebRequest $request) {
+        $this->forward404Unless($this->getUser()->getAttribute('companyname', '', 'companysession'));
+        $c = new Criteria();
+        $c->add(CompanyTransactionPeer::TRANSACTION_STATUS_ID, 3);
+        $c->addAnd(CompanyTransactionPeer::COMPANY_ID, $this->getUser()->getAttribute('company_id', '', 'companysession'));
+        $c->addAnd(CompanyTransactionPeer::ID, $request->getParameter('tid'));
+        $transactionCount = CompanyTransactionPeer::doCount($c);
+        if ($transactionCount == 1) {
+            $transaction = CompanyTransactionPeer::doSelectOne($c);
+            $this->renderPartial('company/refill_receipt', array(
+                'company' => CompanyPeer::retrieveByPK($transaction->getCompanyId()),
+                'transaction' => $transaction,
+                'vat' => 0,
+            ));
+        } else {
+            die("Unable to Show the Reciept");
+        }
+        return sfView::NONE;
+    }
+
+    public function executeCallHisotry(sfWebRequest $request) {
+        $this->forward404Unless($this->getUser()->getAttribute('companyname', '', 'companysession'));
+        $this->company = CompanyPeer::retrieveByPK($this->getUser()->getAttribute('company_id', '', 'companysession'));
+        
+        $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
+        $fromdate = date("Y-m-d", $tomorrow1);
+        $tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
+        $todate = date("Y-m-d", $tomorrow);
+        $iaccount = $request->getParameter('iaccount');
+        if (isset($iaccount) && $iaccount!='') {
+            $this->iAccountTitle = $request->getParameter('iaccountTitle');
+            $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($request->getParameter('iaccount'), $fromdate, $todate);
+        } else {
+            
+            $this->callHistory = CompanyEmployeActivation::callHistory($this->company, $fromdate, $todate);
+        }
+
+        $c = new Criteria();
+        $c->add(TelintaAccountsPeer::I_CUSTOMER, $this->company->getICustomer());
+        $c->addAnd(TelintaAccountsPeer::STATUS, 3);
+        $this->telintaAccountObj = TelintaAccountsPeer::doSelect($c);
     }
 
 }
