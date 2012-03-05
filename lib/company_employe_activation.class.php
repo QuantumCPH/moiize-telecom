@@ -158,7 +158,7 @@ class CompanyEmployeActivation {
 
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
         $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
-
+        $pass = self::randomAlphabets(4).self::randomNumbers(1).self::randomAlphabets(3);
         try {
             $accountName = $accountType . $mobileNumber;
             $account = $pb->add_account(array('account_info' => array(
@@ -169,10 +169,10 @@ class CompanyEmployeActivation {
                             'opening_balance' => 0,
                             'credit_limit' => null,
                             'i_product' => $iProduct,
-                            'i_routing_plan' => 2039,
+                            'i_routing_plan' => 2089,
                             'billing_model' => 1,
-                            'password' => 'asdf1asd',
-                            'h323_password' => 'asdf1asd',
+                            'password' => $pass,
+                            'h323_password' => $pass,
                             'activation_date' => date('Y-m-d'),
                             'batch_name' => $company->getVatNo(),
                             'follow_me_enabled' => $followMeEnabled
@@ -210,6 +210,26 @@ class CompanyEmployeActivation {
         }
         $pb->_logout();
         return true;
+    }
+
+     private static function randomAlphabets($length) {
+        $random = "";
+        srand((double) microtime() * 1000000);
+        $data = "abcdefghijklmnopqrstuvwxyz";
+        for ($i = 0; $i < $length; $i++) {
+            $random .= substr($data, (rand() % (strlen($data))), 1);
+        }
+        return $random;
+    }
+
+    private static function randomNumbers($length) {
+        $random = "";
+        srand((double) microtime() * 1000000);
+        $data = "0123456789";
+        for ($i = 0; $i < $length; $i++) {
+            $random .= substr($data, (rand() % (strlen($data))), 1);
+        }
+        return $random;
     }
 
 }
