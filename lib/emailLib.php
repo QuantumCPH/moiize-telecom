@@ -1302,7 +1302,31 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
         endif;
         //-----------------------------------------
     }
+  
+    public static function sendAgentForgetPasswordEmail(Company $company, $message_body, $subject) {
+        sfContext::getInstance()->getConfiguration()->loadHelpers('Partial');
 
+        // $subject = __("Request for password");
+        $recepient_email = trim($company->getEmail());
+        $recepient_name = sprintf('%s', $company->getContactName());
+        $company_id    = $company->getId();
+        //Support Information
+        $sender_email = sfConfig::get('app_email_sender_email', 'support@zerocall.com');
+        $sender_name = sfConfig::get('app_email_sender_name', 'Zerocall support');
+
+        //------------------Sent The Email To Company Agent
+        if (trim($recepient_email) != '') {
+            $email = new EmailQueue();
+            $email->setSubject($subject);
+            $email->setReceipientName($recepient_name);
+            $email->setReceipientEmail($recepient_email);
+            $email->setCutomerId($company_id);
+            $email->setEmailType('Moziie Forget Password');
+            $email->setMessage($message_body);
+            $email->save();
+        }
+        //----------------------------------------
+    }
 }
 
 ?>

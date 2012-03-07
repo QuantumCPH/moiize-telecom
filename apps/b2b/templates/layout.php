@@ -59,11 +59,11 @@
                         <?php
                         if ($actionName == 'dashboard' && $modulName == "company") {
                         ?>
-                            <a href="<?php echo sfConfig::get('app_main_url');?>dashboard" class="current"><?php echo  __('Dashboard');?></a>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>company/dashboard" class="current"><?php echo  __('Dashboard');?></a>
                         <?php    
                         } else {
                         ?>
-                            <a href="<?php echo sfConfig::get('app_main_url');?>dashboard"><?php echo  __('Dashboard');?></a>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>company/dashboard"><?php echo  __('Dashboard');?></a>
                         <?php    
                         }
                         ?>
@@ -72,11 +72,11 @@
                         <?php
                         if ($modulName == "company" && $actionName == 'paymentHistory') {
                         ?>
-                            <a href="<?php echo sfConfig::get('app_main_url');?>paymentHistory" class="current"><?php echo  __('Payment History');?></a>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>company/paymentHistory" class="current"><?php echo  __('Payment History');?></a>
                         <?php     
                         } else {
                         ?>
-                            <a href="<?php echo sfConfig::get('app_main_url');?>paymentHistory"><?php echo  __('Payment History');?></a>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>company/paymentHistory"><?php echo  __('Payment History');?></a>
                         <?php  
                         }
                         ?>
@@ -84,11 +84,11 @@
                     <li><?php
                         if ($modulName == "company" && $actionName == 'callHisotry') {
                         ?>
-                            <a href="<?php echo sfConfig::get('app_main_url');?>callHisotry" class="current"><?php echo  __('Call History');?></a>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>company/callHisotry" class="current"><?php echo  __('Call History');?></a>
                         <?php 
                         } else {
                         ?>
-                            <a href="<?php echo sfConfig::get('app_main_url');?>callHisotry"><?php echo  __('Call History');?></a>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>company/callHisotry"><?php echo  __('Call History');?></a>
                         <?php 
                         }
                         ?>
@@ -96,11 +96,11 @@
                     <li><?php
                         if ($modulName == "company" && $actionName == 'view') {
                         ?>
-                            <a href="<?php echo sfConfig::get('app_main_url');?>view" class="current"><?php echo  __('Agent Info');?></a>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>company/view" class="current"><?php echo  __('Agent Info');?></a>
                         <?php    
                         } else {
                         ?>
-                            <a href="<?php echo sfConfig::get('app_main_url');?>view"><?php echo  __('Agent Info');?></a>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>company/view"><?php echo  __('Agent Info');?></a>
                         <?php     
                         }
                         ?>
@@ -108,16 +108,16 @@
                     <li><?php
                         if ($modulName == "rates" && $actionName == 'company') {
                         ?>
-                            <a href="<?php echo sfConfig::get('app_main_url');?>rates" class="current"><?php echo  __('Rates');?></a>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>company/rates" class="current"><?php echo  __('Rates');?></a>
                         <?php 
                         } else {
                         ?>
-                            <a href="<?php echo sfConfig::get('app_main_url');?>rates" ><?php echo  __('Rates');?></a>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>company/rates" ><?php echo  __('Rates');?></a>
                         <?php 
                         }
                         ?>
                     </li>
-                    <li class="last"><a href="<?php echo sfConfig::get('app_main_url');?>logout" ><?php echo  __('Logout');?></a></li>
+                    <li class="last"><a href="<?php echo sfConfig::get('app_main_url');?>company/logout" ><?php echo  __('Logout');?></a></li>
 
                 </ul>
                 <?php } ?>
