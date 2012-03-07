@@ -289,6 +289,18 @@
                           echo link_to(__('Cities'), 'city/index'); 
                         }
                         ?>
+
+                         <?php
+                        if($actionName=='list' && $modulName=="rates"){
+                          echo link_to(__('Rates'), 'rates/index',array('class'=>'subSelect'));
+                        }else{
+                          echo link_to(__('Rates'), 'rates/index');
+                        }
+                        ?>
+
+
+
+
                         <?php 
                         /*if($actionName=='list' && $modulName=="sms_text"){
                           echo link_to(__('SMS Text'), 'sms_text/index',array('class'=>'subSelect'));
