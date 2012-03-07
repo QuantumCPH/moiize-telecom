@@ -178,5 +178,8 @@ class companyActions extends sfActions {
         return $this->redirect(sfConfig::get('app_main_url').'company/login');
       }
     }
-
+   public function executeRates()
+   {
+       
+   }
 }
