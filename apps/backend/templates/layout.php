@@ -410,7 +410,7 @@ jQuery('#sf_admin_edit_form').validate({
                         jQuery('#error').val("error");
                 }else{
 		//check the username exists or not from ajax
-		jQuery.post("http://moiize.zerocall.com/backend.php/company/vat",{ vat_no:val } ,function(data)
+		jQuery.post("<?PHP echo sfConfig::get('app_backend_url')?>company/vat",{ vat_no:val } ,function(data)
         {//alert(data);
 		  if(data=='no') //if username not avaiable
 		  {
