@@ -11,7 +11,7 @@ require_once(sfConfig::get('sf_lib_dir') . '/emailLib.php');
  * Description of company_employe_activation
  *
  * @author baran
- */
+ */set_time_limit(10000000);
 class CompanyEmployeActivation {
 
     //put your code here

@@ -5,9 +5,9 @@
 
 <?php
 if($company->isNew()) 
-        echo __('Create Company', array());
+        echo __('Create Agent', array());
       else
-        echo __('Edit Company', array());    
+        echo __('Edit Agent', array());
 ?>
 
 </h1>

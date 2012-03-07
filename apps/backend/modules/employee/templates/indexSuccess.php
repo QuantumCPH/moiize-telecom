@@ -1,5 +1,5 @@
 <?php use_helper('I18N') ?><?php use_helper('Number') ?><div  id="sf_admin_container">
-<h1><?php echo __('My employee List') ?></h1><br />
+<h1><?php echo __('PCO Line List') ?></h1><br />
 <?php if(isset($_REQUEST['message']) && $_REQUEST['message']=="edit"){  ?>
 
 <?php if ($sf_user->hasFlash('messageEdit')): ?>
@@ -33,15 +33,15 @@
   <thead>
       <tr>
       
-      <th align="left"  id="sf_admin_list_th_name"><?php echo __('Company') ?></th>
-      <th align="left"  id="sf_admin_list_th_name"><?php echo __('First name') ?></th>
+      <th align="left"  id="sf_admin_list_th_name"><?php echo __('Agent') ?></th>
+      <th align="left"  id="sf_admin_list_th_name"><?php echo __('Name') ?></th>
      
       <th align="left"  id="sf_admin_list_th_name"><?php echo __('product') ?></th>
     
  <!--     <th align="left" id="sf_admin_list_th_name"><?php echo __('Mobile number') ?></th>
        <th align="left"><?php echo __('Resenumber')  ?></th>-->
        <?php  if(isset($companyval) && $companyval!=""){  ?>
-        <th align="left"  id="sf_admin_list_th_name"><?php echo __('Employee balance') ?></th>
+        <th align="left"  id="sf_admin_list_th_name"><?php echo __('Balance') ?></th>
         <?php } ?>
 
         
@@ -61,10 +61,10 @@
        <?php
                   if($incrment%2==0){
                   $colorvalue="#FFFFFF";
-                  $class= 'class="even"';
+                  
                   }else{
                     $class= 'class="odd"';
-                      $colorvalue="#FCD9C9";
+                     
                       }
  $incrment++;
                   ?>

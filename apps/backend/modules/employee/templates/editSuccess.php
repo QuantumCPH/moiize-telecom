@@ -1,11 +1,11 @@
 <?php use_helper('I18N') ?>
-<?php use_helper('Number') ?><div id="sf_admin_container"><h1><?php echo __('Edit Employee') ?></h1>
+<?php use_helper('Number') ?><div id="sf_admin_container"><h1><?php echo __('Edit PCO Line') ?></h1>
 
 <?php if (isset($_REQUEST['message']) && $_REQUEST['message']!= "") {
  ?>
 
     <div class="save-ok">
-        <h2><?php echo __('Employee is added successfully') ?></h2>
+        <h2><?php echo __('PCO Line is added successfully') ?></h2>
     </div>
 
 <?php } ?>
@@ -18,13 +18,13 @@
 
     <table width="100%" cellspacing="0" cellpadding="2" class="tblAlign" border='0'>
         <tr>
-            <td style="padding: 5px;"><?php echo __('First name:') ?></td>
+            <td style="padding: 5px;"><?php echo __('Name:') ?></td>
             <td style="padding: 5px;"><input type="text" name="first_name" id="employee_first_name"  value="<?php echo $employee->getFirstName(); ?>"   class="required"  size="25" /></td>
         </tr>
 
 
           <tr>
-            <td style="padding: 5px;"><?php echo __('Company:') ?></td>
+            <td style="padding: 5px;"><?php echo __('Agent:') ?></td>
             <td style="padding: 5px;">
                 <?php foreach ($companys as $company) { ?>
                    <?php   $comid = $company->getId(); ?>    <?php $varcom =$employee->getCompanyId();

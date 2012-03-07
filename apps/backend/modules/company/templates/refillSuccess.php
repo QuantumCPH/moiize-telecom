@@ -14,7 +14,7 @@
     <div id="sf_admin_content">
     <table style="padding: 0px;"  id="sf_admin_container" class="tblAlign" cellspacing="0" cellpadding="2" >
     <tr>
-        <td style="padding: 5px;"><?php echo __('Company:') ?></td>
+        <td style="padding: 5px;"><?php echo __('Agent:') ?></td>
         <td style="padding: 5px;">
             <select name="company_id" id="employee_company_id"    class="required"  style="width:190px;">
            

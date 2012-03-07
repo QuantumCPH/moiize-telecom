@@ -6,14 +6,14 @@
   <fieldset>
     <h2><?php echo __('filters') ?></h2>
     <div class="form-row">
-    <label for="filters_company_name"><?php echo __('Company name:') ?></label>
+    <label for="filters_company_name"><?php echo __('Agent Name:') ?></label>
     <div class="content">
     <?php echo get_partial('company_name', array('type' => 'filter', 'filters' => $filters)) ?>
     </div>
     </div>
 
         <div class="form-row">
-    <label for="filters_vat_no"><?php echo __('Vat no:') ?></label>
+    <label for="filters_vat_no"><?php echo __('Vat No:') ?></label>
     <div class="content">
     <?php echo input_tag('filters[vat_no]', isset($filters['vat_no']) ? $filters['vat_no'] : null, array (
   'size' => 7,

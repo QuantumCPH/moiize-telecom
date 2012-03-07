@@ -1,6 +1,6 @@
 <div id="sf_admin_container">
     <div id="sf_admin_content">
-        <a href="<?php echo url_for('employee/view') . '?id=' . $employee->getId() ?>" class="external_link" target="_self"><?php echo __('Employee Detail') ?></a>
+        <a href="<?php echo url_for('employee/view') . '?id=' . $employee->getId() ?>" class="external_link" target="_self"><?php echo __('PCO Line Detail') ?></a>
     </div>
     <br />
     <h1><?php echo __('Call History') ?></h1>
@@ -53,7 +53,7 @@
 ?> 
 
 
-        ?>
+       
 
 <?php if ($callRecords == 0) { ?>
             <tr>

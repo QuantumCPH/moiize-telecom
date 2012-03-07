@@ -133,7 +133,7 @@ class employeeActions extends sfActions {
 
         CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys);
       
-        $this->getUser()->setFlash('messageAdd', 'Employee has been added successfully' . (isset($msg) ? "and " . $msg : ''));
+        $this->getUser()->setFlash('messageAdd', 'PCO Line has been added successfully' . (isset($msg) ? "and " . $msg : ''));
         $this->redirect('employee/index?message=add');
     }
 
@@ -169,7 +169,7 @@ class employeeActions extends sfActions {
         //  $employee->setProductPrice($request->getParameter('price'));
         $employee->setDeleted($request->getParameter('deleted'));
         $employee->save();
-        $this->getUser()->setFlash('messageEdit', 'Employee has been edited successfully' . (isset($msg) ? "and " . $msg : ''));
+        $this->getUser()->setFlash('messageEdit', 'PCO Line has been edited successfully' . (isset($msg) ? "and " . $msg : ''));
         //$this->message = "employee added successfully";
         $this->redirect('employee/index?message=edit');
         // return sfView::NONE;
@@ -191,7 +191,7 @@ class employeeActions extends sfActions {
         $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
         if (!CompanyEmployeActivation::terminateAccount($telintaAccount)) {
-            $this->getUser()->setFlash('messageEdit', 'Employee has not been deleted Sucessfully Error in Callthrough Account');
+            $this->getUser()->setFlash('messageEdit', 'PCO Line has not been deleted Sucessfully Error in Callthrough Account');
             if (isset($companyid) && $companyid != "") {
                 $this->redirect('employee/index?company_id=' . $companyid . '&filter=filter');
             } else {
@@ -208,7 +208,7 @@ class employeeActions extends sfActions {
 //                else{$this->redirect('employee/index');}
 //                return false;
 //            }
-        $this->forward404Unless($employee = EmployeePeer::retrieveByPk($request->getParameter('id')), sprintf('Object employee does not exist (%s).', $request->getParameter('id')));
+        $this->forward404Unless($employee = EmployeePeer::retrieveByPk($request->getParameter('id')), sprintf('Object PCO Line does not exist (%s).', $request->getParameter('id')));
 
 
 //                $getvoipInfo = new Criteria();
@@ -246,7 +246,7 @@ class employeeActions extends sfActions {
 
 
         $employee->delete();
-        $this->getUser()->setFlash('messageEdit', 'Employee has been deleted Sucessfully');
+        $this->getUser()->setFlash('messageEdit', 'PCO Line has been deleted Sucessfully');
         if (isset($companyid) && $companyid != "") {
             $this->redirect('employee/index?company_id=' . $companyid . '&filter=filter');
         } else {
@@ -268,8 +268,8 @@ class employeeActions extends sfActions {
 
         $mobilenumber = $this->employee->getCountryMobileNumber();
         $ct = new Criteria();
-        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, 'a'.$mobilenumber);
-        $ct->andAdd(TelintaAccountsPeer::STATUS, 3);
+        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, 'testesvoip'.$this->employee->getCompanyId(). $this->employee->getId());
+        $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
         $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $fromdate, $todate);
         

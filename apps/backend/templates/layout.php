@@ -69,7 +69,7 @@
   	<div id="wrapper">
   	<div id="header">  
          <div class="logo">
-  		<?php echo image_tag('/images/wls2-logo.png') ?>
+  		<?php echo image_tag('/images/logo.jpg') ?>
             </div>       
             <div class="clr"></div>
   	</div>
@@ -83,22 +83,22 @@
       <ul id="sddm">
              <li><a href="#"
                 onmouseover="mopen('m2')"
-                onmouseout="mclosetime()" <?php echo $modulName=='company'||$modulName=='employee'? 'class = "current"':''?>><?php echo __('B2B') ?></a>
+                onmouseout="mclosetime()" <?php echo $modulName=='company'||$modulName=='employee'? 'class = "current"':''?>><?php echo __('PCO Agents') ?></a>
                 <div id="m2"
                     onmouseover="mcancelclosetime()"
                     onmouseout="mclosetime()">                    
                     <?php 
                     if($actionName=='list' && $modulName=="company"){
-                       echo link_to(__('Companies list'), 'company/index', array('class'=>'subSelect'));
+                       echo link_to(__('Agent List'), 'company/index', array('class'=>'subSelect'));
                     }else{
-                       echo link_to(__('Companies list'), 'company/index'); 
+                       echo link_to(__('Agent List'), 'company/index');
                     }          
                     ?>                    
                     <?php 
                       if($actionName=='index' && $modulName=="employee"){
-                          echo link_to(__('Employee lists'), 'employee/index', array('class'=>'subSelect'));
+                          echo link_to(__('PCO Lines'), 'employee/index', array('class'=>'subSelect'));
                       }else{
-                          echo link_to(__('Employee lists'), 'employee/index');
+                          echo link_to(__('PCO Lines'), 'employee/index');
                       }
                     ?>                    
                     <?php 
@@ -115,7 +115,7 @@
                       } ?>
                 </div>
             </li>
-            <li>
+          <!--   <li>
                 <a href="#"
                 onmouseover="mopen('m5')"
                 onmouseout="mclosetime()" <?php echo $modulName=='customer'? 'class = "current"':''?>><?php echo __('Wls2') ?></a>
@@ -131,7 +131,7 @@
                 </div>
             </li>
 
-          <li>
+         <li>
                 <a href="#"
                 onmouseover="mopen('m3')"
                 onmouseout="mclosetime()" <?php echo $modulName=="agent_user" || $modulName=="agent_company" || $modulName=="agent_commission" || $modulName=="agent_commission_package" ?'class="current"':''?>><?php echo __('Agents') ?></a>
@@ -166,7 +166,7 @@
                         echo link_to(__('Agent Commission Package'), 'agent_commission_package/index');
                       }?>
                 </div>
-            </li>
+            </li>-->
             <li>
                 <a href="#"
                 onmouseover="mopen('m7')"
@@ -183,18 +183,18 @@
                     }
                     ?>
                     <?php 
-                    if($actionName=='list' && $modulName=="faqs"){
+                    /*if($actionName=='list' && $modulName=="faqs"){
                         echo link_to(__('FAQ'), 'faqs/index', array('class'=>'subSelect'));
                     }else{
                         echo link_to(__('FAQ'), 'faqs/index');
-                    }
+                    }*/
                     ?>
                     <?php 
-                    if($actionName=='index' && $modulName=="userguide"){
+                   /* if($actionName=='index' && $modulName=="userguide"){
                         echo link_to(__('User Guide'), 'userguide/index', array('class'=>'subSelect'));
                     }else{
                         echo link_to(__('User Guide'), 'userguide/index');
-                    }?>
+                    }*/?>
 
                 </div>
             </li>
@@ -244,7 +244,7 @@
                         <?php
                         // As per Omair Instruction - He need these changes - kmmalik - 08/17/2011
                          //echo link_to('<b>Zerocall Setting</b>', '') ?>
-                        <a href="javascript:;" class="label"><b><?php echo __('WLS2 Setting') ?></b></a>
+<!--                        <a href="javascript:;" class="label"><b><?php echo __('WLS2 Setting') ?></b></a>-->
                         <?php 
 //                        if($actionName=='list' && $modulName=="device"){
 //                          echo link_to(__('Mobile Models'), 'device/index',array('class'=>'subSelect'));
@@ -261,11 +261,11 @@
                         ?>
                        
                         <?php 
-                        if($actionName=='list' && $modulName=="postal_charges"){
+                       /* if($actionName=='list' && $modulName=="postal_charges"){
                           echo link_to(__('Postal charges'), 'postal_charges/index',array('class'=>'subSelect'));
                         }else{
                           echo link_to(__('Postal charges'), 'postal_charges/index'); 
-                        }
+                        }*/
                         ?>
                         <a href="javascript:;" class="label"><b><?php echo __('General Setting') ?> </b></a>
                         <?php 
@@ -290,11 +290,11 @@
                         }
                         ?>
                         <?php 
-                        if($actionName=='list' && $modulName=="sms_text"){
+                        /*if($actionName=='list' && $modulName=="sms_text"){
                           echo link_to(__('SMS Text'), 'sms_text/index',array('class'=>'subSelect'));
                         }else{
                           echo link_to(__('SMS Text'), 'sms_text/index');
-                        }
+                        }*/
                         ?>
                         <?php 
 //                        if($actionName=='list' && $modulName=="usage_alert"){
@@ -311,11 +311,11 @@
 //                        }
                         ?>
                         <?php 
-                        if($actionName=='list' && $modulName=="telecom_operator"){
+                       /* if($actionName=='list' && $modulName=="telecom_operator"){
                           echo link_to(__('Telecom Operator'), 'telecom_operator/index',array('class'=>'subSelect'));
                         }else{
                           echo link_to(__('Telecom Operator'), 'telecom_operator/index');
-                        }
+                        }*/
                         ?>
                 </div>
             </li>
