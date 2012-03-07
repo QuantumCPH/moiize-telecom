@@ -145,7 +145,7 @@
   padding: 5px 20px 5px 25px;
   font-size: 11px;
   color: #fff;
-  background: #f33 url(../images/error.png) no-repeat 5px 2px;
+  background: #3AA32B url(../images/error.png) no-repeat 5px 2px;
 }
 
 #sf_admin_container .form-errors dl

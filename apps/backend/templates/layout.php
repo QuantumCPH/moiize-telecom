@@ -74,10 +74,10 @@
             <div class="clr"></div>
   	</div>
         <div class="clr"></div>
-            <div style="width:75%;margin:0 auto;text-align: right;">
+<!--            <div style="width:75%;margin:0 auto;text-align: right;">
                <?php echo link_to(image_tag('/images/german.png'), 'user/changeCulture?new=de'); ?>
                <?php echo link_to(image_tag('/images/english.png'), 'user/changeCulture?new=en'); ?>
-            </div>
+            </div>-->
       <?php if($sf_user->isAuthenticated()): ?>
      <div class="topNav" align="center">  
       <ul id="sddm">
@@ -422,7 +422,7 @@ jQuery('#sf_admin_edit_form').validate({
                         jQuery('#error').val("error");
                 }else{
 		//check the username exists or not from ajax
-		jQuery.post("https://wls2.zerocall.com/backend.php/company/vat",{ vat_no:val } ,function(data)
+		jQuery.post("<?PHP echo sfConfig::get('app_backend_url')?>company/vat",{ vat_no:val } ,function(data)
         {//alert(data);
 		  if(data=='no') //if username not avaiable
 		  {
