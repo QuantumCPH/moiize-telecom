@@ -1312,15 +1312,15 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
 
         
         sfContext::getInstance()->getConfiguration()->loadHelpers('Partial');
-        $message_body = get_partial('company/order_receipt_web_reg', array(
+         $message_body = get_partial('company/order_receipt_web_reg', array(
                     'company' => $company,
                     ));
 
 
         $subject = __('Registration Confirmation');
         $recepient_email = trim($company->getEmail());
-        $recepient_name = sprintf('%s', $company->getName());
-        $company_id = trim($customer->getId());
+         $recepient_name = sprintf('%s', $company->getName());
+         $company_id = trim($company->getId());
 
         //Support Information
        // $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
