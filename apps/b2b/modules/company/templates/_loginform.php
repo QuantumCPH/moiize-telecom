@@ -31,8 +31,9 @@
             </div>     
 
     <div class="clr"></div>
+    
     </div>
             <div class="right"></div>  
     </div>
 </form>
-            
+      <a href="<?php sfConfig::get('app_main_url');?>findPassword" class="forgotUrl">Forgot Password?</a>      

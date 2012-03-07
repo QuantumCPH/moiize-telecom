@@ -29,7 +29,7 @@ class companyActions extends sfActions {
             $this->getUser()->setCulture($request->getParameter('new'));
         else
             $this->getUser()->setCulture($this->getUser()->getCulture());
-
+ 
         $this->form = new CompanyLoginForm();
         if ($request->isMethod('post')) {
             $this->form->bind($request->getParameter('login'), $request->getFiles('login'));
@@ -126,6 +126,13 @@ class companyActions extends sfActions {
         $c->add(TelintaAccountsPeer::I_CUSTOMER, $this->company->getICustomer());
         $c->addAnd(TelintaAccountsPeer::STATUS, 3);
         $this->telintaAccountObj = TelintaAccountsPeer::doSelect($c);
+    }
+    
+    public function executeFindPassword(sfWebRequest $request){
+     
+       echo"khsdasf";
+       die;
+       
     }
 
 }
