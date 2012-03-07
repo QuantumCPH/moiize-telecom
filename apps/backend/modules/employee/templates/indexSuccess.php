@@ -161,7 +161,13 @@
 
       <?php } ?>
       <td><?php echo substr($employee->getCreatedAt(),0,10); ?></td>
-      <td><?php echo 'testesvoip'.$companyval.$employee->getId(); ?></td>
+      <?PHP
+        $ct1 = new Criteria();
+        $ct1->add(TelintaAccountsPeer::ACCOUNT_TITLE, 'testesvoip'.$employee->getCompanyId().$employee->getId());
+        $ct1->addAnd(TelintaAccountsPeer::STATUS, 3);
+        $telintaAccount1 = TelintaAccountsPeer::doSelectOne($ct1);
+      ?>
+      <td><?php echo $telintaAccount1->getAccountTitle() ?></td>
    
     <!--  <td align="center">  <?php //$appval=$employee->getIsAppRegistered();  if(isset($appval) && $appval==1){   ?> <img alt="Tick" src="/sf/sf_admin/images/tick.png">  <?php //} ?></td>
        <td><?php //echo $employee->getAppCode() ?></td>
