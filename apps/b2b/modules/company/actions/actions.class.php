@@ -158,8 +158,7 @@ class companyActions extends sfActions {
 
 
             $subject = $this->getContext()->getI18N()->__('Password Request');
-            //$sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
-            $sender_email = sfConfig::get('app_email_sender_email', 'rr@zerocall.com');
+            $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
             $sender_name = sfConfig::get('app_email_sender_name', 'support');
 
             $message = $message_body;
