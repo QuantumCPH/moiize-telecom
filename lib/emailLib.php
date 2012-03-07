@@ -1320,7 +1320,7 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
        // $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zerocall.com');
        // $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2 ');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
-        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'WLS 2 ');
+        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize Telecom');
 
         //------------------Sent The Email To Agent
         if ($recepient_email != '') {
@@ -1354,7 +1354,7 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
             $email4->setReceipientName($sender_namecdu);
             $email4->setReceipientEmail($sender_emailcdu);
             $email4->setCutomerId($customer_id);
-            $email4->setEmailType('WLS 2 Customer registration via link');
+            $email4->setEmailType('Customer Registeration');
             $email4->setMessage($message_body);
             $email4->save();
         endif;
