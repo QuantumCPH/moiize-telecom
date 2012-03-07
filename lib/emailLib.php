@@ -1323,10 +1323,10 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
          $company_id = trim($company->getId());
 
         //Support Information
-       // $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
-        //$sender_name = sfConfig::get('app_email_sender_name', 'WLS 2 ');
-        //$sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
-        //$sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'WLS 2 ');
+        $sender_email = sfConfig::get('app_email_sender_email', 'fu@zerocall.com');
+        $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2 ');
+        $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'fu@zerocall.com');
+        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'WLS 2 ');
 
         //------------------Sent The Email To Agent
         if ($recepient_email != '') {
