@@ -5,7 +5,11 @@ homepage:
 
 default_index:
   url:   /:module
-  param: { action: index }
+  param: { action: dashboard }
+
+login:
+  url: /login
+  param: {module: company, action:login}
 
 default:
   url:   /:module/:action/*
