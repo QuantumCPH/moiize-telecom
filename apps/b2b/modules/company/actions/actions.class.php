@@ -137,14 +137,10 @@ class companyActions extends sfActions {
 
         //echo $c->toString(); exit;
         $company = CompanyPeer::doSelectOne($c);
-//print_r($company);
-//echo $company->getVatNo();
-//die();
-        if ($company) {//die();
+
+        if ($company) {
             //change the password to some thing uniuque and complex
             $new_password = substr(base64_encode($company->getPassword()), 0, 8);
-            //echo $new_password.''.$customer->getPassword();
-            //$company->setPlainText($new_password);
             $company->setPassword($new_password);
             $message_body = $this->getContext()->getI18N()->__('Hi') . ' ' . $company->getName() . '!';
             $message_body .= '<br /><br />';
@@ -178,7 +174,8 @@ class companyActions extends sfActions {
         }
         else {
             $this->getUser()->setFlash('send_password_error_message', $this->getContext()->getI18N()->__('No agent is registered with this vat number.'));
-        } 
+        }
+        return $this->redirect(sfConfig::get('app_main_url').'company/login');
     }
 
 }
