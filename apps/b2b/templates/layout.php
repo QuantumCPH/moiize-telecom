@@ -12,7 +12,7 @@
         <div id="basic">
             <div id="header">
                 <div class="logo">
-                    <?php echo image_tag('/images/logo1.jpg'); // link_to(image_tag('/images/logo.gif'), '@homepage');  ?>
+                    <?php echo image_tag('/images/logo.jpg'); // link_to(image_tag('/images/logo.gif'), '@homepage');  ?>
                 </div>
             </div>
             <div id="slogan">
