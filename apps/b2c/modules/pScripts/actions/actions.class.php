@@ -1179,8 +1179,8 @@ die;
 
 
 
-	$sender_email = sfConfig::get('app_email_sender_email', 'support@wls.com');
-	$sender_name = sfConfig::get('app_email_sender_name', 'WLS support');
+	$sender_email = sfConfig::get('app_email_sender_email', 'support@moiize.com');
+	$sender_name = sfConfig::get('app_email_sender_name', 'Moiize Telecom');
 
         echo '<br/>';
         echo $sender_email ;

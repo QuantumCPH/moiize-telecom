@@ -1306,18 +1306,13 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
 
       public static function sendBackendAgentRegistration(Company $company) {
 
-
-      
-        
-
-        
         sfContext::getInstance()->getConfiguration()->loadHelpers('Partial');
          $message_body = get_partial('company/order_receipt_web_reg', array(
                     'company' => $company,
                     ));
 
 
-        $subject = __('Registration Confirmation');
+         $subject = __('Registration Confirmation');
          $recepient_email = trim($company->getEmail());
          $recepient_name = sprintf('%s', $company->getName());
          $company_id = trim($company->getId());
@@ -1325,8 +1320,8 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
         //Support Information
        // $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zerocall.com');
        // $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2 ');
-      //  $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
-      //  $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'WLS 2 ');
+        $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
+        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'WLS 2 ');
 
         //------------------Sent The Email To Agent
         if ($recepient_email != '') {
@@ -1351,7 +1346,7 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
             $email3->setEmailType('WLS 2 Customer registration via link');
             $email3->setMessage($message_body);
             $email3->save();
-        endif;
+        endif;*/
         //-----------------------------------------
         //--------------Sent The Email To Support
         if ($sender_emailcdu != ''):
@@ -1363,7 +1358,7 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
             $email4->setEmailType('WLS 2 Customer registration via link');
             $email4->setMessage($message_body);
             $email4->save();
-        endif;*/
+        endif;
         //-----------------------------------------
     }
 
