@@ -133,7 +133,7 @@ class companyActions extends sfActions {
       if ($request->isMethod('post')) {    
         $c = new Criteria();
         $c->add(CompanyPeer::VAT_NO, $request->getParameter('vat_number'));
-        $c->add(CompanyPeer::STATUS_ID, sfConfig::get('app_status_completed', 3));
+        $c->add(CompanyPeer::STATUS_ID, sfConfig::get('app_status_completed', 1));
 
         
         $company = CompanyPeer::doSelectOne($c);
