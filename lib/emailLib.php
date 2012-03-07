@@ -1303,6 +1303,70 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
         //-----------------------------------------
     }
 
+
+      public static function sendBackendAgentRegistration(Company $company) {
+
+
+      
+        
+
+        
+        sfContext::getInstance()->getConfiguration()->loadHelpers('Partial');
+        $message_body = get_partial('company/order_receipt_web_reg', array(
+                    'company' => $company,
+                    ));
+
+
+        $subject = __('Registration Confirmation');
+        $recepient_email = trim($company->getEmail());
+        $recepient_name = sprintf('%s', $company->getName());
+        $company_id = trim($customer->getId());
+
+        //Support Information
+       // $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
+        //$sender_name = sfConfig::get('app_email_sender_name', 'WLS 2 ');
+        //$sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
+        //$sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'WLS 2 ');
+
+        //------------------Sent The Email To Agent
+        if ($recepient_email != '') {
+            $email = new EmailQueue();
+            $email->setSubject($subject);
+            $email->setReceipientName($recepient_name);
+            $email->setReceipientEmail($recepient_email);
+            $email->setCutomerId($company_id);
+            $email->setEmailType('Customer Registeration');
+            $email->setMessage($message_body);
+            $email->save();
+        }
+        //----------------------------------------
+       
+        //--------------Sent The Email To Admin
+        /*if ($sender_email != ''):
+            $email3 = new EmailQueue();
+            $email3->setSubject($subject);
+            $email3->setReceipientName($sender_name);
+            $email3->setReceipientEmail($sender_email);
+            $email3->setCutomerId($customer_id);
+            $email3->setEmailType('WLS 2 Customer registration via link');
+            $email3->setMessage($message_body);
+            $email3->save();
+        endif;
+        //-----------------------------------------
+        //--------------Sent The Email To Support
+        if ($sender_emailcdu != ''):
+            $email4 = new EmailQueue();
+            $email4->setSubject($subject);
+            $email4->setReceipientName($sender_namecdu);
+            $email4->setReceipientEmail($sender_emailcdu);
+            $email4->setCutomerId($customer_id);
+            $email4->setEmailType('WLS 2 Customer registration via link');
+            $email4->setMessage($message_body);
+            $email4->save();
+        endif;*/
+        //-----------------------------------------
+    }
+
 }
 
 ?>

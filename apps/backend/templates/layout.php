@@ -374,27 +374,27 @@ jQuery('#sf_admin_edit_form').validate({
 </script>
 
     <script type="text/javascript">
-    /* jQuery('#company_post_code').blur(function(){
-        var poid=jQuery("#company_post_code").val();
+   jQuery('#company_head_phone_number').blur(function(){
+        var poid=jQuery("#company_head_phone_number").val();
         poid = poid.replace(/\s+/g, '');
         var poidlenght=poid.length;
         //alert(poidlenght);
         var poida= poid.charAt(0);
-        var poidb= poid.charAt(1);
-        var poidc= poid.charAt(2);
-        var poidd= poid.charAt(3);
-        var poide= poid.charAt(4);
-        if(poidlenght>4){
-            var fulvalue=poida+poidb+poidc+" "+poidd+poide;
-        }else{
-           //var fulvalue=poida+poidb+poidc;
-        }
-       jQuery("#company_post_code").val(fulvalue);
+        //var poidb= poid.charAt(1);
+        //var poidc= poid.charAt(2);
+        //var poidd= poid.charAt(3);
+       // var poide= poid.charAt(4);
+       // if(poidlenght>4){
+         //   var fulvalue=poida+poidb+poidc+" "+poidd+poide;
+       // }else{
+           if(poida==0){var fulvalue='';
+       // }
+       jQuery("#company_head_phone_number").val(fulvalue);}
        //  alert(fulvalue);
 
         });
 
-*/
+
 
 
 </script>
@@ -446,25 +446,38 @@ jQuery('#sf_admin_edit_form').validate({
                 }
 	});
 
-        	jQuery('#company_head_phone_number').blur(function(){
-		
-                var val=jQuery(this).val();//if(val!='')
+        	/*jQuery('#company_head_phone_number').blur(function(){
+		//remove all the class add the messagebox classes and start fading
+		//jQuery("#msgbox").removeClass().addClass('messagebox').text('<?php echo __('Checking...') ?>').fadeIn("slow");
+		//check the username exists or not from ajax
+                var val=jQuery(this).val();
+
+                if(val==''){
+                    jQuery("#msgbox1").fadeTo(200,0.1,function() //start fading the messagebox
+			{
+			  //add message and change the class of the box and start fading
+			  jQuery(this).html('<?php echo __('Enter Mobile Number') ?>').addClass('messageboxerror').fadeTo(900,1);
+			});
+                        jQuery('#error').val("error");
+                }else{
+                    if(val.length >7){
+
                     if(val.substr(0, 1)==0){
-
-                        jQuery("#msgbox1").fadeTo(200,0.1,function()
-                            {
-                            
-                              jQuery(this).html('<?php echo __('Please enter a valid mobile number not starting with 0') ?>').addClass('messageboxerror').fadeTo(900,1);
-                            });
-                            jQuery('#error').val("error");
-                    }else{jQuery("#msgbox1").fadeTo(200,0.1,function()
-                            {
-
-                             // jQuery(this).html('<?php echo __('valid mobile number') ?>').addClass('messageboxerror').fadeTo(900,1);
-                            });
-                            jQuery('#error').val("error");}
-               
-	});
+                jQuery("#msgbox1").fadeTo(200,0.1,function() //start fading the messagebox
+			{
+			  //add message and change the class of the box and start fading
+			  jQuery(this).html('<?php echo __('Please enter a valid mobile number not starting with 0') ?>').addClass('messageboxerror').fadeTo(900,1);
+			});
+                        jQuery('#error').val("error");
+                }else{
+                 jQuery("#msgbox1").fadeTo(200,0.1,function() //start fading the messagebox
+			{
+			  //add message and change the class of the box and start fading
+			  jQuery(this).html('<?php echo __('Please enter only digits') ?>').addClass('messageboxerror').fadeTo(900,1);
+			});
+                        jQuery('#error').val("error");
+                }}}
+	});*/
 
     jQuery("#sf_admin_form").submit(function() {
       if (jQuery("#error").val() == "error") {
