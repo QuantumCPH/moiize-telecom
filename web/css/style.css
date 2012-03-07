@@ -636,3 +636,8 @@ tr.headings th{
 tr.headings th.last{
    border-right: 0px !important; 
 }
+a.forgotUrl{
+    font-size: 11px;
+    text-align: right;
+    float: right;
+}
