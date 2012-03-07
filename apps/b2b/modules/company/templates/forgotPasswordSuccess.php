@@ -1,6 +1,9 @@
 <?php use_helper('I18N'); ?>
 
- <form id="frm" action="<?php echo url_for(sfConfig::get('app_main_url').'company/forgotPassword') ?>" method="post">  
+ <form id="frm" action="<?php echo url_for(sfConfig::get('app_main_url').'company/forgotPassword') ?>" method="post"> 
+    <?php if ($sf_user->hasFlash('send_password_error_message')): ?>
+	<p style="color: red; margin:6px auto;text-align: center;border:0px !important;"><?php echo $sf_user->getFlash('send_password_error_message') ?></p>
+    <?php endif;?>
 <div class="bg-img" >
         <div class="left"></div>
         <div class="centerImg"> 

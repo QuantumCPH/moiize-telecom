@@ -129,9 +129,9 @@ class companyActions extends sfActions {
     }
     
     public function executeForgotPassword(sfWebRequest $request){
-        //echo 'here';
-       $c = new Criteria();
-
+        
+      if ($request->isMethod('post')) {    
+        $c = new Criteria();
         $c->add(CompanyPeer::VAT_NO, $request->getParameter('vat_number'));
         $c->add(CompanyPeer::STATUS_ID, sfConfig::get('app_status_completed', 3));
 
@@ -176,7 +176,8 @@ class companyActions extends sfActions {
         else {
             $this->getUser()->setFlash('send_password_error_message', $this->getContext()->getI18N()->__('No agent is registered with this vat number.'));
         }
-        //return $this->redirect(sfConfig::get('app_main_url').'company/login');
+        return $this->redirect(sfConfig::get('app_main_url').'company/login');
+      }
     }
 
 }
