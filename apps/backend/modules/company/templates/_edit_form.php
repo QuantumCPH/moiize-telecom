@@ -166,7 +166,7 @@
 
   <?php $value = object_input_tag($company, 'getHeadPhoneNumber', array (
   'size' => 7,
-  'minlength'=>5,
+  'minlength'=>8,
   'control_name' => 'company[head_phone_number]',
 )); echo $value ? $value : '&nbsp;' ?><span id="msgbox1" style="display:none"></span><br>Please enter a valid mobile number not starting with 0
     </div>
