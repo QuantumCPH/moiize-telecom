@@ -58,46 +58,66 @@
                             <li>
                         <?php
                         if ($actionName == 'dashboard' && $modulName == "company") {
-                            echo link_to(__('Dashboard'), 'company/dashboard', array('class' => 'current'));
+                        ?>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>dashboard" class="current"><?php echo  __('Dashboard');?></a>
+                        <?php    
                         } else {
-                            echo link_to(__('Overview'), 'company/dashboard');
+                        ?>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>dashboard"><?php echo  __('Dashboard');?></a>
+                        <?php    
                         }
                         ?>
                     </li>
                     <li>
                         <?php
                         if ($modulName == "company" && $actionName == 'paymentHistory') {
-                            echo link_to(__('Payment History'), 'company/paymentHistory', array('class' => 'current'));
+                        ?>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>paymentHistory" class="current"><?php echo  __('Payment History');?></a>
+                        <?php     
                         } else {
-                            echo link_to(__('Payment History'), 'company/paymentHistory');
+                        ?>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>paymentHistory"><?php echo  __('Payment History');?></a>
+                        <?php  
                         }
                         ?>
                     </li>
                     <li><?php
                         if ($modulName == "company" && $actionName == 'callHisotry') {
-                            echo link_to(__('Call History'), 'company/callHisotry', array('class' => 'current'));
+                        ?>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>callHisotry" class="current"><?php echo  __('Call History');?></a>
+                        <?php 
                         } else {
-                            echo link_to(__('Call History'), 'company/callHisotry');
+                        ?>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>callHisotry"><?php echo  __('Call History');?></a>
+                        <?php 
                         }
                         ?>
                     </li>
                     <li><?php
                         if ($modulName == "company" && $actionName == 'view') {
-                            echo link_to(__('Agent Info'), 'company/view', array('class' => 'current'));
+                        ?>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>view" class="current"><?php echo  __('Agent Info');?></a>
+                        <?php    
                         } else {
-                            echo link_to(__('Agent Info'), 'company/view');
+                        ?>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>view"><?php echo  __('Agent Info');?></a>
+                        <?php     
                         }
                         ?>
                     </li>
                     <li><?php
                         if ($modulName == "rates" && $actionName == 'company') {
-                            echo link_to(__('Rates'), 'company/rates', array('class' => 'current'));
+                        ?>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>rates" class="current"><?php echo  __('Rates');?></a>
+                        <?php 
                         } else {
-                            echo link_to(__('Rates'), 'company/rates');
+                        ?>
+                            <a href="<?php echo sfConfig::get('app_main_url');?>rates" ><?php echo  __('Rates');?></a>
+                        <?php 
                         }
                         ?>
                     </li>
-                    <li class="last"><?php echo link_to(__('Logout'), 'company/logout'); ?></li>
+                    <li class="last"><a href="<?php echo sfConfig::get('app_main_url');?>logout" ><?php echo  __('Logout');?></a></li>
 
                 </ul>
                 <?php } ?>
