@@ -1361,7 +1361,7 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
         //-----------------------------------------
     }
     
-    public static function sendForgetPasswordEmail(Company $company, $message_body, $subject) {
+    public static function sendAgentForgetPasswordEmail(Company $company, $message_body, $subject) {
         sfContext::getInstance()->getConfiguration()->loadHelpers('Partial');
 
         // $subject = __("Request for password");
