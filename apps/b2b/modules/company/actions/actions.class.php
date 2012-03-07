@@ -29,7 +29,7 @@ class companyActions extends sfActions {
             $this->getUser()->setCulture($request->getParameter('new'));
         else
             $this->getUser()->setCulture($this->getUser()->getCulture());
-
+ //die();
         $this->form = new CompanyLoginForm();
         if ($request->isMethod('post')) {
             $this->form->bind($request->getParameter('login'), $request->getFiles('login'));
@@ -44,7 +44,7 @@ class companyActions extends sfActions {
                     $this->getUser()->setAuthenticated(true);
                     $this->getUser()->setAttribute('company_id', $company->getId(), 'companysession');
                     $this->getUser()->setAttribute('companyname', $company->getName(), 'companysession');
-                    $this->redirect(sfConfig::get('app_main_url') . 'dashboard');
+                    $this->redirect(sfConfig::get('app_main_url') . 'company/dashboard');
                 }
             }
         }
@@ -53,7 +53,7 @@ class companyActions extends sfActions {
     public function executeLogout() {
         $this->getUser()->getAttributeHolder()->removeNamespace('companysession');
         $this->getUser()->setAuthenticated(false);
-        $this->redirect(sfConfig::get('app_main_url') .'login');
+        $this->redirect(sfConfig::get('app_main_url') .'company/login');
     }
 
     public function executeNewsListing(sfWebRequest $request) {
@@ -126,6 +126,55 @@ class companyActions extends sfActions {
         $c->add(TelintaAccountsPeer::I_CUSTOMER, $this->company->getICustomer());
         $c->addAnd(TelintaAccountsPeer::STATUS, 3);
         $this->telintaAccountObj = TelintaAccountsPeer::doSelect($c);
+    }
+    
+    public function executeForgotPassword(sfWebRequest $request){
+        //echo 'here';
+       $c = new Criteria();
+
+        $c->add(CompanyPeer::VAT_NO, $request->getParameter('vat_number'));
+        $c->add(CompanyPeer::STATUS_ID, sfConfig::get('app_status_completed', 3));
+
+        
+        $company = CompanyPeer::doSelectOne($c);
+        if ($company) {
+            //change the password to some thing uniuque and complex
+            $new_password = substr(base64_encode($company->getPassword()), 0, 8);
+            
+            $company->setPassword($new_password);
+            $message_body = $this->getContext()->getI18N()->__('Hi') . ' ' . $company->getName() . '!';
+            $message_body .= '<br /><br />';
+            $message_body .= $this->getContext()->getI18N()->__('Your password has been changed. Please use the following information to login to your Moiize agent account.');
+            $message_body .= '<br /><br />';
+            $message_body .= sprintf($this->getContext()->getI18N()->__('Vat Number: %s'), $company->getVatNo());
+            $message_body .= '<br />';
+            $message_body .= $this->getContext()->getI18N()->__('password') . ': ' . $new_password;
+
+            $company->save();
+
+            //$this->renderText($message_body);
+            //send email
+
+
+            $subject = $this->getContext()->getI18N()->__('Password Request');
+            //$sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
+            $sender_email = sfConfig::get('app_email_sender_email', 'rr@zerocall.com');
+            $sender_name = sfConfig::get('app_email_sender_name', 'support');
+
+            $message = $message_body;
+            
+            
+            $receipient_email = trim($company->getEmail());
+            $receipient_name = sprintf('%s', $company->getContactName());
+            
+           
+            emailLib::sendAgentForgetPasswordEmail($company, $message, $subject);
+
+            $this->getUser()->setFlash('send_password_message', $this->getContext()->getI18N()->__('Your account details have been sent to your email address.'));
+        }
+        else {
+            $this->getUser()->setFlash('send_password_error_message', $this->getContext()->getI18N()->__('No agent is registered with this vat number.'));
+        } 
     }
 
 }

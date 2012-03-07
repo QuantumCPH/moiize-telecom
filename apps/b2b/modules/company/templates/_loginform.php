@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 <form id="form1" action="<?php echo url_for(sfConfig::get("app_main_url").'login') ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>  
+=======
+<form id="form1" action="<?php echo url_for(sfConfig::get('app_main_url').'company/login') ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>  
+>>>>>>> forgtPassword
 <div class="bg-img" >
         <div class="left"></div>
         <div class="centerImg"> 
@@ -32,8 +36,9 @@
             </div>     
 
     <div class="clr"></div>
+      <a href="<?php sfConfig::get('app_main_url');?>forgotPassword/" class="forgotUrl">Forgot Password?</a>   
     </div>
             <div class="right"></div>  
     </div>
 </form>
-            
+       
