@@ -141,7 +141,7 @@ class companyActions extends sfActions {
         $companyData = $this->getRequestParameter('company');
         if ($company->isNew()) {
             $res = CompanyEmployeActivation::telintaRegisterCompany($company);
-        }
+        }//var_dump($company);
         $company->isNew() . ":" . $res;
 
         if ($company->isNew() && $res) {
@@ -168,6 +168,9 @@ class companyActions extends sfActions {
         }
         if (isset($company['vat_no'])) {
             $this->company->setVatNo($company['vat_no']);
+        }
+        if (isset($company['password'])) {
+            $this->company->setPassword($company['password']);
         }
         if (isset($company['address'])) {
             $this->company->setAddress($company['address']);

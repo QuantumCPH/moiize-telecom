@@ -36,7 +36,12 @@
 				  	<?php echo $company->getVatNo()?>
 				  </div>
 				</div>
-
+                                <div class="form-row">
+				  <label class="required"><?php echo  __('Password:') ?></label>
+				  <div class="content">
+				  	<?php echo $company->getPassword()?>
+				  </div>
+				</div>
 				<div class="form-row">
 				  <label class="required"><?php echo  __('Address:') ?></label>
 				  <div class="content">

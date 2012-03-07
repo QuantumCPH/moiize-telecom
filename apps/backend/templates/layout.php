@@ -361,10 +361,11 @@ jQuery('#sf_admin_edit_form').validate({
      rules: {
     "company[name]": "required",
      "company[vat_no]": "required",
-      "company[post_code]": "required",
+     "company[password]": "required",
+      "company[post_code]": "required digits",
        "company[address]": "required",
         "company[contact_name]": "required",
-         "company[head_phone_number]": "required",
+         "company[head_phone_number]": "required digits",
        "company[email]": "required email",
        "company[invoice_method_id]": "required"
   }
@@ -373,7 +374,7 @@ jQuery('#sf_admin_edit_form').validate({
 </script>
 
     <script type="text/javascript">
-     jQuery('#company_post_code').blur(function(){
+    /* jQuery('#company_post_code').blur(function(){
         var poid=jQuery("#company_post_code").val();
         poid = poid.replace(/\s+/g, '');
         var poidlenght=poid.length;
@@ -393,7 +394,7 @@ jQuery('#sf_admin_edit_form').validate({
 
         });
 
-
+*/
 
 
 </script>
@@ -445,52 +446,19 @@ jQuery('#sf_admin_edit_form').validate({
                 }
 	});
 
-        	jQuery('#employee_mobile_number').blur(function(){
-		//remove all the class add the messagebox classes and start fading
-		jQuery("#msgbox").removeClass().addClass('messagebox').text('<?php echo __('Checking...') ?>').fadeIn("slow");
-		//check the username exists or not from ajax
+        	jQuery('#company_head_phone_number').blur(function(){
+		
                 var val=jQuery(this).val();
-
-                if(val==''){
-                    jQuery("#msgbox").fadeTo(200,0.1,function() //start fading the messagebox
-			{
-			  //add message and change the class of the box and start fading
-			  jQuery(this).html('<?php echo __('Enter Mobile Number') ?>').addClass('messageboxerror').fadeTo(900,1);
-			});
-                        jQuery('#error').val("error");
-                }else{
-                    if(val.length >7){
-
                     if(val.substr(0, 1)==0){
-                jQuery("#msgbox").fadeTo(200,0.1,function() //start fading the messagebox
-			{
-			  //add message and change the class of the box and start fading
-			  jQuery(this).html('<?php echo __('Please enter a valid mobile number not starting with 0') ?>').addClass('messageboxerror').fadeTo(900,1);
-			});
-                        jQuery('#error').val("error");
-                }else{
 
-		jQuery.post("https://wls2.zerocall.com/backend.php/employee/mobile",{ mobile_no: val} ,function(data)
-        {
-		  if(data=='no') //if username not avaiable
-		  {
-		  	jQuery("#msgbox").fadeTo(200,0.1,function() //start fading the messagebox
-			{
-			  //add message and change the class of the box and start fading
-			  jQuery(this).html('<?php echo __('This Mobile No Already exists') ?>').addClass('messageboxerror').fadeTo(900,1);
-			});jQuery('#error').val("error");
-          }
-		  else
-		  {
-		  	jQuery("#msgbox").fadeTo(200,0.1,function()  //start fading the messagebox
-			{
-			  //add message and change the class of the box and start fading
-			  jQuery(this).html('<?php echo __('Mobile No is available') ?>').addClass('messageboxok').fadeTo(900,1);
-			});jQuery('#error').val("");
-		  }
-
-        });
-                }}}
+                        jQuery("#msgbox1").fadeTo(200,0.1,function()
+                            {
+                            
+                              jQuery(this).html('<?php echo __('Please enter a valid mobile number not starting with 0') ?>').addClass('messageboxerror').fadeTo(900,1);
+                            });
+                            jQuery('#error').val("error");
+                    }
+               
 	});
 
     jQuery("#sf_admin_form").submit(function() {

@@ -24,9 +24,9 @@
           </th>
   <th id="sf_admin_list_th_head_phone_number">
           <?php if ($sf_user->getAttribute('sort', null, 'sf_admin/company/sort') == 'head_phone_number'): ?>
-      <?php echo link_to(__('Head phone number'), 'company/list?sort=head_phone_number&type='.($sf_user->getAttribute('type', 'asc', 'sf_admin/company/sort') == 'asc' ? 'desc' : 'asc')) ?>
+      <?php echo link_to(__('Mobile Number'), 'company/list?sort=head_phone_number&type='.($sf_user->getAttribute('type', 'asc', 'sf_admin/company/sort') == 'asc' ? 'desc' : 'asc')) ?>
       (<?php echo __($sf_user->getAttribute('type', 'asc', 'sf_admin/company/sort')) ?>)
       <?php else: ?>
-      <?php echo link_to(__('Head phone number'), 'company/list?sort=head_phone_number&type=asc') ?>
+      <?php echo link_to(__('Mobile Number'), 'company/list?sort=head_phone_number&type=asc') ?>
       <?php endif; ?>
           </th>
