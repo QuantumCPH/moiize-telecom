@@ -7,24 +7,24 @@
 <div id="sf_admin_container">
     <div id="sf_admin_content">
         <div id="company-info">
-            <h1><?php echo __('Employee Details') ?></h1>
+            <h1><?php echo __('PCO Lines Details') ?></h1>
             <fieldset>
                 <div class="form-row">
-                    <label class="required"><?php echo __('Employee Name:') ?></label>
+                    <label class="required"><?php echo __('Name:') ?></label>
                     <div class="content">
                         <?php echo $employee->getFirstName() . " " . $employee->getLastName(); ?> &nbsp; <?php echo link_to(__('edit info'), 'employee/edit?id=' . $employee->getId()) ?>
                     </div>
                 </div>
 
                 <div class="form-row">
-                    <label class="required"><?php echo __('Company:') ?></label>
+                    <label class="required"><?php echo __('Agent:') ?></label>
                     <div class="content">
                         <?php echo ($employee->getCompany() ? $employee->getCompany() : 'N/A') ?>
                     </div>
                 </div>
 
                 <div class="form-row">
-                    <label class="required"><?php echo __('Employee Balance:') ?></label>
+                    <label class="required"><?php echo __('Balance:') ?></label>
                     <div class="content">
                         <?php
                         echo (float) $balance;

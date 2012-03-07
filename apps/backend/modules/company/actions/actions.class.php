@@ -74,7 +74,7 @@ class companyActions extends sfActions {
                 $object->delete();
             }
         } catch (PropelException $e) {
-            $request->setError('delete', 'Could not delete the selected Companys. Make sure they do not have any associated items.');
+            $request->setError('delete', 'Could not delete the selected Agent. Make sure they do not have any associated items.');
             return $this->forward('company', 'list');
         }
 
@@ -90,7 +90,7 @@ class companyActions extends sfActions {
             try {
                 $this->saveCompany($this->company);
             } catch (PropelException $e) {
-                $request->setError('edit', 'Could not save the edited Company.');
+                $request->setError('edit', 'Could not save the edited Agent.');
                 return $this->forward('company', 'list');
             }
 
@@ -115,7 +115,7 @@ class companyActions extends sfActions {
         try {
             $this->deleteCompany($this->company);
         } catch (PropelException $e) {
-            $request->setError('delete', 'Could not delete the selected Company. Make sure it does not have any associated items.');
+            $request->setError('delete', 'Could not delete the selected Agent. Make sure it does not have any associated items.');
             return $this->forward('company', 'list');
         }
 
@@ -402,11 +402,11 @@ class companyActions extends sfActions {
                 CompanyEmployeActivation::recharge($this->company, $refill_amount, $transaction);
                 $transaction->setTransactionStatusId(3);
                 $transaction->save();
-                $this->getUser()->setFlash('message', 'B2B Company Refill Successfully');
+                $this->getUser()->setFlash('message', 'Agent Refill Successfully');
                 $this->redirect('company/paymenthistory');
             } else {
 
-                $this->getUser()->setFlash('message', 'Please Select B2B Company');
+                $this->getUser()->setFlash('message', 'Please Select Agent');
             }
             //$telintaAddAccount='success=OK&Amount=$amount{$cust_info->{iso_4217}}';
             //parse_str($telintaAddAccount, $success);print_r($success);echo $success['success'];

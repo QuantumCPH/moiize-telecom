@@ -5,7 +5,7 @@ body{
   font-size: 12px;
 }
 h2{
-    color:#D44D05;
+    color:#2C7E21;
 }
 .admin-navigation ul, li{
 	display:inline;
@@ -14,9 +14,9 @@ h2{
 }
 #header{
     width:75%;
-    height: 133px;
-    background: url('../images/header.png') repeat-x top;
-    margin:0 auto 26px;
+    height: 80px;
+    /*background: url('../images/header.png') repeat-x top;*/
+    margin:0 auto 0px;
 }
 .logo{
     padding-top: 13px;
@@ -25,8 +25,8 @@ h2{
     padding-bottom:3px;
     margin-bottom:15px;
     
-    border-bottom: 2px solid #D44D05;
-    color:#D44D05;
+    border-bottom: 2px solid #2C7E21;
+    color:#2C7E21;
     font-family:'Times New Roman', Times, serif;
     font-size: 54px;
     font-weight:bold;*/
@@ -55,24 +55,24 @@ h2{
     float: left;
     font: bold 11px arial;
     background:url('../images/li-bg.png') repeat-x top left;
-    border-left: 1px solid #D44D05;
-    border-top: 1px solid #D44D05;
-    border-bottom: 1px solid #D44D05;
+    border-left: 1px solid #2C7E21;
+    border-top: 1px solid #2C7E21;
+    border-bottom: 1px solid #2C7E21;
 }
 #sddm li.last
 {	
-    border-right:1px solid #F36621;    
+    border-right:1px solid #2C7E21;
 }    
 #sddm li a
 {	display: block;
 	margin: 0 0px 0 0;
 	padding: 4px 10px;
-	color: #D44D05;
+	color: #2C7E21;
 	text-align: center;
 	text-decoration: none}
 
 #sddm li a:hover
-{	background: #D44D05;
+{	background: #2C7E21;
         color:#ffffff;
 }
 
@@ -81,8 +81,8 @@ h2{
 	visibility: hidden;
 	margin: 0;
 	padding: 0;
-	background: #D44D05;
-	border: 1px solid #ED8555;
+	background: #2C7E21;
+	border: 1px solid #2C7E21;
 }
 
 #sddm div a
@@ -94,29 +94,29 @@ h2{
         white-space: nowrap;
         text-align: left;
         text-decoration: none;
-        background: #D44D05;
+        background: #2C7E21;
         color: #FFFFFF;
         font: 11px arial;
 }
 #sddm div a:hover
 {	background: #FFFFFF;
-        color: #D44D05;
+        color: #2C7E21;
 }
 #sddm div a.subSelect
 {	background: #FFFFFF;
-        color: #D44D05;
+        color: #2C7E21;
 }
 #sf_admin_container{
     margin:0 auto;
     width:75%;
 }
 #sddm li a.current{
-    background: #D44D05 !important;
+    background: #2C7E21 !important;
     color: #FFFFFF !important;
 }
 a.label{
    background: #FFFFFF !important;
-   color: #D44D05 !important; 
+   color: #2C7E21 !important;
 }
 
 div.tableHeading{
@@ -124,7 +124,7 @@ div.tableHeading{
     margin: 0 auto;   
 }
 div.tableHeading span{
-    background-color: #D44D05;
+    background-color: #2C7E21;
     color:#ffffff;
     line-height: 18px;
     padding-right:15px;
@@ -132,29 +132,29 @@ div.tableHeading span{
 }
 table.tblAlign{
     margin:0 auto !important;
-    border-top: 1px solid #D44D05 !important;
-    border-left: 1px solid #D44D05 !important;
+    border-top: 1px solid #2C7E21 !important;
+    border-left: 1px solid #2C7E21 !important;
     
   
     font-family: Arial,sans-serif;
     font-size: 12px
 }
 td{
-   border-bottom: 1px solid #D44D05 !important; 
-   border-right: 1px solid #D44D05 !important;
+   border-bottom: 1px solid #2C7E21 !important;
+   border-right: 1px solid #2C7E21 !important;
 }
 td.last{
    border-right: 0px !important; 
 }
 tr.headings{
    background-color: #ffffff !important;
-   color:#D44D05 !important; 
+   color:#2C7E21 !important;
 }
 tr.headings th{
-   border-right: 1px solid #D44D05 !important; 
-   border-bottom: 1px solid #D44D05 !important;
+   border-right: 1px solid #2C7E21 !important;
+   border-bottom: 1px solid #2C7E21 !important;
    text-align: left;
-   color:#D44D05;
+   color:#2C7E21;
 }
 tr.headings th.last{
    border-right: 0px !important; 
@@ -185,16 +185,16 @@ tr.even{
     background-color:#FFFFFF !important;
 }
 tr.odd{
-    background-color:#FCD9C9 !important;
+    background-color:#D3F2CF !important;
 }
 .tblLogin label {
-    color:#D44D05;
+    color:#2C7E21;
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 2px;
 }
 .tblLogin button{
-    background-color: #D44D05;
+    background-color: #2C7E21;
     color:#FFFFFF;
     border:1px solid #ffffff;
     line-height: 21px;
@@ -286,10 +286,10 @@ tr.odd{
     padding: 2px 50px 5px 9px;
 }
 .tblUserguide{
-    border:1px solid #D44D05 !important;
+    border:1px solid #2C7E21 !important;
 }
 .tblUserguide th.noBorder label{
-    color:#D44D05 !important;
+    color:#2C7E21 !important;
     font-weight: bold !important;
     float: right !important;
     width: auto !important;

@@ -1,7 +1,7 @@
 <?php use_helper('I18N') ?><div id="sf_admin_container">
 	<div id="sf_admin_content">
 	<!-- employee/list?filters[company_id]=1 -->
-	<a href="<?php echo url_for('employee/index').'?company_id='.$company->getId()."&filter=filter" ?>" class="external_link" target="_self"><?php echo  __('Employees') ?> (<?php echo count($company->getEmployees()) ?>)</a>
+	<a href="<?php echo url_for('employee/index').'?company_id='.$company->getId()."&filter=filter" ?>" class="external_link" target="_self"><?php echo  __('PCO Lines') ?> (<?php echo count($company->getEmployees()) ?>)</a>
 	<a href="<?php echo url_for('company/usage').'?company_id='.$company->getId(); ?>" class="external_link" target="_self"><?php echo  __('Usage') ?></a>
         <a href="<?php echo url_for('company/paymenthistory').'?company_id='.$company->getId().'&filter=filter' ?>" class="external_link" target="_self"><?php echo  __('Payment History') ?></a>
 	<!--
@@ -12,10 +12,10 @@
 	<a onclick="supportShow();" style="cursor:pointer;">Support Activity</a>
 	 -->
 		<div id="company-info">
-		    <h1><?php echo  __('company details') ?></h1>
+		    <h1><?php echo  __('Agent Details') ?></h1>
 			<fieldset>
 				<div class="form-row">
-				  <label class="required"><?php echo  __('Company Name:') ?></label>
+				  <label class="required"><?php echo  __('Agent Name:') ?></label>
 				  <div class="content">
 				  	<?php echo $company->getName() ?> &nbsp; <?php echo link_to(__('edit info'), 'company/edit?id='.$company->getId()) ?>
 				  </div>

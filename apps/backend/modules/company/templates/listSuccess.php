@@ -10,7 +10,7 @@
 <?php include_partial('company/list_header', array('pager' => $pager)) ?>
 <?php include_partial('company/list_messages', array('pager' => $pager)) ?>
 </div>
-<h1><?php echo __('B2B Company List', 
+<h1><?php echo __('PCO Agent List',
 array()) ?></h1>
 <div id="sf_admin_bar">
 <?php include_partial('filters', array('filters' => $filters)) ?>

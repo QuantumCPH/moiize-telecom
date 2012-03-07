@@ -1,9 +1,9 @@
   <th id="sf_admin_list_th_name">
           <?php if ($sf_user->getAttribute('sort', null, 'sf_admin/company/sort') == 'name'): ?>
-      <?php echo link_to(__('Company Name'), 'company/list?sort=name&type='.($sf_user->getAttribute('type', 'asc', 'sf_admin/company/sort') == 'asc' ? 'desc' : 'asc')) ?>
+      <?php echo link_to(__('Agent Name'), 'company/list?sort=name&type='.($sf_user->getAttribute('type', 'asc', 'sf_admin/company/sort') == 'asc' ? 'desc' : 'asc')) ?>
       (<?php echo __($sf_user->getAttribute('type', 'asc', 'sf_admin/company/sort')) ?>)
       <?php else: ?>
-      <?php echo link_to(__('Company Name'), 'company/list?sort=name&type=asc') ?>
+      <?php echo link_to(__('Agent Name'), 'company/list?sort=name&type=asc') ?>
       <?php endif; ?>
           </th>
   <th id="sf_admin_list_th_vat_no">

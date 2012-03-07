@@ -1,6 +1,6 @@
 <?php if ($sf_request->hasError('delete')): ?>
 <div class="form-errors">
-  <h2><?php echo __('Could not delete the selected %name%', array('%name%' => 'Company')) ?></h2>
+  <h2><?php echo __('Could not delete the selected %name%', array('%name%' => 'Agent')) ?></h2>
   <ul>
     <li><?php echo __($sf_request->getError('delete')) ?></li>
   </ul>
@@ -9,7 +9,7 @@
 
 <?php if ($sf_request->hasError('edit')): ?>
 <div class="form-errors">
-  <h2><?php echo __('Could not edit %name%', array('%name%' => 'Company')) ?></h2>
+  <h2><?php echo __('Could not edit %name%', array('%name%' => 'Agent')) ?></h2>
   <ul>
     <li><?php echo __($sf_request->getError('edit')) ?></li>
   </ul>

@@ -8,18 +8,18 @@
           <h2><?php echo __($sf_user->getFlash('messageError')) ?></h2>
         </div>
     <?php endif; ?>
-<h1><?php echo  __('New My employee') ?></h1></div>
+<h1><?php echo  __('New PCO Line') ?></h1></div>
 <form id="sf_admin_form" name="sf_admin_edit_form" method="post" enctype="multipart/form-data" action="saveEmployee">
     <div id="sf_admin_content">
   
     <table id="sf_admin_container" cellspacing="0" cellpadding="2" class="tblAlign" >
         <tr>
-        <td style="padding: 5px;"><?php echo  __('First name:') ?></td>
+        <td style="padding: 5px;"><?php echo  __('Name:') ?></td>
         <td style="padding: 5px;"><input type="text" name="first_name" id="employee_first_name"  class="required"  size="25" /></td>
                 </tr>
 
                  <tr>
-        <td style="padding: 5px;"><?php echo  __('Company:') ?></td>
+        <td style="padding: 5px;"><?php echo  __('Agent:') ?></td>
         <td style="padding: 5px;">
   <select name="company_id" id="employee_company_id"    class="required"  style="width:190px;">
    
