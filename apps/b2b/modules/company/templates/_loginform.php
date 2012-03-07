@@ -3,7 +3,7 @@
         <div class="left"></div>
         <div class="centerImg"> 
             <h1><?php echo __('Log in to account') ?></h1>
-            <h2><?php echo __("provide your vat_no and password");?></h2>
+            <h2><?php echo __("Provide your Vat No and Password");?></h2>
             <?php echo $form->renderGlobalErrors() ?>
             <div class="fieldName"> 
               <?php echo $form['vat_no']->renderLabel() ?>

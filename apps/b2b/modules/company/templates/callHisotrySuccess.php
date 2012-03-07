@@ -1,12 +1,12 @@
 <?php use_helper('I18N') ?>
-<h3><?php echo __('Select Line to Filter');?></h3>
-<ul>
+<h3><?php echo __('Select PCO Line to Filter');?></h3>
+<ul class="pcoLines">
  <?php foreach($telintaAccountObj as $account){ ?>
 <li><a href="?iaccount=<?php echo $account->getIAccount()."&iaccountTitle=".$account->getAccountTitle(); ?>"><?php echo $account->getAccountTitle();?></a></li>
 <?php } ?>
 </ul>
 <h1><?php echo __('Call History'); if(isset($iAccountTitle)&&$iAccountTitle!=''){echo "($iAccountTitle)"; } ?></h1>
-
+<div id="sf_admin_container">
     <table width="100%" cellspacing="0" cellpadding="2" class="tblAlign" border='0'>
 
 
@@ -75,3 +75,4 @@
 <?php //echo __('R = resenummer samtal')    ?><br/>
             </td></tr>
     </table>
+</div>

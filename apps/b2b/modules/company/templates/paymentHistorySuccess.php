@@ -32,7 +32,7 @@ if($incrment%2==0){
 //                  
 $incrment++;
 ?>
-<tr  style="background-color:<?php echo $colorvalue;?>">
+<tr  style="background-color:<?php //echo $colorvalue;?>" <?php echo $class;?>>
     <td><?php echo  $transaction->getCreatedAt() ?></td>
     <td><?php echo ($transaction->getCompany()?$transaction->getCompany():'N/A')?></td>
     <td><?php echo __($transaction->getDescription()) ?></td>
@@ -47,7 +47,7 @@ $incrment++;
 <?php else: ?>
 <tr><td>&nbsp;</td>
     <td colspan="2" align="right"><strong><?php echo __('Total:') ?>&nbsp;&nbsp;</strong></td>
-    <td align=""><?php echo format_number($amount_total);  ?> &euro;</td>
+    <td align="" colspan="2" ><?php echo format_number($amount_total);  ?> &euro;</td>
     
 </tr>	
 <?php endif; ?>

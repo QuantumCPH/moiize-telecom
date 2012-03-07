@@ -1,9 +1,11 @@
 <?php use_helper('I18N') ?>
 <div id="sf_admin_container">
+    <h1><?php echo __('Agent details') ?></h1>
+</div>  
+<div class="borderDiv">
     <div id="sf_admin_content">
         <div id="company-info">
-            <h1><?php echo __('Agent details') ?></h1>
-            <fieldset>
+            
                 <div class="form-row">
                     <label class="required"><?php echo __('Agent Name:') ?></label>
                     <div class="content">
@@ -25,7 +27,6 @@
                     <div class="content"><?php
                         echo $employeesCount;
                         ?>
-
                     </div>
                 </div>
                 <div class="form-row">
@@ -47,7 +48,7 @@
                     <div class="content">
 <?php echo $company->getPostCode() ?>
                     </div>
-
+                </div>
 
                     <div class="form-row">
                         <label class="required"><?php echo __('Country:') ?></label>
@@ -70,7 +71,7 @@
 <?php echo $company->getContactName() ?>
                         </div>
                     </div>
-
+                <div class="clr"></div>
                     <div class="form-row">
                         <label class="required"><?php echo __('Contact e-mail:') ?></label>
                         <div class="content">
@@ -99,16 +100,15 @@
 <?php echo $company->getWebsite() ? $company->getWebsite() : 'N/A' ?>
                         </div>
                     </div>
-
-
-
+                
                     <div class="form-row">
                         <label class="required"><?php echo __('Status:') ?></label>
                         <div class="content">
 <?php echo '' . $company->getStatus() ? $company->getStatus() : 'N/A' ?>
                         </div>
                     </div>
-            </fieldset>
+                
+                <div class="clr"></div>
         </div>
     </div>
 </div>

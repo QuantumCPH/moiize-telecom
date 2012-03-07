@@ -11,11 +11,9 @@
     ?>
 
             <p>
-                <font size="3">
                     <b><?php echo $single_news->getStartingDate() ?></b><br/>
             <?php echo $single_news->getHeading(); ?> :  <?php echo $single_news->getMessage(); ?>
             <br/><br/>
-        </font>
     </p>
 
     <?php }

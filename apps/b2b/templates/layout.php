@@ -12,7 +12,7 @@
         <div id="basic">
             <div id="header">
                 <div class="logo">
-                    <?php echo image_tag('/images/wls2-logo.png'); // link_to(image_tag('/images/logo.gif'), '@homepage');  ?>
+                    <?php echo image_tag('/images/logo1.jpg'); // link_to(image_tag('/images/logo.gif'), '@homepage');  ?>
                 </div>
             </div>
             <div id="slogan">
@@ -31,13 +31,13 @@
                     </div>
                 <?php } ?>
 
-                    <div style="vertical-align: top;float: right;margin-right: 10px;">
+                    <div style="vertical-align: top;float: right;margin-right: 10px;display: none;">
 
                     <?php echo link_to(image_tag('/images/german.png'), 'affiliate/changeCulture?new=de'); ?>
 
                     <?php echo link_to(image_tag('/images/english.png'), 'affiliate/changeCulture?new=en'); ?>
 
-                </div>
+                   </div>
                 <div class="clr"></div>
             </div>
 
@@ -50,6 +50,9 @@
                     if ($sf_user->isAuthenticated()) {
                         $modulName = $sf_context->getModuleName();
                         $actionName = $sf_context->getActionName();
+//                        echo "M ".$modulName;
+//                        echo "<br />";
+//                        echo "A ".$actionName;
                 ?>
                         <ul id="sddm">
                             <li>
@@ -63,7 +66,7 @@
                     </li>
                     <li>
                         <?php
-                        if ($modulName == "paymentHistory" && $actionName == 'company') {
+                        if ($modulName == "company" && $actionName == 'paymentHistory') {
                             echo link_to(__('Payment History'), 'company/paymentHistory', array('class' => 'current'));
                         } else {
                             echo link_to(__('Payment History'), 'company/paymentHistory');
@@ -71,7 +74,7 @@
                         ?>
                     </li>
                     <li><?php
-                        if ($modulName == "callHisotry" && $actionName == 'company') {
+                        if ($modulName == "company" && $actionName == 'callHisotry') {
                             echo link_to(__('Call History'), 'company/callHisotry', array('class' => 'current'));
                         } else {
                             echo link_to(__('Call History'), 'company/callHisotry');
@@ -79,7 +82,7 @@
                         ?>
                     </li>
                     <li><?php
-                        if ($modulName == "view" && $actionName == 'company') {
+                        if ($modulName == "company" && $actionName == 'view') {
                             echo link_to(__('Agent Info'), 'company/view', array('class' => 'current'));
                         } else {
                             echo link_to(__('Agent Info'), 'company/view');

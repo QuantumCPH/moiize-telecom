@@ -40,7 +40,7 @@ use_helper('Number');
 
 <table width="600px">
     <tr style="border:0px solid #fff">
-        <td colspan="4" align="right" style="text-align:right; border:0px solid #fff"><?php echo image_tag('http://wls2.zerocall.com/images/logo.gif'); ?></td>
+        <td colspan="4" align="right" style="text-align:right; border:0px solid #fff"><?php echo image_tag('logo1.jpg'); ?></td>
     </tr>
 </table>
 <table class="receipt" cellspacing="0" width="600px">
