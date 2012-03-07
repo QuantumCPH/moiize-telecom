@@ -1,4 +1,4 @@
- <form id="form1" action="<?php echo url_for('company/login') ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>  
+ <form id="form1" action="<?php echo sfConfig::get("app_main_url").url_for('login') ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>  
 <div class="bg-img" >
         <div class="left"></div>
         <div class="centerImg"> 
