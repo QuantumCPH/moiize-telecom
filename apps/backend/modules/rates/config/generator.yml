@@ -1,0 +1,12 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      Rates
+    theme:            default
+    list:
+      display: [tital,rate]
+      max_per_page: 100
+      object_actions:
+        _edit: ~
+    edit:
+      display: [tital,rate]

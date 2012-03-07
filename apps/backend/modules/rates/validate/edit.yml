@@ -1,0 +1,8 @@
+fields:
+  rates{tital}:
+    required:
+      msg:              The Title heading cannot be left blank.
+  rates{rate}:
+    required:
+      msg:              The Rate cannot be left blank.
+  
