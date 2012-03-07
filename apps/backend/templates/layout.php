@@ -448,7 +448,7 @@ jQuery('#sf_admin_edit_form').validate({
 
         	jQuery('#company_head_phone_number').blur(function(){
 		
-                var val=jQuery(this).val();
+                var val=jQuery(this).val();//if(val!='')
                     if(val.substr(0, 1)==0){
 
                         jQuery("#msgbox1").fadeTo(200,0.1,function()
@@ -457,7 +457,12 @@ jQuery('#sf_admin_edit_form').validate({
                               jQuery(this).html('<?php echo __('Please enter a valid mobile number not starting with 0') ?>').addClass('messageboxerror').fadeTo(900,1);
                             });
                             jQuery('#error').val("error");
-                    }
+                    }else{jQuery("#msgbox1").fadeTo(200,0.1,function()
+                            {
+
+                             // jQuery(this).html('<?php echo __('valid mobile number') ?>').addClass('messageboxerror').fadeTo(900,1);
+                            });
+                            jQuery('#error').val("error");}
                
 	});
 
