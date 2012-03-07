@@ -145,11 +145,10 @@ class companyActions extends sfActions {
         $company->isNew() . ":" . $res;
 
         if ($company->isNew() && $res) {
-            
-            $company->setInvoiceMethodId(2);emailLib::sendBackendAgentRegistration($company);var_dump($company);exit;
+            $company->setICustomer($tCustomer->i_customer);
+            $company->setInvoiceMethodId(2);
             $company->save();
-            
-            
+            emailLib::sendBackendAgentRegistration($company);
         } elseif (!$company->isNew()) {
             $company->save();
         } elseif (!$res) {
