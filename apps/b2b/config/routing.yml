@@ -1,11 +1,11 @@
 # default rules
 homepage:
   url:   /
-  param: { module: company, action: dashboard }
+  param: { module: company, action: login }
 
 default_index:
   url:   /:module
-  param: { action: dashboard }
+  param: { action: login }
 
 login:
   url: /login

@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-
-<form id="form1" action="<?php echo url_for(sfConfig::get("app_main_url").'login') ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>  
-=======
 <form id="form1" action="<?php echo url_for(sfConfig::get('app_main_url').'company/login') ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>  
->>>>>>> forgtPassword
+
 <div class="bg-img" >
         <div class="left"></div>
         <div class="centerImg"> 
