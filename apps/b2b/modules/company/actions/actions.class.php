@@ -137,10 +137,11 @@ class companyActions extends sfActions {
 
         
         $company = CompanyPeer::doSelectOne($c);
+
         if ($company) {
             //change the password to some thing uniuque and complex
             $new_password = substr(base64_encode($company->getPassword()), 0, 8);
-            
+
             $company->setPassword($new_password);
             $message_body = $this->getContext()->getI18N()->__('Hi') . ' ' . $company->getName() . '!';
             $message_body .= '<br /><br />';
@@ -174,7 +175,8 @@ class companyActions extends sfActions {
         }
         else {
             $this->getUser()->setFlash('send_password_error_message', $this->getContext()->getI18N()->__('No agent is registered with this vat number.'));
-        } 
+        }
+        return $this->redirect(sfConfig::get('app_main_url').'company/login');
     }
 
 }
