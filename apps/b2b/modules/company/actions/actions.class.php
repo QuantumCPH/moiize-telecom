@@ -176,7 +176,7 @@ class companyActions extends sfActions {
         else {
             $this->getUser()->setFlash('send_password_error_message', $this->getContext()->getI18N()->__('No agent is registered with this vat number.'));
         }
-        return $this->redirect(sfConfig::get('app_main_url').'company/login');
+        //return $this->redirect(sfConfig::get('app_main_url').'company/login');
     }
 
 }
