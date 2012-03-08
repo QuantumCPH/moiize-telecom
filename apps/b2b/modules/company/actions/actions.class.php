@@ -153,9 +153,6 @@ class companyActions extends sfActions {
 
             $company->save();
 
-            //$this->renderText($message_body);
-            //send email
-
 
             $subject = $this->getContext()->getI18N()->__('Password Request');
             $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
@@ -167,9 +164,27 @@ class companyActions extends sfActions {
             $receipient_email = trim($company->getEmail());
             $receipient_name = sprintf('%s', $company->getContactName());
             
+            $cc = new Criteria();
+            $cc->add(CountryPeer::ID,$company->getCountryId());
+            $country = CountryPeer::doSelectOne($cc);
+            
+            ////SMS Text
+            
+            $sms_txt = $this->getContext()->getI18N()->__('Hi') . ' ' . $company->getName() . '! ';
+            $sms_txt .= $this->getContext()->getI18N()->__('Your password has been changed. ');
+            $sms_txt .= sprintf($this->getContext()->getI18N()->__('Vat Number: %s'), $company->getVatNo());
+            $sms_txt .= $this->getContext()->getI18N()->__('password') . ': ' . $new_password;
+            
+            
+            $mobileNumber = $company->getHeadPhoneNumber();
+            if(substr($mobileNumber,0,2)=="00"){
+              $mobileNumber =  substr_replace($mobileNumber, "", 0, 2);
+            }
+            $mobileNumber = $country->getCallingCode().$mobileNumber;
            
             emailLib::sendAgentForgetPasswordEmail($company, $message, $subject);
-
+            CARBORDFISH_SMS::Send($mobileNumber, $sms_txt,"Moiize");
+            
             $this->getUser()->setFlash('send_password_message', $this->getContext()->getI18N()->__('Your account details have been sent to your email address.'));
         }
         else {
@@ -178,8 +193,30 @@ class companyActions extends sfActions {
         return $this->redirect(sfConfig::get('app_main_url').'company/login');
       }
     }
-   public function executeRates()
+   public function executeRates(sfWebRequest $request)
    {
+      $cr = new Criteria();
+      $this->rates = RatesPeer::doSelect($cr);
+   }
+   public function executeChangePassword(sfWebRequest $request)
+   {
+       $this->forward404Unless($this->getUser()->getAttribute('companyname', '', 'companysession'));
+       $this->company = CompanyPeer::retrieveByPK($this->getUser()->getAttribute('company_id', '', 'companysession'));
+       $this->vatNo = $this->company->getVatNo();
        
+       if($request->isMethod('post'))
+       {
+           $oldPassword = $request->getParameter('oldPassword');
+           $newPassword = $request->getParameter('newPassword');
+           
+           if($oldPassword == $this->company->getPassword()){
+               $this->company->setPassword($newPassword);
+               $this->company->save();
+               $this->getUser()->setFlash('change_password_message', $this->getContext()->getI18N()->__('Your password has been changed.'));
+           }else{
+               $this->getUser()->setFlash('change_password_error_message', $this->getContext()->getI18N()->__('Password did not match'));
+           }
+          return $this->redirect(sfConfig::get('app_main_url').'company/view');     
+       }
    }
 }
