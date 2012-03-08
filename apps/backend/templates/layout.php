@@ -393,7 +393,7 @@ jQuery('#sf_admin_edit_form').validate({
 
    <?php if ($sf_user->getCulture() == 'en') {
  ?>
-        <?php use_javascript('jquery.validate1.js', '', array('absolute' => true)) ?>
+        <?php use_javascript('jquery.validate.js', '', array('absolute' => true)) ?>
         <?php } else {
  ?>
         <?php use_javascript('jquery.validatede.js', '', array('absolute' => true)) ?>
