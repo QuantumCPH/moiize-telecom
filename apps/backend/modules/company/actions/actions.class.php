@@ -152,8 +152,8 @@ class companyActions extends sfActions {
             emailLib::sendBackendAgentRegistration($company, $this->admin);
 
             $cc = new Criteria();
-            $cc->add(EnableCountryPeer::ID, $company->getCountryId());
-            $country = EnableCountryPeer::doSelectOne($cc);
+            $cc->add(CountryPeer::ID, $company->getCountryId());
+            $country = CountryPeer::doSelectOne($cc);
 
             $mobile = $country->getCallingCode() . $company->getHeadPhoneNumber();
             //send sms
