@@ -11,15 +11,15 @@
 
 
         <tr class="headings">
-            <th width="20%"   align="left"><?php echo __('Date & Time') ?></th>
+            <th width="16%"   align="left"><?php echo __('Date & Time') ?></th>
 
-            <th  width="20%"  align="left"><?php echo __('Phone Number') ?></th>
-            <th width="10%"   align="left"><?php echo __('Duration') ?></th>
-            <th  width="10%"  align="left"><?php echo __('VAT') ?></th>
-            <th width="20%"   align="left"><?php echo __('Cost (Incl. VAT)') ?></th>
-            <th  width="20%"   align="left"><?php echo __('Call Type') ?></th>
-            <th  width="20%"   align="left"><?php echo __('Account ID') ?></th>
-        </tr>
+            <th  width="16%"  align="left"><?php echo __('Phone Number') ?></th>
+            <th width="8%"   align="left"><?php echo __('Duration') ?></th>
+            <th  width="8%"  align="left"><?php echo __('VAT') ?></th>
+            <th width="13%"   align="left"><?php echo __('Cost (Incl. VAT)') ?></th>
+            <th  width="14%"   align="left"><?php echo __('Call Type') ?></th>
+            <th  width="25%"   align="left"><?php echo __('Account ID') ?></th>
+      </tr>
         <?php
         $callRecords = 0;
 
