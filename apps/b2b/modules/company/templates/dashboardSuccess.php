@@ -21,7 +21,7 @@
         <?php
                 if (strlen($updateNew->getMessage()) > 100) {
                     echo substr($updateNew->getMessage(), 0, 100);
-                    echo link_to('....read more', 'company/newsListing');
+                    echo link_to('....read more', sfConfig::get('app_main_url').'company/newsListing');
                 } else {
                     echo $updateNew->getMessage();
                 }
@@ -31,6 +31,6 @@
         <?php
             }
         } ?>
-        <b><?php echo link_to(__('View All News & Updates'), 'company/newsListing'); ?> </b>
+        <b><?php echo link_to(__('View All News & Updates'),  sfConfig::get('app_main_url').'company/newsListing'); ?> </b>
     </p>
 </div>
