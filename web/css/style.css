@@ -616,24 +616,24 @@ table.tblAlign{
     font-family: Arial,sans-serif;
     font-size: 12px
 }
-td{
+table.tblAlign td{
    border-bottom: 1px solid #2c7e21 !important; 
    border-right: 1px solid #2c7e21 !important;
 }
-td.last{
+table.tblAlign td.last{
    border-right: 0px !important; 
 }
-tr.headings{
+table.tblAlign tr.headings{
    background-color: #ffffff !important;
    color:#2c7e21 !important; 
 }
-tr.headings th{
+table.tblAlign tr.headings th{
    border-right: 1px solid #2c7e21 !important; 
    border-bottom: 1px solid #2c7e21 !important;
    text-align: left;
    color:#2c7e21;
 }
-tr.headings th.last{
+table.tblAlign tr.headings th.last{
    border-right: 0px !important; 
 }
 a.forgotUrl{
