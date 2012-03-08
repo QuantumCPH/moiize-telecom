@@ -17,7 +17,6 @@
             <th width="8%"   align="left"><?php echo __('Duration') ?></th>
             <th  width="8%"  align="left"><?php echo __('VAT') ?></th>
             <th width="13%"   align="left"><?php echo __('Cost (Incl. VAT)') ?></th>
-            <th  width="14%"   align="left"><?php echo __('Call Type') ?></th>
             <th  width="25%"   align="left"><?php echo __('Account ID') ?></th>
       </tr>
         <?php
@@ -36,21 +35,7 @@
                 <td><?php echo number_format($xdr->charged_amount / 4, 2); ?></td>
                 <td><?php echo number_format($xdr->charged_amount, 2);
             $amount_total+= number_format($xdr->charged_amount, 2); ?> &euro;</td>
-            <td><?php
-                $typecall = substr($xdr->account_id, 0, 1);
-                if ($typecall == 'a') {
-                    echo "Int.";
-                }
-                if ($typecall == '4') {
-                    echo "R";
-                }
-                if ($typecall == 'c') {
-                    if ($CLI == '**24') {
-                        echo "Cb M";
-                    } else {
-                        echo "Cb S";
-                    }
-                } ?> </td>
+            
             <td><?php echo $xdr->account_id; ?></td>
         </tr>
 
@@ -60,7 +45,7 @@
         ?>        <?php if ($callRecords == 0) {
  ?>
                 <tr>
-                    <td colspan="7"><p><?php echo __('There are currently no call records to show.') ?></p></td>
+                    <td colspan="6"><p><?php echo __('There are currently no call records to show.') ?></p></td>
                 </tr>
 <?php } else { ?>
                 <tr>
@@ -71,7 +56,7 @@
                 </tr>
 <?php } ?>
 
-            <tr><td colspan="7" align="left"><?php echo __('Call type detail') ?> <br/> <?php echo __('Int. = International calls') ?><br/>
+            <tr><td colspan="6" align="left"><?php echo __('Call type detail') ?> <br/> <?php echo __('Int. = International calls') ?><br/>
                 <?php //echo __('Cb M = Callback mottaga')  ?><br/>
                 <?php //echo __('Cb S = Callback samtal')  ?><br/>
 <?php //echo __('R = resenummer samtal')    ?><br/>
