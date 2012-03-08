@@ -32,8 +32,7 @@ $incrment=1;
 foreach($transactions as $transaction):
 
 if($incrment%2==0){
-  $colorvalue="#FFFFFF";
-  
+    $class= 'class="even"';
   }else{
     $class= 'class="odd"';
     
@@ -55,8 +54,8 @@ $incrment++;
 </tr>
 <?php else: ?>
 <tr><td>&nbsp;</td>
-    <td colspan="3" align="right"><strong><?php echo __('Total:') ?>&nbsp;&nbsp;</strong></td>
-    <td align="right"><?php echo format_number($amount_total);  ?> &euro;</td>
+    <td colspan="2" align="right"><strong><?php echo __('Total:') ?>&nbsp;&nbsp;</strong></td>
+    <td colspan="2"><?php echo format_number($amount_total);  ?> &euro;</td>
     
 </tr>	
 <?php endif; ?>

@@ -61,7 +61,7 @@
 
        <?php
                   if($incrment%2==0){
-                  $colorvalue="#FFFFFF";
+                  $class= 'class="even"';
                   
                   }else{
                     $class= 'class="odd"';
