@@ -18,11 +18,11 @@ class userActions extends autouserActions
     public function executeLogin($request){
 
         $this->loginForm = new LoginForm();
-
-        if($request->getParameter('new'))
-                $this->getUser()->setCulture($request->getParameter('new'));
-        else 
-            $this->getUser()->setCulture($this->getUser()->getCulture());
+echo "rr". $request->getParameter('new');echo $this->getUser()->getCulture();
+        //if($request->getParameter('new'))
+                //$this->getUser()->setCulture($request->getParameter('new'));
+        //else
+            //$this->getUser()->setCulture($this->getUser()->getCulture());
 
         
         if($request->getMethod() != 'post'){

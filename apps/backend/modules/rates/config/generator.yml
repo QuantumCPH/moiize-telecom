@@ -3,6 +3,7 @@ generator:
   param:
     model_class:      Rates
     theme:            default
+    css:     /sf/sf_admin/css/admin_main.css
     list:
       display: [tital,rate]
       max_per_page: 100

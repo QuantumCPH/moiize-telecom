@@ -168,7 +168,7 @@
   'size' => 7,
   'minlength'=>8,
   'control_name' => 'company[head_phone_number]',
-)); echo $value ? $value : '&nbsp;' ?><span id="msgbox1" style="display:none"></span><br>Please enter a valid mobile number not starting with 0
+)); echo $value ? $value : '&nbsp;' ?><span id="msgbox1"></span><br>Please enter a valid mobile number not starting with 0
     </div>
 </div>
 
