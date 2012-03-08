@@ -507,7 +507,7 @@ margin-bottom:10px;
 .bg-img .Inputfield{
     text-align: left;
     margin-left: 32px;
-    margin-bottom: 20px;    
+    margin-bottom: 12px;    
 }
 .bg-img .fieldName label{
     text-align: left !important;
@@ -524,6 +524,7 @@ margin-bottom:10px;
     padding-left:18px;
     margin-left: 0px !important;
     margin-bottom: 0px !important;
+    line-height: 27px;
 }
 .bg-img .submitButton{
     text-align: left;
