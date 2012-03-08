@@ -255,10 +255,11 @@ tr.odd{
 .bg-img .Inputfield #login_email,.bg-img .Inputfield #login_password{
     background: url('../images/field-img.png') no-repeat top;
     width: 320px;
-    height: 27px;
-    line-height: 27px;
+    height: 25px;
+    line-height: 25px;
     border:0px;
     padding-left:11px;
+    font-size:11px;
 }
 .bg-img .submitButton{
     text-align: left;
