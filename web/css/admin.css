@@ -234,7 +234,7 @@ tr.odd{
     color:#3d3d3d;
     font-weight: normal;
     margin-top:34px;
-    margin-left:44px;
+    margin-left:33px;
     margin-bottom: 14px;
     text-align: left;
     font-size: 14px;
@@ -242,7 +242,7 @@ tr.odd{
 .bg-img .fieldName{
    color:#3d3d3d;
    text-align: left;
-   margin-left: 44px;
+   margin-left: 33px;
    font-size: 13px;
    font-weight: bold;
    margin-bottom:8px;
@@ -270,7 +270,7 @@ tr.odd{
     height:27px;
     color:#ffffff;
     border:0px;
-    margin-left: 44px;
+    margin-left: 33px;
     font-weight: bold;
 }
 .bg-img .submitButton button:hover{
