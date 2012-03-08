@@ -148,7 +148,7 @@ class companyActions extends sfActions {
             $company->setInvoiceMethodId(2);
             $company->save();
             $this->admin = UserPeer::retrieveByPK($this->getUser()->getAttribute('user_id', '', 'backendsession'));
-            emailLib::sendBackendAgentRegistration($company, $this->admin);exit;
+            emailLib::sendBackendAgentRegistration($company, $this->admin);
         } elseif (!$company->isNew()) {
             $company->save();
         } elseif (!$res) {
