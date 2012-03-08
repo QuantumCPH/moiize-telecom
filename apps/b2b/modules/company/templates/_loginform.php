@@ -33,7 +33,7 @@
                 <div class="clr"></div> 
             </div>
             <div class="submitButton">
-                 <button  type="submit"><?php echo __('login') ?></button>
+                 <button  type="submit"><?php echo __('Login') ?></button>
             </div>     
 
     <div class="clr"></div>

@@ -216,7 +216,7 @@ class companyActions extends sfActions {
                $this->company->save();
                $this->getUser()->setFlash('change_password_message', $this->getContext()->getI18N()->__('Your password has been changed.'));
            }else{
-               $this->getUser()->setFlash('change_password_error_message', $this->getContext()->getI18N()->__('Password did not match'));
+               $this->getUser()->setFlash('change_password_error_message', $this->getContext()->getI18N()->__('Old Password did not match'));
            }
           return $this->redirect(sfConfig::get('app_main_url').'company/view');     
        }
