@@ -38,9 +38,10 @@
 
     <div class="clr"></div>
       <a href="<?php echo sfConfig::get('app_main_url');?>company/forgotPassword" class="forgotUrl">Forgot Password?</a>
-      <span class="powered">Powered by <a href="http://zapna.com/" target="_blank">Zapna</a></span>
     </div>
-            <div class="right"></div>  
+            <div class="right"></div>
+            <span class="powered">Powered by <a href="http://zapna.com/" target="_blank">Zapna</a></span>
     </div>
+        
 </form>
        
