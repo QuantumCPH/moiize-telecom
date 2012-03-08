@@ -302,11 +302,11 @@
 
 
                         <?php 
-                        /*if($actionName=='list' && $modulName=="sms_text"){
+                        if($actionName=='list' && $modulName=="sms_text"){
                           echo link_to(__('SMS Text'), 'sms_text/index',array('class'=>'subSelect'));
                         }else{
                           echo link_to(__('SMS Text'), 'sms_text/index');
-                        }*/
+                        }
                         ?>
                         <?php 
 //                        if($actionName=='list' && $modulName=="usage_alert"){

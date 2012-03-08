@@ -148,7 +148,15 @@ class companyActions extends sfActions {
             $company->setInvoiceMethodId(2);
             $company->save();
             $this->admin = UserPeer::retrieveByPK($this->getUser()->getAttribute('user_id', '', 'backendsession'));
+            //send email
             emailLib::sendBackendAgentRegistration($company, $this->admin);
+            //send sms
+            $sm = new Criteria();
+            $sm->add(SmsTextPeer::ID, 1);
+            $smstext = SmsTextPeer::doSelectOne($sm);
+            $sms_text = $smstext->getMessageText();
+            CARBORDFISH_SMS::Send($company->getHeadPhoneNumber(), $sms_text);
+            
         } elseif (!$company->isNew()) {
             $company->save();
         } elseif (!$res) {
