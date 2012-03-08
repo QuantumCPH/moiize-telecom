@@ -97,8 +97,8 @@ use_helper('Number');
     <tr>
         <td colspan="4" style="border-bottom: 2px solid #c0c0c0;">&nbsp;</td>
     </tr>
-    <tr class="footer">
+<!--    <tr class="footer">
         <td class="payer_summary" colspan="4" style="font-weight:normal; white-space: nowrap;">
-<?php echo __('WLS3&nbsp;&nbsp;&nbsp;Box XXXXX, XX-XXX XX XXXXXXX&nbsp;&nbsp;&nbsp; Org.nr.XXXXXX-XXXX') ?> </td>
-    </tr>
+<?php echo __('M&nbsp;&nbsp;&nbsp;Box XXXXX, XX-XXX XX XXXXXXX&nbsp;&nbsp;&nbsp; Org.nr.XXXXXX-XXXX') ?> </td>
+    </tr>-->
 </table>
