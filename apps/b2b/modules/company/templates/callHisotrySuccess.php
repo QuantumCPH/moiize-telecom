@@ -57,8 +57,8 @@
 <?php } ?>
 
             <tr><td colspan="6" align="left"><?php echo __('Call type detail') ?> <br/> <?php echo __('Int. = International calls') ?><br/>
-                <?php //echo __('Cb M = Callback mottaga')  ?><br/>
-                <?php //echo __('Cb S = Callback samtal')  ?><br/>
+                <?php //echo __('Cb M = Callback mottaga')  ?><br />
+                <?php //echo __('Cb S = Callback samtal')  ?><br />
 <?php //echo __('R = resenummer samtal')    ?><br/>
             </td></tr>
     </table>

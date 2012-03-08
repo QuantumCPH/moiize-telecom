@@ -507,7 +507,7 @@ margin-bottom:10px;
 .bg-img .Inputfield{
     text-align: left;
     margin-left: 32px;
-    margin-bottom: 20px;    
+    margin-bottom: 12px;    
 }
 .bg-img .fieldName label{
     text-align: left !important;
@@ -524,6 +524,7 @@ margin-bottom:10px;
     padding-left:18px;
     margin-left: 0px !important;
     margin-bottom: 0px !important;
+    line-height: 27px;
 }
 .bg-img .submitButton{
     text-align: left;
@@ -640,11 +641,13 @@ table.tblAlign tr.headings th.last{
 a.forgotUrl{
     font-size: 11px;
     padding-left: 43px;
-    
+    float: left;
+    margin-top:10px;
 }
 .powered{
     font-size: 11px;
     float: right;
+    margin-top:10px;
 }
 table.tblChangePassword{
     
