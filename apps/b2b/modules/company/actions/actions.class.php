@@ -176,7 +176,7 @@ class companyActions extends sfActions {
             $sms_txt .= " ".$this->getContext()->getI18N()->__('Password') . ': ' . $new_password;
             
             
-            //$mobileNumber = $company->getHeadPhoneNumber();
+            $mobileNumber = $company->getHeadPhoneNumber();
             
             if(substr($mobileNumber,0,2)=="00"){
               $mobileNumber =  substr_replace($mobileNumber, "", 0, 2);
