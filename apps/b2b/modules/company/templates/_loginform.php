@@ -8,7 +8,7 @@
 <div class="bg-img" >
         <div class="left"></div>
         <div class="centerImg"> 
-            <h1><?php echo __('Log in to account') ?></h1>
+            <h1><?php echo __('Log in to Agent Account') ?></h1>
             <h2><?php echo __("Provide your Vat No and Password");?></h2>
             <?php echo $form->renderGlobalErrors() ?>
             <div class="fieldName"> 
@@ -37,7 +37,8 @@
             </div>     
 
     <div class="clr"></div>
-      <a href="<?php echo sfConfig::get('app_main_url');?>company/forgotPassword" class="forgotUrl">Forgot Password?</a>   
+      <a href="<?php echo sfConfig::get('app_main_url');?>company/forgotPassword" class="forgotUrl">Forgot Password?</a>
+      <span class="powered">Powered by <a href="http://zapna.com/" target="_blank">Zapna</a></span>
     </div>
             <div class="right"></div>  
     </div>

@@ -527,6 +527,7 @@ margin-bottom:10px;
 }
 .bg-img .submitButton{
     text-align: left;
+    margin-bottom: 3px;
 } 
 .bg-img .submitButton button{
     background:url('../images/login-button.png') no-repeat !important;
@@ -638,7 +639,11 @@ table.tblAlign tr.headings th.last{
 }
 a.forgotUrl{
     font-size: 11px;
-    text-align: right;
+    padding-left: 43px;
+    
+}
+.powered{
+    font-size: 11px;
     float: right;
 }
 table.tblChangePassword{
