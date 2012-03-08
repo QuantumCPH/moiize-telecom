@@ -54,7 +54,7 @@
 				  <div class="content">
 				  	<?php echo $company->getPostCode() ?>
 				  </div>
-				
+                                </div>
 
 				<div class="form-row">
 				  <label class="required"><?php echo  __('Country:') ?></label>
