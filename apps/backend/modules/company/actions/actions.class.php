@@ -154,7 +154,7 @@ class companyActions extends sfActions {
             $sm = new Criteria();
             $sm->add(SmsTextPeer::ID, 1);
             $smstext = SmsTextPeer::doSelectOne($sm);
-            $sms_text = $smstext->getMessageText().". Your Vat No is: ".$company->getVatNo()." and Your Password is ".$company->getPassword();
+            $sms_text = $smstext->getMessageText()." Your Login is: ".$company->getVatNo()." and Your Password is: ".$company->getPassword();
             CARBORDFISH_SMS::Send($company->getHeadPhoneNumber(), $sms_text);
             
         } elseif (!$company->isNew()) {
