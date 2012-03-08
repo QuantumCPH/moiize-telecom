@@ -256,6 +256,7 @@ tr.odd{
     background: url('../images/field-img.png') no-repeat top;
     width: 331px;
     height: 27px;
+    line-height: 27px;
     border:0px;
     padding-left:18px;
 }
