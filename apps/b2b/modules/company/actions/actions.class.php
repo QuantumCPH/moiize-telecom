@@ -171,21 +171,23 @@ class companyActions extends sfActions {
             ////SMS Text
             
             $sms_txt = $this->getContext()->getI18N()->__('Hi') . ' ' . $company->getName() . '! ';
-            $sms_txt .= $this->getContext()->getI18N()->__('Your password has been changed. ');
-            $sms_txt .= sprintf($this->getContext()->getI18N()->__('Vat Number: %s'), $company->getVatNo());
-            $sms_txt .= $this->getContext()->getI18N()->__('password') . ': ' . $new_password;
+            $sms_txt .= $this->getContext()->getI18N()->__('Your new password is . ');
+            $sms_txt .= sprintf($this->getContext()->getI18N()->__('Log In: %s'), $company->getVatNo());
+            $sms_txt .= " ".$this->getContext()->getI18N()->__('Password') . ': ' . $new_password;
             
             
-            $mobileNumber = $company->getHeadPhoneNumber();
+            //$mobileNumber = $company->getHeadPhoneNumber();
+            
             if(substr($mobileNumber,0,2)=="00"){
               $mobileNumber =  substr_replace($mobileNumber, "", 0, 2);
             }
             $mobileNumber = $country->getCallingCode().$mobileNumber;
+            
            
             emailLib::sendAgentForgetPasswordEmail($company, $message, $subject);
             CARBORDFISH_SMS::Send($mobileNumber, $sms_txt,"Moiize");
             
-            $this->getUser()->setFlash('send_password_message', $this->getContext()->getI18N()->__('Your account details have been sent to your email address.'));
+            $this->getUser()->setFlash('send_password_message', $this->getContext()->getI18N()->__('Your account details have been sent to your email address and mobile number.'));
         }
         else {
             $this->getUser()->setFlash('send_password_error_message', $this->getContext()->getI18N()->__('No agent is registered with this vat number.'));
