@@ -45,7 +45,7 @@ $incrment++;
     <td><?php echo ($transaction->getCompany()?$transaction->getCompany():'N/A')?></td>
     <td><?php echo __($transaction->getDescription()) ?></td>
     <td align="right"><?php echo format_number($transaction->getAmount()); $amount_total += $transaction->getAmount(); ?></td>
-    <td><a href="<?php echo sfConfig::get('app_backend_url')."company/ShowReceipt?tid=".$transaction->getId()?>" target="_blank"><?php echo __("View") ?></a></td>
+    <td><a href="<?php echo sfConfig::get('app_backend_url')."company/ShowReceipt?tid=".$transaction->getId()?>" target="_blank"> <img src="/sf/sf_admin/images/default_icon.png" title=<?php echo __("view")?> alt=<?php echo __("view")?>></a></td>
 </tr>
 <?php endforeach; ?>
 <?php if(count($transactions)==0): ?>
@@ -53,9 +53,10 @@ $incrment++;
     <td colspan="5"><p><?php echo __('There are currently no transactions to show.') ?></p></td>
 </tr>
 <?php else: ?>
-<tr><td>&nbsp;</td>
-    <td colspan="2" align="right"><strong><?php echo __('Total:') ?>&nbsp;&nbsp;</strong></td>
-    <td colspan="2"><?php echo format_number($amount_total);  ?> &euro;</td>
+<tr>
+    <td colspan="3" align="right"><strong><?php echo __('Total:') ?>&nbsp;&nbsp;</strong></td>
+    <td align="right"><?php echo format_number($amount_total);  ?> &euro;</td>
+    <td>&nbsp;</td>
     
 </tr>	
 <?php endif; ?>
