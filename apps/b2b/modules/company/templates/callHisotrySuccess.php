@@ -17,7 +17,8 @@
             <th width="10%"   align="left"><?php echo __('Duration') ?></th>
             <th  width="10%"  align="left"><?php echo __('VAT') ?></th>
             <th width="20%"   align="left"><?php echo __('Cost (Incl. VAT)') ?></th>
-            <th  width="20%"   align="left"><?php echo __('Samtalstyp') ?></th>
+            <th  width="20%"   align="left"><?php echo __('Call Type') ?></th>
+            <th  width="20%"   align="left"><?php echo __('Account ID') ?></th>
         </tr>
         <?php
         $callRecords = 0;
@@ -50,6 +51,7 @@
                         echo "Cb S";
                     }
                 } ?> </td>
+            <td><?php echo $xdr->account_id; ?></td>
         </tr>
 
         <?php
@@ -58,7 +60,7 @@
         ?>        <?php if ($callRecords == 0) {
  ?>
                 <tr>
-                    <td colspan="6"><p><?php echo __('There are currently no call records to show.') ?></p></td>
+                    <td colspan="7"><p><?php echo __('There are currently no call records to show.') ?></p></td>
                 </tr>
 <?php } else { ?>
                 <tr>
@@ -69,7 +71,7 @@
                 </tr>
 <?php } ?>
 
-            <tr><td colspan="6" align="left"><?php echo __('Call type detail') ?> <br/> <?php echo __('Int. = International calls') ?><br/>
+            <tr><td colspan="7" align="left"><?php echo __('Call type detail') ?> <br/> <?php echo __('Int. = International calls') ?><br/>
                 <?php //echo __('Cb M = Callback mottaga')  ?><br/>
                 <?php //echo __('Cb S = Callback samtal')  ?><br/>
 <?php //echo __('R = resenummer samtal')    ?><br/>
