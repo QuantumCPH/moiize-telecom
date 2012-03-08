@@ -16,7 +16,7 @@
             <th width="10%"   align="left"><?php echo __('Duration') ?></th>
             <th  width="10%"  align="left"><?php echo __('VAT') ?></th>
             <th width="20%"   align="left"><?php echo __('Cost (Incl. VAT)') ?></th>
-            <th  width="20%"   align="left"><?php echo __('Samtalstyp') ?></th>
+            <th  width="20%"   align="left"><?php echo __('Account Id') ?></th>
         </tr>
         <?php
         $callRecords = 0;
@@ -34,21 +34,7 @@
                 <td><?php echo number_format($xdr->charged_amount / 4, 2); ?></td>
                 <td><?php echo number_format($xdr->charged_amount, 2);
             $amount_total+= number_format($xdr->charged_amount, 2); ?> &euro;</td>
-            <td><?php
-                $typecall = substr($xdr->account_id, 0, 1);
-                if ($typecall == 'a') {
-                    echo "Int.";
-                }
-                if ($typecall == '4') {
-                    echo "R";
-                }
-                if ($typecall == 'c') {
-                    if ($CLI == '**24') {
-                        echo "Cb M";
-                    } else {
-                        echo "Cb S";
-                    }
-                } ?> </td>
+                <td><?php echo $xdr->account_id; ?></td>
         </tr>
 
         <?php
@@ -68,9 +54,9 @@
                 </tr>
 <?php } ?>
 
-            <tr><td colspan="6" align="left"><?php echo __('Call type detail') ?> <br/> <?php echo __('Int. = International calls') ?><br/>
+<!--            <tr><td colspan="6" align="left"><?php echo __('Call type detail') ?> <br/> <?php echo __('Int. = International calls') ?><br/>
                 <?php //echo __('Cb M = Callback mottaga')  ?><br/>
                 <?php //echo __('Cb S = Callback samtal')  ?><br/>
 <?php //echo __('R = resenummer samtal')    ?><br/>
-            </td></tr>
+            </td></tr>-->
     </table></div>
