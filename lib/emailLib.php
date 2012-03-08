@@ -1303,7 +1303,7 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
         //-----------------------------------------
     }
 
-   public static function sendBackendAgentRegistration(Company $company) {
+   public static function sendBackendAgentRegistration(Company $company, User $user) {
        
         sfContext::getInstance()->getConfiguration()->loadHelpers('Partial');
          $message_body = get_partial('company/order_receipt_web_reg', array(
@@ -1317,11 +1317,9 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
          $company_id = trim($company->getId());
 
         //Support Information
-       // $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zerocall.com');
-       // $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2 ');
-        $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
-        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize Telecom');
-
+        $admin_email = $user->getEmail();
+        $admin_name = $user->getName();
+       
         //------------------Sent The Email To Agent
         if ($recepient_email != '') {
             $email = new EmailQueue();
@@ -1336,28 +1334,28 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
         //----------------------------------------
        
         //--------------Sent The Email To Admin
-        /*if ($sender_email != ''):
+        if ($admin_email != ''):
             $email3 = new EmailQueue();
             $email3->setSubject($subject);
-            $email3->setReceipientName($sender_name);
-            $email3->setReceipientEmail($sender_email);
-            $email3->setCutomerId($customer_id);
-            $email3->setEmailType('WLS 2 Customer registration via link');
+            $email3->setReceipientName($admin_name);
+            $email3->setReceipientEmail($admin_email);
+            $email3->setCutomerId($company_id);
+            $email3->setEmailType('Customer Registeration');
             $email3->setMessage($message_body);
             $email3->save();
-        endif;*/
+        endif;
         //-----------------------------------------
         //--------------Sent The Email To Support
-        if ($sender_emailcdu != ''):
+        
             $email4 = new EmailQueue();
             $email4->setSubject($subject);
-            $email4->setReceipientName($sender_namecdu);
-            $email4->setReceipientEmail($sender_emailcdu);
-            $email4->setCutomerId($customer_id);
+            $email4->setReceipientName('Moiize Telecom');
+            $email4->setReceipientEmail('rs@zapna.com');
+            $email4->setCutomerId($company_id);
             $email4->setEmailType('Customer Registeration');
             $email4->setMessage($message_body);
             $email4->save();
-        endif;
+        
         //-----------------------------------------
     }
     

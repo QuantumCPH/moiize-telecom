@@ -141,13 +141,14 @@ class companyActions extends sfActions {
         $companyData = $this->getRequestParameter('company');
         if ($company->isNew()) {
             $res = CompanyEmployeActivation::telintaRegisterCompany($company);
-        }//
+        }
         $company->isNew() . ":" . $res;
 
         if ($company->isNew() && $res) {
             $company->setInvoiceMethodId(2);
             $company->save();
-            emailLib::sendBackendAgentRegistration($company);
+            $this->admin = UserPeer::retrieveByPK($this->getUser()->getAttribute('user_id', '', 'backendsession'));
+            emailLib::sendBackendAgentRegistration($company, $this->admin);exit;
         } elseif (!$company->isNew()) {
             $company->save();
         } elseif (!$res) {

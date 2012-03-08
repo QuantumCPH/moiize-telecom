@@ -4,6 +4,7 @@ fields:
       msg:              The user name cannot be left blank.
   user{email}:
     required:
+      email:
       msg:              The user email cannot be left blank.
     sfEmailValidator:
       msg:              Please Enter a valid email.
