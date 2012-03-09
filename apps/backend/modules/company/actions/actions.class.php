@@ -386,12 +386,44 @@ class companyActions extends sfActions {
     }
 
     public function executeUsage($request) {
-        $this->company = CompanyPeer::retrieveByPK($request->getParameter('company_id'));
+       /* $this->company = CompanyPeer::retrieveByPK($request->getParameter('company_id'));
         $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
         $fromdate = date("Y-m-d", $tomorrow1);
         $tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
         $todate = date("Y-m-d", $tomorrow);
         $this->callHistory = CompanyEmployeActivation::callHistory($this->company, $fromdate, $todate);
+               */
+     
+       $this->company = CompanyPeer::retrieveByPK($this->getUser()->getAttribute('company_id', '', 'companysession'));
+    if(isset($_POST['startdate']) && isset($_POST['enddate'])){
+       $fromdate=$request->getParameter('startdate');
+       $todate=$request->getParameter('enddate');
+}else{
+        $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
+        $fromdate = date("Y-m-d", $tomorrow1);
+        $tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
+        $todate = date("Y-m-d", $tomorrow);
+
+}
+       $iaccount = $request->getParameter('iaccount');
+ if (isset($iaccount) && $iaccount!='') {
+        $ce = new Criteria();
+        $ce->add(TelintaAccountsPeer::ID, $iaccount);
+        $ce->addAnd(TelintaAccountsPeer::STATUS, 3);
+        $telintaAccount = TelintaAccountsPeer::doSelectOne($ce);;
+
+           echo $this->iAccountTitle = $telintaAccount->getAccountTitle();
+
+            //$this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $fromdate, $todate);
+        } else {
+
+            //$this->callHistory = CompanyEmployeActivation::callHistory($this->company, $fromdate, $todate);
+        }
+
+        $c = new Criteria();
+        $c->add(TelintaAccountsPeer::I_CUSTOMER, $this->company->getICustomer());
+        $c->addAnd(TelintaAccountsPeer::STATUS, 3);
+        $this->telintaAccountObj = TelintaAccountsPeer::doSelect($c);
     }
 
     public function executeRefill(sfWebRequest $request) {
