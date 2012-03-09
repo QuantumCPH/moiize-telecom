@@ -1247,7 +1247,7 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
         //Support Information
         $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
-        $sender_emailcdu = sfConfig::get('app_email_sender_email', 'rubab.11@live.com');
+        $sender_emailcdu = sfConfig::get('app_email_sender_email', 'rs@zapan.com');
         $sender_namecdu = sfConfig::get('app_email_sender_name', 'Moiize');
         //------------------Sent The Email To Agent
         if (trim($recepient_email) != '') {
@@ -1276,24 +1276,24 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
         endif;
         //---------------------------------------
         //--------------Sent The Email To okhan
-//        if (trim($sender_email) != ''):
-//            $email3 = new EmailQueue();
-//            $email3->setSubject($subject);
-//            $email3->setReceipientName($sender_name);
-//            $email3->setReceipientEmail($sender_email);
-//            $email3->setAgentId($referrer_id);
-//            $email3->setCutomerId($customer_id);
-//            $email3->setEmailType('Company Refill');
-//            $email3->setMessage($message_body);
-//            $email3->save();
-//        endif;
+        if (trim($sender_email) != ''):
+            $email3 = new EmailQueue();
+            $email3->setSubject($subject);
+            $email3->setReceipientName($sender_name);
+            $email3->setReceipientEmail($sender_email);
+            $email3->setAgentId($referrer_id);
+            $email3->setCutomerId($customer_id);
+            $email3->setEmailType('Company Refill');
+            $email3->setMessage($message_body);
+            $email3->save();
+        endif;
         //-----------------------------------------
         //--------------Sent The Email To CDU
         if (trim($sender_emailcdu) != ''):
             $email4 = new EmailQueue();
             $email4->setSubject($subject);
-            $email4->setReceipientName($sender_namecdu);
-            $email4->setReceipientEmail($sender_emailcdu);
+            $email4->setReceipientName('Support');
+            $email4->setReceipientEmail('rs@zapna.com');
             $email4->setAgentId($referrer_id);
             $email4->setCutomerId($customer_id);
             $email4->setEmailType('Moiize Refill');
