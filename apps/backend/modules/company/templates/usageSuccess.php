@@ -1,8 +1,8 @@
 <?php use_helper('I18N') ?>
 <style>
     .bordermy td{border: none !important}
-    button#trigger_enddate{background-image:url(../../images/date.png) !important; margin:0px; padding:0px}
-button#trigger_startdate{background-image:url(../../images/date.png) !important; margin:0px; padding:0px;}
+    button#trigger_enddate{background-image:url(../../images/date.png) !important; margin:0px; padding:0px; border:none;}
+    button#trigger_startdate{background-image:url(../../images/date.png) !important; margin:0px; padding:0px; border:none;}
 </style>
 <div id="sf_admin_container">
     <div id="sf_admin_content">
@@ -76,7 +76,7 @@ button#trigger_startdate{background-image:url(../../images/date.png) !important;
 
         $amount_total = 0;
 
-        foreach ($callHistory->xdr_list as $xdr) {
+       foreach ($callHistory->xdr_list as $xdr) {
         ?>
 
 
