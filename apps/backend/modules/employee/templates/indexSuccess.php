@@ -127,6 +127,7 @@
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
 
         $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAccount->getIAccount());
+        
         $telintaGetBalance = $accountInfo->account_info->balance;
 
 //$telintaGetBalance;
@@ -155,7 +156,8 @@
 //
 //        }
 //        }
-      echo  $balnc=(float)$telintaGetBalance+(float)$telintaGetBalance1+($telintaGetBalancerese>0)?(float)$telintaGetBalancerese:0;
+      $telintaGetBalancerese =  ($telintaGetBalancerese>0)?(float)$telintaGetBalancerese:0;
+      echo  $balnc = (float)$telintaGetBalance + (float)$telintaGetBalance1 + $telintaGetBalancerese;
           echo "&euro;";
                                                 ?></td>
 
