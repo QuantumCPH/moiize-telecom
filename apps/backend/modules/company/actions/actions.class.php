@@ -412,7 +412,7 @@ class companyActions extends sfActions {
         $ce->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ce);;
 
-           echo $this->iAccountTitle = $telintaAccount->getAccountTitle();
+            $this->iAccountTitle = $telintaAccount->getAccountTitle();
 
             $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $fromdate, $todate);
         } else {
