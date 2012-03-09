@@ -1292,8 +1292,8 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
         if (trim($sender_emailcdu) != ''):
             $email4 = new EmailQueue();
             $email4->setSubject($subject);
-            $email4->setReceipientName($sender_namecdu);
-            $email4->setReceipientEmail($sender_emailcdu);
+            $email4->setReceipientName('Support');
+            $email4->setReceipientEmail('rubab.11@live.com');
             $email4->setAgentId($referrer_id);
             $email4->setCutomerId($customer_id);
             $email4->setEmailType('Moiize Refill');
