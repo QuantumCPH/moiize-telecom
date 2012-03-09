@@ -108,18 +108,29 @@ class companyActions extends sfActions {
     public function executeCallHisotry(sfWebRequest $request) {
         $this->forward404Unless($this->getUser()->getAttribute('companyname', '', 'companysession'));
         $this->company = CompanyPeer::retrieveByPK($this->getUser()->getAttribute('company_id', '', 'companysession'));
-        
+    if(isset($_POST['startdate']) && isset($_POST['enddate'])){
+       $fromdate=$request->getParameter('startdate');
+       $todate=$request->getParameter('enddate');
+}else{
         $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
         $fromdate = date("Y-m-d", $tomorrow1);
         $tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
         $todate = date("Y-m-d", $tomorrow);
-        $iaccount = $request->getParameter('iaccount');
-        if (isset($iaccount) && $iaccount!='') {
-            $this->iAccountTitle = $request->getParameter('iaccountTitle');
-            $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($request->getParameter('iaccount'), $fromdate, $todate);
+       
+}
+       $iaccount = $request->getParameter('iaccount');
+ if (isset($iaccount) && $iaccount!='') {
+        $ce = new Criteria();
+        $ce->add(TelintaAccountsPeer::ID, $iaccount);
+        $ce->addAnd(TelintaAccountsPeer::STATUS, 3);
+        $telintaAccount = TelintaAccountsPeer::doSelectOne($ce);;
+
+           $this->iAccountTitle = $telintaAccount->getAccountTitle();
+          
+            //$this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $fromdate, $todate);
         } else {
             
-            $this->callHistory = CompanyEmployeActivation::callHistory($this->company, $fromdate, $todate);
+            //$this->callHistory = CompanyEmployeActivation::callHistory($this->company, $fromdate, $todate);
         }
 
         $c = new Criteria();

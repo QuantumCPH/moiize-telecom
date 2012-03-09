@@ -1,12 +1,56 @@
 <?php use_helper('I18N') ?>
-<h3><?php echo __('Select PCO Line to Filter');?></h3>
-<ul class="pcoLines">
- <?php foreach($telintaAccountObj as $account){ ?>
-<li><a href="?iaccount=<?php echo $account->getIAccount()."&iaccountTitle=".$account->getAccountTitle(); ?>"><?php echo $account->getAccountTitle();?></a></li>
-<?php } ?>
-</ul>
-<h1><?php echo __('Call History'); if(isset($iAccountTitle)&&$iAccountTitle!=''){echo "($iAccountTitle)"; } ?></h1>
+
 <div id="sf_admin_container">
+
+ <?PHP
+    $str=strlen($company->getId());
+    $substr=$str+10;
+?>
+
+<!--<a href=?iaccount=<?php //echo $account->getIAccount()."&iaccountTitle=".$account->getAccountTitle(); ?>>-->
+<form action="" id="searchform" method="POST" name="searchform" style=" background-color: #fff"  >
+
+    <table width="100%">
+        <tr>
+            <td>
+                <?php echo __('Select PCO Line to Filter');?>
+            </td>
+            <td>
+                <select name="iaccount" id="account">
+                <option value =''></option>
+
+             <?php foreach($telintaAccountObj as $account){
+                    $employeeid=substr($account->getAccountTitle(), $substr);
+                    $cn = new Criteria();
+                    $cn->add(EmployeePeer::ID, $employeeid);
+                    $employees = EmployeePeer::doSelectOne($cn);
+
+             ?>
+                <option value="<?PHP  echo $account->getId();?>"><?php echo $employees->getFirstName()." -- ". $account->getAccountTitle();?></option>
+            <?php } ?>
+            </select>
+            </td>
+       
+            <td>From:</td>
+            <td>
+                <?php $date11= date('Y-m-d', strtotime('-15 days')); ?>
+                <?php echo input_date_tag('startdate', $date11, 'rich=true') ?>
+            </td>
+            <td>To:</td>
+            <td>
+                <?php $date12= date('Y-m-d'); ?>
+                <?php echo input_date_tag('enddate', $date12, 'rich=true') ?>
+            </td>
+            <td><input type="submit" name="Search" value="Filter" id="searchNew"  /></td>
+        </tr>
+
+    </table>
+  
+</form>
+   
+<h1><?php echo __('Call History'); if(isset($iAccountTitle)&&$iAccountTitle!=''){echo "($iAccountTitle)"; } ?></h1>
+
+
     <table width="100%" cellspacing="0" cellpadding="2" class="tblAlign" border='0'>
 
 
@@ -24,7 +68,7 @@
 
         $amount_total = 0;
 
-        foreach ($callHistory->xdr_list as $xdr) {
+       /* foreach ($callHistory->xdr_list as $xdr) {
         ?>
 
 
@@ -41,7 +85,7 @@
 
         <?php
                 $callRecords = 1;
-            }
+            }*/
         ?>        <?php if ($callRecords == 0) {
  ?>
                 <tr>

@@ -11,7 +11,7 @@ default:
 
   stylesheets:    [style.css, 960.css]
 
-  javascripts:    []
+  javascripts:    [/sf/prototype/js/prototype.js, jquery-1.4.2.min.js,jquery.validate1.js, main.js]
 
   has_layout:     on
   layout:         layout
