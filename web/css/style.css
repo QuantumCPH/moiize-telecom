@@ -658,3 +658,9 @@ table.tblChangePassword input[type=text]{
     border:1px solid #2c7e21;
 }
 
+button#trigger_enddate{background-image:url(../images/date.png) !important; margin:0px; padding:0px; width: 16px; height: 16px}
+button#trigger_startdate{background-image:url(../images/date.png) !important; margin:0px; padding:0px; width: 16px; height: 16px}
+input#startdate{ margin:0px; padding:3px; }
+input#enddate{ margin:0px; padding:3px; }
+select#account{margin:0px}
+input#searchNew{margin:0px}

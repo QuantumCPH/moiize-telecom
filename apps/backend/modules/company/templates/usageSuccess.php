@@ -1,11 +1,64 @@
-<?php use_helper('I18N') ?><div id="sf_admin_container">
+<?php use_helper('I18N') ?>
+<style>
+    .bordermy td{border: none !important}
+    button#trigger_enddate{background-image:url(../../images/date.png) !important; margin:0px; padding:0px; border:none;}
+    button#trigger_startdate{background-image:url(../../images/date.png) !important; margin:0px; padding:0px; border:none;}
+</style>
+<div id="sf_admin_container">
     <div id="sf_admin_content">
         <!-- employee/list?filters[company_id]=1 -->
         <a href="<?php echo url_for('employee/index') . '?company_id=' . $company->getId() . "&filter=filter" ?>" class="external_link" target="_self"><?php echo __('PCO Lines') ?> (<?php echo count($company->getEmployees()) ?>)</a>
         <a href="<?php echo url_for('company/usage') . '?company_id=' . $company->getId(); ?>" class="external_link" target="_self"><?php echo __('Usage') ?></a>
         <a href="<?php echo url_for('company/paymenthistory') . '?company_id=' . $company->getId() . '&filter=filter' ?>" class="external_link" target="_self"><?php echo __('Payment History') ?></a>
     </div>
-    <h1><?php echo __('Call History'); ?></h1>
+
+
+    <?PHP
+    $str=strlen($company->getId());
+    $substr=$str+10;
+?>
+
+<!--<a href=?iaccount=<?php //echo $account->getIAccount()."&iaccountTitle=".$account->getAccountTitle(); ?>>-->
+<form action="" id="searchform" method="POST" name="searchform" style=" background-color: #fff"  >
+
+    <table width="100%" border="0" style="margin-top:20px" class="bordermy">
+        <tr>
+            <td>
+                <?php echo __('Select PCO Line to Filter');?>
+            </td>
+            <td>
+                <select name="iaccount" id="account">
+                <option value =''></option>
+
+             <?php foreach($telintaAccountObj as $account){
+                    $employeeid=substr($account->getAccountTitle(), $substr);
+                    $cn = new Criteria();
+                    $cn->add(EmployeePeer::ID, $employeeid);
+                    $employees = EmployeePeer::doSelectOne($cn);
+
+             ?>
+                <option value="<?PHP  echo $account->getId();?>"><?php echo $employees->getFirstName()." -- ". $account->getAccountTitle();?></option>
+            <?php } ?>
+            </select>
+            </td>
+            <td>From:</td>
+            <td>
+                <?php $date11= date('Y-m-d', strtotime('-15 days')); ?>
+                <?php echo input_date_tag('startdate', $date11, 'rich=true') ?>
+            </td>
+            <td>To:</td>
+            <td>
+                <?php $date12= date('Y-m-d'); ?>
+                <?php echo input_date_tag('enddate', $date12, 'rich=true') ?>
+            </td>
+            <td><input type="submit" name="Search" value="Filter"  /></td>
+        </tr>
+
+    </table>
+
+</form>
+
+    <h1><?php echo __('Call History'); if(isset($iAccountTitle)&&$iAccountTitle!=''){echo "($iAccountTitle)"; }?></h1>
     <table width="100%" cellspacing="0" cellpadding="2" class="tblAlign" border='0'>
 
 
@@ -23,7 +76,7 @@
 
         $amount_total = 0;
 
-        foreach ($callHistory->xdr_list as $xdr) {
+       foreach ($callHistory->xdr_list as $xdr) {
         ?>
 
 

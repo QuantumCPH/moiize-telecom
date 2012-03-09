@@ -25,7 +25,7 @@
 				  <label class="required"><?php echo  __('Balance view:') ?> </label>
 				  <div class="content"><?php
                                  echo $balance;
-          echo "&euro;";
+          echo " &euro;";
                            ?>
 				   
 				  </div>
