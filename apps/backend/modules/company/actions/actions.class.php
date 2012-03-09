@@ -414,10 +414,10 @@ class companyActions extends sfActions {
 
            echo $this->iAccountTitle = $telintaAccount->getAccountTitle();
 
-            //$this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $fromdate, $todate);
+            $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $fromdate, $todate);
         } else {
 
-            //$this->callHistory = CompanyEmployeActivation::callHistory($this->company, $fromdate, $todate);
+            $this->callHistory = CompanyEmployeActivation::callHistory($this->company, $fromdate, $todate);
         }
 
         $c = new Criteria();

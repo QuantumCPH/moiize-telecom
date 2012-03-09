@@ -127,16 +127,16 @@ class companyActions extends sfActions {
 
            $this->iAccountTitle = $telintaAccount->getAccountTitle();
           
-            //$this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $fromdate, $todate);
+            $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $fromdate, $todate);
         } else {
             
-            //$this->callHistory = CompanyEmployeActivation::callHistory($this->company, $fromdate, $todate);
+            $this->callHistory = CompanyEmployeActivation::callHistory($this->company, $fromdate, $todate);
         }
 
         $c = new Criteria();
         $c->add(TelintaAccountsPeer::I_CUSTOMER, $this->company->getICustomer());
         $c->addAnd(TelintaAccountsPeer::STATUS, 3);
-        $this->telintaAccountObj = TelintaAccountsPeer::doSelect($c);var_dump($this->telintaAccountObj);
+        $this->telintaAccountObj = TelintaAccountsPeer::doSelect($c);
     }
     
     public function executeForgotPassword(sfWebRequest $request){

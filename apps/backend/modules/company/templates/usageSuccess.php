@@ -76,7 +76,7 @@ button#trigger_startdate{background-image:url(../../images/date.png) !important;
 
         $amount_total = 0;
 
-       /* foreach ($callHistory->xdr_list as $xdr) {
+        foreach ($callHistory->xdr_list as $xdr) {
         ?>
 
 
@@ -92,7 +92,7 @@ button#trigger_startdate{background-image:url(../../images/date.png) !important;
 
         <?php
                 $callRecords = 1;
-            }*/
+            }
         ?>        <?php if ($callRecords == 0) {
  ?>
                 <tr>
