@@ -22,7 +22,7 @@
                        <?php echo __('Balance view') ?>:
                     </th>
                     <td><?php echo $balance;
-                        echo "&euro;"; ?></td>
+                        echo " &euro;"; ?></td>
                 </tr>
                 <tr class="headings">
                     <th>

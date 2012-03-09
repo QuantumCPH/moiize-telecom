@@ -1224,7 +1224,7 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
         $email->save();
     }
 
-    public static function sendCompanyRefillEmail(Company $company, $transaction) {
+    public static function sendCompanyRefillEmail(Company $company, $transaction, $adminUser=NULL) {
 
         //set vat
         $vat = 0;
@@ -1246,10 +1246,10 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
 
         //Support Information
         $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
-        $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2');
+        $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
         $sender_emailcdu = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
-        $sender_namecdu = sfConfig::get('app_email_sender_name', 'WLS 2');
-        //------------------Sent The Email To Customer
+        $sender_namecdu = sfConfig::get('app_email_sender_name', 'Moiize');
+        //------------------Sent The Email To Agent
         if (trim($recepient_email) != '') {
             $email = new EmailQueue();
             $email->setSubject($subject);
@@ -1262,12 +1262,12 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
             $email->save();
         }
         //----------------------------------------
-        //------------------Sent the Email To Agent
-        if (trim($recepient_agent_email) != ''):
+        //------------------Sent the Email To Admin
+        if ($adminUser !=NULL):
             $email2 = new EmailQueue();
             $email2->setSubject($subject);
-            $email2->setReceipientName($recepient_agent_name);
-            $email2->setReceipientEmail($recepient_agent_email);
+            $email2->setReceipientName($adminUser->getName());
+            $email2->setReceipientEmail($adminUser->getEmail());
             $email2->setAgentId($referrer_id);
             $email2->setCutomerId($customer_id);
             $email2->setEmailType('Company Refill');
@@ -1296,7 +1296,7 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
             $email4->setReceipientEmail($sender_emailcdu);
             $email4->setAgentId($referrer_id);
             $email4->setCutomerId($customer_id);
-            $email4->setEmailType('WLS 2 refill via agent');
+            $email4->setEmailType('Moiize Refill');
             $email4->setMessage($message_body);
             $email4->save();
         endif;
@@ -1383,7 +1383,7 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
         }
         //----------------------------------------
     }
-
+    
 }
 
 ?>

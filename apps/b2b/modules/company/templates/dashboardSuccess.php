@@ -1,4 +1,4 @@
-<h1>Current Balance: <?php echo $balance ?></h1>
+<h1>Current Balance: <?php echo $balance ?> &euro;</h1>
 <div id="sf_admin_container"><h1><?php echo __('News Box') ?></h1></div>
 
 <div class="borderDiv">

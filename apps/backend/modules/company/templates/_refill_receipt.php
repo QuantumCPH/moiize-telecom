@@ -71,7 +71,7 @@ use_helper('Number');
             ?>
         </td>
         <td><?php echo "1"; ?></td>
-        <td><?php echo format_number($subtotal = $transaction->getAmount()) //($order->getProduct()->getPrice() - $order->getProduct()->getPrice()*.2) * $order->getQuantity()) ?></td>
+        <td><?php echo format_number($subtotal = $transaction->getAmount()) ?> &euro;</td>
     </tr>
     <tr>
         <td colspan="4" style="border-bottom: 2px solid #c0c0c0;">&nbsp;</td>
@@ -80,7 +80,7 @@ use_helper('Number');
         <td>&nbsp;</td>
         <td><?php echo __('Subtotal') ?></td>
         <td>&nbsp;</td>
-        <td><?php echo format_number($subtotal) ?></td>
+        <td><?php echo format_number($subtotal) ?> &euro;</td>
     </tr>
     <tr class="footer">
         <td>&nbsp;</td>
@@ -92,7 +92,7 @@ use_helper('Number');
         <td>&nbsp;</td>
         <td><?php echo __('Total') ?></td>
         <td>&nbsp;</td>
-        <td><?php echo format_number($transaction->getAmount()) ?></td>
+        <td><?php echo format_number($transaction->getAmount()) ?> &euro;</td>
     </tr>
     <tr>
         <td colspan="4" style="border-bottom: 2px solid #c0c0c0;">&nbsp;</td>

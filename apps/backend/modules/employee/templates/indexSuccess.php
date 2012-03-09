@@ -81,18 +81,18 @@
       }
               ?></td>
       <td><?php echo htmlspecialchars($employee->getFirstName()); ?></td>
-      <?php  if(isset($companyval) && $companyval!=""){  ?>
-      <td>
+      
+      <td><?php // if(isset($companyval) && $companyval!=""){  ?>
        <?php
         $cp = new Criteria();
-        $cp->add(TelintaAccountsPeer::ACCOUNT_TITLE, 'testesvoip'.$companyval.$employee->getId());
+        $cp->add(TelintaAccountsPeer::ACCOUNT_TITLE, 'testesvoip'.$employee->getCompanyId().$employee->getId());
         $cp->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($cp);
         $account_Info = CompanyEmployeActivation::getAccountInfo($telintaAccount->getIAccount());
         $password = $account_Info->account_info->password;
         echo $password;
-      ?></td>
-      <?php } ?>
+      ?><?php //} ?></td>
+      
       <td>
           <?php  $pid=$employee->getProductId();
       if(isset($pid) && $pid!=""){
