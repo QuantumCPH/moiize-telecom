@@ -394,7 +394,7 @@ class companyActions extends sfActions {
         $this->callHistory = CompanyEmployeActivation::callHistory($this->company, $fromdate, $todate);
                */
      
-       $this->company = CompanyPeer::retrieveByPK($this->getUser()->getAttribute('company_id', '', 'companysession'));
+       $this->company = CompanyPeer::retrieveByPK($request->getParameter('company_id'));
     if(isset($_POST['startdate']) && isset($_POST['enddate'])){
        $fromdate=$request->getParameter('startdate');
        $todate=$request->getParameter('enddate');
