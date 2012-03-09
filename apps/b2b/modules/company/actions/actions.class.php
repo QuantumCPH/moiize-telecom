@@ -136,7 +136,7 @@ class companyActions extends sfActions {
         $c = new Criteria();
         $c->add(TelintaAccountsPeer::I_CUSTOMER, $this->company->getICustomer());
         $c->addAnd(TelintaAccountsPeer::STATUS, 3);
-        $this->telintaAccountObj = TelintaAccountsPeer::doSelect($c);
+        $this->telintaAccountObj = TelintaAccountsPeer::doSelect($c);var_dump($this->telintaAccountObj);
     }
     
     public function executeForgotPassword(sfWebRequest $request){
