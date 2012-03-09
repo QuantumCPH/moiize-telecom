@@ -35,7 +35,7 @@
       
       <th align="left"  id="sf_admin_list_th_name"><?php echo __('Agent') ?></th>
       <th align="left"  id="sf_admin_list_th_name"><?php echo __('Name') ?></th>
-     
+      <th align="left"  id="sf_admin_list_th_name"><?php echo __('Password') ?></th>
       <th align="left"  id="sf_admin_list_th_name"><?php echo __('product') ?></th>
     
  <!--     <th align="left" id="sf_admin_list_th_name"><?php echo __('Mobile number') ?></th>
@@ -81,7 +81,18 @@
       }
               ?></td>
       <td><?php echo htmlspecialchars($employee->getFirstName()); ?></td>
-  
+      
+      <td><?php // if(isset($companyval) && $companyval!=""){  ?>
+       <?php
+        $cp = new Criteria();
+        $cp->add(TelintaAccountsPeer::ACCOUNT_TITLE, 'testesvoip'.$employee->getCompanyId().$employee->getId());
+        $cp->addAnd(TelintaAccountsPeer::STATUS, 3);
+        $telintaAccount = TelintaAccountsPeer::doSelectOne($cp);
+        $account_Info = CompanyEmployeActivation::getAccountInfo($telintaAccount->getIAccount());
+        $password = $account_Info->account_info->password;
+        echo $password;
+      ?><?php //} ?></td>
+      
       <td>
           <?php  $pid=$employee->getProductId();
       if(isset($pid) && $pid!=""){
@@ -92,29 +103,7 @@
               echo $products->getName();
       }
               ?>
-
-
       </td>
- <!--      <td><?php echo $employee->getMobileNumber() ?></td>
-     <td>
-           <?php
-
-
-//                            $empid=$employee->getRegistrationType();
-//                          if(isset($empid) && $empid==1){ ?>
-
-
-				  	<?php  //  $voip = new Criteria();
-//        $voip->add(SeVoipNumberPeer::CUSTOMER_ID, $employee->getCountryMobileNumber());
-//        $voip->addAnd(SeVoipNumberPeer::IS_ASSIGNED, 1);
-//        $voipv = SeVoipNumberPeer::doSelectOne($voip);
-
-//                         if(isset ($voipv)){echo $voipv->getNumber();} ?>
-				 
-
-
-                            <?php   //}else{ echo __('No'); } ?>
-</td>-->
  <?php  if(isset($companyval) && $companyval!=""){  ?>
       <td> <?php
 
@@ -127,37 +116,14 @@
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
 
         $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAccount->getIAccount());
+       // print_r($accountInfo);
         $telintaGetBalance = $accountInfo->account_info->balance;
-
-//$telintaGetBalance;
         $telintaGetBalance1=0;
-//        $telintaGetBalance1 = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?action=getbalance&name=cb'.$mobileID.'&type=account');
-//        $telintaGetBalance1 = str_replace('success=OK&Balance=', '', $telintaGetBalance1);
-//        $telintaGetBalance1 = str_replace('-', '', $telintaGetBalance1);
-        //$telintaGetBalance;
-
-//         $regtype=$employee->getRegistrationType();
         $telintaGetBalancerese=0;
-//        if(isset($regtype) && $regtype==1){
-//        $voip = new Criteria();
-//
-//        $voip->add(SeVoipNumberPeer::CUSTOMER_ID, $employee->getCountryMobileNumber());
-//        $voip->addAnd(SeVoipNumberPeer::IS_ASSIGNED, 1);
-//        $voipv = SeVoipNumberPeer::doSelectOne($voip);
-//
-//        if(isset ($voipv)){
-//
-//       $resenummer=$voipv->getNumber();
-//       $resenummer = substr($resenummer, 2);
-//       $telintaGetBalancerese = file_get_contents('https://mybilling.telinta.com/htdocs/zapna/zapna.pl?action=getbalance&name='.$resenummer.'&type=account');
-//       $telintaGetBalancerese = str_replace('success=OK&Balance=', '', $telintaGetBalancerese);
-//       $telintaGetBalancerese = str_replace('-', '', $telintaGetBalancerese);
-//
-//        }
-//        }
-      echo  $balnc=(float)$telintaGetBalance+(float)$telintaGetBalance1+($telintaGetBalancerese>0)?(float)$telintaGetBalancerese:0;
-          echo "&euro;";
-                                                ?></td>
+        $telintaGetBalancerese =  ($telintaGetBalancerese>0)?(float)$telintaGetBalancerese:0;
+        echo  $balnc = (float)$telintaGetBalance + (float)$telintaGetBalance1 + $telintaGetBalancerese;
+        echo " &euro;";
+        ?></td>
 
       <?php } ?>
       <td><?php echo substr($employee->getCreatedAt(),0,10); ?></td>

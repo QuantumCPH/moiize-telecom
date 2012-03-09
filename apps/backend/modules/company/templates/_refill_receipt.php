@@ -40,7 +40,7 @@ use_helper('Number');
 
 <table width="600px">
     <tr style="border:0px solid #fff">
-        <td colspan="4" align="right" style="text-align:right; border:0px solid #fff"><?php echo image_tag('/images/logo.gif'); ?></td>
+        <td colspan="4" align="right" style="text-align:right; border:0px solid #fff"><img src="<?php echo sfConfig::get("app_main_url").'../images/logo.jpg'; ?>" /></td>
     </tr>
 </table>
 <table class="receipt" cellspacing="0" width="600px">
@@ -71,7 +71,7 @@ use_helper('Number');
             ?>
         </td>
         <td><?php echo "1"; ?></td>
-        <td><?php echo format_number($subtotal = $transaction->getAmount()) //($order->getProduct()->getPrice() - $order->getProduct()->getPrice()*.2) * $order->getQuantity()) ?></td>
+        <td><?php echo format_number($subtotal = $transaction->getAmount()) ?> &euro;</td>
     </tr>
     <tr>
         <td colspan="4" style="border-bottom: 2px solid #c0c0c0;">&nbsp;</td>
@@ -80,7 +80,7 @@ use_helper('Number');
         <td>&nbsp;</td>
         <td><?php echo __('Subtotal') ?></td>
         <td>&nbsp;</td>
-        <td><?php echo format_number($subtotal) ?></td>
+        <td><?php echo format_number($subtotal) ?> &euro;</td>
     </tr>
     <tr class="footer">
         <td>&nbsp;</td>
@@ -92,7 +92,7 @@ use_helper('Number');
         <td>&nbsp;</td>
         <td><?php echo __('Total') ?></td>
         <td>&nbsp;</td>
-        <td><?php echo format_number($transaction->getAmount()) ?></td>
+        <td><?php echo format_number($transaction->getAmount()) ?> &euro;</td>
     </tr>
     <tr>
         <td colspan="4" style="border-bottom: 2px solid #c0c0c0;">&nbsp;</td>

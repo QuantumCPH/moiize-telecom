@@ -453,6 +453,8 @@ class companyActions extends sfActions {
                 CompanyEmployeActivation::recharge($this->company, $refill_amount, $transaction);
                 $transaction->setTransactionStatusId(3);
                 $transaction->save();
+                $adminUser = UserPeer::retrieveByPK($this->getUser()->getAttribute('user_id', '', 'backendsession'));
+                emailLib::sendCompanyRefillEmail($this->company, $transaction,$adminUser);
                 $this->getUser()->setFlash('message', 'Agent Refill Successfully');
                 $this->redirect('company/paymenthistory');
             } else {
