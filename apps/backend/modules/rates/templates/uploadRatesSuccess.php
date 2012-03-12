@@ -33,7 +33,7 @@
     
 </div>
 <br />
-<?php if(isset ($updatedRec)){?>
+<?php if(isset ($updatedRec) && $updatedRec != NULL){?>
 <div id="sf_admin_container">
      <p style="color: green; margin:6px auto;text-align: left;border:0px !important;"><?php echo __('Following rates are updated.'); ?></p>
 </div>     
