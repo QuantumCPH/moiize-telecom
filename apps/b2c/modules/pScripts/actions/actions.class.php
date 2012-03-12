@@ -1165,9 +1165,9 @@ die;
         echo '<br/>';
         echo sfConfig::get('app_email_smtp_password');
         echo '<br/>';
-        echo sfConfig::get('app_email_sender_email', 'support@wls.com');
+        echo sfConfig::get('app_email_sender_email', 'support@moizze.com');
         echo '<br/>';
-        echo sfConfig::get('app_email_sender_name', 'WLS2 support');
+        echo sfConfig::get('app_email_sender_name', 'Moiize Telecom');
         
 
   	$connection = Swift_SmtpTransport::newInstance()

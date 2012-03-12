@@ -79,7 +79,7 @@
                <?php echo link_to(image_tag('/images/english.png'), 'user/changeCulture?new=en'); ?>
             </div>-->
       <?php if($sf_user->isAuthenticated()): ?>
-     <div class="topNav" align="center">  
+     <div class="topNav">  
       <ul id="sddm">
              <li><a href="#"
                 onmouseover="mopen('m2')"
@@ -338,11 +338,11 @@
             </li>
           	
         </ul>
-             </div>
-      <?php endif; ?> 
-    <br />
-         
+             </div><br />
+
       <div class="clr"></div>
+      <?php endif; ?> 
+    
     <?php echo $sf_content ?>
     </div> <!--  end wrapper -->
 
