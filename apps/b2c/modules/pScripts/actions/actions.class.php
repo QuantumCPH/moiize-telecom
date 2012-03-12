@@ -1165,7 +1165,7 @@ die;
         echo '<br/>';
         echo sfConfig::get('app_email_smtp_password');
         echo '<br/>';
-        echo sfConfig::get('app_email_sender_email', 'support@moizze.com');
+        echo sfConfig::get('app_email_sender_email', 'support@moiize.com');
         echo '<br/>';
         echo sfConfig::get('app_email_sender_name', 'Moiize Telecom');
         
