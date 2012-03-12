@@ -353,3 +353,9 @@ a.userDelete, a.userCancel{
     font-size: 11px;
     float: right;
 }
+table.tblRates{
+    border:0px !important;
+}
+table.tblRates td, table.tblRates th{
+    border:0px !important;
+}
