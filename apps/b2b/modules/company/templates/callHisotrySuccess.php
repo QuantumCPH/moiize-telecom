@@ -25,7 +25,7 @@
                                 $cn->add(EmployeePeer::ID, $employeeid);
                                 $employees = EmployeePeer::doSelectOne($cn);
                             ?>
-                                <option value="<?PHP  echo $account->getId();?>"><?php echo $employees->getFirstName()." -- ". $account->getAccountTitle();?></option>
+                                <option value="<?PHP  echo $account->getId();?>" <?PHP echo ($account->getId()==$iaccount)?'selected="selected"':''?>><?php echo $employees->getFirstName()." -- ". $account->getAccountTitle();?></option>
                             <?php } ?>
                             </select>
                         </div>
@@ -48,6 +48,7 @@
                 </fieldset>
 
                 <ul class="sf_admin_actions">
+                    <li><input type="button" class="sf_admin_action_filter" value="reset" name="reset" onclick="document.location.href='<?PHP echo sfConfig::get('app_backend_url')."company/usage?company_id=". $company->getId();?>'"></li>
                    <li><input type="submit" class="sf_admin_action_filter" value="filter" name="filter"></li>
                 </ul>
             </form>
