@@ -1275,20 +1275,8 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
             $email2->save();
         endif;
         //---------------------------------------
-        //--------------Sent The Email To okhan
-        if (trim($sender_email) != ''):
-            $email3 = new EmailQueue();
-            $email3->setSubject($subject);
-            $email3->setReceipientName($sender_name);
-            $email3->setReceipientEmail($sender_email);
-            $email3->setAgentId($referrer_id);
-            $email3->setCutomerId($customer_id);
-            $email3->setEmailType('Company Refill');
-            $email3->setMessage($message_body);
-            $email3->save();
-        endif;
-        //-----------------------------------------
-        //--------------Sent The Email To CDU
+        
+        //--------------Sent The Email To Support
         if (trim($sender_emailcdu) != ''):
             $email4 = new EmailQueue();
             $email4->setSubject($subject);
