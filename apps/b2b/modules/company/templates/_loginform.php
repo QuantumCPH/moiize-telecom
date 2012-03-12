@@ -1,4 +1,7 @@
 <form id="form1" action="<?php echo url_for(sfConfig::get('app_main_url').'company/login') ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>  
+    <?php if ($sf_user->hasFlash('login_error_message')): ?>
+	<p style="color: red; margin:6px auto;text-align: center;border:0px !important;"><?php echo $sf_user->getFlash('login_error_message') ?></p>
+    <?php endif;?>
     <?php if ($sf_user->hasFlash('send_password_error_message')): ?>
 	<p style="color: red; margin:6px auto;text-align: center;border:0px !important;"><?php echo $sf_user->getFlash('send_password_error_message') ?></p>
     <?php endif;?>
