@@ -289,8 +289,14 @@
                           echo link_to(__('Cities'), 'city/index'); 
                         }
                         ?>
-
-                         <?php
+                        <?php
+                        if($actionName=='uploadRates' && $modulName=="rates"){
+                          echo link_to(__('Upload Rates'), 'rates/uploadRates',array('class'=>'subSelect'));
+                        }else{
+                          echo link_to(__('Upload Rates'), 'rates/uploadRates');
+                        }
+                        ?>
+                        <?php
                         if($actionName=='list' && $modulName=="rates"){
                           echo link_to(__('Rates'), 'rates/index',array('class'=>'subSelect'));
                         }else{
