@@ -33,7 +33,7 @@
     
 </div>
 <br />
-<?php if(isset ($updatedRec) && $updatedRec != NULL){?>
+<?php if(isset ($updatedRec) && count($updatedRec)>1){?>
 <div id="sf_admin_container">
      <p style="color: green; margin:6px auto;text-align: left;border:0px !important;"><?php echo __('Following rates are updated.'); ?></p>
 </div>     
@@ -43,7 +43,7 @@
 </tr>
 <?php
 //foreach ($updatedRec as $R){
- //   print_r($updatedRec);
+    //print_r($updatedRec);
 for($i=0; $i<count($updatedRec)-1;$i++){
 ?>
 <tr><td><?php echo $updatedRec[$i];?></td></tr>
