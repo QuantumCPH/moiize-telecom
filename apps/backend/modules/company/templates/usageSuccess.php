@@ -75,7 +75,7 @@
 
         $amount_total = 0;
 
-       /*foreach ($callHistory->xdr_list as $xdr) {
+       foreach ($callHistory->xdr_list as $xdr) {
         ?>
 
 
@@ -91,7 +91,7 @@
 
         <?php
                 $callRecords = 1;
-            }*/
+            }
         ?>        <?php if ($callRecords == 0) {
  ?>
                 <tr>
