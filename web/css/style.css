@@ -664,3 +664,57 @@ input#startdate{ margin:0px; padding:3px; }
 input#enddate{ margin:0px; padding:3px; }
 select#account{margin:0px}
 input#searchNew{margin:0px}
+
+#sf_admin_container fieldset
+{
+  margin: 3px 0px 3px 0px;
+  border: 1px solid #2C7E21;
+  background-color: #D3F2CF;
+}
+
+#sf_admin_container .form-row
+{
+  clear: both;
+  padding: 10px;
+  font-family: arial;
+  font-size: 11px;
+}
+
+#sf_admin_container label
+{
+  display: block;
+  padding: 0 1em 3px 0;
+  float: left;
+  text-align: left;
+  width: 7em;
+  color: #000;
+  font-weight: normal !important;
+  white-space: nowrap;
+  margin: 0px
+}
+#sf_admin_container .form-row .content
+{
+  padding-left: 10em;
+  margin: 0px;
+  margin-bottom: 10px;
+  width: 275px;
+}
+#sf_admin_container ul.sf_admin_actions 
+{
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: right !important;
+    
+}
+#sf_admin_container input.sf_admin_action_filter
+{
+  background: url(../images/b.png) repeat-x left !important;
+  border: 1px solid #2C7E21 !important;
+  color: #ffffff;
+  font-size: 11px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  text-transform: capitalize;
+  width: 40px;
+}
