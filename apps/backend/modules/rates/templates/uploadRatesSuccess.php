@@ -25,7 +25,7 @@
     <br/>
     <form action="<?php echo url_for(sfConfig::get('app_backend_url').'rates/uploadRates') ?>" method="post" enctype="multipart/form-data" name="frmCSV">
        <div style="color:red;font-size:11px;">Upload comma separated file.</div> 
-       <table width="38%" cellspacing="0" cellpadding="5" class="tblRates">
+       <table width="44%" cellspacing="0" cellpadding="5" class="tblRates">
           <tr><th width="41%" align="left">Upload CSV File</th>
           <td width="59%"><input type="file" name="csv_upload" /></td><td><input type="submit" name="btnSubmit" value="Upload File" /></td></tr>
         </table>
