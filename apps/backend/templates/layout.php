@@ -389,7 +389,7 @@ jQuery('#sf_admin_edit_form').validate({
     jQuery('#refill').blur(function(){
         var refill=jQuery("#refill").val();
         var word= refill.charAt(0);
-        if(word==0)/{//alert(word);
+        if(word==0){//alert(word);
             jQuery("#msgbox").html('Please enter a valid mobile number not starting with 0').addClass('messageboxerror');
             jQuery('#error').val("error");
        }else{
