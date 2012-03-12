@@ -118,10 +118,10 @@ class companyActions extends sfActions {
         $todate = date("Y-m-d", $tomorrow);
        
 }
-       $iaccount = $request->getParameter('iaccount');
- if (isset($iaccount) && $iaccount!='') {
+       $this->iaccount = $request->getParameter('iaccount');
+ if (isset($this->iaccount) && $this->iaccount!='') {
         $ce = new Criteria();
-        $ce->add(TelintaAccountsPeer::ID, $iaccount);
+        $ce->add(TelintaAccountsPeer::ID, $this->iaccount);
         $ce->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ce);;
 
