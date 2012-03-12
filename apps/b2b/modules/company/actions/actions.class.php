@@ -38,13 +38,16 @@ class companyActions extends sfActions {
                 $c->Add(CompanyPeer::VAT_NO, $this->form->getValue('vat_no'));
                 $c->addAnd(CompanyPeer::PASSWORD, $this->form->getValue('password'));
                 $company = CompanyPeer::doSelectOne($c);
+//                echo $company->getStatusId();
+//                        die;
 
-
-                if ($company) {
+                if ($company->getStatusId()==1) {
                     $this->getUser()->setAuthenticated(true);
                     $this->getUser()->setAttribute('company_id', $company->getId(), 'companysession');
                     $this->getUser()->setAttribute('companyname', $company->getName(), 'companysession');
                     $this->redirect(sfConfig::get('app_main_url') . 'company/dashboard');
+                }else{
+                  $this->getUser()->setFlash('login_error_message', $this->getContext()->getI18N()->__('Your account is not active.'));  
                 }
             }
         }
