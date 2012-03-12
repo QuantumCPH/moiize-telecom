@@ -45,7 +45,7 @@
 
 
             <div class="clr"></div>
-            <div id="menu">
+            
                 <!--                <h1>menu</h1>-->
                 <?php
                     if ($sf_user->isAuthenticated()) {
@@ -54,7 +54,7 @@
 //                        echo "M ".$modulName;
 //                        echo "<br />";
 //                        echo "A ".$actionName;
-                ?>
+                ?><div id="menu">
                         <ul id="sddm">
                             <li>
                         <?php
@@ -120,10 +120,10 @@
                     </li>
                     <li class="last"><a href="<?php echo sfConfig::get('app_main_url');?>company/logout" ><?php echo  __('Logout');?></a></li>
 
-                </ul>
-                <?php } ?>
-                    <div class="clr"></div>
+                </ul><div class="clr"></div>
                 </div>
+                <?php } ?>
+                    
                 <div id="content">
                 <?php if ($sf_user->hasFlash('message')): ?>
                         <div id="info-message" class="grid_9 save-ok">

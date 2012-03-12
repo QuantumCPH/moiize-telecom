@@ -405,19 +405,19 @@ class companyActions extends sfActions {
         $todate = date("Y-m-d", $tomorrow);
 
 }
-       $iaccount = $request->getParameter('iaccount');
- if (isset($iaccount) && $iaccount!='') {
+       $this->iaccount = $request->getParameter('iaccount');
+ if (isset($this->iaccount) && $this->iaccount!='') {
         $ce = new Criteria();
-        $ce->add(TelintaAccountsPeer::ID, $iaccount);
+        $ce->add(TelintaAccountsPeer::ID, $this->iaccount);
         $ce->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ce);;
 
             $this->iAccountTitle = $telintaAccount->getAccountTitle();
 
-            $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $fromdate, $todate);
+           // $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $fromdate, $todate);
         } else {
 
-            $this->callHistory = CompanyEmployeActivation::callHistory($this->company, $fromdate, $todate);
+            //$this->callHistory = CompanyEmployeActivation::callHistory($this->company, $fromdate, $todate);
         }
 
         $c = new Criteria();

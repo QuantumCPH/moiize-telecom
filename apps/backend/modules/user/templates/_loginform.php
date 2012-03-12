@@ -1,6 +1,6 @@
 <?php use_helper('I18N') ?><?php //if($request->getMethod() != 'post') $is_postback = true; ?>
 
-<div style="">
+<div style="padding-top:10px">
 <form id="form1" action="<?php echo url_for('user/login') ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>  
 
     <?php echo $form->renderGlobalErrors() ?>
