@@ -43,7 +43,7 @@
 </tr>
 <?php
 //foreach ($updatedRec as $R){
-    print_r($updatedRec);
+    //print_r($updatedRec);
 for($i=0; $i<count($updatedRec)-1;$i++){
 ?>
 <tr><td><?php echo $updatedRec[$i];?></td></tr>
