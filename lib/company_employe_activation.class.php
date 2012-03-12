@@ -42,7 +42,7 @@ class CompanyEmployeActivation {
                             'email' => 'okh@zapna.com'
                             )));
         } catch (SoapFault $e) {
-            emailLib::sendErrorInTelinta("Error in Company Registration", "We have faced an issue in Company registration on telinta. this is the error for cusotmer with  id: " . $company->getId() . " and error is " . $e->faultstring . "  <br/> Please Investigate.");
+            emailLib::sendErrorInTelinta("Error in Company Registration", "We have faced an issue in Company registration on telinta. this is the error for cusotmer with  id: " . $company->getVatNo() . " and error is " . $e->faultstring . "  <br/> Please Investigate.");
             $pb->_logout();
             return false;
         }
