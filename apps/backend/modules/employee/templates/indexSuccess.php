@@ -35,7 +35,6 @@
       
       <th align="left"  id="sf_admin_list_th_name"><?php echo __('Agent') ?></th>
       <th align="left"  id="sf_admin_list_th_name"><?php echo __('Name') ?></th>
-      <th align="left"  id="sf_admin_list_th_name"><?php echo __('Password') ?></th>
       <th align="left"  id="sf_admin_list_th_name"><?php echo __('product') ?></th>
     
  <!--     <th align="left" id="sf_admin_list_th_name"><?php echo __('Mobile number') ?></th>
@@ -82,16 +81,6 @@
               ?></td>
       <td><?php echo htmlspecialchars($employee->getFirstName()); ?></td>
       
-      <td><?php // if(isset($companyval) && $companyval!=""){  ?>
-       <?php
-        $cp = new Criteria();
-        $cp->add(TelintaAccountsPeer::ACCOUNT_TITLE, 'testesvoip'.$employee->getCompanyId().$employee->getId());
-        $cp->addAnd(TelintaAccountsPeer::STATUS, 3);
-        $telintaAccount = TelintaAccountsPeer::doSelectOne($cp);
-        $account_Info = CompanyEmployeActivation::getAccountInfo($telintaAccount->getIAccount());
-        $password = $account_Info->account_info->password;
-        echo $password;
-      ?><?php //} ?></td>
       
       <td>
           <?php  $pid=$employee->getProductId();
