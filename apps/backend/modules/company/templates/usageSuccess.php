@@ -1,7 +1,7 @@
 <?php use_helper('I18N') ?>
 <style>
-    button#trigger_enddate{background-image:url(../../images/date.png) !important; margin:0px; padding:0px; border:none;}
-    button#trigger_startdate{background-image:url(../../images/date.png) !important; margin:0px; padding:0px; border:none;}
+    button#trigger_enddate{background-image:url(../../images/date.png) !important; margin:0px; padding:0px; border:none !important;width: 22px; height: 22px; vertical-align: middle !important}
+    button#trigger_startdate{background-image:url(../../images/date.png) !important; margin:0px; padding:0px; border:none !important;width: 22px; height: 22px; vertical-align: middle !important}
 </style>
 <?PHP
     $str=strlen($company->getId());
