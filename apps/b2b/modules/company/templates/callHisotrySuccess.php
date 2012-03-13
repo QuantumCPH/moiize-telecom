@@ -49,8 +49,9 @@
                 </fieldset>
 
                 <ul class="sf_admin_actions">
+                    <li><input type="submit" class="sf_admin_action_filter" value="filter" name="filter"></li>
                     <li><input type="button" class="sf_admin_action_filter" value="reset" name="reset" onclick="document.location.href='<?PHP echo sfConfig::get('app_main_url')."company/callHisotry";?>'"></li>
-                   <li><input type="submit" class="sf_admin_action_filter" value="filter" name="filter"></li>
+                   
                 </ul>
             </form>
         </div>
