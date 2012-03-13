@@ -366,7 +366,7 @@ jQuery('#sf_admin_edit_form').validate({
 
      rules: {
     "company[name]": "required",
-     "company[vat_no]": "required",
+     "company[vat_no]": "required digits",
      "company[password]": "required",
       "company[post_code]": "required digits",
        "company[address]": "required",

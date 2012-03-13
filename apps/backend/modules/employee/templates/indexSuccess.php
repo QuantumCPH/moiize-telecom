@@ -100,7 +100,7 @@
         $telintaGetBalance = 0;
 
         $ct = new Criteria();
-        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, 'testesvoip'.$companyval.$employee->getId());
+        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp").$companyval.$employee->getId());
         $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
 
@@ -122,7 +122,7 @@
         //$ct1->addAnd(TelintaAccountsPeer::STATUS, 3);
         //$telintaAccount1 = TelintaAccountsPeer::doSelectOne($ct1);
       ?>
-      <td><?php echo 'testesvoip'.$employee->getCompanyId().$employee->getId() ?></td>
+      <td><?php echo sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId() ?></td>
    
     <!--  <td align="center">  <?php //$appval=$employee->getIsAppRegistered();  if(isset($appval) && $appval==1){   ?> <img alt="Tick" src="/sf/sf_admin/images/tick.png">  <?php //} ?></td>
        <td><?php //echo $employee->getAppCode() ?></td>
