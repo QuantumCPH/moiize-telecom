@@ -2,7 +2,7 @@
   'id'        => 'sf_admin_edit_form',
   'name'      => 'sf_admin_edit_form',
   'multipart' => true,
-)) ?>
+)); echo "fatima". sfConfig::get("app_telinta_comp");echo "fatima1". sfConfig::get("app_telinta_emp");?>
 
 <?php echo object_input_hidden_tag($company, 'getId') ?>
 
@@ -31,7 +31,7 @@
   <?php $value = object_input_tag($company, 'getVatNo', array (
   'size' => 7,
   'control_name' => 'company[vat_no]',
-)); echo $value ? $value : '&nbsp;' ?><span id="msgbox" style="display:none"></span>
+)); echo $value ? $value : '&nbsp;' ?><span id="msgbox" style="display:none; margin-left: 140px"></span>
       <?php }else{
 
           $value = object_input_tag($company, 'getVatNo', array (
@@ -40,7 +40,7 @@
   'control_name' => 'company[vat_no]',
 )); echo $value ? $value : '&nbsp;' ;
 
-      }?><br>Prefix will be 'test' of any Vat No.
+      }?><!--<br>Prefix will be 'test' of any Vat No.-->
  
     </div>
 </div>

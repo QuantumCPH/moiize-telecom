@@ -20,6 +20,7 @@ class employeeActions extends sfActions {
         if (isset($companyid) && $companyid != '') {
             $c->addAnd(EmployeePeer::COMPANY_ID, $companyid);
         }
+        $c->addAnd(EmployeePeer::COMPANY_ID, $companyid);
         $this->employees = EmployeePeer::doSelect($c);
     }
 
@@ -58,7 +59,7 @@ class employeeActions extends sfActions {
     public function executeView($request) {
         $this->employee = EmployeePeer::retrieveByPK($request->getParameter('id'));
         $ct = new Criteria();
-        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, 'testesvoip'.$this->employee->getCompanyId(). $this->employee->getId());
+        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp").$this->employee->getCompanyId(). $this->employee->getId());
         $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
         $account_info = CompanyEmployeActivation::getAccountInfo($telintaAccount->getIAccount());
@@ -129,7 +130,7 @@ class employeeActions extends sfActions {
         $employee->setFirstName($request->getParameter('first_name'));
         $employee->setProductId($request->getParameter('productid'));
         $employee->save();
-        $voipAccount ='esvoip'.$this->companys->getId().$employee->getId();
+        $voipAccount =sfConfig::get("app_telinta_emp").$this->companys->getId().$employee->getId();
 
         CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys);
       
@@ -187,7 +188,7 @@ class employeeActions extends sfActions {
         $contrymobilenumber = $employees->getCountryMobileNumber();
 
         $ct = new Criteria();
-        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, 'testesvoip'.$employees->getCompanyId(). $employees->getId());
+        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp").$employees->getCompanyId(). $employees->getId());
         $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
         if (!CompanyEmployeActivation::terminateAccount($telintaAccount)) {
@@ -268,7 +269,7 @@ class employeeActions extends sfActions {
 
         $mobilenumber = $this->employee->getCountryMobileNumber();
         $ct = new Criteria();
-        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, 'testesvoip'.$this->employee->getCompanyId(). $this->employee->getId());
+        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp").$this->employee->getCompanyId(). $this->employee->getId());
         $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
         $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $fromdate, $todate);

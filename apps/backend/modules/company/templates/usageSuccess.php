@@ -5,7 +5,8 @@
 </style>
 <?PHP
     $str=strlen($company->getId());
-    $substr=$str+10;
+    $str1=strlen(sfConfig::get("app_telinta_emp"));
+    $substr=$str+$str1;
 ?>
 <div id="sf_admin_container">
     <div id="sf_admin_content">

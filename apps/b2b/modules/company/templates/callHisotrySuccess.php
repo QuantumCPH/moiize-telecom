@@ -4,7 +4,8 @@
 
  <?PHP
     $str=strlen($company->getId());
-    $substr=$str+10;
+    $str1=strlen(sfConfig::get("app_telinta_emp"));
+    $substr=$str+$str1;
 ?>
 
 <!--<a href=?iaccount=<?php //echo $account->getIAccount()."&iaccountTitle=".$account->getAccountTitle(); ?>>-->
