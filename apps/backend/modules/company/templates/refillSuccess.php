@@ -25,7 +25,7 @@
         </td>
     </tr>
         <tr>
-        <td style="padding: 5px;"><?php echo __('Refill:') ?></td>
+        <td style="padding: 5px;"><?php echo __('Refill') ?>(&euro;):</td>
         <td style="padding: 5px;">
             <input type="text" id="refill" name="refill" class="required digits" style="width:180px;">
             <span id="msgbox"></span><input type="hidden" value="" id="error" name="error">
