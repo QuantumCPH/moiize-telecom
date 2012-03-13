@@ -19,7 +19,7 @@ class CompanyEmployeActivation {
 
     private static $iParent = 74169;                //Company Resller ID on Telinta
     private static $currency = 'EUR';
-    private static $a_iProduct = 10468;
+    private static $a_iProduct = 10727;
     private static $CBProduct = '';
     private static $VoipProduct = '';
     private static $telintaSOAPUrl = "https://mybilling.telinta.com";
