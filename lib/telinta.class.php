@@ -20,7 +20,7 @@ class Telienta {
     private static $companyReseller = '';
     private static $currency = 'EUR';
     private static $AProduct = 'WLS2_CT';
-    private static $a_iProduct = 10186;
+    private static $a_iProduct = 10727;
     private static $CBProduct = '';
     private static $VoipProduct = '';
     private static $telintaSOAPUrl = "https://mybilling.telinta.com";
