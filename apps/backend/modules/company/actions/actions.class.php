@@ -162,7 +162,7 @@ class companyActions extends sfActions {
             $sm->add(SmsTextPeer::ID, 1);
             $smstext = SmsTextPeer::doSelectOne($sm);
             $sms_text = $smstext->getMessageText()." Your Login is: ".$company->getVatNo()." and Your Password is: ".$company->getPassword();
-            CARBORDFISH_SMS::Send($mobile, $sms_text);
+            CARBORDFISH_SMS::Send($mobile, $sms_text,"Moiize");
             
         } elseif (!$company->isNew()) {
             $company->save();
