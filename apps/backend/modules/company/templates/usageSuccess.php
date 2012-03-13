@@ -38,15 +38,15 @@
                     <div class="form-row">
                         <label><?php echo __('From');?>:</label>
                         <div class="content">
-                            <?php $date11= date('Y-m-d', strtotime('-15 days')); ?>
-                            <?php echo input_date_tag('startdate', $this->fromdate, 'rich=true') ?>
+                            
+                            <?php echo input_date_tag('startdate', $fromdate, 'rich=true') ?>
                         </div>
                     </div>
                     <div class="form-row">
                         <label><?php echo __('To');?>:</label>
                         <div class="content">
-                            <?php $date12= date('Y-m-d'); ?>
-                            <?php echo input_date_tag('enddate', $this->todate, 'rich=true') ?>
+                           
+                            <?php echo input_date_tag('enddate', $todate, 'rich=true') ?>
                         </div>
                     </div>
                     
