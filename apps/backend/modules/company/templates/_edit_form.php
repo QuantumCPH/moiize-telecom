@@ -34,11 +34,12 @@
 )); echo $value ? $value : '&nbsp;' ?><span id="msgbox" style="display:none; margin-left: 140px"></span>
       <?php }else{
 
-          $value = object_input_tag($company, 'getVatNo', array (
-  'size' => 7,
-  'readonly'=>'true',
-  'control_name' => 'company[vat_no]',
-)); echo $value ? $value : '&nbsp;' ;
+          $value = $company->getVatNo();//object_input_tag($company, 'getVatNo', array (
+  //'size' => 7,
+ // 'readonly'=>'true',
+ // 'control_name' => 'company[vat_no]',
+//));
+echo $value ? $value : '&nbsp;' ;
 
       }?><!--<br>Prefix will be 'test' of any Vat No.-->
  
