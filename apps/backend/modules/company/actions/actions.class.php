@@ -397,13 +397,13 @@ class companyActions extends sfActions {
      
        $this->company = CompanyPeer::retrieveByPK($request->getParameter('company_id'));
     if(isset($_POST['startdate']) && isset($_POST['enddate'])){
-       $fromdate=$request->getParameter('startdate');
-       $todate=$request->getParameter('enddate');
+       $this->fromdate=$request->getParameter('startdate');
+       $this->todate=$request->getParameter('enddate');
 }else{
         $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
-        $fromdate = date("Y-m-d", $tomorrow1);
+        $this->fromdate = date("Y-m-d", $tomorrow1);
         $tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
-        $todate = date("Y-m-d", $tomorrow);
+        $this->todate = date("Y-m-d", $tomorrow);
 
 }
        $this->iaccount = $request->getParameter('iaccount');
@@ -415,10 +415,10 @@ class companyActions extends sfActions {
 
             $this->iAccountTitle = $telintaAccount->getAccountTitle();
 
-            $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $fromdate, $todate);
+            $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $this->fromdate, $this->todate);
         } else {
 
-            $this->callHistory = CompanyEmployeActivation::callHistory($this->company, $fromdate, $todate);
+            $this->callHistory = CompanyEmployeActivation::callHistory($this->company, $this->fromdate, $this->todate);
         }
 
         $c = new Criteria();
