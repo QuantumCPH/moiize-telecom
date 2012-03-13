@@ -20,7 +20,7 @@ class Telienta {
     private static $companyReseller = '';
     private static $currency = 'EUR';
     private static $AProduct = 'WLS2_CT';
-    private static $a_iProduct = 10186;
+    private static $a_iProduct = 10727;
     private static $CBProduct = '';
     private static $VoipProduct = '';
     private static $telintaSOAPUrl = "https://mybilling.telinta.com";
@@ -215,6 +215,20 @@ class Telienta {
         }
         $pb->_logout();
         return true;
+    }
+
+    public static function getCustomerInfo($icustomer){
+        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
+        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
+        try {
+        $customerInfo = $pb->get_customer_info(array('i_customer'=>$icustomer));
+         } catch (SoapFault $e) {
+            emailLib::sendErrorInTelinta("Customer Info: " . $icustomer . " Error!", "We have faced an issue with Customer while fecthing info error for cusotmer with  iCustomer: " . $icustomer . " error is " . $e->faultstring . "  <br/> Please Investigate.");
+            $pb->_logout();
+            return false;
+        }
+        $pb->_logout();
+        return $customerInfo;
     }
 
 }
