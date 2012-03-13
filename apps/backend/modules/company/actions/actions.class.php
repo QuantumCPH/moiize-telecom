@@ -183,7 +183,7 @@ class companyActions extends sfActions {
             $this->company->setName($company['name']);
         }
         if (isset($company['vat_no'])) {
-            $this->company->setVatNo($company['vat_no']);
+            $this->company->setVatNo(sfConfig::get("app_telinta_comp").$company['vat_no']);
         }
         if (isset($company['password'])) {
             $this->company->setPassword($company['password']);
