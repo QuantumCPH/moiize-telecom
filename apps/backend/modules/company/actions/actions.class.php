@@ -415,10 +415,15 @@ class companyActions extends sfActions {
 
             $this->iAccountTitle = $telintaAccount->getAccountTitle();
 
-            $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $this->fromdate, $this->todate);
+            $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(),$this->fromdate." 00:00:00", $this->todate." 23:59:59");
         } else {
-
-            $this->callHistory = CompanyEmployeActivation::callHistory($this->company, $this->fromdate, $this->todate);
+	 $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
+        $this->fromdate = date("Y-m-d", $tomorrow1);
+        //$tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
+       $this->todate = date("Y-m-d");
+  	
+            $this->callHistory = CompanyEmployeActivation::callHistory($this->company,$this->fromdate." 00:00:00" , $this->todate." 23:59:59");
+		/*var_dump($this->callHistory);die;*/
         }
 
         $c = new Criteria();
