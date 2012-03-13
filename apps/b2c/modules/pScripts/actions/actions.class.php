@@ -3031,7 +3031,12 @@ if(($caltype!="IC") && ($caltype!="hc")){
   }
 
 
- 
+    public function executeCustomerInfo(sfWebRequest $request){
+        echo "<pre>";
+        var_dump(Telienta::getCustomerInfo($request->getParameter("icustomer")));
+        echo "</pre>";
+        return sfView::NONE;
+    }
 
 
 }
