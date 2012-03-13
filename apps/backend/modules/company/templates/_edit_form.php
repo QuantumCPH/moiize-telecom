@@ -2,7 +2,7 @@
   'id'        => 'sf_admin_edit_form',
   'name'      => 'sf_admin_edit_form',
   'multipart' => true,
-)); echo "fatima". sfConfig::get("app_telinta_comp");echo "fatima1". sfConfig::get("app_telinta_emp");?>
+)); //echo "fatima". sfConfig::get("app_telinta_comp");echo "fatima1". sfConfig::get("app_telinta_emp");?>
 
 <?php echo object_input_hidden_tag($company, 'getId') ?>
 
