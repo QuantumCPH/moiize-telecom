@@ -2,7 +2,7 @@
 <div id="sf_admin_container"><h1><?php echo __('PCO Lines') ?></h1></div>
 
 
-    <table width="950"  style="border: 1px;" class="tblAlign" cellspacing="0">
+    <table class="tblAlign" >
         <thead>
             <tr class="headings">
 
