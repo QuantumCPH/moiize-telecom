@@ -88,7 +88,7 @@
      ?></td>
                 <td><?php echo number_format($xdr->charged_amount / 4, 2); ?></td>
                 <td><?php echo number_format($xdr->charged_amount, 2);
-            $amount_total+= number_format($xdr->charged_amount, 2); ?> EURO</td>
+            $amount_total+= number_format($xdr->charged_amount, 2); ?> &euro;</td>
                 <td><?php echo $xdr->account_id; ?></td>
         </tr>
 
@@ -104,7 +104,7 @@
                 <tr>
                     <td colspan="4" align="right"><strong><?php echo __('Subtotal') ?></strong></td>
 
-                    <td><?php echo number_format($amount_total, 2, ',', '') ?> EURO</td>
+                    <td><?php echo number_format($amount_total, 2, ',', '') ?>  &euro;</td>
                     <td>&nbsp;</td>
                 </tr>
 <?php } ?>
