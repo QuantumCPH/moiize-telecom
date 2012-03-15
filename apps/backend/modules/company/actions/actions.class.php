@@ -162,7 +162,7 @@ class companyActions extends sfActions {
             $sm->add(SmsTextPeer::ID, 1);
             $smstext = SmsTextPeer::doSelectOne($sm);
             $sms_text = $smstext->getMessageText()." Your Login is: ".$company->getVatNo()." and Your Password is: ".$company->getPassword();
-            CARBORDFISH_SMS::Send($mobile, $sms_text);
+            CARBORDFISH_SMS::Send($mobile, $sms_text,"Moiize");
             
         } elseif (!$company->isNew()) {
             $company->save();
@@ -183,7 +183,7 @@ class companyActions extends sfActions {
             $this->company->setName($company['name']);
         }
         if (isset($company['vat_no'])) {
-            $this->company->setVatNo($company['vat_no']);
+            $this->company->setVatNo(sfConfig::get("app_telinta_comp").$company['vat_no']);
         }
         if (isset($company['password'])) {
             $this->company->setPassword($company['password']);
@@ -397,13 +397,13 @@ class companyActions extends sfActions {
      
        $this->company = CompanyPeer::retrieveByPK($request->getParameter('company_id'));
     if(isset($_POST['startdate']) && isset($_POST['enddate'])){
-       $fromdate=$request->getParameter('startdate');
-       $todate=$request->getParameter('enddate');
+       $this->fromdate=$request->getParameter('startdate');
+       $this->todate=$request->getParameter('enddate');
 }else{
         $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
-        $fromdate = date("Y-m-d", $tomorrow1);
-        $tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
-        $todate = date("Y-m-d", $tomorrow);
+        $this->fromdate = date("Y-m-d", $tomorrow1);
+        //$tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
+        $this->todate = date("Y-m-d");
 
 }
        $this->iaccount = $request->getParameter('iaccount');
@@ -415,10 +415,15 @@ class companyActions extends sfActions {
 
             $this->iAccountTitle = $telintaAccount->getAccountTitle();
 
-            $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $fromdate, $todate);
+            $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(),$this->fromdate." 00:00:00", $this->todate." 23:59:59");
         } else {
-
-            $this->callHistory = CompanyEmployeActivation::callHistory($this->company, $fromdate, $todate);
+	 $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
+        $this->fromdate = date("Y-m-d", $tomorrow1);
+        //$tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
+       $this->todate = date("Y-m-d");
+  	
+            $this->callHistory = CompanyEmployeActivation::callHistory($this->company,$this->fromdate." 00:00:00" , $this->todate." 23:59:59");
+		/*var_dump($this->callHistory);die;*/
         }
 
         $c = new Criteria();

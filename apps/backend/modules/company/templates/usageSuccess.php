@@ -5,7 +5,8 @@
 </style>
 <?PHP
     $str=strlen($company->getId());
-    $substr=$str+10;
+    $str1=strlen(sfConfig::get("app_telinta_emp"));
+    $substr=$str+$str1;
 ?>
 <div id="sf_admin_container">
     <div id="sf_admin_content">
@@ -37,15 +38,15 @@
                     <div class="form-row">
                         <label><?php echo __('From');?>:</label>
                         <div class="content">
-                            <?php $date11= date('Y-m-d', strtotime('-15 days')); ?>
-                            <?php echo input_date_tag('startdate', $date11, 'rich=true') ?>
+                            
+                            <?php echo input_date_tag('startdate', $fromdate, 'rich=true') ?>
                         </div>
                     </div>
                     <div class="form-row">
                         <label><?php echo __('To');?>:</label>
                         <div class="content">
-                            <?php $date12= date('Y-m-d'); ?>
-                            <?php echo input_date_tag('enddate', $date12, 'rich=true') ?>
+                           
+                            <?php echo input_date_tag('enddate', $todate, 'rich=true') ?>
                         </div>
                     </div>
                     
@@ -68,7 +69,7 @@
             <th  width="20%"  align="left"><?php echo __('Phone Number') ?></th>
             <th width="10%"   align="left"><?php echo __('Duration') ?></th>
             <th  width="10%"  align="left"><?php echo __('VAT') ?></th>
-            <th width="20%"   align="left"><?php echo __('Cost (Incl. VAT)') ?></th>
+            <th width="20%"   align="left"><?php echo __('Cost') ?></th>
             <th  width="20%"   align="left"><?php echo __('Account Id') ?></th>
         </tr>
         <?php
@@ -83,7 +84,8 @@
             <tr>
                 <td><?php echo $xdr->connect_time; ?></td>
                 <td><?php echo $xdr->CLD; ?></td>
-                <td><?php echo number_format($xdr->charged_quantity / 60, 2); ?></td>
+                <td><?php  echo  date('i:s',$xdr->charged_quantity);
+     ?></td>
                 <td><?php echo number_format($xdr->charged_amount / 4, 2); ?></td>
                 <td><?php echo number_format($xdr->charged_amount, 2);
             $amount_total+= number_format($xdr->charged_amount, 2); ?> &euro;</td>
@@ -102,7 +104,7 @@
                 <tr>
                     <td colspan="4" align="right"><strong><?php echo __('Subtotal') ?></strong></td>
 
-                    <td><?php echo number_format($amount_total, 2, ',', '') ?> EURO</td>
+                    <td><?php echo number_format($amount_total, 2, ',', '') ?>  &euro;</td>
                     <td>&nbsp;</td>
                 </tr>
 <?php } ?>

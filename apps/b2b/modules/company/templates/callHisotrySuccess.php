@@ -4,7 +4,8 @@
 
  <?PHP
     $str=strlen($company->getId());
-    $substr=$str+10;
+    $str1=strlen(sfConfig::get("app_telinta_emp"));
+    $substr=$str+$str1;
 ?>
 
 <!--<a href=?iaccount=<?php //echo $account->getIAccount()."&iaccountTitle=".$account->getAccountTitle(); ?>>-->
@@ -33,23 +34,24 @@
                     <div class="form-row">
                         <label><?php echo __('From');?>:</label>
                         <div class="content">
-                            <?php $date11= date('Y-m-d', strtotime('-15 days')); ?>
-                            <?php echo input_date_tag('startdate', $date11, 'rich=true') ?>
+                           
+                            <?php echo input_date_tag('startdate', $fromdate, 'rich=true') ?>
                         </div>
                     </div>
                     <div class="form-row">
                         <label><?php echo __('To');?>:</label>
                         <div class="content">
-                            <?php $date12= date('Y-m-d'); ?>
-                            <?php echo input_date_tag('enddate', $date12, 'rich=true') ?>
+                          
+                            <?php echo input_date_tag('enddate', $todate, 'rich=true') ?>
                         </div>
                     </div>
 
                 </fieldset>
 
                 <ul class="sf_admin_actions">
-                    <li><input type="button" class="sf_admin_action_filter" value="reset" name="reset" onclick="document.location.href='<?PHP echo sfConfig::get('app_backend_url')."company/usage?company_id=". $company->getId();?>'"></li>
-                   <li><input type="submit" class="sf_admin_action_filter" value="filter" name="filter"></li>
+                    <li><input type="submit" class="sf_admin_action_filter" value="filter" name="filter"></li>
+                    <li><input type="button" class="sf_admin_action_filter" value="reset" name="reset" onclick="document.location.href='<?PHP echo sfConfig::get('app_main_url')."company/callHisotry";?>'"></li>
+                   
                 </ul>
             </form>
         </div>
@@ -65,7 +67,7 @@
             <th  width="16%"  align="left"><?php echo __('Phone Number') ?></th>
             <th width="8%"   align="left"><?php echo __('Duration') ?></th>
             <th  width="8%"  align="left"><?php echo __('VAT') ?></th>
-            <th width="13%"   align="left"><?php echo __('Cost (Incl. VAT)') ?></th>
+            <th width="13%"   align="left"><?php echo __('Cost') ?></th>
             <th  width="25%"   align="left"><?php echo __('Account ID') ?></th>
       </tr>
         <?php
@@ -80,10 +82,10 @@
             <tr>
                 <td><?php echo $xdr->connect_time; ?></td>
                 <td><?php echo $xdr->CLD; ?></td>
-                <td><?php echo number_format($xdr->charged_quantity / 60, 2); ?></td>
+                <td><?php  echo  date('i:s',$xdr->charged_quantity); ?></td>
                 <td><?php echo number_format($xdr->charged_amount / 4, 2); ?></td>
                 <td><?php echo number_format($xdr->charged_amount, 2);
-            $amount_total+= number_format($xdr->charged_amount, 2); ?> &euro;</td>
+            $amount_total+= number_format($xdr->charged_amount, 2); ?>  &euro;</td>
             
             <td><?php echo $xdr->account_id; ?></td>
         </tr>
@@ -100,7 +102,7 @@
                 <tr>
                     <td colspan="4" align="right"><strong><?php echo __('Subtotal') ?></strong></td>
 
-                    <td><?php echo number_format($amount_total, 2, ',', '') ?> &euro</td>
+                    <td><?php echo number_format($amount_total, 2, ',', '') ?>  &euro;</td>
                     <td>&nbsp;</td>
                 </tr>
 <?php } ?>
