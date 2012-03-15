@@ -1,7 +1,7 @@
 <h1>Available Balance: <?php echo $balance ?> &euro;</h1>
 <div id="sf_admin_container"><h1><?php echo __('PCO Lines') ?></h1></div>
 
-<div class="borderDiv">
+
     <table width="950"  style="border: 1px;" class="tblAlign" cellspacing="0">
         <thead>
             <tr class="headings">
@@ -24,7 +24,7 @@
  $incrment++;
 
         ?>
-            <tr <?php echo $class; ?>>
+            <tr <?php echo $class ?>>
                 <td><?php echo $employee->getFirstName(); ?></td>
                 <td><?php
             $ct = new Criteria();
@@ -41,7 +41,7 @@
         </tr>
         <?php } ?>
         </table>
-    </div>
+
     <div id="sf_admin_container"><h1><?php echo __('News Box') ?></h1></div>
 
     <div class="borderDiv">
