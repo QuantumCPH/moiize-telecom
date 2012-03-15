@@ -17,7 +17,7 @@
                 <td><?php echo $employee->getFirstName(); ?></td>
                 <td><?php
             $ct = new Criteria();
-            $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp") . $companyval . $employee->getId());
+            $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp") . $company->getId() . $employee->getId());
             $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
             $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
 
