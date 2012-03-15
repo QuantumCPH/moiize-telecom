@@ -2,18 +2,29 @@
 <div id="sf_admin_container"><h1><?php echo __('PCO Lines') ?></h1></div>
 
 <div class="borderDiv">
-    <table width="950"  style="border: 1px;" class="sf_admin_list" cellspacing="0">
+    <table width="950"  style="border: 1px;" class="tblAlign" cellspacing="0">
         <thead>
-            <tr>
+            <tr class="headings">
 
                 <th align="left"  id="sf_admin_list_th_name"><?php echo __('Name') ?></th>
                 <th align="left"  id="sf_admin_list_th_name"><?php echo __('Balance Consumed') ?></th>
                 <th align="left"  id="sf_admin_list_th_name"><?php echo __('Created at') ?></th>
             </tr>
         </thead>
-        <?php foreach ($employees as $employee) {
+        <?php
+        $incrment = 1;
+        foreach ($employees as $employee) {
+             if($incrment%2==0){
+                  $class= 'class="even"';
+                  
+                  }else{
+                    $class= 'class="odd"';
+                     
+                      }
+ $incrment++;
+
         ?>
-            <tr>
+            <tr <?php echo $class; ?>>
                 <td><?php echo $employee->getFirstName(); ?></td>
                 <td><?php
             $ct = new Criteria();
