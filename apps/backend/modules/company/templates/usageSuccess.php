@@ -84,7 +84,7 @@
             <tr>
                 <td><?php echo $xdr->connect_time; ?></td>
                 <td><?php echo $xdr->CLD; ?></td>
-                <td><?php  echo  date('H:i:s',$xdr->charged_quantity);
+                <td><?php  echo  date('i:s',$xdr->charged_quantity);
      ?></td>
                 <td><?php echo number_format($xdr->charged_amount / 4, 2); ?></td>
                 <td><?php echo number_format($xdr->charged_amount, 2);
