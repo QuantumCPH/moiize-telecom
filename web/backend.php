@@ -1,5 +1,5 @@
 <?php
-if($_SERVER['HTTP_HOST']!="localhost" && ($_SERVER['HTTP_HOST']=="moiize.com" || $_SERVER['HTTP_HOST']=="www.moiize.com") && $_SERVER['REQUEST_URI']=="/backend.php" ){
+if(($_SERVER['HTTP_HOST']=="moiize.com" || $_SERVER['HTTP_HOST']=="www.moiize.com") && $_SERVER['REQUEST_URI']=="/backend.php" ){
 Header( "HTTP/1.1 301 Moved Permanently" );
 Header( "Location: http://admin.moiize.com" );
 }
