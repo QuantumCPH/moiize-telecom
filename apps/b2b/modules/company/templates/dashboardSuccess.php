@@ -7,7 +7,7 @@
             <tr>
 
                 <th align="left"  id="sf_admin_list_th_name"><?php echo __('Name') ?></th>
-                <th align="left"  id="sf_admin_list_th_name"><?php echo __('Balance') ?></th>
+                <th align="left"  id="sf_admin_list_th_name"><?php echo __('Balance Consumed') ?></th>
                 <th align="left"  id="sf_admin_list_th_name"><?php echo __('Created at') ?></th>
             </tr>
         </thead>
