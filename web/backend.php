@@ -5,6 +5,7 @@ if(($_SERVER['HTTP_HOST']=="moiize.com" || $_SERVER['HTTP_HOST']=="www.moiize.co
 
 Header( "HTTP/1.1 301 Moved Permanently" );
 Header( "Location: http://admin.moiize.com" );
+die("baran");
 exit;
 }
 
