@@ -39,7 +39,7 @@ class CompanyEmployeActivation {
                             'i_customer_type' => 1,
                             'opening_balance' => 0,
                             'credit_limit' => null,
-                            'dialing_rules' => array('ip' => '00'),
+                            'dialing_rules' => array('ip' => '00',"cc"=>"34"),
                             'email' => 'okh@zapna.com'
                             )));
         } catch (SoapFault $e) {
