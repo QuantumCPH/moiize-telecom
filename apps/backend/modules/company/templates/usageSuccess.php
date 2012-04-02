@@ -76,8 +76,7 @@
         $callRecords = 0;
 
         $amount_total = 0;
-var_dump($callHistory->xdr_list);
-die;
+ 
        foreach ($callHistory->xdr_list as $xdr) {
         ?>
 
@@ -87,7 +86,7 @@ die;
                 <td><?php echo $xdr->CLD; ?></td>
                 <td><?php  echo  date('i:s',$xdr->charged_quantity);
      ?></td>
-                <td><?php echo number_format($xdr->charged_amount / 4, 2); ?></td>
+                <td><?php echo $xdr->country; ?></td>
                 <td><?php echo number_format($xdr->charged_amount, 2);
             $amount_total+= number_format($xdr->charged_amount, 2); ?> &euro;</td>
                 <td><?php echo $xdr->account_id; ?></td>
