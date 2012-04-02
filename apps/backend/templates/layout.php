@@ -217,6 +217,9 @@
                     <?php echo link_to(__('product orders'), 'product_order/index') ?>
                 </div>
             </li>
+          <?php    if($sf_user->getAttribute('role_id', '', 'backendsession')==4){  ?>
+
+
             <li>
                 <a href="#"
                 onmouseover="mopen('m4')"
@@ -234,6 +237,8 @@
 
                 </div>
             </li>
+
+          <?php } ?>
 <li><a href="#"
                 onmouseover="mopen('m1')"
                 onmouseout="mclosetime()"
