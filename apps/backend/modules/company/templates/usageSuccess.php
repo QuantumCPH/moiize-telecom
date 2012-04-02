@@ -76,7 +76,8 @@
         $callRecords = 0;
 
         $amount_total = 0;
-var_dump($xdr);
+var_dump($callHistory->xdr_list);
+die;
        foreach ($callHistory->xdr_list as $xdr) {
         ?>
 
