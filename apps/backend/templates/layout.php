@@ -58,7 +58,9 @@
   </head>
   <body>
     <?php 
-    
+
+
+
       $modulName = $sf_context->getModuleName();
    
      $actionName = $sf_context->getActionName();
@@ -107,12 +109,14 @@
                       }else{
                          echo link_to(__('Payment History'), 'company/paymenthistory'); 
                       }?>
-                    <?php 
+                    <?php
+                     if($sf_user->getAttribute('role_id', '', 'backendsession')==4){
                       if($actionName=='refill'){
                          echo link_to(__('Refill'), 'company/refill', array('class'=>'subSelect'));    
                       }else{
                           echo link_to(__('Refill'), 'company/refill');                          
-                      } ?>
+                      }
+                     }?>
                 </div>
             </li>
           <!--   <li>
