@@ -64,13 +64,13 @@
 
 
         <tr class="headings">
-            <th width="20%"   align="left"><?php echo __('Date & Time') ?></th>
+            <th width="15%"   align="left"><?php echo __('Date & Time') ?></th>
 
-            <th  width="20%"  align="left"><?php echo __('Phone Number') ?></th>
+            <th  width="15%"  align="left"><?php echo __('Phone Number') ?></th>
             <th width="10%"   align="left"><?php echo __('Duration') ?></th>
-            <th  width="10%"  align="left"><?php echo __('Country') ?></th>
-            <th width="20%"   align="left"><?php echo __('Cost') ?></th>
-            <th  width="20%"   align="left"><?php echo __('Account Id') ?></th>
+            <th  width="25%"  align="left"><?php echo __('Country') ?></th>
+            <th width="10%"   align="left"><?php echo __('Cost') ?></th>
+            <th  width="15%"   align="left"><?php echo __('Account Id') ?></th>
         </tr>
         <?php
         $callRecords = 0;
