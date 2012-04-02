@@ -103,12 +103,13 @@
                           echo link_to(__('PCO Lines'), 'employee/index');
                       }
                     ?>                    
-                    <?php 
+                    <?php
+                     if($sf_user->getAttribute('role_id', '', 'backendsession')==4){
                       if($actionName=='paymenthistory' && $modulName=="company"){
                          echo link_to(__('Payment History'), 'company/paymenthistory', array('class'=>'subSelect'));
                       }else{
                          echo link_to(__('Payment History'), 'company/paymenthistory'); 
-                      }?>
+                      } } ?>
                     <?php
                      if($sf_user->getAttribute('role_id', '', 'backendsession')==4){
                       if($actionName=='refill'){
