@@ -68,9 +68,9 @@
 
             <th  width="15%"  align="left"><?php echo __('Phone Number') ?></th>
             <th width="10%"   align="left"><?php echo __('Duration') ?></th>
-            <th  width="25%"  align="left"><?php echo __('Country') ?></th>
+            <th  width="30%"  align="left"><?php echo __('Country') ?></th>
             <th width="10%"   align="left"><?php echo __('Cost') ?></th>
-            <th  width="15%"   align="left"><?php echo __('Account Id') ?></th>
+            <th  width="10%"   align="left"><?php echo __('Account Id') ?></th>
         </tr>
         <?php
         $callRecords = 0;
@@ -84,7 +84,7 @@
             <tr>
                 <td><?php echo $xdr->connect_time; ?></td>
                 <td><?php echo $xdr->CLD; ?></td>
-                <td><?php  echo  date('i:s',$xdr->charged_quantity);
+                <td><?php  echo  date('i:s',$xdr->charged_quantity); echo "--".$xdr->charged_quantity;
      ?></td>
                 <td><?php echo $xdr->country; ?></td>
                 <td><?php echo number_format($xdr->charged_amount, 2);
