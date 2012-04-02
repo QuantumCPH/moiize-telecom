@@ -26,7 +26,25 @@
             <tr>
                 <td><?php echo $xdr->connect_time; ?></td>
                 <td><?php echo $xdr->CLD; ?></td>
-                <td><?php echo number_format($xdr->charged_quantity / 60, 2); ?></td>
+                <td><?php             $callval=$xdr->charged_quantity;
+if($callval>3600){
+
+ $hval=number_format($callval/3600);
+
+  $rval=$callval%3600;
+
+$minute=date('i',$rval);
+  $second=date('s',$rval);
+
+  $minute=$minute+$hval*60;
+
+  echo $minute.":".$second;
+}else{
+
+
+echo  date('i:s',$callval);
+
+} ?></td>
                 <td><?php echo $xdr->country; ?></td>
                 <td><?php echo number_format($xdr->charged_amount, 2);
             $amount_total+= number_format($xdr->charged_amount, 2); ?> &euro;</td>
