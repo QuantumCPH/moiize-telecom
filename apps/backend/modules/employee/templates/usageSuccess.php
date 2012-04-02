@@ -9,7 +9,7 @@
             <th width="20%"   align="left"><?php echo __('Date & Time') ?></th>
             <th  width="20%"  align="left"><?php echo __('Phone Number') ?></th>
             <th width="10%"   align="left"><?php echo __('Duration') ?></th>
-            <th  width="10%"  align="left"><?php echo __('VAT') ?></th>
+            <th  width="10%"  align="left"><?php echo __('Country') ?></th>
             <th width="20%"   align="left"><?php echo __('Cost (Incl. VAT)') ?></th>
             <th  width="20%"   align="left"><?php echo __('Samtalstyp') ?></th>
         </tr>
@@ -27,7 +27,7 @@
                 <td><?php echo $xdr->connect_time; ?></td>
                 <td><?php echo $xdr->CLD; ?></td>
                 <td><?php echo number_format($xdr->charged_quantity / 60, 2); ?></td>
-                <td><?php echo number_format($xdr->charged_amount / 4, 2); ?></td>
+                <td><?php echo $xdr->country; ?></td>
                 <td><?php echo number_format($xdr->charged_amount, 2);
             $amount_total+= number_format($xdr->charged_amount, 2); ?> &euro;</td>
                 <td><?php echo $xdr->account_id; ?></td>
