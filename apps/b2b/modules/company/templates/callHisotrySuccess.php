@@ -62,14 +62,14 @@
 
 
         <tr class="headings">
-            <th width="16%"   align="left"><?php echo __('Date & Time') ?></th>
+            <th width="10%"   align="left"><?php echo __('Date & Time') ?></th>
 
-            <th  width="16%"  align="left"><?php echo __('Phone Number') ?></th>
-            <th width="8%"   align="left"><?php echo __('Duration') ?></th>
-            <th  width="8%"  align="left"><?php echo __('Country') ?></th>
+            <th  width="10%"  align="left"><?php echo __('Phone Number') ?></th>
+            <th width="10%"   align="left"><?php echo __('Duration') ?></th>
+            <th  width="25%"  align="left"><?php echo __('Country') ?></th>
             <th  width="10%"  align="left"><?php echo __('Description') ?></th>
-            <th width="13%"   align="left"><?php echo __('Cost') ?></th>
-            <th  width="25%"   align="left"><?php echo __('Account ID') ?></th>
+            <th width="10%"   align="left"><?php echo __('Cost') ?></th>
+            <th  width="10%"   align="left"><?php echo __('Account ID') ?></th>
       </tr>
         <?php
         $callRecords = 0;
@@ -118,11 +118,11 @@ echo  date('i:s',$callval);
         ?>        <?php if ($callRecords == 0) {
  ?>
                 <tr>
-                    <td colspan="6"><p><?php echo __('There are currently no call records to show.') ?></p></td>
+                    <td colspan="7"><p><?php echo __('There are currently no call records to show.') ?></p></td>
                 </tr>
 <?php } else { ?>
                 <tr>
-                    <td colspan="4" align="right"><strong><?php echo __('Subtotal') ?></strong></td>
+                    <td colspan="5" align="right"><strong><?php echo __('Subtotal') ?></strong></td>
 
                     <td><?php echo number_format($amount_total, 2, ',', '') ?>  &euro;</td>
                     <td>&nbsp;</td>
