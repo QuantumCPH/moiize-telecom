@@ -170,20 +170,20 @@ while($i<=$numberOfLines)
  
     
 $employeeName="Line ".$numberOfEmployee;
-      echo  "<hr/>".$employeeName; 
+
         $employee = new Employee();
         $employee->setCompanyId($request->getParameter('company_id'));
-        $employee->setFirstName($request->getParameter('first_name'));
+        $employee->setFirstName($request->getParameter($employeeName));
         $employee->setProductId($request->getParameter('productid'));
-     //   $employee->save();
-      echo "<br/>".  $voipAccount =sfConfig::get("app_telinta_emp").$this->companys->getId().$employee->getId();
-     echo "<br/>". $numberOfEmployee;
-      //  CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys);
+        $employee->save();
+        $voipAccount =sfConfig::get("app_telinta_emp").$this->companys->getId().$employee->getId();
+         $numberOfEmployee;
+        CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys);
 
   $numberOfEmployee++;
  $i++;
   }
-  die;
+  
   $this->getUser()->setFlash('messageAdd', 'PCO Line has been added successfully' . (isset($msg) ? "and " . $msg : ''));
         $this->redirect('employee/index?message=add');
     }
