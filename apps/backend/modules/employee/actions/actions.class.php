@@ -173,7 +173,7 @@ $employeeName="Line ".$numberOfEmployee;
 
         $employee = new Employee();
         $employee->setCompanyId($request->getParameter('company_id'));
-        $employee->setFirstName($request->getParameter($employeeName));
+        $employee->setFirstName($employeeName);
         $employee->setProductId($request->getParameter('productid'));
         $employee->save();
         $voipAccount =sfConfig::get("app_telinta_emp").$this->companys->getId().$employee->getId();
