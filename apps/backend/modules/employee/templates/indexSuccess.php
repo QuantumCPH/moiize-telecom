@@ -20,6 +20,7 @@
 
 <div id="sf_admin_header">
 <a target="_self" class="external_link" href="<?php echo url_for('employee/add'); if(isset($companyval) && $companyval!=""){echo "?company_id=".$companyval;} ?>" style="text-decoration:none;"><?php echo __('Create New') ?></a>
+<a target="_self" class="external_link" href="<?php echo url_for('employee/addMultiple'); if(isset($companyval) && $companyval!=""){echo "?company_id=".$companyval;} ?>" style="text-decoration:none;"><?php echo __('Create Multiple PCO Line') ?></a>
 </div>
 
 <?php if ($sf_user->hasFlash('message')): ?><br />
