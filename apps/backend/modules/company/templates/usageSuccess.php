@@ -68,8 +68,8 @@
 
             <th  width="10%"  align="left"><?php echo __('Phone Number') ?></th>
             <th width="10%"   align="left"><?php echo __('Duration') ?></th>
-            <th  width="25%"  align="left"><?php echo __('Country') ?></th>
-            <th  width="10%"  align="left"><?php echo __('Description') ?></th>
+            <th  width="20%"  align="left"><?php echo __('Country') ?></th>
+            <th  width="15%"  align="left"><?php echo __('Description') ?></th>
             <th width="10%"   align="left"><?php echo __('Cost') ?></th>
             <th  width="10%"   align="left"><?php echo __('Account Id') ?></th>
         </tr>
@@ -77,7 +77,7 @@
         $callRecords = 0;
 
         $amount_total = 0;
-        var_dump($callHistory->xdr_list);
+       
        foreach ($callHistory->xdr_list as $xdr) {
         ?>
 
@@ -106,6 +106,8 @@ echo  date('i:s',$callval);
 
 }                           ?></td>
                 <td><?php echo $xdr->country; ?></td>
+                  <td><?php echo $xdr->description;  ?></td>
+
                 <td><?php echo number_format($xdr->charged_amount, 2);
             $amount_total+= number_format($xdr->charged_amount, 2); ?> &euro;</td>
                 <td><?php echo $xdr->account_id; ?></td>

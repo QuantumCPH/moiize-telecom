@@ -6,12 +6,13 @@
     <h1><?php echo __('Call History') ?></h1>
     <table width="100%" cellspacing="0" cellpadding="2" class="tblAlign" border='0'>
         <tr class="headings">
-            <th width="20%"   align="left"><?php echo __('Date & Time') ?></th>
-            <th  width="20%"  align="left"><?php echo __('Phone Number') ?></th>
+            <th width="15%"   align="left"><?php echo __('Date & Time') ?></th>
+            <th  width="10%"  align="left"><?php echo __('Phone Number') ?></th>
             <th width="10%"   align="left"><?php echo __('Duration') ?></th>
-            <th  width="10%"  align="left"><?php echo __('Country') ?></th>
-            <th width="20%"   align="left"><?php echo __('Cost (Incl. VAT)') ?></th>
-            <th  width="20%"   align="left"><?php echo __('Samtalstyp') ?></th>
+            <th  width="20%"  align="left"><?php echo __('Country') ?></th>
+               <th  width="15%"  align="left"><?php echo __('Description') ?></th>
+            <th width="10%"   align="left"><?php echo __('Cost (Incl. VAT)') ?></th>
+            <th  width="10%"   align="left"><?php echo __('Samtalstyp') ?></th>
         </tr>
         <?php
         $callRecords = 0;
@@ -46,6 +47,7 @@ echo  date('i:s',$callval);
 
 } ?></td>
                 <td><?php echo $xdr->country; ?></td>
+                   <td><?php echo $xdr->description;  ?></td>
                 <td><?php echo number_format($xdr->charged_amount, 2);
             $amount_total+= number_format($xdr->charged_amount, 2); ?> &euro;</td>
                 <td><?php echo $xdr->account_id; ?></td>
