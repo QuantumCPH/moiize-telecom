@@ -112,6 +112,17 @@ class employeeActions extends sfActions {
         $pr->add(ProductPeer::ID, 1);
         $this->products = ProductPeer::doSelect($pr);
     }
+      public function executeAddMultiple($request) {
+
+        $this->companyval = $request->getParameter('company_id');
+
+        $c = new Criteria();
+        $this->companys = CompanyPeer::doSelect($c);
+
+        $pr = new Criteria();
+        $pr->add(ProductPeer::ID, 1);
+        $this->products = ProductPeer::doSelect($pr);
+    }
 
     public function executeSaveEmployee($request) {
 
