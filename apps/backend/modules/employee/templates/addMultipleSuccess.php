@@ -16,7 +16,7 @@
         <tr>
         <td style="padding: 5px;"><?php echo  __('Number Of PCO Line') ?></td>
         <td style="padding: 5px;">
-            <select name="company_id" id="employee_company_id"    class="required"  style="width:190px;">
+            <select name="numberOfLines" id="numberOfLines"    class="required"  style="width:190px;">
                 <option value="2"> 2</option>
                 <option value="3"> 3</option>
                 <option value="4">4</option>

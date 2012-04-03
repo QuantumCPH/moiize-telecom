@@ -148,6 +148,48 @@ class employeeActions extends sfActions {
         $this->redirect('employee/index?message=add');
     }
 
+
+
+    public function executeSaveMultipleEmployee($request) {
+
+    $numberOfEmployee=0;
+        //$contrymobilenumber = $request->getParameter('country_code') . $request->getParameter('mobile_number');
+        //$employeMobileNumber=$contrymobilenumber;
+        $numberOfLines=$request->getParameter('numberOfLines');
+            $c = new Criteria();
+        $c->addAnd(CompanyPeer::ID, $request->getParameter('company_id'));
+        $this->companys = CompanyPeer::doSelectOne($c);
+          $ec = new Criteria();
+        $ec->addAnd(EmployeePeer::COMPANY_ID, $request->getParameter('company_id'));
+        $numberOfEmployee = EmployeePeer::doCount($ec);
+        $numberOfEmployee++;
+        $i=1;
+while($i<=$numberOfLines)
+  {
+
+ 
+    
+$employeeName="Line ".$numberOfEmployee;
+      echo  "<hr/>".$employeeName; 
+        $employee = new Employee();
+        $employee->setCompanyId($request->getParameter('company_id'));
+        $employee->setFirstName($request->getParameter('first_name'));
+        $employee->setProductId($request->getParameter('productid'));
+     //   $employee->save();
+      echo "<br/>".  $voipAccount =sfConfig::get("app_telinta_emp").$this->companys->getId().$employee->getId();
+     echo "<br/>". $numberOfEmployee;
+      //  CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys);
+
+  $numberOfEmployee++;
+ $i++;
+  }
+  die;
+  $this->getUser()->setFlash('messageAdd', 'PCO Line has been added successfully' . (isset($msg) ? "and " . $msg : ''));
+        $this->redirect('employee/index?message=add');
+    }
+
+
+
     public function executeUpdateEmployee(sfWebRequest $request) {
         $c = new Criteria();
 
