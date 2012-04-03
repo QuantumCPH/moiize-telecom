@@ -19,7 +19,7 @@
         $callRecordscb = 0;
         $callRecordsrese = 0;
         $amount_total = 0;
-        var_dump($callHistory->xdr_list);
+      
         foreach ($callHistory->xdr_list as $xdr) {
         ?>
 
