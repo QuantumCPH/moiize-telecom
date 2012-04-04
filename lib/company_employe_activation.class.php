@@ -132,7 +132,7 @@ class CompanyEmployeActivation {
                     ));
             $pb->_logout();
         } catch (SoapFault $e) {//" . $company->getId() . "
-            emailLib::sendErrorInTelinta("Employee Account ifo Fetching:  Error!", "We have faced an issue in Employee Account Info Fetch on telinta. this is the error for cusotmer with  account: " . $telintaAccount . " error is " . $e->faultstring . "  <br/> Please Investigate.");
+            emailLib::sendErrorInTelinta("Employee Account info Fetching:  Error!", "We have faced an issue in Employee Account Info Fetch on telinta. this is the error for Employee with  account: " . $iAccount . " error is " . $e->faultstring . "  <br/> Please Investigate.");
             $pb->_logout();
             return false;
         }
