@@ -325,11 +325,11 @@
                         }
                         ?>
                         <?php 
-//                        if($actionName=='list' && $modulName=="usage_alert"){
-//                          echo link_to(__('Usage Alert'), 'usage_alert/index',array('class'=>'subSelect'));
-//                        }else{
-//                          echo link_to(__('Usage Alert'), 'usage_alert/index');
-//                        }
+                        if($actionName=='list' && $modulName=="promotionRates"){
+                          echo link_to(__('Promotion Rates'), 'promotionRates/index',array('class'=>'subSelect'));
+                        }else{
+                          echo link_to(__('Promotion Rates'), 'promotionRates/index');
+                        }
                         ?>
                         <?php 
 //                        if($actionName=='list' && $modulName=="usage_alert_sender"){

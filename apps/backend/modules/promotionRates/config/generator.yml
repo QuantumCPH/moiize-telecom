@@ -1,0 +1,21 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      PromotionRates
+    theme:            default
+    css:              /sf/sf_admin/css/admin_main.css
+    edit:
+      title: Create/Promotion Rates
+      display: [network_name, network_rate, agent_id]
+      fields:
+        network_name: {name: Destination Name}
+        network_rate: {name: Destination Rate(EURO)}
+    list:
+      title: 'Promotion Rates'
+      display: [id, network_name, network_rate, company, created_at]
+      fields:
+        network_name: {name: Destination Name}
+        network_rate: {name: Destination Rate(EURO)}
+      object_actions:
+        _delete: ~
+        _edit: ~
