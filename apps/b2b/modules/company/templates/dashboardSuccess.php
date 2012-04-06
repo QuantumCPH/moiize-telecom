@@ -27,14 +27,15 @@
             <tr <?php echo $class ?>>
                 <td><?php echo $employee->getFirstName(); ?></td>
                 <td><?php
+                
             $ct = new Criteria();
             $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp") . $company->getId() . $employee->getId());
             $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
             $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
 
-            $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAccount->getIAccount());
+           $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAccount->getIAccount());
             // print_r($accountInfo);
-            echo $accountInfo->account_info->balance;
+           echo $accountInfo->account_info->balance;
         ?> &euro;
             </td>
             <td><?php echo $employee->getCreatedAt(); ?></td>
@@ -77,4 +78,31 @@
         ?>
             <b><?php echo link_to(__('View All News & Updates'), sfConfig::get('app_main_url') . 'company/newsListing'); ?> </b>
     </p>
+</div>
+
+
+    <div id="sf_admin_container"><h1><?php echo __('Promotion Rates') ?></h1></div>
+
+    <div class="borderDiv">
+
+        <table width="100%">
+            <tr><td><b>Destination Name</b> </td><td><b>Destination Rate</b><td/></tr>
+<?php
+  $rt = new Criteria();
+            $rt->add(PromotionRatesPeer::AGENT_ID , $company->getId());
+
+            $promotionRates = PromotionRatesPeer::doSelect($rt);
+            foreach ($promotionRates as $promotionRate){ 
+              
+                ?>
+
+<tr>
+<td>
+           <?php echo $promotionRate->getNetworkName();     ?> </td><td>  <?php echo $promotionRate->getNetworkRate();     ?></td></tr>
+
+
+          <?php
+            }
+?>
+    </table>
 </div>

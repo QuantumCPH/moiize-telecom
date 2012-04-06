@@ -22,16 +22,12 @@ class BaseUniqueIdsForm extends BaseFormPropel
 
     $this->setValidators(array(
       'id'                   => new sfValidatorPropelChoice(array('model' => 'UniqueIds', 'column' => 'id', 'required' => false)),
-      'unique_number'        => new sfValidatorString(array('max_length' => 50)),
+      'unique_number'        => new sfValidatorInteger(),
       'created_at'           => new sfValidatorDateTime(),
       'assigned_at'          => new sfValidatorDateTime(),
       'registration_type_id' => new sfValidatorInteger(),
       'status'               => new sfValidatorBoolean(),
     ));
-
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorPropelUnique(array('model' => 'UniqueIds', 'column' => array('unique_number')))
-    );
 
     $this->widgetSchema->setNameFormat('unique_ids[%s]');
 
