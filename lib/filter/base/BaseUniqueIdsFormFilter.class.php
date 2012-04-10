@@ -22,7 +22,7 @@ class BaseUniqueIdsFormFilter extends BaseFormFilterPropel
     ));
 
     $this->setValidators(array(
-      'unique_number'        => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'unique_number'        => new sfValidatorPass(array('required' => false)),
       'created_at'           => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDate(array('required' => false)))),
       'assigned_at'          => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDate(array('required' => false)))),
       'registration_type_id' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
@@ -45,7 +45,7 @@ class BaseUniqueIdsFormFilter extends BaseFormFilterPropel
   {
     return array(
       'id'                   => 'Number',
-      'unique_number'        => 'Number',
+      'unique_number'        => 'Text',
       'created_at'           => 'Date',
       'assigned_at'          => 'Date',
       'registration_type_id' => 'Number',
