@@ -436,11 +436,24 @@ class companyActions extends sfActions {
 
         $c = new Criteria();
         $this->companys = CompanyPeer::doSelect($c);
+        
+        $cTD = new Criteria();
+        $cTD->addAnd(TransactionDescriptionPeer::TRANSACTION_TYPE_ID,1);
+        $this->transactionDesc = TransactionDescriptionPeer::doSelect($cTD);
+        
         if ($request->isMethod('post')) {
 
             $company_id = $request->getParameter('company_id');
             $refill_amount = $request->getParameter('refill');
-
+            $descriptionId = $request->getParameter('descriptionId');
+            
+            ////// Transaction Description//////
+            $cT = new Criteria();
+            $cT->add(TransactionDescriptionPeer::ID,$descriptionId);
+            $description = TransactionDescriptionPeer::doSelectOne($cT);
+            
+            ////// End Transaction Description//////
+            
             $c1 = new Criteria();
             $c1->addAnd(CompanyPeer::ID, $company_id);
             $this->company = CompanyPeer::doSelectOne($c1);
@@ -452,7 +465,7 @@ class companyActions extends sfActions {
             $transaction->setExtraRefill($refill_amount);
             $transaction->setTransactionStatusId(1);
             $transaction->setPaymenttype(2); //Refill
-            $transaction->setDescription('Refill');
+            $transaction->setDescription($description->getTitle());
             $transaction->save();
 
             if ($companyCVR != '') {
@@ -471,7 +484,60 @@ class companyActions extends sfActions {
             //parse_str($telintaAddAccount, $success);print_r($success);echo $success['success'];
         }
     }
+    
+    public function executeAgentCharge(sfWebRequest $request) {
 
+        $c = new Criteria();
+        $this->companys = CompanyPeer::doSelect($c);
+        
+        $cTD = new Criteria();
+        $cTD->addAnd(TransactionDescriptionPeer::TRANSACTION_TYPE_ID,2);
+        $this->transactionDesc = TransactionDescriptionPeer::doSelect($cTD);
+        
+        if ($request->isMethod('post')) {
+
+            $company_id = $request->getParameter('company_id');
+            $charge_amount = $request->getParameter('refill');
+            $descriptionId = $request->getParameter('descriptionId');
+            
+            ////// Transaction Description//////
+            $cT = new Criteria();
+            $cT->add(TransactionDescriptionPeer::ID,$descriptionId);
+            $description = TransactionDescriptionPeer::doSelectOne($cT);
+            
+            ////// End Transaction Description//////
+            
+            $c1 = new Criteria();
+            $c1->addAnd(CompanyPeer::ID, $company_id);
+            $this->company = CompanyPeer::doSelectOne($c1);
+            $companyCVR = $this->company->getVatNo();
+
+            $transaction = new CompanyTransaction();
+            $transaction->setAmount(-$charge_amount);
+            $transaction->setCompanyId($company_id);
+            $transaction->setExtraRefill(-$charge_amount);
+            $transaction->setTransactionStatusId(1);
+            $transaction->setPaymenttype(2); //Refill
+            $transaction->setDescription($description->getTitle());
+            $transaction->save();
+
+            if ($companyCVR != '') {
+                CompanyEmployeActivation::charge($this->company, $charge_amount);
+                $transaction->setTransactionStatusId(3);
+                $transaction->save();
+                $adminUser = UserPeer::retrieveByPK($this->getUser()->getAttribute('user_id', '', 'backendsession'));
+                emailLib::sendCompanyRefillEmail($this->company, $transaction,$adminUser);
+                $this->getUser()->setFlash('message', 'Agent Refill Successfully');
+                $this->redirect('company/paymenthistory');
+            } else {
+
+                $this->getUser()->setFlash('message', 'Please Select Agent');
+            }
+            //$telintaAddAccount='success=OK&Amount=$amount{$cust_info->{iso_4217}}';
+            //parse_str($telintaAddAccount, $success);print_r($success);echo $success['success'];
+        }
+    }
+    
     public function executePaymenthistory(sfWebRequest $request) {
 
         $c = new Criteria();
