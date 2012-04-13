@@ -1,0 +1,13 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      TelintaProduct
+    theme:            default
+    css:     /sf/sf_admin/css/admin_main.css
+    list:
+      display: [i_product,title,created_at]
+      max_per_page: 100
+      object_actions:
+        _edit: ~
+    edit:
+      display: [i_product,title]

@@ -239,7 +239,7 @@
                 </div>
             </li>
 
-          <?php } ?>
+        
 <li><a href="#"
                 onmouseover="mopen('m1')"
                 onmouseout="mclosetime()"
@@ -344,10 +344,22 @@
                         }else{
                           echo link_to(__('Telecom Operator'), 'telecom_operator/index');
                         }*/
+                        ?> <?php
+                        if($actionName=='list' && $modulName=="telintaProduct"){
+                          echo link_to(__('Telinta Product'), 'telintaProduct/index',array('class'=>'subSelect'));
+                        }else{
+                          echo link_to(__('Telinta Product'), 'telintaProduct/index');
+                        }
+                        ?><?php
+                         if($actionName=='list' && $modulName=="telintaRoutingplan"){
+                          echo link_to(__('Telinta Routing Plan'), 'telintaRoutingplan/index',array('class'=>'subSelect'));
+                        }else{
+                          echo link_to(__('Telinta Routing Plan'), 'telintaRoutingplan/index');
+                        }
                         ?>
                 </div>
             </li>
-
+  <?php } ?>
     
 			<li class="last">
                 <?php echo link_to(__('Logout'), 'user/logout'); ?>
