@@ -50,7 +50,34 @@
                     </div>
                 </div>
 
+<div class="form-row">
+                    <label class="required"><?php echo __('Tilenta Product:') ?></label>
+                    <div class="content">
+                        <?php
+                        $tpi = $employee->getTelintaProductId();
 
+                        $pid1 = new Criteria();
+                        $pid1->add(TelintaProductPeer::I_PRODUCT, $tpi);
+                        $telintaProduct = TelintaProductPeer::doSelectOne($pid1);
+
+                        echo $telintaProduct->getTitle();
+                        ?>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label class="required"><?php echo __('Tilenta Routing Plan:') ?></label>
+                    <div class="content">
+                        <?php
+                        $tri = $employee->getTelintaRoutingplanId();
+
+                        $pid2= new Criteria();
+                        $pid2->add(TelintaRoutingplanPeer::I_ROUTING_PLAN, $tri);
+                        $telintaRoutingplan = TelintaRoutingplanPeer::doSelectOne($pid2);
+
+                        echo $telintaRoutingplan->getTitle();
+                        ?>
+                    </div>
+                </div>
 
                 <?php
 //                           $empid=$employee->getRegistrationType();
