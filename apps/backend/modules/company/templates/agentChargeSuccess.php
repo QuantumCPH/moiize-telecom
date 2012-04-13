@@ -8,9 +8,9 @@
   
 <?php    }*/   ?>
 
-<div id="sf_admin_container"><h1><?php echo __('Refill') ?></h1></div>
+<div id="sf_admin_container"><h1><?php echo __('Charge') ?></h1></div>
 
-<form id="sf_admin_form" name="sf_admin_edit_form" method="post" enctype="multipart/form-data" action="Refill">
+<form id="sf_admin_form" name="sf_admin_edit_form" method="post" enctype="multipart/form-data" action="AgentCharge">
     <div id="sf_admin_content">
     <table style="padding: 0px;"  id="sf_admin_container" class="tblAlign" cellspacing="0" cellpadding="2" >
     <tr>
@@ -25,29 +25,23 @@
         </td>
     </tr>
         <tr>
-        <td style="padding: 5px;"><?php echo __('Refill') ?>(&euro;):</td>
+        <td style="padding: 5px;"><?php echo __('Charge') ?>(&euro;):</td>
         <td style="padding: 5px;">
             <input type="text" id="refill" name="refill" class="required digits" style="width:180px;">
-            <span id="msgbox"></span><input type="hidden" value="" id="error" name="error">
-<!--            <select name="refill" id="refill" class="required"  style="width:190px;">
-            <?php   $value= ProductPeer::getRefillHashChoices();
-                    foreach($value as $key=>$values){  ?>
-                    <option value="<?php echo $key;   ?>"><?php echo $values;   ?></option>
-            <?php   }  ?>
-            </select>-->
+            <span id="msgbox"></span><input type="hidden" value="" id="error" name="error" />
         </td>
     </tr>
-     <tr>
+    <tr>
         <td style="padding: 5px;"><?php echo __('Description') ?>:</td>
         <td style="padding: 5px;">
-            <span id="msgbox"></span><input type="hidden" value="" id="error" name="error">
-           <select name="descriptionId" id="descriptionId" class="required"  style="width:190px;">
+            <span id="msgbox"></span><input type="hidden" value="" id="error" name="error" />
+            <select name="descriptionId" id="descriptionId" class="required"  style="width:190px;">
             <?php   if($transactionDesc){
-                    foreach($transactionDesc as $description){  ?>
-                    <option value="<?php echo $description->getId();   ?>"><?php echo $description->getTitle();   ?></option>
-            <?php   } 
-                  }
-             ?>
+                      foreach($transactionDesc as $description){  ?>
+                        <option value="<?php echo $description->getId();   ?>"><?php echo $description->getTitle();   ?></option>
+            <?php     }
+                   }
+            ?>
             </select>
         </td>
     </tr>

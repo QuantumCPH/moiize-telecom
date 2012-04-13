@@ -1,0 +1,13 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      TransactionDescription    
+    theme:            default
+    css:              /sf/sf_admin/css/admin_main.css
+    list:
+      title:            Transaction Description List
+      display:        [id,title,transaction_type]
+    edit:
+      title:          Transaction Description
+    create:
+      title:          Add Transaction Description

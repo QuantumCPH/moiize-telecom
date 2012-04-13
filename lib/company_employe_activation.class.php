@@ -30,7 +30,7 @@ class CompanyEmployeActivation {
 
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
         $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
-        $uniqueid="MTB2B".$company->getVatNo();
+        $uniqueid="testMTB2B".$company->getVatNo();
         try {
             $tCustomer = $pb->add_customer(array('customer_info' => array(
                             'name' => $uniqueid, //75583 03344090514
