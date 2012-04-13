@@ -1,0 +1,8 @@
+fields:
+  telinta_product{i_product}:
+    required:
+      msg:              The i product cannot be left blank.
+  telinta_product{title}:
+    required:
+      msg:              The Title cannot be left blank.
+  

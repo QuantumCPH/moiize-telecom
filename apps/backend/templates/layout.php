@@ -58,7 +58,9 @@
   </head>
   <body>
     <?php 
-    
+
+
+
       $modulName = $sf_context->getModuleName();
    
      $actionName = $sf_context->getActionName();
@@ -101,18 +103,21 @@
                           echo link_to(__('PCO Lines'), 'employee/index');
                       }
                     ?>                    
-                    <?php 
+                    <?php
+                     if($sf_user->getAttribute('role_id', '', 'backendsession')==4){
                       if($actionName=='paymenthistory' && $modulName=="company"){
                          echo link_to(__('Payment History'), 'company/paymenthistory', array('class'=>'subSelect'));
                       }else{
                          echo link_to(__('Payment History'), 'company/paymenthistory'); 
-                      }?>
-                    <?php 
+                      } } ?>
+                    <?php
+                     if($sf_user->getAttribute('role_id', '', 'backendsession')==4){
                       if($actionName=='refill'){
                          echo link_to(__('Refill'), 'company/refill', array('class'=>'subSelect'));    
                       }else{
                           echo link_to(__('Refill'), 'company/refill');                          
-                      } ?>
+                      }
+                     }?>
                 </div>
             </li>
           <!--   <li>
@@ -213,6 +218,9 @@
                     <?php echo link_to(__('product orders'), 'product_order/index') ?>
                 </div>
             </li>
+          <?php    if($sf_user->getAttribute('role_id', '', 'backendsession')==4){  ?>
+
+
             <li>
                 <a href="#"
                 onmouseover="mopen('m4')"
@@ -230,6 +238,8 @@
 
                 </div>
             </li>
+
+        
 <li><a href="#"
                 onmouseover="mopen('m1')"
                 onmouseout="mclosetime()"
@@ -315,11 +325,11 @@
                         }
                         ?>
                         <?php 
-//                        if($actionName=='list' && $modulName=="usage_alert"){
-//                          echo link_to(__('Usage Alert'), 'usage_alert/index',array('class'=>'subSelect'));
-//                        }else{
-//                          echo link_to(__('Usage Alert'), 'usage_alert/index');
-//                        }
+                        if($actionName=='list' && $modulName=="promotionRates"){
+                          echo link_to(__('Promotion Rates'), 'promotionRates/index',array('class'=>'subSelect'));
+                        }else{
+                          echo link_to(__('Promotion Rates'), 'promotionRates/index');
+                        }
                         ?>
                         <?php 
 //                        if($actionName=='list' && $modulName=="usage_alert_sender"){
@@ -334,10 +344,22 @@
                         }else{
                           echo link_to(__('Telecom Operator'), 'telecom_operator/index');
                         }*/
+                        ?> <?php
+                        if($actionName=='list' && $modulName=="telintaProduct"){
+                          echo link_to(__('Telinta Product'), 'telintaProduct/index',array('class'=>'subSelect'));
+                        }else{
+                          echo link_to(__('Telinta Product'), 'telintaProduct/index');
+                        }
+                        ?><?php
+                         if($actionName=='list' && $modulName=="telintaRoutingplan"){
+                          echo link_to(__('Telinta Routing Plan'), 'telintaRoutingplan/index',array('class'=>'subSelect'));
+                        }else{
+                          echo link_to(__('Telinta Routing Plan'), 'telintaRoutingplan/index');
+                        }
                         ?>
                 </div>
             </li>
-
+  <?php } ?>
     
 			<li class="last">
                 <?php echo link_to(__('Logout'), 'user/logout'); ?>

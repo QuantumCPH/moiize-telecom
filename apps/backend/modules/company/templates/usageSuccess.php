@@ -64,19 +64,20 @@
 
 
         <tr class="headings">
-            <th width="20%"   align="left"><?php echo __('Date & Time') ?></th>
+            <th width="15%"   align="left"><?php echo __('Date & Time') ?></th>
 
-            <th  width="20%"  align="left"><?php echo __('Phone Number') ?></th>
+            <th  width="10%"  align="left"><?php echo __('Phone Number') ?></th>
             <th width="10%"   align="left"><?php echo __('Duration') ?></th>
-            <th  width="10%"  align="left"><?php echo __('VAT') ?></th>
-            <th width="20%"   align="left"><?php echo __('Cost (Incl. VAT)') ?></th>
-            <th  width="20%"   align="left"><?php echo __('Account Id') ?></th>
+            <th  width="25%"  align="left"><?php echo __('Country') ?></th>
+            <th  width="10%"  align="left"><?php echo __('Description') ?></th>
+            <th width="10%"   align="left"><?php echo __('Cost') ?></th>
+            <th  width="10%"   align="left"><?php echo __('Account Id') ?></th>
         </tr>
         <?php
         $callRecords = 0;
 
         $amount_total = 0;
-
+       
        foreach ($callHistory->xdr_list as $xdr) {
         ?>
 
@@ -84,8 +85,29 @@
             <tr>
                 <td><?php echo $xdr->connect_time; ?></td>
                 <td><?php echo $xdr->CLD; ?></td>
-                <td><?php echo number_format($xdr->charged_quantity / 60, 2); ?></td>
-                <td><?php echo number_format($xdr->charged_amount / 4, 2); ?></td>
+                <td><?php    
+                        $callval=$xdr->charged_quantity;
+if($callval>3600){
+
+ $hval=number_format($callval/3600);
+
+  $rval=$callval%3600;
+
+$minute=date('i',$rval);
+  $second=date('s',$rval);
+
+  $minute=$minute+$hval*60;
+
+  echo $minute.":".$second;
+}else{
+
+
+echo  date('i:s',$callval);
+
+}                           ?></td>
+                <td><?php echo $xdr->country; ?></td>
+                  <td><?php echo $xdr->description;  ?></td>
+
                 <td><?php echo number_format($xdr->charged_amount, 2);
             $amount_total+= number_format($xdr->charged_amount, 2); ?> &euro;</td>
                 <td><?php echo $xdr->account_id; ?></td>
@@ -97,13 +119,13 @@
         ?>        <?php if ($callRecords == 0) {
  ?>
                 <tr>
-                    <td colspan="6"><p><?php echo __('There are currently no call records to show.') ?></p></td>
+                    <td colspan="7"><p><?php echo __('There are currently no call records to show.') ?></p></td>
                 </tr>
 <?php } else { ?>
                 <tr>
-                    <td colspan="4" align="right"><strong><?php echo __('Subtotal') ?></strong></td>
+                    <td colspan="5" align="right"><strong><?php echo __('Subtotal') ?></strong></td>
 
-                    <td><?php echo number_format($amount_total, 2, ',', '') ?> EURO</td>
+                    <td><?php echo number_format($amount_total, 2, ',', '') ?>  &euro;</td>
                     <td>&nbsp;</td>
                 </tr>
 <?php } ?>

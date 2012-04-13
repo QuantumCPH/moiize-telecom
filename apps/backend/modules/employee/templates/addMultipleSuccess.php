@@ -9,13 +9,24 @@
         </div>
     <?php endif; ?>
 <h1><?php echo  __('New PCO Line') ?></h1></div>
-<form id="sf_admin_form" name="sf_admin_edit_form" method="post" enctype="multipart/form-data" action="saveEmployee">
+<form id="sf_admin_form" name="sf_admin_edit_form" method="post" enctype="multipart/form-data" action="saveMultipleEmployee">
     <div id="sf_admin_content">
   
     <table id="sf_admin_container" cellspacing="0" cellpadding="2" class="tblAlign" >
         <tr>
-        <td style="padding: 5px;"><?php echo  __('Name:') ?></td>
-        <td style="padding: 5px;"><input type="text" name="first_name" id="employee_first_name"  class="required"  size="25" /></td>
+        <td style="padding: 5px;"><?php echo  __('Number Of PCO Line') ?></td>
+        <td style="padding: 5px;">
+            <select name="numberOfLines" id="numberOfLines"    class="required"  style="width:190px;">
+                <option value="2"> 2</option>
+                <option value="3"> 3</option>
+                <option value="4">4</option>
+                <option value="5"> 5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select></td>
                 </tr>
 
                  <tr>
@@ -61,13 +72,13 @@
                   <tr>
         <td style="padding: 5px;"><?php echo __('Product:') ?></td>
         <td style="padding: 5px;"> <select name="productid" id="productid"    class="required"  >
-
+<!--      <option value="" selected="selected"></option>-->
       <?php foreach($products as $product){  ?>
 <option value="<?php echo $product->getId();   ?>"><?php echo $product->getName()   ?></option>
 <?php   }  ?>
 </select></td>
                 </tr>
-                 <tr>
+                            <tr>
         <td style="padding: 5px;"><?php echo __('Telinta Product:') ?></td>
         <td style="padding: 5px;"> <select name="telintaProductId" id="telintaProductId"    class="required"  >
 
@@ -79,7 +90,7 @@
                  <tr>
         <td style="padding: 5px;"><?php echo __('Telinta RoutingPlan:') ?></td>
         <td style="padding: 5px;"> <select name="telintaRoutingplanId" id="telintaRoutingplanId"    class="required"  >
- 
+
       <?php foreach($telintaRoutingplans as $telintaRoutingplan){  ?>
 <option value="<?php echo $telintaRoutingplan->getIRoutingPlan ();   ?>"><?php echo $telintaRoutingplan->getTitle()   ?></option>
 <?php   }  ?>

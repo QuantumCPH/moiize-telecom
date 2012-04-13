@@ -50,9 +50,6 @@
             $tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
             $todate = date("Y-m-d", $tomorrow);
 
-
-
-
             $getFirstnumberofMobile = substr($customer->getMobileNumber(), 0, 1);
             if ($getFirstnumberofMobile == 0) {
                 $TelintaMobile = substr($customer->getMobileNumber(), 1);

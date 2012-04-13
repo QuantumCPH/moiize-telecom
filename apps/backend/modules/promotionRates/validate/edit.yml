@@ -1,0 +1,7 @@
+fields:
+  promotion_rates{network_name}:
+    required:
+      msg:              The Destination name cannot be left blank.
+  promotion_rates{network_rate}:
+    required:
+      msg:              The Destination rate cannot be left blank.

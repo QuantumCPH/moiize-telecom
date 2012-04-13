@@ -1,0 +1,8 @@
+fields:
+  telinta_routingplan{i_routing_plan}:
+    required:
+      msg:              The i routing plan cannot be left blank.
+  telinta_routingplan{title}:
+    required:
+      msg:              The title cannot be left blank.
+  

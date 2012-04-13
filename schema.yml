@@ -1,0 +1,1007 @@
+propel:
+  _attributes:
+    package: lib.model
+    defaultIdMethod: native
+  accounts_new:
+    _attributes: { phpName: AccountsNew }
+    fonet_customer_id: { type: INTEGER, size: '10', required: false }
+    pincode: { type: VARCHAR, size: '255', required: false }
+  activation_code:
+    _attributes: { phpName: ActivationCode }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    company_id: { type: INTEGER, size: '11', required: false, foreignTable: company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    code: { type: VARCHAR, size: '255', required: true }
+    _indexes: { activation_code_FI_1: [company_id] }
+  agent_bank:
+    _attributes: { phpName: AgentBank }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    agent_company_id: { type: INTEGER, size: '11', required: false, foreignTable: agent_company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    reg_nr: { type: INTEGER, size: '11', required: true }
+    account_number: { type: VARCHAR, size: '100', required: true }
+    created_at: { type: TIMESTAMP, required: false }
+    _indexes: { agent_bank_FI_1: [agent_company_id] }
+  agent_commission:
+    _attributes: { phpName: AgentCommission }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    agent_company_id: { type: INTEGER, size: '11', required: false, foreignTable: agent_company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    revenue_interval_id: { type: INTEGER, size: '11', required: false, foreignTable: revenue_interval, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    commission_rate: { type: INTEGER, size: '11', required: true }
+    created_at: { type: TIMESTAMP, required: false }
+    _indexes: { agent_commission_FI_1: [agent_company_id], agent_commission_FI_2: [revenue_interval_id] }
+  agent_commission_package:
+    _attributes: { phpName: AgentCommissionPackage }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '50', required: true }
+    reg_share_value: { type: FLOAT, required: true, defaultValue: '0' }
+    is_reg_share_value_pc: { type: boolean, required: true, defaultValue: '0' }
+    extra_payments_share_value: { type: FLOAT, required: true, defaultValue: '0' }
+    is_extra_payments_share_value_pc: { type: boolean, required: true, defaultValue: '0' }
+  agent_company:
+    _attributes: { phpName: AgentCompany }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '255', required: true }
+    cvr_number: { type: INTEGER, size: '11', required: true }
+    ean_number: { type: INTEGER, size: '11', required: false }
+    address: { type: VARCHAR, size: '255', required: true }
+    post_code: { type: INTEGER, size: '11', required: true }
+    country_id: { type: INTEGER, size: '11', required: true, foreignTable: enable_country, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    cityname: { type: INTEGER, size: '11', required: false, foreignTable: city, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    contact_name: { type: VARCHAR, size: '150', required: true }
+    email: { type: VARCHAR, size: '255', required: true }
+    mobile_number: { type: VARCHAR, size: '255', required: true }
+    head_phone_number: { type: VARCHAR, size: '255', required: true }
+    fax_number: { type: INTEGER, size: '11', required: true }
+    website: { type: VARCHAR, size: '255', required: false }
+    status_id: { type: INTEGER, size: '11', required: false, foreignTable: status, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    company_type_id: { type: INTEGER, size: '11', required: false, foreignTable: company_type, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    product_detail: { type: INTEGER, size: '11', required: false }
+    commission_period_id: { type: INTEGER, size: '11', required: false, foreignTable: commission_period, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    account_manager_id: { type: INTEGER, size: '11', required: false, foreignTable: user, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    created_at: { type: TIMESTAMP, required: false }
+    agent_commission_package_id: { type: INTEGER, size: '11', required: true, foreignTable: agent_commission_package, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    sms_code: { type: VARCHAR, size: '4', required: false }
+    is_prepaid: { type: boolean, required: false }
+    balance: { type: FLOAT, required: false }
+    invoice_method_id: { type: INTEGER, size: '11', required: true, foreignTable: invoice_method, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { agent_company_FI_1: [country_id], agent_company_FI_3: [status_id], agent_company_FI_4: [company_type_id], agent_company_FI_5: [commission_period_id], agent_company_FI_6: [account_manager_id], FK_agent_company_agent_commission_package: [agent_commission_package_id], invoice_method_id: [invoice_method_id], cityFk: [cityname] }
+    _uniques: { cvr_number: [cvr_number] }
+  agent_company_commission:
+    _attributes: { phpName: AgentCompanyCommission }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    agent_company_id: { type: INTEGER, size: '11', required: false }
+    agent_commission_package_id: { type: INTEGER, size: '11', required: false }
+    start_date: { type: TIMESTAMP, required: false }
+    end_date: { type: TIMESTAMP, required: false }
+    is_current: { type: INTEGER, size: '1', required: false }
+    created_at: { type: TIMESTAMP, required: false }
+  agent_order:
+    _attributes: { phpName: AgentOrder }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    agent_order_id: { type: VARCHAR, size: '5', required: false }
+    agent_company_id: { type: INTEGER, size: '11', required: false }
+    amount: { type: FLOAT, required: false }
+    status: { type: INTEGER, size: '11', required: false }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+  agent_payment_history:
+    _attributes: { phpName: AgentPaymentHistory }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    agent_id: { type: INTEGER, size: '11', required: true }
+    customer_id: { type: INTEGER, size: '11', required: true }
+    expenese_type: { type: INTEGER, size: '11', required: true }
+    amount: { type: INTEGER, size: '11', required: true }
+    remaining_balance: { type: INTEGER, size: '11', required: true }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+  agent_product:
+    _attributes: { phpName: AgentProduct }
+    agent_product_id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    agent_id: { type: INTEGER, size: '11', required: true, foreignTable: agent_company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    Product_id: { type: INTEGER, size: '11', required: true, foreignTable: product, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    reg_share_value: { type: FLOAT, required: true }
+    is_reg_share_value_pc: { type: boolean, required: true }
+    reg_share_enable: { type: boolean, required: true }
+    extra_payments_share_value: { type: FLOAT, required: true }
+    is_extra_payments_share_value_pc: { type: boolean, required: true }
+    extra_payments_share_enable: { type: boolean, required: true }
+    _indexes: { agent_id: [agent_id], Product_id: [Product_id] }
+  agent_user:
+    _attributes: { phpName: AgentUser }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    agent_company_id: { type: INTEGER, size: '11', required: true, foreignTable: agent_company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    username: { type: VARCHAR, size: '150', required: true }
+    password: { type: VARCHAR, size: '150', required: true }
+    status_id: { type: INTEGER, size: '11', required: true, foreignTable: status, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    created_at: { type: TIMESTAMP, required: false }
+    _indexes: { agent_user_FI_1: [agent_company_id], agent_user_FI_2: [status_id] }
+  apartment_form:
+    _attributes: { phpName: ApartmentForm }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '150', required: true }
+  banner:
+    _attributes: { phpName: Banner }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    banner_name: { type: VARCHAR, size: '25', required: false }
+    host_id: { type: INTEGER, size: '11', required: false }
+    status: { type: INTEGER, size: '11', required: false }
+    created_at: { type: TIMESTAMP, required: false }
+    counter: { type: INTEGER, size: '11', required: false }
+  billing:
+    _attributes: { phpName: Billing }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    time: { type: TIMESTAMP, required: true }
+    customer_id: { type: INTEGER, size: '11', required: true }
+    mobile_number: { type: VARCHAR, size: '20', required: true }
+    to_number: { type: VARCHAR, size: '20', required: true }
+    duration_second: { type: VARCHAR, size: '10', required: true }
+    duration_minutes: { type: VARCHAR, size: '10', required: true }
+    billing_minutes: { type: VARCHAR, size: '10', required: true }
+    cost_per_minute: { type: FLOAT, required: true }
+    call_cost: { type: FLOAT, required: true }
+    vat: { type: FLOAT, required: true }
+    balance_before: { type: FLOAT, required: false }
+    balance_after: { type: FLOAT, required: false }
+    rate_table_description: { type: VARCHAR, size: '255', required: false }
+    rate_table_id: { type: INTEGER, size: '11', required: false }
+    billing_status: { type: INTEGER, size: '11', required: false }
+    created_at: { type: TIMESTAMP, required: false }
+    cdr_id: { type: INTEGER, size: '11', required: false }
+  billing_cdr_details:
+    _attributes: { phpName: BillingCdrDetails }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    call_time: { type: TIMESTAMP, required: true }
+    from_country: { type: VARCHAR, size: '255', required: true }
+    from_number: { type: VARCHAR, size: '255', required: true }
+    to_number: { type: VARCHAR, size: '255', required: true }
+    duration: { type: VARCHAR, size: '255', required: true }
+    duration_second: { type: INTEGER, size: '255', required: true }
+    purchase_price: { type: INTEGER, size: '11', required: true }
+    fonet_description: { type: VARCHAR, size: '255', required: true }
+    billing_status: { type: INTEGER, size: '11', required: true, defaultValue: '0' }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    duration_minutes: { type: INTEGER, size: '11', required: false }
+    employee_id: { type: INTEGER, size: '11', required: false }
+    call_rate_table_description: { type: VARCHAR, size: '255', required: false }
+    call_rate_table_id: { type: INTEGER, size: '11', required: false }
+    processing_comment: { type: VARCHAR, size: '255', required: false }
+  c9_numbers:
+    _attributes: { phpName: C9Numbers }
+    c9_number: { type: VARCHAR, size: '15', required: false }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    is_assigned: { type: boolean, required: false, defaultValue: '0' }
+  call_log:
+    _attributes: { phpName: CallLog }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    imsi: { type: VARCHAR, size: '255', required: true }
+    dest: { type: INTEGER, size: '20', required: true }
+    mac: { type: INTEGER, size: '20', required: true }
+    mobile_number: { type: INTEGER, size: '20', required: true }
+    created: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    check_status: { type: boolean, required: true, defaultValue: '1' }
+  call_rate_table:
+    _attributes: { phpName: CallRateTable }
+    call_rate_table_id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    destination_name: { type: VARCHAR, size: '255', required: true }
+    destination_no_from: { type: VARCHAR, size: '255', required: true }
+    connect_charge: { type: VARCHAR, size: '255', required: true }
+    rate: { type: VARCHAR, size: '255', required: true }
+    rate_status: { type: INTEGER, size: '11', required: true, defaultValue: '0' }
+    ratecreated: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+  call_rate_table_landcall:
+    _attributes: { phpName: CallRateTableLandcall }
+    call_rate_table_id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    destination_name: { type: VARCHAR, size: '255', required: true }
+    destination_no_from: { type: VARCHAR, size: '255', required: true }
+    connect_charge: { type: VARCHAR, size: '255', required: true }
+    rate: { type: VARCHAR, size: '255', required: true }
+    rate_status: { type: INTEGER, size: '11', required: true, defaultValue: '0' }
+    ratecreated: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+  callback_log:
+    _attributes: { phpName: CallbackLog }
+    id: { type: INTEGER, size: '25', primaryKey: true, autoIncrement: true, required: true }
+    mobile_number: { type: VARCHAR, size: '255', required: true }
+    callingcode: { type: INTEGER, size: '11', required: true }
+    uniqueid: { type: VARCHAR, size: '255', required: true }
+    imsi: { type: VARCHAR, size: '250', required: true }
+    created: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    check_status: { type: TINYINT, size: '4', required: true, defaultValue: '1' }
+  cbf:
+    _attributes: { phpName: Cbf }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    s: { type: VARCHAR, size: '10', required: false, defaultValue: H }
+    da: { type: VARCHAR, size: '25', required: false }
+    message: { type: VARCHAR, size: '480', required: false }
+    st: { type: INTEGER, size: '11', required: false, defaultValue: '5' }
+    country_id: { type: INTEGER, size: '11', required: false }
+    mobile_number: { type: VARCHAR, size: '20', required: false }
+    created_at: { type: TIMESTAMP, required: false }
+  cdr_log:
+    _attributes: { phpName: CdrLog }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    date: { type: TIMESTAMP, required: true }
+    from_land: { type: VARCHAR, size: '100', required: true }
+    from_no: { type: VARCHAR, size: '50', required: true }
+    to_destination_rate_id: { type: INTEGER, size: '11', required: false, foreignTable: destination_rate, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    from_employee_id: { type: INTEGER, size: '11', required: false, foreignTable: employee, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    to_no: { type: VARCHAR, size: '50', required: true }
+    dur_hms: { type: VARCHAR, size: '10', required: true }
+    dur_secs: { type: BIGINT, size: '20', required: true }
+    price: { type: FLOAT, required: true }
+    purchase_price: { type: FLOAT, required: false }
+    sale_price: { type: FLOAT, required: false }
+    description: { type: VARCHAR, size: '200', required: true }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    _indexes: { FK_cdr_log: [from_employee_id], FK_cdr_log_destination_rate: [to_destination_rate_id] }
+  city:
+    _attributes: { phpName: City }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    country_id: { type: INTEGER, size: '11', required: false, foreignTable: country, foreignReference: id, onDelete: CASCADE, onUpdate: CASCADE }
+    name: { type: VARCHAR, size: '255', required: true }
+    _indexes: { city_FI_1: [country_id] }
+  clientdocuments:
+    _attributes: { phpName: Clientdocuments }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    title: { type: VARCHAR, size: '300', required: true }
+    filename: { type: VARCHAR, size: '400', required: true }
+    status: { type: VARCHAR, size: '12', required: true }
+  cloud9_data:
+    _attributes: { phpName: Cloud9Data }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    request_type: { type: VARCHAR, size: '255', required: false }
+    c9_timestamp: { type: TIMESTAMP, required: false }
+    transaction_id: { type: VARCHAR, size: '255', required: false }
+    call_date: { type: TIMESTAMP, required: false }
+    cdr: { type: VARCHAR, size: '255', required: false }
+    cid: { type: VARCHAR, size: '255', required: false }
+    mcc: { type: VARCHAR, size: '255', required: false }
+    mnc: { type: VARCHAR, size: '255', required: false }
+    imsi: { type: VARCHAR, size: '255', required: false }
+    msisdn: { type: VARCHAR, size: '255', required: false }
+    destination: { type: VARCHAR, size: '255', required: false }
+    leg: { type: VARCHAR, size: '255', required: false }
+    leg_duration: { type: VARCHAR, size: '255', required: false }
+    reseller_charge: { type: VARCHAR, size: '255', required: false }
+    client_charge: { type: VARCHAR, size: '255', required: false }
+    user_charge: { type: VARCHAR, size: '255', required: false }
+    iot: { type: VARCHAR, size: '255', required: false }
+    user_balance: { type: VARCHAR, size: '255', required: false }
+    ecc: { type: VARCHAR, size: '255', required: false }
+  commission_period:
+    _attributes: { phpName: CommissionPeriod }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    number_months: { type: INTEGER, size: '11', required: true }
+  company:
+    _attributes: { phpName: Company }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '255', required: true }
+    vat_no: { type: VARCHAR, size: '50', required: true }
+    ean_number: { type: INTEGER, size: '11', required: false }
+    address: { type: VARCHAR, size: '255', required: true }
+    post_code: { type: VARCHAR, size: '255', required: true }
+    country_id: { type: INTEGER, size: '11', required: false, foreignTable: country, foreignReference: id, onDelete: 'SET NULL', onUpdate: CASCADE }
+    city_id: { type: INTEGER, size: '11', required: false, foreignTable: city, foreignReference: id, onDelete: 'SET NULL', onUpdate: CASCADE }
+    contact_name: { type: VARCHAR, size: '150', required: true }
+    email: { type: VARCHAR, size: '255', required: true }
+    head_phone_number: { type: VARCHAR, size: '255', required: true }
+    fax_number: { type: VARCHAR, size: '255', required: false }
+    website: { type: VARCHAR, size: '255', required: false }
+    status_id: { type: INTEGER, size: '11', required: false, foreignTable: status, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    company_size_id: { type: INTEGER, size: '11', required: false, foreignTable: company_size, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    company_type_id: { type: INTEGER, size: '11', required: false, foreignTable: company_type, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    customer_type_id: { type: INTEGER, size: '11', required: false, foreignTable: customer_type, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    cpr_number: { type: INTEGER, size: '11', required: false }
+    apartment_form_id: { type: INTEGER, size: '11', required: false, foreignTable: apartment_form, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    invoice_method_id: { type: INTEGER, size: '11', required: true, foreignTable: invoice_method, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    account_manager_id: { type: INTEGER, size: '11', required: false, foreignTable: user, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    agent_company_id: { type: INTEGER, size: '11', required: false, foreignTable: agent_company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    confirmed_at: { type: DATE, required: false }
+    cvr_number: { type: INTEGER, size: '11', required: false }
+    sim_card_dispatch_date: { type: DATE, required: false }
+    usage_discount_pc: { type: FLOAT, required: false }
+    registration_date: { type: TIMESTAMP, required: false }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    updated_at: { type: TIMESTAMP, required: false }
+    file_path: { type: VARCHAR, size: '255', required: false }
+    rate_table_id: { type: INTEGER, size: '11', required: true, defaultValue: '1' }
+    i_customer: { type: VARCHAR, size: '50', required: false }
+    password: { type: VARCHAR, size: '255', required: false }
+    _indexes: { company_FI_1: [country_id], company_FI_2: [city_id], company_FI_3: [status_id], company_FI_4: [company_size_id], company_FI_5: [company_type_id], company_FI_6: [customer_type_id], company_FI_7: [apartment_form_id], company_FI_8: [invoice_method_id], company_FI_9: [account_manager_id], company_FI_10: [agent_company_id], rate_table_id: [rate_table_id] }
+    _uniques: { vat_no: [vat_no] }
+  company_bank:
+    _attributes: { phpName: CompanyBank }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    company_id: { type: INTEGER, size: '11', required: false, foreignTable: company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    reg_nr: { type: INTEGER, size: '11', required: true }
+    account_number: { type: VARCHAR, size: '100', required: true }
+    created_at: { type: TIMESTAMP, required: false }
+    _indexes: { company_bank_FI_1: [company_id] }
+  company_size:
+    _attributes: { phpName: CompanySize }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '50', required: true }
+  company_transaction:
+    _attributes: { phpName: CompanyTransaction }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    company_id: { type: INTEGER, size: '11', required: true, foreignTable: company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    amount: { type: FLOAT, required: true }
+    extra_refill: { type: FLOAT, required: true }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    paymentType: { type: TINYINT, size: '4', required: true, defaultValue: '1' }
+    description: { type: LONGVARCHAR, required: true }
+    transaction_status_id: { type: TINYINT, size: '4', required: true, defaultValue: '1' }
+    _indexes: { FK_Copmany: [company_id] }
+  company_type:
+    _attributes: { phpName: CompanyType }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '50', required: true }
+  country:
+    _attributes: { phpName: Country }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '255', required: true }
+    code: { type: VARCHAR, size: '50', required: true }
+    calling_code: { type: VARCHAR, size: '5', required: true }
+    cbf_rate: { type: FLOAT, required: false }
+    taisys_rate: { type: FLOAT, required: false }
+  currency_conversion:
+    _attributes: { phpName: CurrencyConversion }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    bpp_dkk: { type: FLOAT, required: false }
+    dkk_bpp: { type: FLOAT, required: false }
+    plz_dkk: { type: FLOAT, required: false }
+    dkk_plz: { type: FLOAT, required: false }
+    eur_dkk: { type: FLOAT, required: false }
+    dkk_eur: { type: FLOAT, required: false }
+  customer:
+    _attributes: { phpName: Customer }
+    id: { type: BIGINT, size: '20', primaryKey: true, autoIncrement: true, required: true }
+    first_name: { type: VARCHAR, size: '255', required: true }
+    last_name: { type: VARCHAR, size: '255', required: true }
+    country_id: { type: INTEGER, size: '11', required: true, foreignTable: country, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    city: { type: VARCHAR, size: '255', required: true }
+    po_box_number: { type: VARCHAR, size: '255', required: false }
+    mobile_number: { type: VARCHAR, size: '255', required: true }
+    device_id: { type: BIGINT, size: '20', required: false, foreignTable: device, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    email: { type: VARCHAR, size: '255', required: true }
+    password: { type: VARCHAR, size: '255', required: true }
+    is_newsletter_subscriber: { type: boolean, required: false }
+    created_at: { type: TIMESTAMP, required: false, defaultExpr: CURRENT_TIMESTAMP }
+    updated_at: { type: TIMESTAMP, required: false }
+    customer_status_id: { type: INTEGER, size: '11', required: true, defaultValue: '1', foreignTable: entity_status, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    address: { type: VARCHAR, size: '255', required: true }
+    fonet_customer_id: { type: DOUBLE, required: false, foreignTable: fonet_customer, foreignReference: fonet_customer_id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    referrer_id: { type: INTEGER, size: '11', required: false, foreignTable: agent_company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    telecom_operator_id: { type: INTEGER, size: '11', required: true, defaultValue: '1', foreignTable: telecom_operator, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    date_of_birth: { type: DATE, required: false }
+    other: { type: VARCHAR, size: '255', required: false }
+    subscription_type: { type: VARCHAR, size: '255', required: false }
+    auto_refill_amount: { type: DOUBLE, required: false }
+    subscription_id: { type: BIGINT, size: '20', required: false }
+    last_auto_refill: { type: TIMESTAMP, required: false }
+    auto_refill_min_balance: { type: DOUBLE, required: false }
+    c9_customer_number: { type: VARCHAR, size: '20', required: false }
+    registration_type_id: { type: INTEGER, size: '11', required: false }
+    imsi: { type: VARCHAR, size: '255', required: false }
+    uniqueid: { type: VARCHAR, size: '50', required: false }
+    plain_text: { type: VARCHAR, size: '20', required: false }
+    ticketval: { type: VARCHAR, size: '255', required: false }
+    to_date: { type: DATE, required: false }
+    from_date: { type: DATE, required: false }
+    i_customer: { type: VARCHAR, size: '50', required: false }
+    _indexes: { FK_customer_device: [device_id], FK_customer_country: [country_id], FK_customer_city: [city], FK_customer_event_status: [customer_status_id], FK_customer_telecom_operator: [telecom_operator_id], FK_customer: [referrer_id], FK_customer_fonet_customer: [fonet_customer_id] }
+  customer_commision:
+    _attributes: { phpName: CustomerCommision }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '255', required: true }
+    commision: { type: INTEGER, size: '11', required: true }
+    status: { type: INTEGER, size: '11', required: true, defaultValue: '1' }
+  customer_order:
+    _attributes: { phpName: CustomerOrder }
+    id: { type: BIGINT, size: '20', primaryKey: true, autoIncrement: true, required: true }
+    product_id: { type: INTEGER, size: '11', required: true, foreignTable: product, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    quantity: { type: INTEGER, size: '11', required: true, defaultValue: '1' }
+    order_status_id: { type: INTEGER, size: '11', required: true, defaultValue: '1', foreignTable: entity_status, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    customer_id: { type: BIGINT, size: '20', required: true, foreignTable: customer, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    extra_refill: { type: DOUBLE, required: true, defaultValue: '0' }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    updated_at: { type: TIMESTAMP, required: false }
+    is_first_order: { type: boolean, required: true, defaultValue: '0' }
+    agent_commission_package_id: { type: INTEGER, size: '11', required: false, foreignTable: agent_commission_package, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    exe_status: { type: INTEGER, size: '11', required: false, defaultValue: '0' }
+    _indexes: { FK_order_customer: [customer_id], FK_order_order_status: [order_status_id], FK_order_product: [product_id], FK_customer_order: [agent_commission_package_id] }
+  customer_product:
+    _attributes: { phpName: CustomerProduct }
+    id: { type: BIGINT, size: '20', primaryKey: true, autoIncrement: true, required: true }
+    customer_id: { type: BIGINT, size: '20', required: true, foreignTable: customer, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    product_id: { type: INTEGER, size: '11', required: true, foreignTable: product, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    product_status_id: { type: INTEGER, size: '11', required: false }
+    _indexes: { FK_customer_product: [customer_id], FK_customer_product_product: [product_id] }
+  customer_type:
+    _attributes: { phpName: CustomerType }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '255', required: true }
+  destination_rate:
+    _attributes: { phpName: DestinationRate }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    destination_name: { type: VARCHAR, size: '255', required: true }
+    purchase_price: { type: FLOAT, required: true }
+    sale_price: { type: FLOAT, required: true }
+  device:
+    _attributes: { phpName: Device }
+    id: { type: BIGINT, size: '20', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '255', required: true }
+    manufacturer_id: { type: BIGINT, size: '20', required: true, foreignTable: manufacturer, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    image_file_name: { type: VARCHAR, size: '100', required: false }
+    sort_order: { type: INTEGER, size: '11', required: false, defaultValue: '100' }
+    _indexes: { FK_device_manufacturer: [manufacturer_id] }
+  dibs_call:
+    _attributes: { phpName: DibsCall }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    callurl: { type: VARCHAR, size: '255', required: false }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+  email_queue:
+    _attributes: { phpName: EmailQueue }
+    id: { type: BIGINT, size: '20', primaryKey: true, autoIncrement: true, required: true }
+    message: { type: LONGVARCHAR, required: true }
+    receipient_email: { type: VARCHAR, size: '100', required: true }
+    subject: { type: VARCHAR, size: '500', required: true }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    receipient_name: { type: VARCHAR, size: '100', required: true }
+    ref_id: { type: BIGINT, size: '20', required: false }
+    email_status_id: { type: INTEGER, size: '11', required: true, defaultValue: '1' }
+    email_type: { type: VARCHAR, size: '25', required: false }
+    cutomer_id: { type: INTEGER, size: '25', required: false }
+    agent_id: { type: INTEGER, size: '25', required: false }
+    _indexes: { FK_email_queue: [email_status_id] }
+  employee:
+    _attributes: { phpName: Employee }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    company_id: { type: INTEGER, size: '11', required: false, foreignTable: company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    first_name: { type: VARCHAR, size: '50', required: true }
+    last_name: { type: VARCHAR, size: '50', required: true }
+    email: { type: VARCHAR, size: '150', required: true }
+    mobile_model: { type: VARCHAR, size: '50', required: true }
+    mobile_number: { type: VARCHAR, size: '50', required: true }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    app_code: { type: VARCHAR, size: '7', required: false }
+    is_app_registered: { type: boolean, required: false }
+    password: { type: VARCHAR, size: '255', required: false }
+    registration_type: { type: VARCHAR, size: '255', required: false }
+    product_price: { type: INTEGER, size: '11', required: false }
+    product_id: { type: INTEGER, size: '11', required: false }
+    country_code: { type: VARCHAR, size: '50', required: false }
+    country_mobile_number: { type: VARCHAR, size: '250', required: false }
+    _indexes: { employee_FI_1: [company_id] }
+  employee_product:
+    _attributes: { phpName: EmployeeProduct }
+    id: { type: INTEGER, size: '11', primaryKey: true, required: true }
+    employee_id: { type: INTEGER, size: '11', required: true, foreignTable: employee, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    product_id: { type: INTEGER, size: '11', required: true, foreignTable: product, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    quantity: { type: INTEGER, size: '11', required: true, defaultValue: '1' }
+    _indexes: { FK_employee_employee_product: [employee_id], FK_product_employee_product: [product_id] }
+  enable_country:
+    _attributes: { phpName: EnableCountry }
+    id: { type: INTEGER, size: '200', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '300', required: true }
+    language: { type: VARCHAR, size: '300', required: true }
+    language_symbol: { type: VARCHAR, size: '300', required: true }
+    currency: { type: VARCHAR, size: '300', required: true }
+    currency_symbol: { type: VARCHAR, size: '300', required: true }
+    status: { type: INTEGER, size: '10', required: true, foreignTable: status, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    ceated_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    base_url: { type: VARCHAR, size: '300', required: true }
+    refill: { type: VARCHAR, size: '400', required: true }
+    calling_code: { type: VARCHAR, size: '50', required: true }
+    cbf_rate: { type: FLOAT, required: true }
+    _indexes: { status: [status] }
+  entity_status:
+    _attributes: { phpName: EntityStatus }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '255', required: true }
+  exchange_rate:
+    _attributes: { phpName: ExchangeRate }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    currency_code: { type: VARCHAR, size: '50', required: true }
+    rate: { type: FLOAT, required: true }
+    is_default: { type: boolean, required: true }
+    _uniques: { uidx_currency_code: [currency_code] }
+  faqs:
+    _attributes: { phpName: Faqs }
+    id: { type: INTEGER, size: '200', primaryKey: true, autoIncrement: true, required: true }
+    question: { type: VARCHAR, size: '200', required: true }
+    answer: { type: LONGVARCHAR, required: true }
+    country_id: { type: INTEGER, size: '11', required: false, foreignTable: enable_country, foreignReference: id, onDelete: CASCADE, onUpdate: RESTRICT }
+    status_id: { type: INTEGER, size: '11', required: false, foreignTable: status, foreignReference: id, onDelete: CASCADE, onUpdate: RESTRICT }
+    create_at: { type: TIMESTAMP, required: false }
+    _indexes: { country_id: [country_id], status_id: [status_id] }
+  fonet_customer:
+    _attributes: { phpName: FonetCustomer }
+    fonet_customer_id: { type: DOUBLE, primaryKey: true, required: true }
+    fonet_customer_code: { type: VARCHAR, size: '255', required: true }
+    activated_on: { type: TIMESTAMP, required: false }
+    sip_name: { type: VARCHAR, size: '255', required: false }
+    sip_pwd: { type: VARCHAR, size: '255', required: false }
+  global_setting:
+    _attributes: { phpName: GlobalSetting }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '100', required: true }
+    value: { type: VARCHAR, size: '999', required: false }
+    description: { type: VARCHAR, size: '999', required: false }
+    _uniques: { NewIndex1: [name] }
+  host:
+    _attributes: { phpName: Host }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    host_name: { type: VARCHAR, size: '50', required: false }
+    created_at: { type: TIMESTAMP, required: false }
+    status: { type: INTEGER, size: '11', required: false }
+    url: { type: VARCHAR, size: '75', required: false }
+    start_date: { type: TIMESTAMP, required: false }
+    end_date: { type: TIMESTAMP, required: false }
+    counter: { type: INTEGER, size: '11', required: false }
+  invalid_pin_try:
+    _attributes: { phpName: InvalidPinTry }
+    mobile_number: { type: VARCHAR, size: '20', primaryKey: true, required: true }
+    last_invalid_pin: { type: VARCHAR, size: '20', required: false }
+    last_invalid_entry_time: { type: TIMESTAMP, required: false }
+    invalid_pin_tries: { type: INTEGER, size: '11', required: false }
+  invite:
+    _attributes: { phpName: Invite }
+    id: { type: INTEGER, size: '25', primaryKey: true, autoIncrement: true, required: true }
+    email: { type: VARCHAR, size: '30', required: false }
+    created_at: { type: TIMESTAMP, required: false }
+    invite_status: { type: INTEGER, size: '2', required: false }
+    bonus_paid: { type: boolean, required: false }
+    customer_id: { type: INTEGER, size: '11', required: true }
+    invite_name: { type: VARCHAR, size: '30', required: false }
+    message: { type: VARCHAR, size: '150', required: true }
+    invite_number: { type: VARCHAR, size: '20', required: false }
+  invite_bonus:
+    _attributes: { phpName: InviteBonus }
+    id: { type: DOUBLE, required: false }
+    invite_id: { type: INTEGER, size: '11', required: false }
+    customer_id: { type: INTEGER, size: '11', required: false }
+    bonus_paid: { type: INTEGER, size: '11', required: false }
+  invite_status:
+    _attributes: { phpName: InviteStatus }
+    id: { type: INTEGER, size: '11', primaryKey: true, required: true }
+    status: { type: VARCHAR, size: '100', required: false }
+  invoice:
+    _attributes: { phpName: Invoice }
+    id: { type: BIGINT, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    company_id: { type: INTEGER, size: '11', required: true, foreignTable: company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    totalPayment: { type: DOUBLE, required: true }
+    due_date: { type: TIMESTAMP, required: true }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    billing_starting_date: { type: TIMESTAMP, required: true }
+    billing_ending_date: { type: TIMESTAMP, required: true }
+    invoice_status_id: { type: INTEGER, size: '11', required: true, defaultValue: '1', foreignTable: invoice_status, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    invoice_html: { type: LONGVARCHAR, required: true }
+    _indexes: { FK_invoice: [company_id], FK_invoice_invoice_status: [invoice_status_id] }
+  invoice_method:
+    _attributes: { phpName: InvoiceMethod }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '255', required: true }
+    cost: { type: FLOAT, required: true, defaultValue: '0' }
+    billingdays: { type: INTEGER, size: '11', required: false }
+  invoice_status:
+    _attributes: { phpName: InvoiceStatus }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '50', required: true }
+  lang_type:
+    _attributes: { phpName: LangType }
+    id: { type: INTEGER, size: '200', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '300', required: true }
+    code: { type: VARCHAR, size: '200', required: true }
+    status: { type: INTEGER, size: '2', required: true }
+  login_history:
+    _attributes: { phpName: LoginHistory }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    user_id: { type: INTEGER, size: '11', required: false, foreignTable: user, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    created_at: { type: TIMESTAMP, required: false }
+    ip_address: { type: VARCHAR, size: '20', required: true }
+    _indexes: { login_history_FI_1: [user_id] }
+  manufacturer:
+    _attributes: { phpName: Manufacturer }
+    id: { type: BIGINT, size: '20', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '255', required: true }
+  mobile_model_csv:
+    _attributes: { phpName: MobileModelCsv }
+    Nokia: { type: VARCHAR, size: '1000', required: false }
+    SonyEricsson: { type: VARCHAR, size: '1000', required: false }
+    HTC: { type: VARCHAR, size: '1000', required: false }
+    iPhone: { type: VARCHAR, size: '1000', required: false }
+  newupdate:
+    _attributes: { phpName: Newupdate }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    created_at: { type: TIMESTAMP, required: false }
+    message: { type: CLOB, required: false }
+    heading: { type: VARCHAR, size: '50', required: false }
+    starting_date: { type: DATE, required: false }
+    expire_date: { type: DATE, required: false }
+  order_status:
+    _attributes: { phpName: OrderStatus }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '255', required: true }
+  orders:
+    _attributes: { phpName: Orders }
+    O_Id: { type: INTEGER, size: '11', primaryKey: true, required: true }
+    OrderNo: { type: INTEGER, size: '11', required: true }
+    P_Id: { type: INTEGER, size: '11', required: false }
+    _indexes: { fk_PerOrders: [P_Id] }
+  other_cost:
+    _attributes: { phpName: OtherCost }
+    id: { type: INTEGER, size: '8', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: CHAR, required: true }
+    created_at: { type: TIMESTAMP, required: false, defaultExpr: CURRENT_TIMESTAMP }
+    company_id: { type: INTEGER, size: '11', required: true, foreignTable: company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { FK_other_cost_company: [company_id] }
+  package:
+    _attributes: { phpName: Package }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '50', required: false }
+    billing_dur: { type: INTEGER, size: '11', required: true, defaultValue: '1' }
+    billing_due_days: { type: TINYINT, size: '4', required: false }
+    specificatoin_cost: { type: FLOAT, required: false }
+    R1_cost: { type: FLOAT, required: false }
+    R2_cost: { type: FLOAT, required: false }
+    activaton_cost: { type: FLOAT, required: false }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    updated_at: { type: TIMESTAMP, required: false }
+  permission:
+    _attributes: { phpName: Permission }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    module_name: { type: VARCHAR, size: '50', required: true }
+    action_name: { type: VARCHAR, size: '50', required: true }
+  postal_charges:
+    _attributes: { phpName: PostalCharges }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    charges: { type: BIGINT, size: '20', required: true }
+    country: { type: INTEGER, size: '11', required: true, foreignTable: enable_country, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    status: { type: INTEGER, size: '11', required: true, foreignTable: status, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { country: [country], status: [status] }
+  product:
+    _attributes: { phpName: Product }
+    id: { type: INTEGER, size: '20', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '50', required: false }
+    price: { type: DOUBLE, required: true, defaultValue: '0' }
+    description: { type: VARCHAR, size: '200', required: false }
+    initial_balance: { type: DOUBLE, required: true, defaultValue: '0' }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    updated_at: { type: TIMESTAMP, required: false }
+    is_extra_fill_applied: { type: boolean, required: true, defaultValue: '0' }
+    include_in_zerocall: { type: boolean, required: false, defaultValue: '0' }
+    is_in_store: { type: boolean, required: true, defaultValue: '0' }
+    sms_code: { type: VARCHAR, size: '2', required: false }
+    country: { type: INTEGER, size: '100', required: true }
+    refill: { type: VARCHAR, size: '400', required: true }
+    country_id: { type: INTEGER, size: '11', required: false, foreignTable: enable_country, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    refill_options: { type: VARCHAR, size: '400', required: true }
+    product_order: { type: INTEGER, size: '11', required: false }
+    product_type_package: { type: boolean, required: true, defaultValue: '0' }
+    product_country_us: { type: boolean, required: true, defaultValue: '0' }
+    registration_fee: { type: DOUBLE, required: false, defaultValue: '0' }
+    _indexes: { enable_country: [country_id] }
+  product_order:
+    _attributes: { phpName: ProductOrder }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    product_id: { type: INTEGER, size: '11', required: true, foreignTable: product, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    company_id: { type: INTEGER, size: '11', required: false, foreignTable: company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    agent_company_id: { type: INTEGER, size: '11', required: false, foreignTable: agent_company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    quantity: { type: INTEGER, size: '11', required: true }
+    discount: { type: FLOAT, required: true, defaultValue: '0' }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    updated_at: { type: TIMESTAMP, required: false }
+    _indexes: { product_order_FI_1: [company_id], product_order_FI_2: [agent_company_id], FK_product_order_product: [product_id] }
+  promotion_rates:
+    _attributes: { phpName: PromotionRates }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    agent_id: { type: INTEGER, size: '11', required: true, foreignTable: company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    network_name: { type: VARCHAR, size: '255', required: true }
+    network_rate: { type: VARCHAR, size: '255', required: true }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    _uniques: { agent_id: [agent_id] }
+  rates:
+    _attributes: { phpName: Rates }
+    id: { type: INTEGER, size: '111', primaryKey: true, autoIncrement: true, required: true }
+    tital: { type: VARCHAR, size: '255', required: true }
+    rate: { type: VARCHAR, size: '255', required: true }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+  registration_type:
+    _attributes: { phpName: RegistrationType }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    description: { type: VARCHAR, size: '255', required: false }
+  revenue_interval:
+    _attributes: { phpName: RevenueInterval }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    min_revenue: { type: INTEGER, size: '11', required: true }
+    max_revenue: { type: INTEGER, size: '11', required: true }
+  role:
+    _attributes: { phpName: Role }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '100', required: true }
+  role_permission_ref:
+    _attributes: { phpName: RolePermissionRef }
+    role_id: { type: INTEGER, size: '11', required: true, foreignTable: role, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    permission_id: { type: INTEGER, size: '11', required: true, foreignTable: permission, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    _indexes: { role_permission_ref_FI_1: [role_id], role_permission_ref_FI_2: [permission_id] }
+  sale_action:
+    _attributes: { phpName: SaleAction }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '150', required: true }
+  sale_activity:
+    _attributes: { phpName: SaleActivity }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    company_id: { type: INTEGER, size: '11', required: false, foreignTable: company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    created_at: { type: TIMESTAMP, required: false }
+    ticket_number: { type: INTEGER, size: '11', required: true }
+    sale_action_id: { type: INTEGER, size: '11', required: false, foreignTable: sale_action, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    comment: { type: LONGVARCHAR, required: true }
+    file_path: { type: VARCHAR, size: '255', required: false }
+    user_id: { type: INTEGER, size: '11', required: false, foreignTable: user, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    sale_activity_status_id: { type: INTEGER, size: '11', required: false, foreignTable: sale_activity_status, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { sale_activity_FI_1: [company_id], sale_activity_FI_2: [sale_action_id], FK_sale_activity: [user_id], FK_sale_activity_sale_activity_status: [sale_activity_status_id] }
+  sale_activity_status:
+    _attributes: { phpName: SaleActivityStatus }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '255', required: true }
+  se_voip_number:
+    _attributes: { phpName: SeVoipNumber }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    number: { type: VARCHAR, size: '16', required: false }
+    customer_id: { type: VARCHAR, size: '250', required: false }
+    is_assigned: { type: boolean, required: true, defaultValue: '0' }
+    updated_at: { type: TIMESTAMP, required: false }
+  sip:
+    _attributes: { phpName: Sip }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    user: { type: VARCHAR, size: '255', required: false }
+    pwd: { type: VARCHAR, size: '255', required: false }
+    customer_id: { type: INTEGER, size: '11', required: false }
+    created_at: { type: TIMESTAMP, required: false }
+    assigned: { type: boolean, required: false }
+  sms_log:
+    _attributes: { phpName: SmsLog }
+    id: { type: INTEGER, size: '10', primaryKey: true, autoIncrement: true, required: true }
+    mobile_number: { type: VARCHAR, size: '50', required: true }
+    message: { type: VARCHAR, size: '255', required: true }
+    sender_name: { type: VARCHAR, size: '30', required: true }
+    status: { type: VARCHAR, size: '20', required: true }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    customer_id: { type: INTEGER, size: '11', required: false }
+  sms_text:
+    _attributes: { phpName: SmsText }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    for_text: { type: VARCHAR, size: '255', required: true }
+    text_heading: { type: VARCHAR, size: '255', required: false }
+    message_text: { type: LONGVARCHAR, required: true }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+  status:
+    _attributes: { phpName: Status }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '100', required: true }
+  sub_agent_link:
+    _attributes: { phpName: SubAgentLink }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    agent_company_id: { type: INTEGER, size: '11', required: false, foreignTable: agent_company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    sub_agent_id: { type: INTEGER, size: '11', required: false, foreignTable: agent_company, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { sub_agent_link_FI_1: [agent_company_id], sub_agent_link_FI_2: [sub_agent_id] }
+  support_activity:
+    _attributes: { phpName: SupportActivity }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    employee_id: { type: INTEGER, size: '11', required: false, foreignTable: employee, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    created_at: { type: TIMESTAMP, required: false }
+    ticket_number: { type: INTEGER, size: '11', required: true }
+    support_issue_id: { type: INTEGER, size: '11', required: false, foreignTable: support_issue, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    comment: { type: LONGVARCHAR, required: true }
+    solution: { type: LONGVARCHAR, required: true }
+    file_path: { type: VARCHAR, size: '255', required: false }
+    user_id: { type: INTEGER, size: '11', required: false, foreignTable: user, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    support_activity_status_id: { type: INTEGER, size: '11', required: false, foreignTable: support_activity_status, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { support_activity_FI_1: [employee_id], support_activity_FI_2: [support_issue_id], FK_support_activity: [user_id], FK_support_activity_support_activity_status: [support_activity_status_id] }
+  support_activity_status:
+    _attributes: { phpName: SupportActivityStatus }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '255', required: true }
+  support_issue:
+    _attributes: { phpName: SupportIssue }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '150', required: true }
+  system_log:
+    _attributes: { phpName: SystemLog }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    description: { type: VARCHAR, size: '1000', required: true }
+    type: { type: INTEGER, size: '11', required: false }
+    module: { type: VARCHAR, size: '100', required: false }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+  taisys:
+    _attributes: { phpName: Taisys }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    serv: { type: VARCHAR, size: '10', required: false }
+    imsi: { type: VARCHAR, size: '15', required: false }
+    dn: { type: VARCHAR, size: '15', required: false }
+    smscontent: { type: VARCHAR, size: '255', required: false }
+    checksum: { type: CLOB, required: false }
+    checksum_verification: { type: boolean, required: false }
+    created_at: { type: TIMESTAMP, required: false }
+  telecom_operator:
+    _attributes: { phpName: TelecomOperator }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '50', required: false }
+    status_id: { type: INTEGER, size: '11', required: true, foreignTable: status, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    country_id: { type: INTEGER, size: '11', required: true, foreignTable: enable_country, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { country_id: [country_id], status_id: [status_id] }
+  telinta_accounts:
+    _attributes: { phpName: TelintaAccounts }
+    id: { type: BIGINT, size: '20', primaryKey: true, autoIncrement: true, required: true }
+    parent_table: { type: VARCHAR, size: '50', required: false }
+    parent_id: { type: INTEGER, size: '11', required: false }
+    i_account: { type: VARCHAR, size: '50', required: false }
+    account_title: { type: VARCHAR, size: '50', required: false }
+    i_customer: { type: VARCHAR, size: '50', required: false }
+    status: { type: INTEGER, size: '11', required: true, defaultValue: '3' }
+  test:
+    _attributes: { phpName: Test }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '255', required: true }
+    cvr_number: { type: INTEGER, size: '11', required: true }
+    ean_number: { type: INTEGER, size: '11', required: false }
+    address: { type: VARCHAR, size: '255', required: true }
+    post_code: { type: INTEGER, size: '11', required: true }
+    country_id: { type: INTEGER, size: '11', required: false }
+    city_id: { type: INTEGER, size: '11', required: false }
+    contact_name: { type: VARCHAR, size: '150', required: true }
+    email: { type: VARCHAR, size: '255', required: true }
+    head_phone_number: { type: INTEGER, size: '11', required: true }
+    fax_number: { type: INTEGER, size: '11', required: true }
+    website: { type: VARCHAR, size: '255', required: false }
+    status_id: { type: INTEGER, size: '11', required: false }
+    company_size_id: { type: INTEGER, size: '11', required: false }
+    company_type_id: { type: INTEGER, size: '11', required: false }
+    customer_type_id: { type: INTEGER, size: '11', required: false }
+    cpr_number: { type: INTEGER, size: '11', required: false }
+    apartment_form_id: { type: INTEGER, size: '11', required: false }
+    invoice_method_id: { type: INTEGER, size: '11', required: false }
+    account_manager_id: { type: INTEGER, size: '11', required: false }
+    agent_company_id: { type: INTEGER, size: '11', required: false }
+    created_at: { type: TIMESTAMP, required: false, defaultExpr: CURRENT_TIMESTAMP }
+    confirmed_at: { type: DATE, required: false }
+    sim_card_dispatch_date: { type: DATE, required: false }
+    package_id: { type: INTEGER, size: '11', required: true }
+    send_letter: { type: boolean, required: true, defaultValue: '0' }
+    send_email: { type: boolean, required: true, defaultValue: '1' }
+    send_specification: { type: boolean, required: true, defaultValue: '0' }
+    _indexes: { company_FI_1: [country_id], company_FI_2: [city_id], company_FI_3: [status_id], company_FI_4: [company_size_id], company_FI_5: [company_type_id], company_FI_6: [customer_type_id], company_FI_7: [apartment_form_id], company_FI_8: [invoice_method_id], company_FI_9: [account_manager_id], company_FI_10: [agent_company_id], FK_company: [package_id] }
+  tmp_cdr_log:
+    _attributes: { phpName: TmpCdrLog }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    date: { type: TIMESTAMP, required: true }
+    from_land: { type: VARCHAR, size: '100', required: true }
+    from_no: { type: VARCHAR, size: '50', required: true }
+    to_no: { type: VARCHAR, size: '50', required: true }
+    dur_hms: { type: VARCHAR, size: '10', required: true }
+    dur_secs: { type: BIGINT, size: '20', required: true }
+    price: { type: FLOAT, required: true }
+    description: { type: VARCHAR, size: '200', required: false }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+  transaction:
+    _attributes: { phpName: Transaction }
+    id: { type: BIGINT, size: '20', primaryKey: true, autoIncrement: true, required: true }
+    amount: { type: DOUBLE, required: true }
+    description: { type: VARCHAR, size: '255', required: false }
+    order_id: { type: BIGINT, size: '20', required: false, foreignTable: customer_order, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    customer_id: { type: BIGINT, size: '20', required: false, foreignTable: customer, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    transaction_status_id: { type: INTEGER, size: '11', required: true, defaultValue: '1', foreignTable: entity_status, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    agent_company_id: { type: BIGINT, size: '20', required: false }
+    commission_amount: { type: FLOAT, required: false }
+    _indexes: { FK_transaction_transaction_status: [transaction_status_id], FK_transaction_customer: [customer_id], FK_transaction_order: [order_id] }
+  unique_ids:
+    _attributes: { phpName: UniqueIds }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    unique_number: { type: VARCHAR, size: '50', required: true }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+    assigned_at: { type: TIMESTAMP, required: true }
+    registration_type_id: { type: INTEGER, size: '11', required: true }
+    status: { type: boolean, required: true, defaultValue: '0' }
+    _uniques: { unique_number: [unique_number] }
+  us_number:
+    _attributes: { phpName: UsNumber }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    customer_id: { type: INTEGER, size: '11', required: false }
+    iccid: { type: VARCHAR, size: '255', required: true }
+    msisdn: { type: VARCHAR, size: '255', required: true }
+    us_mobile_number: { type: VARCHAR, size: '255', required: true }
+    active_status: { type: INTEGER, size: '11', required: true, defaultValue: '1' }
+    created_at: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+  usage_alert:
+    _attributes: { phpName: UsageAlert }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    alert_amount: { type: INTEGER, size: '11', required: true }
+    sms_alert_message: { type: LONGVARCHAR, required: true }
+    sms_active: { type: boolean, required: true }
+    email_alert_message: { type: LONGVARCHAR, required: true }
+    email_active: { type: boolean, required: true }
+    country: { type: INTEGER, size: '11', required: true, foreignTable: enable_country, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    sender_name: { type: INTEGER, size: '11', required: true, foreignTable: usage_alert_sender, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    status: { type: INTEGER, size: '11', required: true, foreignTable: status, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { status: [status], country: [country], sender: [sender_name] }
+  usage_alert_sender:
+    _attributes: { phpName: UsageAlertSender }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '400', required: true }
+    status: { type: INTEGER, size: '11', required: true, foreignTable: status, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    _indexes: { status: [status] }
+  usage_alert_sent:
+    _attributes: { phpName: UsageAlertSent }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    usage_alert_id: { type: INTEGER, size: '11', required: true }
+    customerid: { type: INTEGER, size: '11', required: true }
+    messagetype: { type: VARCHAR, size: '50', required: true }
+    alert_amount: { type: INTEGER, size: '11', required: true }
+    senttime: { type: TIMESTAMP, required: true, defaultExpr: CURRENT_TIMESTAMP }
+  user:
+    _attributes: { phpName: User }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    name: { type: VARCHAR, size: '150', required: true }
+    email: { type: VARCHAR, size: '150', required: true }
+    password: { type: VARCHAR, size: '150', required: true }
+    role_id: { type: INTEGER, size: '11', required: false, foreignTable: role, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    is_super_user: { type: TINYINT, size: '4', required: false, defaultValue: '0' }
+    created_at: { type: TIMESTAMP, required: false }
+    _indexes: { user_FI_1: [role_id] }
+  userguide:
+    _attributes: { phpName: Userguide }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    title: { type: VARCHAR, size: '300', required: true }
+    description: { type: LONGVARCHAR, required: true }
+    country_id: { type: INTEGER, size: '11', required: false, foreignTable: enable_country, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    status_id: { type: INTEGER, size: '11', required: false, foreignTable: status, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    image: { type: VARCHAR, size: '400', required: true }
+    create_at: { type: TIMESTAMP, required: false }
+    _indexes: { country_id: [country_id], status_id: [status_id] }
+  visit:
+    _attributes: { phpName: Visit }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    host_id: { type: INTEGER, size: '11', required: false }
+    banner_id: { type: INTEGER, size: '11', required: false }
+    created_at: { type: TIMESTAMP, required: false }
+    status: { type: INTEGER, size: '11', required: false }
+  visitors:
+    _attributes: { phpName: Visitors }
+    id: { type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    host_id: { type: INTEGER, size: '11', required: false }
+    banner_id: { type: INTEGER, size: '11', required: false }
+    created_at: { type: TIMESTAMP, required: false }
+    status: { type: VARCHAR, size: '255', required: false }
+  voucher:
+    _attributes: { phpName: Voucher }
+    id: { type: BIGINT, size: '20', primaryKey: true, required: true }
+    pin_code: { type: DOUBLE, required: true }
+    amount: { type: DOUBLE, required: true }
+    type: { type: VARCHAR, size: '4', required: false }
+    used_on: { type: TIMESTAMP, required: false }
+  zerocall_cdr:
+    _attributes: { phpName: ZerocallCdr }
+    CdrKey: { type: VARCHAR, size: '255', primaryKey: true, required: true }
+    CustomID: { type: VARCHAR, size: '255', required: false }
+    AnswerTimeB: { type: VARCHAR, size: '255', required: false }
+    EndTimeB: { type: VARCHAR, size: '255', required: false }
+    BillSec: { type: VARCHAR, size: '255', required: false }
+    BillingTime: { type: VARCHAR, size: '255', required: false }
+    Extension: { type: VARCHAR, size: '255', required: false }
+    SourceCty: { type: VARCHAR, size: '255', required: false }
+    Ani: { type: VARCHAR, size: '255', required: false }
+    DestCty: { type: VARCHAR, size: '255', required: false }
+    Rounding: { type: VARCHAR, size: '255', required: false }
+    UsedValue: { type: VARCHAR, size: '255', required: false }
+    InitialAccount: { type: VARCHAR, size: '255', required: false }
+    DST_CustomID: { type: VARCHAR, size: '255', required: false }
+    DestinationName: { type: VARCHAR, size: '255', required: false }
+    COST_RateMatchPhno: { type: VARCHAR, size: '255', required: false }
+    COST_DestinationName: { type: VARCHAR, size: '255', required: false }
+    COST_RateValue: { type: VARCHAR, size: '255', required: false }
+    COST_RateValueFirst: { type: VARCHAR, size: '255', required: false }
+    COST_CcsConnectCharge: { type: VARCHAR, size: '255', required: false }
+    COST_UsedValue: { type: VARCHAR, size: '255', required: false }
+    BZ2_Rate1Minute: { type: VARCHAR, size: '255', required: false }
+    BZ1_RateAddMinute: { type: VARCHAR, size: '255', required: false }
+    execute_status: { type: boolean, required: false, defaultValue: '1' }
