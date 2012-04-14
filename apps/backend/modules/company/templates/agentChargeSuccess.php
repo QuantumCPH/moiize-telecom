@@ -34,7 +34,7 @@
     <tr>
         <td style="padding: 5px;"><?php echo __('Description') ?>:</td>
         <td style="padding: 5px;">
-            <span id="msgbox"></span><input type="hidden" value="" id="error" name="error" />
+            
             <select name="descriptionId" id="descriptionId" class="required"  style="width:190px;">
             <?php   if($transactionDesc){
                       foreach($transactionDesc as $description){  ?>
