@@ -27,8 +27,8 @@
         <tr>
         <td style="padding: 5px;"><?php echo __('Refill') ?>(&euro;):</td>
         <td style="padding: 5px;">
-            <input type="text" id="refill" name="refill" class="required number" style="width:180px;">
-            
+            <input type="text" id="refill_value" name="refill" class="" style="width:180px;">
+            <span id="validation_result"></span>
 <!--            <select name="refill" id="refill" class="required"  style="width:190px;">
             <?php   $value= ProductPeer::getRefillHashChoices();
                     foreach($value as $key=>$values){  ?>
@@ -60,3 +60,18 @@
         </div>
     </div>
     </form>
+<script>
+jQuery(function() {
+    jQuery('#refill_value').validator({
+        format: 'decimal',
+        invalidEmpty: true,
+        /*correct: function() {
+        jQuery('#validation_result').text('VALID');
+        },*/
+        error: function() {
+        jQuery('#validation_result').text('Enter valid amount');
+        }
+    });
+    
+}); 
+</script>
