@@ -27,8 +27,8 @@
         <tr>
         <td style="padding: 5px;"><?php echo __('Refill') ?>(&euro;):</td>
         <td style="padding: 5px;">
-            <input type="text" id="refill" name="refill" class="required digits" style="width:180px;">
-            <span id="msgbox"></span><input type="hidden" value="" id="error" name="error">
+            <input type="text" id="refill" name="refill" class="required decimal" style="width:180px;">
+            
 <!--            <select name="refill" id="refill" class="required"  style="width:190px;">
             <?php   $value= ProductPeer::getRefillHashChoices();
                     foreach($value as $key=>$values){  ?>
@@ -40,8 +40,8 @@
      <tr>
         <td style="padding: 5px;"><?php echo __('Description') ?>:</td>
         <td style="padding: 5px;">
-            <span id="msgbox"></span><input type="hidden" value="" id="error" name="error">
-           <select name="descriptionId" id="descriptionId" class="required"  style="width:190px;">
+            
+           <select name="descriptionId" id="descriptionId" class="required "  style="width:190px;">
             <?php   if($transactionDesc){
                     foreach($transactionDesc as $description){  ?>
                     <option value="<?php echo $description->getId();   ?>"><?php echo $description->getTitle();   ?></option>
