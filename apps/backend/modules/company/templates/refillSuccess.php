@@ -27,7 +27,7 @@
         <tr>
         <td style="padding: 5px;"><?php echo __('Refill') ?>(&euro;):</td>
         <td style="padding: 5px;">
-            <input type="text" id="refill" name="refill" class="required decimal" style="width:180px;">
+            <input type="text" id="refill" name="refill" class="required number" style="width:180px;">
             
 <!--            <select name="refill" id="refill" class="required"  style="width:190px;">
             <?php   $value= ProductPeer::getRefillHashChoices();
