@@ -176,7 +176,7 @@ class CompanyEmployeActivation {
                             'password' => $pass,
                             'h323_password' => $pass,
                             'activation_date' => date('Y-m-d'),
-                            'batch_name' => $company->getVatNo(),
+                            'batch_name' =>"MTB2B".$company->getVatNo(),
                             'follow_me_enabled' => $followMeEnabled
                             )));
         } catch (SoapFault $e) {
