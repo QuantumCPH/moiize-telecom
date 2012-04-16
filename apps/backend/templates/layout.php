@@ -116,8 +116,16 @@
                          echo link_to(__('Refill'), 'company/refill', array('class'=>'subSelect'));    
                       }else{
                           echo link_to(__('Refill'), 'company/refill');                          
+
                       }
                      }?>
+                    <?php 
+                      if($actionName=='agentCharge'){
+                         echo link_to(__('Charge'), 'company/agentCharge', array('class'=>'subSelect'));    
+                      }else{
+                          echo link_to(__('Charge'), 'company/agentCharge');                          
+                      } ?>
+                    
                 </div>
             </li>
           <!--   <li>
@@ -313,7 +321,13 @@
                           echo link_to(__('Rates'), 'rates/index');
                         }
                         ?>
-
+                        <?php
+                        if($actionName=='index' && $modulName=="transactionDescription"){
+                          echo link_to(__('Transaction Description'), 'transactionDescription/index',array('class'=>'subSelect'));
+                        }else{
+                          echo link_to(__('Transaction Description'), 'transactionDescription/index');
+                        }
+                        ?>
 
 
 
@@ -376,9 +390,9 @@
 
 
     <script type="text/javascript">
-  jQuery('#sddm li a').click(function() {
-    $('li:last').addClass('current') ;
-   });
+//  jQuery('#sddm li a').click(function() {
+//    $('li:last').addClass('current') ;
+//   });
  
 jQuery(function(){
 
@@ -438,6 +452,7 @@ jQuery('#sf_admin_edit_form').validate({
  ?>
         <?php use_javascript('jquery.validatede.js', '', array('absolute' => true)) ?>
 <?php } ?>
+    
     <script language="javascript" type="text/javascript">
 
 	jQuery('#company_vat_no').blur(function(){

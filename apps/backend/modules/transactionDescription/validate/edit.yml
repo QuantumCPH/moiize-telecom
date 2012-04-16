@@ -1,0 +1,7 @@
+fields:
+  transaction_description{title}:
+    required:
+      msg:              The transaction description cannot be left blank.
+  transaction_description{transaction_type_id}:
+    required:
+      msg:              The transaction type cannot be left blank.  

@@ -1,7 +1,7 @@
 <?php
 require_once(sfConfig::get('sf_lib_dir') . '/changeLanguageCulture.php');
 // $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
-//replace with  $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
+//replace with  $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
 
 
 class emailLib {
@@ -42,7 +42,7 @@ class emailLib {
 
 
         //Support Information
-        $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
+        $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
         $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize');
@@ -132,7 +132,7 @@ class emailLib {
         $customer_id = trim($customer->getId());
 
         //Support Information
-        $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
+        $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
         $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize');
@@ -231,7 +231,7 @@ class emailLib {
         $customer_id = trim($customer->getId());
 
         //Support Information
-        $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
+        $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
         $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize');
@@ -353,7 +353,7 @@ class emailLib {
 
 
         //Support Information
-        $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
+        $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2');
         $sender_emailcdu = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
         $sender_namecdu = sfConfig::get('app_email_sender_name', 'WLS 2');
@@ -414,7 +414,7 @@ class emailLib {
     public static function sendCustomerAutoRefillEmail(Customer $customer, $message_body) {
 
         $subject = __('Payment Confirmation');
-        $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
+        $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
         $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize');
@@ -469,7 +469,7 @@ class emailLib {
 
 
         $subject = __('Payment Confirmation');
-        $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
+        $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
         $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize');
@@ -656,7 +656,7 @@ class emailLib {
         $customer_id = trim($customer->getId());
 
         //Support Information
-        $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
+        $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2 ');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
         $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize');
@@ -737,7 +737,7 @@ class emailLib {
         $customer_id = trim($customer->getId());
 
         //Support Information
-        $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
+        $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
         $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize');
@@ -839,7 +839,7 @@ class emailLib {
         $customer_id = trim($customer->getId());
 
         //Support Information
-        $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
+        $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
         $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize');
@@ -950,7 +950,7 @@ Med vänlig hälsning<br/><br/>
 WLS2<br/><a href='http://www.Moiize.com.com'>www.Moiize.com</a></td></tr></table>";
 
         //Support Information
-        $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
+        $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2');
         $sender_emailcdu = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
         $sender_namecdu = sfConfig::get('app_email_sender_name', 'WLS 2');
@@ -1043,7 +1043,7 @@ Med vänlig hälsning<br/><br/>
 WLS2<br/><a href='http://www.Moiize.com'>www.Moiize.com</a></td></tr></table>";
 
         //Support Information
-        $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
+        $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2');
         $sender_emailcdu = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
         $sender_namecdu = sfConfig::get('app_email_sender_name', 'Moiize 2');
@@ -1086,7 +1086,7 @@ Uniuqe Ids finsihed.<br/><br/>
 WLS2<br/><a href='http://www.moiize.com.com'>www.wls2.zerocall.com.com</a></td></tr></table>";
 
         //Support Informationt
-        $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
+        $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2');
         $sender_emailcdu = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
         $sender_namecdu = sfConfig::get('app_email_sender_name', 'WLS 2');
@@ -1129,7 +1129,7 @@ Uniuqe Id " . $uniqueid . " has issue while assigning on " . $customer->getMobil
 wls2<br/><a href='http://www.moiize.com'>www.wls2.zerocall.com.com</a></td></tr></table>";
 
         //Support Informationt
-        $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
+        $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2');
         $sender_emailcdu = sfConfig::get('app_email_sender_email', 'zerocallengineering@googlegroups.com');
         $sender_namecdu = sfConfig::get('app_email_sender_name', 'WLS 2');
@@ -1172,7 +1172,7 @@ Uniuqe Id " . $uniqueid . " has issue while assigning on " . $customer->getMobil
 WLS2<br/><a href='http://www.moiize.com'>www.wls2.zerocall.com</a></td></tr></table>";
 
         //Support Informationt
-        $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
+        $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2');
         $sender_emailcdu = sfConfig::get('app_email_sender_email', 'zerocallengineering@googlegroups.com');
         $sender_namecdu = sfConfig::get('app_email_sender_name', 'WLS 2');
@@ -1248,7 +1248,7 @@ WLS2<br/><a href='http://www.moiize.com'>www.wls2.zerocall.com</a></td></tr></ta
 
 
         //Support Information
-        $sender_email = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
+        $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
         $sender_emailcdu = sfConfig::get('app_email_sender_email', 'rs@zapan.com');
         $sender_namecdu = sfConfig::get('app_email_sender_name', 'Moiize');

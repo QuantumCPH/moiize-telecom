@@ -31,7 +31,7 @@ class CompanyEmployeActivation {
 
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
         $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
-        $uniqueid = "testMTB2B" . $company->getVatNo();
+        $uniqueid = "MTB2B" . $company->getVatNo();
         try {
             $tCustomer = $pb->add_customer(array('customer_info' => array(
                             'name' => $uniqueid, //75583 03344090514
@@ -176,7 +176,7 @@ class CompanyEmployeActivation {
                             'password' => $pass,
                             'h323_password' => $pass,
                             'activation_date' => date('Y-m-d'),
-                            'batch_name' => $company->getVatNo(),
+                            'batch_name' =>"MTB2B".$company->getVatNo(),
                             'follow_me_enabled' => $followMeEnabled
                             )));
         } catch (SoapFault $e) {
