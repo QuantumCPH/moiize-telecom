@@ -452,7 +452,7 @@ jQuery('#sf_admin_edit_form').validate({
  ?>
         <?php use_javascript('jquery.validatede.js', '', array('absolute' => true)) ?>
 <?php } ?>
-    <?php //use_javascript('jquery.validator.js', '', array('absolute' => true)) ?>
+    
     <script language="javascript" type="text/javascript">
 
 	jQuery('#company_vat_no').blur(function(){
