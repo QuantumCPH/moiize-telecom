@@ -1,5 +1,21 @@
 <?php use_helper('I18N') ?>
-<?php use_helper('Number') ?><?php /*if($sf_user->hasFlash('message')){ ?>
+<?php use_helper('Number') ?>
+<script language="javascript" type="text/javascript">
+  jQuery(function(){      
+      jQuery("#sf_admin_form").submit(function(){
+          var valu = jQuery("#refill").val();
+          var t =  /^-?(?:\d+|\d{1,3}(?:,\d{3})+)(?:\.\d+)?$/.test(valu);    
+          if(t==false){
+              jQuery("#validation_result").html('Please enter valid amount');
+              return false;
+          }else if(t==true){
+              jQuery("#validation_result").html('');
+              return true;
+          } 
+      });
+  });
+</script>
+<?php /*if($sf_user->hasFlash('message')){ ?>
 
 
 <div class="save-ok">
@@ -27,8 +43,8 @@
         <tr>
         <td style="padding: 5px;"><?php echo __('Refill') ?>(&euro;):</td>
         <td style="padding: 5px;">
-            <input type="text" id="refill" name="refill" class="required decimal" style="width:180px;">
-            <span id="validation_result"></span>
+            <input type="text" id="refill" name="refill" class="" style="width:180px;" />
+            <span id="validation_result" style="color:#ff1100 !important;"></span>
 <!--            <select name="refill" id="refill" class="required"  style="width:190px;">
             <?php   $value= ProductPeer::getRefillHashChoices();
                     foreach($value as $key=>$values){  ?>
