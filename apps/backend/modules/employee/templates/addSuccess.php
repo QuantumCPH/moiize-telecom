@@ -61,9 +61,27 @@
                   <tr>
         <td style="padding: 5px;"><?php echo __('Product:') ?></td>
         <td style="padding: 5px;"> <select name="productid" id="productid"    class="required"  >
-<!--      <option value="" selected="selected"></option>-->
+
       <?php foreach($products as $product){  ?>
 <option value="<?php echo $product->getId();   ?>"><?php echo $product->getName()   ?></option>
+<?php   }  ?>
+</select></td>
+                </tr>
+                 <tr>
+        <td style="padding: 5px;"><?php echo __('Telinta Product:') ?></td>
+        <td style="padding: 5px;"> <select name="telintaProductId" id="telintaProductId"    class="required"  >
+
+      <?php foreach($telintaProducts as $telintaProduct){  ?>
+<option value="<?php echo $telintaProduct->getIProduct()   ?>"><?php echo $telintaProduct->getTitle()   ?></option>
+<?php   }  ?>
+</select></td>
+                </tr>
+                 <tr>
+        <td style="padding: 5px;"><?php echo __('Telinta RoutingPlan:') ?></td>
+        <td style="padding: 5px;"> <select name="telintaRoutingplanId" id="telintaRoutingplanId"    class="required"  >
+ 
+      <?php foreach($telintaRoutingplans as $telintaRoutingplan){  ?>
+<option value="<?php echo $telintaRoutingplan->getIRoutingPlan ();   ?>"><?php echo $telintaRoutingplan->getTitle()   ?></option>
 <?php   }  ?>
 </select></td>
                 </tr>
