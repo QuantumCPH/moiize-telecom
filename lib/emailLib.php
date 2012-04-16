@@ -1,5 +1,8 @@
 <?php
 require_once(sfConfig::get('sf_lib_dir') . '/changeLanguageCulture.php');
+// $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
+//replace with  $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
+
 
 class emailLib {
 
@@ -41,8 +44,8 @@ class emailLib {
         //Support Information
         $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
-        $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2');
-        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'WLS 2');
+        $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
+        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize');
 
         //------------------Sent The Email To Customer
         //----------------------------------------
@@ -54,7 +57,7 @@ class emailLib {
             $email2->setReceipientName($recepient_agent_name);
             $email2->setReceipientEmail($recepient_agent_email);
             $email2->setAgentId($agent_company_id);
-            $email2->setEmailType('WLS 2 refill via agent');
+            $email2->setEmailType('Moiize refill via agent');
             $email2->setMessage($message_body);
 
             $email2->save();
@@ -67,7 +70,7 @@ class emailLib {
             $email3->setReceipientName($sender_name);
             $email3->setReceipientEmail($sender_email);
             $email3->setAgentId($agent_company_id);
-            $email3->setEmailType('WLS 2 refill via agent');
+            $email3->setEmailType('Moiize refill via agent');
             $email3->setMessage($message_body);
             $email3->save();
         endif;
@@ -79,7 +82,7 @@ class emailLib {
             $email4->setReceipientName($sender_namecdu);
             $email4->setReceipientEmail($sender_emailcdu);
             $email4->setAgentId($agent_company_id);
-            $email4->setEmailType('WLS 2 refill via agent');
+            $email4->setEmailType('Moiize refill via agent');
             $email4->setMessage($message_body);
             $email4->save();
         endif;
@@ -131,8 +134,8 @@ class emailLib {
         //Support Information
         $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
-        $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2');
-        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'WLS 2');
+        $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
+        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize');
 
         //------------------Sent The Email To Customer
         if (trim($recepient_email) != '') {
@@ -142,7 +145,7 @@ class emailLib {
             $email->setReceipientEmail($recepient_email);
             $email->setAgentId($agent_company_id);
             $email->setCutomerId($customer_id);
-            $email->setEmailType('WLS 2 refill via agent');
+            $email->setEmailType('Moiize refill via agent');
             $email->setMessage($message_body);
             $email->save();
         }
@@ -156,7 +159,7 @@ class emailLib {
             $email2->setReceipientEmail($recepient_agent_email);
             $email2->setAgentId($agent_company_id);
             $email2->setCutomerId($customer_id);
-            $email2->setEmailType('WLS 2 refill via agent');
+            $email2->setEmailType('Moiize refill via agent');
             $email2->setMessage($message_body);
 
             $email2->save();
@@ -170,7 +173,7 @@ class emailLib {
             $email3->setReceipientEmail($sender_email);
             $email3->setAgentId($agent_company_id);
             $email3->setCutomerId($customer_id);
-            $email3->setEmailType('WLS 2 refill via agent');
+            $email3->setEmailType('Moiize refill via agent');
             $email3->setMessage($message_body);
             $email3->save();
         endif;
@@ -183,7 +186,7 @@ class emailLib {
             $email4->setReceipientEmail($sender_emailcdu);
             $email4->setAgentId($agent_company_id);
             $email4->setCutomerId($customer_id);
-            $email4->setEmailType('WLS 2 refill via agent');
+            $email4->setEmailType('Moiize refill via agent');
             $email4->setMessage($message_body);
             $email4->save();
         endif;
@@ -230,8 +233,8 @@ class emailLib {
         //Support Information
         $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
-        $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2');
-        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'WLS 2');
+        $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
+        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize');
 
         //------------------Sent The Email To Customer
         if (trim($recepient_email) != '') {
@@ -241,7 +244,7 @@ class emailLib {
             $email->setReceipientEmail($recepient_email);
             $email->setAgentId($agent_company_id);
             $email->setCutomerId($customer_id);
-            $email->setEmailType('WLS 2 Customer registration via agent');
+            $email->setEmailType('Moiize Customer registration via agent');
             $email->setMessage($message_body);
             $email->save();
         }
@@ -255,7 +258,7 @@ class emailLib {
             $email2->setReceipientEmail($recepient_agent_email);
             $email2->setAgentId($agent_company_id);
             $email2->setCutomerId($customer_id);
-            $email2->setEmailType('WLS 2 Customer registration via agent');
+            $email2->setEmailType('Moiize Customer registration via agent');
             $email2->setMessage($message_body);
 
             $email2->save();
@@ -269,7 +272,7 @@ class emailLib {
             $email3->setReceipientEmail($sender_email);
             $email3->setAgentId($agent_company_id);
             $email3->setCutomerId($customer_id);
-            $email3->setEmailType('WLS 2 Customer registration via agent');
+            $email3->setEmailType('Moiize Customer registration via agent');
             $email3->setMessage($message_body);
             $email3->save();
         endif;
@@ -282,7 +285,7 @@ class emailLib {
             $email4->setReceipientEmail($sender_emailcdu);
             $email4->setAgentId($agent_company_id);
             $email4->setCutomerId($customer_id);
-            $email4->setEmailType('WLS 2 Customer registration via agent');
+            $email4->setEmailType('Moiize Customer registration via agent');
             $email4->setMessage($message_body);
             $email4->save();
         endif;
@@ -299,8 +302,8 @@ class emailLib {
         $referrer_id = trim($customer->getReferrerId());
 
         //Support Information
-        $sender_email = sfConfig::get('app_email_sender_email', 'support@WLS 2.com');
-        $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2 support');
+        $sender_email = sfConfig::get('app_email_sender_email', 'support@moiize.com');
+        $sender_name = sfConfig::get('app_email_sender_name', 'Moiize support');
 
         //------------------Sent The Email To Customer
         if (trim($recepient_email) != '') {
@@ -310,7 +313,7 @@ class emailLib {
             $email->setReceipientEmail($recepient_email);
             $email->setCutomerId($customer_id);
             $email->setAgentId($referrer_id);
-            $email->setEmailType('WLS 2 Forget Password');
+            $email->setEmailType('Moiize Forget Password');
             $email->setMessage($message_body);
             $email->save();
         }
@@ -362,7 +365,7 @@ class emailLib {
             $email->setReceipientEmail($recepient_email);
             $email->setAgentId($referrer_id);
             $email->setCutomerId($customer_id);
-            $email->setEmailType('WLS 2 Customer Registration');
+            $email->setEmailType('Moiize Customer Registration');
             $email->setMessage($message_body);
             $email->save();
         }
@@ -375,7 +378,7 @@ class emailLib {
             $email2->setReceipientEmail($recepient_agent_email);
             $email2->setAgentId($referrer_id);
             $email2->setCutomerId($customer_id);
-            $email2->setEmailType('WLS 2 Customer Registration');
+            $email2->setEmailType('Moiize Customer Registration');
             $email2->setMessage($message_body);
             $email2->save();
         endif;
@@ -388,7 +391,7 @@ class emailLib {
             $email3->setReceipientEmail($sender_email);
             $email3->setAgentId($referrer_id);
             $email3->setCutomerId($customer_id);
-            $email3->setEmailType('WLS 2 refill via agent');
+            $email3->setEmailType('Moiize refill via agent');
             $email3->setMessage($message_body);
             $email3->save();
         endif;
@@ -401,7 +404,7 @@ class emailLib {
             $email4->setReceipientEmail($sender_emailcdu);
             $email4->setAgentId($referrer_id);
             $email4->setCutomerId($customer_id);
-            $email4->setEmailType('WLS 2 refill via agent');
+            $email4->setEmailType('Moiize refill via agent');
             $email4->setMessage($message_body);
             $email4->save();
         endif;
@@ -412,9 +415,9 @@ class emailLib {
 
         $subject = __('Payment Confirmation');
         $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
-        $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2 ');
+        $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
-        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'WLS 2 ');
+        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize');
 
         $recepient_email = trim($customer->getEmail());
         $recepient_name = sprintf('%s %s', $customer->getFirstName(), $customer->getLastName());
@@ -430,7 +433,7 @@ class emailLib {
             $email->setReceipientName($recepient_name);
             $email->setCutomerId($customer_id);
             $email->setAgentId($referrer_id);
-            $email->setEmailType('WLS 2 Customer Auto Refill');
+            $email->setEmailType('Moiize Customer Auto Refill');
 
             $email->save();
         endif;
@@ -444,7 +447,7 @@ class emailLib {
             $email2->setReceipientName($sender_name);
             $email2->setCutomerId($customer_id);
             $email2->setAgentId($referrer_id);
-            $email2->setEmailType('WLS 2 Customer Auto Refill');
+            $email2->setEmailType('Moiize Customer Auto Refill');
             $email2->save();
         endif;
 ////////////////////////////////////////////////////////
@@ -457,7 +460,7 @@ class emailLib {
             $email3->setReceipientName($sender_namecdu);
             $email3->setCutomerId($customer_id);
             $email3->setAgentId($referrer_id);
-            $email3->setEmailType('WLS 2 Customer Auto Refill');
+            $email3->setEmailType('Moiize Customer Auto Refill');
             $email3->save();
         endif;
     }
@@ -467,9 +470,9 @@ class emailLib {
 
         $subject = __('Payment Confirmation');
         $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
-        $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2 ');
+        $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
-        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'WLS 2 ');
+        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize');
 
         $recepient_email = trim($customer->getEmail());
         $recepient_name = sprintf('%s %s', $customer->getFirstName(), $customer->getLastName());
@@ -486,7 +489,7 @@ class emailLib {
             $email->setReceipientName($recepient_name);
             $email->setCutomerId($customer_id);
             $email->setAgentId($referrer_id);
-            $email->setEmailType('WLS 2 Customer Confirm Payment');
+            $email->setEmailType('Moiize Customer Confirm Payment');
 
             $email->save();
         endif;
@@ -512,7 +515,7 @@ class emailLib {
             $email3->setReceipientName($sender_namecdu);
             $email3->setCutomerId($customer_id);
             $email3->setAgentId($referrer_id);
-            $email3->setEmailType('WLS 2 Customer Confirm Payment');
+            $email3->setEmailType('Moiize Customer Confirm Payment');
             $email3->save();
         endif;
     }
@@ -532,7 +535,7 @@ class emailLib {
         $sender_email = sfConfig::get('app_email_sender_email', 'support@wls.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2 support');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
-        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'WLS 2 support');
+        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize support');
 
         sfContext::getInstance()->getConfiguration()->loadHelpers('Partial');
         $message_body = get_partial('pScripts/bonus_web_reg', array(
@@ -556,7 +559,7 @@ class emailLib {
             $email->setReceipientName($recepient_name);
             $email->setCutomerId($customer_id);
             //$email->setAgentId($referrer_id);
-            $email->setEmailType('WLS 2 Customer Confirm Bonus');
+            $email->setEmailType('Moiize 2 Customer Confirm Bonus');
 
             $email->save();
         endif;
@@ -570,7 +573,7 @@ class emailLib {
             $email2->setReceipientName($sender_name);
             $email2->setCutomerId($customer_id);
             //$email2->setAgentId($referrer_id);
-            $email2->setEmailType('WLS 2 Customer Confirm Bonus');
+            $email2->setEmailType('Moiize 2 Customer Confirm Bonus');
             $email2->save();
         endif;
         //////////////////////////////////////////////////////////////////
@@ -656,7 +659,7 @@ class emailLib {
         $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2 ');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
-        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'WLS 2 ');
+        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize');
 
         //------------------Sent The Email To Customer
         if ($recepient_email != '') {
@@ -736,8 +739,8 @@ class emailLib {
         //Support Information
         $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
-        $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2');
-        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'WLS 2');
+        $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
+        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize');
 
         //------------------Sent The Email To Customer
         //------------------Sent the Email To Agent
@@ -838,8 +841,8 @@ class emailLib {
         //Support Information
         $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_emailcdu = sfConfig::get('app_email_sender_email_cdu', 'rs@zapna.com');
-        $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2');
-        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'WLS 2');
+        $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
+        $sender_namecdu = sfConfig::get('app_email_sender_name_cdu', 'Moiize');
 
         //------------------Sent The Email To Customer
         if (trim($recepient_email) != '') {
@@ -944,7 +947,7 @@ class emailLib {
         $message_body = "<table width='600px'><tr style='border:0px solid #fff'><td colspan='4' align='right' style='text-align:right; border:0px solid #fff'>" . image_tag('https://wls2.zerocall.com/images/logo.gif') . "</tr></table><table cellspacing='0' width='600px'><tr><td>Grattis till ditt nya resenummer. Detta nummer är alltid kopplat till den telefon där du har Smartsim aktiverat. Med resenumret blir du nådd utomlands då du har ett lokalt SIM-kort. Se prislistan för hur mycket det kostar att ta emot samtal.
 Ditt resenummer är $voipnumbers.<br/><br/>
 Med vänlig hälsning<br/><br/>
-WLS2<br/><a href='http://www.wls2.zerocall.com.com'>www.wls2.zerocall.com.com</a></td></tr></table>";
+WLS2<br/><a href='http://www.Moiize.com.com'>www.Moiize.com</a></td></tr></table>";
 
         //Support Information
         $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
@@ -1037,13 +1040,13 @@ WLS2<br/><a href='http://www.wls2.zerocall.com.com'>www.wls2.zerocall.com.com</a
         $message_body = "<table width='600px'><tr style='border:0px solid #fff'><td colspan='4' align='right' style='text-align:right; border:0px solid #fff'></tr></table><table cellspacing='0' width='600px'><tr><td>
              " . $message . " <br/><br/>
 Med vänlig hälsning<br/><br/>
-WLS2<br/><a href='http://www.wls2.zerocall.com.com'>www.wls2.zerocall.com.com</a></td></tr></table>";
+WLS2<br/><a href='http://www.Moiize.com'>www.Moiize.com</a></td></tr></table>";
 
         //Support Information
         $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2');
         $sender_emailcdu = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
-        $sender_namecdu = sfConfig::get('app_email_sender_name', 'WLS 2');
+        $sender_namecdu = sfConfig::get('app_email_sender_name', 'Moiize 2');
 
 
         //--------------Sent The Email To okhan
@@ -1080,7 +1083,7 @@ WLS2<br/><a href='http://www.wls2.zerocall.com.com'>www.wls2.zerocall.com.com</a
         $message_body = "<table width='600px'><tr style='border:0px solid #fff'><td colspan='4' align='right' style='text-align:right; border:0px solid #fff'></tr></table><table cellspacing='0' width='600px'><tr><td>
              " . $message . " <br/><br/>
 Uniuqe Ids finsihed.<br/><br/>
-WLS2<br/><a href='http://www.wls2.zerocall.com.com'>www.wls2.zerocall.com.com</a></td></tr></table>";
+WLS2<br/><a href='http://www.moiize.com.com'>www.wls2.zerocall.com.com</a></td></tr></table>";
 
         //Support Informationt
         $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
@@ -1123,7 +1126,7 @@ WLS2<br/><a href='http://www.wls2.zerocall.com.com'>www.wls2.zerocall.com.com</a
         $message_body = "<table width='600px'><tr style='border:0px solid #fff'><td colspan='4' align='right' style='text-align:right; border:0px solid #fff'></tr></table><table cellspacing='0' width='600px'><tr><td>
              " . $message . " <br/><br/>
 Uniuqe Id " . $uniqueid . " has issue while assigning on " . $customer->getMobileNumber() . "<br/><br/>
-wls2<br/><a href='http://www.wls2.zerocall.com.com'>www.wls2.zerocall.com.com</a></td></tr></table>";
+wls2<br/><a href='http://www.moiize.com'>www.wls2.zerocall.com.com</a></td></tr></table>";
 
         //Support Informationt
         $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
@@ -1166,7 +1169,7 @@ wls2<br/><a href='http://www.wls2.zerocall.com.com'>www.wls2.zerocall.com.com</a
         $message_body = "<table width='600px'><tr style='border:0px solid #fff'><td colspan='4' align='right' style='text-align:right; border:0px solid #fff'></tr></table><table cellspacing='0' width='600px'><tr><td>
              " . $message . " <br/><br/>
 Uniuqe Id " . $uniqueid . " has issue while assigning on " . $customer->getMobileNumber() . " in sms registration<br/><br/>
-WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></tr></table>";
+WLS2<br/><a href='http://www.moiize.com'>www.wls2.zerocall.com</a></td></tr></table>";
 
         //Support Informationt
         $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
@@ -1355,8 +1358,8 @@ WLS2<br/><a href='http://www.wls2.zerocall.com'>www.wls2.zerocall.com</a></td></
         $recepient_name = sprintf('%s', $company->getContactName());
         $company_id    = $company->getId();
         //Support Information
-        $sender_email = sfConfig::get('app_email_sender_email', 'support@zerocall.com');
-        $sender_name = sfConfig::get('app_email_sender_name', 'Zerocall support');
+    //    $sender_email = sfConfig::get('app_email_sender_email', 'support@zerocall.com');
+        $sender_name = sfConfig::get('app_email_sender_name', 'Moziie support');
 
         //------------------Sent The Email To Company Agent
         if (trim($recepient_email) != '') {

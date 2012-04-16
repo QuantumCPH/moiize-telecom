@@ -37,6 +37,12 @@ class employeeActions extends sfActions {
         $pr->add(ProductPeer::ID, 1);
         //$pr->add(ProductPeer::IS_IN_ZAPNA, 1);
         $this->products = ProductPeer::doSelect($pr);
+        // created by kmmalik.com for new module of telinta product
+        $tp = new Criteria();
+        $this->telintaProducts = TelintaProductPeer::doSelect($tp);
+        // created by kmmalik.com for new module of telinta Routing plan
+        $trp = new Criteria();
+        $this->telintaRoutingplans = TelintaRoutingplanPeer::doSelect($trp);
     }
 
     protected function addFiltersCriteria($c) {
@@ -58,7 +64,7 @@ class employeeActions extends sfActions {
     public function executeView($request) {
         $this->employee = EmployeePeer::retrieveByPK($request->getParameter('id'));
         $ct = new Criteria();
-        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp").$this->employee->getCompanyId(). $this->employee->getId());
+        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp") . $this->employee->getCompanyId() . $this->employee->getId());
         $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
         $account_info = CompanyEmployeActivation::getAccountInfo($telintaAccount->getIAccount());
@@ -111,8 +117,15 @@ class employeeActions extends sfActions {
         $pr = new Criteria();
         $pr->add(ProductPeer::ID, 1);
         $this->products = ProductPeer::doSelect($pr);
+        // created by kmmalik.com for new module of telinta product
+        $tp = new Criteria();
+        $this->telintaProducts = TelintaProductPeer::doSelect($tp);
+        // created by kmmalik.com for new module of telinta Routing plan
+        $trp = new Criteria();
+        $this->telintaRoutingplans = TelintaRoutingplanPeer::doSelect($trp);
     }
-      public function executeAddMultiple($request) {
+
+    public function executeAddMultiple($request) {
 
         $this->companyval = $request->getParameter('company_id');
 
@@ -122,6 +135,12 @@ class employeeActions extends sfActions {
         $pr = new Criteria();
         $pr->add(ProductPeer::ID, 1);
         $this->products = ProductPeer::doSelect($pr);
+        // created by kmmalik.com for new module of telinta product
+        $tp = new Criteria();
+        $this->telintaProducts = TelintaProductPeer::doSelect($tp);
+        // created by kmmalik.com for new module of telinta Routing plan
+        $trp = new Criteria();
+        $this->telintaRoutingplans = TelintaRoutingplanPeer::doSelect($trp);
     }
 
     public function executeSaveEmployee($request) {
@@ -134,61 +153,64 @@ class employeeActions extends sfActions {
         $c = new Criteria();
         $c->addAnd(CompanyPeer::ID, $request->getParameter('company_id'));
         $this->companys = CompanyPeer::doSelectOne($c);
-        
+//echo $request->getParameter('telintaProductId');
+//echo "<br/>".$request->getParameter('telintaRoutingplanId');
+//
+//die;
         $employee = new Employee();
         $employee->setCompanyId($request->getParameter('company_id'));
         $employee->setFirstName($request->getParameter('first_name'));
         $employee->setProductId($request->getParameter('productid'));
+        $employee->setTelintaProductId($request->getParameter('telintaProductId'));
+        $employee->setTelintaRoutingplanId($request->getParameter('telintaRoutingplanId'));
         $employee->save();
-        $voipAccount =sfConfig::get("app_telinta_emp").$this->companys->getId().$employee->getId();
+        $voipAccount = sfConfig::get("app_telinta_emp") . $this->companys->getId() . $employee->getId();
 
-        CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys);
-      
+        CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys, $employee->getTelintaProductId(), $employee->getTelintaRoutingplanId());
+
         $this->getUser()->setFlash('messageAdd', 'PCO Line has been added successfully' . (isset($msg) ? "and " . $msg : ''));
         $this->redirect('employee/index?message=add');
     }
 
-
-
     public function executeSaveMultipleEmployee($request) {
 
-    $numberOfEmployee=0;
+        $numberOfEmployee = 0;
         //$contrymobilenumber = $request->getParameter('country_code') . $request->getParameter('mobile_number');
         //$employeMobileNumber=$contrymobilenumber;
-        $numberOfLines=$request->getParameter('numberOfLines');
-            $c = new Criteria();
+        $numberOfLines = $request->getParameter('numberOfLines');
+        $c = new Criteria();
         $c->addAnd(CompanyPeer::ID, $request->getParameter('company_id'));
         $this->companys = CompanyPeer::doSelectOne($c);
-          $ec = new Criteria();
+        $ec = new Criteria();
         $ec->addAnd(EmployeePeer::COMPANY_ID, $request->getParameter('company_id'));
         $numberOfEmployee = EmployeePeer::doCount($ec);
         $numberOfEmployee++;
-        $i=1;
-while($i<=$numberOfLines)
-  {
+        $i = 1;
+        while ($i <= $numberOfLines) {
 
- 
-    
-$employeeName="Line ".$numberOfEmployee;
 
-        $employee = new Employee();
-        $employee->setCompanyId($request->getParameter('company_id'));
-        $employee->setFirstName($employeeName);
-        $employee->setProductId($request->getParameter('productid'));
-        $employee->save();
-        $voipAccount =sfConfig::get("app_telinta_emp").$this->companys->getId().$employee->getId();
-         $numberOfEmployee;
-        CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys);
 
-  $numberOfEmployee++;
- $i++;
-  }
-  
-  $this->getUser()->setFlash('messageAdd', 'PCO Line has been added successfully' . (isset($msg) ? "and " . $msg : ''));
+            $employeeName = "Line " . $numberOfEmployee;
+
+            $employee = new Employee();
+            $employee->setCompanyId($request->getParameter('company_id'));
+            $employee->setFirstName($employeeName);
+            $employee->setProductId($request->getParameter('productid'));
+            $employee->setTelintaProductId($request->getParameter('telintaProductId'));
+            $employee->setTelintaRoutingplanId($request->getParameter('telintaRoutingplanId'));
+            $employee->save();
+            $voipAccount = sfConfig::get("app_telinta_emp") . $this->companys->getId() . $employee->getId();
+            $numberOfEmployee;
+
+            CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys, $employee->getTelintaProductId(), $employee->getTelintaRoutingplanId());
+
+            $numberOfEmployee++;
+            $i++;
+        }
+
+        $this->getUser()->setFlash('messageAdd', 'PCO Line has been added successfully' . (isset($msg) ? "and " . $msg : ''));
         $this->redirect('employee/index?message=add');
     }
-
-
 
     public function executeUpdateEmployee(sfWebRequest $request) {
         $c = new Criteria();
@@ -196,11 +218,12 @@ $employeeName="Line ".$numberOfEmployee;
         $c->add(CompanyPeer::ID, $request->getParameter('company_id'));
 
         $compny = CompanyPeer::doSelectOne($c);
-
         $companyCVR = $compny->getVatNo();
         // $rtype=$request->getParameter('registration_type');
-
         $employee = EmployeePeer::retrieveByPk($request->getParameter('id'));
+        if ($employee->getTelintaProductId()!=$request->getParameter('telintaProductId') || $employee->getTelintaRoutingplanId()!=$request->getParameter('telintaRoutingplanId')) {
+            CompanyEmployeActivation::updateAccount($employee, $request->getParameter('telintaProductId'), $request->getParameter('telintaRoutingplanId'));
+        }
 
         $c = new Criteria();
         $c->addAnd(CompanyPeer::ID, $employee->getCompanyId());
@@ -210,20 +233,17 @@ $employeeName="Line ".$numberOfEmployee;
 
         $employee->setFirstName($request->getParameter('first_name'));
         $employee->setLastName($request->getParameter('last_name'));
-        // $employee->setCountryCode($request->getParameter('country_code'));
-        // $employee->setCountryMobileNumber($contrymobilenumber);
+
         $employee->setMobileNumber($request->getParameter('mobile_number'));
         $employee->setEmail($request->getParameter('email'));
-        /*     $employee->setAppCode($request->getParameter('app_code'));
-          $employee->setIsAppRegistered($request->getParameter('is_app_registered'));
-          $employee->setPassword($request->getParameter('password')); */
-        //$employee->setRegistrationType($rtype);
+
         $employee->setProductId($request->getParameter('productid'));
-        //  $employee->setProductPrice($request->getParameter('price'));
+        $employee->setTelintaProductId($request->getParameter('telintaProductId'));
+        $employee->setTelintaRoutingplanId($request->getParameter('telintaRoutingplanId'));
         $employee->setDeleted($request->getParameter('deleted'));
         $employee->save();
         $this->getUser()->setFlash('messageEdit', 'PCO Line has been edited successfully' . (isset($msg) ? "and " . $msg : ''));
-        //$this->message = "employee added successfully";
+
         $this->redirect('employee/index?message=edit');
         // return sfView::NONE;
     }
@@ -240,7 +260,7 @@ $employeeName="Line ".$numberOfEmployee;
         $contrymobilenumber = $employees->getCountryMobileNumber();
 
         $ct = new Criteria();
-        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp").$employees->getCompanyId(). $employees->getId());
+        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp") . $employees->getCompanyId() . $employees->getId());
         $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
         if (!CompanyEmployeActivation::terminateAccount($telintaAccount)) {
@@ -314,18 +334,17 @@ $employeeName="Line ".$numberOfEmployee;
         $c->addAnd(CompanyPeer::ID, $this->employee->getCompanyId());
         $this->companys = CompanyPeer::doSelectOne($c);
 
-        $tomorrow1 = mktime(0,0,0,date("m"),date("d")-15,date("Y"));
-        $fromdate=date("Y-m-d", $tomorrow1);
-        $tomorrow = mktime(0,0,0,date("m"),date("d")+1,date("Y"));
-        $todate=date("Y-m-d", $tomorrow);
+        $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
+        $fromdate = date("Y-m-d", $tomorrow1);
+        $tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
+        $todate = date("Y-m-d", $tomorrow);
 
         $mobilenumber = $this->employee->getCountryMobileNumber();
         $ct = new Criteria();
-        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp").$this->employee->getCompanyId(). $this->employee->getId());
+        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp") . $this->employee->getCompanyId() . $this->employee->getId());
         $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
         $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $fromdate, $todate);
-        
     }
 
     public function executeMobile(sfWebRequest $request) {
