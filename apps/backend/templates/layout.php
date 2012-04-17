@@ -120,11 +120,13 @@
                       }
                      }?>
                     <?php 
+                    if($sf_user->getAttribute('role_id', '', 'backendsession')==4){
                       if($actionName=='agentCharge'){
                          echo link_to(__('Charge'), 'company/agentCharge', array('class'=>'subSelect'));    
                       }else{
                           echo link_to(__('Charge'), 'company/agentCharge');                          
-                      } ?>
+                      } 
+                    } ?>
                     
                 </div>
             </li>
@@ -322,15 +324,14 @@
                         }
                         ?>
                         <?php
-                        if($actionName=='index' && $modulName=="transactionDescription"){
-                          echo link_to(__('Transaction Description'), 'transactionDescription/index',array('class'=>'subSelect'));
-                        }else{
-                          echo link_to(__('Transaction Description'), 'transactionDescription/index');
+                        if($sf_user->getAttribute('role_id', '', 'backendsession')==4){
+                            if($actionName=='index' && $modulName=="transactionDescription"){
+                              echo link_to(__('Transaction Description'), 'transactionDescription/index',array('class'=>'subSelect'));
+                            }else{
+                              echo link_to(__('Transaction Description'), 'transactionDescription/index');
+                            }
                         }
                         ?>
-
-
-
                         <?php 
                         if($actionName=='list' && $modulName=="sms_text"){
                           echo link_to(__('SMS Text'), 'sms_text/index',array('class'=>'subSelect'));
