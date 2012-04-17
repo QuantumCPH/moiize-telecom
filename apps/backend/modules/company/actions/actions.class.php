@@ -527,7 +527,7 @@ class companyActions extends sfActions {
                 $transaction->save();
                 $adminUser = UserPeer::retrieveByPK($this->getUser()->getAttribute('user_id', '', 'backendsession'));
                 emailLib::sendCompanyRefillEmail($this->company, $transaction,$adminUser);
-                $this->getUser()->setFlash('message', 'Agent Refill Successfully');
+                $this->getUser()->setFlash('message', 'Agent Charged Successfully');
                 $this->redirect('company/paymenthistory');
             } else {
 
