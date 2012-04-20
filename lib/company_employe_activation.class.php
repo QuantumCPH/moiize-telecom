@@ -39,7 +39,7 @@ class CompanyEmployeActivation {
                             'i_parent' => self::$iParent,
                             'i_customer_type' => 1,
                             'opening_balance' => 0,
-                            'credit_limit' => null,
+                            'credit_limit' => 0,
                             'dialing_rules' => array('ip' => '00', "cc" => "34"),
                             'email' => 'okh@zapna.com'
                             )));
