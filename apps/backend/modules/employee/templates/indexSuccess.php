@@ -138,7 +138,7 @@
         $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp").$comid.$employee->getId());
         $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAcc = TelintaAccountsPeer::doSelectOne($ct);
-        if($telintaAcc){ echo $telintaAcc->getIAccount();
+        if($telintaAcc){ //echo $telintaAcc->getIAccount();
         $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAcc->getIAccount());
         echo  $accountInfo->account_info->password;
         }  
