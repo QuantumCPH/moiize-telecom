@@ -20,6 +20,8 @@ class BaseCompanyTransactionForm extends BaseFormPropel
       'paymentType'           => new sfWidgetFormInput(),
       'description'           => new sfWidgetFormTextarea(),
       'transaction_status_id' => new sfWidgetFormInput(),
+      'rent_days'             => new sfWidgetFormInput(),
+      'rent_value'            => new sfWidgetFormInput(),
     ));
 
     $this->setValidators(array(
@@ -31,6 +33,8 @@ class BaseCompanyTransactionForm extends BaseFormPropel
       'paymentType'           => new sfValidatorInteger(),
       'description'           => new sfValidatorString(),
       'transaction_status_id' => new sfValidatorInteger(),
+      'rent_days'             => new sfValidatorInteger(),
+      'rent_value'            => new sfValidatorString(array('max_length' => 255)),
     ));
 
     $this->widgetSchema->setNameFormat('company_transaction[%s]');

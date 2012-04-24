@@ -21,6 +21,8 @@ class BaseCompanyTransactionFormFilter extends BaseFormFilterPropel
       'paymentType'           => new sfWidgetFormFilterInput(),
       'description'           => new sfWidgetFormFilterInput(),
       'transaction_status_id' => new sfWidgetFormFilterInput(),
+      'rent_days'             => new sfWidgetFormFilterInput(),
+      'rent_value'            => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
@@ -31,6 +33,8 @@ class BaseCompanyTransactionFormFilter extends BaseFormFilterPropel
       'paymentType'           => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'description'           => new sfValidatorPass(array('required' => false)),
       'transaction_status_id' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'rent_days'             => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'rent_value'            => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('company_transaction_filters[%s]');
@@ -56,6 +60,8 @@ class BaseCompanyTransactionFormFilter extends BaseFormFilterPropel
       'paymentType'           => 'Number',
       'description'           => 'Text',
       'transaction_status_id' => 'Number',
+      'rent_days'             => 'Number',
+      'rent_value'            => 'Text',
     );
   }
 }
