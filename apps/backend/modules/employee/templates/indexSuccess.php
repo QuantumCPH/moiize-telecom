@@ -88,7 +88,7 @@
       if(isset($pid) && $pid!=""){
                $c = new Criteria();
       $c->add(ProductPeer::ID, $pid);
-  $products = ProductPeer::doSelectOne($c);
+      $products = ProductPeer::doSelectOne($c);
 
               echo $products->getName();
       }
