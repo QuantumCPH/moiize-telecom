@@ -164,7 +164,7 @@ class Telienta {
 
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
         $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
-
+        $batchName="MTB2C".$customer->getUniqueid();
         try {
             $accountName = $accountType . $mobileNumber;
             $account = $pb->add_account(array('account_info' => array(
@@ -180,7 +180,7 @@ class Telienta {
                             'password' => 'asdf1asd',
                             'h323_password' => 'asdf1asd',
                             'activation_date' => date('Y-m-d'),
-                            'batch_name' => $customer->getUniqueid(),
+                            'batch_name' => $batchName,
                             'follow_me_enabled' => $followMeEnabled
                             )));
         } catch (SoapFault $e) {
