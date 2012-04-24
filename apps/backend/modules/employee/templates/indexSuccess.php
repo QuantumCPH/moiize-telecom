@@ -96,7 +96,7 @@
       </td>
  <?php  if(isset($companyval) && $companyval!=""){  ?>
       <td> <?php
-        echo $companyval;
+        //echo $companyval;
         $mobileID= $employee->getCountryMobileNumber();
         $telintaGetBalance = 0;
 
@@ -128,7 +128,7 @@
     <!--  <td align="center">  <?php //$appval=$employee->getIsAppRegistered();  if(isset($appval) && $appval==1){   ?> <img alt="Tick" src="/sf/sf_admin/images/tick.png">  <?php //} ?></td>
        <td><?php //echo $employee->getAppCode() ?></td>-->
        <td><?php //echo $employee->getPassword() 
-     echo   $comid=$employee->getCompanyId();
+        $comid=$employee->getCompanyId();
         $mobileID= $employee->getCountryMobileNumber();
         //$telintaGetBalance = 0;
 
@@ -138,7 +138,7 @@
         $telintaAcc = TelintaAccountsPeer::doSelectOne($ct);
 
         $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAcc->getIAccount());
-        print_r($accountInfo);
+        echo  $accountInfo->password;
         //$telintaGetBalance = $accountInfo->account_info->balance;
        ?></td>
        <td><a href="<?php echo url_for('employee/edit?id='.$employee->getId()) ?>"><img src="/sf/sf_admin/images/edit_icon.png" title=<?php echo __("edit")?> alt=<?php echo __("edit")?>></a>
