@@ -140,7 +140,7 @@
         $telintaAcc = TelintaAccountsPeer::doSelectOne($ct);
         if($telintaAcc){ //echo $telintaAcc->getIAccount();
         $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAcc->getIAccount());
-        echo  $accountInfo->account_info->password;
+        echo  $accountInfo->account_info->h323_password;
         }  
        ?></td>
        <td><a href="<?php echo url_for('employee/edit?id='.$employee->getId()) ?>"><img src="/sf/sf_admin/images/edit_icon.png" title=<?php echo __("edit")?> alt=<?php echo __("edit")?>></a>
