@@ -23,9 +23,12 @@ class BaseCompanyTransactionFormFilter extends BaseFormFilterPropel
       'transaction_status_id' => new sfWidgetFormFilterInput(),
       'rent_days'             => new sfWidgetFormFilterInput(),
       'rent_value'            => new sfWidgetFormFilterInput(),
+<<<<<<< HEAD
       'transaction_type'      => new sfWidgetFormFilterInput(),
       'old_balance'           => new sfWidgetFormFilterInput(),
       'new_balance'           => new sfWidgetFormFilterInput(),
+=======
+>>>>>>> 35af97e6ea5f242e6f0f6c27d3ca5d9e474edc8c
     ));
 
     $this->setValidators(array(
@@ -38,9 +41,12 @@ class BaseCompanyTransactionFormFilter extends BaseFormFilterPropel
       'transaction_status_id' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'rent_days'             => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'rent_value'            => new sfValidatorPass(array('required' => false)),
+<<<<<<< HEAD
       'transaction_type'      => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'old_balance'           => new sfValidatorPass(array('required' => false)),
       'new_balance'           => new sfValidatorPass(array('required' => false)),
+=======
+>>>>>>> 35af97e6ea5f242e6f0f6c27d3ca5d9e474edc8c
     ));
 
     $this->widgetSchema->setNameFormat('company_transaction_filters[%s]');
@@ -68,9 +74,12 @@ class BaseCompanyTransactionFormFilter extends BaseFormFilterPropel
       'transaction_status_id' => 'Number',
       'rent_days'             => 'Number',
       'rent_value'            => 'Text',
+<<<<<<< HEAD
       'transaction_type'      => 'Number',
       'old_balance'           => 'Text',
       'new_balance'           => 'Text',
+=======
+>>>>>>> 35af97e6ea5f242e6f0f6c27d3ca5d9e474edc8c
     );
   }
 }

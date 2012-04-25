@@ -83,9 +83,12 @@
       <?php if($sf_user->isAuthenticated()): ?>
      <div class="topNav">  
       <ul id="sddm">
-             <li><a href="#"
+             <li>
+                 
+                 <a href="#"
                 onmouseover="mopen('m2')"
                 onmouseout="mclosetime()" <?php echo $modulName=='company'||$modulName=='employee'? 'class = "current"':''?>><?php echo __('PCO Agents') ?></a>
+                 
                 <div id="m2"
                     onmouseover="mcancelclosetime()"
                     onmouseout="mclosetime()">                    
@@ -128,23 +131,23 @@
                     
                 </div>
             </li>
-          <!--   <li>
+           <li>
                 <a href="#"
                 onmouseover="mopen('m5')"
-                onmouseout="mclosetime()" <?php echo $modulName=='customer'? 'class = "current"':''?>><?php echo __('Wls2') ?></a>
+                onmouseout="mclosetime()" <?php echo $modulName=='customer'? 'class = "current"':''?>><?php echo __('Line Rent') ?></a>
                 <div id="m5"
                     onmouseover="mcancelclosetime()"
                     onmouseout="mclosetime()">
                     <?php 
-                     if($actionName=="allRegisteredCustomer"){
-                         echo link_to(__('All Registered Customer'), 'customer/allRegisteredCustomer', array('class'=>'subSelect')); 
+                     if($actionName=="rentLine"){
+                         echo link_to(__('Line Rent List'), 'lineRent/index', array('class'=>'subSelect'));
                      }else{
-                         echo link_to(__('All Registered Customer'), 'customer/allRegisteredCustomer');
+                         echo link_to(__('Line Rent List'), 'lineRent/index');
                      }?>
                 </div>
             </li>
 
-         <li>
+         <!--  <li>wo api  ki waja sy hy wo test number pr th
                 <a href="#"
                 onmouseover="mopen('m3')"
                 onmouseout="mclosetime()" <?php echo $modulName=="agent_user" || $modulName=="agent_company" || $modulName=="agent_commission" || $modulName=="agent_commission_package" ?'class="current"':''?>><?php echo __('Agents') ?></a>
