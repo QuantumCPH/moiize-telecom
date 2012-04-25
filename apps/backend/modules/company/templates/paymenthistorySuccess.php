@@ -9,6 +9,21 @@
         </div>
     </div>
 <?php } ?>
+<form method="POST" >
+
+<table width="75%" cellspacing="0" cellpadding="2" class="tblAlign">
+    <tr><td>Agent Name: </td><td><select name="company_id"><?php  foreach($companies as $company){ ?>
+                <option value="<?php echo  $company->getId();?>" <?php  if($companyid==$company->getId()){ ?> selected="selected" <?php }  ?>" ><?php echo  $company->getName();  ?> </option>
+  <?php  } ?></select> </td></tr>
+     <tr><td>Payment Type</td><td><select name="transactionType_id"><?php  foreach($transactionstypes as $transactionstype){ ?>
+                <option value="<?php echo  $transactionstype->getId(); ?>" <?php if($transactionType_id==$transactionstype->getId()){ ?> selected="selected" <?php }  ?>  ><?php echo  $transactionstype->getTitle();  ?> </option>
+  <?php  } ?></select> </td></tr>
+     <tr><td></td><td> <input type="submit" name="Submit"></tr>
+
+
+
+</table>
+</form>
 
 <div id="sf_admin_container"><h1><?php echo __('Payment History') ?></h1>
 <?php if ($sf_user->hasFlash('message')): ?>
