@@ -166,7 +166,7 @@ class employeeActions extends sfActions {
         $employee->save();
         $voipAccount = sfConfig::get("app_telinta_emp") . $this->companys->getId() . $employee->getId();
 
-        CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys, $employee->getTelintaProductId(), $employee->getTelintaRoutingplanId());
+        CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys, $employee);
 
         $this->getUser()->setFlash('messageAdd', 'PCO Line has been added successfully' . (isset($msg) ? "and " . $msg : ''));
         $this->redirect('employee/index?message=add');
@@ -202,7 +202,7 @@ class employeeActions extends sfActions {
             $voipAccount = sfConfig::get("app_telinta_emp") . $this->companys->getId() . $employee->getId();
             $numberOfEmployee;
 
-            CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys, $employee->getTelintaProductId(), $employee->getTelintaRoutingplanId());
+            CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys, $employee);
 
             $numberOfEmployee++;
             $i++;
