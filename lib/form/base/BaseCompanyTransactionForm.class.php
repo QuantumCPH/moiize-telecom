@@ -23,11 +23,17 @@ class BaseCompanyTransactionForm extends BaseFormPropel
       'rent_days'             => new sfWidgetFormInput(),
       'rent_value'            => new sfWidgetFormInput(),
 <<<<<<< HEAD
+<<<<<<< HEAD
       'transaction_type'      => new sfWidgetFormInput(),
       'old_balance'           => new sfWidgetFormInput(),
       'new_balance'           => new sfWidgetFormInput(),
 =======
 >>>>>>> 35af97e6ea5f242e6f0f6c27d3ca5d9e474edc8c
+=======
+      'transaction_type'      => new sfWidgetFormInput(),
+      'old_balance'           => new sfWidgetFormInput(),
+      'new_balance'           => new sfWidgetFormInput(),
+>>>>>>> 9437a5fc371a984352a1d343df295f269d97762f
     ));
 
     $this->setValidators(array(
@@ -41,12 +47,10 @@ class BaseCompanyTransactionForm extends BaseFormPropel
       'transaction_status_id' => new sfValidatorInteger(),
       'rent_days'             => new sfValidatorInteger(),
       'rent_value'            => new sfValidatorString(array('max_length' => 255)),
-<<<<<<< HEAD
       'transaction_type'      => new sfValidatorInteger(),
       'old_balance'           => new sfValidatorString(array('max_length' => 255)),
       'new_balance'           => new sfValidatorString(array('max_length' => 255)),
-=======
->>>>>>> 35af97e6ea5f242e6f0f6c27d3ca5d9e474edc8c
+
     ));
 
     $this->widgetSchema->setNameFormat('company_transaction[%s]');

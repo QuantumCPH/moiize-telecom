@@ -3039,4 +3039,93 @@ if(($caltype!="IC") && ($caltype!="hc")){
     }
 
 
+   public function executeAutoLineRentCharging(sfWebRequest $request){
+
+
+                  $liR = new Criteria();
+        $liR->add(LineRentPeer::RENT_ACTIVE, 1);
+        $lineRentCompanies = LineRentPeer::doSelect($liR);
+
+
+        foreach ($lineRentCompanies as $lineRentCompany) {
+
+            $oldBalance =0;
+
+            $company = CompanyPeer::retrieveByPK($lineRentCompany->getCompanyId());
+            $oldBalance = CompanyEmployeActivation::getBalance($company);
+
+
+            if (isset($oldBalance) && $oldBalance <> 0) {
+
+
+                $Tre = new Criteria();
+                $Tre->add(CompanyTransactionPeer::TRANSACTION_STATUS_ID, 3);
+                $Tre->addAnd(CompanyTransactionPeer::COMPANY_ID, $lineRentCompany->getCompanyId());
+                $Tre->addAnd(CompanyTransactionPeer::TRANSACTION_TYPE, 2);
+                $Tre->addDescendingOrderByColumn(CompanyTransactionPeer::ID);
+                if (CompanyTransactionPeer::doCount($Tre) > 0) {
+                    $Transaction = CompanyTransactionPeer::doSelectOne($Tre);
+
+                  $lastTransactionDate = $Transaction->getCreatedAt();
+             
+                  $lastTransactionDate =strtotime($lastTransactionDate);
+
+                   $tomorrow1 = mktime(0, 0, 0, date("m",$lastTransactionDate), date("d",$lastTransactionDate) + $lineRentCompany->getNumberOfDays(), date("Y",$lastTransactionDate));
+
+                    $dateToday = date("Y-m-d");
+                    $TransactionDateDif = date("Y-m-d", $tomorrow1);
+                    if ($TransactionDateDif > $dateToday) {
+
+                            $transactionpayment =0;
+
+                    } else {
+
+                            $transactionpayment = 1;
+                          
+                    }
+
+
+                    $lineRentCompany->getNumberOfDays();
+                } else {
+                       $dateToday = date("Y-m-d");
+                     $lastTransactionDate =strtotime($lineRentCompany->getCreatedAt());
+                  $createdatDate=mktime(0, 0, 0, date("m",$lastTransactionDate), date("d",$lastTransactionDate) + $lineRentCompany->getNumberOfDays(), date("Y",$lastTransactionDate));
+                  echo   $TransactionDateDif = date("Y-m-d", $createdatDate);
+                    if ($TransactionDateDif > $dateToday) {
+                        $transactionpayment = 0;
+
+                    } else {
+
+                            $transactionpayment = 1;
+
+                    }
+                }
+
+
+          
+                if ($transactionpayment) {
+                    $transaction = new CompanyTransaction();
+                    $transaction->setAmount($lineRentCompany->getRentValue());
+                    $transaction->setCompanyId($lineRentCompany->getCompanyId());
+                    $transaction->setExtraRefill($lineRentCompany->getRentValue());
+                    $transaction->setTransactionStatusId(1);
+                    $transaction->setPaymenttype(9); //Refill
+                    $transaction->setDescription('auto refill');
+                    $transaction->setRentDays($lineRentCompany->getNumberOfDays());
+                    $transaction->setRentValue($lineRentCompany->getRentValue());
+                    $transaction->setOldBalance($oldBalance);
+                    $transaction->setTransactionType(2);
+                    $transaction->save();
+
+                    if (CompanyEmployeActivation::charge($company, $lineRentCompany->getRentValue())) {
+                        $transaction->setTransactionStatusId(3);
+                        $newBalance = CompanyEmployeActivation::getBalance($company);
+                        $transaction->setNewBalance($newBalance);
+                        $transaction->save();
+                    }
+                }
+            }
+        }
+        return sfView::NONE;
+    }
 }
