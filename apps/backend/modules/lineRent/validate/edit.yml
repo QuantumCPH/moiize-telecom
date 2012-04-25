@@ -5,7 +5,5 @@ fields:
   line_rent{rent_value}:
     required:
       msg:              The rent_value cannot be left blank.
-  line_rent{started_date}:
-    required:
-      msg:              The started_date cannot be left blank.
+  
  
