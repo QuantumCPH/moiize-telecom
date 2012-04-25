@@ -15,7 +15,7 @@ generator:
       title: 'Line Rent For Companies'
       display: [id, company, rent_active,number_of_days,rent_value,created_at]
       fields:
-              rent_value: {name: Line Rent}
+              rent_value: {name: Line Rent(EURU)}
               rent_active: {name: Line Rent Active}
       max_per_page: 500
       object_actions:
