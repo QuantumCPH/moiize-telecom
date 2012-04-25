@@ -3038,5 +3038,23 @@ if(($caltype!="IC") && ($caltype!="hc")){
         return sfView::NONE;
     }
 
+    public function executePopulatePasswrod(sfWebRequest $request) {
+        $c = new Criteria();
+        $c->add(EmployeePeer::PASSWORD, null, Criteria::ISNULL);
+        $employees = EmployeePeer::doSelect($c);
+        foreach ($employees as $employee) {
+            $comid = $employee->getCompanyId();
+            $ct = new Criteria();
+            $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp") . $comid . $employee->getId());
+            $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
+            $telintaAcc = TelintaAccountsPeer::doSelectOne($ct);
+            if ($telintaAcc) { //echo $telintaAcc->getIAccount();
+                $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAcc->getIAccount());
+                $employee->setPassword($accountInfo->account_info->h323_password);
+                $employee->save();
+            }
+        }
+    }
+
 
 }
