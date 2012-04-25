@@ -3109,7 +3109,7 @@ if(($caltype!="IC") && ($caltype!="hc")){
                     $transaction->setCompanyId($lineRentCompany->getCompanyId());
                     $transaction->setExtraRefill($lineRentCompany->getRentValue());
                     $transaction->setTransactionStatusId(1);
-                    $transaction->setPaymenttype(9); //Refill
+                    $transaction->setPaymenttype(3); //Refill
                     $transaction->setDescription('auto refill');
                     $transaction->setRentDays($lineRentCompany->getNumberOfDays());
                     $transaction->setRentValue($lineRentCompany->getRentValue());

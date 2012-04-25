@@ -540,13 +540,23 @@ class companyActions extends sfActions {
     
     public function executePaymenthistory(sfWebRequest $request) {
 
+           $cm = new Criteria();
+           $this->companies=CompanyPeer::doSelect($cm);
+             $tr = new Criteria();
+           $this->transactionstypes=TransactionTypePeer::doSelect($tr);
         $c = new Criteria();
         $companyid = $request->getParameter('company_id');
-        $this->companyval = $companyid;
+        $this->companyid=$companyid;
+       $transactionType_id = $request->getParameter('transactionType_id');
+        $this->transactionType_id=$transactionType_id;
+        $this->$transactionType_id = $transactionType_id;
         $c->add(CompanyTransactionPeer::TRANSACTION_STATUS_ID, 3);
 
         if (isset($companyid) && $companyid != '') {
             $c->addAnd(CompanyTransactionPeer::COMPANY_ID, $companyid);
+        }
+         if (isset($transactionType_id) && $transactionType_id != '') {
+            $c->addAnd(CompanyTransactionPeer::PAYMENTTYPE, $transactionType_id);
         }
         $c->addDescendingOrderByColumn(CompanyTransactionPeer::CREATED_AT);
         $this->transactions = CompanyTransactionPeer::doSelect($c);
