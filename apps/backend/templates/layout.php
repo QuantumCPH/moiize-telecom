@@ -131,6 +131,7 @@
                     
                 </div>
             </li>
+              <?php    if($sf_user->getAttribute('role_id', '', 'backendsession')==4){  ?>
            <li>
                 <a href="#"
                 onmouseover="mopen('m5')"
@@ -146,7 +147,7 @@
                      }?>
                 </div>
             </li>
-
+<?php  } ?>
          <!--  <li>wo api  ki waja sy hy wo test number pr th
                 <a href="#"
                 onmouseover="mopen('m3')"
