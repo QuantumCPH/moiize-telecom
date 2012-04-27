@@ -1,0 +1,30 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      LineRent
+    theme:            default
+    css:     /sf/sf_admin/css/admin_main.css
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          categories
+    with_propel_route:     1
+
+    list:
+      title: 'Line Rent For Companies'
+      display: [id, company, rent_active,number_of_days,rent_value,created_at]
+      fields:
+              company: {name: Agent Name}
+              rent_value: {name: Line Rent(EURU)}
+              rent_active: {name: Line Rent Active}
+      max_per_page: 500
+      object_actions:
+              _delete: ~
+              _edit: ~
+    edit:
+      title: 'Create/Edit Line Rent'
+      display: [id, company_id, rent_active,number_of_days,rent_value]
+      fields:
+              rent_value: {name: Line Rent (EURU)}
+              company: {name: Agent Name}

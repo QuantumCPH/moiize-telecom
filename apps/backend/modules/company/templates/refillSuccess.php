@@ -16,7 +16,7 @@
   });
 </script>
 <?php /*if($sf_user->hasFlash('message')){ ?>
-
+ 
 
 <div class="save-ok">
 <h2><?PHP echo __($sf_user->getFlash('message'));?> </h2>
