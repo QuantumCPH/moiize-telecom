@@ -20,10 +20,9 @@
                 <option value="2"> 2</option>
                 <option value="3"> 3</option>
                 <option value="4">4</option>
-              
+     
             </select></td>
                 </tr>
-
                  <tr>
         <td style="padding: 5px;"><?php echo  __('Agent:') ?></td>
         <td style="padding: 5px;">
