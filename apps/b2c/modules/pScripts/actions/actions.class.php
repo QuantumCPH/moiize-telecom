@@ -3069,6 +3069,15 @@ if(($caltype!="IC") && ($caltype!="hc")){
         }
     }
 
+    public function executeGetBalanceFromTelienta(sfWebRequest $request){
+        $c = new Criteria();
+        $c->add(CompanyPeer::I_CUSTOMER, null, Criteria::ISNOTNULL);
+        $companies = CompanyPeer::doSelect($c);
+        foreach($companies as $company){
+            CompanyEmployeActivation::getBalance($company);
+        }
+    }
+
 
    public function executeAutoLineRentCharging(sfWebRequest $request){
 
