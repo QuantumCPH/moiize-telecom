@@ -79,7 +79,8 @@ $incrment++;
     <td colspan="3" align="right"><strong><?php echo __('Total:') ?>&nbsp;&nbsp;</strong></td>
     <td align="right"><?php echo format_number($amount_total);  ?> &euro;</td>
     <td>&nbsp;</td>
-    
+      <td>&nbsp;</td>
+        <td>&nbsp;</td>
 </tr>	
 <?php endif; ?>
 </table>
