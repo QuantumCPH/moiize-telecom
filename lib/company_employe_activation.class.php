@@ -264,7 +264,7 @@ class CompanyEmployeActivation {
     }
 
     public static function updateCustomer($update_customer_request){
-        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
+        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
         $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
         try {
             $customer = $pb->update_customer(array('customer_info' => $update_customer_request));
