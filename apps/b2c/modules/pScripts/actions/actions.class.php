@@ -3056,5 +3056,18 @@ if(($caltype!="IC") && ($caltype!="hc")){
         }
     }
 
+    public function executeUpdateCompanyInfo(sfWebRequest $request){
+        $c = new Criteria();
+        $c->add(CompanyPeer::I_CUSTOMER, null, Criteria::ISNOTNULL);
+        $companies = CompanyPeer::doSelect($c);
+        $customer_info['credit_limit']= -25;
+        foreach($companies as $company){
+            if($company->getICustomer()=="77424")
+                    continue;
+            $customer_info['i_customer']= $company->getICustomer();
+            CompanyEmployeActivation::updateCustomer($company->getICustomer(), $customer_info);
+        }
+    }
+
 
 }
