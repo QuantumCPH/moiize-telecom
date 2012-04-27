@@ -464,12 +464,16 @@ class companyActions extends sfActions {
             $transaction->setCompanyId($company_id);
             $transaction->setExtraRefill($refill_amount);
             $transaction->setTransactionStatusId(1);
+            $oldBalance = CompanyEmployeActivation::getBalance($this->company);
+            $transaction->setOldBalance($oldBalance);
             $transaction->setPaymenttype(2); //Refill
             $transaction->setDescription($description->getTitle());
+            $transaction->setTransactionType($description->getTransactionTypeId());
             $transaction->save();
-
-            if ($companyCVR != '') {
-                CompanyEmployeActivation::recharge($this->company, $refill_amount, $transaction);
+ 
+                   if (CompanyEmployeActivation::recharge($this->company, $refill_amount, $transaction)) {
+                  $newBalance = CompanyEmployeActivation::getBalance($this->company);
+                $transaction->setNewBalance($newBalance);
                 $transaction->setTransactionStatusId(3);
                 $transaction->save();
                 $adminUser = UserPeer::retrieveByPK($this->getUser()->getAttribute('user_id', '', 'backendsession'));
@@ -519,11 +523,18 @@ class companyActions extends sfActions {
             $transaction->setTransactionStatusId(1);
             $transaction->setPaymenttype(2); //Refill
             $transaction->setDescription($description->getTitle());
+             $oldBalance = CompanyEmployeActivation::getBalance($this->company);
+             $transaction->setOldBalance($oldBalance);
+         
+                     
+             $transaction->setTransactionType($description->getTransactionTypeId());
             $transaction->save();
 
-            if ($companyCVR != '') {
-                CompanyEmployeActivation::charge($this->company, $charge_amount);
+           
+               if(CompanyEmployeActivation::charge($this->company, $charge_amount)) {
                 $transaction->setTransactionStatusId(3);
+                $newBalance = CompanyEmployeActivation::getBalance($this->company);
+                $transaction->setNewBalance($newBalance);
                 $transaction->save();
                 $adminUser = UserPeer::retrieveByPK($this->getUser()->getAttribute('user_id', '', 'backendsession'));
                 emailLib::sendCompanyRefillEmail($this->company, $transaction,$adminUser);
@@ -540,13 +551,23 @@ class companyActions extends sfActions {
     
     public function executePaymenthistory(sfWebRequest $request) {
 
+           $cm = new Criteria();
+           $this->companies=CompanyPeer::doSelect($cm);
+             $tr = new Criteria();
+           $this->transactionstypes=TransactionTypePeer::doSelect($tr);
         $c = new Criteria();
         $companyid = $request->getParameter('company_id');
-        $this->companyval = $companyid;
+        $this->companyid=$companyid;
+       $transactionType_id = $request->getParameter('transactionType_id');
+        $this->transactionType_id=$transactionType_id;
+        $this->$transactionType_id = $transactionType_id;
         $c->add(CompanyTransactionPeer::TRANSACTION_STATUS_ID, 3);
 
         if (isset($companyid) && $companyid != '') {
             $c->addAnd(CompanyTransactionPeer::COMPANY_ID, $companyid);
+        }
+         if (isset($transactionType_id) && $transactionType_id != '') {
+            $c->addAnd(CompanyTransactionPeer::TRANSACTION_TYPE, $transactionType_id);
         }
         $c->addDescendingOrderByColumn(CompanyTransactionPeer::CREATED_AT);
         $this->transactions = CompanyTransactionPeer::doSelect($c);
