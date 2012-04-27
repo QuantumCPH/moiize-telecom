@@ -3060,7 +3060,7 @@ if(($caltype!="IC") && ($caltype!="hc")){
         $c = new Criteria();
         $c->add(CompanyPeer::I_CUSTOMER, null, Criteria::ISNOTNULL);
         $companies = CompanyPeer::doSelect($c);
-        $customer_info['credit_limit']= -25;
+        $customer_info['credit_limit']= 25;
         foreach($companies as $company){
             if($company->getICustomer()=="77424")
                     continue;
