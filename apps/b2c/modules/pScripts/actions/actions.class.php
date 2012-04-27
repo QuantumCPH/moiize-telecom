@@ -3102,7 +3102,9 @@ if(($caltype!="IC") && ($caltype!="hc")){
                 }
 
 
-          
+            $cT = new Criteria();
+            $cT->add(TransactionDescriptionPeer::ID,6);
+            $description = TransactionDescriptionPeer::doSelectOne($cT);
                 if ($transactionpayment) {
                     $transaction = new CompanyTransaction();
                     $transaction->setAmount($lineRentCompany->getRentValue());
@@ -3110,7 +3112,7 @@ if(($caltype!="IC") && ($caltype!="hc")){
                     $transaction->setExtraRefill($lineRentCompany->getRentValue());
                     $transaction->setTransactionStatusId(1);
                     $transaction->setPaymenttype(3); //Refill
-                    $transaction->setDescription('auto refill');
+                    $transaction->setDescription($description->getTitle());
                     $transaction->setRentDays($lineRentCompany->getNumberOfDays());
                     $transaction->setRentValue($lineRentCompany->getRentValue());
                     $transaction->setOldBalance($oldBalance);
