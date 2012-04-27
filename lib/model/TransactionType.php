@@ -2,7 +2,11 @@
 
 class TransactionType extends BaseTransactionType
 {
-   public function __toString(){
+
+
+    public function __toString(){
+
 		return $this->getTitle();
 	}
+
 }

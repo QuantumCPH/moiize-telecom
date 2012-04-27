@@ -96,7 +96,7 @@
       </td>
  <?php  if(isset($companyval) && $companyval!=""){  ?>
       <td> <?php
-
+        //echo $companyval;
         $mobileID= $employee->getCountryMobileNumber();
         $telintaGetBalance = 0;
 
@@ -129,7 +129,7 @@
     <!--  <td align="center">  <?php //$appval=$employee->getIsAppRegistered();  if(isset($appval) && $appval==1){   ?> <img alt="Tick" src="/sf/sf_admin/images/tick.png">  <?php //} ?></td>
        <td><?php //echo $employee->getAppCode() ?></td>-->
        <td><?php //echo $employee->getPassword() 
-       
+      
         //$comid=$employee->getCompanyId();
        // $mobileID= $employee->getCountryMobileNumber();
         //$telintaGetBalance = 0;
@@ -142,6 +142,9 @@
 //        $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAcc->getIAccount());
         echo  $employee->getPassword();
 //        }  
+
+        
+       
        ?></td>
        <td><a href="<?php echo url_for('employee/edit?id='.$employee->getId()) ?>"><img src="/sf/sf_admin/images/edit_icon.png" title=<?php echo __("edit")?> alt=<?php echo __("edit")?>></a>
            <a href="employee/del?id=<?php echo $employee->getId(); if(isset($companyval) && $companyval!=""){echo "&company_id=".$companyval;} ?>"  onclick="if (confirm('<?php echo __('Are you sure?') ?>')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'post'; f.action = this.href;f.submit(); };return false;"> <img src="/sf/sf_admin/images/delete_icon.png" title=<?php echo __("delete")?> alt=<?php echo __("delete")?>></a>

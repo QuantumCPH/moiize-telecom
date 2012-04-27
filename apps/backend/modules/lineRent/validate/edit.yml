@@ -1,0 +1,9 @@
+fields:
+  line_rent{number_of_days}:
+    required:
+      msg:              The number_of_days cannot be left blank.
+  line_rent{rent_value}:
+    required:
+      msg:              The rent_value cannot be left blank.
+  
+ 
