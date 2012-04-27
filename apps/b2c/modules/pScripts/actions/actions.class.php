@@ -3065,7 +3065,7 @@ if(($caltype!="IC") && ($caltype!="hc")){
             if($company->getICustomer()=="77424")
                     continue;
             $customer_info['i_customer']= $company->getICustomer();
-            CompanyEmployeActivation::updateCustomer($company->getICustomer(), $customer_info);
+            CompanyEmployeActivation::updateCustomer($customer_info);
         }
     }
 
