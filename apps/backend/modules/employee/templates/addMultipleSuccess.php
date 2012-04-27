@@ -11,8 +11,7 @@
 <h1><?php echo  __('New PCO Line') ?></h1></div>
 <form id="sf_admin_form" name="sf_admin_edit_form" method="post" enctype="multipart/form-data" action="saveMultipleEmployee">
     <div id="sf_admin_content">
-  
-    <table id="sf_admin_container" cellspacing="0" cellpadding="2" class="tblAlign" >
+      <table id="sf_admin_container" cellspacing="0" cellpadding="2" class="tblAlign" >
         <tr>
         <td style="padding: 5px;"><?php echo  __('Number Of PCO Line') ?></td>
         <td style="padding: 5px;">

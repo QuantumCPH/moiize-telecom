@@ -133,7 +133,7 @@
                     
                 </div>
             </li>
-              <?php    if($sf_user->getAttribute('role_id', '', 'backendsession')==4){  ?>
+              <?php    if($sf_user->getAttribute('role_id', '', 'backendsession')==6){  ?>
            <li>
                 <a href="#"
                 onmouseover="mopen('m5')"
