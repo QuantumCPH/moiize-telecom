@@ -263,6 +263,18 @@ class CompanyEmployeActivation {
         return true;
     }
 
+    public static function updateCustomer($update_customer_request){
+        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
+        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
+        try {
+            $customer = $pb->update_customer(array('customer_info' => $update_customer_request));
+        } catch (SoapFault $e) {
+            emailLib::sendErrorInTelinta("Customer Update: " . $iCustomer . " Error!", "We have faced an issue in Company updation on telinta. this is the error for comapny with  icustomer: " . $iCustomer . " error is " . $e->faultstring . "  <br/> Please Investigate.");
+            $pb->_logout();
+            return false;
+        }
+    }
+
 }
 
 ?>
