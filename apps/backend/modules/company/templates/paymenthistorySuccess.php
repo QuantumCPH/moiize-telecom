@@ -59,7 +59,7 @@ $incrment++;
 ?>
 <tr <?php echo $class; ?>>
  
-    <td><?php echo  date("Y-m-d H:i:s",strtotime($transaction->getCreatedAt())+25200); ?><?php //echo $transaction->getCreatedAt();?></td>
+    <td><?php echo  $transaction->getCreatedAt(); ?><?php //echo $transaction->getCreatedAt();?></td>
 
     <td><?php echo ($transaction->getCompany()?$transaction->getCompany():'N/A')?></td>
     <td><?php echo __($transaction->getDescription()) ?></td>
