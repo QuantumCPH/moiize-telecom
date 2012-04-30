@@ -270,7 +270,7 @@ class CompanyEmployeActivation {
             $customer = $pb->update_customer(array('customer_info' => $update_customer_request));
         } catch (SoapFault $e) {
             emailLib::sendErrorInTelinta("Customer Update: " . $update_customer_request["i_customer"] . " Error!", "We have faced an issue in Company updation on telinta. this is the error for comapny with  icustomer: " . $iCustomer . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-            $pb->_logout();
+            $pb->_logout($session);
             return false;
         }
     }
