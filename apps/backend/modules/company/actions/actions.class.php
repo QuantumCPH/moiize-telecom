@@ -603,7 +603,7 @@ class companyActions extends sfActions {
  public function executeShowDate (sfWebRequest $request) {
         //call Culture Method For Get Current Set Culture - Against Feature# 6.1 --- 02/28/11
         changeLanguageCulture::languageCulture($request, $this);
-      echo date();
+      echo date('Y-m-d H:i:s');
 
         return sfView::NONE;
     }
