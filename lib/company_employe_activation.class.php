@@ -39,7 +39,7 @@ class CompanyEmployeActivation {
                             'i_parent' => self::$iParent,
                             'i_customer_type' => 1,
                             'opening_balance' => 0,
-                            'credit_limit' => 0,
+                            'credit_limit' => 25,
                             'dialing_rules' => array('ip' => '00', "cc" => "34"),
                             'email' => 'okh@zapna.com'
                             )));
@@ -269,7 +269,7 @@ class CompanyEmployeActivation {
         try {
             $customer = $pb->update_customer(array('customer_info' => $update_customer_request));
         } catch (SoapFault $e) {
-            emailLib::sendErrorInTelinta("Customer Update: " . $iCustomer . " Error!", "We have faced an issue in Company updation on telinta. this is the error for comapny with  icustomer: " . $iCustomer . " error is " . $e->faultstring . "  <br/> Please Investigate.");
+            emailLib::sendErrorInTelinta("Customer Update: " . $update_customer_request["i_customer"] . " Error!", "We have faced an issue in Company updation on telinta. this is the error for comapny with  icustomer: " . $iCustomer . " error is " . $e->faultstring . "  <br/> Please Investigate.");
             $pb->_logout();
             return false;
         }
