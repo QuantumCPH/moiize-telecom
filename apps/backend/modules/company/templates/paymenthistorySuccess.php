@@ -23,7 +23,14 @@
             </div>  </tr>
 </table>
 </form>
-
+<div id="sf_admin_container">
+    
+    <ul class="sf_admin_actions">
+  <li>
+      <a href="<?php echo sfConfig::get('app_backend_url');?>company/refill" class="refill_button">Refill</a>
+  </li>
+</ul>
+</div>
 <div id="sf_admin_container"><h1><?php echo __('Payment History') ?></h1>
 <?php if ($sf_user->hasFlash('message')): ?>
 <div class="save-ok">
