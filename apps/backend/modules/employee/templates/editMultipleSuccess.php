@@ -4,7 +4,7 @@
 <div id="sf_admin_content">
     <div id="sf_admin_container">
         <?php if ($sf_user->hasFlash('message')): ?>
-        <div class="form-errors">
+        <div class="save-ok">
             <h2><?php echo __($sf_user->getFlash('message')) ?></h2>
         </div>
         <?php endif; ?>
