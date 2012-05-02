@@ -14,7 +14,7 @@
   <div class="sf_admin_filters">
     <form method="POST" >
 
-    <fieldset>
+    <fieldset style="padding:5px 0;">
 <table width="85%" cellspacing="0" cellpadding="2" border="0" class="filterOnPaymentHistory">
     <tr><td>Agent Name: </td><td><select name="company_id"><option value="">Select Agent </option><?php  foreach($companies as $company){ ?>
                 <option value="<?php echo  $company->getId();?>" <?php  if($companyid==$company->getId()){ ?> selected="selected" <?php }  ?>" ><?php echo  $company->getName();  ?> </option>
