@@ -359,4 +359,52 @@ class employeeActions extends sfActions {
         }
     }
 
+    public function executeEditMultiple($request) {
+
+        $this->companyval = $request->getParameter('company_id');
+
+        $c = new Criteria();
+        $this->companys = CompanyPeer::doSelect($c);
+
+        $pr = new Criteria();
+        $pr->add(ProductPeer::ID, 1);
+        $this->products = ProductPeer::doSelect($pr);
+        // created by kmmalik.com for new module of telinta product
+        $tp = new Criteria();
+        $this->telintaProducts = TelintaProductPeer::doSelect($tp);
+        // created by kmmalik.com for new module of telinta Routing plan
+        $trp = new Criteria();
+        $this->telintaRoutingplans = TelintaRoutingplanPeer::doSelect($trp);
+
+        $ce = new Criteria();
+        $companyid = $request->getParameter('company_id');
+        $this->companyval = $companyid;
+        if (isset($companyid) && $companyid != '') {
+            $ce->addAnd(EmployeePeer::COMPANY_ID, $companyid);
+            $this->employees = EmployeePeer::doSelect($ce);
+        }
+        
+    }
+
+    public function executeEditMultipleEmployee($request) {
+
+        $count=count($request->getParameter('id'));
+        for($i=0; $i<$count; $i++){
+            $id=$request->getParameter('id');
+            $employee = EmployeePeer::retrieveByPk($id[$i]);
+
+            if ($employee->getTelintaProductId()!=$request->getParameter('telintaProductId') || $employee->getTelintaRoutingplanId()!=$request->getParameter('telintaRoutingplanId') || $request->getParameter('block')!='') {
+                CompanyEmployeActivation::updateAccount($employee, $request->getParameter('telintaProductId'), $request->getParameter('telintaRoutingplanId'), $request->getParameter('block'));
+            }
+            $blocked=($request->getParameter('block')=='Y')?'1':'0';
+            $employee->setProductId($request->getParameter('productid'));
+            $employee->setTelintaProductId($request->getParameter('telintaProductId'));
+            $employee->setTelintaRoutingplanId($request->getParameter('telintaRoutingplanId'));
+            $employee->setBlock($blocked);
+            $employee->save();
+            $this->getUser()->setFlash('message', 'PCO Lines has been updated Sucessfully');
+        }
+     
+    }
+
 }

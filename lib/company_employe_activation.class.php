@@ -235,14 +235,14 @@ class CompanyEmployeActivation {
         return $random;
     }
 
-    public static function updateAccount(Employee $employee, $iProduct, $iRoutingPlan) {
+    public static function updateAccount(Employee $employee, $iProduct, $iRoutingPlan, $block='N') {
 
         $accountTitle = sfConfig::get("app_telinta_emp") . $employee->getCompanyId() . $employee->getId();
         $til = new Criteria();
         $til->add(TelintaAccountsPeer::ACCOUNT_TITLE, $accountTitle);
         $til->addAnd(TelintaAccountsPeer::STATUS, 3);
         $tilentaAccount = TelintaAccountsPeer::doSelectOne($til);
-       
+     
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
         $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
         $pass = self::randomAlphabets(4) . self::randomNumbers(1) . self::randomAlphabets(3);
@@ -252,6 +252,7 @@ class CompanyEmployeActivation {
                             'i_account' => $tilentaAccount->getIAccount(),
                             'i_product' => $iProduct,
                             'i_routing_plan' => $iRoutingPlan,
+                            'blocked' => $block,
                             )));
         } catch (SoapFault $e) {
             emailLib::sendErrorInTelinta("Account Update: " . $accountTitle . " Error!", "We have faced an issue in Company Account updation on telinta. this is the error for cusotmer with  id: " . $employee->getCompanyId() . " and on Account" . $accountTitle . " error is " . $e->faultstring . "  <br/> Please Investigate.");
