@@ -86,13 +86,16 @@
        <br>
        <table width="75%" cellspacing="0" cellpadding="2" class="tblAlign">
         <tr class="headings">
+            <th><?php echo __('Action') ?></th>
             <th><?php echo __('Agent') ?></th>
             <th><?php echo __('Name') ?></th>
-            <th><?php echo __('product') ?></th>
-            <th><?php echo __('Created at') ?></th>
+            <th><?php echo __('Product') ?></th>
+            <th><?php echo __('Telinta Product') ?></th>
+            <th><?php echo __('Telinta Routing Plan') ?></th>
             <th><?php echo __('Billing Account') ?></th>
             <th><?php echo __('Password') ?></th>
-            <th><?php echo __('Action') ?></th>
+            <th><?php echo __('Block') ?></th>
+         
         </tr>
         <?php
                 $incrment=1;
@@ -104,6 +107,7 @@
                 }
                 $incrment++; ?>
         <tr <?php echo $class; ?>>
+            <td><input type="checkbox" name="id[]" value="<?PHP echo $employee->getId();?>" checked="checked"></td>
             <td>
                 <?php  $comid=$employee->getCompanyId();
                         if(isset($comid) && $comid!=""){
@@ -126,10 +130,32 @@
                     }
               ?>
             </td>
-            <td><?php echo substr($employee->getCreatedAt(),0,10); ?></td>
+            <td>
+                <?php
+                    $tpid=$employee->getTelintaProductId();
+                    if(isset($tpid) && $tpid!=""){
+                        $tc = new Criteria();
+                        $tc->add(TelintaProductPeer::I_PRODUCT, $tpid);
+                        $tproducts = TelintaProductPeer::doSelectOne($tc);
+                        echo $tproducts->getTitle();
+                    }
+              ?>
+            </td>
+            <td>
+                <?php
+                    $trpid=$employee->getTelintaRoutingplanId();
+                    if(isset($trpid) && $trpid!=""){
+                        $trc = new Criteria();
+                        $trc->add(TelintaRoutingplanPeer::I_ROUTING_PLAN, $trpid);
+                        $routingplan = TelintaRoutingplanPeer::doSelectOne($trc);
+                        echo $routingplan->getTitle();
+                    }
+              ?>
+            </td>
             <td><?php echo sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId() ?></td>
             <td><?php echo  $employee->getPassword(); ?></td>
-            <td><input type="checkbox" name="id[]" value="<?PHP echo $employee->getId();?>" checked="checked"></td>
+            <td><?php echo $employee->getBlock(); ?></td>
+            
         </tr>
         <?php endforeach; ?>
       </table>

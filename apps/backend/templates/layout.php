@@ -376,9 +376,9 @@
                           echo link_to(__('Telinta Routing Plan'), 'telintaRoutingplan/index');
                         }
                          if($actionName=='editMultiple' && $modulName=="employee"){
-                          echo link_to(__('Edit Multiple PCO Line'), 'employee/editMultiple',array('class'=>'subSelect'));
+                          echo link_to(__('Edit Agent Account'), 'employee/editMultiple',array('class'=>'subSelect'));
                         }else{
-                          echo link_to(__('Edit Multiple PCO Line'), 'employee/editMultiple');
+                          echo link_to(__('Edit Agent Account'), 'employee/editMultiple');
                         }
                         ?>
                 </div>
