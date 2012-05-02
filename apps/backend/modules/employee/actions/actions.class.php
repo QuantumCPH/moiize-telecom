@@ -387,24 +387,30 @@ class employeeActions extends sfActions {
     }
 
     public function executeEditMultipleEmployee($request) {
-
+    $block='';
         $count=count($request->getParameter('id'));
         for($i=0; $i<$count; $i++){
             $id=$request->getParameter('id');
             $employee = EmployeePeer::retrieveByPk($id[$i]);
-
-            if ($employee->getTelintaProductId()!=$request->getParameter('telintaProductId') || $employee->getTelintaRoutingplanId()!=$request->getParameter('telintaRoutingplanId') || $request->getParameter('block')!='') {
-                CompanyEmployeActivation::updateAccount($employee, $request->getParameter('telintaProductId'), $request->getParameter('telintaRoutingplanId'), $request->getParameter('block'));
+            if($request->getParameter('block')!=''){
+                $block=$request->getParameter('block');
+            }else{
+                $block=$employee->getBlock();
             }
-            $blocked=($request->getParameter('block')=='Y')?'1':'0';
+      
+            if ($employee->getTelintaProductId()!=$request->getParameter('telintaProductId') || $employee->getTelintaRoutingplanId()!=$request->getParameter('telintaRoutingplanId') || $block!='') {
+                CompanyEmployeActivation::updateAccount($employee, $request->getParameter('telintaProductId'), $request->getParameter('telintaRoutingplanId'), $block);
+            }
+
             $employee->setProductId($request->getParameter('productid'));
             $employee->setTelintaProductId($request->getParameter('telintaProductId'));
             $employee->setTelintaRoutingplanId($request->getParameter('telintaRoutingplanId'));
-            $employee->setBlock($blocked);
+            $employee->setBlock($block);
             $employee->save();
-            $this->getUser()->setFlash('message', 'PCO Lines has been updated Sucessfully');
         }
-     
+        $this->getUser()->setFlash('messageEdit', 'PCO Line has been deleted Sucessfully');
+        $this->redirect('employee/editMultiple');
+      
     }
 
 }
