@@ -99,6 +99,6 @@ use_helper('Number');
     </tr>
     <tr class="footer">
         <td class="payer_summary" colspan="4" style="font-weight:normal; white-space: nowrap;">
-<?php echo __('WLS3&nbsp;&nbsp;&nbsp;Box XXXXX, XX-XXX XX XXXXXXX&nbsp;&nbsp;&nbsp; Org.nr.XXXXXX-XXXX') ?> </td>
+<?php //echo __('WLS3&nbsp;&nbsp;&nbsp;Box XXXXX, XX-XXX XX XXXXXXX&nbsp;&nbsp;&nbsp; Org.nr.XXXXXX-XXXX') ?> </td>
     </tr>
 </table>

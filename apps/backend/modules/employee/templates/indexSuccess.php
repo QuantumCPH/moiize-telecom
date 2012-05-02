@@ -88,7 +88,7 @@
       if(isset($pid) && $pid!=""){
                $c = new Criteria();
       $c->add(ProductPeer::ID, $pid);
-  $products = ProductPeer::doSelectOne($c);
+      $products = ProductPeer::doSelectOne($c);
 
               echo $products->getName();
       }
@@ -104,15 +104,16 @@
         $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp").$companyval.$employee->getId());
         $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
-
-        $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAccount->getIAccount());
-       // print_r($accountInfo);
-        $telintaGetBalance = $accountInfo->account_info->balance;
-        $telintaGetBalance1=0;
-        $telintaGetBalancerese=0;
-        $telintaGetBalancerese =  ($telintaGetBalancerese>0)?(float)$telintaGetBalancerese:0;
-        echo  $balnc = (float)$telintaGetBalance + (float)$telintaGetBalance1 + $telintaGetBalancerese;
-        echo " &euro;";
+        if($telintaAccount){
+            $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAccount->getIAccount());
+           // print_r($accountInfo);
+            $telintaGetBalance = $accountInfo->account_info->balance;
+            $telintaGetBalance1=0;
+            $telintaGetBalancerese=0;
+            $telintaGetBalancerese =  ($telintaGetBalancerese>0)?(float)$telintaGetBalancerese:0;
+            echo  $balnc = (float)$telintaGetBalance + (float)$telintaGetBalance1 + $telintaGetBalancerese;
+            echo " &euro;";
+        }
         ?></td>
 
       <?php } ?>
@@ -128,18 +129,22 @@
     <!--  <td align="center">  <?php //$appval=$employee->getIsAppRegistered();  if(isset($appval) && $appval==1){   ?> <img alt="Tick" src="/sf/sf_admin/images/tick.png">  <?php //} ?></td>
        <td><?php //echo $employee->getAppCode() ?></td>-->
        <td><?php //echo $employee->getPassword() 
-        $comid=$employee->getCompanyId();
-        $mobileID= $employee->getCountryMobileNumber();
+      
+        //$comid=$employee->getCompanyId();
+       // $mobileID= $employee->getCountryMobileNumber();
         //$telintaGetBalance = 0;
 
-        $ct = new Criteria();
-        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp").$comid.$employee->getId());
-        $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
-        $telintaAcc = TelintaAccountsPeer::doSelectOne($ct);
+//        $ct = new Criteria();
+//        $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp").$comid.$employee->getId());
+//        $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
+//        $telintaAcc = TelintaAccountsPeer::doSelectOne($ct);
+//        if($telintaAcc){ //echo $telintaAcc->getIAccount();
+//        $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAcc->getIAccount());
+        echo  $employee->getPassword();
+//        }  
 
-        $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAcc->getIAccount());
-        echo  $accountInfo->account_info->password;
-        //$telintaGetBalance = $accountInfo->account_info->balance;
+        
+       
        ?></td>
        <td><a href="<?php echo url_for('employee/edit?id='.$employee->getId()) ?>"><img src="/sf/sf_admin/images/edit_icon.png" title=<?php echo __("edit")?> alt=<?php echo __("edit")?>></a>
            <a href="employee/del?id=<?php echo $employee->getId(); if(isset($companyval) && $companyval!=""){echo "&company_id=".$companyval;} ?>"  onclick="if (confirm('<?php echo __('Are you sure?') ?>')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'post'; f.action = this.href;f.submit(); };return false;"> <img src="/sf/sf_admin/images/delete_icon.png" title=<?php echo __("delete")?> alt=<?php echo __("delete")?>></a>

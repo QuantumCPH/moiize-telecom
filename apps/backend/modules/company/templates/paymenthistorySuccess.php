@@ -12,10 +12,10 @@
 <form method="POST" >
 
 <table width="75%" cellspacing="0" cellpadding="2" class="tblAlign">
-    <tr><td>Agent Name: </td><td><select name="company_id"><?php  foreach($companies as $company){ ?>
+    <tr><td>Agent Name: </td><td><select name="company_id"><option value="">Select Agent </option><?php  foreach($companies as $company){ ?>
                 <option value="<?php echo  $company->getId();?>" <?php  if($companyid==$company->getId()){ ?> selected="selected" <?php }  ?>" ><?php echo  $company->getName();  ?> </option>
-  <?php  } ?></select> </td></tr>
-     <tr><td>Payment Type</td><td><select name="transactionType_id"><?php  foreach($transactionstypes as $transactionstype){ ?>
+  <?php  } ?> </select> </td></tr>
+     <tr><td>Transaction Type</td><td><select name="transactionType_id"><option value="">Select Transaction Type </option><?php  foreach($transactionstypes as $transactionstype){ ?>
                 <option value="<?php echo  $transactionstype->getId(); ?>" <?php if($transactionType_id==$transactionstype->getId()){ ?> selected="selected" <?php }  ?>  ><?php echo  $transactionstype->getTitle();  ?> </option>
   <?php  } ?></select> </td></tr>
      <tr><td></td><td class="bg-img" style="height: 0; width:700px;"><div class="submitButton">
@@ -58,7 +58,9 @@ if($incrment%2==0){
 $incrment++;
 ?>
 <tr <?php echo $class; ?>>
-    <td><?php //echo  $transaction->getCreatedAt() ?><?php echo  date('Y-m-d H:i:s',strtotime($transaction->getCreatedAt())+21600) ?></td>
+ 
+    <td><?php echo  $transaction->getCreatedAt(); ?><?php //echo $transaction->getCreatedAt();?></td>
+
     <td><?php echo ($transaction->getCompany()?$transaction->getCompany():'N/A')?></td>
     <td><?php echo __($transaction->getDescription()) ?></td>
      <td align="right"><?php echo format_number($transaction->getAmount()); $amount_total += $transaction->getAmount(); ?></td>
@@ -77,7 +79,8 @@ $incrment++;
     <td colspan="3" align="right"><strong><?php echo __('Total:') ?>&nbsp;&nbsp;</strong></td>
     <td align="right"><?php echo format_number($amount_total);  ?> &euro;</td>
     <td>&nbsp;</td>
-    
+      <td>&nbsp;</td>
+        <td>&nbsp;</td>
 </tr>	
 <?php endif; ?>
 </table>

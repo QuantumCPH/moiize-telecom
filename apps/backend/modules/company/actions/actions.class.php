@@ -538,7 +538,7 @@ class companyActions extends sfActions {
                 $transaction->save();
                 $adminUser = UserPeer::retrieveByPK($this->getUser()->getAttribute('user_id', '', 'backendsession'));
                 emailLib::sendCompanyRefillEmail($this->company, $transaction,$adminUser);
-                $this->getUser()->setFlash('message', 'Agent Refill Successfully');
+                $this->getUser()->setFlash('message', 'Agent Charged Successfully');
                 $this->redirect('company/paymenthistory');
             } else {
 
@@ -597,6 +597,13 @@ class companyActions extends sfActions {
             'transaction' => $transaction,
             'vat' => 0,
         ));
+
+        return sfView::NONE;
+    }
+ public function executeShowDate (sfWebRequest $request) {
+        //call Culture Method For Get Current Set Culture - Against Feature# 6.1 --- 02/28/11
+        changeLanguageCulture::languageCulture($request, $this);
+      echo date('Y-m-d H:i:s');
 
         return sfView::NONE;
     }

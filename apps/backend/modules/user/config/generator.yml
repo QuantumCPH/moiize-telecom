@@ -5,6 +5,6 @@ generator:
     theme:            default
     css:             /sf/sf_admin/css/admin_main.css
     list:
-      display: [name, email, password, role, is_super_user, created_at]
+      display: [name, email, password, role, is_super_user, create_date]
       object_actions:
         _edit: ~

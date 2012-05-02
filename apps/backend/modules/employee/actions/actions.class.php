@@ -166,7 +166,7 @@ class employeeActions extends sfActions {
         $employee->save();
         $voipAccount = sfConfig::get("app_telinta_emp") . $this->companys->getId() . $employee->getId();
 
-        CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys, $employee->getTelintaProductId(), $employee->getTelintaRoutingplanId());
+        CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys, $employee);
 
         $this->getUser()->setFlash('messageAdd', 'PCO Line has been added successfully' . (isset($msg) ? "and " . $msg : ''));
         $this->redirect('employee/index?message=add');
@@ -202,7 +202,7 @@ class employeeActions extends sfActions {
             $voipAccount = sfConfig::get("app_telinta_emp") . $this->companys->getId() . $employee->getId();
             $numberOfEmployee;
 
-            CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys, $employee->getTelintaProductId(), $employee->getTelintaRoutingplanId());
+            CompanyEmployeActivation::telintaRegisterEmployee($voipAccount, $this->companys, $employee);
 
             $numberOfEmployee++;
             $i++;
@@ -357,6 +357,60 @@ class employeeActions extends sfActions {
         } else {
             echo "yes";
         }
+    }
+
+    public function executeEditMultiple($request) {
+
+        $this->companyval = $request->getParameter('company_id');
+
+        $c = new Criteria();
+        $this->companys = CompanyPeer::doSelect($c);
+
+        $pr = new Criteria();
+        $pr->add(ProductPeer::ID, 1);
+        $this->products = ProductPeer::doSelect($pr);
+        // created by kmmalik.com for new module of telinta product
+        $tp = new Criteria();
+        $this->telintaProducts = TelintaProductPeer::doSelect($tp);
+        // created by kmmalik.com for new module of telinta Routing plan
+        $trp = new Criteria();
+        $this->telintaRoutingplans = TelintaRoutingplanPeer::doSelect($trp);
+
+        $ce = new Criteria();
+        $companyid = $request->getParameter('company_id');
+        $this->companyval = $companyid;
+        if (isset($companyid) && $companyid != '') {
+            $ce->addAnd(EmployeePeer::COMPANY_ID, $companyid);
+            $this->employees = EmployeePeer::doSelect($ce);
+        }
+        
+    }
+
+    public function executeEditMultipleEmployee($request) {
+    $block='';
+        $count=count($request->getParameter('id'));
+        for($i=0; $i<$count; $i++){
+            $id=$request->getParameter('id');
+            $employee = EmployeePeer::retrieveByPk($id[$i]);
+            if($request->getParameter('block')!=''){
+                $block=$request->getParameter('block');
+            }else{
+                $block=$employee->getBlock();
+            }
+      
+            if ($employee->getTelintaProductId()!=$request->getParameter('telintaProductId') || $employee->getTelintaRoutingplanId()!=$request->getParameter('telintaRoutingplanId') || $block!='') {
+                CompanyEmployeActivation::updateAccount($employee, $request->getParameter('telintaProductId'), $request->getParameter('telintaRoutingplanId'), $block);
+            }
+
+            $employee->setProductId($request->getParameter('productid'));
+            $employee->setTelintaProductId($request->getParameter('telintaProductId'));
+            $employee->setTelintaRoutingplanId($request->getParameter('telintaRoutingplanId'));
+            $employee->setBlock($block);
+            $employee->save();
+        }
+        $this->getUser()->setFlash('messageEdit', 'PCO Line has been deleted Sucessfully');
+        $this->redirect('employee/editMultiple');
+      
     }
 
 }

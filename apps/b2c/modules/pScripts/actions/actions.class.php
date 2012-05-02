@@ -3038,6 +3038,46 @@ if(($caltype!="IC") && ($caltype!="hc")){
         return sfView::NONE;
     }
 
+    public function executePopulatePasswrod(sfWebRequest $request) {
+        $c = new Criteria();
+        $c->add(EmployeePeer::PASSWORD, null, Criteria::ISNULL);
+        $employees = EmployeePeer::doSelect($c);
+        foreach ($employees as $employee) {
+            $comid = $employee->getCompanyId();
+            $ct = new Criteria();
+            $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp") . $comid . $employee->getId());
+            $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
+            $telintaAcc = TelintaAccountsPeer::doSelectOne($ct);
+            if ($telintaAcc) { //echo $telintaAcc->getIAccount();
+                $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAcc->getIAccount());
+                $employee->setPassword($accountInfo->account_info->h323_password);
+                $employee->save();
+            }
+        }
+    }
+
+    public function executeUpdateCompanyInfo(sfWebRequest $request){
+        $c = new Criteria();
+        $c->add(CompanyPeer::I_CUSTOMER, null, Criteria::ISNOTNULL);
+        $companies = CompanyPeer::doSelect($c);
+        $customer_info['credit_limit']= 25;
+        foreach($companies as $company){
+            if($company->getICustomer()=="77424")
+                    continue;
+            $customer_info['i_customer']= $company->getICustomer();
+            CompanyEmployeActivation::updateCustomer($customer_info);
+        }
+    }
+
+    public function executeGetBalanceFromTelienta(sfWebRequest $request){
+        $c = new Criteria();
+        $c->add(CompanyPeer::I_CUSTOMER, null, Criteria::ISNOTNULL);
+        $companies = CompanyPeer::doSelect($c);
+        foreach($companies as $company){
+            CompanyEmployeActivation::getBalance($company);
+        }
+    }
+
 
    public function executeAutoLineRentCharging(sfWebRequest $request){
 

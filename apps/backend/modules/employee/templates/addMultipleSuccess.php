@@ -11,8 +11,7 @@
 <h1><?php echo  __('New PCO Line') ?></h1></div>
 <form id="sf_admin_form" name="sf_admin_edit_form" method="post" enctype="multipart/form-data" action="saveMultipleEmployee">
     <div id="sf_admin_content">
-  
-    <table id="sf_admin_container" cellspacing="0" cellpadding="2" class="tblAlign" >
+      <table id="sf_admin_container" cellspacing="0" cellpadding="2" class="tblAlign" >
         <tr>
         <td style="padding: 5px;"><?php echo  __('Number Of PCO Line') ?></td>
         <td style="padding: 5px;">
@@ -20,7 +19,7 @@
                 <option value="2"> 2</option>
                 <option value="3"> 3</option>
                 <option value="4">4</option>
-                <option value="5"> 5</option>
+                 <option value="5">5</option>
                 <option value="6">6</option>
                 <option value="7">7</option>
                 <option value="8">8</option>
@@ -28,7 +27,6 @@
                 <option value="10">10</option>
             </select></td>
                 </tr>
-
                  <tr>
         <td style="padding: 5px;"><?php echo  __('Agent:') ?></td>
         <td style="padding: 5px;">
