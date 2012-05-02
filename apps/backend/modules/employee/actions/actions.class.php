@@ -408,7 +408,7 @@ class employeeActions extends sfActions {
             $employee->setBlock($block);
             $employee->save();
         }
-        $this->getUser()->setFlash('messageEdit', 'PCO Line has been deleted Sucessfully');
+        $this->getUser()->setFlash('message', 'PCO Lines has been updated Sucessfully');
         $this->redirect('employee/editMultiple');
       
     }
