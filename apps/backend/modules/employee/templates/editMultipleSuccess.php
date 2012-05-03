@@ -11,10 +11,10 @@
         <h1><?php echo  __('Select Agent') ?></h1>
     </div>
         <div id="sf_admin_content">
+        <form id="sf_admin_form" name="sf_admin_edit_form" method="post" enctype="multipart/form-data" action="editMultiple">
         <table id="sf_admin_container" cellspacing="0" cellpadding="2" class="tblAlign" >
-            <form id="sf_admin_form" name="sf_admin_edit_form" method="post" enctype="multipart/form-data" action="editMultiple">
-            <tr>
-                <td style="padding: 5px;"><?php echo  __('Agent:') ?></td>
+              <tr>
+                <td style="padding: 5px;" width="300px"><?php echo  __('Agent:') ?></td>
                 <td style="padding: 5px;">
                     <select name="company_id" id="employee_company_id" class="required"  style="width:190px;">
                         <option value="">Select Agent</option>
@@ -28,19 +28,20 @@
                 <td></td>
                 <td class="bg-img" style="height: 0; width:700px;">
                     <div class="submitButton">
-                        <button type="submit">Filter</button>
+                        <button type="submit">GO</button>
                     </div>
             </tr>
-            
-            </form>
             </table>
+            </form>
+            
+ <?php if($employees!=''){?>
             <form id="sf_admin_form" name="sf_admin_edit_form" method="post" enctype="multipart/form-data" action="editMultipleEmployee">
                 <div id="sf_admin_container">
                     <h1><?php echo  __('Edit PCO Lines') ?></h1>
                 </div>
             <table id="sf_admin_container" cellspacing="0" cellpadding="2" class="tblAlign" >
             <tr>
-                <td style="padding: 5px;"><?php echo __('Product:') ?></td>
+                <td style="padding: 5px;" width="300px"><?php echo __('Product:') ?></td>
                 <td style="padding: 5px;">
                     <select name="productid" id="productid"    class="required"  >
                         <?php foreach($products as $product){  ?>
@@ -60,7 +61,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="padding: 5px;"><?php echo __('Telinta RoutingPlan:') ?></td>
+                <td style="padding: 5px;"><?php echo __('Telinta Routing Plan:') ?></td>
                 <td style="padding: 5px;">
                     <select name="telintaRoutingplanId" id="telintaRoutingplanId" class="required"  >
                         <?php foreach($telintaRoutingplans as $telintaRoutingplan){  ?>
@@ -81,8 +82,6 @@
                 </td>
             </tr>
         </table>
-       
- <?php if($employees!=''){?>
        <br>
        <table width="75%" cellspacing="0" cellpadding="2" class="tblAlign">
         <tr class="headings">
@@ -159,19 +158,16 @@
         </tr>
         <?php endforeach; ?>
       </table>
-    <?php }?>
+    
        <div id="sf_admin_container">
             <ul class="sf_admin_actions">
                 <input type="hidden" value="" id="error" name="error">
                 <li>
-                    <input class="sf_admin_action_list" value="<?php echo __('list') ?>" type="button" onclick="document.location.href='../employee';" />
-                </li>
-                <li>
-                    <input type="submit" name="save" value="<?php echo __('save') ?>" class="sf_admin_action_save" />
+                    <input type="submit" name="save" value="<?php echo __('Save Changings') ?>" class="sf_admin_action_save" />
                 </li>
             </ul>
         </div>
       </form>
-    </div>
-
+    <?php }?>
+     </div>
 </div>
