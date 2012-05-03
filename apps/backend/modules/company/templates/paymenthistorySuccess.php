@@ -9,21 +9,32 @@
         </div>
     </div>
 <?php } ?>
-<form method="POST" >
 
-<table width="75%" cellspacing="0" cellpadding="2" class="tblAlign">
+<div id="sf_admin_container">
+  <div class="sf_admin_filters">
+    <form method="POST" >
+
+    <fieldset style="padding:5px 0;">
+<table width="85%" cellspacing="0" cellpadding="2" border="0" class="filterOnPaymentHistory">
     <tr><td>Agent Name: </td><td><select name="company_id"><option value="">Select Agent </option><?php  foreach($companies as $company){ ?>
                 <option value="<?php echo  $company->getId();?>" <?php  if($companyid==$company->getId()){ ?> selected="selected" <?php }  ?>" ><?php echo  $company->getName();  ?> </option>
   <?php  } ?> </select> </td></tr>
      <tr><td>Transaction Type</td><td><select name="transactionType_id"><option value="">Select Transaction Type </option><?php  foreach($transactionstypes as $transactionstype){ ?>
                 <option value="<?php echo  $transactionstype->getId(); ?>" <?php if($transactionType_id==$transactionstype->getId()){ ?> selected="selected" <?php }  ?>  ><?php echo  $transactionstype->getTitle();  ?> </option>
   <?php  } ?></select> </td></tr>
-     <tr><td></td><td class="bg-img" style="height: 0; width:700px;"><div class="submitButton">
-                 <button type="submit">Filter</button>
-            </div>  </tr>
+     <tr><td></td><td class="bg-img" style="height: 0; width:700px;"><br /><div class="submitButton">
+                 <button type="submit" style="margin-left: 0 !important">Filter</button>
+            </div>  </td></tr>
 </table>
-</form>
+    </fieldset>
 
+</form></div>  
+    <ul class="sf_admin_actions">
+  <li>
+      <a href="<?php echo sfConfig::get('app_backend_url');?>company/refill" class="refill_button">Refill</a>
+  </li>
+</ul>
+</div>
 <div id="sf_admin_container"><h1><?php echo __('Payment History') ?></h1>
 <?php if ($sf_user->hasFlash('message')): ?>
 <div class="save-ok">
