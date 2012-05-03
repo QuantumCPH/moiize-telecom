@@ -57,6 +57,7 @@ class PortaBillingSoapClient extends SoapClient {
                     emailLib::sendErrorInTelinta("Login Issue","Could not Login with Billing Server. Error is " . $e->faultstring . "  <br/> Please Investigate.");
                     return false;
               }
+              
                  $this->_setSessionId($sessionId);
                  return $sessionId;
          }
