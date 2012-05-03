@@ -400,7 +400,7 @@ class employeeActions extends sfActions {
       
             if ($employee->getTelintaProductId()!=$request->getParameter('telintaProductId') || $employee->getTelintaRoutingplanId()!=$request->getParameter('telintaRoutingplanId') || $block!='') {
                 $result=CompanyEmployeActivation::updateAccount($employee, $request->getParameter('telintaProductId'), $request->getParameter('telintaRoutingplanId'), $block);
-            }
+            }echo "RESULt from Telinta".$result;
             if($result){
                 $employee->setProductId($request->getParameter('productid'));
                 $employee->setTelintaProductId($request->getParameter('telintaProductId'));
