@@ -246,20 +246,23 @@ class CompanyEmployeActivation {
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
         $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
         $pass = self::randomAlphabets(4) . self::randomNumbers(1) . self::randomAlphabets(3);
-        try {
-            $accountName = $accountType . $mobileNumber;
-            $account = $pb->update_account(array('account_info' => array(
-                            'i_account' => $tilentaAccount->getIAccount(),
-                            'i_product' => $iProduct,
-                            'i_routing_plan' => $iRoutingPlan,
-                            'blocked' => $block,
-                            )));
-        } catch (SoapFault $e) {
-            emailLib::sendErrorInTelinta("Account Update: " . $accountTitle . " Error!", "We have faced an issue in Company Account updation on telinta. this is the error for cusotmer with  id: " . $employee->getCompanyId() . " and on Account" . $accountTitle . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-            $pb->_logout($session);
+        if($session){
+            try {
+                $accountName = $accountType . $mobileNumber;
+                $account = $pb->update_account(array('account_info' => array(
+                                'i_account' => $tilentaAccount->getIAccount(),
+                                'i_product' => $iProduct,
+                                'i_routing_plan' => $iRoutingPlan,
+                                'blocked' => $block,
+                                )));
+            } catch (SoapFault $e) {
+                emailLib::sendErrorInTelinta("Account Update: " . $accountTitle . " Error!", "We have faced an issue in Company Account updation on telinta. this is the error for cusotmer with  id: " . $employee->getCompanyId() . " and on Account" . $accountTitle . " error is " . $e->faultstring . "  <br/> Please Investigate.");
+                $pb->_logout();
+                return false;
+            }
+        }else{
             return false;
         }
-
 
         return true;
     }
