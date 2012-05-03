@@ -401,15 +401,15 @@ class employeeActions extends sfActions {
             if ($employee->getTelintaProductId()!=$request->getParameter('telintaProductId') || $employee->getTelintaRoutingplanId()!=$request->getParameter('telintaRoutingplanId') || $block!='') {
                 $result=CompanyEmployeActivation::updateAccount($employee, $request->getParameter('telintaProductId'), $request->getParameter('telintaRoutingplanId'), $block);
             }
-            if($result){
+            //if($result){
                 $employee->setProductId($request->getParameter('productid'));
                 $employee->setTelintaProductId($request->getParameter('telintaProductId'));
                 $employee->setTelintaRoutingplanId($request->getParameter('telintaRoutingplanId'));
                 $employee->setBlock($block);
                 $employee->save();
-            }else{
-                continue;
-            }
+            //}else{
+                //continue;
+            //}
         }
         $this->getUser()->setFlash('message', 'PCO Lines has been updated Sucessfully');
         $this->redirect('employee/editMultiple');
