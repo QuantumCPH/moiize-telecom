@@ -372,3 +372,6 @@ font-weight: bold;
 span#validation_result{
    
 }
+table.filterOnPaymentHistory,table.filterOnPaymentHistory td,table.filterOnPaymentHistory th{
+   border:0 !important; 
+}
