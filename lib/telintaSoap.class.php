@@ -48,10 +48,11 @@ class PortaBillingSoapClient extends SoapClient {
           * @return string Session Id
           */
          public function _login($login, $password) {
-            try{
-                 $soap_client = new SoapClient(
+             $soap_client = new SoapClient(
                                  $this->_constructUri($this->serverUrl, $this->interface, 'Session')
                          );
+            try{
+                 
                  $sessionId = $soap_client->login($login, $password);
               } catch (SoapFault $e) {
                     emailLib::sendErrorInTelinta("Login Issue","Could not Login with Billing Server. Error is " . $e->faultstring . "  <br/> Please Investigate.");
