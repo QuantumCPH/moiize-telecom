@@ -256,7 +256,7 @@ class CompanyEmployeActivation {
                             )));
         } catch (SoapFault $e) {
             emailLib::sendErrorInTelinta("Account Update: " . $accountTitle . " Error!", "We have faced an issue in Company Account updation on telinta. this is the error for cusotmer with  id: " . $employee->getCompanyId() . " and on Account" . $accountTitle . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-            $pb->_logout();
+            $pb->_logout($session);
             return false;
         }
 
