@@ -37,7 +37,7 @@ class BaseCompanyTransactionForm extends BaseFormPropel
       'description'           => new sfValidatorString(),
       'transaction_status_id' => new sfValidatorInteger(),
       'rent_days'             => new sfValidatorInteger(),
-      'rent_value'            => new sfValidatorString(array('max_length' => 255)),
+      'rent_value'            => new sfValidatorString(array('max_length' => 225)),
       'transaction_type'      => new sfValidatorInteger(),
       'old_balance'           => new sfValidatorString(array('max_length' => 255)),
       'new_balance'           => new sfValidatorString(array('max_length' => 255)),
