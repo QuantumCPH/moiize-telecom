@@ -418,8 +418,13 @@ class employeeActions extends sfActions {
                 continue;
             }
         }
-        $this->getUser()->setFlash('message', 'PCO Lines has been updated Sucessfully');
-        $this->redirect('employee/editMultiple');
+            $this->getUser()->setFlash('message', 'PCO Lines has been updated Sucessfully');
+        if($request->getParameter('all_company')==1){
+            $this->redirect('employee/indexAll');
+        }else{
+            $this->redirect('employee/editMultiple');
+        }
+        
       
     }
 

@@ -165,6 +165,7 @@
     
        <div id="sf_admin_container">
             <ul class="sf_admin_actions" style="text-align:left">
+                <input type="hidden" value="<?php echo $count ?>" name="all_company">
                 <li><input type="submit" name="save" value="<?php echo __('Save Changings') ?>" class="sf_admin_action_save" /></li>
             </ul>
         </div>
