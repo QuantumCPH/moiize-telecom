@@ -32,6 +32,7 @@ class CompanyEmployeActivation {
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
         $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
         $uniqueid = "MTB2B" . $company->getVatNo();
+        $credit_limit=($company->getCreditLimit()!='')?$company->getCreditLimit():'0';
         if($session){
             try {
                 $tCustomer = $pb->add_customer(array('customer_info' => array(
@@ -40,7 +41,7 @@ class CompanyEmployeActivation {
                                 'i_parent' => self::$iParent,
                                 'i_customer_type' => 1,
                                 'opening_balance' => 0,
-                                'credit_limit' => 25,
+                                'credit_limit' => $credit_limit,
                                 'dialing_rules' => array('ip' => '00', "cc" => "34"),
                                 'email' => 'okh@zapna.com'
                                 )));
@@ -286,7 +287,7 @@ class CompanyEmployeActivation {
             try {
                 $customer = $pb->update_customer(array('customer_info' => $update_customer_request));
             } catch (SoapFault $e) {
-                emailLib::sendErrorInTelinta("Customer Update: " . $update_customer_request["i_customer"] . " Error!", "We have faced an issue in Company updation on telinta. this is the error for comapny with  icustomer: " . $iCustomer . " error is " . $e->faultstring . "  <br/> Please Investigate.");
+                emailLib::sendErrorInTelinta("Customer Update: " . $update_customer_request["i_customer"] . " Error!", "We have faced an issue in Company updation on telinta. this is the error for comapny with  icustomer: " . $update_customer_request["i_customer"] . " error is " . $e->faultstring . "  <br/> Please Investigate.");
                 $pb->_logout($session);
                 return false;
             }
