@@ -47,8 +47,8 @@ class PortaBillingSoapClient extends SoapClient {
           * @param string $password password
           * @return string Session Id
           */
-          public function _login($login, $password) {
-             try {
+         public function _login($login, $password) {
+              try{
                  $soap_client = new SoapClient(
                                  $this->_constructUri($this->serverUrl, $this->interface, 'Session')
                          );
