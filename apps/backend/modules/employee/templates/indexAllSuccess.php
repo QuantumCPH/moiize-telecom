@@ -43,8 +43,8 @@ foreach ($companies as $company):
 <div id="sf_admin_container" style="width:100%">
     <ul class="sf_admin_actions">
         <li>
-            <input type="submit" name="save" value="<?php echo __('Go') ?>" class="sf_admin_action_save" />
             <input type="hidden" value="1" name="all_company">
+            <input type="submit" name="save" value="<?php echo __('Go') ?>" class="sf_admin_action_save" />
         </li>
     </ul>
 </div>
