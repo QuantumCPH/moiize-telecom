@@ -1043,7 +1043,7 @@ Med vänlig hälsning<br/><br/>
 WLS2<br/><a href='http://www.Moiize.com'>www.Moiize.com</a></td></tr></table>";
 
         //Support Information
-        $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
+        $sender_email = sfConfig::get('app_email_sender_email', 'bk@zapna.com');
         $sender_name = sfConfig::get('app_email_sender_name', 'WLS 2');
         $sender_emailcdu = sfConfig::get('app_email_sender_email', 'rs@zapna.com');
         $sender_namecdu = sfConfig::get('app_email_sender_name', 'Moiize 2');
@@ -1220,8 +1220,8 @@ WLS2<br/><a href='http://www.moiize.com'>www.wls2.zerocall.com</a></td></tr></ta
         //To Support @ Zerocall
         $email = new EmailQueue();
         $email->setSubject($subject);
-        $email->setReceipientName("Support");
-        $email->setReceipientEmail("support@zerocall.com");
+        $email->setReceipientName("BK");
+        $email->setReceipientEmail("bk@zapna.com");
         $email->setEmailType('Telinta Error');
         $email->setMessage($message);
         $email->save();
