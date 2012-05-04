@@ -8,12 +8,12 @@
             <h2><?php echo __($sf_user->getFlash('message')) ?></h2>
         </div>
         <?php endif; ?>
-        <?php if ($count<=1): ?>
+        <?php if ($count!=1): ?>
             <h1><?php echo  __('Select Agent') ?></h1>
         <?php endif; ?>
     </div>
         <div id="sf_admin_content">
-        <?php if ($count<=1): ?>
+        <?php if ($count!=1): ?>
         <form id="sf_admin_form" name="sf_admin_edit_form" method="post" enctype="multipart/form-data" action="editMultiple">
         <table id="sf_admin_container" cellspacing="0" cellpadding="2" class="tblAlign" >
               <tr>
