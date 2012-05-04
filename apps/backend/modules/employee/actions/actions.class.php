@@ -380,9 +380,8 @@ class employeeActions extends sfActions {
         $companyid = $request->getParameter('company_id');
         $this->companyval = $companyid;
         if (isset($companyid) && $companyid != '') {
-            $count=count($companyid);
-            $this->count = $count;
-            if($count>1){
+            if($request->getParameter('all_company')==1){
+                $this->count=$request->getParameter('all_company');
                 $ce->addAnd(EmployeePeer::COMPANY_ID, $companyid, Criteria::IN);
             }else{
                 $ce->addAnd(EmployeePeer::COMPANY_ID, $companyid);
