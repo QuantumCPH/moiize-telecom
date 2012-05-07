@@ -5,6 +5,7 @@
     <tr class="headings">
       <th style="text-align: left" >Id</th>
       <th style="text-align: left" >Session</th>
+      <th style="text-align: left" >Action</th>
     </tr>
   </thead>
   <tbody>
