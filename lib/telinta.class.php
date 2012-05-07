@@ -29,7 +29,7 @@ class Telienta {
 
     public static function ResgiterCustomer(Customer $customer, $OpeningBalance) {
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
-        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
+        
         $uniqueid="MTB2C".$customer->getUniqueid();
         try {
             $tCustomer = $pb->add_customer(array('customer_info' => array(
@@ -44,12 +44,12 @@ class Telienta {
                             )));
         } catch (SoapFault $e) {
             emailLib::sendErrorInTelinta("Error in Customer Registration", "We have faced an issue in Customer registration on telinta. this is the error for cusotmer with  id: " . $customer->getId() . " and error is " . $e->faultstring . "  <br/> Please Investigate.");
-            $pb->_logout();
+            
             return false;
         }
         $customer->setICustomer($tCustomer->i_customer);
         $customer->save();
-        $pb->_logout();
+        
         return true;
     }
 
@@ -64,14 +64,14 @@ class Telienta {
     public static function terminateAccount(TelintaAccounts $telintaAccount) {
         try {
             $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
-            $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
+            
             $account = $pb->terminate_account(array('i_account' => $telintaAccount->getIAccount()));
         } catch (SoapFault $e) {
             emailLib::sendErrorInTelinta("Account Deletion: " . $accountName . " Error!", "We have faced an issue in Customer Account Deletion on telinta. this is the error for cusotmer with  id: " . $customer->getId() . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-            $pb->_logout();
+            
             return false;
         }
-        $pb->_logout();
+        
         $telintaAccount->setStatus(5);
         $telintaAccount->save();
         return true;
@@ -82,19 +82,19 @@ class Telienta {
 
         try {
             $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
-            $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
+            
 
             $cInfo = $pb->get_customer_info(array(
                         'i_customer' => $customer->getICustomer(),
                     ));
             $Balance = $cInfo->customer_info->balance;
-            $pb->_logout();
+            
         } catch (SoapFault $e) {
             emailLib::sendErrorInTelinta("Customer Balance Fetching: " . $customer->getId() . " Error!", "We have faced an issue in Customer Account Balance Fetch on telinta. this is the error for cusotmer with  Uniqueid: " . $customer->getId() . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-            $pb->_logout();
+            
             return false;
         }
-        $pb->_logout();
+        
         if ($Balance == 0)
             return $Balance;
         else
@@ -111,14 +111,14 @@ class Telienta {
 
     public static function callHistory(Customer $customer, $fromDate, $toDate) {
          $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
-            $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
+            
         try {
             $xdrList = $pb->get_customer_xdr_list(array('i_customer' => $customer->getICustomer(),'from_date'=>$fromDate,'to_date'=>$toDate));
         } catch (SoapFault $e) {
             emailLib::sendErrorInTelinta("Customer Call History: " . $customer->getId() . " Error!", "We have faced an issue with Customer while Fetching Call History  this is the error for cusotmer with  Customer ID: " . $customer->getId() . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-            $pb->_logout();
+            
         }
-        $pb->_logout();
+        
         return $xdrList;
     }
 
@@ -163,7 +163,7 @@ class Telienta {
     private static function createAccount(Customer $customer, $mobileNumber, $accountType, $iProduct, $followMeEnabled='N') {
 
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
-        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
+        
         $batchName="MTB2C".$customer->getUniqueid();
         try {
             $accountName = $accountType . $mobileNumber;
@@ -185,7 +185,7 @@ class Telienta {
                             )));
         } catch (SoapFault $e) {
             emailLib::sendErrorInTelinta("Account Creation: " . $accountName . " Error!", "We have faced an issue in Customer Account Creation on telinta. this is the error for cusotmer with  id: " . $customer->getId() . " and on Account" . $accountName . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-            $pb->_logout();
+            
             return false;
         }
 
@@ -201,7 +201,7 @@ class Telienta {
 
     private static function makeTransaction(Customer $customer, $action, $amount) {
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
-        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
+        
         try {
             $accounts = $pb->make_transaction(array(
                         'i_customer' => $customer->getICustomer(),
@@ -211,24 +211,24 @@ class Telienta {
                     ));
         } catch (SoapFault $e) {
             emailLib::sendErrorInTelinta("Customer Transcation: " . $customer->getId() . " Error!", "We have faced an issue with Customer while making transaction " . $action . " this is the error for cusotmer with  Customer ID: " . $customer->getId() . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-            $pb->_logout();
+            
             return false;
         }
-        $pb->_logout();
+        
         return true;
     }
 
     public static function getCustomerInfo($icustomer){
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
-        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
+        
         try {
         $customerInfo = $pb->get_customer_info(array('i_customer'=>$icustomer));
          } catch (SoapFault $e) {
             emailLib::sendErrorInTelinta("Customer Info: " . $icustomer . " Error!", "We have faced an issue with Customer while fecthing info error for cusotmer with  iCustomer: " . $icustomer . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-            $pb->_logout();
+            
             return false;
         }
-        $pb->_logout();
+        
         return $customerInfo;
     }
 

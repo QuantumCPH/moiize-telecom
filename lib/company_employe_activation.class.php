@@ -34,7 +34,6 @@ class CompanyEmployeActivation {
         $retry_count = 0;
 
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
-        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
         $uniqueid = "MTB2B" . $company->getVatNo();
          while (!$tCustomer && $retry_count < $max_retries) {
             try {
@@ -51,7 +50,7 @@ class CompanyEmployeActivation {
             } catch (SoapFault $e) {
                 if ($e->faultstring != 'Could not connect to host') {
                     emailLib::sendErrorInTelinta("Error in Company Registration", "We have faced an issue in Company registration on telinta. this is the error for cusotmer with  id: " . $company->getVatNo() . " and error is " . $e->faultstring . "  <br/> Please Investigate.");
-                    $pb->_logout($session);
+                    
                     return false;
                 }
             }
@@ -64,7 +63,6 @@ class CompanyEmployeActivation {
         }
             $company->setICustomer($tCustomer->i_customer);
             //$company->save();
-            $pb->_logout($session);
             return true;
         
     }
@@ -79,14 +77,13 @@ class CompanyEmployeActivation {
         $retry_count = 0;
 
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
-        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
         while (!$account && $retry_count < $max_retries) {
             try {
                 $account = $pb->terminate_account(array('i_account' => $telintaAccount->getIAccount()));
             } catch (SoapFault $e) {
                 if ($e->faultstring != 'Could not connect to host') {
                     emailLib::sendErrorInTelinta("Account Deletion: " . $telintaAccount->getIAccount() . " Error!", "We have faced an issue in Company Account Deletion on telinta. this is the error for cusotmer with  id: " . $telintaAccount->getIAccount() . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-                    $pb->_logout($session);
+                    
                     return false;
                 }
              }
@@ -100,7 +97,6 @@ class CompanyEmployeActivation {
 
             $telintaAccount->setStatus(5);
             $telintaAccount->save();
-            $pb->_logout($session);
             return true;
        
     }
@@ -111,18 +107,18 @@ class CompanyEmployeActivation {
         $retry_count = 0;
         
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
-        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
+        $pb->_setSessionId();
         while (!$cInfo && $retry_count < $max_retries) {
             try {
                 $cInfo = $pb->get_customer_info(array(
                             'i_customer' => $company->getICustomer(),
                         ));
                 
-                $pb->_logout($session);
+               
             } catch (SoapFault $e) {
                 if ($e->faultstring != 'Could not connect to host') {
                     emailLib::sendErrorInTelinta("Company Balance Fetching: " . $company->getId() . " Error!", "We have faced an issue in Company Account Balance Fetch on telinta. this is the error for cusotmer with  Uniqueid: " . $company->getId() . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-                    $pb->_logout($session);
+                   
                     return false;
                 }
             }
@@ -133,7 +129,7 @@ class CompanyEmployeActivation {
             emailLib::sendErrorInTelinta("Company Balance Fetching: " . $company->getId() . " Error!", "We have faced an issue in Company Account Balance Fetch on telinta. Error is Even After Max Retries".$max_retries."  <br/> Please Investigate.");
             return false;
         }
-            $pb->_logout($session);
+           
             $Balance = $cInfo->customer_info->balance;
             if ($Balance == 0)
                 return $Balance;
@@ -161,14 +157,13 @@ class CompanyEmployeActivation {
         $retry_count = 0;
         
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
-        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
         while (!$xdrList && $retry_count < $max_retries) {
             try {
                 $xdrList = $pb->get_customer_xdr_list(array('i_customer' => $company->getICustomer(), 'from_date' => $fromDate, 'to_date' => $toDate));
             } catch (SoapFault $e) {
                  if ($e->faultstring != 'Could not connect to host') {
                     emailLib::sendErrorInTelinta("Company Call History: " . $company->getId() . " Error!", "We have faced an issue with Company while Fetching Call History  this is the error for cusotmer with  Company ID: " . $company->getId() . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-                    $pb->_logout($session);
+                    
                  }
             }
             sleep(0.5);
@@ -178,7 +173,7 @@ class CompanyEmployeActivation {
             emailLib::sendErrorInTelinta("Company Call History: " . $company->getId() . " Error!", "We have faced an issue with Company while Fetching Call History on telinta. Error is Even After Max Retries".$max_retries."  <br/> Please Investigate.");
             return false;
         }
-            $pb->_logout($session);
+            
             return $xdrList;
        
     }
@@ -189,17 +184,17 @@ class CompanyEmployeActivation {
         $retry_count = 0;
         
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
-        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
+        
         while (!$aInfo && $retry_count < $max_retries) {
             try {
                 $aInfo = $pb->get_account_info(array(
                             'i_account' => $iAccount,
                         ));
-                $pb->_logout($session);
+                
             } catch (SoapFault $e) {
                 if ($e->faultstring != 'Could not connect to host') {
                     emailLib::sendErrorInTelinta("Employee Account info Fetching:  Error!", "We have faced an issue in Employee Account Info Fetch on telinta. this is the error for Employee with  account: " . $iAccount . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-                    $pb->_logout($session);
+                    
                     return false;
                 }
             }
@@ -210,7 +205,7 @@ class CompanyEmployeActivation {
             emailLib::sendErrorInTelinta("Employee Account info Fetching:  Error!", "We have faced an issue in Employee Account Info Fetch on telinta. Error is Even After Max Retries".$max_retries."  <br/> Please Investigate.");
             return false;
         }
-            $pb->_logout($session);
+            
             return $aInfo;
        
     }
@@ -221,14 +216,12 @@ class CompanyEmployeActivation {
         $retry_count = 0;
         
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
-        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
         while (!$xdrList && $retry_count < $max_retries) {
             try {
                 $xdrList = $pb->get_xdr_list(array('i_account' => $iAccount, 'from_date' => $fromDate, 'to_date' => $toDate));
             } catch (SoapFault $e) {
                if ($e->faultstring != 'Could not connect to host') {
                     emailLib::sendErrorInTelinta("Employee Call History: " . $iAccount . " Error!", "We have faced an issue with Employee while Fetching Call History  this is the error for cusotmer with ID: " . $iAccount . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-                    $pb->_logout($session);
                }
             }
             sleep(0.5);
@@ -238,7 +231,6 @@ class CompanyEmployeActivation {
             emailLib::sendErrorInTelinta("Employee Call History: " . $iAccount . " Error!", "We have faced an issue with Employee while Fetching Call History on telinta. Error is Even After Max Retries".$max_retries."  <br/> Please Investigate.");
             return false;
         }
-            $pb->_logout($session);
             return $xdrList;
         
     }
@@ -251,7 +243,6 @@ class CompanyEmployeActivation {
         $retry_count = 0;
         
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
-        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
         $pass = self::randomAlphabets(4) . self::randomNumbers(1) . self::randomAlphabets(3);
         $accountName = $accountType . $mobileNumber;
         while (!$account && $retry_count < $max_retries) {
@@ -276,7 +267,6 @@ class CompanyEmployeActivation {
             } catch (SoapFault $e) {
                 if ($e->faultstring != 'Could not connect to host') {
                     emailLib::sendErrorInTelinta("Account Creation: " . $accountName . " Error!", "We have faced an issue in Company Account Creation on telinta. this is the error for cusotmer with  id: " . $company->getId() . " and on Account" . $accountName . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-                    $pb->_logout($session);
                     return false;
                 }
             }
@@ -307,7 +297,7 @@ class CompanyEmployeActivation {
         $retry_count = 0;
         
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
-        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
+        
         while (!$accounts && $retry_count < $max_retries) {
             try {
                 $accounts = $pb->make_transaction(array(
@@ -319,7 +309,7 @@ class CompanyEmployeActivation {
             } catch (SoapFault $e) {
                  if ($e->faultstring != 'Could not connect to host') {
                     emailLib::sendErrorInTelinta("Customer Transcation: " . $company->getId() . " Error!", "We have faced an issue with Customer while making transaction " . $action . " this is the error for cusotmer with  Customer ID: " . $company->getId() . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-                    $pb->_logout($session);
+                    
                     return false;
                  }
             }
@@ -330,7 +320,7 @@ class CompanyEmployeActivation {
             emailLib::sendErrorInTelinta("Customer Transcation: " . $company->getId() . " Error!", "We have faced an issue with Customer while making transaction on telinta. Error is Even After Max Retries".$max_retries."  <br/> Please Investigate.");
             return false;
         }
-            $pb->_logout($session);
+            
             return true;
         
     }
@@ -367,7 +357,7 @@ class CompanyEmployeActivation {
         $tilentaAccount = TelintaAccountsPeer::doSelectOne($til);
      
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
-        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
+       
         $pass = self::randomAlphabets(4) . self::randomNumbers(1) . self::randomAlphabets(3);
         $accountName = $accountType . $mobileNumber;
         while (!$account && $retry_count < $max_retries) {
@@ -382,7 +372,7 @@ class CompanyEmployeActivation {
             } catch (SoapFault $e) {
                 if ($e->faultstring != 'Could not connect to host') {
                     emailLib::sendErrorInTelinta("Account Update: " . $accountTitle . " Error!", "We have faced an issue in Company Account updation on telinta. this is the error for cusotmer with  id: " . $employee->getCompanyId() . " and on Account" . $accountTitle . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-                    $pb->_logout($session);
+                    
                     return false;
                 }
             }
@@ -403,14 +393,14 @@ class CompanyEmployeActivation {
         $retry_count = 0;
         
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
-        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
+       
         while (!$customer && $retry_count < $max_retries) {
             try {
                 $customer = $pb->update_customer(array('customer_info' => $update_customer_request));
             } catch (SoapFault $e) {
                 if ($e->faultstring != 'Could not connect to host') {
                     emailLib::sendErrorInTelinta("Customer Update: " . $update_customer_request["i_customer"] . " Error!", "We have faced an issue in Company updation on telinta. this is the error for comapny with  icustomer: " . $update_customer_request["i_customer"] . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-                    $pb->_logout($session);
+                    
                     return false;
                 }
             }
