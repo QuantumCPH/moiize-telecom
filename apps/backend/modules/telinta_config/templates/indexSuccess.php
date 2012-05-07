@@ -20,7 +20,7 @@
     <tr <?php echo $class;   ?>>
       <td><a href="<?php echo url_for('telinta_config/edit?id='.$telinta_config->getId()) ?>"><?php echo $telinta_config->getId() ?></a></td>
       <td><?php echo $telinta_config->getSession() ?></td>
-      <td><a href="<?php echo url_for('telinta_config/edit?id='.$telinta_config->getId()) ?>">edit</a></td>
+      <td><a href="<?php echo url_for('telinta_config/edit?id='.$telinta_config->getId()) ?>">Renew</a></td>
     </tr>
     <?php endforeach; ?>
   </tbody>
