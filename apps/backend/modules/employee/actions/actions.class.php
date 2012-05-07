@@ -334,7 +334,7 @@ class employeeActions extends sfActions {
         $c->addAnd(CompanyPeer::ID, $this->employee->getCompanyId());
         $this->companys = CompanyPeer::doSelectOne($c);
 
-        $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
+        $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 3, date("Y"));
         $fromdate = date("Y-m-d", $tomorrow1);
         $tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
         $todate = date("Y-m-d", $tomorrow);
