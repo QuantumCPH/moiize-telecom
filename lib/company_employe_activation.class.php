@@ -23,9 +23,9 @@ class CompanyEmployeActivation {
     private static $a_iProduct = 10897;
     private static $CBProduct = '';
     private static $VoipProduct = '';
-    private static $telintaSOAPUrl = "https://mybilling.telinta.com";
-    private static $telintaSOAPUser = 'API_login';
-    private static $telintaSOAPPassword = 'ee4eriny';
+    public static $telintaSOAPUrl = "https://mybilling.telinta.com";
+    public static $telintaSOAPUser = 'API_login';
+    public static $telintaSOAPPassword = 'ee4eriny';
 
     public static function telintaRegisterCompany(Company $company) {
 

@@ -82,7 +82,7 @@ class BaseCustomerForm extends BaseFormPropel
       'ticketval'                => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'to_date'                  => new sfValidatorDate(array('required' => false)),
       'from_date'                => new sfValidatorDate(array('required' => false)),
-      'i_customer'               => new sfValidatorString(array('max_length' => 50, 'required' => false)),
+      'i_customer'               => new sfValidatorInteger(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('customer[%s]');

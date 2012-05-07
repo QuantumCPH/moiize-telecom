@@ -13,19 +13,19 @@ class BaseAgentUserForm extends BaseFormPropel
   {
     $this->setWidgets(array(
       'id'               => new sfWidgetFormInputHidden(),
-      'agent_company_id' => new sfWidgetFormPropelChoice(array('model' => 'AgentCompany', 'add_empty' => false)),
+      'agent_company_id' => new sfWidgetFormPropelChoice(array('model' => 'AgentCompany', 'add_empty' => true)),
       'username'         => new sfWidgetFormInput(),
       'password'         => new sfWidgetFormInput(),
-      'status_id'        => new sfWidgetFormPropelChoice(array('model' => 'Status', 'add_empty' => false)),
+      'status_id'        => new sfWidgetFormPropelChoice(array('model' => 'Status', 'add_empty' => true)),
       'created_at'       => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
       'id'               => new sfValidatorPropelChoice(array('model' => 'AgentUser', 'column' => 'id', 'required' => false)),
-      'agent_company_id' => new sfValidatorPropelChoice(array('model' => 'AgentCompany', 'column' => 'id')),
+      'agent_company_id' => new sfValidatorPropelChoice(array('model' => 'AgentCompany', 'column' => 'id', 'required' => false)),
       'username'         => new sfValidatorString(array('max_length' => 150)),
       'password'         => new sfValidatorString(array('max_length' => 150)),
-      'status_id'        => new sfValidatorPropelChoice(array('model' => 'Status', 'column' => 'id')),
+      'status_id'        => new sfValidatorPropelChoice(array('model' => 'Status', 'column' => 'id', 'required' => false)),
       'created_at'       => new sfValidatorDateTime(array('required' => false)),
     ));
 
