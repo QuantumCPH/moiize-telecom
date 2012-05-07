@@ -53,10 +53,7 @@
                   </tbody>
               </table>
                 </div>
-            </li>
-
-          </ul>
-
+           
 
 
 
