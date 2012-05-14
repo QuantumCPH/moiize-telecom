@@ -369,10 +369,10 @@ class employeeActions extends sfActions {
         $pr = new Criteria();
         $pr->add(ProductPeer::ID, 1);
         $this->products = ProductPeer::doSelect($pr);
-        // created by kmmalik.com for new module of telinta product
+      
         $tp = new Criteria();
         $this->telintaProducts = TelintaProductPeer::doSelect($tp);
-        // created by kmmalik.com for new module of telinta Routing plan
+       
         $trp = new Criteria();
         $this->telintaRoutingplans = TelintaRoutingplanPeer::doSelect($trp);
 
@@ -380,8 +380,14 @@ class employeeActions extends sfActions {
         $companyid = $request->getParameter('company_id');
         $this->companyval = $companyid;
         if (isset($companyid) && $companyid != '') {
-            $ce->addAnd(EmployeePeer::COMPANY_ID, $companyid);
-            $this->employees = EmployeePeer::doSelect($ce);
+            if($request->getParameter('all_company')==1){
+                $this->count=$request->getParameter('all_company');
+                $ce->addAnd(EmployeePeer::COMPANY_ID, $companyid, Criteria::IN);
+            }else{
+                $ce->addAnd(EmployeePeer::COMPANY_ID, $companyid);
+            }
+                $ce->addAscendingOrderByColumn('company_id');
+                $this->employees = EmployeePeer::doSelect($ce);
         }
         
     }
@@ -412,9 +418,19 @@ class employeeActions extends sfActions {
                 continue;
             }
         }
-        $this->getUser()->setFlash('message', 'PCO Lines has been updated Sucessfully');
-        $this->redirect('employee/editMultiple');
+            $this->getUser()->setFlash('message', 'PCO Lines has been updated Sucessfully');
+        if($request->getParameter('all_company')==1){
+            $this->redirect('employee/indexAll');
+        }else{
+            $this->redirect('employee/editMultiple');
+        }
+        
       
+    }
+
+    public function executeIndexAll(sfWebRequest $request) {
+        $c = new Criteria();
+        $this->companies = CompanyPeer::doSelect($c);
     }
 
 }
