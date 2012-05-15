@@ -202,6 +202,20 @@ echo $value ? $value : '&nbsp;' ;
 </div>
 
 <div class="form-row">
+  <?php echo label_for('company[credit_limit]', __($labels['company{credit_limit}']), '') ?>
+  <div class="content<?php if ($sf_request->hasError('company{credit_limit}')): ?> form-error<?php endif; ?>">
+  <?php if ($sf_request->hasError('company{credit_limit}')): ?>
+    <?php echo form_error('company{credit_limit}', array('class' => 'form-error-msg')) ?>
+  <?php endif; ?>
+
+  <?php $value = object_input_tag($company, 'getCreditLimit', array (
+  'size' => 80,
+  'control_name' => 'company[credit_limit]',
+)); echo $value ? $value : '&nbsp;' ?>
+    </div>
+</div>
+    
+<div class="form-row">
   <?php echo label_for('company[status_id]', __($labels['company{status_id}']), '') ?>
   <div class="content<?php if ($sf_request->hasError('company{status_id}')): ?> form-error<?php endif; ?>">
   <?php if ($sf_request->hasError('company{status_id}')): ?>
@@ -225,4 +239,3 @@ echo $value ? $value : '&nbsp;' ;
 
 <?php include_partial('edit_actions', array('company' => $company)) ?>
 
-</form>
