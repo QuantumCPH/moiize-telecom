@@ -35,6 +35,7 @@ class CompanyEmployeActivation {
 
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
         $uniqueid = "MTB2B" . $company->getVatNo();
+        $credit_limit=($company->getCreditLimit()!='')?$company->getCreditLimit():'0';
          while (!$tCustomer && $retry_count < $max_retries) {
             try {
                 $tCustomer = $pb->add_customer(array('customer_info' => array(
@@ -43,7 +44,7 @@ class CompanyEmployeActivation {
                                 'i_parent' => self::$iParent,
                                 'i_customer_type' => 1,
                                 'opening_balance' => 0,
-                                'credit_limit' => 25,
+                                'credit_limit' => $credit_limit,
                                 'dialing_rules' => array('ip' => '00', "cc" => "34"),
                                 'email' => 'okh@zapna.com'
                                 )));
