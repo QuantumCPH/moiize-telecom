@@ -29,6 +29,7 @@
       <th><?php echo __('Action') ?></th>
       <th><?php echo __('Agent Name') ?></th>
       <th><?php echo __('Vat no') ?></th>
+         <th><?php echo __('Credit Limit') ?></th>
       <th><?php echo __('Contact name') ?></th>
       <th><?php echo __('Mobile Number') ?></th>
     </tr>
@@ -46,6 +47,7 @@ foreach ($companies as $company):
         <td><input type="checkbox" name="company_id[]" value="<?PHP echo $company->getId();?>" checked="checked"></td>
         <td><?php echo $company->getName(); ?></td>
         <td><?php echo $company->getVatNo(); ?></td>
+          <td><?php echo $company->getCreditLimit(); ?></td>
         <td><?php echo $company->getContactName();?></td>
         <td><?php echo $company->getHeadPhoneNumber(); ?></td>
     </tr>
