@@ -45,7 +45,7 @@
                 </div>
             <table id="sf_admin_container" cellspacing="0" cellpadding="2" class="tblAlign" >
             <tr>
-                <td style="padding: 5px;" width="300px"><?php echo __('Product:') ?></td>
+                <td style="padding: 5px;" width="50%"><?php echo __('Product:') ?></td>
                 <td style="padding: 5px;">
                     <select name="productid" id="productid"    class="required"  >
                         <?php foreach($products as $product){  ?>
