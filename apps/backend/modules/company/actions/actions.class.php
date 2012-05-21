@@ -493,17 +493,13 @@ class companyActions extends sfActions {
 
         $c = new Criteria();
         $this->companys = CompanyPeer::doSelect($c);
-        
         $cTD = new Criteria();
         $cTD->addAnd(TransactionDescriptionPeer::TRANSACTION_TYPE_ID,2);
         $this->transactionDesc = TransactionDescriptionPeer::doSelect($cTD);
-        
         if ($request->isMethod('post')) {
-
             $company_id = $request->getParameter('company_id');
             $charge_amount = $request->getParameter('refill');
             $descriptionId = $request->getParameter('descriptionId');
-            
             ////// Transaction Description//////
             $cT = new Criteria();
             $cT->add(TransactionDescriptionPeer::ID,$descriptionId);
@@ -600,12 +596,6 @@ class companyActions extends sfActions {
 
         return sfView::NONE;
     }
- public function executeShowDate (sfWebRequest $request) {
-        //call Culture Method For Get Current Set Culture - Against Feature# 6.1 --- 02/28/11
-        changeLanguageCulture::languageCulture($request, $this);
-      echo date('Y-m-d H:i:s');
-
-        return sfView::NONE;
-    }
+ 
 
 }

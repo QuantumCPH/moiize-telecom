@@ -275,6 +275,32 @@ class CompanyEmployeActivation {
         }
     }
 
+
+    public static function getCustomerInfo(Company $company) {
+        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
+        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
+
+        try {
+
+            $cInfo = $pb->get_customer_info(array(
+                        'i_customer' => $company->getICustomer(),
+                    ));
+            $CustomerInfo = $cInfo->customer_info;
+            $pb->_logout();
+        } catch (SoapFault $e) {
+            emailLib::sendErrorInTelinta("Company credit limit Fetching: " . $company->getId() . " Error!", "We have faced an issue in Company Account Credit Limit Fetch on telinta. this is the error for cusotmer with  Uniqueid: " . $company->getId() . " error is " . $e->faultstring . "  <br/> Please Investigate.");
+            $pb->_logout();
+            return false;
+        }
+        $pb->_logout();
+        if ($CustomerInfo == 0)
+            return $CustomerInfo;
+        else
+            return ;
+    }
+
+
+
 }
 
 ?>
