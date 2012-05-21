@@ -28,7 +28,7 @@
                     <th>
                        <?php echo __('Credit Limit') ?>:
                     </th>
-                    <td><?phpecho $company->getCreditLimit();
+                    <td><?php echo $company->getCreditLimit();
                         echo " &euro;"; ?></td>
                 </tr>
                 <tr class="headings">
