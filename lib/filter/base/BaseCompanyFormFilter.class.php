@@ -46,6 +46,7 @@ class BaseCompanyFormFilter extends BaseFormFilterPropel
       'rate_table_id'          => new sfWidgetFormFilterInput(),
       'i_customer'             => new sfWidgetFormFilterInput(),
       'password'               => new sfWidgetFormFilterInput(),
+      'credit_limit'           => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
@@ -81,6 +82,7 @@ class BaseCompanyFormFilter extends BaseFormFilterPropel
       'rate_table_id'          => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'i_customer'             => new sfValidatorPass(array('required' => false)),
       'password'               => new sfValidatorPass(array('required' => false)),
+      'credit_limit'           => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
     ));
 
     $this->widgetSchema->setNameFormat('company_filters[%s]');
@@ -131,6 +133,7 @@ class BaseCompanyFormFilter extends BaseFormFilterPropel
       'rate_table_id'          => 'Number',
       'i_customer'             => 'Text',
       'password'               => 'Text',
+      'credit_limit'           => 'Number',
     );
   }
 }

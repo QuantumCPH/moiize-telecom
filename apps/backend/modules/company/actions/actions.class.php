@@ -603,6 +603,33 @@ class companyActions extends sfActions {
 
         return sfView::NONE;
     }
- 
+   public function executeIndexAll(sfWebRequest $request) {
+        $c = new Criteria();
+        $this->companies = CompanyPeer::doSelect($c);
+    }
+
+     public function executeEditCreditLimit(sfWebRequest $request) {
+      $count=0;
+      $count=count($request->getParameter('company_id'));
+      $creditlimit=$request->getParameter('creditlimit');
+
+        for($i=0; $i<$count; $i++){
+            $id=$request->getParameter('company_id');
+            
+            $company = CompanyPeer::retrieveByPk($id[$i]);
+            $company->setCreditLimit($creditlimit);
+            $company->save();
+               $update_customer['i_customer']=$company->getICustomer();
+            $update_customer['credit_limit']=($company->getCreditLimit()!='')?$company->getCreditLimit():'0';
+          $res = CompanyEmployeActivation::updateCustomer($update_customer);
+
+          
+        }
+
+          $this->getUser()->setFlash('message', 'All Selected Agent Credit Limit is updated');
+             $this->redirect('company/indexAll');
+    }
+
+
 
 }

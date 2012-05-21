@@ -385,6 +385,11 @@
                         }else{
                           echo link_to(__('Edit All Agent Account'), 'employee/indexAll');
                         }
+                          if($actionName=='indexAll' && $modulName=="company"){
+                          echo link_to(__('Edit All Agent Credit Limit'), 'company/indexAll',array('class'=>'subSelect'));
+                        }else{
+                          echo link_to(__('Edit All Agent Credit Limit'), 'company/indexAll');
+                        }
                         ?>
                 </div>
             </li>
