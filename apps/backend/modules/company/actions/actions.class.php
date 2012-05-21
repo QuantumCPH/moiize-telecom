@@ -143,7 +143,7 @@ class companyActions extends sfActions {
             $res = CompanyEmployeActivation::telintaRegisterCompany($company);
             //var_dump($res);
         }
-        $company->isNew() . ":" . $res;
+        //$company->isNew() . ":" . $res;
 //die;
         if ($company->isNew() && $res) {
             $company->setInvoiceMethodId(2);
@@ -165,6 +165,9 @@ class companyActions extends sfActions {
             CARBORDFISH_SMS::Send($mobile, $sms_text,"Moiize");
             
         } elseif (!$company->isNew()) {
+            $update_customer['i_customer']=$company->getICustomer();
+            $update_customer['credit_limit']=($company->getCreditLimit()!='')?$company->getCreditLimit():'0';
+            $res = CompanyEmployeActivation::updateCustomer($update_customer);
             $company->save();
         } elseif (!$res) {
             throw new PropelException("You cannot save an object that has been deleted.");
@@ -232,6 +235,9 @@ class companyActions extends sfActions {
         }
         if (isset($company['agent_company_id'])) {
             $this->company->setAgentCompanyId($company['agent_company_id'] ? $company['agent_company_id'] : null);
+        }
+        if (isset($company['credit_limit'])) {
+            $this->company->setCreditLimit($company['credit_limit'] ? $company['credit_limit'] : null);
         }
         if (isset($company['registration_date'])) {
             if ($company['registration_date']) {
@@ -378,6 +384,7 @@ class companyActions extends sfActions {
             'company{registration_date}' => 'Registration date:',
             'company{created_at}' => 'Created at:',
             'company{file_path}' => 'Registration Doc:',
+            'company{credit_limit}' => 'Credit Limit:',
         );
     }
 
@@ -400,7 +407,7 @@ class companyActions extends sfActions {
        $this->fromdate=$request->getParameter('startdate');
        $this->todate=$request->getParameter('enddate');
 }else{
-        $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
+        $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 3, date("Y"));
         $this->fromdate = date("Y-m-d", $tomorrow1);
         //$tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
         $this->todate = date("Y-m-d");

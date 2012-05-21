@@ -334,7 +334,7 @@ class employeeActions extends sfActions {
         $c->addAnd(CompanyPeer::ID, $this->employee->getCompanyId());
         $this->companys = CompanyPeer::doSelectOne($c);
 
-        $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
+        $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 3, date("Y"));
         $fromdate = date("Y-m-d", $tomorrow1);
         $tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
         $todate = date("Y-m-d", $tomorrow);
@@ -357,6 +357,80 @@ class employeeActions extends sfActions {
         } else {
             echo "yes";
         }
+    }
+
+    public function executeEditMultiple($request) {
+
+        $this->companyval = $request->getParameter('company_id');
+
+        $c = new Criteria();
+        $this->companys = CompanyPeer::doSelect($c);
+
+        $pr = new Criteria();
+        $pr->add(ProductPeer::ID, 1);
+        $this->products = ProductPeer::doSelect($pr);
+      
+        $tp = new Criteria();
+        $this->telintaProducts = TelintaProductPeer::doSelect($tp);
+       
+        $trp = new Criteria();
+        $this->telintaRoutingplans = TelintaRoutingplanPeer::doSelect($trp);
+
+        $ce = new Criteria();
+        $companyid = $request->getParameter('company_id');
+        $this->companyval = $companyid;
+        if (isset($companyid) && $companyid != '') {
+            if($request->getParameter('all_company')==1){
+                $this->count=$request->getParameter('all_company');
+                $ce->addAnd(EmployeePeer::COMPANY_ID, $companyid, Criteria::IN);
+            }else{
+                $ce->addAnd(EmployeePeer::COMPANY_ID, $companyid);
+            }
+                $ce->addAscendingOrderByColumn('company_id');
+                $this->employees = EmployeePeer::doSelect($ce);
+        }
+        
+    }
+
+    public function executeEditMultipleEmployee($request) {
+    $block='';
+        $count=count($request->getParameter('id'));
+        for($i=0; $i<$count; $i++){
+            $id=$request->getParameter('id');
+            $employee = EmployeePeer::retrieveByPk($id[$i]);
+            if($request->getParameter('block')!=''){
+                $block=$request->getParameter('block');
+            }else{
+                $block=$employee->getBlock();
+            }
+      
+            if ($employee->getTelintaProductId()!=$request->getParameter('telintaProductId') || $employee->getTelintaRoutingplanId()!=$request->getParameter('telintaRoutingplanId') || $block!='') {
+                $result=CompanyEmployeActivation::updateAccount($employee, $request->getParameter('telintaProductId'), $request->getParameter('telintaRoutingplanId'), $block);
+            }
+            
+            if($result){
+                $employee->setProductId($request->getParameter('productid'));
+                $employee->setTelintaProductId($request->getParameter('telintaProductId'));
+                $employee->setTelintaRoutingplanId($request->getParameter('telintaRoutingplanId'));
+                $employee->setBlock($block);
+                $employee->save();
+            }else{
+                continue;
+            }
+        }
+            $this->getUser()->setFlash('message', 'PCO Lines has been updated Sucessfully');
+        if($request->getParameter('all_company')==1){
+            $this->redirect('employee/indexAll');
+        }else{
+            $this->redirect('employee/editMultiple');
+        }
+        
+      
+    }
+
+    public function executeIndexAll(sfWebRequest $request) {
+        $c = new Criteria();
+        $this->companies = CompanyPeer::doSelect($c);
     }
 
 }

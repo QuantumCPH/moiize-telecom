@@ -30,6 +30,7 @@ class BaseEmployeeForm extends BaseFormPropel
       'telinta_routingplan_id' => new sfWidgetFormInput(),
       'country_code'           => new sfWidgetFormInput(),
       'country_mobile_number'  => new sfWidgetFormInput(),
+      'block'                  => new sfWidgetFormInput(),
     ));
 
     $this->setValidators(array(
@@ -51,6 +52,7 @@ class BaseEmployeeForm extends BaseFormPropel
       'telinta_routingplan_id' => new sfValidatorInteger(array('required' => false)),
       'country_code'           => new sfValidatorString(array('max_length' => 50, 'required' => false)),
       'country_mobile_number'  => new sfValidatorString(array('max_length' => 250, 'required' => false)),
+      'block'                  => new sfValidatorString(array('max_length' => 20, 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('employee[%s]');

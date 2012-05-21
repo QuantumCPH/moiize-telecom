@@ -375,6 +375,16 @@
                         }else{
                           echo link_to(__('Telinta Routing Plan'), 'telintaRoutingplan/index');
                         }
+                        if($actionName=='editMultiple' && $modulName=="employee"){
+                          echo link_to(__('Edit Agent Account'), 'employee/editMultiple',array('class'=>'subSelect'));
+                        }else{
+                          echo link_to(__('Edit Agent Account'), 'employee/editMultiple');
+                        }
+                        if($actionName=='indexAll' && $modulName=="employee"){
+                          echo link_to(__('Edit All Agent Account'), 'employee/indexAll',array('class'=>'subSelect'));
+                        }else{
+                          echo link_to(__('Edit All Agent Account'), 'employee/indexAll');
+                        }
                         ?>
                 </div>
             </li>
