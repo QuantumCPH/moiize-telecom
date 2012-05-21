@@ -1,5 +1,5 @@
 <?php
-
+set_time_limit(10000000);
 require_once(sfConfig::get('sf_lib_dir') . '/company_employe_activation.class.php');
 require_once(sfConfig::get('sf_lib_dir') . '/emailLib.php');
 
