@@ -417,30 +417,39 @@ class CompanyEmployeActivation {
 
 
     public static function getCustomerInfo(Company $company) {
+
+        $cInfo = false;
+        $max_retries = 5;
+        $retry_count = 0;
+
         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
-        $session = $pb->_login(self::$telintaSOAPUser, self::$telintaSOAPPassword);
+        $pb->_setSessionId();
+        while (!$cInfo && $retry_count < $max_retries) {
+            try {
+                $cInfo = $pb->get_customer_info(array(
+                            'i_customer' => $company->getICustomer(),
+                        ));
 
-        try {
 
-            $cInfo = $pb->get_customer_info(array(
-                        'i_customer' => $company->getICustomer(),
-                    ));
-            $CustomerInfo = $cInfo->customer_info;
-            $pb->_logout();
-        } catch (SoapFault $e) {
-            emailLib::sendErrorInTelinta("Company credit limit Fetching: " . $company->getId() . " Error!", "We have faced an issue in Company Account Credit Limit Fetch on telinta. this is the error for cusotmer with  Uniqueid: " . $company->getId() . " error is " . $e->faultstring . "  <br/> Please Investigate.");
-            $pb->_logout();
+            } catch (SoapFault $e) {
+                if ($e->faultstring != 'Could not connect to host') {
+                    emailLib::sendErrorInTelinta("Company  info Fetching: " . $company->getId() . " Error!", "We have faced an issue in Company Account info Fetch on telinta. this is the error for cusotmer with Uniqueid: " . $company->getId() . " error is " . $e->faultstring . " <br/> Please Investigate.");
+
+                    return false;
+                }
+            }
+            sleep(0.5);
+            $retry_count++;
+        }
+        if ($retry_count == $max_retries) {
+            emailLib::sendErrorInTelinta("Company info Fetching: " . $company->getId() . " Error!", "We have faced an issue in Company Account info Fetch on telinta. Error is Even After Max Retries".$max_retries." <br/> Please Investigate.");
             return false;
         }
-        $pb->_logout();
-        if ($CustomerInfo == 0)
-            return $CustomerInfo;
-        else
-            return ;
+
+            $CustomerInfo = $cInfo->customer_info;
+           
+                return $CustomerInfo;
+
     }
-
-
-
-}
-
+    }
 ?>

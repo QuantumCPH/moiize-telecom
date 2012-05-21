@@ -1,4 +1,4 @@
-<h1>Available Balance: <?php echo $balance ?> &euro;</h1>
+<h1>Available Balance: <?php echo $balance ?> &euro;      Credit Limit  <?php  $company->getCreditLimit();  ?></h1>
 <div id="sf_admin_container"><h1><?php echo __('PCO Lines') ?></h1></div>
 
 
