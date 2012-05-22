@@ -633,26 +633,13 @@ class companyActions extends sfActions {
  public function executeUpdateCreditLimit(sfWebRequest $request) {
         $c = new Criteria();
         $companies = CompanyPeer::doSelect($c);
-
-
         foreach($companies as $company){
-
-
         $companyinfo=CompanyEmployeActivation::getCustomerInfo($company);
-
-
-
         $company->setCreditLimit($companyinfo->credit_limit);
          $company->save();
-
-
         }
-        
-        
+   
            return sfView::NONE;
     }
-
-
-
 
 }

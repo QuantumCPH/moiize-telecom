@@ -537,6 +537,30 @@ jQuery('#sf_admin_edit_form').validate({
     });
 
 
+
+jQuery(function(){
+
+    // add multiple select / deselect functionality
+    jQuery("#selectall").click(function () {
+          jQuery('.case').attr('checked', this.checked);
+    });
+
+    // if all checkbox are selected, check the selectall checkbox
+    // and viceversa
+    jQuery(".case").click(function(){
+
+        if(jQuery(".case").length == jQuery(".case:checked").length) {
+            jQuery("#selectall").attr("checked", "checked");
+        } else {
+            jQuery("#selectall").removeAttr("checked");
+        }
+
+    });
+});
+
+
+
+
 </script>
 <style type="text/css">
 .messagebox{

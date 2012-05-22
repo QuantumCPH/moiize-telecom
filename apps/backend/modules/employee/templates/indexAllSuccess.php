@@ -15,7 +15,7 @@
 <form id="sf_admin_form" name="sf_admin_edit_form" method="post" enctype="multipart/form-data" action="editMultiple">
 <table width="100%" cellspacing="0" cellpadding="2" class="tblAlign">
         <tr class="headings">
-      <th><?php echo __('Action') ?></th>
+      <th><input type="checkbox" id="selectall"  checked="checked"/> </th>
       <th><?php echo __('Agent Name') ?></th>
       <th><?php echo __('Vat no') ?></th>
       <th><?php echo __('Contact name') ?></th>
@@ -32,7 +32,7 @@ foreach ($companies as $company):
         $incrment++;
 ?>
     <tr <?php echo $class; ?>>
-        <td><input type="checkbox" name="company_id[]" value="<?PHP echo $company->getId();?>" checked="checked"></td>
+        <td><input type="checkbox" name="company_id[]"  class="case"   value="<?PHP echo $company->getId();?>" checked="checked"></td>
         <td><?php echo $company->getName(); ?></td>
         <td><?php echo $company->getVatNo(); ?></td>
         <td><?php echo $company->getContactName();?></td>

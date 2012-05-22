@@ -89,7 +89,7 @@
        <br>
        <table width="75%" cellspacing="0" cellpadding="2" class="tblAlign">
         <tr class="headings">
-            <th><?php echo __('Action') ?></th>
+            <th><input type="checkbox" id="selectall"  checked="checked"/></th>
             <th><?php echo __('Agent') ?></th>
             <th><?php echo __('Name') ?></th>
             <th><?php echo __('Product') ?></th>
@@ -110,7 +110,7 @@
                 }
                 $incrment++; ?>
         <tr <?php echo $class; ?>>
-            <td><input type="checkbox" name="id[]" value="<?PHP echo $employee->getId();?>" checked="checked"></td>
+            <td><input type="checkbox" name="id[]"  class="case"   value="<?PHP echo $employee->getId();?>" checked="checked"></td>
             <td>
                 <?php  $comid=$employee->getCompanyId();
                         if(isset($comid) && $comid!=""){
