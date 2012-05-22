@@ -412,7 +412,7 @@ class CompanyEmployeActivation {
             emailLib::sendErrorInTelinta("Customer Update: " . $update_customer_request["i_customer"] . " Error!", "We have faced an issue in Company updation on telinta. Error is Even After Max Retries".$max_retries." <br/> Please Investigate.");
             return false;
         }
-
+        return true;
     }
 
 

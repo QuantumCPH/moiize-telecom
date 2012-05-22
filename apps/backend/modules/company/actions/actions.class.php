@@ -617,11 +617,16 @@ class companyActions extends sfActions {
             $id=$request->getParameter('company_id');
             
             $company = CompanyPeer::retrieveByPk($id[$i]);
+            $oldcreditlimit=$company->getCreditLimit();
             $company->setCreditLimit($creditlimit);
             $company->save();
                $update_customer['i_customer']=$company->getICustomer();
             $update_customer['credit_limit']=($company->getCreditLimit()!='')?$company->getCreditLimit():'0';
-          $res = CompanyEmployeActivation::updateCustomer($update_customer);
+          if(!CompanyEmployeActivation::updateCustomer($update_customer)){
+               $company->setCreditLimit($oldcreditlimit);
+            $company->save();
+          }
+
 
           
         }

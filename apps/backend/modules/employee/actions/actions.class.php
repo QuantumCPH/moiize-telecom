@@ -403,8 +403,7 @@ class employeeActions extends sfActions {
             }else{
                 $block=$employee->getBlock();
             }
-      
-            if ($employee->getTelintaProductId()!=$request->getParameter('telintaProductId') || $employee->getTelintaRoutingplanId()!=$request->getParameter('telintaRoutingplanId') || $block!='') {
+                  if ($employee->getTelintaProductId()!=$request->getParameter('telintaProductId') || $employee->getTelintaRoutingplanId()!=$request->getParameter('telintaRoutingplanId') || $block!='') {
                 $result=CompanyEmployeActivation::updateAccount($employee, $request->getParameter('telintaProductId'), $request->getParameter('telintaRoutingplanId'), $block);
             }
             
