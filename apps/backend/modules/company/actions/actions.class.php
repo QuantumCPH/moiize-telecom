@@ -628,7 +628,30 @@ class companyActions extends sfActions {
 
           $this->getUser()->setFlash('message', 'All Selected Agent Credit Limit is updated');
              $this->redirect('company/indexAll');
+                return sfView::NONE;
     }
+ public function executeUpdateCreditLimit(sfWebRequest $request) {
+        $c = new Criteria();
+        $companies = CompanyPeer::doSelect($c);
+
+
+        foreach($companies as $company){
+
+
+        $companyinfo=CompanyEmployeActivation::getCustomerInfo($company);
+
+
+
+        $company->setCreditLimit($companyinfo->credit_limit);
+         $company->save();
+
+
+        }
+        
+        
+           return sfView::NONE;
+    }
+
 
 
 
