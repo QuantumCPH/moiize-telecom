@@ -163,7 +163,7 @@ class CompanyEmployeActivation {
                 $xdrList = $pb->get_customer_xdr_list(array('i_customer' => $company->getICustomer(), 'from_date' => $fromDate, 'to_date' => $toDate));
             } catch (SoapFault $e) {
                  if ($e->faultstring != 'Could not connect to host') {
-                    emailLib::sendErrorInTelinta("Company Call History: " . $company->getId() . " Error!", "We have faced an issue with Company while Fetching Call History this is the error for cusotmer with Company ID: " . $company->getId() . " error is " . $e->faultstring . " <br/> Please Investigate.");
+                    emailLib::sendErrorInTelinta("Company Call History: " . $company->getId() . " Error!", "We have faced an issue with Company while Fetching Call History from date: ".$fromDate."  and to date: ".$toDate."this is the error for cusotmer with Company ID: " . $company->getId() . " error is " . $e->faultstring . " <br/> Please Investigate.");
 
                  }
             }
@@ -171,7 +171,7 @@ class CompanyEmployeActivation {
             $retry_count++;
         }
         if ($retry_count == $max_retries) {
-            emailLib::sendErrorInTelinta("Company Call History: " . $company->getId() . " Error!", "We have faced an issue with Company while Fetching Call History on telinta. Error is Even After Max Retries".$max_retries." <br/> Please Investigate.");
+            emailLib::sendErrorInTelinta("Company Call History: " . $company->getId() . " Error!", "We have faced an issue with Company while Fetching Call History from date: ".$fromDate."  and to date: ".$toDate." on telinta. Error is Even After Max Retries".$max_retries." <br/> Please Investigate.");
             return false;
         }
 
@@ -222,14 +222,14 @@ class CompanyEmployeActivation {
                 $xdrList = $pb->get_xdr_list(array('i_account' => $iAccount, 'from_date' => $fromDate, 'to_date' => $toDate));
             } catch (SoapFault $e) {
                if ($e->faultstring != 'Could not connect to host') {
-                    emailLib::sendErrorInTelinta("Employee Call History: " . $iAccount . " Error!", "We have faced an issue with Employee while Fetching Call History this is the error for cusotmer with ID: " . $iAccount . " error is " . $e->faultstring . " <br/> Please Investigate.");
+                    emailLib::sendErrorInTelinta("Employee Call History: " . $iAccount . " Error!", "We have faced an issue with Employee while Fetching Call Historyfrom date: ".$fromDate."  and to date: ".$toDate." this is the error for cusotmer with ID: " . $iAccount . " error is " . $e->faultstring . " <br/> Please Investigate.");
                }
             }
             sleep(0.5);
             $retry_count++;
         }
         if ($retry_count == $max_retries) {
-            emailLib::sendErrorInTelinta("Employee Call History: " . $iAccount . " Error!", "We have faced an issue with Employee while Fetching Call History on telinta. Error is Even After Max Retries".$max_retries." <br/> Please Investigate.");
+            emailLib::sendErrorInTelinta("Employee Call History: " . $iAccount . " Error!", "We have faced an issue with Employee while Fetching Call History from date: ".$fromDate."  and to date: ".$toDate." on telinta. Error is Even After Max Retries".$max_retries." <br/> Please Investigate.");
             return false;
         }
             return $xdrList;
