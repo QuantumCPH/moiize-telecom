@@ -30,6 +30,12 @@
 				   
 				  </div>
 				</div>
+                            <div class="form-row">
+				  <label class="required"><?php echo  __('Credit Limit:') ?></label>
+				  <div class="content">
+				  	<?php echo $company->getCreditLimit();     echo " &euro;";?>
+				  </div>
+				</div>
 				<div class="form-row">
 				  <label class="required"><?php echo  __('Vat Number:') ?></label>
 				  <div class="content">
@@ -115,7 +121,12 @@
 				  	<?php echo ''.$company->getStatus()?$company->getStatus():'N/A' ?>
 				  </div>
 				</div>
-
+                                <div class="form-row">
+				  <label class="required"><?php echo  __('Created Date:') ?></label>
+				  <div class="content">
+				  	<?php echo ''.date('Y-m-d',strtotime($company->getCreatedAt())); ?>
+				  </div>
+				</div>
 
 
 			 		

@@ -1,5 +1,5 @@
 <?php
-
+set_time_limit(10000000);
 require_once(sfConfig::get('sf_lib_dir') . '/company_employe_activation.class.php');
 require_once(sfConfig::get('sf_lib_dir') . '/emailLib.php');
 
@@ -407,7 +407,7 @@ class companyActions extends sfActions {
        $this->fromdate=$request->getParameter('startdate');
        $this->todate=$request->getParameter('enddate');
 }else{
-        $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
+        $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 3, date("Y"));
         $this->fromdate = date("Y-m-d", $tomorrow1);
         //$tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
         $this->todate = date("Y-m-d");
@@ -500,17 +500,13 @@ class companyActions extends sfActions {
 
         $c = new Criteria();
         $this->companys = CompanyPeer::doSelect($c);
-        
         $cTD = new Criteria();
         $cTD->addAnd(TransactionDescriptionPeer::TRANSACTION_TYPE_ID,2);
         $this->transactionDesc = TransactionDescriptionPeer::doSelect($cTD);
-        
         if ($request->isMethod('post')) {
-
             $company_id = $request->getParameter('company_id');
             $charge_amount = $request->getParameter('refill');
             $descriptionId = $request->getParameter('descriptionId');
-            
             ////// Transaction Description//////
             $cT = new Criteria();
             $cT->add(TransactionDescriptionPeer::ID,$descriptionId);
@@ -607,12 +603,48 @@ class companyActions extends sfActions {
 
         return sfView::NONE;
     }
- public function executeShowDate (sfWebRequest $request) {
-        //call Culture Method For Get Current Set Culture - Against Feature# 6.1 --- 02/28/11
-        changeLanguageCulture::languageCulture($request, $this);
-      echo date('Y-m-d H:i:s');
+   public function executeIndexAll(sfWebRequest $request) {
+        $c = new Criteria();
+        $this->companies = CompanyPeer::doSelect($c);
+    }
 
-        return sfView::NONE;
+     public function executeEditCreditLimit(sfWebRequest $request) {
+      $count=0;
+      $count=count($request->getParameter('company_id'));
+      $creditlimit=$request->getParameter('creditlimit');
+
+        for($i=0; $i<$count; $i++){
+            $id=$request->getParameter('company_id');
+            
+            $company = CompanyPeer::retrieveByPk($id[$i]);
+            $oldcreditlimit=$company->getCreditLimit();
+            $company->setCreditLimit($creditlimit);
+            $company->save();
+               $update_customer['i_customer']=$company->getICustomer();
+            $update_customer['credit_limit']=($company->getCreditLimit()!='')?$company->getCreditLimit():'0';
+          if(!CompanyEmployeActivation::updateCustomer($update_customer)){
+               $company->setCreditLimit($oldcreditlimit);
+            $company->save();
+          }
+
+
+          
+        }
+
+          $this->getUser()->setFlash('message', 'All Selected Agent Credit Limit is updated');
+             $this->redirect('company/indexAll');
+                return sfView::NONE;
+    }
+ public function executeUpdateCreditLimit(sfWebRequest $request) {
+        $c = new Criteria();
+        $companies = CompanyPeer::doSelect($c);
+        foreach($companies as $company){
+        $companyinfo=CompanyEmployeActivation::getCustomerInfo($company);
+        $company->setCreditLimit($companyinfo->credit_limit);
+         $company->save();
+        }
+   
+           return sfView::NONE;
     }
 
 }

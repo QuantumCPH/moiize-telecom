@@ -3109,9 +3109,7 @@ if(($caltype!="IC") && ($caltype!="hc")){
                   $lastTransactionDate = $Transaction->getCreatedAt();
              
                   $lastTransactionDate =strtotime($lastTransactionDate);
-
                    $tomorrow1 = mktime(0, 0, 0, date("m",$lastTransactionDate), date("d",$lastTransactionDate) + $lineRentCompany->getNumberOfDays(), date("Y",$lastTransactionDate));
-
                     $dateToday = date("Y-m-d");
                     $TransactionDateDif = date("Y-m-d", $tomorrow1);
                     if ($TransactionDateDif > $dateToday) {
@@ -3119,12 +3117,9 @@ if(($caltype!="IC") && ($caltype!="hc")){
                             $transactionpayment =0;
 
                     } else {
-
                             $transactionpayment = 1;
-                          
+                     
                     }
-
-
                     $lineRentCompany->getNumberOfDays();
                 } else {
                        $dateToday = date("Y-m-d");
@@ -3168,6 +3163,6 @@ if(($caltype!="IC") && ($caltype!="hc")){
                 }
             }
         }
-        return sfView::NONE;
+         return sfView::NONE;
     }
 }

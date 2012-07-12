@@ -24,6 +24,13 @@
                     <td><?php echo $balance;
                         echo " &euro;"; ?></td>
                 </tr>
+                  <tr class="headings">
+                    <th>
+                       <?php echo __('Credit Limit') ?>:
+                    </th>
+                    <td><?php echo $company->getCreditLimit();
+                        echo " &euro;"; ?></td>
+                </tr>
                 <tr class="headings">
                     <th>
                        <?php echo __('Number of PCO Lines') ?>:

@@ -1,5 +1,6 @@
-<h1>Available Balance: <?php echo $balance ?> &euro;</h1>
-<div id="sf_admin_container"><h1><?php echo __('PCO Lines') ?></h1></div>
+<h1>Available Balance: <?php echo $balance ?> &euro;  </h1><br/><h1 >    Credit Limit:  <?php echo  $company->getCreditLimit();  ?> &euro;   </h1><br/>
+
+<div id="sf_admin_container" style="clear: both;float: left;"><h1><?php echo __('PCO Lines') ?></h1></div>
 
 
 <table class="tblAlign" width="100%" cellspacing="0" cellpadding="3">
