@@ -148,9 +148,9 @@ class companyActions extends sfActions {
         if ($company->isNew() && $res) {
             $company->setInvoiceMethodId(2);
             $company->save();
-            $this->admin = UserPeer::retrieveByPK($this->getUser()->getAttribute('user_id', '', 'backendsession'));
+            //$this->admin = UserPeer::retrieveByPK($this->getUser()->getAttribute('user_id', '', 'backendsession'));
             //send email
-            emailLib::sendBackendAgentRegistration($company, $this->admin);
+            emailLib::sendBackendAgentRegistration($company);
 
             $cc = new Criteria();
             $cc->add(CountryPeer::ID, $company->getCountryId());
@@ -483,8 +483,8 @@ class companyActions extends sfActions {
                 $transaction->setNewBalance($newBalance);
                 $transaction->setTransactionStatusId(3);
                 $transaction->save();
-                $adminUser = UserPeer::retrieveByPK($this->getUser()->getAttribute('user_id', '', 'backendsession'));
-                emailLib::sendCompanyRefillEmail($this->company, $transaction,$adminUser);
+                //$adminUser = UserPeer::retrieveByPK($this->getUser()->getAttribute('user_id', '', 'backendsession'));
+                emailLib::sendCompanyRefillEmail($this->company, $transaction);
                 $this->getUser()->setFlash('message', 'Agent Refill Successfully');
                 $this->redirect('company/paymenthistory');
             } else {
@@ -539,8 +539,8 @@ class companyActions extends sfActions {
                 $newBalance = CompanyEmployeActivation::getBalance($this->company);
                 $transaction->setNewBalance($newBalance);
                 $transaction->save();
-                $adminUser = UserPeer::retrieveByPK($this->getUser()->getAttribute('user_id', '', 'backendsession'));
-                emailLib::sendCompanyRefillEmail($this->company, $transaction,$adminUser);
+                //$adminUser = UserPeer::retrieveByPK($this->getUser()->getAttribute('user_id', '', 'backendsession'));
+                emailLib::sendCompanyRefillEmail($this->company, $transaction);
                 $this->getUser()->setFlash('message', 'Agent Charged Successfully');
                 $this->redirect('company/paymenthistory');
             } else {
