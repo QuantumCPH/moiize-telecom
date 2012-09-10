@@ -1266,8 +1266,8 @@ WLS2<br/><a href='http://www.moiize.com'>www.wls2.zerocall.com</a></td></tr></ta
         $recepient_name_ak = sfConfig::get('app_recepient_name_ak');
         $recepient_email_ak = sfConfig::get('app_recepient_email_ak');
 
-        $recepient_name_support = sfConfig::get('app_recepient_name_support');
-        $recepient_email_support = sfConfig::get('app_recepient_email_support');
+        /*$recepient_name_support = sfConfig::get('app_recepient_name_support');
+        $recepient_email_support = sfConfig::get('app_recepient_email_support');*/
 
         //$admin_email = $user->getEmail();
         //$admin_name = $user->getName();
@@ -1325,7 +1325,7 @@ WLS2<br/><a href='http://www.moiize.com'>www.wls2.zerocall.com</a></td></tr></ta
         //**********************************************************************
 
         //*******************Sent The Email To Support**************************
-         if ($recepient_email_support != ''):
+         /*if ($recepient_email_support != ''):
             $email4 = new EmailQueue();
             $email4->setSubject($subject);
             $email4->setReceipientName($recepient_name_support);
@@ -1334,7 +1334,7 @@ WLS2<br/><a href='http://www.moiize.com'>www.wls2.zerocall.com</a></td></tr></ta
             $email4->setEmailType($email_type);
             $email4->setMessage($message_body);
             $email4->save();
-          endif;
+          endif;*/
         //********************************************************************** 
     }
 
@@ -1361,8 +1361,8 @@ WLS2<br/><a href='http://www.moiize.com'>www.wls2.zerocall.com</a></td></tr></ta
          $recepient_name_ak = sfConfig::get('app_recepient_name_ak');
          $recepient_email_ak = sfConfig::get('app_recepient_email_ak');
          
-         $recepient_name_support = sfConfig::get('app_recepient_name_support');
-         $recepient_email_support = sfConfig::get('app_recepient_email_support');
+         /*$recepient_name_support = sfConfig::get('app_recepient_name_support');
+         $recepient_email_support = sfConfig::get('app_recepient_email_support');*/
 
         //$admin_email = $user->getEmail();
         //$admin_name = $user->getName();
@@ -1420,7 +1420,7 @@ WLS2<br/><a href='http://www.moiize.com'>www.wls2.zerocall.com</a></td></tr></ta
         //**********************************************************************
 
         //*******************Sent The Email To Support**************************
-         if ($recepient_email_support != ''):
+         /*if ($recepient_email_support != ''):
             $email4 = new EmailQueue();
             $email4->setSubject($subject);
             $email4->setReceipientName($recepient_name_support);
@@ -1429,7 +1429,7 @@ WLS2<br/><a href='http://www.moiize.com'>www.wls2.zerocall.com</a></td></tr></ta
             $email4->setEmailType($email_type);
             $email4->setMessage($message_body);
             $email4->save();
-          endif;
+          endif;*/
         //**********************************************************************
     }
     
