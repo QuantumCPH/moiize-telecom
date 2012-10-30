@@ -564,6 +564,17 @@ class companyActions extends sfActions {
        $transactionType_id = $request->getParameter('transactionType_id');
         $this->transactionType_id=$transactionType_id;
         $this->$transactionType_id = $transactionType_id;
+        
+        $this->from = $request->getParameter('from');
+        $this->to = $request->getParameter('to');
+        if($this->from==''){
+            $this->from = date('Y-m-d', strtotime('-15 days'));
+        }
+        if($this->to==''){
+            $this->to = date('Y-m-d');
+        }
+        
+        
         $c->add(CompanyTransactionPeer::TRANSACTION_STATUS_ID, 3);
 
         if (isset($companyid) && $companyid != '') {
@@ -572,6 +583,8 @@ class companyActions extends sfActions {
          if (isset($transactionType_id) && $transactionType_id != '') {
             $c->addAnd(CompanyTransactionPeer::TRANSACTION_TYPE, $transactionType_id);
         }
+        $c->addAnd(CompanyTransactionPeer::CREATED_AT, $this->from." 00:00:00", Criteria::GREATER_EQUAL);
+        $c->addAnd(CompanyTransactionPeer::CREATED_AT, $this->to." 23:59:59", Criteria::LESS_EQUAL);
         $c->addDescendingOrderByColumn(CompanyTransactionPeer::CREATED_AT);
         $this->transactions = CompanyTransactionPeer::doSelect($c);
     }
