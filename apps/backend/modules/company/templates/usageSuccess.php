@@ -109,8 +109,8 @@ echo  date('i:s',$callval);
 }                           ?></td>
                 <td><?php echo $xdr->country; ?></td>
                   <td><?php echo $xdr->description;  ?></td>
-                    <td><?php echo $xdr->disconnect_text;  ?></td>
-                      <td><?php echo $xdr->i_class;  ?></td>
+                    <td><?php echo $xdr->disconnect_cause;  ?></td>
+                      <td><?php echo $xdr->disconnect_reason;  ?></td>
 
                 <td><?php echo number_format($xdr->charged_amount, 2);
             $amount_total+= number_format($xdr->charged_amount, 2); ?> &euro;</td>
