@@ -28,7 +28,7 @@
         
     });
     </script>
-<?Php if ($companyval != '') { ?><div id="sf_admin_container">
+<?Php if (isset($companyval) && $companyval != '') { ?><div id="sf_admin_container">
         <div id="sf_admin_content">
             <a href="<?php echo url_for('employee/index') . '?company_id=' . $companyval . "&filter=filter" ?>" class="external_link" target="_self"><?php echo __('PCO Lines') ?></a>
             <a href="<?php echo url_for('company/usage') . '?company_id=' . $companyval; ?>" class="external_link" target="_self"><?php echo __('Usage') ?></a>
