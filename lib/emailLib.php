@@ -1208,36 +1208,44 @@ WLS2<br/><a href='http://www.moiize.com'>www.wls2.zerocall.com</a></td></tr></ta
 
     public static function sendErrorInTelinta($subject, $message) {
 
-        //To RS.
-        $email = new EmailQueue();
-        $email->setSubject($subject);
-        $email->setReceipientName("Raheel Safdar");
-        $email->setReceipientEmail("rs@zapna.com");
-        $email->setEmailType('Telinta Error');
-        $email->setMessage($message);
-        $email->save();
+        $recepient_name_rs = sfConfig::get('app_recepient_name_rs');
+        $recepient_email_rs = sfConfig::get('app_recepient_email_rs');
 
-        //To Support @ Zerocall
-        $email = new EmailQueue();
-        $email->setSubject($subject);
-        $email->setReceipientName("BK");
-        $email->setReceipientEmail("bk@zapna.com");
-        $email->setEmailType('Telinta Error');
-        $email->setMessage($message);
-        $email->save();
+        $recepient_name_support = sfConfig::get('app_recepient_name_support');
+        $recepient_email_support = sfConfig::get('app_recepient_email_support');
+
+        //**********************Sent The Email To RS****************************
+        if ($recepient_email_rs != ''):
+            $email = new EmailQueue();
+            $email->setSubject($subject);
+            $email->setReceipientName($recepient_name_rs);
+            $email->setReceipientEmail($recepient_email_rs);
+            $email->setEmailType('Telinta Error');
+            $email->setMessage($message);
+            $email->save();
+        endif;
+        //**********************************************************************
+        
+        //*******************Sent The Email To Support**************************
+         if ($recepient_email_support != ''):
+            $email = new EmailQueue();
+            $email->setSubject($subject);
+            $email->setReceipientName($recepient_name_support);
+            $email->setReceipientEmail($recepient_email_support);
+            $email->setEmailType('Telinta Error');
+            $email->setMessage($message);
+            $email->save();
+         endif;
+        //**********************************************************************
     }
 
-    public static function sendCompanyRefillEmail(Company $company, $transaction, $adminUser=NULL) {
+    public static function sendCompanyRefillEmail(Company $company, $transaction) {
 
-        //set vat
         $vat = 0;
-
         $subject = 'Payment Confirmation';
+        $company_id = trim($company->getId());
+        $email_type= 'Company Refill/Charge';
         
-        $recepient_email = trim($company->getEmail());
-        $recepient_name = sprintf('%s', $company->getName());
-
-        //$this->renderPartial('affiliate/order_receipt', array(
         sfContext::getInstance()->getConfiguration()->loadHelpers('Partial');
         $message_body = get_partial('company/refill_receipt', array(
                     'company' => $company,
@@ -1246,120 +1254,195 @@ WLS2<br/><a href='http://www.moiize.com'>www.wls2.zerocall.com</a></td></tr></ta
                     'wrap' => false,
                 ));
 
+        $recepient_name_comp = sprintf('%s', $company->getName());
+        $recepient_email_comp = trim($company->getEmail());
 
-        //Support Information
-        $sender_email = sfConfig::get('app_email_sender_email', 'okhan@zapna.com');
-        $sender_name = sfConfig::get('app_email_sender_name', 'Moiize');
-        $sender_emailcdu = sfConfig::get('app_email_sender_email', 'rs@zapan.com');
-        $sender_namecdu = sfConfig::get('app_email_sender_name', 'Moiize');
-        //------------------Sent The Email To Agent
-        if (trim($recepient_email) != '') {
+        $recepient_name_ok = sfConfig::get('app_recepient_name_ok');
+        $recepient_email_ok = sfConfig::get('app_recepient_email_ok');
+
+        $recepient_name_rs = sfConfig::get('app_recepient_name_rs');
+        $recepient_email_rs = sfConfig::get('app_recepient_email_rs');
+
+        $recepient_name_ak = sfConfig::get('app_recepient_name_ak');
+        $recepient_email_ak = sfConfig::get('app_recepient_email_ak');
+
+        /*$recepient_name_support = sfConfig::get('app_recepient_name_support');
+        $recepient_email_support = sfConfig::get('app_recepient_email_support');*/
+
+        //$admin_email = $user->getEmail();
+        //$admin_name = $user->getName();
+
+        //****************Sent The Email To Registered Company******************
+        if ($recepient_email_comp != ''):
             $email = new EmailQueue();
             $email->setSubject($subject);
-            $email->setReceipientName($recepient_name);
-            $email->setReceipientEmail($recepient_email);
-            $email->setAgentId($referrer_id);
-            $email->setCutomerId($customer_id);
-            $email->setEmailType('Company Refill');
+            $email->setReceipientName($recepient_name_comp);
+            $email->setReceipientEmail($recepient_email_comp);
+            $email->setCutomerId($company_id);
+            $email->setEmailType($email_type);
             $email->setMessage($message_body);
             $email->save();
-        }
-        //----------------------------------------
-        //------------------Sent the Email To Admin
-        if ($adminUser !=NULL):
+        endif;
+        //**********************************************************************
+
+        //**********************Sent The Email To Okhan*************************
+        if ($recepient_email_ok != ''):
+            $email1 = new EmailQueue();
+            $email1->setSubject($subject);
+            $email1->setReceipientName($recepient_name_ok);
+            $email1->setReceipientEmail($recepient_email_ok);
+            $email1->setCutomerId($company_id);
+            $email1->setEmailType($email_type);
+            $email1->setMessage($message_body);
+            $email1->save();
+        endif;
+        //**********************************************************************
+
+        //**********************Sent The Email To RS****************************
+         if ($recepient_email_rs != ''):
             $email2 = new EmailQueue();
             $email2->setSubject($subject);
-            $email2->setReceipientName($adminUser->getName());
-            $email2->setReceipientEmail($adminUser->getEmail());
-            $email2->setAgentId($referrer_id);
-            $email2->setCutomerId($customer_id);
-            $email2->setEmailType('Company Refill');
+            $email2->setReceipientName($recepient_name_rs);
+            $email2->setReceipientEmail($recepient_email_rs);
+            $email2->setCutomerId($company_id);
+            $email2->setEmailType($email_type);
             $email2->setMessage($message_body);
             $email2->save();
-        endif;
-        //---------------------------------------
-        
-        //--------------Sent The Email To Support
-        if (trim($sender_emailcdu) != ''):
+         endif;
+        //**********************************************************************
+
+        //**********************Sent The Email To AK****************************
+        if ($recepient_email_ak != ''):
+            $email3 = new EmailQueue();
+            $email3->setSubject($subject);
+            $email3->setReceipientName($recepient_name_ak);
+            $email3->setReceipientEmail($recepient_email_ak);
+            $email3->setCutomerId($company_id);
+            $email3->setEmailType($email_type);
+            $email3->setMessage($message_body);
+            $email3->save();
+         endif;
+        //**********************************************************************
+
+        //*******************Sent The Email To Support**************************
+         /*if ($recepient_email_support != ''):
             $email4 = new EmailQueue();
             $email4->setSubject($subject);
-            $email4->setReceipientName('Support');
-            $email4->setReceipientEmail('rs@zapna.com');
-            $email4->setAgentId($referrer_id);
-            $email4->setCutomerId($customer_id);
-            $email4->setEmailType('Moiize Refill');
+            $email4->setReceipientName($recepient_name_support);
+            $email4->setReceipientEmail($recepient_email_support);
+            $email4->setCutomerId($company_id);
+            $email4->setEmailType($email_type);
             $email4->setMessage($message_body);
             $email4->save();
-        endif;
-        //-----------------------------------------
+          endif;*/
+        //********************************************************************** 
     }
 
-   public static function sendBackendAgentRegistration(Company $company, User $user) {
+   public static function sendBackendAgentRegistration(Company $company) {
        
         sfContext::getInstance()->getConfiguration()->loadHelpers('Partial');
-         $message_body = get_partial('company/order_receipt_web_reg', array(
+        $message_body = get_partial('company/order_receipt_web_reg', array(
                     'company' => $company,
                     ));
 
-
          $subject = __('Registration Confirmation');
-         $recepient_email = trim($company->getEmail());
-         $recepient_name = sprintf('%s', $company->getName());
          $company_id = trim($company->getId());
+         $email_type= 'Company Registeration';
 
-        //Support Information
-        $admin_email = $user->getEmail();
-        $admin_name = $user->getName();
+         $recepient_name_comp = sprintf('%s', $company->getName());
+         $recepient_email_comp = trim($company->getEmail());
+
+         $recepient_name_ok = sfConfig::get('app_recepient_name_ok');
+         $recepient_email_ok = sfConfig::get('app_recepient_email_ok');
+         
+         $recepient_name_rs = sfConfig::get('app_recepient_name_rs');
+         $recepient_email_rs = sfConfig::get('app_recepient_email_rs');
+         
+         $recepient_name_ak = sfConfig::get('app_recepient_name_ak');
+         $recepient_email_ak = sfConfig::get('app_recepient_email_ak');
+         
+         /*$recepient_name_support = sfConfig::get('app_recepient_name_support');
+         $recepient_email_support = sfConfig::get('app_recepient_email_support');*/
+
+        //$admin_email = $user->getEmail();
+        //$admin_name = $user->getName();
        
-        //------------------Sent The Email To Agent
-        if ($recepient_email != '') {
+        //****************Sent The Email To Registered Company******************
+        if ($recepient_email_comp != ''):
             $email = new EmailQueue();
             $email->setSubject($subject);
-            $email->setReceipientName($recepient_name);
-            $email->setReceipientEmail($recepient_email);
+            $email->setReceipientName($recepient_name_comp);
+            $email->setReceipientEmail($recepient_email_comp);
             $email->setCutomerId($company_id);
-            $email->setEmailType('Customer Registeration');
+            $email->setEmailType($email_type);
             $email->setMessage($message_body);
             $email->save();
-        }
-        //----------------------------------------
+        endif;
+        //**********************************************************************
        
-        //--------------Sent The Email To Admin
-        if ($admin_email != ''):
+        //**********************Sent The Email To Okhan*************************
+        if ($recepient_email_ok != ''):
+            $email1 = new EmailQueue();
+            $email1->setSubject($subject);
+            $email1->setReceipientName($recepient_name_ok);
+            $email1->setReceipientEmail($recepient_email_ok);
+            $email1->setCutomerId($company_id);
+            $email1->setEmailType($email_type);
+            $email1->setMessage($message_body);
+            $email1->save();
+        endif;
+        //**********************************************************************
+
+        //**********************Sent The Email To RS****************************
+         if ($recepient_email_rs != ''):
+            $email2 = new EmailQueue();
+            $email2->setSubject($subject);
+            $email2->setReceipientName($recepient_name_rs);
+            $email2->setReceipientEmail($recepient_email_rs);
+            $email2->setCutomerId($company_id);
+            $email2->setEmailType($email_type);
+            $email2->setMessage($message_body);
+            $email2->save();
+         endif;
+        //**********************************************************************
+
+        //**********************Sent The Email To AK****************************
+        if ($recepient_email_ak != ''):
             $email3 = new EmailQueue();
             $email3->setSubject($subject);
-            $email3->setReceipientName($admin_name);
-            $email3->setReceipientEmail($admin_email);
+            $email3->setReceipientName($recepient_name_ak);
+            $email3->setReceipientEmail($recepient_email_ak);
             $email3->setCutomerId($company_id);
-            $email3->setEmailType('Customer Registeration');
+            $email3->setEmailType($email_type);
             $email3->setMessage($message_body);
             $email3->save();
-        endif;
-        //-----------------------------------------
-        //--------------Sent The Email To Support
-        
+         endif;
+        //**********************************************************************
+
+        //*******************Sent The Email To Support**************************
+         /*if ($recepient_email_support != ''):
             $email4 = new EmailQueue();
             $email4->setSubject($subject);
-            $email4->setReceipientName('Moiize Telecom');
-            $email4->setReceipientEmail('rs@zapna.com');
+            $email4->setReceipientName($recepient_name_support);
+            $email4->setReceipientEmail($recepient_email_support);
             $email4->setCutomerId($company_id);
-            $email4->setEmailType('Customer Registeration');
+            $email4->setEmailType($email_type);
             $email4->setMessage($message_body);
             $email4->save();
-        
-        //-----------------------------------------
+          endif;*/
+        //**********************************************************************
     }
     
     public static function sendAgentForgetPasswordEmail(Company $company, $message_body, $subject) {
         sfContext::getInstance()->getConfiguration()->loadHelpers('Partial');
 
-        // $subject = __("Request for password");
+        //$subject = __("Request for password");
         $recepient_email = trim($company->getEmail());
         $recepient_name = sprintf('%s', $company->getContactName());
         $company_id    = $company->getId();
         //Support Information
-    //    $sender_email = sfConfig::get('app_email_sender_email', 'support@zerocall.com');
-        $sender_name = sfConfig::get('app_email_sender_name', 'Moziie support');
+        //$sender_email = sfConfig::get('app_email_sender_email', 'support@zerocall.com');
+        //$sender_name = sfConfig::get('app_email_sender_name', 'Moziie support');
 
         //------------------Sent The Email To Company Agent
         if (trim($recepient_email) != '') {
