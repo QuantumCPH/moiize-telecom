@@ -71,7 +71,7 @@
             <th  width="25%"  align="left"><?php echo __('Country') ?></th>
             <th  width="10%"  align="left"><?php echo __('Description') ?></th>
             <th  width="10%"  align="left"><?php echo __('disconnect_cause') ?></th>
-            <th  width="10%"  align="left"><?php echo __('disconnect_reason') ?></th>
+           
             <th width="10%"   align="left"><?php echo __('Cost') ?></th>
             <th  width="10%"   align="left"><?php echo __('Account Id') ?></th>
         </tr>
@@ -109,8 +109,11 @@ echo  date('i:s',$callval);
 }                           ?></td>
                 <td><?php echo $xdr->country; ?></td>
                   <td><?php echo $xdr->description;  ?></td>
-                    <td><?php echo $xdr->disconnect_cause;  ?></td>
-                      <td><?php echo $xdr->disconnect_reason;  ?></td>
+                    <td><?php
+                     $dCouse = DisconectCausePeer::retrieveByPk($xdr->disconnect_cause);
+                    
+                    echo $dCouse->getName();  ?></td>
+                   
 
                 <td><?php echo number_format($xdr->charged_amount, 2);
             $amount_total+= number_format($xdr->charged_amount, 2); ?> &euro;</td>
