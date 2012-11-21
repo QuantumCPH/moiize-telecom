@@ -66,8 +66,8 @@
 
             <th  width="10%"  align="left"><?php echo __('Phone Number') ?></th>
             <th width="10%"   align="left"><?php echo __('Duration') ?></th>
-            <th  width="20%"  align="left"><?php echo __('Country') ?></th>
-            <th  width="10%"  align="left"><?php echo __('Description') ?></th>
+            <th  width="17%"  align="left"><?php echo __('Country') ?></th>
+            <th  width="13%"  align="left"><?php echo __('Description') ?></th>
               <th  width="15%"  align="left"><?php echo __('Disconnect Cause') ?></th>
             <th width="10%"   align="left"><?php echo __('Cost') ?></th>
             <th  width="10%"   align="left"><?php echo __('Account ID') ?></th>
