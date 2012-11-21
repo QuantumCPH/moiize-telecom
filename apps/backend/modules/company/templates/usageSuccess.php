@@ -130,7 +130,7 @@ echo  date('i:s',$callval);
                 </tr>
 <?php } else { ?>
                 <tr>
-                    <td colspan="5" align="right"><strong><?php echo __('Subtotal') ?></strong></td>
+                    <td colspan="6" align="right"><strong><?php echo __('Subtotal') ?></strong></td>
 
                     <td><?php echo number_format($amount_total, 2, ',', '') ?>  &euro;</td>
                     <td>&nbsp;</td>
