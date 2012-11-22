@@ -10,7 +10,7 @@
 
     <body>
         <div id="basic">
-             <?php echo $_SERVER["HTTP_REFERER"]; if($_SERVER["HTTP_REFERER"]!="http://mw.zerocall.com/login/" || $_SERVER["HTTP_REFERER"]!="http://mw.zerocall.com/es/login/"):?>
+             <?php if($_SERVER["HTTP_REFERER"]!="http://mw.zerocall.com/login/" && $_SERVER["HTTP_REFERER"]!="http://mw.zerocall.com/es/login/"):?>
             <div id="header">
                 <div class="logo">
                     <?php echo image_tag('/images/logo.jpg'); // link_to(image_tag('/images/logo.gif'), '@homepage');  ?>
