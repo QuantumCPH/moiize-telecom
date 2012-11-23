@@ -43,7 +43,9 @@
       <a href="<?php echo sfConfig::get('app_main_url');?>company/forgotPassword" class="forgotUrl">Forgot Password?</a>
     </div>
             <div class="right"></div>
+       <?php if(@$_SERVER["HTTP_REFERER"]!="http://mw.zerocall.com/login/" && @$_SERVER["HTTP_REFERER"]!="http://mw.zerocall.com/es/login/"):?>      
             <span class="powered">Powered by <a href="http://zapna.com/" target="_blank">Zapna</a></span>
+       <?php endif;?>     
     </div>
         
 </form>
