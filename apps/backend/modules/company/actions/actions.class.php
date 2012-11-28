@@ -620,6 +620,10 @@ class companyActions extends sfActions {
         $c = new Criteria();
         $this->companies = CompanyPeer::doSelect($c);
     }
+    public function executeWithBillingInfo(sfWebRequest $request) {
+        $c = new Criteria();
+        $this->companies = CompanyPeer::doSelect($c);
+    }
 
      public function executeEditCreditLimit(sfWebRequest $request) {
       $count=0;
