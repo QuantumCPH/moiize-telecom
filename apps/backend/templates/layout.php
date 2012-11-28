@@ -98,7 +98,7 @@
                     }else{
                        echo link_to(__('Agent List'), 'company/index');
                     }          
-                    ?>                    
+                    ?>     
                     <?php 
                       if($actionName=='index' && $modulName=="employee"){
                           echo link_to(__('PCO Lines'), 'employee/index', array('class'=>'subSelect'));
@@ -391,6 +391,13 @@
                           echo link_to(__('Edit All Agent Credit Limit'), 'company/indexAll');
                         }
                         ?>
+                        <?php 
+                    if($actionName=='withBillingInfo' && $modulName=="company"){
+                       echo link_to(__('Agent Billing System Info'), 'company/withBillingInfo', array('class'=>'subSelect'));
+                    }else{
+                       echo link_to(__('Agent Billing System Info'), 'company/withBillingInfo');
+                    }          
+                    ?>
                 </div>
             </li>
   <?php } ?>
