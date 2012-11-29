@@ -587,7 +587,7 @@ class companyActions extends sfActions {
             $c->addAnd(CompanyTransactionPeer::COMPANY_ID, $companyid);
         }
         if (isset($transactionType_id) && $transactionType_id != '') {
-           // $c->addAnd(CompanyTransactionPeer::TRANSACTION_TYPE, $transactionType_id);
+            $c->addAnd(CompanyTransactionPeer::TRANSACTION_TYPE, $transactionType_id);
             $tc = new Criteria();
             $tc->add(TransactionDescriptionPeer::TRANSACTION_TYPE_ID, $transactionType_id);
             $this->transactionDescriptions = TransactionDescriptionPeer::doSelect($tc);
