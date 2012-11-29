@@ -475,6 +475,7 @@ class companyActions extends sfActions {
             $transaction->setOldBalance($oldBalance);
             $transaction->setPaymenttype(2); //Refill
             $transaction->setDescription($description->getTitle());
+            $transaction->setTransactionDescriptionId($description->getId());
             $transaction->setTransactionType($description->getTransactionTypeId());
             $transaction->save();
 
