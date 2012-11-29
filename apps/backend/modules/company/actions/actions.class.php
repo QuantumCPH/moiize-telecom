@@ -1,4 +1,5 @@
 <?php
+
 set_time_limit(10000000);
 require_once(sfConfig::get('sf_lib_dir') . '/company_employe_activation.class.php');
 require_once(sfConfig::get('sf_lib_dir') . '/emailLib.php');
@@ -161,12 +162,11 @@ class companyActions extends sfActions {
             $sm = new Criteria();
             $sm->add(SmsTextPeer::ID, 1);
             $smstext = SmsTextPeer::doSelectOne($sm);
-            $sms_text = $smstext->getMessageText()." Your Login is: ".$company->getVatNo()." and Your Password is: ".$company->getPassword();
-            CARBORDFISH_SMS::Send($mobile, $sms_text,"Moiize");
-            
+            $sms_text = $smstext->getMessageText() . " Your Login is: " . $company->getVatNo() . " and Your Password is: " . $company->getPassword();
+            CARBORDFISH_SMS::Send($mobile, $sms_text, "Moiize");
         } elseif (!$company->isNew()) {
-            $update_customer['i_customer']=$company->getICustomer();
-            $update_customer['credit_limit']=($company->getCreditLimit()!='')?$company->getCreditLimit():'0';
+            $update_customer['i_customer'] = $company->getICustomer();
+            $update_customer['credit_limit'] = ($company->getCreditLimit() != '') ? $company->getCreditLimit() : '0';
             $res = CompanyEmployeActivation::updateCustomer($update_customer);
             $company->save();
         } elseif (!$res) {
@@ -186,7 +186,7 @@ class companyActions extends sfActions {
             $this->company->setName($company['name']);
         }
         if (isset($company['vat_no'])) {
-            $this->company->setVatNo(sfConfig::get("app_telinta_comp").$company['vat_no']);
+            $this->company->setVatNo(sfConfig::get("app_telinta_comp") . $company['vat_no']);
         }
         if (isset($company['password'])) {
             $this->company->setPassword($company['password']);
@@ -394,43 +394,43 @@ class companyActions extends sfActions {
     }
 
     public function executeUsage($request) {
-       /* $this->company = CompanyPeer::retrieveByPK($request->getParameter('company_id'));
-        $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
-        $fromdate = date("Y-m-d", $tomorrow1);
-        $tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
-        $todate = date("Y-m-d", $tomorrow);
-        $this->callHistory = CompanyEmployeActivation::callHistory($this->company, $fromdate, $todate);
-               */
-     
-       $this->company = CompanyPeer::retrieveByPK($request->getParameter('company_id'));
-    if(isset($_POST['startdate']) && isset($_POST['enddate'])){
-       $this->fromdate=$request->getParameter('startdate');
-       $this->todate=$request->getParameter('enddate');
-}else{
-        $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 3, date("Y"));
-        $this->fromdate = date("Y-m-d", $tomorrow1);
-        //$tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
-        $this->todate = date("Y-m-d");
+        /* $this->company = CompanyPeer::retrieveByPK($request->getParameter('company_id'));
+          $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
+          $fromdate = date("Y-m-d", $tomorrow1);
+          $tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
+          $todate = date("Y-m-d", $tomorrow);
+          $this->callHistory = CompanyEmployeActivation::callHistory($this->company, $fromdate, $todate);
+         */
 
-}
-       $this->iaccount = $request->getParameter('iaccount');
- if (isset($this->iaccount) && $this->iaccount!='') {
-        $ce = new Criteria();
-        $ce->add(TelintaAccountsPeer::ID, $this->iaccount);
-        $ce->addAnd(TelintaAccountsPeer::STATUS, 3);
-        $telintaAccount = TelintaAccountsPeer::doSelectOne($ce);;
+        $this->company = CompanyPeer::retrieveByPK($request->getParameter('company_id'));
+        if (isset($_POST['startdate']) && isset($_POST['enddate'])) {
+            $this->fromdate = $request->getParameter('startdate');
+            $this->todate = $request->getParameter('enddate');
+        } else {
+            $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 3, date("Y"));
+            $this->fromdate = date("Y-m-d", $tomorrow1);
+            //$tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
+            $this->todate = date("Y-m-d");
+        }
+        $this->iaccount = $request->getParameter('iaccount');
+        if (isset($this->iaccount) && $this->iaccount != '') {
+            $ce = new Criteria();
+            $ce->add(TelintaAccountsPeer::ID, $this->iaccount);
+            $ce->addAnd(TelintaAccountsPeer::STATUS, 3);
+            $telintaAccount = TelintaAccountsPeer::doSelectOne($ce);
+            ;
 
             $this->iAccountTitle = $telintaAccount->getAccountTitle();
 
-            $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(),$this->fromdate." 00:00:00", $this->todate." 23:59:59");
+            $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $this->fromdate . " 00:00:00", $this->todate . " 23:59:59");
         } else {
-	 //$tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
-       // $this->fromdate = date("Y-m-d", $tomorrow1);
-        //$tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
-       //$this->todate = date("Y-m-d");
-  	
-            $this->callHistory = CompanyEmployeActivation::callHistory($this->company,$this->fromdate." 00:00:00" , $this->todate." 23:59:59");
-		/*var_dump($this->callHistory);die;*/
+            //$tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
+            // $this->fromdate = date("Y-m-d", $tomorrow1);
+            //$tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
+            //$this->todate = date("Y-m-d");
+
+            $this->callHistory = CompanyEmployeActivation::callHistory($this->company, $this->fromdate . " 00:00:00", $this->todate . " 23:59:59");
+            /* var_dump($this->callHistory);die; */
         }
 
         $c = new Criteria();
@@ -443,24 +443,24 @@ class companyActions extends sfActions {
 
         $c = new Criteria();
         $this->companys = CompanyPeer::doSelect($c);
-        
+
         $cTD = new Criteria();
-        $cTD->addAnd(TransactionDescriptionPeer::TRANSACTION_TYPE_ID,1);
+        $cTD->addAnd(TransactionDescriptionPeer::TRANSACTION_TYPE_ID, 1);
         $this->transactionDesc = TransactionDescriptionPeer::doSelect($cTD);
-        
+
         if ($request->isMethod('post')) {
 
             $company_id = $request->getParameter('company_id');
             $refill_amount = $request->getParameter('refill');
             $descriptionId = $request->getParameter('descriptionId');
-            
+
             ////// Transaction Description//////
             $cT = new Criteria();
-            $cT->add(TransactionDescriptionPeer::ID,$descriptionId);
+            $cT->add(TransactionDescriptionPeer::ID, $descriptionId);
             $description = TransactionDescriptionPeer::doSelectOne($cT);
-            
+
             ////// End Transaction Description//////
-            
+
             $c1 = new Criteria();
             $c1->addAnd(CompanyPeer::ID, $company_id);
             $this->company = CompanyPeer::doSelectOne($c1);
@@ -477,9 +477,9 @@ class companyActions extends sfActions {
             $transaction->setDescription($description->getTitle());
             $transaction->setTransactionType($description->getTransactionTypeId());
             $transaction->save();
- 
-                   if (CompanyEmployeActivation::recharge($this->company, $refill_amount, $transaction)) {
-                  $newBalance = CompanyEmployeActivation::getBalance($this->company);
+
+            if (CompanyEmployeActivation::recharge($this->company, $refill_amount, $transaction)) {
+                $newBalance = CompanyEmployeActivation::getBalance($this->company);
                 $transaction->setNewBalance($newBalance);
                 $transaction->setTransactionStatusId(3);
                 $transaction->save();
@@ -495,13 +495,13 @@ class companyActions extends sfActions {
             //parse_str($telintaAddAccount, $success);print_r($success);echo $success['success'];
         }
     }
-    
+
     public function executeAgentCharge(sfWebRequest $request) {
 
         $c = new Criteria();
         $this->companys = CompanyPeer::doSelect($c);
         $cTD = new Criteria();
-        $cTD->addAnd(TransactionDescriptionPeer::TRANSACTION_TYPE_ID,2);
+        $cTD->addAnd(TransactionDescriptionPeer::TRANSACTION_TYPE_ID, 2);
         $this->transactionDesc = TransactionDescriptionPeer::doSelect($cTD);
         if ($request->isMethod('post')) {
             $company_id = $request->getParameter('company_id');
@@ -509,11 +509,11 @@ class companyActions extends sfActions {
             $descriptionId = $request->getParameter('descriptionId');
             ////// Transaction Description//////
             $cT = new Criteria();
-            $cT->add(TransactionDescriptionPeer::ID,$descriptionId);
+            $cT->add(TransactionDescriptionPeer::ID, $descriptionId);
             $description = TransactionDescriptionPeer::doSelectOne($cT);
-            
+
             ////// End Transaction Description//////
-            
+
             $c1 = new Criteria();
             $c1->addAnd(CompanyPeer::ID, $company_id);
             $this->company = CompanyPeer::doSelectOne($c1);
@@ -526,15 +526,15 @@ class companyActions extends sfActions {
             $transaction->setTransactionStatusId(1);
             $transaction->setPaymenttype(2); //Refill
             $transaction->setDescription($description->getTitle());
-             $oldBalance = CompanyEmployeActivation::getBalance($this->company);
-             $transaction->setOldBalance($oldBalance);
-         
-                     
-             $transaction->setTransactionType($description->getTransactionTypeId());
+            $oldBalance = CompanyEmployeActivation::getBalance($this->company);
+            $transaction->setOldBalance($oldBalance);
+
+
+            $transaction->setTransactionType($description->getTransactionTypeId());
             $transaction->save();
 
-           
-               if(CompanyEmployeActivation::charge($this->company, $charge_amount)) {
+
+            if (CompanyEmployeActivation::charge($this->company, $charge_amount)) {
                 $transaction->setTransactionStatusId(3);
                 $newBalance = CompanyEmployeActivation::getBalance($this->company);
                 $transaction->setNewBalance($newBalance);
@@ -551,40 +551,52 @@ class companyActions extends sfActions {
             //parse_str($telintaAddAccount, $success);print_r($success);echo $success['success'];
         }
     }
-    
+
     public function executePaymenthistory(sfWebRequest $request) {
 
-           $cm = new Criteria();
-           $this->companies=CompanyPeer::doSelect($cm);
-             $tr = new Criteria();
-           $this->transactionstypes=TransactionTypePeer::doSelect($tr);
+        $cm = new Criteria();
+        $this->companies = CompanyPeer::doSelect($cm);
+        $tr = new Criteria();
+        $this->transactionstypes = TransactionTypePeer::doSelect($tr);
+
+
+
         $c = new Criteria();
         $companyid = $request->getParameter('company_id');
-        $this->companyid=$companyid;
-       $transactionType_id = $request->getParameter('transactionType_id');
-        $this->transactionType_id=$transactionType_id;
+        $this->companyid = $companyid;
+        $transactionType_id = $request->getParameter('transactionType_id');
+        $this->transactionType_id = $transactionType_id;
         $this->$transactionType_id = $transactionType_id;
-        
+
+        $this->transactionDescription_id = $request->getParameter('transaction_description_id');
+
         $this->from = $request->getParameter('from');
         $this->to = $request->getParameter('to');
-        if($this->from==''){
+        if ($this->from == '') {
             $this->from = date('Y-m-d', strtotime('-15 days'));
         }
-        if($this->to==''){
+        if ($this->to == '') {
             $this->to = date('Y-m-d');
         }
-        
-        
+
+
         $c->add(CompanyTransactionPeer::TRANSACTION_STATUS_ID, 3);
 
         if (isset($companyid) && $companyid != '') {
             $c->addAnd(CompanyTransactionPeer::COMPANY_ID, $companyid);
         }
-         if (isset($transactionType_id) && $transactionType_id != '') {
-            $c->addAnd(CompanyTransactionPeer::TRANSACTION_TYPE, $transactionType_id);
+        if (isset($transactionType_id) && $transactionType_id != '') {
+           // $c->addAnd(CompanyTransactionPeer::TRANSACTION_TYPE, $transactionType_id);
+            $tc = new Criteria();
+            $tc->add(TransactionDescriptionPeer::TRANSACTION_TYPE_ID, $transactionType_id);
+            $this->transactionDescriptions = TransactionDescriptionPeer::doSelect($tc);
         }
-        $c->addAnd(CompanyTransactionPeer::CREATED_AT, $this->from." 00:00:00", Criteria::GREATER_EQUAL);
-        $c->addAnd(CompanyTransactionPeer::CREATED_AT, $this->to." 23:59:59", Criteria::LESS_EQUAL);
+        if ($this->transactionDescription_id != "") {
+            $c->addAnd(CompanyTransactionPeer::TRANSACTION_DESCRIPTION_ID, $this->transactionDescription_id);
+        }
+
+        $c->addAnd(CompanyTransactionPeer::CREATED_AT, $this->from . " 00:00:00", Criteria::GREATER_EQUAL);
+        $c->addAnd(CompanyTransactionPeer::CREATED_AT, $this->to . " 23:59:59", Criteria::LESS_EQUAL);
         $c->addDescendingOrderByColumn(CompanyTransactionPeer::CREATED_AT);
         $this->transactions = CompanyTransactionPeer::doSelect($c);
     }
@@ -602,12 +614,12 @@ class companyActions extends sfActions {
         }
     }
 
-    public function executeShowReceipt (sfWebRequest $request) {
+    public function executeShowReceipt(sfWebRequest $request) {
         //call Culture Method For Get Current Set Culture - Against Feature# 6.1 --- 02/28/11
         changeLanguageCulture::languageCulture($request, $this);
         $transaction_id = $request->getParameter('tid');
         $transaction = CompanyTransactionPeer::retrieveByPK($transaction_id);
-        
+
         $this->renderPartial('company/refill_receipt', array(
             'company' => CompanyPeer::retrieveByPK($transaction->getCompanyId()),
             'transaction' => $transaction,
@@ -616,52 +628,67 @@ class companyActions extends sfActions {
 
         return sfView::NONE;
     }
-   public function executeIndexAll(sfWebRequest $request) {
+
+    public function executeIndexAll(sfWebRequest $request) {
         $c = new Criteria();
         $this->companies = CompanyPeer::doSelect($c);
     }
+
     public function executeWithBillingInfo(sfWebRequest $request) {
         $c = new Criteria();
         $this->companies = CompanyPeer::doSelect($c);
     }
 
-     public function executeEditCreditLimit(sfWebRequest $request) {
-      $count=0;
-      $count=count($request->getParameter('company_id'));
-      $creditlimit=$request->getParameter('creditlimit');
+    public function executeEditCreditLimit(sfWebRequest $request) {
+        $count = 0;
+        $count = count($request->getParameter('company_id'));
+        $creditlimit = $request->getParameter('creditlimit');
 
-        for($i=0; $i<$count; $i++){
-            $id=$request->getParameter('company_id');
-            
+        for ($i = 0; $i < $count; $i++) {
+            $id = $request->getParameter('company_id');
+
             $company = CompanyPeer::retrieveByPk($id[$i]);
-            $oldcreditlimit=$company->getCreditLimit();
+            $oldcreditlimit = $company->getCreditLimit();
             $company->setCreditLimit($creditlimit);
             $company->save();
-               $update_customer['i_customer']=$company->getICustomer();
-            $update_customer['credit_limit']=($company->getCreditLimit()!='')?$company->getCreditLimit():'0';
-          if(!CompanyEmployeActivation::updateCustomer($update_customer)){
-               $company->setCreditLimit($oldcreditlimit);
-            $company->save();
-          }
-
-
-          
+            $update_customer['i_customer'] = $company->getICustomer();
+            $update_customer['credit_limit'] = ($company->getCreditLimit() != '') ? $company->getCreditLimit() : '0';
+            if (!CompanyEmployeActivation::updateCustomer($update_customer)) {
+                $company->setCreditLimit($oldcreditlimit);
+                $company->save();
+            }
         }
 
-          $this->getUser()->setFlash('message', 'All Selected Agent Credit Limit is updated');
-             $this->redirect('company/indexAll');
-                return sfView::NONE;
+        $this->getUser()->setFlash('message', 'All Selected Agent Credit Limit is updated');
+        $this->redirect('company/indexAll');
+        return sfView::NONE;
     }
- public function executeUpdateCreditLimit(sfWebRequest $request) {
+
+    public function executeUpdateCreditLimit(sfWebRequest $request) {
         $c = new Criteria();
         $companies = CompanyPeer::doSelect($c);
-        foreach($companies as $company){
-        $companyinfo=CompanyEmployeActivation::getCustomerInfo($company);
-        $company->setCreditLimit($companyinfo->credit_limit);
-         $company->save();
+        foreach ($companies as $company) {
+            $companyinfo = CompanyEmployeActivation::getCustomerInfo($company);
+            $company->setCreditLimit($companyinfo->credit_limit);
+            $company->save();
         }
-   
-           return sfView::NONE;
+
+        return sfView::NONE;
+    }
+
+    public function executeGetTransactionDescriptionDropDown(sfWebRequest $request) {
+        $transactionType_id = $request->getParameter('type_id');
+        $tc = new Criteria();
+        $tc->add(TransactionDescriptionPeer::TRANSACTION_TYPE_ID, $transactionType_id);
+        $transactionDescriptions = TransactionDescriptionPeer::doSelect($tc);
+
+        $str = '<option value="">Select Transaction Description </option>';
+        foreach ($transactionDescriptions as $d) {
+            $str.= '<option value="' . $d->getId() . '"   >' . $d->getTitle() . '</option>';
+        }
+
+        echo $str;
+        return sfView::NONE;
     }
 
 }
