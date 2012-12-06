@@ -400,23 +400,23 @@
                     ?>
                         <?php 
                     if($actionName=='list' && $modulName=="rt_countries"){
-                       echo link_to(__('Agent Billing System Info'), 'rt_countries/index', array('class'=>'subSelect'));
+                       echo link_to(__('RT Countries'), 'rt_countries/index', array('class'=>'subSelect'));
                     }else{
-                       echo link_to(__('Agent Billing System Info'), 'rt_countries/index');
+                       echo link_to(__('RT Countries'), 'rt_countries/index');
                     }          
                     ?>
                         <?php 
                     if($actionName=='updateRates' && $modulName=="rt_rates"){
-                       echo link_to(__('Agent Billing System Info'), 'rt_rates/updateRates', array('class'=>'subSelect'));
+                       echo link_to(__('RT Update Rates'), 'rt_rates/updateRates', array('class'=>'subSelect'));
                     }else{
-                       echo link_to(__('Agent Billing System Info'), 'rt_rates/updateRates');
+                       echo link_to(__('RT Update Rates'), 'rt_rates/updateRates');
                     }          
                     ?>
                          <?php 
                     if($actionName=='exportRateTable' && $modulName=="rt_rates"){
-                       echo link_to(__('Agent Billing System Info'), 'rt_rates/exportRateTable', array('class'=>'subSelect'));
+                       echo link_to(__('RT Export Rate Table'), 'rt_rates/exportRateTable', array('class'=>'subSelect'));
                     }else{
-                       echo link_to(__('Agent Billing System Info'), 'rt_rates/exportRateTable');
+                       echo link_to(__('RT Export Rate Table'), 'rt_rates/exportRateTable');
                     }          
                     ?>
                         
