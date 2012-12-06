@@ -398,6 +398,28 @@
                        echo link_to(__('Agent Billing System Info'), 'company/withBillingInfo');
                     }          
                     ?>
+                        <?php 
+                    if($actionName=='list' && $modulName=="rt_countries"){
+                       echo link_to(__('Agent Billing System Info'), 'rt_countries/index', array('class'=>'subSelect'));
+                    }else{
+                       echo link_to(__('Agent Billing System Info'), 'rt_countries/index');
+                    }          
+                    ?>
+                        <?php 
+                    if($actionName=='updateRates' && $modulName=="rt_rates"){
+                       echo link_to(__('Agent Billing System Info'), 'rt_rates/updateRates', array('class'=>'subSelect'));
+                    }else{
+                       echo link_to(__('Agent Billing System Info'), 'rt_rates/updateRates');
+                    }          
+                    ?>
+                         <?php 
+                    if($actionName=='exportRateTable' && $modulName=="rt_rates"){
+                       echo link_to(__('Agent Billing System Info'), 'rt_rates/exportRateTable', array('class'=>'subSelect'));
+                    }else{
+                       echo link_to(__('Agent Billing System Info'), 'rt_rates/exportRateTable');
+                    }          
+                    ?>
+                        
                 </div>
             </li>
   <?php } ?>
