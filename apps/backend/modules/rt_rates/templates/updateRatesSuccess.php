@@ -1,4 +1,4 @@
-<style>
+<style type="text/css">
     #rt-table-header span {
         width:168px;
         display: inline-block;
@@ -33,8 +33,7 @@
 
         <h1> Update Rates<span style="display: inline-block; float:right; padding-right: 10px; "><a href="<?php echo url_for(sfConfig::get('app_backend_url') . 'rt_rates/updateRates?truncate=due') ?>">Reset</a></span></h1>
         <div id="rt-table-header" style="position: fixed;margin-bottom: 5px; top: 0;" >
-            <span>Country </span><span>Mobile Rate</span><span>Land Line Rate</span> 
-            <span>Country </span><span>Mobile Rate</span><span>Land Line Rate</span> 
+            <span>Country </span><span>LandLine Rate</span><span>Mobile Rate</span><span>Country </span><span>LandLine Rate</span><span>Mobile Rate</span> 
         </div>
         <form method="post" action="" id="rtform">
             Language: <select name="lang" id="lang">
@@ -45,8 +44,7 @@
                 <option value="de" <?php if($lang=="de")echo 'selected="selected"' ?>>German</option>
             </select>
             <div id="rt-table-header" style="margin-bottom: 5px;">
-                <span>Country </span><span>Mobile Rate</span><span>Land Line Rate</span> 
-                <span>Country </span><span>Mobile Rate</span><span>Land Line Rate</span> 
+                <span>Country </span><span>Land Line Rate</span><span>Mobile Rate</span><span>Country </span><span>Land Line Rate</span><span>Mobile Rate</span>
             </div>
             <table >
                 <tr>

@@ -14,7 +14,9 @@ class rt_ratesActions extends autort_ratesActions {
 
     public function executeUpdateRates(sfWebRequest $request) {
         $this->countries = RtCountriesPeer::doSelect(new Criteria());
-        $this->services = RtServicesPeer::doSelect(new Criteria());
+        $c = new Criteria();
+        $c->addDescendingOrderByColumn(RtServicesPeer::ID);
+        $this->services = RtServicesPeer::doSelect($c);
 
         if ($request->getParameter('truncate') == 'due') {
             $con = Propel::getConnection();
@@ -37,7 +39,8 @@ class rt_ratesActions extends autort_ratesActions {
             }
             
             $this->countries = RtCountriesPeer::doSelect(new Criteria());
-            $this->services = RtServicesPeer::doSelect(new Criteria());
+            $c->addDescendingOrderByColumn(RtServicesPeer::ID);
+            $this->services = RtServicesPeer::doSelect($c);
         }
         $this->lang = $request->getParameter('lang');
     }
