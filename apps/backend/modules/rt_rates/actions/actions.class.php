@@ -15,6 +15,13 @@ class rt_ratesActions extends autort_ratesActions {
     public function executeUpdateRates(sfWebRequest $request) {
         $this->countries = RtCountriesPeer::doSelect(new Criteria());
         $this->services = RtServicesPeer::doSelect(new Criteria());
+
+        if ($request->getParameter('truncate') == 'due') {
+            $con = Propel::getConnection();
+            $con->exec('truncate rt_rates');
+        }
+
+
         if ($request->isMethod('post')) {
             $con = Propel::getConnection();
             $con->exec('truncate rt_rates');
@@ -28,16 +35,18 @@ class rt_ratesActions extends autort_ratesActions {
                     $rate->save();
                 }
             }
+            
             $this->countries = RtCountriesPeer::doSelect(new Criteria());
             $this->services = RtServicesPeer::doSelect(new Criteria());
         }
+        $this->lang = $request->getParameter('lang');
     }
 
     public function executeExportRateTable(sfWebRequest $request) {
 
 
         if ($request->isMethod('post')) {
-            
+
             $filename = str_replace(" ", '-', $request->getParameter("filename")) . time() . ".csv";
             $myFile = "/var/www/moiize-telecom/ratetables/" . $filename;
             $fh = fopen($myFile, 'w') or die("can't open file");
