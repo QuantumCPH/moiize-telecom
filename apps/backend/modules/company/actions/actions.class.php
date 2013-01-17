@@ -527,6 +527,7 @@ class companyActions extends sfActions {
             $transaction->setTransactionStatusId(1);
             $transaction->setPaymenttype(2); //Refill
             $transaction->setDescription($description->getTitle());
+            $transaction->setTransactionDescriptionId($description->getId());
             $oldBalance = CompanyEmployeActivation::getBalance($this->company);
             $transaction->setOldBalance($oldBalance);
 
@@ -556,6 +557,7 @@ class companyActions extends sfActions {
     public function executePaymenthistory(sfWebRequest $request) {
 
         $cm = new Criteria();
+        $cm->addAscendingOrderByColumn(CompanyPeer::NAME);
         $this->companies = CompanyPeer::doSelect($cm);
         $tr = new Criteria();
         $this->transactionstypes = TransactionTypePeer::doSelect($tr);
@@ -567,7 +569,7 @@ class companyActions extends sfActions {
         $this->companyid = $companyid;
         $transactionType_id = $request->getParameter('transactionType_id');
         $this->transactionType_id = $transactionType_id;
-        $this->$transactionType_id = $transactionType_id;
+       // $this->$transactionType_id = $transactionType_id;
 
         $this->transactionDescription_id = $request->getParameter('transaction_description_id');
 
@@ -586,11 +588,13 @@ class companyActions extends sfActions {
         if (isset($companyid) && $companyid != '') {
             $c->addAnd(CompanyTransactionPeer::COMPANY_ID, $companyid);
         }
+        $this->cntTransaction = 0;
         if (isset($transactionType_id) && $transactionType_id != '') {
             $c->addAnd(CompanyTransactionPeer::TRANSACTION_TYPE, $transactionType_id);
             $tc = new Criteria();
             $tc->add(TransactionDescriptionPeer::TRANSACTION_TYPE_ID, $transactionType_id);
             $this->transactionDescriptions = TransactionDescriptionPeer::doSelect($tc);
+            $this->cntTransaction = TransactionDescriptionPeer::doCount($tc);
         }
         if ($this->transactionDescription_id != "") {
             $c->addAnd(CompanyTransactionPeer::TRANSACTION_DESCRIPTION_ID, $this->transactionDescription_id);

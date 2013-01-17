@@ -27,6 +27,10 @@ class BasePromotionRatesForm extends BaseFormPropel
       'created_at'   => new sfValidatorDateTime(),
     ));
 
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorPropelUnique(array('model' => 'PromotionRates', 'column' => array('agent_id')))
+    );
+
     $this->widgetSchema->setNameFormat('promotion_rates[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);

@@ -26,7 +26,7 @@
 
 <div id="sf_admin_container"><h1><?php echo __('Charge') ?></h1></div>
 
-<form id="sf_admin_form" name="sf_admin_edit_form" method="post" enctype="multipart/form-data" action="AgentCharge">
+<form id="sf_admin_form" name="sf_admin_edit_form" method="post" enctype="multipart/form-data" action="agentCharge">
     <div id="sf_admin_content">
     <table style="padding: 0px;"  id="sf_admin_container" class="tblAlign" cellspacing="0" cellpadding="2" >
     <tr>
