@@ -3087,6 +3087,7 @@ if(($caltype!="IC") && ($caltype!="hc")){
                     $transaction->setDescription($description->getTitle());
                     $transaction->setRentDays($lineRentCompany->getNumberOfDays());
                     $transaction->setRentValue($lineRentCompany->getRentValue());
+                    $transaction->setTransactionDescriptionId($description->getId());
                     $transaction->setOldBalance($oldBalance);
                     $transaction->setTransactionType(2);
                     $transaction->save();

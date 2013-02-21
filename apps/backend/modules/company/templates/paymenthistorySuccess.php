@@ -58,9 +58,9 @@
                                     <option value="<?php echo $transactionstype->getId(); ?>" <?php if ($transactionType_id == $transactionstype->getId()) { ?> selected="selected" <?php } ?>  ><?php echo $transactionstype->getTitle(); ?> </option>
                                 <?php } ?></select> </td></tr>
                     <tr><td>Transaction Description</td><td> <select name="transaction_description_id" id="transaction_description_id">
-                                <option value="">Select Transaction Description </option><?php foreach ($transactionDescriptions as $d) { ?>
+                                <option value="">Select Transaction Description </option><?php if($cntTransaction>0):?><?php foreach ($transactionDescriptions as $d) { ?>
                                     <option value="<?php echo $d->getId(); ?>" <?php if ($transactionDescription_id == $d->getId()) { ?> selected="selected" <?php } ?>  ><?php echo $d->getTitle(); ?> </option>
-                                <?php } ?>
+                                <?php } ?><?php endif;?>
                             </select></td></tr>
                     <tr><td>From Date:</td><td> <input type="text" id="from" name="from" value="<?php echo $from; ?>"/>  </td></tr>
                     <tr><td>To Date:</td><td> <input type="text" id="to" name="to" value="<?php echo $to; ?>" /> </td></tr>
