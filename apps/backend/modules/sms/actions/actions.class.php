@@ -82,29 +82,7 @@ class smsActions extends sfActions
 
                $queryString=smsCharacter::smsCharacterReplacement($queryString);
 
-
-//
-//       $replace = array(
-//			   '%C3%B8' => '%F8',
-//			   '%C3%A6' => '%E6',
-//			   '%C3%A5' => '%E5',
-//                           '%C3%86' => '%C6',
-//			   '%C3%98' => '%D8',
-//			   '%C3%85' => '%C5',
-//                           '%C3%96' => '%D6',
-//                           '%C3%B6' => '%F6'
-//
-//			  );
-//		     $from_array = array();
-//		     $to_array = array();
-//
-//		     foreach ($replace as $k => $v){
-//		         $from_array[] = $k;
-//		         $to_array[] = $v;
-//		     }
-//
-//		       $queryString=str_replace($from_array,$to_array,$queryString);
-
+ 
 
 		$res = file_get_contents('http://sms1.cardboardfish.com:9001/HTTPSMS?'.$queryString);
                 $this->res_cbf = 'Response from CBF is: ';

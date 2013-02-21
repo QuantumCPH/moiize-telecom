@@ -48,8 +48,8 @@ echo  date('i:s',$callval);
 } ?></td>
                 <td><?php echo $xdr->country; ?></td>
                    <td><?php echo $xdr->description;  ?></td>
-                <td><?php echo number_format($xdr->charged_amount, 2);
-            $amount_total+= number_format($xdr->charged_amount, 2); ?> &euro;</td>
+                <td><?php echo number_format($xdr->charged_amount, 3);
+            $amount_total+= number_format($xdr->charged_amount, 3); ?> &euro;</td>
                 <td><?php echo $xdr->account_id; ?></td>
         </tr>
 
@@ -68,7 +68,7 @@ echo  date('i:s',$callval);
 <?php } else { ?>
             <tr>
                 <td colspan="5" align="right"><strong><?php echo __('Subtotal') ?></strong></td>
-                <td><?php echo number_format($amount_total, 2, ',', '') ?> &euro;</td>
+                <td><?php echo number_format($amount_total, 3, ',', '') ?> &euro;</td>
                 <td>&nbsp;</td>
             </tr>
 <?php } ?>
