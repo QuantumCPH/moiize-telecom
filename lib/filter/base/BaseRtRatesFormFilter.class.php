@@ -20,7 +20,7 @@ class BaseRtRatesFormFilter extends BaseFormFilterPropel
     ));
 
     $this->setValidators(array(
-      'rate'          => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
+      'rate'          => new sfValidatorPass(array('required' => false)),
       'rt_service_id' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'rt_country_id' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
     ));
@@ -41,7 +41,7 @@ class BaseRtRatesFormFilter extends BaseFormFilterPropel
   {
     return array(
       'id'            => 'Number',
-      'rate'          => 'Number',
+      'rate'          => 'Text',
       'rt_service_id' => 'Number',
       'rt_country_id' => 'Number',
     );

@@ -20,7 +20,7 @@ class BaseRtRatesForm extends BaseFormPropel
 
     $this->setValidators(array(
       'id'            => new sfValidatorPropelChoice(array('model' => 'RtRates', 'column' => 'id', 'required' => false)),
-      'rate'          => new sfValidatorNumber(),
+      'rate'          => new sfValidatorString(array('max_length' => 10)),
       'rt_service_id' => new sfValidatorInteger(),
       'rt_country_id' => new sfValidatorInteger(),
     ));
