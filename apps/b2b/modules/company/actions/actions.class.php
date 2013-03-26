@@ -18,7 +18,8 @@ class companyActions extends sfActions {
     public function executeDashboard(sfWebRequest $request) {
         $this->forward404Unless($this->getUser()->getAttribute('companyname', '', 'companysession'));
         $this->company = CompanyPeer::retrieveByPK($this->getUser()->getAttribute('company_id', '', 'companysession'));
-        $this->balance = CompanyEmployeActivation::getBalance($this->company);
+        $ComtelintaObj = new CompanyEmployeActivation();
+        $this->balance = $ComtelintaObj->getBalance($this->company);
         
         $c = new Criteria();
         $c->add(EmployeePeer::COMPANY_ID, $this->company->getId());
@@ -78,7 +79,8 @@ class companyActions extends sfActions {
 
         $this->forward404Unless($this->getUser()->getAttribute('companyname', '', 'companysession'));
         $this->company = CompanyPeer::retrieveByPK($this->getUser()->getAttribute('company_id', '', 'companysession'));
-        $this->balance = CompanyEmployeActivation::getBalance($this->company);
+        $ComtelintaObj = new CompanyEmployeActivation();
+        $this->balance = $ComtelintaObj->getBalance($this->company);
         $c = new Criteria();
         $c->Add(EmployeePeer::COMPANY_ID, $this->company->getId());
         $this->employeesCount = EmployeePeer::doCount($c);
@@ -116,6 +118,7 @@ class companyActions extends sfActions {
     public function executeCallHisotry(sfWebRequest $request) {
         $this->forward404Unless($this->getUser()->getAttribute('companyname', '', 'companysession'));
         $this->company = CompanyPeer::retrieveByPK($this->getUser()->getAttribute('company_id', '', 'companysession'));
+        $ComtelintaObj = new CompanyEmployeActivation();
         if (isset($_POST['startdate']) && isset($_POST['enddate'])) {
             $this->fromdate = $request->getParameter('startdate');
             $this->todate = $request->getParameter('enddate');
@@ -135,10 +138,10 @@ class companyActions extends sfActions {
 
             $this->iAccountTitle = $telintaAccount->getAccountTitle();
 
-            $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $this->fromdate . " 00:00:00", $this->todate . " 23:59:59");
+            $this->callHistory = $ComtelintaObj->getAccountCallHistory($telintaAccount->getIAccount(), $this->fromdate . " 00:00:00", $this->todate . " 23:59:59");
         } else {
 
-            $this->callHistory = CompanyEmployeActivation::callHistory($this->company, $this->fromdate . " 00:00:00", $this->todate . " 23:59:59");
+            $this->callHistory = $ComtelintaObj->callHistory($this->company, $this->fromdate . " 00:00:00", $this->todate . " 23:59:59");
         }
 
         $c = new Criteria();
@@ -238,5 +241,61 @@ class companyActions extends sfActions {
             return $this->redirect(sfConfig::get('app_main_url') . 'company/view');
         }
     }
+    
+    public function executeChangePackage(sfWebRequest $request) {
+        $employee_id = $request->getParameter("lineid");
+        
+        $ce = new Criteria();
+        $ce->add(EmployeePeer::ID,$employee_id);
+        $employee = EmployeePeer::doSelectOne($ce);        
+        $this->employee = $employee;
+        
+        $cpp = new Criteria();
+        $cpp->addAnd(PricePlanPeer::ID,$employee->getPricePlanId(), Criteria::NOT_EQUAL);
+        $priceplans = PricePlanPeer::doSelect($cpp);
+        $this->priceplans = $priceplans;
+        
+        $newpackageid = $request->getParameter("priceplan_id");
+        if($newpackageid !=""){
+            $cnp = new Criteria();
+            $cnp->addAnd(PricePlanPeer::ID,$newpackageid);
+            $price_plan = PricePlanPeer::doSelectOne($cnp);
+            
+            $new_iproduct    = $price_plan->getTelintaProduct()->getIProduct();
+            $new_routingplan = $price_plan->getTelintaRoutingplan()->getIRoutingPlan();
+            
+            $ct = new Criteria();
+            $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId());
+            $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
+            $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
+            if($telintaAccount){
+                $acc_title = $telintaAccount->getIAccount();
+            }  else {
+                $acc_title = "";
+            }
+            $ComtelintaObj = new CompanyEmployeActivation();
+            if($ComtelintaObj->updateAccount($employee, $new_iproduct, $new_routingplan)){
+                $pph = new PricePlanHistory();
+                $pph->setCompanyId($employee->getCompanyId());
+                $pph->setEmployeeId($employee->getId());
+                $pph->setPricePlanId($employee->getPricePlanId());
+                $pph->setPricePlanTitle($employee->getPricePlan()->getTitle());
+                $pph->setTelintaProductId($employee->getTelintaProductId());
+                $pph->setTelintaRoutingplanId($employee->getTelintaRoutingplanId());
+                $pph->setIaccount($acc_title);
+                $pph->setAccountTitle(sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId());
+                $pph->save();
 
+                $employee->setTelintaProductId($new_iproduct);
+                $employee->setTelintaRoutingplanId($new_routingplan);
+                $employee->setPricePlanId($price_plan->getId());
+                $employee->save();
+
+                $this->getUser()->setFlash('messageChange', 'PCO Line has been edited successfully');
+            }else{
+                $this->getUser()->setFlash('messageChangeError', 'PCO Line has not been edited successfully');
+            }
+            $this->redirect('company/dashboard');
+        }
+    }
 }

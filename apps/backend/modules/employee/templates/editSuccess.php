@@ -30,7 +30,7 @@
                    <?php   $comid = $company->getId(); ?>    <?php $varcom =$employee->getCompanyId();
                      if (isset($varcom) && $varcom == $comid) { ?>  <?php  echo $company->getName() ?> <?php } ?>   
 <?php  } ?>
-                <input type="hidden" name="company_id" id="employee_company_id"  class="required" value="<?php echo $employee->getCompanyId();   ?>">
+                <input type="hidden" name="company_id" id="employee_company_id"  class="required" value="<?php echo $employee->getCompanyId();   ?>" />
                 </td>
         </tr>
 
@@ -90,22 +90,11 @@
                 </select></td>
         </tr>
      <tr>
-        <td style="padding: 5px;"><?php echo __('Telinta Product:') ?></td>
-        <td style="padding: 5px;"> <select name="telintaProductId" id="telintaProductId"    class="required"  >
+        <td style="padding: 5px;"><?php echo __('Price Plan:') ?></td>
+        <td style="padding: 5px;"> <select name="pricePlanId" id="pricePlanId"    class="required"  >
 
-      <?php foreach($telintaProducts as $telintaProduct){  ?>
-                <option value="<?php echo $tp =$telintaProduct->getIProduct()   ?>"   <?php $etpi = $employee->getTelintaProductId();
-                    if (isset($etpi) && $etpi == $tp) { ?>  selected="selected" <?php } ?>><?php echo $telintaProduct->getTitle()   ?></option>
-<?php   }  ?>
-</select></td>
-                </tr>
-                 <tr>
-        <td style="padding: 5px;"><?php echo __('Telinta RoutingPlan:') ?></td>
-        <td style="padding: 5px;"> <select name="telintaRoutingplanId" id="telintaRoutingplanId"    class="required"  >
-
-      <?php foreach($telintaRoutingplans as $telintaRoutingplan){  ?>
-                <option value="<?php echo $trp =$telintaRoutingplan->getIRoutingPlan ();   ?>"    <?php $etrpi = $employee->getTelintaRoutingplanId();
-                    if (isset($etrpi) && $etrpi == $trp) { ?>  selected="selected" <?php } ?>><?php echo $telintaRoutingplan->getTitle()   ?></option>
+      <?php foreach($pricePlans as $pricePlan){  ?>
+                <option value="<?php echo $pricePlan->getId();  ?>" <?php echo $pricePlan->getId()==$employee->getPricePlanId() ?"selected='selected'":"";?>><?php echo $pricePlan->getTitle()   ?></option>
 <?php   }  ?>
 </select></td>
                 </tr>

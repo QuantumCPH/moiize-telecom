@@ -42,7 +42,8 @@
 
                 <td><?php echo $company->getContactName(); ?></td>
                 <?php
-                $customer = CompanyEmployeActivation::getCustomerInfo($company);
+                $ComtelintaObj = new CompanyEmployeActivation();
+                $customer = $ComtelintaObj->getCustomerInfo($company);
                 ?>
                 <td><?php
             echo $customer->iso_4217;

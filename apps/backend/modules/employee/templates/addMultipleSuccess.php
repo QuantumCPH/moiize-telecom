@@ -76,24 +76,15 @@
 <?php   }  ?>
 </select></td>
                 </tr>
-                            <tr>
-        <td style="padding: 5px;"><?php echo __('Telinta Product:') ?></td>
-        <td style="padding: 5px;"> <select name="telintaProductId" id="telintaProductId"    class="required"  >
+           <tr>
+        <td style="padding: 5px;"><?php echo __('Price Plan:') ?></td>
+        <td style="padding: 5px;"> <select name="pricePlanId" id="pricePlanId"    class="required"  >
 
-      <?php foreach($telintaProducts as $telintaProduct){  ?>
-<option value="<?php echo $telintaProduct->getIProduct()   ?>"><?php echo $telintaProduct->getTitle()   ?></option>
+      <?php foreach($pricePlans as $pricePlan){  ?>
+<option value="<?php echo $pricePlan->getId();  ?>"><?php echo $pricePlan->getTitle()   ?></option>
 <?php   }  ?>
 </select></td>
-                </tr>
-                 <tr>
-        <td style="padding: 5px;"><?php echo __('Telinta RoutingPlan:') ?></td>
-        <td style="padding: 5px;"> <select name="telintaRoutingplanId" id="telintaRoutingplanId"    class="required"  >
-
-      <?php foreach($telintaRoutingplans as $telintaRoutingplan){  ?>
-<option value="<?php echo $telintaRoutingplan->getIRoutingPlan ();   ?>"><?php echo $telintaRoutingplan->getTitle()   ?></option>
-<?php   }  ?>
-</select></td>
-                </tr>
+                </tr>      
     </table>
         <div id="sf_admin_container">
             <ul class="sf_admin_actions"><input type="hidden" value="" id="error" name="error">

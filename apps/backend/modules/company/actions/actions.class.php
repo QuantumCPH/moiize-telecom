@@ -91,7 +91,7 @@ class companyActions extends sfActions {
             try {
                 $this->saveCompany($this->company);
             } catch (PropelException $e) {
-                $request->setError('edit', 'Could not save the edited Agent.');
+                $request->setError('edit', $e.'<br />Could not save the edited Agent.');
                 return $this->forward('company', 'list');
             }
 
@@ -140,8 +140,10 @@ class companyActions extends sfActions {
 
     protected function saveCompany(Company $company) {
         $companyData = $this->getRequestParameter('company');
-        if ($company->isNew()) {
-            $res = CompanyEmployeActivation::telintaRegisterCompany($company);
+        $ComtelintaObj = new CompanyEmployeActivation();
+        
+        if ($company->isNew()) {     
+            $res = $ComtelintaObj->telintaRegisterCompany($company);
             //var_dump($res);
         }
         //$company->isNew() . ":" . $res;
@@ -167,7 +169,7 @@ class companyActions extends sfActions {
         } elseif (!$company->isNew()) {
             $update_customer['i_customer'] = $company->getICustomer();
             $update_customer['credit_limit'] = ($company->getCreditLimit() != '') ? $company->getCreditLimit() : '0';
-            $res = CompanyEmployeActivation::updateCustomer($update_customer);
+            $res = $ComtelintaObj->updateCustomer($update_customer);
             $company->save();
         } elseif (!$res) {
             throw new PropelException("You cannot save an object that has been deleted.");
@@ -390,16 +392,18 @@ class companyActions extends sfActions {
 
     public function executeView($request) {
         $this->company = CompanyPeer::retrieveByPK($request->getParameter('id'));
-        $this->balance = CompanyEmployeActivation::getBalance($this->company);
+        $ComtelintaObj = new CompanyEmployeActivation();
+        $this->balance = $ComtelintaObj->getBalance($this->company);
     }
 
     public function executeUsage($request) {
+        $ComtelintaObj = new CompanyEmployeActivation();
         /* $this->company = CompanyPeer::retrieveByPK($request->getParameter('company_id'));
           $tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
           $fromdate = date("Y-m-d", $tomorrow1);
           $tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
           $todate = date("Y-m-d", $tomorrow);
-          $this->callHistory = CompanyEmployeActivation::callHistory($this->company, $fromdate, $todate);
+          $this->callHistory = $ComtelintaObj->callHistory($this->company, $fromdate, $todate);
          */
 
         $this->company = CompanyPeer::retrieveByPK($request->getParameter('company_id'));
@@ -422,14 +426,14 @@ class companyActions extends sfActions {
 
             $this->iAccountTitle = $telintaAccount->getAccountTitle();
 
-            $this->callHistory = CompanyEmployeActivation::getAccountCallHistory($telintaAccount->getIAccount(), $this->fromdate . " 00:00:00", $this->todate . " 23:59:59");
+            $this->callHistory = $ComtelintaObj->getAccountCallHistory($telintaAccount->getIAccount(), $this->fromdate . " 00:00:00", $this->todate . " 23:59:59");
         } else {
             //$tomorrow1 = mktime(0, 0, 0, date("m"), date("d") - 15, date("Y"));
             // $this->fromdate = date("Y-m-d", $tomorrow1);
             //$tomorrow = mktime(0, 0, 0, date("m"), date("d") + 1, date("Y"));
             //$this->todate = date("Y-m-d");
 
-            $this->callHistory = CompanyEmployeActivation::callHistory($this->company, $this->fromdate . " 00:00:00", $this->todate . " 23:59:59");
+            $this->callHistory = $ComtelintaObj->callHistory($this->company, $this->fromdate . " 00:00:00", $this->todate . " 23:59:59");
             /* var_dump($this->callHistory);die; */
         }
 
@@ -449,7 +453,7 @@ class companyActions extends sfActions {
         $this->transactionDesc = TransactionDescriptionPeer::doSelect($cTD);
 
         if ($request->isMethod('post')) {
-
+            $ComtelintaObj = new CompanyEmployeActivation();
             $company_id = $request->getParameter('company_id');
             $refill_amount = $request->getParameter('refill');
             $descriptionId = $request->getParameter('descriptionId');
@@ -471,7 +475,7 @@ class companyActions extends sfActions {
             $transaction->setCompanyId($company_id);
             $transaction->setExtraRefill($refill_amount);
             $transaction->setTransactionStatusId(1);
-            $oldBalance = CompanyEmployeActivation::getBalance($this->company);
+            $oldBalance = $ComtelintaObj->getBalance($this->company);
             $transaction->setOldBalance($oldBalance);
             $transaction->setPaymenttype(2); //Refill
             $transaction->setDescription($description->getTitle());
@@ -479,8 +483,8 @@ class companyActions extends sfActions {
             $transaction->setTransactionType($description->getTransactionTypeId());
             $transaction->save();
 
-            if (CompanyEmployeActivation::recharge($this->company, $refill_amount, $transaction)) {
-                $newBalance = CompanyEmployeActivation::getBalance($this->company);
+            if ($ComtelintaObj->recharge($this->company, $refill_amount, $transaction)) {
+                $newBalance = $ComtelintaObj->getBalance($this->company);
                 $transaction->setNewBalance($newBalance);
                 $transaction->setTransactionStatusId(3);
                 $transaction->save();
@@ -528,7 +532,7 @@ class companyActions extends sfActions {
             $transaction->setPaymenttype(2); //Refill
             $transaction->setDescription($description->getTitle());
             $transaction->setTransactionDescriptionId($description->getId());
-            $oldBalance = CompanyEmployeActivation::getBalance($this->company);
+            $oldBalance = $ComtelintaObj->getBalance($this->company);
             $transaction->setOldBalance($oldBalance);
 
 
@@ -536,9 +540,9 @@ class companyActions extends sfActions {
             $transaction->save();
 
 
-            if (CompanyEmployeActivation::charge($this->company, $charge_amount)) {
+            if ($ComtelintaObj->charge($this->company, $charge_amount)) {
                 $transaction->setTransactionStatusId(3);
-                $newBalance = CompanyEmployeActivation::getBalance($this->company);
+                $newBalance = $ComtelintaObj->getBalance($this->company);
                 $transaction->setNewBalance($newBalance);
                 $transaction->save();
                 //$adminUser = UserPeer::retrieveByPK($this->getUser()->getAttribute('user_id', '', 'backendsession'));
@@ -648,7 +652,7 @@ class companyActions extends sfActions {
         $count = 0;
         $count = count($request->getParameter('company_id'));
         $creditlimit = $request->getParameter('creditlimit');
-
+        $ComtelintaObj = new CompanyEmployeActivation();
         for ($i = 0; $i < $count; $i++) {
             $id = $request->getParameter('company_id');
 
@@ -658,7 +662,7 @@ class companyActions extends sfActions {
             $company->save();
             $update_customer['i_customer'] = $company->getICustomer();
             $update_customer['credit_limit'] = ($company->getCreditLimit() != '') ? $company->getCreditLimit() : '0';
-            if (!CompanyEmployeActivation::updateCustomer($update_customer)) {
+            if (!$ComtelintaObj->updateCustomer($update_customer)) {
                 $company->setCreditLimit($oldcreditlimit);
                 $company->save();
             }
@@ -672,8 +676,9 @@ class companyActions extends sfActions {
     public function executeUpdateCreditLimit(sfWebRequest $request) {
         $c = new Criteria();
         $companies = CompanyPeer::doSelect($c);
+        $ComtelintaObj = new CompanyEmployeActivation();
         foreach ($companies as $company) {
-            $companyinfo = CompanyEmployeActivation::getCustomerInfo($company);
+            $companyinfo = $ComtelintaObj->getCustomerInfo($company);
             $company->setCreditLimit($companyinfo->credit_limit);
             $company->save();
         }
