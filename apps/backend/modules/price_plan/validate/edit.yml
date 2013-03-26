@@ -1,0 +1,11 @@
+fields:
+  price_plan{title}:
+    required:
+      msg:              The title cannot be left blank.
+  price_plan{telinta_product_id}:
+    required:
+      msg:              The telinta product cannot be left blank.
+  price_plan{telinta_routingplan_id}:
+    required:
+      msg:              The telinta routingplan cannot be left blank.
+  

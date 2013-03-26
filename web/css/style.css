@@ -726,3 +726,28 @@ input#searchNew{margin:0px}
   padding: 0px;
   margin-left: 5px !important;
 }
+#basic .floatnone{
+  float:none !important;
+  margin:0 !important;  
+}
+#sf_admin_container .form-errors h2
+{
+  padding: 5px 20px 5px 25px;
+  font-size: 11px;
+  color: #fff;
+  background: #f33 url(../images/error.png) no-repeat 5px 2px;
+}
+#sf_admin_container .save-ok
+{
+  margin-bottom: 10px;
+  margin-top:5px;
+}
+
+#sf_admin_container .save-ok h2
+{
+  margin: 0 !important;
+  padding: 6px 20px 4px 25px;
+  font-size: 11px;
+  color: #fff;
+  background: #3AA32B url(../images/ok.png) no-repeat 5px 2px;
+}

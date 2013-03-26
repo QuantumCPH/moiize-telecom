@@ -1,0 +1,21 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      PricePlan
+    theme:            default
+    css:             /sf/sf_admin/css/admin_main.css
+    edit:
+      title: Create/Edit Voice Package
+      display: [title,telinta_product_id,telinta_routingplan_id]
+      fields:
+              telinta_routingplan: {name: Telinta Rounting Plan}
+    list:
+      title:    Voice Packages
+      display: [title,telinta_product,telinta_routingplan]  
+      fields:
+              telinta_routingplan: {name: Telinta Rounting Plan}
+      max_per_page: 100
+      object_actions:
+        _edit: ~
+        _delete: ~
+
