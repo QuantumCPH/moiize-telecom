@@ -441,10 +441,18 @@ class employeeActions extends sfActions {
        
         $trp = new Criteria();
         $this->telintaRoutingplans = TelintaRoutingplanPeer::doSelect($trp);
-
+        
+        /************ Select telinta product and routing plan from Price plan ***********/
+        $ppc = new Criteria();
+        $priceplans = PricePlanPeer::doSelect($ppc);
+        $this->priceplans = $priceplans;
+        
+        /************ End ***********/
+        
         $ce = new Criteria();
         $companyid = $request->getParameter('company_id');
         $this->companyval = $companyid;
+        $this->count = 0;
         if (isset($companyid) && $companyid != '') {
             if($request->getParameter('all_company')==1){
                 $this->count=$request->getParameter('all_company');
@@ -454,6 +462,8 @@ class employeeActions extends sfActions {
             }
                 $ce->addAscendingOrderByColumn('company_id');
                 $this->employees = EmployeePeer::doSelect($ce);
+        }else{
+                $this->employees ="";
         }
         
     }
@@ -461,23 +471,55 @@ class employeeActions extends sfActions {
     public function executeEditMultipleEmployee($request) {
     $block='';
         $count=count($request->getParameter('id'));
+        /************ Select telinta product and routing plan from Price plan ***********/
+        $priceplanid = $request->getParameter('pricePlanId');
+        
+        $pp = new Criteria();
+        $pp->addAnd(PricePlanPeer::ID, $priceplanid);
+        $priceplan = PricePlanPeer::doSelectOne($pp);
+        $new_iproduct = $priceplan->getTelintaProduct()->getIProduct();
+        $new_routingplan = $priceplan->getTelintaRoutingplan()->getIRoutingPlan();
+        
+        /************ End ***********/
         for($i=0; $i<$count; $i++){
-            $id=$request->getParameter('id');
+            $id = $request->getParameter('id');
             $employee = EmployeePeer::retrieveByPk($id[$i]);
             if($request->getParameter('block')!=''){
                 $block=$request->getParameter('block');
             }else{
                 $block=$employee->getBlock();
             }
-            if ($employee->getTelintaProductId()!=$request->getParameter('telintaProductId') || $employee->getTelintaRoutingplanId()!=$request->getParameter('telintaRoutingplanId') || $block!='') {
+            if ($employee->getTelintaProductId()!= $new_iproduct || $employee->getTelintaRoutingplanId()!= $new_routingplan || $block!='') {
               $ComtelintaObj = new CompanyEmployeActivation();
-              $result = $ComtelintaObj->updateAccount($employee, $request->getParameter('telintaProductId'), $request->getParameter('telintaRoutingplanId'), $block);
+              $result = $ComtelintaObj->updateAccount($employee, $new_iproduct, $new_routingplan, $block);
             }
             
             if($result){
+                $ct = new Criteria();
+                $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId());
+                $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
+                $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
+                if($telintaAccount){
+                    $iaccount = $telintaAccount->getIAccount();
+                }  else {
+                    $iaccount = "";
+                }
+        
+                $pph = new PricePlanHistory();
+                $pph->setCompanyId($employee->getCompanyId());
+                $pph->setEmployeeId($employee->getId());
+                $pph->setPricePlanId($employee->getPricePlanId());
+                $pph->setPricePlanTitle($employee->getPricePlan()->getTitle());
+                $pph->setTelintaProductId($employee->getTelintaProductId());
+                $pph->setTelintaRoutingplanId($employee->getTelintaRoutingplanId());
+                $pph->setIaccount($iaccount);
+                $pph->setAccountTitle(sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId());
+                $pph->save();
+                
                 $employee->setProductId($request->getParameter('productid'));
-                $employee->setTelintaProductId($request->getParameter('telintaProductId'));
-                $employee->setTelintaRoutingplanId($request->getParameter('telintaRoutingplanId'));
+                $employee->setTelintaProductId($new_iproduct);
+                $employee->setTelintaRoutingplanId($new_routingplan);
+                $employee->setPricePlanId($priceplanid);
                 $employee->setBlock($block);
                 $employee->save();
             }else{

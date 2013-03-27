@@ -341,7 +341,7 @@ class CompanyEmployeActivation {
         $til->add(TelintaAccountsPeer::ACCOUNT_TITLE, $accountTitle);
         $til->addAnd(TelintaAccountsPeer::STATUS, 3);
         $tilentaAccount = TelintaAccountsPeer::doSelectOne($til);
-
+       // var_dump($tilentaAccount);die;
         $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Account');
 
         $pass = $this->randomAlphabets(4) . $this->randomNumbers(1) . $this->randomAlphabets(3);
