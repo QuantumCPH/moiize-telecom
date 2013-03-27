@@ -20,7 +20,7 @@ class companyActions extends sfActions {
         $this->company = CompanyPeer::retrieveByPK($this->getUser()->getAttribute('company_id', '', 'companysession'));
         $ComtelintaObj = new CompanyEmployeActivation();
         $this->balance = $ComtelintaObj->getBalance($this->company);
-        
+         echo $this->targetURL = $this->getTragetUrl();
         $c = new Criteria();
         $c->add(EmployeePeer::COMPANY_ID, $this->company->getId());
         $this->employees = EmployeePeer::doSelect($c);
@@ -244,7 +244,7 @@ class companyActions extends sfActions {
     
     public function executeChangePackage(sfWebRequest $request) {
         $employee_id = $request->getParameter("lineid");
-       echo $this->targetURL = $this->getTragetUrl();
+      
         $ce = new Criteria();
         $ce->add(EmployeePeer::ID,$employee_id);
         $employee = EmployeePeer::doSelectOne($ce);        
