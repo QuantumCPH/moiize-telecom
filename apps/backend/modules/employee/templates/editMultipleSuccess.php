@@ -55,24 +55,13 @@
                 </td>
             </tr>
             <tr>
-                <td style="padding: 5px;"><?php echo __('Telinta Product:') ?></td>
-                <td style="padding: 5px;">
-                    <select name="telintaProductId" id="telintaProductId" class="required"  >
-                        <?php foreach($telintaProducts as $telintaProduct){  ?>
-                        <option value="<?php echo $telintaProduct->getIProduct()   ?>"><?php echo $telintaProduct->getTitle()   ?></option>
-                        <?php   }  ?>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td style="padding: 5px;"><?php echo __('Telinta Routing Plan:') ?></td>
-                <td style="padding: 5px;">
-                    <select name="telintaRoutingplanId" id="telintaRoutingplanId" class="required"  >
-                        <?php foreach($telintaRoutingplans as $telintaRoutingplan){  ?>
-                        <option value="<?php echo $telintaRoutingplan->getIRoutingPlan ();   ?>"><?php echo $telintaRoutingplan->getTitle()   ?></option>
-                        <?php   }  ?>
-                    </select>
-                </td>
+                <td style="padding: 5px;"><?php echo __('Voice Package:') ?></td>
+                <td style="padding: 5px;"> <select name="pricePlanId" id="pricePlanId"    class="required"  >
+
+                <?php foreach($priceplans as $priceplan){  ?>
+                        <option value="<?php echo $priceplan->getId();  ?>"><?php echo $priceplan->getTitle()   ?></option>
+                <?php   }  ?>
+                </select></td>
             </tr>
             <tr>
                 <td style="padding: 5px;"><?php echo __('Block:') ?></td>
@@ -93,8 +82,7 @@
             <th><?php echo __('Agent') ?></th>
             <th><?php echo __('Name') ?></th>
             <th><?php echo __('Product') ?></th>
-            <th><?php echo __('Telinta Product') ?></th>
-            <th><?php echo __('Telinta Routing Plan') ?></th>
+            <th><?php echo __('Voice Package') ?></th>
             <th><?php echo __('Billing Account') ?></th>
             <th><?php echo __('Password') ?></th>
             <th><?php echo __('Block') ?></th>
@@ -135,26 +123,12 @@
             </td>
             <td>
                 <?php
-                    $tpid=$employee->getTelintaProductId();
-                    if(isset($tpid) && $tpid!=""){
-                        $tc = new Criteria();
-                        $tc->add(TelintaProductPeer::I_PRODUCT, $tpid);
-                        $tproducts = TelintaProductPeer::doSelectOne($tc);
-                        echo $tproducts->getTitle();
-                    }
+                    $pp = new Criteria();
+                    $pp->addAnd(PricePlanPeer::ID, $employee->getPricePlanId());
+                    $priceplan = PricePlanPeer::doSelectOne($pp);
+                    if($priceplan) echo $priceplan->getTitle();
               ?>
-            </td>
-            <td>
-                <?php
-                    $trpid=$employee->getTelintaRoutingplanId();
-                    if(isset($trpid) && $trpid!=""){
-                        $trc = new Criteria();
-                        $trc->add(TelintaRoutingplanPeer::I_ROUTING_PLAN, $trpid);
-                        $routingplan = TelintaRoutingplanPeer::doSelectOne($trc);
-                        echo $routingplan->getTitle();
-                    }
-              ?>
-            </td>
+            </td>            
             <td><?php echo sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId() ?></td>
             <td><?php echo  $employee->getPassword(); ?></td>
             <td><?php echo $employee->getBlock(); ?></td>
