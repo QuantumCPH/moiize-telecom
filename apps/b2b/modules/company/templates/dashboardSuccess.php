@@ -58,7 +58,7 @@
             </td>
             <td><?php echo  date("Y-m-d H:i:s",strtotime($employee->getCreatedAt())+25200); ?></td>
             <td><?php echo $employee->getPricePlan()->getTitle(); ?></td>
-            <td><a href="<?php echo url_for("company/changePackage?lineid=".$employee->getId(),true)?>">Click Here</a></td>
+            <td><a href="<?php echo url_for($targetURL."company/changePackage?lineid=".$employee->getId(),true)?>">Click Here</a></td>
         </tr>
         <?php } ?>
         </table>

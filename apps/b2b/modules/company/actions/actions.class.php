@@ -244,7 +244,7 @@ class companyActions extends sfActions {
     
     public function executeChangePackage(sfWebRequest $request) {
         $employee_id = $request->getParameter("lineid");
-        
+        $this->targetURL = $this->getTragetUrl();
         $ce = new Criteria();
         $ce->add(EmployeePeer::ID,$employee_id);
         $employee = EmployeePeer::doSelectOne($ce);        
@@ -297,5 +297,8 @@ class companyActions extends sfActions {
             }
             $this->redirect('company/dashboard');
         }
+    }
+    public function getTragetUrl(){
+        return sfConfig::get('app_main_url');
     }
 }
