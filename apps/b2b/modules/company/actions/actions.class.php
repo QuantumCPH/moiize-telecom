@@ -244,7 +244,7 @@ class companyActions extends sfActions {
     
     public function executeChangePackage(sfWebRequest $request) {
         $employee_id = $request->getParameter("lineid");
-        $this->targetURL = $this->getTragetUrl();
+       echo $this->targetURL = $this->getTragetUrl();
         $ce = new Criteria();
         $ce->add(EmployeePeer::ID,$employee_id);
         $employee = EmployeePeer::doSelectOne($ce);        
