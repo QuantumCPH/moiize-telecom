@@ -20,7 +20,7 @@ class companyActions extends sfActions {
         $this->company = CompanyPeer::retrieveByPK($this->getUser()->getAttribute('company_id', '', 'companysession'));
         $ComtelintaObj = new CompanyEmployeActivation();
         $this->balance = $ComtelintaObj->getBalance($this->company);
-         echo $this->targetURL = $this->getTragetUrl();
+        $this->targetURL = $this->getTragetUrl();
         $c = new Criteria();
         $c->add(EmployeePeer::COMPANY_ID, $this->company->getId());
         $this->employees = EmployeePeer::doSelect($c);
