@@ -297,6 +297,7 @@ class employeeActions extends sfActions {
                 $pph->setTelintaRoutingplanTitle($new_routingplan_title);
                 $pph->setTelintaRoutingplanId($employee->getTelintaRoutingplanId());
                 $pph->setIaccount($acc_title);
+                $pph->setChangedBy("Admin");
                 $pph->setAccountTitle(sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId());
                 $pph->save();
                 
@@ -529,6 +530,7 @@ class employeeActions extends sfActions {
                 $pph->setTelintaRoutingplanTitle($new_routingplan_title);
                 $pph->setTelintaRoutingplanId($employee->getTelintaRoutingplanId());
                 $pph->setIaccount($acc_title);
+                $pph->setChangedBy("Admin");
                 $pph->setAccountTitle(sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId());
                 $pph->save();
             }else{

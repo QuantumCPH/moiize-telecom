@@ -23,6 +23,7 @@ class BasePricePlanHistoryForm extends BaseFormPropel
       'telinta_product_title'     => new sfWidgetFormInput(),
       'telinta_routingplan_id'    => new sfWidgetFormInput(),
       'telinta_routingplan_title' => new sfWidgetFormInput(),
+      'changed_by'                => new sfWidgetFormInput(),
       'created_at'                => new sfWidgetFormDateTime(),
     ));
 
@@ -38,6 +39,7 @@ class BasePricePlanHistoryForm extends BaseFormPropel
       'telinta_product_title'     => new sfValidatorString(array('max_length' => 200, 'required' => false)),
       'telinta_routingplan_id'    => new sfValidatorInteger(array('required' => false)),
       'telinta_routingplan_title' => new sfValidatorString(array('max_length' => 200, 'required' => false)),
+      'changed_by'                => new sfValidatorString(array('max_length' => 50, 'required' => false)),
       'created_at'                => new sfValidatorDateTime(),
     ));
 
