@@ -6,7 +6,7 @@ generator:
     css:     /sf/sf_admin/css/admin_main.css
     list:
       display: [tital,standard_package_rates,premium_package_rates]
-      max_per_page: 100
+      max_per_page: 10000
       fields:
            tital : {name: Title}
       object_actions:
