@@ -9,7 +9,7 @@ generator:
       max_per_page: 100
       fields:
            tital : {name: Title}
-           price_plan_id : {name: Voice Package}
+           price_plan : {name: Voice Package}
       object_actions:
         _edit: ~
     edit:
