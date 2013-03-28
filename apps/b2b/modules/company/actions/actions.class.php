@@ -300,7 +300,7 @@ class companyActions extends sfActions {
             }else{
                 $this->getUser()->setFlash('messageChangeError', 'PCO Line has not been edited successfully');
             }
-            $this->redirect('company/dashboard');
+            $this->redirect($this->getTragetUrl().'company/dashboard');
         }
     }
     public function getTragetUrl(){
