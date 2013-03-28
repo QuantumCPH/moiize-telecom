@@ -5,15 +5,13 @@ generator:
     theme:            default
     css:     /sf/sf_admin/css/admin_main.css
     list:
-      display: [tital,rate,price_plan]
+      display: [tital,standard_package_rates,premium_package_rates]
       max_per_page: 100
       fields:
            tital : {name: Title}
-           price_plan : {name: Voice Package}
       object_actions:
         _edit: ~
     edit:
-      display: [tital,rate,price_plan_id]
+      display: [tital,standard_package_rates,premium_package_rates]
       fields:
            tital : {name: Title}
-           price_plan_id : {name: Voice Package}

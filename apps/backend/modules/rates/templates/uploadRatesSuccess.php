@@ -28,15 +28,6 @@
        <table width="44%" cellspacing="0" cellpadding="5" class="tblRates">
           <tr><th width="41%" align="left">Upload CSV File</th>
           <td width="59%"><input type="file" name="csv_upload" /></td></tr>
-          <tr>
-              <th width="41%" align="left">Voice package</th><td>
-                  <select name="pricePlanId" id="pricePlanId" class="required">
-                  <?php foreach($pricePlans as $pricePlan){  ?>
-                        <option value="<?php echo $pricePlan->getId();  ?>"><?php echo $pricePlan->getTitle()   ?></option>
-                  <?php }  ?>
-                  </select>
-              </td>
-          </tr>
           <tr><td></td><td><input type="submit" name="btnSubmit" value="Upload File" /></td></tr>
         </table>
     </form>

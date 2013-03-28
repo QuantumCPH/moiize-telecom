@@ -22,7 +22,6 @@ class ratesActions extends autoratesActions
           $path_info = pathinfo($fileName);
           $extension = $path_info['extension'];  
           $fileSize = $_FILES['csv_upload']['size'];
-          $price_plan_id = $request->getParameter('pricePlanId');
           if(!$fileSize)
           {
               $this->getUser()->setFlash('file_error', $this->getContext()->getI18N()->__('File is Empty.'));
@@ -43,7 +42,7 @@ class ratesActions extends autoratesActions
               $csv = fread($file, $fileSize); 
               $csv = str_replace('"', '', $csv);
               fclose($file);
-              $fieldsArray = array('title','rates');
+              $fieldsArray = array('title','standard_rates','premium_rates');
               $data = explode("\n", $csv);
               $updatedRate = array();
               //print_r($rates);
@@ -58,20 +57,19 @@ class ratesActions extends autoratesActions
                  }
               $cR = new Criteria();
               $cR->add(RatesPeer::TITAL,$combine["title"]);
-              $cR->addAnd(RatesPeer::PRICE_PLAN_ID,$price_plan_id, Criteria::EQUAL);
               $rateCount = RatesPeer::doCount($cR);
               
                   if($rateCount > 0){
                    $rate = RatesPeer::doSelectOne($cR);   
-                   $rate->setRate($combine['rates']);
-                   $rate->setPricePlanId($price_plan_id);
+                   $rate->setStandardPackageRates($combine['standard_rates']);
+                   $rate->setPremiumPackageRates($combine['premium_rates']);
                    $rate->save();
                    $updatedRate[] = $rate->getTital();
                   }else{
                    $new_rates = new Rates();   
                    $new_rates->setTital($combine["title"]);
-                   $new_rates->setRate($combine["rates"]);
-                   $new_rates->setPricePlanId($price_plan_id);
+                   $new_rates->setStandardPackageRates($combine['standard_rates']);
+                   $new_rates->setPremiumPackageRates($combine['premium_rates']);
                    $new_rates->save(); 
                   }   
               }
