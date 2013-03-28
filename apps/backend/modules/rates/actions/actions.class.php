@@ -58,7 +58,7 @@ class ratesActions extends autoratesActions
                  }
               $cR = new Criteria();
               $cR->add(RatesPeer::TITAL,$combine["title"]);
-              $cR->addAnd(RatesPeer::PRICE_PLAN_ID,$price_plan_id, Criterial::EQUAL);
+              $cR->addAnd(RatesPeer::PRICE_PLAN_ID,$price_plan_id, Criteria::EQUAL);
               $rateCount = RatesPeer::doCount($cR);
               
                   if($rateCount > 0){
