@@ -48,7 +48,7 @@ class ratesActions extends autoratesActions
               //print_r($rates);
               $already = 0;
               for($i=1;$i <count($data); $i++){
-                 if($data[$i]!=""){
+                 if(trim($data[$i])!=""){
                   $c = explode (",",$data[$i]);
                   $combine = array_combine($fieldsArray,$c);
                      foreach($combine as $key => $values){ 
