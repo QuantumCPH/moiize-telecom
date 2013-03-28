@@ -4,8 +4,8 @@
 </div>  
 <table width="100%" cellspacing="0" cellpadding="2" class="tblAlign">
 <tr class="headings">
-    <th width="23%"><?php echo __('Title') ?></th>
-    <th width="50%"><?php echo __('Rates') ?></th>
+    <th width="50%"><?php echo __('Title') ?></th>
+    <th width="23%"><?php echo __('Rates') ?></th>
     <th width="27%"><?php echo __('Voice Package') ?></th>
 </tr>
 <?php 
