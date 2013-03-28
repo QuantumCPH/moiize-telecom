@@ -5,7 +5,8 @@
 <table width="100%" cellspacing="0" cellpadding="2" class="tblAlign">
 <tr class="headings">
     <th width="23%"><?php echo __('Title') ?></th>
-    <th width="77%"><?php echo __('Rates') ?></th>
+    <th width="50%"><?php echo __('Rates') ?></th>
+    <th width="27%"><?php echo __('Rates') ?></th>
 </tr>
 <?php 
 
@@ -25,6 +26,7 @@ $incrment++;
 <tr  style="background-color:<?php //echo $colorvalue;?>" <?php echo $class;?>>
     <td><?php echo  $rate->getTital() ?></td>
     <td><?php echo ($rate->getRate())?></td>
+    <td><?php echo $rate->getPricePlan()->getTitle();?></td>
 </tr>
 <?php endforeach; ?>
 <?php if(count($rates)==0): ?>
