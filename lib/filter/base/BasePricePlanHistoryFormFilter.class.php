@@ -24,6 +24,7 @@ class BasePricePlanHistoryFormFilter extends BaseFormFilterPropel
       'telinta_product_title'     => new sfWidgetFormFilterInput(),
       'telinta_routingplan_id'    => new sfWidgetFormFilterInput(),
       'telinta_routingplan_title' => new sfWidgetFormFilterInput(),
+      'changed_by'                => new sfWidgetFormFilterInput(),
       'created_at'                => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));
 
@@ -38,6 +39,7 @@ class BasePricePlanHistoryFormFilter extends BaseFormFilterPropel
       'telinta_product_title'     => new sfValidatorPass(array('required' => false)),
       'telinta_routingplan_id'    => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'telinta_routingplan_title' => new sfValidatorPass(array('required' => false)),
+      'changed_by'                => new sfValidatorPass(array('required' => false)),
       'created_at'                => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDate(array('required' => false)))),
     ));
 
@@ -67,6 +69,7 @@ class BasePricePlanHistoryFormFilter extends BaseFormFilterPropel
       'telinta_product_title'     => 'Text',
       'telinta_routingplan_id'    => 'Number',
       'telinta_routingplan_title' => 'Text',
+      'changed_by'                => 'Text',
       'created_at'                => 'Date',
     );
   }

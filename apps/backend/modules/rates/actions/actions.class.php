@@ -12,6 +12,9 @@ class ratesActions extends autoratesActions
    public function executeUploadRates(sfWebRequest $request)
    {
       //echo "here"; 
+       $pp = new Criteria();
+       $this->pricePlans = PricePlanPeer::doSelect($pp);
+        
        if($request->isMethod('post'))
        {
           $fileTmpName = $_FILES['csv_upload']['tmp_name'];
@@ -19,6 +22,7 @@ class ratesActions extends autoratesActions
           $path_info = pathinfo($fileName);
           $extension = $path_info['extension'];  
           $fileSize = $_FILES['csv_upload']['size'];
+          $price_plan_id = $request->getParameter('pricePlanId');
           if(!$fileSize)
           {
               $this->getUser()->setFlash('file_error', $this->getContext()->getI18N()->__('File is Empty.'));
@@ -59,12 +63,14 @@ class ratesActions extends autoratesActions
                   if($rateCount > 0){
                    $rate = RatesPeer::doSelectOne($cR);   
                    $rate->setRate($combine['rates']);
+                   $rate->setPricePlanId($price_plan_id);
                    $rate->save();
                    $updatedRate[] = $rate->getTital();
                   }else{
                    $new_rates = new Rates();   
                    $new_rates->setTital($combine["title"]);
                    $new_rates->setRate($combine["rates"]);
+                   $new_rates->setPricePlanId($price_plan_id);
                    $new_rates->save(); 
                   }   
               }
