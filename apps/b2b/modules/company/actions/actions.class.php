@@ -261,8 +261,10 @@ class companyActions extends sfActions {
             $cnp->addAnd(PricePlanPeer::ID,$newpackageid);
             $price_plan = PricePlanPeer::doSelectOne($cnp);
             
-            $new_iproduct    = $price_plan->getTelintaProduct()->getIProduct();
-            $new_routingplan = $price_plan->getTelintaRoutingplan()->getIRoutingPlan();
+            $new_iproduct          = $price_plan->getTelintaProduct()->getIProduct();
+            $new_iproduct_title    = $price_plan->getTelintaProduct()->getTitle();
+            $new_routingplan       = $price_plan->getTelintaRoutingplan()->getIRoutingPlan();
+            $new_routingplan_title = $price_plan->getTelintaRoutingplan()->getTitle();
             
             $ct = new Criteria();
             $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId());
@@ -274,23 +276,26 @@ class companyActions extends sfActions {
                 $acc_title = "";
             }
             $ComtelintaObj = new CompanyEmployeActivation();
-            if($ComtelintaObj->updateAccount($employee, $new_iproduct, $new_routingplan)){
+            if($ComtelintaObj->updateAccount($employee, $new_iproduct, $new_routingplan)){                
+
+                $employee->setTelintaProductId($new_iproduct);
+                $employee->setTelintaRoutingplanId($new_routingplan);
+                $employee->setPricePlanId($price_plan->getId());
+                $employee->save();
+                
                 $pph = new PricePlanHistory();
                 $pph->setCompanyId($employee->getCompanyId());
                 $pph->setEmployeeId($employee->getId());
                 $pph->setPricePlanId($employee->getPricePlanId());
                 $pph->setPricePlanTitle($employee->getPricePlan()->getTitle());
                 $pph->setTelintaProductId($employee->getTelintaProductId());
+                $pph->setTelintaProductTitle($new_iproduct_title);
+                $pph->setTelintaRoutingplanTitle($new_routingplan_title);
                 $pph->setTelintaRoutingplanId($employee->getTelintaRoutingplanId());
                 $pph->setIaccount($acc_title);
                 $pph->setAccountTitle(sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId());
                 $pph->save();
-
-                $employee->setTelintaProductId($new_iproduct);
-                $employee->setTelintaRoutingplanId($new_routingplan);
-                $employee->setPricePlanId($price_plan->getId());
-                $employee->save();
-
+                
                 $this->getUser()->setFlash('messageChange', 'PCO Line has been edited successfully');
             }else{
                 $this->getUser()->setFlash('messageChangeError', 'PCO Line has not been edited successfully');

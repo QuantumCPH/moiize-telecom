@@ -256,8 +256,10 @@ class employeeActions extends sfActions {
         $priceplan = PricePlanPeer::doSelectOne($pp);
         //echo $priceplan->getTelintaRoutingplan();
         /************ End ***********/
-        $new_iproduct    = $priceplan->getTelintaProduct()->getIProduct();
-        $new_routingplan = $priceplan->getTelintaRoutingplan()->getIRoutingPlan();
+        $new_iproduct          = $priceplan->getTelintaProduct()->getIProduct();
+        $new_iproduct_title    = $priceplan->getTelintaProduct()->getTitle();
+        $new_routingplan       = $priceplan->getTelintaRoutingplan()->getIRoutingPlan();
+        $new_routingplan_title = $priceplan->getTelintaRoutingplan()->getTitle();
         
         $ct = new Criteria();
         $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId());
@@ -271,17 +273,7 @@ class employeeActions extends sfActions {
             
         if ($employee->getTelintaProductId()!=$new_iproduct || $employee->getTelintaRoutingplanId()!=$new_routingplan) {
             $ComtelintaObj = new CompanyEmployeActivation();
-            if($ComtelintaObj->updateAccount($employee, $new_iproduct, $new_routingplan)){
-                $pph = new PricePlanHistory();
-                $pph->setCompanyId($employee->getCompanyId());
-                $pph->setEmployeeId($employee->getId());
-                $pph->setPricePlanId($employee->getPricePlanId());
-                $pph->setPricePlanTitle($employee->getPricePlan()->getTitle());
-                $pph->setTelintaProductId($employee->getTelintaProductId());
-                $pph->setTelintaRoutingplanId($employee->getTelintaRoutingplanId());
-                $pph->setIaccount($acc_title);
-                $pph->setAccountTitle(sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId());
-                $pph->save();
+            if($ComtelintaObj->updateAccount($employee, $new_iproduct, $new_routingplan)){                
                 
                 $employee->setFirstName($request->getParameter('first_name'));
                 $employee->setLastName($request->getParameter('last_name'));
@@ -294,6 +286,19 @@ class employeeActions extends sfActions {
                 $employee->setPricePlanId($priceplanid);
                 $employee->setDeleted($request->getParameter('deleted'));
                 $employee->save();
+                
+                $pph = new PricePlanHistory();
+                $pph->setCompanyId($employee->getCompanyId());
+                $pph->setEmployeeId($employee->getId());
+                $pph->setPricePlanId($employee->getPricePlanId());
+                $pph->setPricePlanTitle($employee->getPricePlan()->getTitle());
+                $pph->setTelintaProductId($employee->getTelintaProductId());
+                $pph->setTelintaProductTitle($new_iproduct_title);
+                $pph->setTelintaRoutingplanTitle($new_routingplan_title);
+                $pph->setTelintaRoutingplanId($employee->getTelintaRoutingplanId());
+                $pph->setIaccount($acc_title);
+                $pph->setAccountTitle(sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId());
+                $pph->save();
                 
                 $this->getUser()->setFlash('messageEdit', 'PCO Line has been edited successfully' . (isset($msg) ? "and " . $msg : ''));
             }else{
@@ -477,8 +482,10 @@ class employeeActions extends sfActions {
         $pp = new Criteria();
         $pp->addAnd(PricePlanPeer::ID, $priceplanid);
         $priceplan = PricePlanPeer::doSelectOne($pp);
-        $new_iproduct = $priceplan->getTelintaProduct()->getIProduct();
+        $new_iproduct        = $priceplan->getTelintaProduct()->getIProduct();
+        $new_iproduct_title  = $priceplan->getTelintaProduct()->getTitle();
         $new_routingplan = $priceplan->getTelintaRoutingplan()->getIRoutingPlan();
+        $new_routingplan_title = $priceplan->getTelintaRoutingplan()->getTitle();
         
         /************ End ***********/
         for($i=0; $i<$count; $i++){
@@ -505,23 +512,25 @@ class employeeActions extends sfActions {
                     $iaccount = "";
                 }
         
-                $pph = new PricePlanHistory();
-                $pph->setCompanyId($employee->getCompanyId());
-                $pph->setEmployeeId($employee->getId());
-                $pph->setPricePlanId($employee->getPricePlanId());
-                $pph->setPricePlanTitle($employee->getPricePlan()->getTitle());
-                $pph->setTelintaProductId($employee->getTelintaProductId());
-                $pph->setTelintaRoutingplanId($employee->getTelintaRoutingplanId());
-                $pph->setIaccount($iaccount);
-                $pph->setAccountTitle(sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId());
-                $pph->save();
-                
                 $employee->setProductId($request->getParameter('productid'));
                 $employee->setTelintaProductId($new_iproduct);
                 $employee->setTelintaRoutingplanId($new_routingplan);
                 $employee->setPricePlanId($priceplanid);
                 $employee->setBlock($block);
                 $employee->save();
+                
+                $pph = new PricePlanHistory();
+                $pph->setCompanyId($employee->getCompanyId());
+                $pph->setEmployeeId($employee->getId());
+                $pph->setPricePlanId($employee->getPricePlanId());
+                $pph->setPricePlanTitle($employee->getPricePlan()->getTitle());
+                $pph->setTelintaProductId($employee->getTelintaProductId());
+                $pph->setTelintaProductTitle($new_iproduct_title);
+                $pph->setTelintaRoutingplanTitle($new_routingplan_title);
+                $pph->setTelintaRoutingplanId($employee->getTelintaRoutingplanId());
+                $pph->setIaccount($acc_title);
+                $pph->setAccountTitle(sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId());
+                $pph->save();
             }else{
                 continue;
             }
