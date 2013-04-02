@@ -90,7 +90,7 @@
                 </select></td>
         </tr>
      <tr>
-        <td style="padding: 5px;"><?php echo __('Voice Package:') ?></td>
+        <td style="padding: 5px;"><?php echo __('Line Quality:') ?></td>
         <td style="padding: 5px;"> <select name="pricePlanId" id="pricePlanId"    class="required"  >
 
       <?php foreach($pricePlans as $pricePlan){  ?>

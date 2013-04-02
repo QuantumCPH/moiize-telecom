@@ -1,4 +1,4 @@
-<div id="sf_admin_container"><h1><?php echo __('Change Voice Package') ?></h1></div>
+<div id="sf_admin_container"><h1><?php echo __('Change Line Quality') ?></h1></div>
 
 <div class="borderDiv">
     <br/>
@@ -6,9 +6,9 @@
         <input type="hidden" name="lineid" value="<?php echo $employee->getId();?>" />
     <table cellpadding="8" cellspacing="0">
         <tr><th>Name:</th><td><?php echo $employee->getFirstName();?></td></tr>
-        <tr><th>Current Package:</th><td><?php echo $employee->getPricePlan()->getTitle();?></td></tr>
+        <tr><th>Current Line Quality:</th><td><?php echo $employee->getPricePlan()->getTitle();?></td></tr>
         <tr> 
-            <th>Select Package:</th>
+            <th>Select Line Quality:</th>
             <td><select name="priceplan_id" class="floatnone required">
                <?php foreach($priceplans as $priceplan){ ?>
                     <option value="<?php echo $priceplan->getId();?>"><?php echo $priceplan->getTitle();?></option>
@@ -16,7 +16,7 @@
                }?></select>
             </td>
         </tr>
-        <tr><th></th><td><input type="submit" name="submit" value="Change" /></td></tr>
+        <tr><th></th><td><input type="submit" name="submit" value="Update" /></td></tr>
     </table>
     </form>
     <div class="clr"></div>

@@ -366,9 +366,9 @@
                         ?> 
                         <?php
                         if($actionName=='list' && $modulName=="price_plan"){
-                          echo link_to(__('Voice Packages'), 'price_plan/index',array('class'=>'subSelect'));
+                          echo link_to(__('Line Quality'), 'price_plan/index',array('class'=>'subSelect'));
                         }else{
-                          echo link_to(__('Voice Packages'), 'price_plan/index');
+                          echo link_to(__('Line Quality'), 'price_plan/index');
                         }
                         ?>
                         <?php

@@ -5,12 +5,12 @@ generator:
     theme:            default
     css:             /sf/sf_admin/css/admin_main.css
     edit:
-      title: Create/Edit Voice Package
+      title: Create/Edit Line Quality
       display: [title,telinta_product_id,telinta_routingplan_id]
       fields:
               telinta_routingplan: {name: Telinta Rounting Plan}
     list:
-      title:    Voice Packages
+      title:    Line Quality
       display: [title,telinta_product,telinta_routingplan]  
       fields:
               telinta_routingplan: {name: Telinta Rounting Plan}

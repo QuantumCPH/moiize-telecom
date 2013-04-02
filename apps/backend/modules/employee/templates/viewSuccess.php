@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <label class="required"><?php echo __('Price Plan:') ?></label>
+                    <label class="required"><?php echo __('Line Quality:') ?></label>
                     <div class="content">
                         <?php
                         $ppid = $employee->getPricePlanId();
