@@ -22,8 +22,6 @@
                 <th align="left"  id="sf_admin_list_th_name"><?php echo __('Balance Consumed') ?></th>
                 <th align="left"  id="sf_admin_list_th_name"><?php echo __('Created at') ?></th>
                 <th align="left"  id="sf_admin_list_th_name"><?php echo __('Line Quality') ?></th>
-                <th align="left"  id="sf_admin_list_th_name"><?php echo __('Change Line Quality') ?></th>
-                <th align="left"  id="sf_admin_list_th_name"><?php echo __('Line Quality') ?></th>
             </tr>
         </thead>
         <?php
@@ -58,8 +56,6 @@
         ?> &euro;
             </td>
             <td><?php echo  date("Y-m-d H:i:s",strtotime($employee->getCreatedAt())+25200); ?></td>
-            <td><?php echo $employee->getPricePlan()->getTitle(); ?></td>
-            <td><a href="<?php echo url_for($targetURL."company/changePackage?lineid=".$employee->getId(),true)?>">Click Here</a></td>
             <td class="tdpricelist">
                 <form action="<?php echo url_for(sfConfig::get('app_main_url').'company/changePackage')?>" name="frmChangePackage" method="post">
                     <input type="hidden" value="<?php echo $employee->getId();?>" name="lineid" />
