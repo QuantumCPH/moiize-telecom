@@ -28,6 +28,10 @@ class companyActions extends sfActions {
         $nc = new Criteria();
         $nc->addDescendingOrderByColumn(NewupdatePeer::STARTING_DATE);
         $this->updateNews = NewupdatePeer::doSelect($nc);
+        
+        $clq = new Criteria();
+        $priceplans = PricePlanPeer::doSelect($clq);
+        $this->priceplans = $priceplans;
     }
 
     public function executeLogin($request) {

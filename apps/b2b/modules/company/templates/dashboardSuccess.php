@@ -23,6 +23,7 @@
                 <th align="left"  id="sf_admin_list_th_name"><?php echo __('Created at') ?></th>
                 <th align="left"  id="sf_admin_list_th_name"><?php echo __('Line Quality') ?></th>
                 <th align="left"  id="sf_admin_list_th_name"><?php echo __('Change Line Quality') ?></th>
+                <th align="left"  id="sf_admin_list_th_name"><?php echo __('Line Quality') ?></th>
             </tr>
         </thead>
         <?php
@@ -59,6 +60,18 @@
             <td><?php echo  date("Y-m-d H:i:s",strtotime($employee->getCreatedAt())+25200); ?></td>
             <td><?php echo $employee->getPricePlan()->getTitle(); ?></td>
             <td><a href="<?php echo url_for($targetURL."company/changePackage?lineid=".$employee->getId(),true)?>">Click Here</a></td>
+            <td class="tdpricelist">
+                <form action="<?php echo url_for(sfConfig::get('app_main_url').'company/changePackage')?>" name="frmChangePackage" method="post">
+                    <input type="hidden" value="<?php echo $employee->getId();?>" name="lineid" />
+                    <select name="priceplan_id" class="priceplanlist">
+                    <?php 
+                         foreach($priceplans as $priceplan){ ?>
+                           <option value="<?php echo $priceplan->getId();?>" <?php echo ($priceplan->getId()==$employee->getPricePlanId())?"selected='selected'":""; ?>><?php echo $priceplan->getTitle();?></option>   
+                    <?php
+                         } 
+                    ?></select>&nbsp;<input type="submit" name="submit" value="Update" class="planupdate" />
+                </form>
+            </td>
         </tr>
         <?php } ?>
         </table>

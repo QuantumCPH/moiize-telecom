@@ -750,3 +750,9 @@ input#searchNew{margin:0px}
   font-size: 11px;
   color: #fff;
 }
+.tdpricelist input.planupdate{
+    margin:0 0 0 10px !important;
+}
+select.priceplanlist{
+    margin:0 !important;
+}
