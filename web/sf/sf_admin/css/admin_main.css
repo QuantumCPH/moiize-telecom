@@ -453,4 +453,11 @@ a.refill_button{
     border: 1px solid #2C7E21 !important;
     padding:5px;
     color:#fff !important;
-}    
+}  
+span.countrycode{
+    font-size: 12px;
+    font-weight: bold;
+}
+input.mobile_number{
+    width:219px!important;
+}
