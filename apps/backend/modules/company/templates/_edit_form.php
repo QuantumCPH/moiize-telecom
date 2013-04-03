@@ -161,6 +161,7 @@ echo $value ? $value : '&nbsp;' ;
 <div class="form-row">
   <?php echo label_for('company[head_phone_number]', __($labels['company{head_phone_number}']), 'class="required" ') ?>
   <div class="content<?php if ($sf_request->hasError('company{head_phone_number}')): ?> form-error<?php endif; ?>">
+      <span class="countrycode">+34</span>
   <?php if ($sf_request->hasError('company{head_phone_number}')): ?>
     <?php echo form_error('company{head_phone_number}', array('class' => 'form-error-msg')) ?>
   <?php endif; ?>
@@ -168,8 +169,9 @@ echo $value ? $value : '&nbsp;' ;
   <?php $value = object_input_tag($company, 'getHeadPhoneNumber', array (
   'size' => 7,
   'minlength'=>8,
+  'class'=>'mobile_number',
   'control_name' => 'company[head_phone_number]',
-)); echo $value ? $value : '&nbsp;' ?><span id="msgbox1"></span><br>Please enter a valid mobile number not starting with 0 and Country Code
+)); echo $value ? $value : '&nbsp;' ?><span id="msgbox1"></span><br />Don't enter country code or 0 in start of mobile number
     </div>
 </div>
 
