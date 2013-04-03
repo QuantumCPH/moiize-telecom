@@ -17,6 +17,7 @@ class BasePricePlanFormFilter extends BaseFormFilterPropel
       'title'                  => new sfWidgetFormFilterInput(),
       'telinta_product_id'     => new sfWidgetFormPropelChoice(array('model' => 'TelintaProduct', 'add_empty' => true)),
       'telinta_routingplan_id' => new sfWidgetFormPropelChoice(array('model' => 'TelintaRoutingplan', 'add_empty' => true)),
+      'status_id'              => new sfWidgetFormPropelChoice(array('model' => 'Status', 'add_empty' => true)),
       'created_at'             => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));
 
@@ -24,6 +25,7 @@ class BasePricePlanFormFilter extends BaseFormFilterPropel
       'title'                  => new sfValidatorPass(array('required' => false)),
       'telinta_product_id'     => new sfValidatorPropelChoice(array('required' => false, 'model' => 'TelintaProduct', 'column' => 'id')),
       'telinta_routingplan_id' => new sfValidatorPropelChoice(array('required' => false, 'model' => 'TelintaRoutingplan', 'column' => 'id')),
+      'status_id'              => new sfValidatorPropelChoice(array('required' => false, 'model' => 'Status', 'column' => 'id')),
       'created_at'             => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDate(array('required' => false)))),
     ));
 
@@ -46,6 +48,7 @@ class BasePricePlanFormFilter extends BaseFormFilterPropel
       'title'                  => 'Text',
       'telinta_product_id'     => 'ForeignKey',
       'telinta_routingplan_id' => 'ForeignKey',
+      'status_id'              => 'ForeignKey',
       'created_at'             => 'Date',
     );
   }

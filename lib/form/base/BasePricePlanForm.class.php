@@ -16,6 +16,7 @@ class BasePricePlanForm extends BaseFormPropel
       'title'                  => new sfWidgetFormInput(),
       'telinta_product_id'     => new sfWidgetFormPropelChoice(array('model' => 'TelintaProduct', 'add_empty' => false)),
       'telinta_routingplan_id' => new sfWidgetFormPropelChoice(array('model' => 'TelintaRoutingplan', 'add_empty' => false)),
+      'status_id'              => new sfWidgetFormPropelChoice(array('model' => 'Status', 'add_empty' => false)),
       'created_at'             => new sfWidgetFormDateTime(),
     ));
 
@@ -24,6 +25,7 @@ class BasePricePlanForm extends BaseFormPropel
       'title'                  => new sfValidatorString(array('max_length' => 220)),
       'telinta_product_id'     => new sfValidatorPropelChoice(array('model' => 'TelintaProduct', 'column' => 'id')),
       'telinta_routingplan_id' => new sfValidatorPropelChoice(array('model' => 'TelintaRoutingplan', 'column' => 'id')),
+      'status_id'              => new sfValidatorPropelChoice(array('model' => 'Status', 'column' => 'id')),
       'created_at'             => new sfValidatorDateTime(),
     ));
 

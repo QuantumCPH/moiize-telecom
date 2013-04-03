@@ -6,7 +6,7 @@ generator:
     css:             /sf/sf_admin/css/admin_main.css
     edit:
       title: Create/Edit Line Quality
-      display: [title,telinta_product_id,telinta_routingplan_id]
+      display: [title,telinta_product_id,telinta_routingplan_id,status_id]
       fields:
               telinta_routingplan: {name: Telinta Rounting Plan}
     list:

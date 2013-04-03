@@ -39,6 +39,7 @@ class employeeActions extends sfActions {
         $this->products = ProductPeer::doSelect($pr);
         
         $pp = new Criteria();
+        $pp->add(PricePlanPeer::STATUS_ID,1, Criteria::EQUAL);
         $this->pricePlans = PricePlanPeer::doSelect($pp);
         
         // created by kmmalik.com for new module of telinta product
@@ -450,6 +451,7 @@ class employeeActions extends sfActions {
         
         /************ Select telinta product and routing plan from Price plan ***********/
         $ppc = new Criteria();
+        $ppc->add(PricePlanPeer::STATUS_ID,1 , Criteria::EQUAL);
         $priceplans = PricePlanPeer::doSelect($ppc);
         $this->priceplans = $priceplans;
         

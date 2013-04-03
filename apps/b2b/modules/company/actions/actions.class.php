@@ -30,6 +30,7 @@ class companyActions extends sfActions {
         $this->updateNews = NewupdatePeer::doSelect($nc);
         
         $clq = new Criteria();
+        $clq->add(PricePlanPeer::STATUS_ID,1 , Criteria::EQUAL);
         $priceplans = PricePlanPeer::doSelect($clq);
         $this->priceplans = $priceplans;
     }
@@ -279,32 +280,33 @@ class companyActions extends sfActions {
             }  else {
                 $acc_title = "";
             }
-            $ComtelintaObj = new CompanyEmployeActivation();
-            if($ComtelintaObj->updateAccount($employee, $new_iproduct, $new_routingplan)){                
+            if ($employee->getTelintaProductId()!= $new_iproduct || $employee->getTelintaRoutingplanId()!= $new_routingplan) {
+               $ComtelintaObj = new CompanyEmployeActivation();
+               if($ComtelintaObj->updateAccount($employee, $new_iproduct, $new_routingplan)){  
+                    $employee->setTelintaProductId($new_iproduct);
+                    $employee->setTelintaRoutingplanId($new_routingplan);
+                    $employee->setPricePlanId($price_plan->getId());
+                    $employee->save();
 
-                $employee->setTelintaProductId($new_iproduct);
-                $employee->setTelintaRoutingplanId($new_routingplan);
-                $employee->setPricePlanId($price_plan->getId());
-                $employee->save();
+                    $pph = new PricePlanHistory();
+                    $pph->setCompanyId($employee->getCompanyId());
+                    $pph->setEmployeeId($employee->getId());
+                    $pph->setPricePlanId($employee->getPricePlanId());
+                    $pph->setPricePlanTitle($employee->getPricePlan()->getTitle());
+                    $pph->setTelintaProductId($employee->getTelintaProductId());
+                    $pph->setTelintaProductTitle($new_iproduct_title);
+                    $pph->setTelintaRoutingplanTitle($new_routingplan_title);
+                    $pph->setTelintaRoutingplanId($employee->getTelintaRoutingplanId());
+                    $pph->setIaccount($acc_title);
+                    $pph->setChangedBy("Agent");
+                    $pph->setAccountTitle(sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId());
+                    $pph->save();
                 
-                $pph = new PricePlanHistory();
-                $pph->setCompanyId($employee->getCompanyId());
-                $pph->setEmployeeId($employee->getId());
-                $pph->setPricePlanId($employee->getPricePlanId());
-                $pph->setPricePlanTitle($employee->getPricePlan()->getTitle());
-                $pph->setTelintaProductId($employee->getTelintaProductId());
-                $pph->setTelintaProductTitle($new_iproduct_title);
-                $pph->setTelintaRoutingplanTitle($new_routingplan_title);
-                $pph->setTelintaRoutingplanId($employee->getTelintaRoutingplanId());
-                $pph->setIaccount($acc_title);
-                $pph->setChangedBy("Agent");
-                $pph->setAccountTitle(sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId());
-                $pph->save();
-                
-                $this->getUser()->setFlash('messageChange', 'PCO Line has been edited successfully');
-            }else{
-                $this->getUser()->setFlash('messageChangeError', 'PCO Line has not been edited successfully');
-            }
+                   $this->getUser()->setFlash('messageChange', 'PCO Line has been edited successfully');
+                }else{
+                   $this->getUser()->setFlash('messageChangeError', 'PCO Line has not been edited successfully');
+                }
+            }    
             $this->redirect($this->getTragetUrl().'company/dashboard');
         }
     }
