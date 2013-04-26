@@ -508,6 +508,7 @@ class companyActions extends sfActions {
         $cTD = new Criteria();
         $cTD->addAnd(TransactionDescriptionPeer::TRANSACTION_TYPE_ID, 2);
         $this->transactionDesc = TransactionDescriptionPeer::doSelect($cTD);
+        $ComtelintaObj = new CompanyEmployeActivation();
         if ($request->isMethod('post')) {
             $company_id = $request->getParameter('company_id');
             $charge_amount = $request->getParameter('refill');
