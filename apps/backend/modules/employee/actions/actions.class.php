@@ -504,9 +504,7 @@ class employeeActions extends sfActions {
               $result = $ComtelintaObj->updateAccount($employee, $new_iproduct, $new_routingplan, $block);
             }
             if($result){
-<<<<<<< HEAD
 
-=======
                 $ct = new Criteria();
                 $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp").$employee->getCompanyId().$employee->getId());
                 $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
@@ -516,8 +514,7 @@ class employeeActions extends sfActions {
                 }  else {
                     $iaccount = "";
                 }
-        
->>>>>>> 6a53ebf14ca4328b857bb51620323b911fbd9a2e
+ 
                 $employee->setProductId($request->getParameter('productid'));
                 $employee->setTelintaProductId($new_iproduct);
                 $employee->setTelintaRoutingplanId($new_routingplan);
