@@ -482,8 +482,8 @@ class companyActions extends sfActions {
             $transaction->setTransactionDescriptionId($description->getId());
             $transaction->setTransactionType($description->getTransactionTypeId());
             $transaction->save();
-          echo  $refillco = $ComtelintaObj->recharge($this->company, $refill_amount, $transaction);die;
-            if ($refillco) {
+
+            if ($ComtelintaObj->recharge($this->company, $refill_amount, $transaction)) {
                 $newBalance = $ComtelintaObj->getBalance($this->company);
                 $transaction->setNewBalance($newBalance);
                 $transaction->setTransactionStatusId(3);
