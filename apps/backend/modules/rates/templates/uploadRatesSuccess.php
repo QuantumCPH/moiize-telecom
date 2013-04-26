@@ -27,7 +27,8 @@
        <div style="color:red;font-size:11px;">Upload comma separated file.</div> 
        <table width="44%" cellspacing="0" cellpadding="5" class="tblRates">
           <tr><th width="41%" align="left">Upload CSV File</th>
-          <td width="59%"><input type="file" name="csv_upload" /></td><td><input type="submit" name="btnSubmit" value="Upload File" /></td></tr>
+          <td width="59%"><input type="file" name="csv_upload" /></td></tr>
+          <tr><td></td><td><input type="submit" name="btnSubmit" value="Upload File" /></td></tr>
         </table>
     </form>
     

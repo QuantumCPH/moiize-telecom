@@ -15,27 +15,29 @@ class Telienta {
 
     //put your code here
 
-    private static $customerReseller = "R_Partner_WLS2";
-    private static $iParent = 72668;                //Customer Resller ID on Telinta
-    private static $companyReseller = '';
-    private static $currency = 'EUR';
-    private static $AProduct = 'WLS2_CT';
-    private static $a_iProduct = 10727;
-    private static $CBProduct = '';
-    private static $VoipProduct = '';
-    private static $telintaSOAPUrl = "https://mybilling.telinta.com";
-    private static $telintaSOAPUser = 'API_login';
-    private static $telintaSOAPPassword = 'ee4eriny';
+    private $iParent;  //Company Resller ID on Telinta
+    private $currency;    
+    private $telintaSOAPUrl;
+    private $telintaSOAPUser;
+    private $telintaSOAPPassword;
+    
+    public function __construct() {
+        $this->iParent              = sfConfig::get("app_telinta_iparent");
+        $this->currency             = sfConfig::get("app_telinta_currency");
+        $this->telintaSOAPUrl       = sfConfig::get("app_telinta_soap_url");
+        $this->telintaSOAPUser      = sfConfig::get("app_telinta_soap_user");
+        $this->telintaSOAPPassword  = sfConfig::get("app_telinta_soap_password");
+    }
 
-    public static function ResgiterCustomer(Customer $customer, $OpeningBalance) {
-        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
+    public function ResgiterCustomer(Customer $customer, $OpeningBalance) {
+        $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Customer');
         
         $uniqueid="MTB2C".$customer->getUniqueid();
         try {
             $tCustomer = $pb->add_customer(array('customer_info' => array(
                             'name' => $uniqueid, //75583 03344090514
-                            'iso_4217' => self::$currency,
-                            'i_parent' => self::$iParent,
+                            'iso_4217' => $this->currency,
+                            'i_parent' => $this->iParent,
                             'i_customer_type' => 1,
                             'opening_balance' => -($OpeningBalance),
                             'credit_limit' => 0,
@@ -53,17 +55,17 @@ class Telienta {
         return true;
     }
 
-    public static function createAAccount($mobileNumber, Customer $customer) {
-        return self::createAccount($customer, $mobileNumber, 'a', self::$a_iProduct);
+    public function createAAccount($mobileNumber, Customer $customer) {
+        return $this->createAccount($customer, $mobileNumber, 'a', $this->a_iProduct);
     }
 
-    public static function createCBount($mobileNumber, Customer $customer) {
-        return self::createAccount($customer, $mobileNumber, 'cb', self::$b_iProduct);
+    public function createCBount($mobileNumber, Customer $customer) {
+        return $this->createAccount($customer, $mobileNumber, 'cb', $this->b_iProduct);
     }
 
-    public static function terminateAccount(TelintaAccounts $telintaAccount) {
+    public function terminateAccount(TelintaAccounts $telintaAccount) {
         try {
-            $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
+            $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Account');
             
             $account = $pb->terminate_account(array('i_account' => $telintaAccount->getIAccount()));
         } catch (SoapFault $e) {
@@ -77,11 +79,11 @@ class Telienta {
         return true;
     }
 
-    public static function getBalance(Customer $customer) {
+    public function getBalance(Customer $customer) {
 
 
         try {
-            $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
+            $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Customer');
             
 
             $cInfo = $pb->get_customer_info(array(
@@ -101,16 +103,16 @@ class Telienta {
             return -1 * $Balance;
     }
 
-    public static function charge(Customer $customer, $amount) {
-        return self::makeTransaction($customer, "Manual charge", $amount);
+    public function charge(Customer $customer, $amount) {
+        return $this->makeTransaction($customer, "Manual charge", $amount);
     }
 
-    public static function recharge(Customer $customer, $amount) {
-        return self::makeTransaction($customer, "Manual payment", $amount);
+    public function recharge(Customer $customer, $amount) {
+        return $this->makeTransaction($customer, "Manual payment", $amount);
     }
 
-    public static function callHistory(Customer $customer, $fromDate, $toDate) {
-         $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
+    public function callHistory(Customer $customer, $fromDate, $toDate) {
+         $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Customer');
             
         try {
             $xdrList = $pb->get_customer_xdr_list(array('i_customer' => $customer->getICustomer(),'from_date'=>$fromDate,'to_date'=>$toDate));
@@ -122,7 +124,7 @@ class Telienta {
         return $xdrList;
     }
 
-    public static function deactivateFollowMeNumber($VOIPNumber, $CurrentActiveNumber) {
+    public function deactivateFollowMeNumber($VOIPNumber, $CurrentActiveNumber) {
 
         $url = "https://mybilling.telinta.com/htdocs/zapna/zapna.pl?action=update&name=" . $VOIPNumber . "&active=N&follow_me_number=" . $CurrentActiveNumber . "&type=account";
         $deactivate = file_get_contents($url);
@@ -139,9 +141,9 @@ class Telienta {
         return true;
     }
 
-    public static function createReseNumberAccount($VOIPNumber, $uniqueId, $currentActiveNumber) {
+    public function createReseNumberAccount($VOIPNumber, $uniqueId, $currentActiveNumber) {
 
-        $url = "https://mybilling.telinta.com/htdocs/zapna/zapna.pl?type=account&action=activate&name=" . $VOIPNumber . "&customer=" . $uniqueId . "&opening_balance=0&credit_limit=&product=" . self::$VoipProduct . "&outgoing_default_r_r=2034&activate_follow_me=Yes&follow_me_number=" . $currentActiveNumber . "&billing_model=1&password=asdf1asd";
+        $url = "https://mybilling.telinta.com/htdocs/zapna/zapna.pl?type=account&action=activate&name=" . $VOIPNumber . "&customer=" . $uniqueId . "&opening_balance=0&credit_limit=&product=" . $this->VoipProduct . "&outgoing_default_r_r=2034&activate_follow_me=Yes&follow_me_number=" . $currentActiveNumber . "&billing_model=1&password=asdf1asd";
         $reseNumber = file_get_contents($url);
         sleep(0.5);
         if (!$reseNumber) {
@@ -160,9 +162,9 @@ class Telienta {
      * $accountType is for a or cb accounts
      */
 
-    private static function createAccount(Customer $customer, $mobileNumber, $accountType, $iProduct, $followMeEnabled='N') {
+    private function createAccount(Customer $customer, $mobileNumber, $accountType, $iProduct, $followMeEnabled='N') {
 
-        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
+        $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Account');
         
         $batchName="MTB2C".$customer->getUniqueid();
         try {
@@ -171,7 +173,7 @@ class Telienta {
                             'i_customer' => $customer->getICustomer(),
                             'name' => $accountName, //75583 03344090514
                             'id' => $accountName,
-                            'iso_4217' => self::$currency,
+                            'iso_4217' => $this->currency,
                             'opening_balance' => 0,
                             'credit_limit' => null,
                             'i_product' => $iProduct,
@@ -199,8 +201,8 @@ class Telienta {
         return true;
     }
 
-    private static function makeTransaction(Customer $customer, $action, $amount) {
-        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
+    private function makeTransaction(Customer $customer, $action, $amount) {
+        $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Customer');
         
         try {
             $accounts = $pb->make_transaction(array(
@@ -218,8 +220,8 @@ class Telienta {
         return true;
     }
 
-    public static function getCustomerInfo($icustomer){
-        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
+    public function getCustomerInfo($icustomer){
+        $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Customer');
         
         try {
         $customerInfo = $pb->get_customer_info(array('i_customer'=>$icustomer));

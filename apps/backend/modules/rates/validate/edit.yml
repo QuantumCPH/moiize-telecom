@@ -2,7 +2,10 @@ fields:
   rates{tital}:
     required:
       msg:              The Title heading cannot be left blank.
-  rates{rate}:
+  rates{standard_package_rates}:
     required:
-      msg:              The Rate cannot be left blank.
+      msg:              The Standard Package Rates cannot be left blank.
+  rates{premium_package_rates}:
+    required:
+      msg:              The Premium Package Rates cannot be left blank.
   

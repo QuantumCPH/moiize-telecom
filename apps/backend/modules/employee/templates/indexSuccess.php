@@ -7,6 +7,14 @@
  <h2><?php echo __($sf_user->getFlash('messageEdit')) ?></h2>
 </div>
 <?php endif; ?>
+
+<?php if ($sf_user->hasFlash('messageEditError')): ?>
+<div class="form-errors">
+ <h2><?php echo __($sf_user->getFlash('messageEditError')) ?></h2>
+</div>
+<?php endif; ?>
+
+
 <?php  }   ?>
 
 <?php if(isset($_REQUEST['message']) && $_REQUEST['message']=="add"){  ?>
@@ -104,8 +112,9 @@
         $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp").$companyval.$employee->getId());
         $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
-        if($telintaAccount){
-            $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAccount->getIAccount());
+        $ComtelintaObj = new CompanyEmployeActivation();
+        if($telintaAccount){            
+            $accountInfo = $ComtelintaObj->getAccountInfo($telintaAccount->getIAccount());
            // print_r($accountInfo);
             $telintaGetBalance = $accountInfo->account_info->balance;
             $telintaGetBalance1=0;
@@ -139,7 +148,7 @@
 //        $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
 //        $telintaAcc = TelintaAccountsPeer::doSelectOne($ct);
 //        if($telintaAcc){ //echo $telintaAcc->getIAccount();
-//        $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAcc->getIAccount());
+//        $accountInfo = $ComtelintaObj->getAccountInfo($telintaAcc->getIAccount());
         echo  $employee->getPassword();
 //        }  
 

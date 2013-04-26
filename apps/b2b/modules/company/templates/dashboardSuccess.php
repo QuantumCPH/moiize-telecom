@@ -1,15 +1,27 @@
 <h1>Available Balance: <?php echo $balance ?> &euro;  </h1><br/><h1 >    Credit Limit:  <?php echo  $company->getCreditLimit();  ?> &euro;   </h1><br/>
-
+<div id="sf_admin_container" style="clear: both;float: left;">
+    <?php if ($sf_user->hasFlash('messageChangeError')): ?>
+    <div class="form-errors">
+     <h2><?php echo __($sf_user->getFlash('messageChangeError')) ?></h2>
+    </div>
+    <?php endif; ?>    
+</div>
+<div id="sf_admin_container" style="clear: both;float: left;">    
+    <?php if ($sf_user->hasFlash('messageChange')): ?>
+    <div class="save-ok">
+     <h2><?php echo __($sf_user->getFlash('messageChange')) ?></h2>
+    </div>
+    <?php endif; ?>
+</div>
+<br clear="all" />
 <div id="sf_admin_container" style="clear: both;float: left;"><h1><?php echo __('PCO Lines') ?></h1></div>
-
-
 <table class="tblAlign" width="100%" cellspacing="0" cellpadding="3">
         <thead>
             <tr class="headings">
-
                 <th align="left"  id="sf_admin_list_th_name"><?php echo __('Name') ?></th>
                 <th align="left"  id="sf_admin_list_th_name"><?php echo __('Balance Consumed') ?></th>
                 <th align="left"  id="sf_admin_list_th_name"><?php echo __('Created at') ?></th>
+                <th align="left"  id="sf_admin_list_th_name"><?php echo __('Line Quality') ?></th>
             </tr>
         </thead>
         <?php
@@ -33,13 +45,29 @@
             $ct->add(TelintaAccountsPeer::ACCOUNT_TITLE, sfConfig::get("app_telinta_emp") . $company->getId() . $employee->getId());
             $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
             $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
-
-           $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAccount->getIAccount());
-            // print_r($accountInfo);
-           echo $accountInfo->account_info->balance;
+            if($telintaAccount){
+                $ComtelintaObj = new CompanyEmployeActivation();
+                $accountInfo = $ComtelintaObj->getAccountInfo($telintaAccount->getIAccount());
+                // print_r($accountInfo);
+                echo $accountInfo->account_info->balance;
+            }else{
+                echo "0";
+            }
         ?> &euro;
             </td>
             <td><?php echo  date("Y-m-d H:i:s",strtotime($employee->getCreatedAt())+25200); ?></td>
+            <td class="tdpricelist">
+                <form action="<?php echo url_for(sfConfig::get('app_main_url').'company/changePackage')?>" name="frmChangePackage" method="post">
+                    <input type="hidden" value="<?php echo $employee->getId();?>" name="lineid" />
+                    <select name="priceplan_id" class="priceplanlist">
+                    <?php 
+                         foreach($priceplans as $priceplan){ ?>
+                           <option value="<?php echo $priceplan->getId();?>" <?php echo ($priceplan->getId()==$employee->getPricePlanId())?"selected='selected'":""; ?>><?php echo $priceplan->getTitle();?></option>   
+                    <?php
+                         } 
+                    ?></select>&nbsp;<input type="submit" name="submit" value="Update" class="planupdate" />
+                </form>
+            </td>
         </tr>
         <?php } ?>
         </table>

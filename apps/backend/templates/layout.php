@@ -363,7 +363,15 @@
                         }else{
                           echo link_to(__('Telecom Operator'), 'telecom_operator/index');
                         }*/
-                        ?> <?php
+                        ?> 
+                        <?php
+                        if($actionName=='list' && $modulName=="price_plan"){
+                          echo link_to(__('Line Quality'), 'price_plan/index',array('class'=>'subSelect'));
+                        }else{
+                          echo link_to(__('Line Quality'), 'price_plan/index');
+                        }
+                        ?>
+                        <?php
                         if($actionName=='list' && $modulName=="telintaProduct"){
                           echo link_to(__('Telinta Product'), 'telintaProduct/index',array('class'=>'subSelect'));
                         }else{
@@ -398,6 +406,28 @@
                        echo link_to(__('Agent Billing System Info'), 'company/withBillingInfo');
                     }          
                     ?>
+                        <?php 
+                    if($actionName=='list' && $modulName=="rt_countries"){
+                       echo link_to(__('RT Countries'), 'rt_countries/index', array('class'=>'subSelect'));
+                    }else{
+                       echo link_to(__('RT Countries'), 'rt_countries/index');
+                    }          
+                    ?>
+                        <?php 
+                    if($actionName=='updateRates' && $modulName=="rt_rates"){
+                       echo link_to(__('RT Update Rates'), 'rt_rates/updateRates', array('class'=>'subSelect'));
+                    }else{
+                       echo link_to(__('RT Update Rates'), 'rt_rates/updateRates');
+                    }          
+                    ?>
+                         <?php 
+                    if($actionName=='exportRateTable' && $modulName=="rt_rates"){
+                       echo link_to(__('RT Export Rate Table'), 'rt_rates/exportRateTable', array('class'=>'subSelect'));
+                    }else{
+                       echo link_to(__('RT Export Rate Table'), 'rt_rates/exportRateTable');
+                    }          
+                    ?>
+                        
                 </div>
             </li>
   <?php } ?>
@@ -482,7 +512,7 @@ jQuery('#sf_admin_edit_form').validate({
     
     <script language="javascript" type="text/javascript">
 
-	jQuery('#company_vat_no').blur(function(){
+	jQuery('#company_vat_no').focusout(function(){
 		//remove all the class add the messagebox classes and start fading
 		jQuery("#msgbox").removeClass().addClass('messagebox').text('<?php echo __('Checking...') ?>').fadeIn("slow");
 
@@ -512,7 +542,7 @@ jQuery('#sf_admin_edit_form').validate({
 		  	jQuery("#msgbox").fadeTo(200,0.1,function()  //start fading the messagebox
 			{
 			  //add message and change the class of the box and start fading
-			  jQuery(this).html('<?php echo __('Vat No is available') ?>').addClass('messageboxok').fadeTo(900,1);
+			  jQuery(this).html('<?php echo __('Vat No is available') ?>').addClass('messageboxok').fadeTo(900,1).fadeOut(5000);
 			});jQuery('#error').val("");
 		  }
 

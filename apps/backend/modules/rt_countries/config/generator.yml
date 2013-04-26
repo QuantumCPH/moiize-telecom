@@ -1,0 +1,25 @@
+generator:
+  class:              sfPropelAdminGenerator
+  param:
+    model_class:      RtCountries
+    theme:            default
+    css:     /sf/sf_admin/css/admin_main.css
+    fields:
+      sv_title: { name: Swedish }
+      da_title: { name: Danish }
+      de_title: { name: German }
+      es_title: { name: Spanish}
+      title: { name: English }
+      
+    list:
+      title: Countries for rate Table Generation
+      max_per_page: 5000
+      object_actions:
+        _edit: ~
+      actions: []
+    edit:
+      actions:
+        _list: ~
+        _save: ~
+      
+  

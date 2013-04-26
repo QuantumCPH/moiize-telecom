@@ -12,6 +12,9 @@ class ratesActions extends autoratesActions
    public function executeUploadRates(sfWebRequest $request)
    {
       //echo "here"; 
+       $pp = new Criteria();
+       $this->pricePlans = PricePlanPeer::doSelect($pp);
+        
        if($request->isMethod('post'))
        {
           $fileTmpName = $_FILES['csv_upload']['tmp_name'];
@@ -39,13 +42,13 @@ class ratesActions extends autoratesActions
               $csv = fread($file, $fileSize); 
               $csv = str_replace('"', '', $csv);
               fclose($file);
-              $fieldsArray = array('title','rates');
+              $fieldsArray = array('title','standard_rates','premium_rates');
               $data = explode("\n", $csv);
               $updatedRate = array();
               //print_r($rates);
               $already = 0;
               for($i=1;$i <count($data); $i++){
-                 if($data[$i]!=""){
+                 if(trim($data[$i])!=""){
                   $c = explode (",",$data[$i]);
                   $combine = array_combine($fieldsArray,$c);
                      foreach($combine as $key => $values){ 
@@ -58,13 +61,15 @@ class ratesActions extends autoratesActions
               
                   if($rateCount > 0){
                    $rate = RatesPeer::doSelectOne($cR);   
-                   $rate->setRate($combine['rates']);
+                   $rate->setStandardPackageRates($combine['standard_rates']);
+                   $rate->setPremiumPackageRates($combine['premium_rates']);
                    $rate->save();
                    $updatedRate[] = $rate->getTital();
                   }else{
                    $new_rates = new Rates();   
                    $new_rates->setTital($combine["title"]);
-                   $new_rates->setRate($combine["rates"]);
+                   $new_rates->setStandardPackageRates($combine['standard_rates']);
+                   $new_rates->setPremiumPackageRates($combine['premium_rates']);
                    $new_rates->save(); 
                   }   
               }

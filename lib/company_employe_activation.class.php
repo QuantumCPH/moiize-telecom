@@ -18,30 +18,34 @@ class CompanyEmployeActivation {
     //put your code here
 
 
-    private static $iParent = 74169; //Company Resller ID on Telinta
-    private static $currency = 'EUR';
-    private static $a_iProduct = 10897;
-    private static $CBProduct = '';
-    private static $VoipProduct = '';
-    public static $telintaSOAPUrl = "https://mybilling.telinta.com";
-    public static $telintaSOAPUser = 'API_login';
-    public static $telintaSOAPPassword = 'ee4eriny';
-
-    public static function telintaRegisterCompany(Company $company) {
+    private $iParent;  //Company Resller ID on Telinta
+    private $currency;    
+    private $telintaSOAPUrl;
+    private $telintaSOAPUser;
+    private $telintaSOAPPassword;
+    
+    public function __construct() {
+        $this->iParent              = sfConfig::get("app_telinta_iparent");
+        $this->currency             = sfConfig::get("app_telinta_currency");
+        $this->telintaSOAPUrl       = sfConfig::get("app_telinta_soap_url");
+        $this->telintaSOAPUser      = sfConfig::get("app_telinta_soap_user");
+        $this->telintaSOAPPassword  = sfConfig::get("app_telinta_soap_password");
+    }
+    public function telintaRegisterCompany(Company $company) {
 
         $tCustomer = false;
         $max_retries = 10;
         $retry_count = 0;
 
-        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
+        $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Customer');
         $uniqueid = "MTB2B" . $company->getVatNo();
         $credit_limit=($company->getCreditLimit()!='')?$company->getCreditLimit():'0';
          while (!$tCustomer && $retry_count < $max_retries) {
             try {
                 $tCustomer = $pb->add_customer(array('customer_info' => array(
                                 'name' => $uniqueid, //75583 03344090514
-                                'iso_4217' => self::$currency,
-                                'i_parent' => self::$iParent,
+                                'iso_4217' => $this->currency,
+                                'i_parent' => $this->iParent,
                                 'i_customer_type' => 1,
                                 'opening_balance' => 0,
                                 'credit_limit' => $credit_limit,
@@ -68,16 +72,16 @@ class CompanyEmployeActivation {
 
     }
 
-    public static function telintaRegisterEmployee($employeMobileNumber, Company $company, Employee $employee) {
-        return self::createAccount($company, $employeMobileNumber, '', $employee);
+    public function telintaRegisterEmployee($employeMobileNumber, Company $company, Employee $employee) {
+        return $this->createAccount($company, $employeMobileNumber, '', $employee);
     }
 
-    public static function terminateAccount(TelintaAccounts $telintaAccount) {
+    public function terminateAccount(TelintaAccounts $telintaAccount) {
         $account = false;
         $max_retries = 10;
         $retry_count = 0;
 
-        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
+        $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Account');
         while (!$account && $retry_count < $max_retries) {
             try {
                 $account = $pb->terminate_account(array('i_account' => $telintaAccount->getIAccount()));
@@ -102,12 +106,12 @@ class CompanyEmployeActivation {
 
     }
 
-    public static function getBalance(Company $company) {
+    public function getBalance(Company $company) {
         $cInfo = false;
         $max_retries = 10;
         $retry_count = 0;
 
-        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
+        $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Customer');
         $pb->_setSessionId();
         while (!$cInfo && $retry_count < $max_retries) {
             try {
@@ -139,12 +143,12 @@ class CompanyEmployeActivation {
 
     }
 
-    public static function charge(Company $company, $amount) {
-        return self::makeTransaction($company, "Manual charge", $amount);
+    public function charge(Company $company, $amount) {
+        return $this->makeTransaction($company, "Manual charge", $amount);
     }
 
-    public static function recharge(Company $company, $amount, $transaction='') {
-        if (self::makeTransaction($company, "Manual payment", $amount)) {
+    public function recharge(Company $company, $amount, $transaction='') {
+        if ($this->makeTransaction($company, "Manual payment", $amount)) {
             //emailLib::sendCompanyRefillEmail($company, $transaction);
             return true;
         } else {
@@ -152,12 +156,12 @@ class CompanyEmployeActivation {
         }
     }
 
-    public static function callHistory(Company $company, $fromDate, $toDate) {
+    public function callHistory(Company $company, $fromDate, $toDate) {
         $xdrList = false;
         $max_retries = 5;
         $retry_count = 0;
 
-        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
+        $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Customer');
         while (!$xdrList && $retry_count < $max_retries) {
             try {
                 $xdrList = $pb->get_customer_xdr_list(array('i_customer' => $company->getICustomer(), 'from_date' => $fromDate, 'to_date' => $toDate));
@@ -179,12 +183,12 @@ class CompanyEmployeActivation {
 
     }
 
-    public static function getAccountInfo($iAccount) {
+    public function getAccountInfo($iAccount) {
         $aInfo = false;
         $max_retries = 10;
         $retry_count = 0;
 
-        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
+        $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Account');
 
         while (!$aInfo && $retry_count < $max_retries) {
             try {
@@ -211,12 +215,12 @@ class CompanyEmployeActivation {
 
     }
 
-    public static function getAccountCallHistory($iAccount, $fromDate, $toDate) {
+    public function getAccountCallHistory($iAccount, $fromDate, $toDate) {
         $xdrList = false;
         $max_retries = 5;
         $retry_count = 0;
 
-        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
+        $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Account');
         while (!$xdrList && $retry_count < $max_retries) {
             try {
                 $xdrList = $pb->get_xdr_list(array('i_account' => $iAccount, 'from_date' => $fromDate, 'to_date' => $toDate));
@@ -238,22 +242,21 @@ class CompanyEmployeActivation {
 
     // Private Area:
     //2039
-    private static function createAccount(Company $company, $mobileNumber, $accountType, Employee $employee, $followMeEnabled='N') {
+    private function createAccount(Company $company, $mobileNumber, $accountType, Employee $employee, $followMeEnabled='N') {
         $account = false;
         $max_retries = 10;
         $retry_count = 0;
 
-        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
-        $pass = self::randomAlphabets(4) . self::randomNumbers(1) . self::randomAlphabets(3);
-        $accountName = $accountType . $mobileNumber;
+        $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Account');
+        $pass = $this->randomAlphabets(4) . $this->randomNumbers(1) . $this->randomAlphabets(3);
+      echo  $accountName = $accountType . $mobileNumber;
         while (!$account && $retry_count < $max_retries) {
-            try {
-
+            try {                
                 $account = $pb->add_account(array('account_info' => array(
                                 'i_customer' => $company->getICustomer(),
                                 'name' => $accountName, //75583 03344090514
                                 'id' => $accountName,
-                                'iso_4217' => self::$currency,
+                                'iso_4217' => $this->currency,
                                 'opening_balance' => 0,
                                 'credit_limit' => null,
                                 'i_product' => $employee->getTelintaProductId(),
@@ -265,6 +268,8 @@ class CompanyEmployeActivation {
                                 'batch_name' =>"MTB2B".$company->getVatNo(),
                                 'follow_me_enabled' => $followMeEnabled
                                 )));
+                        var_dump($account);
+                        
             } catch (SoapFault $e) {
                 if ($e->faultstring != 'Could not connect to host' && $e->faultstring != 'Internal Server Error') {
                     emailLib::sendErrorInTelinta("Account Creation: " . $accountName . " Error!", "We have faced an issue in Company Account Creation on telinta. This is the error for cusotmer with Company Id: " . $company->getId() . " and on Account " . $accountName . " and error is " . $e->faultstring . " <br/> Please Investigate.");
@@ -292,12 +297,12 @@ class CompanyEmployeActivation {
 
     }
 
-    private static function makeTransaction(Company $company, $action, $amount) {
+    private function makeTransaction(Company $company, $action, $amount) {
         $accounts = false;
         $max_retries = 10;
         $retry_count = 0;
 
-        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
+        $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Customer');
 
         while (!$accounts && $retry_count < $max_retries) {
             try {
@@ -326,27 +331,7 @@ class CompanyEmployeActivation {
 
     }
 
-    private static function randomAlphabets($length) {
-        $random = "";
-        srand((double) microtime() * 1000000);
-        $data = "abcdefghijklmnopqrstuvwxyz";
-        for ($i = 0; $i < $length; $i++) {
-            $random .= substr($data, (rand() % (strlen($data))), 1);
-        }
-        return $random;
-    }
-
-    private static function randomNumbers($length) {
-        $random = "";
-        srand((double) microtime() * 1000000);
-        $data = "0123456789";
-        for ($i = 0; $i < $length; $i++) {
-            $random .= substr($data, (rand() % (strlen($data))), 1);
-        }
-        return $random;
-    }
-
-    public static function updateAccount(Employee $employee, $iProduct, $iRoutingPlan, $block='N') {
+    public function updateAccount(Employee $employee, $iProduct, $iRoutingPlan, $block='N') {
         $account = false;
         $max_retries = 10;
         $retry_count = 0;
@@ -356,10 +341,10 @@ class CompanyEmployeActivation {
         $til->add(TelintaAccountsPeer::ACCOUNT_TITLE, $accountTitle);
         $til->addAnd(TelintaAccountsPeer::STATUS, 3);
         $tilentaAccount = TelintaAccountsPeer::doSelectOne($til);
+       // var_dump($tilentaAccount);die;
+        $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Account');
 
-        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Account');
-
-        $pass = self::randomAlphabets(4) . self::randomNumbers(1) . self::randomAlphabets(3);
+        $pass = $this->randomAlphabets(4) . $this->randomNumbers(1) . $this->randomAlphabets(3);
         $accountName = $accountType . $mobileNumber;
         while (!$account && $retry_count < $max_retries) {
             try {
@@ -388,12 +373,12 @@ class CompanyEmployeActivation {
 
     }
 
-    public static function updateCustomer($update_customer_request){
+    public function updateCustomer($update_customer_request){
         $customer = false;
         $max_retries = 10;
         $retry_count = 0;
 
-        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
+        $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Customer');
 
         while (!$customer && $retry_count < $max_retries) {
             try {
@@ -416,13 +401,13 @@ class CompanyEmployeActivation {
     }
 
 
-    public static function getCustomerInfo(Company $company) {
+    public function getCustomerInfo(Company $company) {
 
         $cInfo = false;
         $max_retries = 10;
         $retry_count = 0;
 
-        $pb = new PortaBillingSoapClient(self::$telintaSOAPUrl, 'Admin', 'Customer');
+        $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Customer');
         $pb->_setSessionId();
         while (!$cInfo && $retry_count < $max_retries) {
             try {
@@ -451,5 +436,27 @@ class CompanyEmployeActivation {
                 return $CustomerInfo;
 
     }
+
+    private function randomAlphabets($length) {
+        $random = "";
+        srand((double) microtime() * 1000000);
+        $data = "abcdefghijklmnopqrstuvwxyz";
+        for ($i = 0; $i < $length; $i++) {
+            $random .= substr($data, (rand() % (strlen($data))), 1);
+        }
+        return $random;
     }
+
+    private function randomNumbers($length) {
+        $random = "";
+        srand((double) microtime() * 1000000);
+        $data = "0123456789";
+        for ($i = 0; $i < $length; $i++) {
+            $random .= substr($data, (rand() % (strlen($data))), 1);
+        }
+        return $random;
+    }
+} ///// Class END
+    
+    
 ?>

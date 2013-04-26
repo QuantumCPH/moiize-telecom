@@ -1542,70 +1542,7 @@ public function executeBalanceEmail(sfWebRequest $request)
       return sfView::NONE;
 
   }
-
-public function executeWebSms(sfWebRequest $request)
-	{
-            require_once(sfConfig::get('sf_lib_dir').'\SendSMS.php');
-            require_once(sfConfig::get('sf_lib_dir').'\IncomingFormat.php');
-            require_once(sfConfig::get('sf_lib_dir').'\ClientPolled.php');
-
-
-            //$sms_username = "zapna01";
-            //$sms_password = "Zapna2010";
-
-            
-
-
-            $replies = send_sms_full("923454375829","CBF", "Test SMS: Taisys Test SMS form test.Zerocall.com"); //or die ("Error: " .$errstr. " \n");
-
-            //$replies = send_sms("44123456789,44987654321,44214365870","SMS_Service", "This is a message from me.") or die ("Error: " . $errstr . "\n");
-
-            echo "<br /> Response from Taisys <br />";
-            echo $replies;
-            echo $errstr;
-            echo "<br />";
-
-            file_get_contents("http://sms1.cardboardfish.com:9001/HTTPSMS?S=H&UN=zapna1&P=Zapna2010&DA=923454375829&ST=5&SA=Zerocall&M=Test+SMS%3A+Taisys+Test+SMS+form+test.Zerocall.com");
-
-            return sfView::NONE;
-        }
-
-public function executeTaisys(sfWebrequest $request){
-
-            $taisys = new Taisys();
-
-            $taisys->setServ($request->getParameter('serv'));
-            $taisys->setImsi($request->getParameter('imsi'));
-            $taisys->setDn($request->getParameter('dest'));
-            $taisys->setSmscontent($request->getParameter('content'));
-            $taisys->setChecksum($request->getParameter('mac'));
-            $taisys->setChecksumVerification(true);
-
-            $taisys->save();
-
-			$data = array(
-              'S' => 'H',
-              'UN'=>'zapna1',
-              'P'=>'Zapna2010',
-              'DA'=>$taisys->getDn(),
-              'SA' => 'Zerocall',
-              'M'=>$taisys->getSmscontent(),
-              'ST'=>'5'
-	);
-
-
-		$queryString = http_build_query($data,'', '&');
- $queryString=smsCharacter::smsCharacterReplacement($queryString);
-		$res = file_get_contents('http://sms1.cardboardfish.com:9001/HTTPSMS?'.$queryString);
-                $this->res_cbf = 'Response from CBF is: ';
-                $this->res_cbf .= $res;
-
-            echo $this->res_cbf;
-            return sfView::NONE;
-
-
-        }
-
+ 
 public function executeSmsRegistration(sfWebrequest $request) {
     
     $number = $request->getParameter('mobile');
@@ -3049,7 +2986,8 @@ if(($caltype!="IC") && ($caltype!="hc")){
             $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
             $telintaAcc = TelintaAccountsPeer::doSelectOne($ct);
             if ($telintaAcc) { //echo $telintaAcc->getIAccount();
-                $accountInfo = CompanyEmployeActivation::getAccountInfo($telintaAcc->getIAccount());
+                $ComtelintaObj = new CompanyEmployeActivation();
+                $accountInfo = $ComtelintaObj->getAccountInfo($telintaAcc->getIAccount());
                 $employee->setPassword($accountInfo->account_info->h323_password);
                 $employee->save();
             }
@@ -3061,11 +2999,12 @@ if(($caltype!="IC") && ($caltype!="hc")){
         $c->add(CompanyPeer::I_CUSTOMER, null, Criteria::ISNOTNULL);
         $companies = CompanyPeer::doSelect($c);
         $customer_info['credit_limit']= 25;
+        $ComtelintaObj = new CompanyEmployeActivation();
         foreach($companies as $company){
             if($company->getICustomer()=="77424")
                     continue;
             $customer_info['i_customer']= $company->getICustomer();
-            CompanyEmployeActivation::updateCustomer($customer_info);
+            $ComtelintaObj->updateCustomer($customer_info);
         }
     }
 
@@ -3073,8 +3012,9 @@ if(($caltype!="IC") && ($caltype!="hc")){
         $c = new Criteria();
         $c->add(CompanyPeer::I_CUSTOMER, null, Criteria::ISNOTNULL);
         $companies = CompanyPeer::doSelect($c);
+        $ComtelintaObj = new CompanyEmployeActivation();
         foreach($companies as $company){
-            CompanyEmployeActivation::getBalance($company);
+            $ComtelintaObj->getBalance($company);
         }
     }
 
@@ -3092,7 +3032,8 @@ if(($caltype!="IC") && ($caltype!="hc")){
             $oldBalance =0;
 
             $company = CompanyPeer::retrieveByPK($lineRentCompany->getCompanyId());
-            $oldBalance = CompanyEmployeActivation::getBalance($company);
+            $ComtelintaObj = new CompanyEmployeActivation();
+            $oldBalance = $ComtelintaObj->getBalance($company);
 
 
             if (isset($oldBalance) && $oldBalance <> 0) {
@@ -3150,13 +3091,14 @@ if(($caltype!="IC") && ($caltype!="hc")){
                     $transaction->setDescription($description->getTitle());
                     $transaction->setRentDays($lineRentCompany->getNumberOfDays());
                     $transaction->setRentValue($lineRentCompany->getRentValue());
+                    $transaction->setTransactionDescriptionId($description->getId());
                     $transaction->setOldBalance($oldBalance);
                     $transaction->setTransactionType(2);
                     $transaction->save();
-
-                    if (CompanyEmployeActivation::charge($company, $lineRentCompany->getRentValue())) {
+                    $ComtelintaObj = new CompanyEmployeActivation();
+                    if ($ComtelintaObj->charge($company, $lineRentCompany->getRentValue())) {
                         $transaction->setTransactionStatusId(3);
-                        $newBalance = CompanyEmployeActivation::getBalance($company);
+                        $newBalance = $ComtelintaObj->getBalance($company);
                         $transaction->setNewBalance($newBalance);
                         $transaction->save();
                     }
