@@ -4,7 +4,7 @@
   jQuery(function(){      
       jQuery("#sf_admin_form").submit(function(){
           var valu = jQuery("#refill").val();
-          var t =  /^-?(?:\d+|\d{1,3}(?:,\d{3})+)(?:\.\d+)?$/.test(valu);    
+          var t =  /^(?:\d+|\d{1,3}(?:,\d{3})+)(?:\.\d+)?$/.test(valu);    
           if(t==false){
               jQuery("#validation_result").html('Please enter valid amount');
               return false;
