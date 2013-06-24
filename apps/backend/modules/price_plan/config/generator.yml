@@ -9,6 +9,10 @@ generator:
       display: [title,telinta_product_id,telinta_routingplan_id,status_id]
       fields:
               telinta_routingplan: {name: Telinta Rounting Plan}
+      actions:
+        _list: ~
+        _save: ~
+        _save_and_add: ~
     list:
       title:    Line Quality
       display: [title,telinta_product,telinta_routingplan]  
@@ -17,5 +21,5 @@ generator:
       max_per_page: 100
       object_actions:
         _edit: ~
-        _delete: ~
+        
 
