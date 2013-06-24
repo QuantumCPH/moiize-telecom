@@ -646,6 +646,7 @@ class companyActions extends sfActions {
 
     public function executeWithBillingInfo(sfWebRequest $request) {
         $c = new Criteria();
+        $c->add(CompanyPeer::STATUS_ID, 1);
         $this->companies = CompanyPeer::doSelect($c);
     }
 
