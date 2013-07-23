@@ -417,7 +417,7 @@ class employeeActions extends sfActions {
         $ct->addAnd(TelintaAccountsPeer::STATUS, 3);
         $telintaAccount = TelintaAccountsPeer::doSelectOne($ct);
         $ComtelintaObj = new CompanyEmployeActivation();
-        $this->callHistory = $ComtelintaObj->getAccountCallHistory($telintaAccount->getIAccount(), $fromdate, $todate);
+        $this->callHistory = $ComtelintaObj->getAccountCallHistory($telintaAccount->getIAccount(), $fromdate. " 00:00:00", $todate. " 23:59:59");
     }
 
     public function executeMobile(sfWebRequest $request) {
