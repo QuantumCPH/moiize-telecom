@@ -83,7 +83,7 @@ class PortaBillingSoapClient extends SoapClient {
                         $this->_constructUri($this->serverUrl, $this->interface, 'Session')
         );
         $sessionId = $sessionId ? $sessionId : $this->sessionId;
-     //   return $soap_client->logout($sessionId);
+        return $soap_client->logout($sessionId);
     }
 
     /**
