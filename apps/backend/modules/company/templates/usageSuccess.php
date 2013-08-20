@@ -15,7 +15,7 @@
         <a href="<?php echo url_for('company/usage') . '?company_id=' . $company->getId(); ?>" class="external_link" target="_self"><?php echo __('Usage') ?></a>
         <a href="<?php echo url_for('company/paymenthistory') . '?company_id=' . $company->getId() . '&filter=filter' ?>" class="external_link" target="_self"><?php echo __('Payment History') ?></a>
 
-        <h1><?php echo __('Call History'); if(isset($iAccountTitle)&&$iAccountTitle!=''){echo "($iAccountTitle)"; }?></h1>
+        
         <div class="sf_admin_filters">
             <form action="" id="searchform" method="POST" name="searchform">
                 <fieldset>
@@ -59,7 +59,8 @@
             </form>
         </div>
     </div>
-    
+    <br /><br /><br />
+    <h1><?php echo __('Call History'); if(isset($iAccountTitle)&&$iAccountTitle!=''){echo "($iAccountTitle)"; }?></h1>
     <table width="100%" cellspacing="0" cellpadding="2" class="tblAlign" border='0'>
 
 
@@ -142,4 +143,82 @@ echo  date('i:s',$callval);
                 <?php //echo __('Cb S = Callback samtal')  ?><br/>
 <?php //echo __('R = resenummer samtal')    ?><br/>
             </td></tr>-->
-    </table></div>
+    </table>
+    
+    <br/><br/>
+    <h1><?php echo __("Other events"); ?> </h1>
+    <table width="100%" cellspacing="0" cellpadding="2" class="tblAlign" border='0'>
+        <tr class="headings">
+            <th  width="10%"  align="left"><?php echo __('Date and time') ?></th>
+            <th  width="10%"  align="left"><?php echo __('Description') ?></th>
+            <th  width="10%"  align="left" style="text-align: right;"><?php echo __('Amount') ?></th>
+       </tr>
+        <?php
+        $othertotal = 0;
+        $ComtelintaObj = new CompanyEmployeActivation();
+      //  foreach ($ems as $emp) {
+         $otherEvents = $ComtelintaObj->callHistory($company, $fromdate, $todate, false, 1);   
+        if(count($otherEvents)>0){
+        foreach ($otherEvents->xdr_list as $xdr) {
+         ?>
+            <tr>
+                <td><?php echo date("Y-m-d H:i:s", strtotime($xdr->bill_time)); ?><?php //echo $emp->getId();?></td>
+                <td><?php echo __($xdr->CLD); ?></td>
+                <td align="right"><?php echo number_format($xdr->charged_amount,2); $othertotal +=$xdr->charged_amount;?><?php echo sfConfig::get('app_currency_code')?></td>
+            </tr>
+            <?php } }else {
+             ?>
+                    <tr>
+                        <td>
+             <?php
+                echo __('There are currently no records to show.'); ?>
+                        </td>
+                    </tr>
+          <?php                  
+            }
+      //  }  ?>
+            <tr align="right">
+                <td colspan="2"><strong><?php echo __('Subtotal');?></strong></td><td><?php echo number_format($othertotal,2)?><?php echo sfConfig::get('app_currency_code')?></td>
+            </tr>         
+            <tr align="right">
+            <td colspan="2"><strong><?php echo __('Total');?></strong></td><td><strong><?php echo number_format($amount_total+$othertotal,2)?><?php echo sfConfig::get('app_currency_code')?></strong></td>
+        </tr> 
+        </table><br/><br/>
+        <h1><?php echo __("Payment History"); ?> </h1>
+    <table width="100%" cellspacing="0" cellpadding="2" class="tblAlign" border='0'>
+        <tr class="headings">
+            <th  width="10%"  align="left"><?php echo __('Date and time') ?></th>
+            <th  width="10%"  align="left"><?php echo __('Description') ?></th>
+            <th  width="10%"  align="left" style="text-align: right;"><?php echo __('Amount') ?></th>
+       </tr>
+        <?php
+        $paymenttotal = 0;
+        $otherEvent = $ComtelintaObj->callHistory($company, $fromdate, $todate , false, 2);
+       // var_dump($otherEvents);
+        if(count($otherEvent)>0){
+        foreach ($otherEvent->xdr_list as $xdr) {
+         ?>
+            <tr>
+                <td><?php echo date("Y-m-d H:i:s", strtotime($xdr->bill_time)); ?></td>
+                <td><?php echo __($xdr->CLD); ?></td>
+                <td align="right"><?php echo number_format(-1 * $xdr->charged_amount,2); $paymenttotal +=$xdr->charged_amount;?><?php echo sfConfig::get('app_currency_code')?></td>
+            </tr>
+            <?php } 
+            
+            }else {
+             ?>
+                    <tr>
+                        <td>
+             <?php
+                echo __('There are currently no records to show.'); ?>
+                        </td>
+                    </tr>
+          <?php                  
+            }
+      ?>
+        <tr align="right">
+                <td colspan="2"><strong><?php echo __('Total');?></strong></td><td><strong><?php echo number_format(-1 * $paymenttotal,2);?><?php echo sfConfig::get('app_currency_code')?></strong></td>
+        </tr>
+       
+        </table><br/><br/>
+</div>
