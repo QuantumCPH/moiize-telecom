@@ -372,7 +372,7 @@ class CompanyEmployeActivation {
                             'i_customer' => $company->getICustomer(),
                             'action' => $action, //Manual payment, Manual charge
                             'amount' => $amount,
-                            'visible_comment' => 'SOAP ' . $action
+                            'visible_comment' => 'Portal ' . $action
                         ));
             } catch (SoapFault $e) {
                  if ($e->faultstring != 'Could not connect to host' && $e->faultstring != 'Internal Server Error' && $e->faultstring != 'Bad Gateway') {

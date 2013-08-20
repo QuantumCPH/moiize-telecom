@@ -117,7 +117,7 @@ echo  date('i:s',$callval);
                    
 
                 <td><?php echo number_format($xdr->charged_amount, 3);
-            $amount_total+= number_format($xdr->charged_amount, 3); ?> &euro;</td>
+            $amount_total+= $xdr->charged_amount; ?> &euro;</td>
                 <td><?php echo $xdr->account_id; ?></td>
         </tr>
 
@@ -163,7 +163,7 @@ echo  date('i:s',$callval);
             <tr>
                 <td><?php echo date("Y-m-d H:i:s", strtotime($xdr->bill_time)); ?><?php //echo $emp->getId();?></td>
                 <td><?php echo __($xdr->CLD); ?></td>
-                <td align="right"><?php echo number_format($xdr->charged_amount,2); $othertotal +=$xdr->charged_amount;?><?php echo sfConfig::get('app_currency_code')?></td>
+                <td align="right"><?php echo number_format($xdr->charged_amount,2); $othertotal +=$xdr->charged_amount;?> &euro;</td>
             </tr>
             <?php } }else {
              ?>
@@ -177,10 +177,10 @@ echo  date('i:s',$callval);
             }
       //  }  ?>
             <tr align="right">
-                <td colspan="2"><strong><?php echo __('Subtotal');?></strong></td><td><?php echo number_format($othertotal, 3, ',', '')?><?php echo sfConfig::get('app_currency_code')?></td>
+                <td colspan="2"><strong><?php echo __('Subtotal');?></strong></td><td><?php echo number_format($othertotal, 3, ',', '')?> &euro;</td>
             </tr>         
             <tr align="right">
-            <td colspan="2"><strong><?php echo __('Total');?></strong></td><td><strong><?php echo number_format($amount_total+$othertotal, 3, ',', '')?><?php echo sfConfig::get('app_currency_code')?></strong></td>
+            <td colspan="2"><strong><?php echo __('Total');?></strong></td><td><strong><?php echo number_format($amount_total+$othertotal, 3, ',', '')?> &euro;</strong></td>
         </tr> 
         </table><br/><br/>
         <h1><?php echo __("Payment History"); ?> </h1>
@@ -200,7 +200,7 @@ echo  date('i:s',$callval);
             <tr>
                 <td><?php echo date("Y-m-d H:i:s", strtotime($xdr->bill_time)); ?></td>
                 <td><?php echo __($xdr->CLD); ?></td>
-                <td align="right"><?php echo number_format(-1 * $xdr->charged_amount,2); $paymenttotal +=$xdr->charged_amount;?><?php echo sfConfig::get('app_currency_code')?></td>
+                <td align="right"><?php echo number_format(-1 * $xdr->charged_amount,2); $paymenttotal +=$xdr->charged_amount;?> &euro;</td>
             </tr>
             <?php } 
             
@@ -216,7 +216,7 @@ echo  date('i:s',$callval);
             }
       ?>
         <tr align="right">
-                <td colspan="2"><strong><?php echo __('Total');?></strong></td><td><strong><?php echo number_format(-1 * $paymenttotal,2);?><?php echo sfConfig::get('app_currency_code')?></strong></td>
+                <td colspan="2"><strong><?php echo __('Total');?></strong></td><td><strong><?php echo number_format(-1 * $paymenttotal, 3, ',', '');?> &euro;</strong></td>
         </tr>
        
         </table><br/><br/>
