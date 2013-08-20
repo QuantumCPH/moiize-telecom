@@ -177,10 +177,10 @@ echo  date('i:s',$callval);
             }
       //  }  ?>
             <tr align="right">
-                <td colspan="2"><strong><?php echo __('Subtotal');?></strong></td><td><?php echo number_format($othertotal,2)?><?php echo sfConfig::get('app_currency_code')?></td>
+                <td colspan="2"><strong><?php echo __('Subtotal');?></strong></td><td><?php echo number_format($othertotal, 3, ',', '')?><?php echo sfConfig::get('app_currency_code')?></td>
             </tr>         
             <tr align="right">
-            <td colspan="2"><strong><?php echo __('Total');?></strong></td><td><strong><?php echo number_format($amount_total+$othertotal,2)?><?php echo sfConfig::get('app_currency_code')?></strong></td>
+            <td colspan="2"><strong><?php echo __('Total');?></strong></td><td><strong><?php echo number_format($amount_total+$othertotal, 3, ',', '')?><?php echo sfConfig::get('app_currency_code')?></strong></td>
         </tr> 
         </table><br/><br/>
         <h1><?php echo __("Payment History"); ?> </h1>
