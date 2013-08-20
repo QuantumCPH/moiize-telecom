@@ -179,15 +179,20 @@ class CompanyEmployeActivation {
         }
     }
 
-    public function callHistory(Company $company, $fromDate, $toDate) {
+    public function callHistory(Company $company, $fromDate, $toDate, $reseller=false, $iService=3) {
         $xdrList = false;
         $max_retries = 5;
         $retry_count = 0;
 
         $pb = new PortaBillingSoapClient($this->telintaSOAPUrl, 'Admin', 'Customer');
+        if ($reseller){
+            $icustomer = $company;
+        }else{
+            $icustomer = $company->getICustomer();
+        }
         while (!$xdrList && $retry_count < $max_retries) {
             try {
-                $xdrList = $pb->get_customer_xdr_list(array('i_customer' => $company->getICustomer(), 'from_date' => $fromDate, 'to_date' => $toDate));
+                $xdrList = $pb->get_customer_xdr_list(array('i_customer' => $icustomer, 'from_date' => $fromDate, 'to_date' => $toDate,'i_service' => $iService));
             } catch (SoapFault $e) {
                  if ($e->faultstring != 'Could not connect to host' && $e->faultstring != 'Internal Server Error' && $e->faultstring != 'Bad Gateway') {
                   if($e->faultstring=="Authentification failed"){
